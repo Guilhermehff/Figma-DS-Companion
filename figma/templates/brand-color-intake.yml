@@ -1,0 +1,79 @@
+date: YYYY-MM-DD
+brand: ""
+source_reference: ""
+source_type: image
+figma_url: ""
+status: proposed
+preview:
+  required_before_write: true
+  artifact: ""
+  status: pending
+
+source_swatches:
+  - source_name: ""
+    provided_value: ""
+    notes: ""
+
+universal_reuse:
+  reuse_universal:
+    - source_name: ""
+      provided_value: ""
+      existing_token: ""
+      reason: ""
+  new_brand_families:
+    - family: ""
+      source_name: ""
+      provided_value: ""
+      rationale: ""
+      anchor_step: 500
+      anchor_label: 500_source
+  hold_for_review:
+    - source_name: ""
+      provided_value: ""
+      reason: ""
+
+scale_spec:
+  working_space: OKLCH
+  steps:
+    - 50
+    - 100
+    - 200
+    - 300
+    - 400
+    - 500
+    - 600
+    - 700
+    - 800
+    - 900
+    - 950
+  contrast_targets:
+    white:
+      "800": "4.5:1 preferred"
+      "900": "7:1 required"
+      "950": "7:1 required"
+    black:
+      "50": "7:1 required"
+      "100": "7:1 required"
+      "200": "4.5:1 required"
+
+family_scales:
+  - family: ""
+    source_name: ""
+    source_value: ""
+    source_anchor: 500_source
+    tokens:
+      - name: ""
+        value: ""
+        source_anchor: false
+
+validation:
+  perceptual_consistency_notes:
+    - ""
+  contrast_checks:
+    - token: ""
+      foreground: ""
+      ratio: ""
+      result: pass
+
+open_questions:
+  - ""

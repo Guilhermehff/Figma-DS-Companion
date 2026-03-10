@@ -1,4 +1,4 @@
-version: 2
+version: 3
 updated: 2026-03-10
 owner: vail_resorts
 scope:
@@ -21,6 +21,7 @@ principles:
   - Keep raw values separate from aliases.
   - Track deprecations explicitly.
   - Avoid breaking schema when expanding brands.
+  - Brand color ramps must reuse universal neutrals where appropriate and keep a consistent lightness ladder across hues.
 
 brands:
   - universal
@@ -124,6 +125,112 @@ collections:
     category: typography
     extended_collections: true
 
+brand_color_foundations:
+  description: Rules for evaluating and expanding brand-specific color families inside _global_color
+  applies_to:
+    - brand guideline images
+    - official brand swatches
+    - logo colors
+    - CTA and digital accent colors
+  intake_rules:
+    - Prefer official digital RGB or HEX values from the source artifact over visual sampling.
+    - Review every source color against existing universal tokens before proposing a new brand family.
+    - Exact matches to universal/white or universal/black must reuse the universal token and must not be duplicated under a brand group.
+    - Neutral colors may reuse universal neutrals when they are not materially distinct and are not contractually brand-defining.
+    - Signature or saturated hues that establish brand identity must receive their own brand family under the brand group.
+    - Generate a preview artifact for the proposed brand colors before any Figma write is proposed or executed.
+  naming:
+    family_format: "<brand>/<family>/<step>"
+    notes:
+      - family names are hue-based, lowercase, and may use underscore for multi-word source names.
+      - prefer recognizable source labels such as digital_blue, navy, yellow.
+      - the standard scale is always 50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 950.
+    examples:
+      - vail/digital_blue/500
+      - vail/navy/600
+      - beaver_creek/gold/500
+    source_anchor_notation:
+      format: "<step>_source"
+      scope: documentation_only
+      notes:
+        - Use this suffix in YAML or Markdown artifacts to mark the exact source-provided brand swatch within the scale.
+        - Keep Figma global variable names on the clean numeric scale only; do not create duplicate raw variables only to label the anchor.
+        - Example: token vail/navy/500 with anchor label 500_source.
+  scale_rules:
+    working_space: OKLCH
+    required_steps:
+      - 50
+      - 100
+      - 200
+      - 300
+      - 400
+      - 500
+      - 600
+      - 700
+      - 800
+      - 900
+      - 950
+    anchor_steps:
+      default: 500
+      commonly_used:
+        - 300
+        - 400
+        - 500
+        - 600
+        - 700
+        - 800
+      notes:
+        - The source brand swatch should land on the scale step whose lightness band best matches the official source value.
+        - 500 is the default starting assumption for middle-value accents, but bright yellows and dark navies may anchor elsewhere.
+    generation_rules:
+      - Build ramps in a perceptual color space instead of applying a fixed HSL formula.
+      - Adjust lightness first, chroma second, and hue last.
+      - Preserve hue identity most strongly between 300 and 700.
+      - Allow 800 through 950 to lose chroma when needed to maintain consistent darkness and usable white contrast.
+      - Avoid introducing hue shifts that make the darkest steps read as a different family.
+    target_lightness_bands:
+      - step: 50
+        oklch_l: "0.98-0.99"
+      - step: 100
+        oklch_l: "0.95-0.96"
+      - step: 200
+        oklch_l: "0.90-0.92"
+      - step: 300
+        oklch_l: "0.83-0.86"
+      - step: 400
+        oklch_l: "0.74-0.78"
+      - step: 500
+        oklch_l: "0.63-0.68"
+      - step: 600
+        oklch_l: "0.53-0.58"
+      - step: 700
+        oklch_l: "0.44-0.48"
+      - step: 800
+        oklch_l: "0.35-0.39"
+      - step: 900
+        oklch_l: "0.26-0.30"
+      - step: 950
+        oklch_l: "0.18-0.22"
+    contrast_targets:
+      with_white:
+        "800": "4.5:1 preferred"
+        "900": "7:1 required"
+        "950": "7:1 required"
+      with_black:
+        "50": "7:1 required"
+        "100": "7:1 required"
+        "200": "4.5:1 required"
+      notes:
+        - 950 across every family must remain dark enough for white foreground use.
+        - Do not assume a given step passes contrast because another hue passed at that same step; verify each family.
+  required_outputs:
+    - universal_reuse_recommendation
+    - family_list
+    - source_anchor_step_per_family
+    - 50_950_scale_spec
+    - contrast_validation_notes
+    - preview_artifact_before_write
+
 component_scoped_variables:
   description: Variables scoped to a component or pattern
   rules:
@@ -160,3 +267,8 @@ review_checks:
   - Flag _global collections whose default mode is not named values.
   - Flag variables that repeat the collection category in their path.
   - Flag writes performed without confirming the target file.
+  - Flag brand-specific duplicates of universal/white or universal/black.
+  - Flag brand color families that do not use the standard 50 to 950 scale.
+  - Flag brand color artifacts that omit the documented source anchor step.
+  - Flag 900 or 950 brand color steps that do not meet the white-contrast requirement.
+  - Flag brand color proposals that do not include a preview artifact before write.
