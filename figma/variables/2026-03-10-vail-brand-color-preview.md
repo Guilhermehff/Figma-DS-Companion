@@ -6,6 +6,32 @@
 - Intake artifact: [2026-03-10-vail-brand-color-intake.yml](/Users/guilhermefidelio/Documents/GitHub/Vail Resorts DS/figma/variables/2026-03-10-vail-brand-color-intake.yml)
 - Write status: approved and written to `_global_color` in `Design System` on 2026-03-10
 
+## Original Source Swatches
+
+- Source color: `Vail White`
+  Provided value: `#ffffff`
+  Notes: Source image lists RGB `255 255 255`.
+
+- Source color: `Vail Gray`
+  Provided value: `#808285`
+  Notes: Source image lists RGB `128 130 133` and PMS `Cool Gray 10`.
+
+- Source color: `Vail Black`
+  Provided value: `#000000`
+  Notes: Source image lists RGB `0 0 0`.
+
+- Source color: `Vail Digital Blue`
+  Provided value: `#006cd1`
+  Notes: Source image lists RGB `0 108 209` and HSL `208 100 40`.
+
+- Source color: `Vail Navy`
+  Provided value: `#144276`
+  Notes: Source image lists RGB `20 66 118`.
+
+- Source color: `Vail Yellow`
+  Provided value: `#ffaf18`
+  Notes: Source image lists RGB `255 175 24`.
+
 ## Universal Reuse
 
 - Source color: `Vail White`

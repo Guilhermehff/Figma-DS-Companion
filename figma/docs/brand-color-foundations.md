@@ -9,45 +9,49 @@ It applies before any Figma write. The output of this workflow is a reviewed bra
 1. Start with the source artifact.
    Use the official brand guide, asset sheet, or user-provided image. Prefer explicit RGB or HEX values over visually sampled approximations.
 
-2. Reuse universal tokens first.
+2. Preserve the original source colors in the artifacts.
+   Copy every source swatch name and provided value into the intake artifact and the preview artifact so future reviews do not depend on reopening the original image.
+
+3. Reuse universal tokens first.
    If a source color is an exact match to `universal/white` or `universal/black`, reuse the universal token and do not create a brand duplicate.
 
-3. Only add brand families for distinct brand hues.
+4. Only add brand families for distinct brand hues.
    Signature accents and materially distinct neutrals become new families under the brand group. Commodity neutrals can stay universal.
 
-4. Keep brand groups inside `_global_color`.
+5. Keep brand groups inside `_global_color`.
    New raw color families live under the brand name, for example `vail/digital_blue/500`.
 
-5. Build every new family on the shared 50 to 950 ladder.
+6. Build every new family on the shared 50 to 950 ladder.
    The required steps are `50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 950`.
 
-6. Use perceptual lightness, not a fixed HSL recipe.
+7. Use perceptual lightness, not a fixed HSL recipe.
    Generate ramps in `OKLCH` so a `950` yellow and a `950` navy land in a comparable darkness band.
 
-7. Document the source-matched swatch explicitly.
+8. Document the source-matched swatch explicitly.
    Use the documentation suffix `<step>_source` in the intake artifact, such as `500_source`, to show which scale step matches the original brand swatch.
 
-8. Keep Figma primitive names clean.
+9. Keep Figma primitive names clean.
    The global variable in Figma remains the numeric step, for example `vail/navy/500`. The `_source` suffix is documentation metadata, not a duplicate primitive.
 
-9. Generate a preview before write.
+10. Generate a preview before write.
    Every proposal that would add or change brand colors must produce a preview artifact for review before any Figma write is proposed or executed.
 
 ## Intake Workflow
 
 1. Record the brand and the source reference.
-2. List every source swatch with its provided name and digital value.
-3. Mark each source swatch as one of:
+2. List every source swatch with its provided name and digital value in the intake artifact.
+3. Mirror the same original source swatches in the preview artifact.
+4. Mark each source swatch as one of:
    - `reuse_universal`
    - `new_brand_family`
    - `hold_for_review`
-4. For each new family, choose a hue-based family name that is stable across channels.
-5. Set the source anchor step.
+5. For each new family, choose a hue-based family name that is stable across channels.
+6. Set the source anchor step.
    Match the official source swatch to the scale step whose lightness band fits best. `500` is only the default starting assumption, not a requirement.
-6. Expand the family to the full 50 to 950 scale.
-7. Validate contrast and perceptual consistency.
-8. Generate a preview artifact that shows universal reuse and every proposed family scale.
-9. Store the result in the intake artifact before any Figma write is proposed.
+7. Expand the family to the full 50 to 950 scale.
+8. Validate contrast and perceptual consistency.
+9. Generate a preview artifact that shows the original source swatches, universal reuse, and every proposed family scale.
+10. Store the result in the intake artifact before any Figma write is proposed.
 
 ## Naming Rules
 
@@ -96,6 +100,7 @@ Contrast gates:
 
 Each new brand-color intake should produce:
 
+- the original source swatches preserved in intake and preview
 - a universal reuse recommendation
 - a list of new brand families
 - a documented source anchor step for each family

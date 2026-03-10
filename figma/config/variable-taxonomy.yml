@@ -134,6 +134,7 @@ brand_color_foundations:
     - CTA and digital accent colors
   intake_rules:
     - Prefer official digital RGB or HEX values from the source artifact over visual sampling.
+    - Preserve the original source swatches in the intake artifact and mirror them in the preview artifact so later reviews do not depend on reopening the original image.
     - Review every source color against existing universal tokens before proposing a new brand family.
     - Exact matches to universal/white or universal/black must reuse the universal token and must not be duplicated under a brand group.
     - Neutral colors may reuse universal neutrals when they are not materially distinct and are not contractually brand-defining.
@@ -224,6 +225,7 @@ brand_color_foundations:
         - 950 across every family must remain dark enough for white foreground use.
         - Do not assume a given step passes contrast because another hue passed at that same step; verify each family.
   required_outputs:
+    - original_source_swatches_preserved
     - universal_reuse_recommendation
     - family_list
     - source_anchor_step_per_family
@@ -272,3 +274,4 @@ review_checks:
   - Flag brand color artifacts that omit the documented source anchor step.
   - Flag 900 or 950 brand color steps that do not meet the white-contrast requirement.
   - Flag brand color proposals that do not include a preview artifact before write.
+  - Flag brand color artifacts that do not preserve the original source swatches in both intake and preview.

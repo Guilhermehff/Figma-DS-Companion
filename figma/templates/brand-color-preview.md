@@ -6,6 +6,12 @@
 - Intake artifact:
 - Write status: blocked pending preview review
 
+## Original Source Swatches
+
+- Source color:
+  Provided value:
+  Notes:
+
 ## Universal Reuse
 
 - Source color:
