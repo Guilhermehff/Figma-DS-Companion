@@ -1,0 +1,14 @@
+.DS_Store
+Thumbs.db
+
+.idea/
+.vscode/
+
+node_modules/
+dist/
+build/
+
+figma/inbox/.gitkeep
+figma/audits/.gitkeep
+figma/docs/.gitkeep
+figma/decisions/.gitkeep

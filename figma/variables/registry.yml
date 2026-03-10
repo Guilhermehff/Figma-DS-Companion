@@ -1,0 +1,15 @@
+version: 1
+updated: 2026-03-10
+collections: []
+variables: []
+
+# Example entry:
+# - figma_url: https://www.figma.com/file/...
+#   collection: semantic
+#   mode: light
+#   name: color.background.primary
+#   type: color
+#   value: "#FFFFFF"
+#   alias_of: color.gray.0
+#   status: active
+#   notes: Default page background

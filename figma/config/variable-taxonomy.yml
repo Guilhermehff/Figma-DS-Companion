@@ -1,0 +1,41 @@
+version: 1
+updated: 2026-03-10
+principles:
+  - Prefer semantic names over visual-only names.
+  - Keep primitives separate from semantic aliases.
+  - Keep component-specific variables separate from global system variables.
+  - Record deprecations explicitly.
+collections:
+  - name: primitives
+    purpose: Raw scales and foundational values
+    examples:
+      - color.blue.500
+      - space.4
+      - radius.2
+  - name: semantic
+    purpose: Intent-based aliases used by product UI
+    examples:
+      - color.background.primary
+      - color.text.secondary
+      - border.default
+  - name: component
+    purpose: Component or pattern scoped variables
+    examples:
+      - button.primary.background.default
+      - input.border.focus
+required_fields:
+  - collection
+  - mode
+  - name
+  - value
+  - type
+  - status
+recommended_statuses:
+  - active
+  - deprecated
+  - proposed
+review_checks:
+  - Flag names that use numeric suffixes without scale meaning.
+  - Flag names that encode temporary migration context.
+  - Flag duplicated values with inconsistent semantic names.
+  - Flag variables missing dark mode or brand modes where expected.
