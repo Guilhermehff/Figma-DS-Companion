@@ -13,6 +13,8 @@ principles:
   - Global tokens are raw values only and do not carry UI meaning.
   - Semantic tokens form an abstraction ladder and remain meaning-light.
   - Channel tokens define final meaning and usage for a specific channel.
+  - Each global and semantic token category must live in its own dedicated collection.
+  - Global collection names must start with "_" so they remain unpublished.
   - Prefer semantic names over visual-only names.
   - Keep raw values separate from aliases.
   - Track deprecations explicitly.
@@ -29,7 +31,8 @@ token_levels:
   global:
     description: Raw values warehouse for all brands
     rules:
-      - One collection per category, containing all brands.
+      - Each global token category uses its own dedicated collection containing all brands.
+      - Global collection names must start with "_" so they remain unpublished.
       - Brand separation is done through groups within the collection.
       - The first group is always universal.
       - Brand groups follow after universal.
@@ -49,6 +52,7 @@ token_levels:
     description: Abstraction ladder that aliases Global, still not final meaning
     rules:
       - Semantic tokens must alias Global tokens.
+      - Each semantic token category uses its own dedicated collection.
       - Extended collections are used at the Semantic level to support brands.
       - Semantic naming must support laddering into channel meaning.
     ladder_examples:
@@ -90,15 +94,15 @@ exceptions:
       - Channel specific sizing should be rare and justified.
 
 collections:
-  - name: global_color
+  - name: _global_color
     level: global
     category: color
     grouping: by_brand
-  - name: global_typography
+  - name: _global_typography
     level: global
     category: typography
     grouping: by_brand
-  - name: global_dimensions
+  - name: _global_dimensions
     level: global
     category: dimensions
     grouping: universal_first
@@ -143,4 +147,5 @@ review_checks:
   - Flag duplicated values with inconsistent semantic names.
   - Flag semantic tokens that resolve to different primitives without using semantic extended collections.
   - Flag channel tokens created in the DS file instead of the channel file.
+  - Flag global collections that do not start with "_".
   - Flag writes performed without confirming the target file.

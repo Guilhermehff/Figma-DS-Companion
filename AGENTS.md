@@ -56,7 +56,8 @@ Global tokens are raw values.
 
 Rules:
 
-- Global values for **all brands** live in the **same collection per category**.
+- Each global token category lives in its **own dedicated collection**.
+- Global collection names must always start with `_` so they are not published.
 - Brand separation at the Global level is achieved through **groups** inside that shared collection.
 - The first group is **universal**.
 - Additional groups are **brand specific** (e.g., vail, beaver_creek, breckenridge, park_city).
@@ -76,6 +77,7 @@ Example ladder for color:
 Rules:
 
 - Semantic tokens alias Global tokens.
+- Each semantic token category lives in its **own dedicated collection**.
 - **Extended collections happen at the Semantic level** to support brand differences while keeping one semantic schema.
 - Semantic tokens should be structured so they can be mapped into channel meaning cleanly.
 
