@@ -1,82 +1,161 @@
-# Design System Companion Rules
+# Vail Resorts Design System Companion Rules (Codex via Cursor)
 
-This workspace is a Codex companion for Figma design-system work. It is not an application codebase by default. Favor analysis, organization, documentation, and system governance over code generation unless the user explicitly asks for implementation work.
+This workspace governs the **Vail Resorts Design System** across multiple brands and multiple channels.
 
-## Primary Goals
+This companion is authorized to:
 
-- Keep design-system knowledge in versioned files that Codex can update safely.
-- Use Figma MCP as the primary source for variables, components, screenshots, and structure.
-- Normalize MCP output into concise Markdown or YAML artifacts in this repository.
-- Help with variable audits, naming cleanup, documentation, taxonomy decisions, and component inventories.
+1. Manage and govern design system artifacts in this repository.
+2. Read and write directly in Figma using **Figma Console MCP (local)**, including creating and updating variables, collections, modes, aliases, styles, and DS helper structures.
 
-## Persistent Workspace References
+Do not treat this repository as an application codebase by default.
 
-- Treat `figma/config/variable-taxonomy.yml` as the standing token taxonomy unless the user explicitly overrides it.
-- Treat `figma/variables/registry.yml` as the canonical normalized variable inventory in this repository. Update it instead of creating duplicate registries.
-- Treat `figma/components/index.yml` as the canonical component inventory for tracking documentation status and scope.
-- Use `docs/workspace-guide.md` to decide where new artifacts belong before creating files.
-- Use `figma/templates/variable-audit.md`, `figma/templates/component-spec.md`, and `figma/templates/decision-log.md` for repeatable output structure.
-- When taxonomy or governance changes, preserve history and record the change in `figma/decisions/` instead of silently replacing prior decisions.
+## Primary goals
 
-## Source of Truth Order
+- Establish and evolve a scalable design system for multiple Vail Resorts brands.
+- Govern tokens and variables with a three-level token model: **Global**, **Semantic**, **Channel**.
+- Use Figma Console MCP as the operational interface to Figma so the companion can perform write operations.
+- Keep the DS governable: consistent naming, predictable ladders, controlled changes, and traceable decisions.
+- Expand brand foundations over time (tones, fonts, typography systems, color ramps), without breaking the token schema.
 
-1. The current Figma node or file accessed through MCP
+## Mandatory MCP tooling
+
+- Use **Figma Console MCP** for all Figma reads and writes.
+- Do not rely on the official remote Figma MCP server for governance work because it may not expose native write operations.
+
+## Source of truth order
+
+1. The current Figma file or node accessed through Figma Console MCP
 2. Existing files in this repository
 3. User instructions in the current conversation
 4. Prior assumptions
 
 When MCP data conflicts with local notes, update the local notes unless the user says otherwise.
 
-## Required Figma MCP Workflow
+## Pre flight checklist (required before any Figma write)
+
+Before performing any write operation in Figma:
+
+1. Confirm the target file
+   - Channel libraries are separate files from the DS file.
+   - If the user did not provide a file link, ask for it.
+   - If multiple candidate files are open, stop and ask which file to modify.
+
+2. Confirm the scope
+   - If the task depends on selection, confirm selection details through MCP.
+
+3. Confirm write intent
+   - If the task is destructive (delete, merge, bulk rename, remove modes), stop and request explicit confirmation.
+
+## Token model
+
+This DS uses three token levels.
+
+### Level 1: Global
+
+Global tokens are raw values.
+
+Rules:
+
+- Global values for **all brands** live in the **same collection per category**.
+- Brand separation at the Global level is achieved through **groups** inside that shared collection.
+- The first group is **universal**.
+- Additional groups are **brand specific** (e.g., vail, beaver_creek, breckenridge, park_city).
+- Global tokens do not carry UI meaning.
+
+### Level 2: Semantic
+
+Semantic tokens are an abstraction ladder but **still do not carry final meaning**.
+
+They exist to bridge raw values toward meaning, while remaining interchangeable.
+
+Example ladder for color:
+
+- global color -> semantic category scale -> channel meaning
+- grey/50 -> neutral/50 -> bg/surface
+
+Rules:
+
+- Semantic tokens alias Global tokens.
+- **Extended collections happen at the Semantic level** to support brand differences while keeping one semantic schema.
+- Semantic tokens should be structured so they can be mapped into channel meaning cleanly.
+
+### Level 3: Channel
+
+Channel tokens are where meaning is defined and applied.
+
+Rules:
+
+- Channel libraries are separate Figma files from the DS file.
+- Channel tokens alias Semantic tokens.
+- Channel specific constraints are allowed and expected (e.g., Email limitations).
+- Channel typography is typically handled as **styles** in the channel library.
+
+### Exception: Dimensions
+
+Dimensions group all sizing related aspects and remain global first across channels.
+
+## Multi brand scope
+
+- This DS supports multiple Vail Resorts brands.
+- The companion must help expand tones, fonts, and foundational systems per brand.
+- The companion must keep the token schema stable while adding brand coverage.
+
+## Required Figma MCP workflow
 
 When MCP is available and the task references a Figma file, selection, or node:
 
-1. Use `mcp__figma_console__figma_get_selection` first when the task depends on the current Figma selection. If the file context is missing, use `mcp__figma_console__figma_get_status`, `mcp__figma_console__figma_list_open_files`, or `mcp__figma_console__figma_navigate` as needed.
-2. Use `mcp__figma_console__figma_get_variables` first for token and variable work. Use `mcp__figma_console__figma_get_token_values` for narrow value lookups, and prefer filtered or summary output before full dumps.
-3. Use `mcp__figma_console__figma_get_component` first for component structure, metadata, variants, and documentation work. Use `mcp__figma_console__figma_get_component_for_development` only when the user explicitly wants implementation-oriented output.
-4. Use `mcp__figma_console__figma_get_component_image`, `mcp__figma_console__figma_capture_screenshot`, or `mcp__figma_console__figma_take_screenshot` when documenting behavior, reviewing visual consistency, or comparing variants.
-5. Use `mcp__figma_console__figma_get_design_system_summary` first for broad file discovery. Escalate to `mcp__figma_console__figma_get_design_system_kit` or `mcp__figma_console__figma_get_file_data` only when the task needs wider system context.
-6. Prefer documentation and inventory tools over implementation-oriented tools unless the user explicitly asks for code.
+1. Context and file safety
+   - Use mcp**figma_console**figma_get_status and mcp**figma_console**figma_list_open_files to confirm file context.
+   - If unsure whether the active file is the DS file or a channel file, stop and ask.
 
-If the user wants Figma analysis but does not provide a selection, URL, or node, ask for the exact Figma link or node.
+2. Variables and tokens
+   - Use mcp**figma_console**figma_get_variables for inventory, collections, modes, aliases, and naming.
+   - Use mcp**figma_console**figma_get_token_values only for narrow checks.
 
-## Repository Map
+3. Components and styles
+   - Use mcp**figma_console**figma_get_component for component structure, metadata, variants, and documentation.
+   - Use screenshots or component images when visual verification is required.
 
-- `figma/inbox/`: raw task notes or pasted MCP outputs waiting to be normalized
-- `figma/variables/`: structured token inventories, naming proposals, and cleanup work
-- `figma/components/`: component inventories and component-level specs
-- `figma/docs/`: polished documentation intended for ongoing reference
-- `figma/audits/`: one-off audits, gap analyses, and cleanup reports
-- `figma/decisions/`: ADR-style records for naming, taxonomy, and governance choices
-- `figma/templates/`: reusable templates for Codex outputs
-- `figma/config/`: naming systems and taxonomy rules
+4. Write operations
+   - Use native figma-console write tools when available.
+   - Do not switch to capture based generation paths unless explicitly requested.
 
-## File Conventions
+If the user wants Figma analysis or writes but does not provide a selection, URL, or node, ask for the exact Figma link.
 
-- Prefer YAML for structured inventories that Codex may update repeatedly.
-- Prefer Markdown for narrative documentation, audits, and decisions.
-- Include the Figma URL or node ID in every artifact created from MCP data.
-- Date new reports using ISO format (`YYYY-MM-DD`).
-- Do not create duplicate artifacts for the same purpose; update the existing file when possible.
+## Naming dispute protocol (mandatory when ambiguous)
 
-## Variable Work Rules
+When a new token does not clearly fit the taxonomy or the ladder:
 
-- Capture collection, mode, scope, variable name, resolved value, alias target, and usage notes when available.
-- Distinguish primitive tokens from semantic tokens and component-scoped tokens.
-- Flag hard-to-maintain names such as `color-1`, `gray-new`, `test`, or names that encode implementation instead of meaning.
-- Prefer naming based on intent and usage, not raw appearance alone.
-- Track deprecations explicitly rather than silently renaming or deleting variables in documentation.
+1. Stop and describe the ambiguity in one sentence.
+2. Propose 2 to 3 compliant naming options.
+3. Explain tradeoffs.
+4. Ask which option to proceed with before writing into Figma.
 
-## Documentation Rules
+Do not invent new conventions silently.
 
-- Default outputs should be concise and operational.
-- Call out open questions, missing modes, inconsistent aliases, and naming collisions explicitly.
-- When documenting components, capture purpose, variants, states, dependencies on variables, and known gaps.
-- When a recommendation is an inference from MCP output rather than a direct fact, label it as an inference.
-- When a task touches taxonomy or naming, reference the current rules in `figma/config/variable-taxonomy.yml` instead of restating them from memory.
+## Persistent workspace references
+
+- figma/config/variable-taxonomy.yml is the governing taxonomy and must match this AGENTS.md.
+- figma/templates/variable-audit.md, figma/templates/component-spec.md, figma/templates/decision-log.md must be used for repeatable output.
+- Preserve decision history. Record governance changes in figma/decisions rather than overwriting prior decisions silently.
+
+## Repository map
+
+- figma/config: taxonomies and governance rules
+- figma/variables: structured inventories, registries, and naming proposals
+- figma/components: inventories and component level specs
+- figma/templates: reusable output templates
+- docs: setup and onboarding guidance
+
+## Output conventions
+
+- Prefer YAML for structured inventories that will be updated repeatedly.
+- Prefer Markdown for audits, decisions, and narrative documentation.
+- Include the Figma file link or node ID in every artifact created from MCP data.
+- Date new reports using ISO format (YYYY-MM-DD).
 
 ## Boundaries
 
 - Do not invent variable values, modes, or component behavior that MCP did not return.
-- Do not treat implementation-oriented output from `mcp__figma_console__figma_get_component_for_development` as the goal in this repository unless the user asks for code.
-- Do not overwrite user-authored decisions without preserving the decision history.
+- Do not perform destructive writes without explicit user confirmation.
+- Do not write to a channel file or DS file unless the target file is confirmed.

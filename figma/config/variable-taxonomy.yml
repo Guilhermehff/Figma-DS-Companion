@@ -1,41 +1,146 @@
-version: 1
+version: 2
 updated: 2026-03-10
+owner: vail_resorts
+scope:
+  purpose: Token naming and structure rules for the Vail Resorts Design System
+  applies_to:
+    - global_tokens
+    - semantic_tokens
+    - channel_tokens
+    - component_scoped_variables
+
 principles:
+  - Global tokens are raw values only and do not carry UI meaning.
+  - Semantic tokens form an abstraction ladder and remain meaning-light.
+  - Channel tokens define final meaning and usage for a specific channel.
   - Prefer semantic names over visual-only names.
-  - Keep primitives separate from semantic aliases.
-  - Keep component-specific variables separate from global system variables.
-  - Record deprecations explicitly.
+  - Keep raw values separate from aliases.
+  - Track deprecations explicitly.
+  - Avoid breaking schema when expanding brands.
+
+brands:
+  - universal
+  - vail
+  - beaver_creek
+  - breckenridge
+  - park_city
+
+token_levels:
+  global:
+    description: Raw values warehouse for all brands
+    rules:
+      - One collection per category, containing all brands.
+      - Brand separation is done through groups within the collection.
+      - The first group is always universal.
+      - Brand groups follow after universal.
+    naming:
+      format: "<category>.<group>.<token>"
+      notes:
+        - group is one of: universal, vail, beaver_creek, breckenridge, park_city
+        - token is a scale key or a descriptive primitive key
+      examples:
+        - color.universal.gray.50
+        - color.vail.blue.60
+        - typography.universal.font.family.primary
+        - typography.park_city.font.family.primary
+        - dimensions.space.4
+
+  semantic:
+    description: Abstraction ladder that aliases Global, still not final meaning
+    rules:
+      - Semantic tokens must alias Global tokens.
+      - Extended collections are used at the Semantic level to support brands.
+      - Semantic naming must support laddering into channel meaning.
+    ladder_examples:
+      - "color.global.gray.50 -> color.semantic.neutral.50 -> color.channel.bg.surface"
+      - "typography.global.* -> typography.semantic.* -> typography.channel.*"
+    naming:
+      format: "<category>.<semantic_group>.<scale_or_role>"
+      notes:
+        - semantic_group is category-like and meaning-light (e.g., gray, blue, neutral)
+        - scale_or_role is typically a scale key (50, 60, 70) or a role key for typography
+      examples:
+        - color.gray.50
+        - color.blue.60
+        - color.neutral.50
+        - typography.family.primary
+        - typography.size.body.1
+        - typography.weight.regular
+
+  channel:
+    description: Final meaning and usage per channel file
+    rules:
+      - Channel libraries live in separate Figma files from the DS file.
+      - Channel tokens must alias Semantic tokens.
+      - Channel naming encodes meaning such as bg, text, border, icon, state.
+      - Channel typography is typically expressed as styles in the channel library.
+    naming:
+      format: "<category>.<meaning_path>"
+      examples:
+        - color.bg.surface
+        - color.text.primary
+        - color.border.default
+        - color.icon.secondary
+
+exceptions:
+  dimensions:
+    description: Dimensions stay global-first across channels and aggregate sizing related aspects
+    notes:
+      - Keep sizing scales stable and consistent.
+      - Channel specific sizing should be rare and justified.
+
 collections:
-  - name: primitives
-    purpose: Raw scales and foundational values
+  - name: global_color
+    level: global
+    category: color
+    grouping: by_brand
+  - name: global_typography
+    level: global
+    category: typography
+    grouping: by_brand
+  - name: global_dimensions
+    level: global
+    category: dimensions
+    grouping: universal_first
+  - name: semantic_color
+    level: semantic
+    category: color
+    extended_collections: true
+  - name: semantic_typography
+    level: semantic
+    category: typography
+    extended_collections: true
+
+component_scoped_variables:
+  description: Variables scoped to a component or pattern
+  rules:
+    - Only introduce if semantic and channel tokens cannot cover the need.
+    - Must reference which component owns it.
+    - Must not duplicate global or semantic scales.
+  naming:
+    format: "component.<component_name>.<part>.<property>.<state_optional>"
     examples:
-      - color.blue.500
-      - space.4
-      - radius.2
-  - name: semantic
-    purpose: Intent-based aliases used by product UI
-    examples:
-      - color.background.primary
-      - color.text.secondary
-      - border.default
-  - name: component
-    purpose: Component or pattern scoped variables
-    examples:
-      - button.primary.background.default
-      - input.border.focus
+      - component.button.container.color.default
+      - component.input.border.color.focus
+
 required_fields:
+  - level
   - collection
   - mode
   - name
-  - value
   - type
+  - value
   - status
+
 recommended_statuses:
   - active
   - deprecated
   - proposed
+
 review_checks:
   - Flag names that use numeric suffixes without scale meaning.
   - Flag names that encode temporary migration context.
   - Flag duplicated values with inconsistent semantic names.
-  - Flag variables missing dark mode or brand modes where expected.
+  - Flag semantic tokens that resolve to different primitives without using semantic extended collections.
+  - Flag channel tokens created in the DS file instead of the channel file.
+  - Flag writes performed without confirming the target file.
