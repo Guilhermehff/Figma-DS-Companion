@@ -58,6 +58,8 @@ Rules:
 
 - Each global token category lives in its **own dedicated collection**.
 - Global collection names must always start with `_` so they are not published.
+- Every `_global_*` collection uses an initial mode named `values`.
+- Variable names inside a collection must not repeat the collection category.
 - Brand separation at the Global level is achieved through **groups** inside that shared collection.
 - The first group is **universal**.
 - Additional groups are **brand specific** (e.g., vail, beaver_creek, breckenridge, park_city).
@@ -72,7 +74,7 @@ They exist to bridge raw values toward meaning, while remaining interchangeable.
 Example ladder for color:
 
 - global color -> semantic category scale -> channel meaning
-- grey/50 -> neutral/50 -> bg/surface
+- slate/50 -> neutral/50 -> bg/surface
 
 Rules:
 
@@ -80,6 +82,11 @@ Rules:
 - Each semantic token category lives in its **own dedicated collection**.
 - **Extended collections happen at the Semantic level** to support brand differences while keeping one semantic schema.
 - Semantic tokens should be structured so they can be mapped into channel meaning cleanly.
+
+Naming note:
+
+- Figma variable names use slash-delimited paths, not dot-delimited names.
+- In `_global_color`, `_global_typography`, and `_global_dimensions`, the collection already defines the category, so variable names start at the child path (for example `universal/slate/50`, `universal/size/100`, `space/4`).
 
 ### Level 3: Channel
 

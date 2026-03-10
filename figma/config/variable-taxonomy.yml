@@ -15,6 +15,8 @@ principles:
   - Channel tokens define final meaning and usage for a specific channel.
   - Each global and semantic token category must live in its own dedicated collection.
   - Global collection names must start with "_" so they remain unpublished.
+  - Figma variable names use slash-delimited paths.
+  - Variable names inside a collection must not repeat the collection category.
   - Prefer semantic names over visual-only names.
   - Keep raw values separate from aliases.
   - Track deprecations explicitly.
@@ -33,43 +35,48 @@ token_levels:
     rules:
       - Each global token category uses its own dedicated collection containing all brands.
       - Global collection names must start with "_" so they remain unpublished.
+      - Every _global collection uses an initial mode named values.
+      - Variable names inside a global collection do not repeat the collection category.
       - Brand separation is done through groups within the collection.
       - The first group is always universal.
       - Brand groups follow after universal.
     naming:
-      format: "<category>.<group>.<token>"
+      format: "<group>/<token>"
       notes:
         - group is one of: universal, vail, beaver_creek, breckenridge, park_city
         - token is a scale key or a descriptive primitive key
+        - use underscore for decimal scale keys in Figma (for example 0_5, 1_5)
       examples:
-        - color.universal.gray.50
-        - color.vail.blue.60
-        - typography.universal.font.family.primary
-        - typography.park_city.font.family.primary
-        - dimensions.space.4
+        - universal/slate/50
+        - vail/blue/600
+        - universal/family/sans
+        - universal/family/web_safe
+        - park_city/family/primary
+        - space/4
 
   semantic:
     description: Abstraction ladder that aliases Global, still not final meaning
     rules:
       - Semantic tokens must alias Global tokens.
       - Each semantic token category uses its own dedicated collection.
+      - Variable names inside a semantic collection do not repeat the collection category.
       - Extended collections are used at the Semantic level to support brands.
       - Semantic naming must support laddering into channel meaning.
     ladder_examples:
-      - "color.global.gray.50 -> color.semantic.neutral.50 -> color.channel.bg.surface"
-      - "typography.global.* -> typography.semantic.* -> typography.channel.*"
+      - "universal/slate/50 -> neutral/50 -> color/bg/surface"
+      - "universal/family/sans -> family/sans -> typography/body/default"
     naming:
-      format: "<category>.<semantic_group>.<scale_or_role>"
+      format: "<semantic_group>/<scale_or_role>"
       notes:
         - semantic_group is category-like and meaning-light (e.g., gray, blue, neutral)
         - scale_or_role is typically a scale key (50, 60, 70) or a role key for typography
       examples:
-        - color.gray.50
-        - color.blue.60
-        - color.neutral.50
-        - typography.family.primary
-        - typography.size.body.1
-        - typography.weight.regular
+        - gray/50
+        - blue/600
+        - neutral/50
+        - family/primary
+        - size/100
+        - weight/regular
 
   channel:
     description: Final meaning and usage per channel file
@@ -79,18 +86,20 @@ token_levels:
       - Channel naming encodes meaning such as bg, text, border, icon, state.
       - Channel typography is typically expressed as styles in the channel library.
     naming:
-      format: "<category>.<meaning_path>"
+      format: "<category>/<meaning_path>"
       examples:
-        - color.bg.surface
-        - color.text.primary
-        - color.border.default
-        - color.icon.secondary
+        - color/bg/surface
+        - color/text/primary
+        - color/border/default
+        - color/icon/secondary
 
 exceptions:
   dimensions:
     description: Dimensions stay global-first across channels and aggregate sizing related aspects
     notes:
       - Keep sizing scales stable and consistent.
+      - Use a single global space ladder at the raw level; sizing meaning is assigned later.
+      - Global dimensions start at 0_5 and do not include 0 or px.
       - Channel specific sizing should be rare and justified.
 
 collections:
@@ -122,10 +131,10 @@ component_scoped_variables:
     - Must reference which component owns it.
     - Must not duplicate global or semantic scales.
   naming:
-    format: "component.<component_name>.<part>.<property>.<state_optional>"
+    format: "component/<component_name>/<part>/<property>/<state_optional>"
     examples:
-      - component.button.container.color.default
-      - component.input.border.color.focus
+      - component/button/container/color/default
+      - component/input/border/color/focus
 
 required_fields:
   - level
@@ -148,4 +157,6 @@ review_checks:
   - Flag semantic tokens that resolve to different primitives without using semantic extended collections.
   - Flag channel tokens created in the DS file instead of the channel file.
   - Flag global collections that do not start with "_".
+  - Flag _global collections whose default mode is not named values.
+  - Flag variables that repeat the collection category in their path.
   - Flag writes performed without confirming the target file.

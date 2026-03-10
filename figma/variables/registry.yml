@@ -1,15 +1,484 @@
-version: 1
+version: 3
 updated: 2026-03-10
-collections: []
-variables: []
+collections:
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    id: VariableCollectionId:23:2
+    level: global
+    collection: _global_color
+    mode: values
+    status: active
+    variable_count: 11
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    id: VariableCollectionId:23:3
+    level: global
+    collection: _global_typography
+    mode: values
+    status: active
+    variable_count: 12
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    id: VariableCollectionId:23:4
+    level: global
+    collection: _global_dimensions
+    mode: values
+    status: active
+    variable_count: 33
+variables:
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: global
+    collection: _global_color
+    mode: values
+    name: universal/slate/50
+    type: color
+    value: "#f8fafc"
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: global
+    collection: _global_color
+    mode: values
+    name: universal/slate/100
+    type: color
+    value: "#f1f5f9"
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: global
+    collection: _global_color
+    mode: values
+    name: universal/slate/200
+    type: color
+    value: "#e2e8f0"
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: global
+    collection: _global_color
+    mode: values
+    name: universal/slate/300
+    type: color
+    value: "#cbd5e1"
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: global
+    collection: _global_color
+    mode: values
+    name: universal/slate/400
+    type: color
+    value: "#94a3b8"
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: global
+    collection: _global_color
+    mode: values
+    name: universal/slate/500
+    type: color
+    value: "#64748b"
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: global
+    collection: _global_color
+    mode: values
+    name: universal/slate/600
+    type: color
+    value: "#475569"
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: global
+    collection: _global_color
+    mode: values
+    name: universal/slate/700
+    type: color
+    value: "#334155"
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: global
+    collection: _global_color
+    mode: values
+    name: universal/slate/800
+    type: color
+    value: "#1e293b"
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: global
+    collection: _global_color
+    mode: values
+    name: universal/slate/900
+    type: color
+    value: "#0f172a"
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: global
+    collection: _global_color
+    mode: values
+    name: universal/slate/950
+    type: color
+    value: "#020617"
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: global
+    collection: _global_typography
+    mode: values
+    name: universal/family/sans
+    type: string
+    value: Inter
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: global
+    collection: _global_typography
+    mode: values
+    name: universal/family/web_safe
+    type: string
+    value: Inter
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: global
+    collection: _global_typography
+    mode: values
+    name: universal/weight/normal
+    type: float
+    value: 400
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: global
+    collection: _global_typography
+    mode: values
+    name: universal/weight/medium
+    type: float
+    value: 500
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: global
+    collection: _global_typography
+    mode: values
+    name: universal/size/100
+    type: float
+    value: 12
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: global
+    collection: _global_typography
+    mode: values
+    name: universal/size/200
+    type: float
+    value: 14
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: global
+    collection: _global_typography
+    mode: values
+    name: universal/size/300
+    type: float
+    value: 16
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: global
+    collection: _global_typography
+    mode: values
+    name: universal/size/400
+    type: float
+    value: 18
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: global
+    collection: _global_typography
+    mode: values
+    name: universal/size/500
+    type: float
+    value: 20
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: global
+    collection: _global_typography
+    mode: values
+    name: universal/size/600
+    type: float
+    value: 24
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: global
+    collection: _global_typography
+    mode: values
+    name: universal/size/700
+    type: float
+    value: 30
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: global
+    collection: _global_typography
+    mode: values
+    name: universal/size/800
+    type: float
+    value: 36
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: global
+    collection: _global_dimensions
+    mode: values
+    name: space/0_5
+    type: float
+    value: 2
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: global
+    collection: _global_dimensions
+    mode: values
+    name: space/1
+    type: float
+    value: 4
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: global
+    collection: _global_dimensions
+    mode: values
+    name: space/1_5
+    type: float
+    value: 6
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: global
+    collection: _global_dimensions
+    mode: values
+    name: space/2
+    type: float
+    value: 8
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: global
+    collection: _global_dimensions
+    mode: values
+    name: space/2_5
+    type: float
+    value: 10
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: global
+    collection: _global_dimensions
+    mode: values
+    name: space/3
+    type: float
+    value: 12
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: global
+    collection: _global_dimensions
+    mode: values
+    name: space/3_5
+    type: float
+    value: 14
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: global
+    collection: _global_dimensions
+    mode: values
+    name: space/4
+    type: float
+    value: 16
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: global
+    collection: _global_dimensions
+    mode: values
+    name: space/5
+    type: float
+    value: 20
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: global
+    collection: _global_dimensions
+    mode: values
+    name: space/6
+    type: float
+    value: 24
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: global
+    collection: _global_dimensions
+    mode: values
+    name: space/7
+    type: float
+    value: 28
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: global
+    collection: _global_dimensions
+    mode: values
+    name: space/8
+    type: float
+    value: 32
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: global
+    collection: _global_dimensions
+    mode: values
+    name: space/9
+    type: float
+    value: 36
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: global
+    collection: _global_dimensions
+    mode: values
+    name: space/10
+    type: float
+    value: 40
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: global
+    collection: _global_dimensions
+    mode: values
+    name: space/11
+    type: float
+    value: 44
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: global
+    collection: _global_dimensions
+    mode: values
+    name: space/12
+    type: float
+    value: 48
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: global
+    collection: _global_dimensions
+    mode: values
+    name: space/14
+    type: float
+    value: 56
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: global
+    collection: _global_dimensions
+    mode: values
+    name: space/16
+    type: float
+    value: 64
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: global
+    collection: _global_dimensions
+    mode: values
+    name: space/20
+    type: float
+    value: 80
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: global
+    collection: _global_dimensions
+    mode: values
+    name: space/24
+    type: float
+    value: 96
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: global
+    collection: _global_dimensions
+    mode: values
+    name: space/28
+    type: float
+    value: 112
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: global
+    collection: _global_dimensions
+    mode: values
+    name: space/32
+    type: float
+    value: 128
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: global
+    collection: _global_dimensions
+    mode: values
+    name: space/36
+    type: float
+    value: 144
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: global
+    collection: _global_dimensions
+    mode: values
+    name: space/40
+    type: float
+    value: 160
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: global
+    collection: _global_dimensions
+    mode: values
+    name: space/44
+    type: float
+    value: 176
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: global
+    collection: _global_dimensions
+    mode: values
+    name: space/48
+    type: float
+    value: 192
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: global
+    collection: _global_dimensions
+    mode: values
+    name: space/52
+    type: float
+    value: 208
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: global
+    collection: _global_dimensions
+    mode: values
+    name: space/56
+    type: float
+    value: 224
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: global
+    collection: _global_dimensions
+    mode: values
+    name: space/60
+    type: float
+    value: 240
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: global
+    collection: _global_dimensions
+    mode: values
+    name: space/64
+    type: float
+    value: 256
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: global
+    collection: _global_dimensions
+    mode: values
+    name: space/72
+    type: float
+    value: 288
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: global
+    collection: _global_dimensions
+    mode: values
+    name: space/80
+    type: float
+    value: 320
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: global
+    collection: _global_dimensions
+    mode: values
+    name: space/96
+    type: float
+    value: 384
+    status: active
 
 # Example entry:
 # - figma_url: https://www.figma.com/file/...
 #   collection: semantic
 #   mode: light
-#   name: color.background.primary
+#   name: bg/primary
 #   type: color
 #   value: "#FFFFFF"
-#   alias_of: color.gray.0
+#   alias_of: neutral/50
 #   status: active
 #   notes: Default page background
