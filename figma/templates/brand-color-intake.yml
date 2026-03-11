@@ -12,6 +12,8 @@ preview:
 source_swatches:
   - source_name: ""
     provided_value: ""
+    source_usage_scope: ""
+    channel_restrictions: ""
     notes: ""
 
 universal_reuse:
@@ -74,6 +76,17 @@ validation:
       foreground: ""
       ratio: ""
       result: pass
+
+review_readiness:
+  intended_review_channels:
+    - web
+    - email
+    - ads
+  review_rules:
+    - subject: ""
+      channels: []
+      rule: ""
+      source_basis: ""
 
 open_questions:
   - ""

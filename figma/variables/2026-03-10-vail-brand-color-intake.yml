@@ -12,21 +12,33 @@ preview:
 source_swatches:
   - source_name: Vail White
     provided_value: "#ffffff"
+    source_usage_scope: logo_or_typography_colors
+    channel_restrictions: not specified beyond source category
     notes: Source image lists RGB 255 255 255.
   - source_name: Vail Gray
     provided_value: "#808285"
+    source_usage_scope: logo_or_typography_colors
+    channel_restrictions: not specified beyond source category
     notes: Source image lists RGB 128 130 133 and PMS Cool Gray 10.
   - source_name: Vail Black
     provided_value: "#000000"
+    source_usage_scope: logo_or_typography_colors
+    channel_restrictions: not specified beyond source category
     notes: Source image lists RGB 0 0 0.
   - source_name: Vail Digital Blue
     provided_value: "#006cd1"
+    source_usage_scope: cta_website_online_use_only
+    channel_restrictions: digital_channels_only_per_source
     notes: Source image lists RGB 0 108 209 and HSL 208 100 40.
   - source_name: Vail Navy
     provided_value: "#144276"
+    source_usage_scope: cta_website_online_use_only
+    channel_restrictions: digital_channels_only_per_source
     notes: Source image lists RGB 20 66 118.
   - source_name: Vail Yellow
     provided_value: "#ffaf18"
+    source_usage_scope: cta_website_online_use_only
+    channel_restrictions: digital_channels_only_per_source
     notes: Source image lists RGB 255 175 24.
 
 universal_reuse:
@@ -283,5 +295,26 @@ validation:
       foreground: white
       ratio: "18.11:1"
       result: pass
+
+review_readiness:
+  intended_review_channels:
+    - web
+    - email
+    - ads
+  review_rules:
+    - subject: Vail White, Vail Gray, and Vail Black
+      channels:
+        - web
+        - email
+        - ads
+      rule: Treat these as logo or typography colors and neutral references during downstream brand review.
+      source_basis: Source image groups them under logo or typography colors.
+    - subject: Vail Digital Blue, Vail Navy, and Vail Yellow
+      channels:
+        - web
+        - email
+        - ads
+      rule: Treat these as digital accent colors for CTA, website, and online usage rather than core logo-neutral colors.
+      source_basis: Source image groups them under CTA, website, or online use only colors.
 
 open_questions: []

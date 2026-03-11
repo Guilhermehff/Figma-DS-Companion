@@ -22,6 +22,7 @@ principles:
   - Track deprecations explicitly.
   - Avoid breaking schema when expanding brands.
   - Brand color ramps must reuse universal neutrals where appropriate and keep a consistent lightness ladder across hues.
+  - When a brand review includes multiple foundation types, keep separate intake and preview artifacts per foundation.
 
 brands:
   - universal
@@ -50,7 +51,7 @@ token_levels:
       examples:
         - universal/slate/50
         - vail/blue/600
-        - universal/family/sans
+        - universal/family/primary
         - universal/family/web_safe
         - park_city/family/primary
         - space/4
@@ -65,7 +66,9 @@ token_levels:
       - Semantic naming must support laddering into channel meaning.
     ladder_examples:
       - "universal/slate/50 -> neutral/50 -> color/bg/surface"
-      - "universal/family/sans -> family/sans -> typography/body/default"
+      - "vail/family/display -> family/heading -> typography/heading/display"
+      - "vail/family/primary -> family/body -> typography/body/default"
+      - "universal/family/web_safe -> family/body_safe -> typography/body/email"
     naming:
       format: "<semantic_group>/<scale_or_role>"
       notes:
@@ -75,7 +78,8 @@ token_levels:
         - gray/50
         - blue/600
         - neutral/50
-        - family/primary
+        - family/heading
+        - family/body_safe
         - size/100
         - weight/regular
 
@@ -135,6 +139,7 @@ brand_color_foundations:
   intake_rules:
     - Prefer official digital RGB or HEX values from the source artifact over visual sampling.
     - Preserve the original source swatches in the intake artifact and mirror them in the preview artifact so later reviews do not depend on reopening the original image.
+    - Preserve any source-labeled usage scopes or channel restrictions such as logo-only, typography-only, online-only, or CTA-only so later page, email, and ad reviews can validate usage.
     - Review every source color against existing universal tokens before proposing a new brand family.
     - Exact matches to universal/white or universal/black must reuse the universal token and must not be duplicated under a brand group.
     - Neutral colors may reuse universal neutrals when they are not materially distinct and are not contractually brand-defining.
@@ -231,6 +236,104 @@ brand_color_foundations:
     - source_anchor_step_per_family
     - 50_950_scale_spec
     - contrast_validation_notes
+    - downstream_review_guidance
+    - preview_artifact_before_write
+
+brand_typography_foundations:
+  description: Rules for evaluating and documenting brand typography using _global_typography primitives plus later channel style recipes
+  applies_to:
+    - brand guideline images
+    - official typography spec pages
+    - marketing typography guides
+    - editorial or campaign typography rules
+  intake_rules:
+    - Preserve the original source typography roles in the intake artifact and mirror them in the preview artifact so later reviews do not depend on reopening the original image.
+    - Separate raw primitives from usage-bearing role recipes.
+    - Review every source family against existing _global_typography primitives before proposing a new brand family token.
+    - Reuse universal weight primitives by default; raw weights should remain universal unless a truly distinct numeric value is required later.
+    - If the source omits raw sizes, provisionally map each role to the existing universal size ladder and mark the mapping as assumed until design validation confirms it.
+    - If the source omits fallback or web-safe families, default the family fallback reference to universal/family/web_safe.
+    - Recommend semantic family aliases using family/heading, family/body, and family/action plus the safe counterparts family/heading_safe, family/body_safe, and family/action_safe.
+    - Capture the typography rules needed for later page, email, and ad review, including casing, punctuation, fallback behavior, and channel-safe expectations.
+    - Do not encode role names such as eyebrow, headline, subhead, body, or cta inside _global_typography primitive names.
+    - Generate a preview artifact for the proposed typography before any Figma write is proposed or executed.
+  primitives:
+    family_naming:
+      format: "<brand>/family/<slot>"
+      preferred_slots:
+        - primary
+        - secondary
+        - display
+        - accent
+        - web_safe
+      notes:
+        - family slots must be structural and reusable across roles.
+        - if a family is used mainly for headlines, prefer display over headline because headline is a style role, not a raw primitive.
+        - if one family serves multiple roles, keep one family token and map multiple role recipes to it.
+        - universal/family/web_safe is the single raw safe-family placeholder used by semantic safe aliases when email or other constrained channels cannot rely on brand fonts.
+      examples:
+        - vail/family/display
+        - vail/family/primary
+        - beaver_creek/family/accent
+    weight_naming:
+      format: "<group>/weight/<weight_key>"
+      notes:
+        - weight tokens are raw numeric values and should reuse universal tokens whenever possible.
+        - use universal/weight/black as the shared raw black weight when a source specifies Black without a separate numeric exception.
+        - add a brand-specific weight token only if the value or mapping is truly brand-specific and cannot be governed universally.
+      examples:
+        - universal/weight/medium
+        - universal/weight/black
+    size_naming:
+      format: "universal/size/<step>"
+      notes:
+        - continue using the shared universal size ladder for raw sizes.
+        - if a source guide only provides relational size rules, preserve the relation in role recipes and map the working assumption to an existing universal size token.
+  semantic_family_aliases:
+    default_tokens:
+      - family/heading
+      - family/heading_safe
+      - family/body
+      - family/body_safe
+      - family/action
+      - family/action_safe
+    notes:
+      - safe aliases are semantic substitutes for channels such as email that need safe-family behavior.
+      - until a more specific safe raw family is approved, safe aliases should point to universal/family/web_safe.
+  role_recipe_rules:
+    description: Usage-bearing typography specs that later become channel styles
+    required_fields:
+      - role_name
+      - source_family
+      - proposed_family_token
+      - weight
+      - casing
+      - tracking
+      - leading_rule
+      - punctuation_rule
+      - sample_copy
+    notes:
+      - role recipes are review artifacts and style guidance, not _global_typography variable names.
+      - channel typography styles may later implement these recipes in channel libraries.
+      - prefer semantic family aliases such as family/heading, family/body, and family/action; reserve family/cta only if the semantic layer intentionally mirrors channel-specific language.
+      - email and other constrained channels should consume the corresponding safe aliases, such as family/body_safe.
+    example_roles:
+      - eyebrow
+      - headline
+      - subhead
+      - body
+      - cta
+  required_outputs:
+    - original_source_roles_preserved
+    - primitive_reuse_recommendation
+    - proposed_family_primitives
+    - semantic_family_mapping
+    - safe_semantic_family_mapping
+    - proposed_weight_reuse_or_additions
+    - role_recipe_spec
+    - assumed_size_mapping_when_raw_sizes_are_missing
+    - downstream_review_guidance
+    - hold_for_review_summary_when_needed
     - preview_artifact_before_write
 
 component_scoped_variables:
@@ -275,3 +378,9 @@ review_checks:
   - Flag 900 or 950 brand color steps that do not meet the white-contrast requirement.
   - Flag brand color proposals that do not include a preview artifact before write.
   - Flag brand color artifacts that do not preserve the original source swatches in both intake and preview.
+  - Flag brand color artifacts that omit source usage scopes or review guidance needed for later page, email, or ad review.
+  - Flag typography role names written into _global_typography primitive names.
+  - Flag typography proposals that invent new raw size values when the source only provided relational sizing rules and an existing universal size token could have been used provisionally.
+  - Flag typography artifacts that do not preserve the original source roles in both intake and preview.
+  - Flag typography artifacts that omit semantic safe aliases or downstream review guidance for email and other constrained channels.
+  - Flag typography proposals that do not include a preview artifact before write.

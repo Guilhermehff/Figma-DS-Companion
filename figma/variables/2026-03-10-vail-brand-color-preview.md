@@ -10,26 +10,32 @@
 
 - Source color: `Vail White`
   Provided value: `#ffffff`
+  Usage scope: `logo or typography colors`
   Notes: Source image lists RGB `255 255 255`.
 
 - Source color: `Vail Gray`
   Provided value: `#808285`
+  Usage scope: `logo or typography colors`
   Notes: Source image lists RGB `128 130 133` and PMS `Cool Gray 10`.
 
 - Source color: `Vail Black`
   Provided value: `#000000`
+  Usage scope: `logo or typography colors`
   Notes: Source image lists RGB `0 0 0`.
 
 - Source color: `Vail Digital Blue`
   Provided value: `#006cd1`
+  Usage scope: `CTA, website, or online use only`
   Notes: Source image lists RGB `0 108 209` and HSL `208 100 40`.
 
 - Source color: `Vail Navy`
   Provided value: `#144276`
+  Usage scope: `CTA, website, or online use only`
   Notes: Source image lists RGB `20 66 118`.
 
 - Source color: `Vail Yellow`
   Provided value: `#ffaf18`
+  Usage scope: `CTA, website, or online use only`
   Notes: Source image lists RGB `255 175 24`.
 
 ## Universal Reuse
@@ -155,3 +161,15 @@ Hex values:
 - The preview confirms that the darkest `900` and `950` steps across all three families remain visually aligned enough to support white foreground use.
 - `Vail Gray` is treated as a universal neutral use, not a new brand family.
 - The approved preview has been implemented in Figma as global color primitives.
+
+## Review Readiness
+
+- Subject: `Vail White, Vail Gray, and Vail Black`
+  Channels: `web, email, ads`
+  Rule: Treat these as logo or typography colors and neutral references during downstream review.
+  Source basis: Source image groups them under `logo/typography colors`.
+
+- Subject: `Vail Digital Blue, Vail Navy, and Vail Yellow`
+  Channels: `web, email, ads`
+  Rule: Treat these as digital accent colors for CTA, website, and online usage rather than core logo-neutral colors.
+  Source basis: Source image groups them under `CTA, website/online use only colors`.

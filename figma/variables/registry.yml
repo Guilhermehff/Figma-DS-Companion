@@ -1,5 +1,5 @@
 version: 3
-updated: 2026-03-10
+updated: 2026-03-11
 collections:
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     id: VariableCollectionId:23:2
@@ -14,7 +14,7 @@ collections:
     collection: _global_typography
     mode: values
     status: active
-    variable_count: 12
+    variable_count: 15
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     id: VariableCollectionId:23:4
     level: global
@@ -483,7 +483,7 @@ variables:
     level: global
     collection: _global_typography
     mode: values
-    name: universal/family/sans
+    name: universal/family/primary
     type: string
     value: Inter
     status: active
@@ -493,7 +493,23 @@ variables:
     mode: values
     name: universal/family/web_safe
     type: string
-    value: Inter
+    value: Arial
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: global
+    collection: _global_typography
+    mode: values
+    name: vail/family/display
+    type: string
+    value: Termina
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: global
+    collection: _global_typography
+    mode: values
+    name: vail/family/primary
+    type: string
+    value: Avenir
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
@@ -510,6 +526,14 @@ variables:
     name: universal/weight/medium
     type: float
     value: 500
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: global
+    collection: _global_typography
+    mode: values
+    name: universal/weight/black
+    type: float
+    value: 900
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global

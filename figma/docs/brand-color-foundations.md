@@ -12,29 +12,35 @@ It applies before any Figma write. The output of this workflow is a reviewed bra
 2. Preserve the original source colors in the artifacts.
    Copy every source swatch name and provided value into the intake artifact and the preview artifact so future reviews do not depend on reopening the original image.
 
-3. Reuse universal tokens first.
+3. Preserve source usage scopes and channel restrictions.
+   If the source distinguishes logo colors, typography colors, online-only colors, or other usage scopes, record that structure in the artifacts so later page, email, and ad reviews can validate usage.
+
+4. Reuse universal tokens first.
    If a source color is an exact match to `universal/white` or `universal/black`, reuse the universal token and do not create a brand duplicate.
 
-4. Only add brand families for distinct brand hues.
+5. Only add brand families for distinct brand hues.
    Signature accents and materially distinct neutrals become new families under the brand group. Commodity neutrals can stay universal.
 
-5. Keep brand groups inside `_global_color`.
+6. Keep brand groups inside `_global_color`.
    New raw color families live under the brand name, for example `vail/digital_blue/500`.
 
-6. Build every new family on the shared 50 to 950 ladder.
+7. Build every new family on the shared 50 to 950 ladder.
    The required steps are `50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 950`.
 
-7. Use perceptual lightness, not a fixed HSL recipe.
+8. Use perceptual lightness, not a fixed HSL recipe.
    Generate ramps in `OKLCH` so a `950` yellow and a `950` navy land in a comparable darkness band.
 
-8. Document the source-matched swatch explicitly.
+9. Document the source-matched swatch explicitly.
    Use the documentation suffix `<step>_source` in the intake artifact, such as `500_source`, to show which scale step matches the original brand swatch.
 
-9. Keep Figma primitive names clean.
+10. Keep Figma primitive names clean.
    The global variable in Figma remains the numeric step, for example `vail/navy/500`. The `_source` suffix is documentation metadata, not a duplicate primitive.
 
-10. Generate a preview before write.
+11. Generate a preview before write.
    Every proposal that would add or change brand colors must produce a preview artifact for review before any Figma write is proposed or executed.
+
+12. Keep the artifacts review-ready.
+   Brand color instructions must preserve the usage rules needed for later review of pages, emails, and ads, including whether a color is logo-only, typography-only, or digital-only.
 
 ## Intake Workflow
 
@@ -50,8 +56,9 @@ It applies before any Figma write. The output of this workflow is a reviewed bra
    Match the official source swatch to the scale step whose lightness band fits best. `500` is only the default starting assumption, not a requirement.
 7. Expand the family to the full 50 to 950 scale.
 8. Validate contrast and perceptual consistency.
-9. Generate a preview artifact that shows the original source swatches, universal reuse, and every proposed family scale.
-10. Store the result in the intake artifact before any Figma write is proposed.
+9. Record downstream review guidance so later channel audits can test whether a color is being used within its approved scope.
+10. Generate a preview artifact that shows the original source swatches, universal reuse, every proposed family scale, and the downstream review guidance.
+11. Store the result in the intake artifact before any Figma write is proposed.
 
 ## Naming Rules
 
@@ -101,13 +108,21 @@ Contrast gates:
 Each new brand-color intake should produce:
 
 - the original source swatches preserved in intake and preview
+- the source usage scopes preserved in intake and preview
 - a universal reuse recommendation
 - a list of new brand families
 - a documented source anchor step for each family
 - a full 50 to 950 scale proposal for each family
 - contrast validation notes
+- downstream review guidance for pages, emails, and ads
 - a preview artifact generated before write
 - any open naming or taxonomy questions
+
+## Artifact Separation
+
+When a brand submission includes both color and typography, keep the color artifacts separate from the typography artifacts.
+
+Do not merge color and typography into a single intake or preview file.
 
 Use [brand-color-intake.yml](/Users/guilhermefidelio/Documents/GitHub/Vail Resorts DS/figma/templates/brand-color-intake.yml) for the repeatable artifact.
 Use [brand-color-preview.md](/Users/guilhermefidelio/Documents/GitHub/Vail Resorts DS/figma/templates/brand-color-preview.md) for the required pre-write preview.

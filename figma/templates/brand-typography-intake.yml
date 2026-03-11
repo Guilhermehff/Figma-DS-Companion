@@ -1,0 +1,105 @@
+date: YYYY-MM-DD
+brand: ""
+source_reference: ""
+source_type: image
+figma_url: ""
+status: proposed
+preview:
+  required_before_write: true
+  artifact: ""
+  status: pending
+
+source_roles:
+  - source_role: ""
+    source_family_name: ""
+    source_style_name: ""
+    source_weight_label: ""
+    source_usage_scope: ""
+    text_case: ""
+    tracking: ""
+    leading: ""
+    size_rule: ""
+    punctuation_rule: ""
+    sample_copy: ""
+    notes: ""
+
+primitive_recommendations:
+  reuse_existing:
+    families:
+      - source_family_name: ""
+        existing_token: ""
+        reason: ""
+    weights:
+      - source_weight_label: ""
+        existing_token: ""
+        reason: ""
+    sizes:
+      - source_size_reference: ""
+        existing_token: ""
+        assumption_status: ""
+        assumption_note: ""
+        reason: ""
+  proposed_primitives:
+    families:
+      - token_name: ""
+        source_family_name: ""
+        source_style_reference: ""
+        rationale: ""
+        fallback_token: universal/family/web_safe
+        fallback_note: ""
+    weights:
+      - token_name: ""
+        source_weight_label: ""
+        proposed_value: ""
+        rationale: ""
+  hold_for_review:
+    - item: ""
+      reason: ""
+
+semantic_recommendations:
+  family_aliases:
+    - semantic_token: family/heading
+      global_token: ""
+      safe_semantic_token: family/heading_safe
+      safe_global_token: universal/family/web_safe
+      intended_channels:
+        - web
+        - email
+        - ads
+      notes: ""
+
+role_recipes:
+  - role_name: ""
+    source_role: ""
+    proposed_family_token: ""
+    fallback_token: universal/family/web_safe
+    proposed_weight_token: ""
+    proposed_size_token: ""
+    size_assumption_status: ""
+    text_case: ""
+    tracking: ""
+    leading_rule: ""
+    size_rule: ""
+    punctuation_rule: ""
+    sample_copy: ""
+    notes: ""
+
+validation:
+  extraction_notes:
+    - ""
+  governance_notes:
+    - ""
+
+review_readiness:
+  intended_review_channels:
+    - web
+    - email
+    - ads
+  review_rules:
+    - subject: ""
+      channels: []
+      rule: ""
+      source_basis: ""
+
+open_questions:
+  - ""

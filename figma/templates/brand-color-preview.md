@@ -10,6 +10,7 @@
 
 - Source color:
   Provided value:
+  Usage scope:
   Notes:
 
 ## Universal Reuse
@@ -57,3 +58,10 @@ Hex values:
 ## Review Notes
 
 - 
+
+## Review Readiness
+
+- Subject:
+  Channels:
+  Rule:
+  Source basis:
