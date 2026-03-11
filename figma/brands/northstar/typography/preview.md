@@ -1,10 +1,6 @@
-# Brand Typography Preview
+# Northstar Typography Preview
 
-- Date: 2026-03-11
-- Brand: northstar
-- Source reference: User-provided images in chat showing the Northstar typography guidance
-- Intake artifact: [intake.yml](/Users/guilhermefidelio/Documents/GitHub/Vail Resorts DS/figma/brands/northstar/typography/intake.yml)
-- Write status: approved and written to `_Global: Typography`, `Semantic: Typography`, and `Northstar` in `Design System` on 2026-03-11
+Status: approved and written to `_Global: Typography`, `Semantic: Typography`, and `Northstar` in `Design System` on 2026-03-11
 
 ## Original Source Roles
 

@@ -11,6 +11,8 @@ This repository is organized to keep design-system governance durable as more br
    - `figma/variables/index.yml` only when a local collection or compatibility export is intentionally being generated
 2. Pull Figma context with Figma Console MCP when the task depends on live file state.
 3. Normalize findings into the brand manifest, brand artifacts, or decision logs instead of creating parallel notes.
+   - Keep provenance in the brand manifest and intake YAML; preview Markdown can stay lean unless a node-specific pointer is needed.
+   - If brand documentation issues appear during the task, surface them explicitly and either fix them in the same pass or record them in a linked decision artifact.
 4. Record cross-cutting governance changes in `figma/decisions/`.
 5. Create or refresh local variable exports only when an audit or compatibility export is explicitly requested.
 6. Run the governance validator before treating the repo snapshot as current.
@@ -31,6 +33,7 @@ This repository is organized to keep design-system governance durable as more br
 - `figma/variables/extensions/`: on-demand extension export staging only
 - `figma/variables/index.yml`: optional manifest for local exports
 - `figma/variables/registry.yml`: on-demand compatibility export when present
+- `figma/variables/registry.base-only.yml`: intentionally partial collection-only export when present
 - `figma/history/variables/`: migrated dated variable artifacts that are kept for reference only
 - `figma/decisions/`: accepted governance decisions
 - `figma/docs/`: stable process guidance
@@ -38,7 +41,9 @@ This repository is organized to keep design-system governance durable as more br
 ## Governance Commands
 
 - `python -m scripts.figma_governance validate`
-- `python -m scripts.figma_governance build-registry` for optional compatibility exports only
+- `python -m scripts.figma_governance validate-exports` before a full compatibility export
+- `python -m scripts.figma_governance build-registry` for optional full compatibility exports after the required local extension snapshots have been prepared
+- `python -m scripts.figma_governance build-registry --base-only` for an intentionally partial export containing only the collection snapshots currently listed in `figma/variables/index.yml`; this writes `figma/variables/registry.base-only.yml`
 - `python -m scripts.figma_governance check-docs`
 
 ## Good Task Examples

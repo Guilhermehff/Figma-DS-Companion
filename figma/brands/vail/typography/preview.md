@@ -1,10 +1,6 @@
-# Brand Typography Preview
+# Vail Typography Preview
 
-- Date: 2026-03-10
-- Brand: vail
-- Source reference: User-provided image in chat showing Vail typography guidance
-- Intake artifact: [intake.yml](/Users/guilhermefidelio/Documents/GitHub/Vail Resorts DS/figma/brands/vail/typography/intake.yml)
-- Write status: approved and written to `_Global: Typography`, `Semantic: Typography`, and `Vail` in `Design System` on 2026-03-11
+Status: approved and written to `_Global: Typography`, `Semantic: Typography`, and `Vail` in `Design System` on 2026-03-11
 
 ## Original Source Roles
 

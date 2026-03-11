@@ -206,7 +206,9 @@ Do not invent new conventions silently.
 
 - Prefer YAML for structured inventories that will be updated repeatedly.
 - Prefer Markdown for audits, decisions, and narrative documentation.
-- Include the Figma file link or node ID in every artifact created from MCP data.
+- Keep Figma provenance in canonical artifacts such as `figma/brands/<brand>/brand.yml`, intake YAML, and node-specific specs or audits.
+- Preview Markdown may omit repeated Figma file links or node IDs when that provenance is already captured in the linked canonical artifact.
+- When brand documentation contains contradictions, missing provenance, stale write status, broken cross-references, or other documentation defects, call them out explicitly and fix or log them as part of the governance task instead of leaving them implicit.
 - Date new reports using ISO format (YYYY-MM-DD).
 
 ## Boundaries

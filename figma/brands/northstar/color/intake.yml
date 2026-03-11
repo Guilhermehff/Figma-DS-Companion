@@ -24,7 +24,7 @@ source_swatches:
     provided_value: "#f2f0ef"
     source_usage_scope: secondary_brand_palette
     channel_restrictions: not specified in source
-    notes: Source image lists RGB 242 240 234 and CMYK 3 3 3 0.
+    notes: Source image lists RGB 242 240 234 and CMYK 3 3 3 0, but the displayed HEX in the source is #f2f0ef. Governance preserves the displayed HEX as the canonical source value until the brand source is corrected.
   - source_name: Northstar Gray
     provided_value: "#808080"
     source_usage_scope: secondary_brand_palette
@@ -57,10 +57,7 @@ universal_reuse:
       rationale: Northstar supplies a branded neutral system rather than a single neutral swatch, so one graphite ladder can carry off-white, gray, and near-black together.
       anchor_step: 950
       anchor_label: 950_source
-  hold_for_review:
-    - source_name: Northstar tertiary brand family
-      provided_value: n/a
-      reason: The source only names two primary brand colors, so `brand_tertiary/*` is intentionally left inherited until a third family is approved.
+  hold_for_review: []
 
 scale_spec:
   working_space: OKLCH

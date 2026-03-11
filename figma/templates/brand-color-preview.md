@@ -1,10 +1,6 @@
-# Brand Color Preview
+# <Brand> Color Preview
 
-- Date:
-- Brand:
-- Source reference:
-- Intake artifact:
-- Write status: blocked pending preview review
+Status: blocked pending preview review
 
 ## Original Source Swatches
 

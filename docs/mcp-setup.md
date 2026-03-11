@@ -32,4 +32,6 @@ After setup, the minimum governance validation loop is:
 
 - Update `figma/brands/<brand>/brand.yml` when live brand context changes.
 - Update `figma/variables/collections/` or `figma/variables/extensions/` only when a local audit or export is explicitly requested.
+- Run `python -m scripts.figma_governance validate-exports` before a full compatibility export.
 - Regenerate `figma/variables/registry.yml` only when a local compatibility export is explicitly requested.
+- Use `python -m scripts.figma_governance build-registry --base-only` only when an intentionally collection-only export is acceptable; it writes `figma/variables/registry.base-only.yml`.

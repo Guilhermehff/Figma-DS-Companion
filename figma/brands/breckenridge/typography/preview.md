@@ -1,10 +1,6 @@
-# Brand Typography Preview
+# Breckenridge Typography Preview
 
-- Date: 2026-03-11
-- Brand: breckenridge
-- Source reference: User-provided image in chat showing the Breckenridge type hierarchy
-- Intake artifact: [intake.yml](/Users/guilhermefidelio/Documents/GitHub/Vail Resorts DS/figma/brands/breckenridge/typography/intake.yml)
-- Write status: global typography primitives are written in Figma, while Breckenridge semantic typography aliases remain staged only
+Status: global typography primitives are written in Figma, while Breckenridge semantic typography aliases remain staged only
 
 ## Original Source Roles
 

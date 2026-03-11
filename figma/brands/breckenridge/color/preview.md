@@ -1,10 +1,6 @@
-# Brand Color Preview
+# Breckenridge Color Preview
 
-- Date: 2026-03-11
-- Brand: breckenridge
-- Source reference: User-provided image in chat showing the Breckenridge primary color palette
-- Intake artifact: [intake.yml](/Users/guilhermefidelio/Documents/GitHub/Vail Resorts DS/figma/brands/breckenridge/color/intake.yml)
-- Write status: global ladders and semantic color extension are written in Figma
+Status: global ladders and semantic color extension are written in Figma
 
 ## Original Source Swatches
 

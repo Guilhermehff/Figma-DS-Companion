@@ -1,10 +1,6 @@
-# Brand Typography Preview
+# Crested Butte Typography Preview
 
-- Date: 2026-03-11
-- Brand: crested_butte
-- Source reference: User-provided image in chat showing the Crested Butte typography guidance
-- Intake artifact: [intake.yml](/Users/guilhermefidelio/Documents/GitHub/Vail Resorts DS/figma/brands/crested_butte/typography/intake.yml)
-- Write status: global typography primitives and semantic typography extension are written in Figma
+Status: global typography primitives and semantic typography extension are written in Figma
 
 ## Original Source Roles
 

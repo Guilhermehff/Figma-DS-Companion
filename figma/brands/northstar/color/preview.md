@@ -1,10 +1,6 @@
-# Brand Color Preview
+# Northstar Color Preview
 
-- Date: 2026-03-11
-- Brand: northstar
-- Source reference: User-provided image in chat showing the Northstar color palette
-- Intake artifact: [intake.yml](/Users/guilhermefidelio/Documents/GitHub/Vail Resorts DS/figma/brands/northstar/color/intake.yml)
-- Write status: approved and written to `_Global: Color`, `Semantic: Color`, and `Northstar` in `Design System` on 2026-03-11
+Status: approved and written to `_Global: Color`, `Semantic: Color`, and `Northstar` in `Design System` on 2026-03-11
 
 ## Original Source Swatches
 
@@ -21,7 +17,7 @@
 - Source color: `Northstar Snow White`
   Provided value: `#f2f0ef`
   Usage scope: `secondary brand palette`
-  Notes: Source image lists RGB `242 240 234`.
+  Notes: Source image lists RGB `242 240 234`, but the displayed HEX in the source is `#f2f0ef`. Governance preserves the displayed HEX as the canonical value until the source artifact is corrected.
 
 - Source color: `Northstar Gray`
   Provided value: `#808080`

@@ -22,6 +22,7 @@ Every reviewed brand should have:
 - a per-brand manifest at `figma/brands/<brand>/brand.yml`
 - typography staging space at `figma/brands/<brand>/typography/`
 - approved intake and preview artifacts referenced from the brand manifest
+- Figma provenance captured in the manifest and intake artifact; preview Markdown should stay focused on review content unless a node-specific reference materially helps
 
 During the staged migration phase, existing approved typography artifacts may remain in `figma/variables/` if the brand manifest points to them explicitly.
 

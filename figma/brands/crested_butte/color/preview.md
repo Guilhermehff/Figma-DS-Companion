@@ -1,10 +1,6 @@
-# Brand Color Preview
+# Crested Butte Color Preview
 
-- Date: 2026-03-11
-- Brand: crested_butte
-- Source reference: User-provided image in chat showing the Crested Butte color palette
-- Intake artifact: [intake.yml](/Users/guilhermefidelio/Documents/GitHub/Vail Resorts DS/figma/brands/crested_butte/color/intake.yml)
-- Write status: global ladders and semantic color extension are written in Figma
+Status: global ladders and semantic color extension are written in Figma
 
 ## Original Source Swatches
 
