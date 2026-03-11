@@ -14,8 +14,8 @@ Use one shared semantic collection per category, with brand-specific extensions.
 For typography:
 
 1. The shared base collection is `semantic_typography`.
-2. The base collection points to universal global primitives.
-3. Brand-specific differences are applied only through the brand extension collection, using the format `semantic_typography/<brand>`.
+2. The base collection uses a mode named `values` and points to universal global primitives.
+3. Brand-specific differences are applied only through the brand extension collection, using the brand name only, for example `vail`.
 4. A brand extension overrides only the semantic tokens that differ from the universal baseline.
 5. Tokens that remain universal should stay defined only in the base collection and should not be redundantly reassigned inside the brand extension.
 

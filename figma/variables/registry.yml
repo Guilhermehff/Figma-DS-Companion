@@ -26,14 +26,14 @@ collections:
     id: VariableCollectionId:38:114
     level: semantic
     collection: semantic_typography
-    mode: base
+    mode: values
     status: active
     variable_count: 6
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     id: VariableCollectionId:38:121
     level: semantic
-    collection: semantic_typography/vail
-    mode: base
+    collection: vail
+    mode: values
     status: active
     variable_count: 6
     extension_of: semantic_typography
@@ -617,7 +617,7 @@ variables:
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: semantic
     collection: semantic_typography
-    mode: base
+    mode: values
     name: family/heading
     type: string
     value: Inter
@@ -626,7 +626,7 @@ variables:
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: semantic
     collection: semantic_typography
-    mode: base
+    mode: values
     name: family/heading_safe
     type: string
     value: Arial
@@ -635,7 +635,7 @@ variables:
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: semantic
     collection: semantic_typography
-    mode: base
+    mode: values
     name: family/body
     type: string
     value: Inter
@@ -644,7 +644,7 @@ variables:
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: semantic
     collection: semantic_typography
-    mode: base
+    mode: values
     name: family/body_safe
     type: string
     value: Arial
@@ -653,7 +653,7 @@ variables:
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: semantic
     collection: semantic_typography
-    mode: base
+    mode: values
     name: family/action
     type: string
     value: Inter
@@ -662,7 +662,7 @@ variables:
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: semantic
     collection: semantic_typography
-    mode: base
+    mode: values
     name: family/action_safe
     type: string
     value: Arial
@@ -670,8 +670,8 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: semantic
-    collection: semantic_typography/vail
-    mode: base
+    collection: vail
+    mode: values
     name: family/heading
     type: string
     value: Termina
@@ -680,8 +680,8 @@ variables:
     notes: Brand override in the Vail semantic extension.
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: semantic
-    collection: semantic_typography/vail
-    mode: base
+    collection: vail
+    mode: values
     name: family/heading_safe
     type: string
     value: Arial
@@ -690,8 +690,8 @@ variables:
     notes: Inherits the shared safe alias from the base semantic collection; no Vail-specific override.
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: semantic
-    collection: semantic_typography/vail
-    mode: base
+    collection: vail
+    mode: values
     name: family/body
     type: string
     value: Avenir
@@ -700,8 +700,8 @@ variables:
     notes: Brand override in the Vail semantic extension.
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: semantic
-    collection: semantic_typography/vail
-    mode: base
+    collection: vail
+    mode: values
     name: family/body_safe
     type: string
     value: Arial
@@ -710,8 +710,8 @@ variables:
     notes: Inherits the shared safe alias from the base semantic collection; no Vail-specific override.
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: semantic
-    collection: semantic_typography/vail
-    mode: base
+    collection: vail
+    mode: values
     name: family/action
     type: string
     value: Avenir
@@ -720,8 +720,8 @@ variables:
     notes: Brand override in the Vail semantic extension.
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: semantic
-    collection: semantic_typography/vail
-    mode: base
+    collection: vail
+    mode: values
     name: family/action_safe
     type: string
     value: Arial

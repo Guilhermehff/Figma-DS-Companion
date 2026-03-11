@@ -111,8 +111,8 @@ Use the safe semantic aliases for email and any other constrained channel that c
 Collection strategy:
 
 - Base collection: `semantic_typography`
-- Base mode: `base`
-- Brand extension collection format: `semantic_typography/<brand>`
+- Base mode: `values`
+- Brand extension collection format: `<brand>`
 
 Implementation rule:
 The base semantic collection aliases universal typography primitives. A brand extension collection should override only the semantic tokens that actually differ for that brand. If a token still points to the universal baseline, it should remain untouched in the base collection rather than being redundantly reassigned in the brand extension.

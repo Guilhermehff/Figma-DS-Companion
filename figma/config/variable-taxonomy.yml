@@ -133,7 +133,7 @@ collections:
     extended_collections: true
     extension_naming:
       base_collection: semantic_typography
-      brand_extension_format: "semantic_typography/<brand>"
+      brand_extension_format: "<brand>"
 
 brand_color_foundations:
   description: Rules for evaluating and expanding brand-specific color families inside _global_color
@@ -298,8 +298,8 @@ brand_typography_foundations:
   semantic_family_aliases:
     collection_strategy:
       base_collection: semantic_typography
-      base_mode: base
-      brand_extension_format: "semantic_typography/<brand>"
+      base_mode: values
+      brand_extension_format: "<brand>"
       brand_extension_rule: The base collection aliases universal families. Each brand extension overrides only the semantic tokens that differ for that brand.
     default_tokens:
       - family/heading
