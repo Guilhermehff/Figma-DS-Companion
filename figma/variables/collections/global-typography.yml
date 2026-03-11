@@ -8,7 +8,7 @@ collection:
   category: typography
   mode: values
   status: active
-  figma_variable_count: 18
+  figma_variable_count: 20
 tokens:
 - name: universal/family/primary
   type: string
@@ -17,6 +17,10 @@ tokens:
 - name: universal/family/web_safe
   type: string
   value: Arial
+  status: active
+- name: crested_butte/family/primary
+  type: string
+  value: Gibson
   status: active
 - name: breckenridge/family/primary
   type: string
@@ -45,6 +49,10 @@ tokens:
 - name: universal/weight/bold
   type: float
   value: 700
+  status: active
+- name: universal/weight/semibold
+  type: float
+  value: 600
   status: active
 - name: universal/weight/black
   type: float

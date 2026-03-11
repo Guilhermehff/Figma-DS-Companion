@@ -1,0 +1,100 @@
+version: 1
+updated: 2026-03-11
+brand_id: crested_butte
+display_name: Crested Butte
+status: active
+owners:
+  - design_system_governance
+supported_channels:
+  - web
+  - email
+  - ads
+design_system_file_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+staged_paths:
+  color_dir: figma/brands/crested_butte/color
+  typography_dir: figma/brands/crested_butte/typography
+source_references:
+  - figma/brands/crested_butte/color/intake.yml
+  - figma/brands/crested_butte/color/preview.md
+  - figma/brands/crested_butte/typography/intake.yml
+  - figma/brands/crested_butte/typography/preview.md
+figma:
+  design_system_file_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+  global_collections:
+    color_id: VariableCollectionId:23:2
+    typography_id: VariableCollectionId:23:3
+    dimensions_id: VariableCollectionId:23:4
+  semantic_extensions:
+    color:
+      collection_name: Crested Butte
+      collection_id: VariableCollectionId:46:393
+      parent_collection: "Semantic: Color"
+      parent_collection_id: VariableCollectionId:41:135
+      figma_variable_count: 77
+      tracked_override_count: 44
+    typography:
+      collection_name: Crested Butte
+      collection_id: VariableCollectionId:46:394
+      parent_collection: "Semantic: Typography"
+      parent_collection_id: VariableCollectionId:38:114
+      figma_variable_count: 15
+      tracked_override_count: 6
+artifacts:
+  color:
+    intake_artifact: figma/brands/crested_butte/color/intake.yml
+    preview_artifact: figma/brands/crested_butte/color/preview.md
+    decision_artifacts:
+      - figma/decisions/2026-03-11-brand-manifest-and-generated-registry-governance.md
+      - figma/decisions/2026-03-11-crested-butte-staged-foundations-from-source-images.md
+      - figma/decisions/2026-03-11-crested-butte-foundations-written-to-figma.md
+  typography:
+    intake_artifact: figma/brands/crested_butte/typography/intake.yml
+    preview_artifact: figma/brands/crested_butte/typography/preview.md
+    decision_artifacts:
+      - figma/decisions/2026-03-11-role-scoped-semantic-typography-ladders.md
+      - figma/decisions/2026-03-11-crested-butte-staged-foundations-from-source-images.md
+      - figma/decisions/2026-03-11-crested-butte-foundations-written-to-figma.md
+semantic_overrides:
+  color:
+    status: active
+    override_scopes:
+      - semantic_slot: brand
+        raw_family: crested_butte/wild_red
+      - semantic_slot: brand_secondary
+        raw_family: crested_butte/wild_red
+      - semantic_slot: brand_tertiary
+        raw_family: crested_butte/wild_red
+      - semantic_slot: neutral
+        raw_family: crested_butte/beyond_black
+    inherited_from_base:
+      - positive/*
+      - warning/*
+      - negative/*
+    notes:
+      - Wild Red is now the approved source for `brand/*`, `brand_secondary/*`, and `brand_tertiary/*` in the Crested Butte semantic color extension.
+      - Exact white remains on the universal layer and is not duplicated under the brand group.
+  typography:
+    status: active
+    override_scopes:
+      - semantic_token: family/heading
+        alias_of: crested_butte/family/primary
+      - semantic_token: family/body
+        alias_of: crested_butte/family/primary
+      - semantic_token: family/action
+        alias_of: crested_butte/family/primary
+      - semantic_token: weight/heading/base
+        alias_of: universal/weight/semibold
+      - semantic_token: weight/body/base
+        alias_of: universal/weight/normal
+      - semantic_token: weight/action/base
+        alias_of: universal/weight/semibold
+    inherited_from_base:
+      - family/heading_safe
+      - family/body_safe
+      - family/action_safe
+      - size/*
+    notes:
+      - The supplied typography source uses Gibson across all reviewed roles, so a single brand family primitive is sufficient.
+      - "`universal/weight/semibold` is now written in `_Global: Typography` and used by the Crested Butte semantic typography extension."
+notes:
+  - Crested Butte is live in the Design System file with global color ladders, a global typography family, the shared semibold raw weight, and semantic color and typography extensions.

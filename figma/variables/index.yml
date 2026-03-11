@@ -49,5 +49,15 @@ extensions:
     brand_id: breckenridge
     category: color
     parent_collection: "Semantic: Color"
+  - key: crested-butte-semantic-typography
+    path: figma/variables/extensions/crested-butte-semantic-typography.yml
+    brand_id: crested_butte
+    category: typography
+    parent_collection: "Semantic: Typography"
+  - key: crested-butte-semantic-color
+    path: figma/variables/extensions/crested-butte-semantic-color.yml
+    brand_id: crested_butte
+    category: color
+    parent_collection: "Semantic: Color"
 notes:
   - figma/variables/registry.yml is a generated compatibility export composed from the collection and extension snapshots listed here.

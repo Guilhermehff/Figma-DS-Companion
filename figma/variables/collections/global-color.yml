@@ -8,7 +8,7 @@ collection:
   category: color
   mode: values
   status: active
-  figma_variable_count: 123
+  figma_variable_count: 145
 tokens:
 - name: universal/black
   type: color
@@ -501,4 +501,92 @@ tokens:
 - name: breckenridge/dark_gray/950
   type: color
   value: '#171611'
+  status: active
+- name: crested_butte/wild_red/50
+  type: color
+  value: '#fff8f8'
+  status: active
+- name: crested_butte/wild_red/100
+  type: color
+  value: '#ffebea'
+  status: active
+- name: crested_butte/wild_red/200
+  type: color
+  value: '#fed6d5'
+  status: active
+- name: crested_butte/wild_red/300
+  type: color
+  value: '#feb7b6'
+  status: active
+- name: crested_butte/wild_red/400
+  type: color
+  value: '#f29292'
+  status: active
+- name: crested_butte/wild_red/500
+  type: color
+  value: '#dc666a'
+  status: active
+- name: crested_butte/wild_red/600
+  type: color
+  value: '#c04049'
+  status: active
+- name: crested_butte/wild_red/700
+  type: color
+  value: '#a5192e'
+  status: active
+- name: crested_butte/wild_red/800
+  type: color
+  value: '#7b041c'
+  status: active
+- name: crested_butte/wild_red/900
+  type: color
+  value: '#520210'
+  status: active
+- name: crested_butte/wild_red/950
+  type: color
+  value: '#310106'
+  status: active
+- name: crested_butte/beyond_black/50
+  type: color
+  value: '#fafafa'
+  status: active
+- name: crested_butte/beyond_black/100
+  type: color
+  value: '#f0f0f0'
+  status: active
+- name: crested_butte/beyond_black/200
+  type: color
+  value: '#e1e1e1'
+  status: active
+- name: crested_butte/beyond_black/300
+  type: color
+  value: '#cccccc'
+  status: active
+- name: crested_butte/beyond_black/400
+  type: color
+  value: '#b1b1b1'
+  status: active
+- name: crested_butte/beyond_black/500
+  type: color
+  value: '#909090'
+  status: active
+- name: crested_butte/beyond_black/600
+  type: color
+  value: '#737373'
+  status: active
+- name: crested_butte/beyond_black/700
+  type: color
+  value: '#585858'
+  status: active
+- name: crested_butte/beyond_black/800
+  type: color
+  value: '#404040'
+  status: active
+- name: crested_butte/beyond_black/900
+  type: color
+  value: '#292929'
+  status: active
+- name: crested_butte/beyond_black/950
+  type: color
+  value: '#1a1a1a'
   status: active
