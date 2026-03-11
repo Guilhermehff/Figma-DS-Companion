@@ -14,7 +14,7 @@ principles:
   - Semantic tokens form an abstraction ladder and remain meaning-light.
   - Channel tokens define final meaning and usage for a specific channel.
   - Each global and semantic token category must live in its own dedicated collection.
-  - Global collection names must use the `_Global: *` pattern so they remain unpublished and readable in user-facing contexts.
+  - "Global collection names must use the `_Global: *` pattern so they remain unpublished and readable in user-facing contexts."
   - Figma variable names use slash-delimited paths.
   - Variable names inside a collection must not repeat the collection category.
   - Prefer semantic names over visual-only names.
@@ -36,8 +36,8 @@ token_levels:
     description: Raw values warehouse for all brands
     rules:
       - Each global token category uses its own dedicated collection containing all brands.
-      - Global collection names must use the `_Global: *` pattern so they remain unpublished and readable in user-facing contexts.
-      - Every `_Global: *` collection uses an initial mode named values.
+      - "Global collection names must use the `_Global: *` pattern so they remain unpublished and readable in user-facing contexts."
+      - "Every `_Global: *` collection uses an initial mode named values."
       - Variable names inside a global collection do not repeat the collection category.
       - Brand separation is done through groups within the collection.
       - The first group is always universal.
@@ -69,6 +69,7 @@ token_levels:
       - Semantic naming must support laddering into channel meaning.
     ladder_examples:
       - "universal/slate/50 -> neutral/50 -> color/bg/surface"
+      - "universal/green/500 -> positive/500 -> color/state/success"
       - "vail/family/display -> family/heading -> typography/heading/display"
       - "vail/family/primary -> family/body -> typography/body/default"
       - "universal/family/web_safe -> family/body_safe -> typography/body/email"
@@ -77,13 +78,16 @@ token_levels:
     naming:
       format: "<semantic_group>/<scale_or_role>"
       notes:
-        - semantic_group is category-like and meaning-light (e.g., neutral, brand, brand_secondary, brand_tertiary)
+        - semantic_group is category-like and stable across channels (e.g., neutral, brand, brand_secondary, brand_tertiary, positive, warning, negative)
         - scale_or_role is typically a scale key (50, 60, 70) or a role key for typography
       examples:
         - neutral/50
         - brand/600
         - brand_secondary/500
         - brand_tertiary/300
+        - positive/500
+        - warning/500
+        - negative/600
         - family/heading
         - family/body_safe
         - size/body/base
@@ -94,7 +98,7 @@ token_levels:
     rules:
       - Channel libraries live in separate Figma files from the DS file.
       - Channel tokens must alias Semantic tokens.
-      - Channel collection names must use the `Channel: *` pattern in title case.
+      - "Channel collection names must use the `Channel: *` pattern in title case."
       - Channel naming encodes meaning such as bg, text, border, icon, state.
       - Channel typography is typically expressed as styles in the channel library.
     naming:
@@ -143,7 +147,7 @@ collections:
       brand_extension_format: "<Brand>"
 
 brand_color_foundations:
-  description: Rules for evaluating and expanding brand-specific color families inside _Global: Color
+  description: "Rules for evaluating and expanding brand-specific color families inside `_Global: Color`"
   applies_to:
     - brand guideline images
     - official brand swatches
@@ -253,7 +257,7 @@ brand_color_foundations:
     - preview_artifact_before_write
 
 semantic_color_aliases:
-  description: Stable semantic color slots that alias _Global: Color primitives before channel meaning is applied
+  description: "Stable semantic color slots that alias `_Global: Color` primitives before channel meaning is applied"
   collection_strategy:
     base_collection: "Semantic: Color"
     base_mode: values
@@ -287,7 +291,7 @@ semantic_color_aliases:
     - raw brand families that do not yet have a stable cross-brand semantic slot remain global-only until another decision approves the new slot.
 
 brand_typography_foundations:
-  description: Rules for evaluating and documenting brand typography using _Global: Typography primitives plus later channel style recipes
+  description: "Rules for evaluating and documenting brand typography using `_Global: Typography` primitives plus later channel style recipes"
   applies_to:
     - brand guideline images
     - official typography spec pages
@@ -296,14 +300,14 @@ brand_typography_foundations:
   intake_rules:
     - Preserve the original source typography roles in the intake artifact and mirror them in the preview artifact so later reviews do not depend on reopening the original image.
     - Separate raw primitives from usage-bearing role recipes.
-    - Review every source family against existing _Global: Typography primitives before proposing a new brand family token.
+    - "Review every source family against existing `_Global: Typography` primitives before proposing a new brand family token."
     - Reuse universal weight primitives by default; raw weights should remain universal unless a truly distinct numeric value is required later.
     - If the source omits raw sizes, provisionally map each role to the existing universal size ladder and mark the mapping as assumed until design validation confirms it.
     - If the source omits fallback or web-safe families, default the family fallback reference to universal/family/web_safe.
     - Recommend semantic family aliases using family/heading, family/body, and family/action plus the safe counterparts family/heading_safe, family/body_safe, and family/action_safe.
-    - Recommend role-scoped semantic weight aliases using emphasis keys such as subtle, base, and strong, and role-scoped semantic size aliases using t-shirt steps such as sm, base, lg, and xl so channel libraries can stay inside Semantic: Typography.
+    - "Recommend role-scoped semantic weight aliases using emphasis keys such as subtle, base, and strong, and role-scoped semantic size aliases using t-shirt steps such as sm, base, lg, and xl so channel libraries can stay inside `Semantic: Typography`."
     - Capture the typography rules needed for later page, email, and ad review, including casing, punctuation, fallback behavior, and channel-safe expectations.
-    - Do not encode role names such as eyebrow, headline, subhead, body, or cta inside _Global: Typography primitive names.
+    - "Do not encode role names such as eyebrow, headline, subhead, body, or cta inside `_Global: Typography` primitive names."
     - Generate a preview artifact for the proposed typography before any Figma write is proposed or executed.
   primitives:
     family_naming:
@@ -423,11 +427,11 @@ brand_typography_foundations:
       - punctuation_rule
       - sample_copy
     notes:
-      - role recipes are review artifacts and style guidance, not _Global: Typography variable names.
+      - "role recipes are review artifacts and style guidance, not `_Global: Typography` variable names."
       - channel typography styles may later implement these recipes in channel libraries.
       - prefer semantic family aliases such as family/heading, family/body, and family/action; reserve family/cta only if the semantic layer intentionally mirrors channel-specific language.
       - email and other constrained channels should consume the corresponding safe aliases, such as family/body_safe.
-      - when semantic weight or size aliases exist, document the role-scoped semantic mapping alongside the raw primitive mapping so later channel libraries can stay on Semantic: Typography.
+      - "when semantic weight or size aliases exist, document the role-scoped semantic mapping alongside the raw primitive mapping so later channel libraries can stay on `Semantic: Typography`."
     example_roles:
       - eyebrow
       - headline
@@ -481,8 +485,8 @@ review_checks:
   - Flag duplicated values with inconsistent semantic names.
   - Flag semantic tokens that resolve to different primitives without using semantic extended collections.
   - Flag channel tokens created in the DS file instead of the channel file.
-  - Flag global collections that do not use the `_Global: *` pattern.
-  - Flag `_Global: *` collections whose default mode is not named values.
+  - "Flag global collections that do not use the `_Global: *` pattern."
+  - "Flag `_Global: *` collections whose default mode is not named values."
   - Flag variables that repeat the collection category in their path.
   - Flag writes performed without confirming the target file.
   - Flag brand-specific duplicates of universal/white or universal/black.
@@ -492,9 +496,9 @@ review_checks:
   - Flag brand color proposals that do not include a preview artifact before write.
   - Flag brand color artifacts that do not preserve the original source swatches in both intake and preview.
   - Flag brand color artifacts that omit source usage scopes or review guidance needed for later page, email, or ad review.
-  - Flag typography role names written into _Global: Typography primitive names.
+  - "Flag typography role names written into `_Global: Typography` primitive names."
   - Flag typography proposals that invent new raw size values when the source only provided relational sizing rules and an existing universal size token could have been used provisionally.
   - Flag typography artifacts that do not preserve the original source roles in both intake and preview.
   - Flag typography artifacts that omit semantic safe aliases or downstream review guidance for email and other constrained channels.
-  - Flag Semantic: Typography inventories that use flat raw-like weight or size aliases such as weight/medium or size/300 instead of approved role-scoped semantic ladders.
+  - "Flag `Semantic: Typography` inventories that use flat raw-like weight or size aliases such as weight/medium or size/300 instead of approved role-scoped semantic ladders."
   - Flag typography proposals that do not include a preview artifact before write.

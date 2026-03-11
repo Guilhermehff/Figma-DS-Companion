@@ -23,7 +23,9 @@ source_basis:
     - figma/variables/2026-03-10-vail-brand-color-preview.md
     - figma/decisions/2026-03-11-shared-semantic-collections-with-brand-extensions.md
     - figma/decisions/2026-03-11-initial-semantic-color-family-model.md
-  derivation_rule: Create only the semantic color ladders justified by the approved shared baseline and reviewed brand color foundations. Keep the semantic layer palette-scoped and meaning-light. Reserve stable primary, secondary, and tertiary brand slots now. Do not promote every raw brand family into semantic aliases until a stable cross-brand slot exists.
+    - figma/decisions/2026-03-11-semantic-feedback-color-family-naming.md
+    - figma/variables/2026-03-11-universal-global-feedback-color-proposal.yml
+  derivation_rule: Create only the semantic color ladders justified by the approved shared baseline, the governed shared feedback family naming, and the reviewed brand color foundations. Keep the semantic layer palette-scoped and meaning-light. Reserve stable primary, secondary, and tertiary brand slots now. Add shared feedback ladders only when approved universal raw families exist.
 
 recommended_family_strategy:
   model: conservative_palette_slot_baseline
@@ -32,11 +34,16 @@ recommended_family_strategy:
     - brand
     - brand_secondary
     - brand_tertiary
+    - positive
+    - warning
+    - negative
   rationale:
     - neutral is the stable shared ladder for non-brand surfaces and text relationships.
     - brand, brand_secondary, and brand_tertiary reserve the stable cross-brand schema needed by future brands and channels.
     - when a brand lacks secondary or tertiary colors, those semantic slots should still exist and should map to the brand primary family in the brand extension.
-    - the current approved inventory does not yet justify broader shared slots beyond this three-family brand ladder.
+    - positive, warning, and negative establish shared feedback ladders for downstream channels without pushing meaning into the raw global layer.
+    - the feedback ladders belong in the base semantic collection because they are shared cross-brand semantics, not brand-specific extensions.
+    - the current approved inventory still does not justify broader shared slots beyond the current brand and feedback families.
 
 proposed_base_aliases:
   neutral:
@@ -175,6 +182,108 @@ proposed_base_aliases:
     - semantic_token: brand_tertiary/950
       global_token: universal/cyan/950
       raw_value: "#083344"
+  positive:
+    - semantic_token: positive/50
+      global_token: universal/green/50
+      raw_value: "#f0fdf4"
+    - semantic_token: positive/100
+      global_token: universal/green/100
+      raw_value: "#dcfce7"
+    - semantic_token: positive/200
+      global_token: universal/green/200
+      raw_value: "#bbf7d0"
+    - semantic_token: positive/300
+      global_token: universal/green/300
+      raw_value: "#86efac"
+    - semantic_token: positive/400
+      global_token: universal/green/400
+      raw_value: "#4ade80"
+    - semantic_token: positive/500
+      global_token: universal/green/500
+      raw_value: "#22c55e"
+    - semantic_token: positive/600
+      global_token: universal/green/600
+      raw_value: "#16a34a"
+    - semantic_token: positive/700
+      global_token: universal/green/700
+      raw_value: "#15803d"
+    - semantic_token: positive/800
+      global_token: universal/green/800
+      raw_value: "#166534"
+    - semantic_token: positive/900
+      global_token: universal/green/900
+      raw_value: "#14532d"
+    - semantic_token: positive/950
+      global_token: universal/green/950
+      raw_value: "#052e16"
+  warning:
+    - semantic_token: warning/50
+      global_token: universal/yellow/50
+      raw_value: "#fefce8"
+    - semantic_token: warning/100
+      global_token: universal/yellow/100
+      raw_value: "#fef9c3"
+    - semantic_token: warning/200
+      global_token: universal/yellow/200
+      raw_value: "#fef08a"
+    - semantic_token: warning/300
+      global_token: universal/yellow/300
+      raw_value: "#fde047"
+    - semantic_token: warning/400
+      global_token: universal/yellow/400
+      raw_value: "#facc15"
+    - semantic_token: warning/500
+      global_token: universal/yellow/500
+      raw_value: "#eab308"
+    - semantic_token: warning/600
+      global_token: universal/yellow/600
+      raw_value: "#ca8a04"
+    - semantic_token: warning/700
+      global_token: universal/yellow/700
+      raw_value: "#a16207"
+    - semantic_token: warning/800
+      global_token: universal/yellow/800
+      raw_value: "#854d0e"
+    - semantic_token: warning/900
+      global_token: universal/yellow/900
+      raw_value: "#713f12"
+    - semantic_token: warning/950
+      global_token: universal/yellow/950
+      raw_value: "#422006"
+  negative:
+    - semantic_token: negative/50
+      global_token: universal/red/50
+      raw_value: "#fef2f2"
+    - semantic_token: negative/100
+      global_token: universal/red/100
+      raw_value: "#fee2e2"
+    - semantic_token: negative/200
+      global_token: universal/red/200
+      raw_value: "#fecaca"
+    - semantic_token: negative/300
+      global_token: universal/red/300
+      raw_value: "#fca5a5"
+    - semantic_token: negative/400
+      global_token: universal/red/400
+      raw_value: "#f87171"
+    - semantic_token: negative/500
+      global_token: universal/red/500
+      raw_value: "#ef4444"
+    - semantic_token: negative/600
+      global_token: universal/red/600
+      raw_value: "#dc2626"
+    - semantic_token: negative/700
+      global_token: universal/red/700
+      raw_value: "#b91c1c"
+    - semantic_token: negative/800
+      global_token: universal/red/800
+      raw_value: "#991b1b"
+    - semantic_token: negative/900
+      global_token: universal/red/900
+      raw_value: "#7f1d1d"
+    - semantic_token: negative/950
+      global_token: universal/red/950
+      raw_value: "#450a0a"
 
 proposed_brand_extension:
   brand: Vail
@@ -298,21 +407,26 @@ intentionally_not_written_yet:
   notes:
     - The primary, secondary, and tertiary brand slots are now reserved in the semantic schema. Some brands may resolve more than one slot to the same raw family, but Vail does not.
     - Add dedicated semantic aliases for exact white and black only when a channel baseline shows that the neutral ladder is insufficient.
+    - "Shared feedback ladders use `positive`, `warning`, and `negative` at the semantic level."
+    - "The base `Semantic: Color` collection now includes `positive`, `warning`, and `negative`, aliased to `universal/green/*`, `universal/yellow/*`, and `universal/red/*`."
+    - "The Vail `Semantic: Color` extension does not override the shared feedback ladders."
 
 open_questions:
-  - When channels need exact white or black, should Semantic: Color add dedicated aliases or should they continue to rely on the neutral ladder alone?
+  - "When channels need exact white or black, should `Semantic: Color` add dedicated aliases or should they continue to rely on the neutral ladder alone?"
 
 write_result:
   performed_on: 2026-03-11
   status: written
   executed_scope:
-    - created base collection Semantic: Color
-    - added 44 base semantic color aliases to Semantic: Color
-    - created Vail extension collection for Semantic: Color
+    - "created base collection `Semantic: Color`"
+    - "added 44 base semantic color aliases to `Semantic: Color`"
+    - "added 33 base semantic feedback aliases to `Semantic: Color`"
+    - "created Vail extension collection for `Semantic: Color`"
     - added 33 Vail brand override values in the color extension mode
   collection_variable_count_after_write:
-    semantic_color: 44
+    semantic_color: 77
     vail_color_extension: 44
   notes:
-    - The live file now has two distinct extension collections named Vail, one for Semantic: Typography and one for Semantic: Color.
+    - "The live file now has two distinct extension collections named Vail, one for `Semantic: Typography` and one for `Semantic: Color`."
+    - "The base `Semantic: Color` collection now carries 77 variables across `neutral`, `brand`, `brand_secondary`, `brand_tertiary`, `positive`, `warning`, and `negative`."
     - The color Vail extension is scoped by parent collection VariableCollectionId:41:135 and carries 33 override entries for brand, brand_secondary, and brand_tertiary.
