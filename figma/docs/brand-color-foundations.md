@@ -21,7 +21,7 @@ It applies before any Figma write. The output of this workflow is a reviewed bra
 5. Only add brand families for distinct brand hues.
    Signature accents and materially distinct neutrals become new families under the brand group. Commodity neutrals can stay universal.
 
-6. Keep brand groups inside `_global_color`.
+6. Keep brand groups inside `_Global: Color`.
    New raw color families live under the brand name, for example `vail/digital_blue/500`.
 
 7. Build every new family on the shared 50 to 950 ladder.
@@ -74,6 +74,13 @@ Examples:
 - `vail/navy/600`
 - `beaver_creek/gold/500`
 
+## Semantic Slot Preparation
+
+- Every approved brand-color review should also recommend mappings for the semantic slots `brand`, `brand_secondary`, and `brand_tertiary`.
+- Each semantic slot uses the full `50` to `950` ladder.
+- If a brand does not have a distinct secondary or tertiary color family, map that semantic slot to the same raw family used for `brand`.
+- Raw brand families that do not yet fit a stable cross-brand semantic slot should remain in `_Global: Color` only until a new semantic slot is approved.
+
 ## Scale Rules
 
 - Working color space: `OKLCH`
@@ -111,6 +118,7 @@ Each new brand-color intake should produce:
 - the source usage scopes preserved in intake and preview
 - a universal reuse recommendation
 - a list of new brand families
+- a recommended semantic mapping for `brand`, `brand_secondary`, and `brand_tertiary`
 - a documented source anchor step for each family
 - a full 50 to 950 scale proposal for each family
 - contrast validation notes

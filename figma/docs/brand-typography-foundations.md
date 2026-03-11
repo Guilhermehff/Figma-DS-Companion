@@ -13,13 +13,13 @@ It applies before any Figma write. The output of this workflow is a reviewed bra
    Copy every source role, family name, weight label, and relevant notes into the intake artifact and the preview artifact so future reviews do not depend on reopening the original image.
 
 3. Separate raw primitives from role recipes.
-   Family tokens and raw weight or size values are primitives. `eyebrow`, `headline`, `subhead`, `body`, and `cta` are role recipes and should not be written as `_global_typography` primitive names.
+   Family tokens and raw weight or size values are primitives. `eyebrow`, `headline`, `subhead`, `body`, and `cta` are role recipes and should not be written as `_Global: Typography` primitive names.
 
 4. Reuse universal typography primitives first.
    If a source weight or size already exists as a universal raw value, reuse it instead of creating a brand-specific duplicate.
 
 5. Add brand-specific family primitives only when the family is distinct.
-   Distinct brand fonts become brand-group family primitives under `_global_typography`, for example `vail/family/display`.
+   Distinct brand fonts become brand-group family primitives under `_Global: Typography`, for example `vail/family/display`.
 
 6. Keep family token names structural.
    Prefer slots such as `display`, `primary`, `secondary`, `accent`, or `web_safe`. Do not use role names such as `headline` or `body` in the raw family token name.
@@ -45,14 +45,14 @@ It applies before any Figma write. The output of this workflow is a reviewed bra
 2. Capture the original source roles in the intake artifact.
 3. Mirror the same original source roles in the preview artifact.
 4. Split the review into two outputs:
-   - raw primitive recommendations for `_global_typography`
+   - raw primitive recommendations for `_Global: Typography`
    - role recipe specifications for later channel styles
 5. Reuse universal weights and sizes where the raw values already exist.
 6. If raw sizes are missing, map the roles to provisional universal size tokens and mark those mappings as assumptions.
 7. If fallback stacks are missing, attach `universal/family/web_safe` as the default fallback reference.
 8. Reuse `universal/weight/black` for source styles labeled `Black`, unless a later numeric exception is approved.
 9. Propose new brand family tokens only where a distinct family is required.
-10. Record the semantic family mapping for `heading`, `body`, and `action` plus the safe counterparts used by email or other constrained channels.
+10. Record the semantic family mapping for `heading`, `body`, and `action`, the safe counterparts used by email or other constrained channels, and the role-scoped semantic weight and size aliases that downstream channel libraries should consume.
 11. Add a review-readiness summary so later audits of pages, emails, and ads do not need to reconstruct the brand rules from scratch.
 12. Generate a preview artifact that shows the original source roles, the primitive recommendations, the semantic mapping, and the role recipes.
 13. Store the result before any Figma write is proposed.
@@ -98,24 +98,32 @@ Examples from the Vail typography image:
 
 ## Semantic Mapping Recommendation
 
-Use brand family primitives as raw ingredients, then alias them into semantic family roles before any channel naming is applied.
+Use brand family primitives plus the approved universal weight and size ladders as raw ingredients, then alias them into role-scoped semantic typography tokens before any channel naming is applied.
 
 - Global raw families: `vail/family/display`, `vail/family/primary`, `universal/family/primary`, `universal/family/web_safe`
 - Recommended semantic aliases: `family/heading`, `family/body`, `family/action`
 - Recommended safe semantic aliases: `family/heading_safe`, `family/body_safe`, `family/action_safe`
+- Recommended semantic weight alias format: `weight/<role>/<emphasis_step>`
+- Recommended semantic weight examples: `weight/body/subtle`, `weight/body/base`, `weight/heading/strong`, `weight/action/strong`
+- Recommended semantic size alias format: `size/<role>/<tshirt_step>`
+- Recommended semantic size examples: `size/body/sm`, `size/body/base`, `size/heading/lg`, `size/heading/xl`, `size/action/base`
+- Starting-point note: heading may begin with a broader size ladder such as `size/heading/sm`, `size/heading/base`, `size/heading/lg`, and `size/heading/xl`, while body and action may stay at `base` until more approved recipes require additional steps.
 - Typical channel outcome: `typography/heading/*`, `typography/body/*`, `typography/button/*`
 
 Safe-alias rule:
-Use the safe semantic aliases for email and any other constrained channel that cannot rely on the brand family being delivered. The safe aliases should point to `universal/family/web_safe`.
+Use the safe semantic aliases for email and any other constrained channel that cannot rely on the brand family being delivered. The safe aliases should point to `universal/family/web_safe`. Weight and size stay on shared role-scoped semantic ladders and do not get safe variants.
 
 Collection strategy:
 
-- Base collection: `semantic_typography`
+- Base collection: `Semantic: Typography`
 - Base mode: `values`
-- Brand extension collection format: `<brand>`
+- Brand extension collection format: `<Brand>`
 
 Implementation rule:
-The base semantic collection aliases universal typography primitives. A brand extension collection should override only the semantic tokens that actually differ for that brand. If a token still points to the universal baseline, it should remain untouched in the base collection rather than being redundantly reassigned in the brand extension.
+The base semantic collection aliases universal typography primitives for family plus role-scoped weight and size ladders. A brand extension collection should override only the semantic tokens that actually differ for that brand. If a token still points to the universal baseline, it should remain untouched in the base collection rather than being redundantly reassigned in the brand extension.
+
+Scoping rule:
+Do not use flat aliases such as `weight/medium` or `size/300` at the semantic layer. Semantic typography weight and size must stay role-scoped so the ladder remains meaning-light but still useful to channels.
 
 Opinion:
 Use `action` instead of `cta` at the semantic layer. `cta` is already channel language, while `action` still covers buttons, links, chips, navigation prompts, and promotional actions without tying the semantic ladder to one UI term.
@@ -133,6 +141,7 @@ At minimum, capture:
 - source role intent
 - raw family recommendation
 - semantic family mapping and safe semantic mapping
+- role-scoped semantic weight mapping and role-scoped semantic size mapping
 - fallback behavior for constrained channels
 - case, punctuation, tracking, and leading rules
 - any usage restrictions or exceptions stated by the source
@@ -158,6 +167,8 @@ Each new brand-typography review should produce:
 - proposed family primitives
 - semantic family mapping
 - safe semantic family mapping
+- role-scoped semantic weight mapping
+- role-scoped semantic size mapping
 - proposed weight reuse or additions
 - assumed size mappings when source sizes are missing
 - a role recipe specification

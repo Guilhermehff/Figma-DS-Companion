@@ -42,6 +42,8 @@
 
 ## Semantic Mapping
 
+Repeat this block for family, weight, and size aliases. Only family aliases use safe counterparts.
+
 - Semantic token:
   Global token:
   Safe semantic token:

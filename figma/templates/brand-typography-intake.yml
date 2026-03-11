@@ -67,6 +67,22 @@ semantic_recommendations:
         - email
         - ads
       notes: ""
+  weight_aliases:
+    - semantic_token: weight/body/base
+      global_token: ""
+      intended_channels:
+        - web
+        - email
+        - ads
+      notes: ""
+  size_aliases:
+    - semantic_token: size/body/base
+      global_token: ""
+      intended_channels:
+        - web
+        - email
+        - ads
+      notes: ""
 
 role_recipes:
   - role_name: ""

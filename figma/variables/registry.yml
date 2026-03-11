@@ -4,43 +4,62 @@ collections:
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     id: VariableCollectionId:23:2
     level: global
-    collection: _global_color
+    collection: "_Global: Color"
     mode: values
     status: active
     variable_count: 57
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     id: VariableCollectionId:23:3
     level: global
-    collection: _global_typography
+    collection: "_Global: Typography"
     mode: values
     status: active
     variable_count: 15
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     id: VariableCollectionId:23:4
     level: global
-    collection: _global_dimensions
+    collection: "_Global: Dimensions"
     mode: values
     status: active
     variable_count: 33
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     id: VariableCollectionId:38:114
     level: semantic
-    collection: semantic_typography
+    collection: "Semantic: Typography"
     mode: values
     status: active
-    variable_count: 6
+    variable_count: 15
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     id: VariableCollectionId:38:121
     level: semantic
-    collection: vail
+    collection: Vail
     mode: values
     status: active
-    variable_count: 6
-    extension_of: semantic_typography
+    variable_count: 15
+    extension_of: "Semantic: Typography"
+    parent_collection_id: VariableCollectionId:38:114
+    override_count: 3
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    id: VariableCollectionId:41:135
+    level: semantic
+    collection: "Semantic: Color"
+    mode: values
+    status: active
+    variable_count: 44
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    id: VariableCollectionId:41:180
+    level: semantic
+    collection: Vail
+    mode: values
+    status: active
+    variable_count: 44
+    extension_of: "Semantic: Color"
+    parent_collection_id: VariableCollectionId:41:135
+    override_count: 33
 variables:
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_color
+    collection: "_Global: Color"
     mode: values
     name: universal/black
     type: color
@@ -48,7 +67,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_color
+    collection: "_Global: Color"
     mode: values
     name: universal/slate/50
     type: color
@@ -56,7 +75,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_color
+    collection: "_Global: Color"
     mode: values
     name: universal/slate/100
     type: color
@@ -64,7 +83,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_color
+    collection: "_Global: Color"
     mode: values
     name: universal/slate/200
     type: color
@@ -72,7 +91,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_color
+    collection: "_Global: Color"
     mode: values
     name: universal/slate/300
     type: color
@@ -80,7 +99,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_color
+    collection: "_Global: Color"
     mode: values
     name: universal/slate/400
     type: color
@@ -88,7 +107,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_color
+    collection: "_Global: Color"
     mode: values
     name: universal/slate/500
     type: color
@@ -96,7 +115,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_color
+    collection: "_Global: Color"
     mode: values
     name: universal/slate/600
     type: color
@@ -104,7 +123,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_color
+    collection: "_Global: Color"
     mode: values
     name: universal/slate/700
     type: color
@@ -112,7 +131,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_color
+    collection: "_Global: Color"
     mode: values
     name: universal/slate/800
     type: color
@@ -120,7 +139,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_color
+    collection: "_Global: Color"
     mode: values
     name: universal/slate/900
     type: color
@@ -128,7 +147,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_color
+    collection: "_Global: Color"
     mode: values
     name: universal/slate/950
     type: color
@@ -136,7 +155,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_color
+    collection: "_Global: Color"
     mode: values
     name: universal/cyan/50
     type: color
@@ -144,7 +163,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_color
+    collection: "_Global: Color"
     mode: values
     name: universal/cyan/100
     type: color
@@ -152,7 +171,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_color
+    collection: "_Global: Color"
     mode: values
     name: universal/cyan/200
     type: color
@@ -160,7 +179,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_color
+    collection: "_Global: Color"
     mode: values
     name: universal/cyan/300
     type: color
@@ -168,7 +187,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_color
+    collection: "_Global: Color"
     mode: values
     name: universal/cyan/400
     type: color
@@ -176,7 +195,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_color
+    collection: "_Global: Color"
     mode: values
     name: universal/cyan/500
     type: color
@@ -184,7 +203,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_color
+    collection: "_Global: Color"
     mode: values
     name: universal/cyan/600
     type: color
@@ -192,7 +211,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_color
+    collection: "_Global: Color"
     mode: values
     name: universal/cyan/700
     type: color
@@ -200,7 +219,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_color
+    collection: "_Global: Color"
     mode: values
     name: universal/cyan/800
     type: color
@@ -208,7 +227,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_color
+    collection: "_Global: Color"
     mode: values
     name: universal/cyan/900
     type: color
@@ -216,7 +235,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_color
+    collection: "_Global: Color"
     mode: values
     name: universal/cyan/950
     type: color
@@ -224,7 +243,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_color
+    collection: "_Global: Color"
     mode: values
     name: universal/white
     type: color
@@ -232,7 +251,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_color
+    collection: "_Global: Color"
     mode: values
     name: vail/digital_blue/50
     type: color
@@ -240,7 +259,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_color
+    collection: "_Global: Color"
     mode: values
     name: vail/digital_blue/100
     type: color
@@ -248,7 +267,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_color
+    collection: "_Global: Color"
     mode: values
     name: vail/digital_blue/200
     type: color
@@ -256,7 +275,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_color
+    collection: "_Global: Color"
     mode: values
     name: vail/digital_blue/300
     type: color
@@ -264,7 +283,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_color
+    collection: "_Global: Color"
     mode: values
     name: vail/digital_blue/400
     type: color
@@ -272,7 +291,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_color
+    collection: "_Global: Color"
     mode: values
     name: vail/digital_blue/500
     type: color
@@ -280,7 +299,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_color
+    collection: "_Global: Color"
     mode: values
     name: vail/digital_blue/600
     type: color
@@ -288,7 +307,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_color
+    collection: "_Global: Color"
     mode: values
     name: vail/digital_blue/700
     type: color
@@ -296,7 +315,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_color
+    collection: "_Global: Color"
     mode: values
     name: vail/digital_blue/800
     type: color
@@ -304,7 +323,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_color
+    collection: "_Global: Color"
     mode: values
     name: vail/digital_blue/900
     type: color
@@ -312,7 +331,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_color
+    collection: "_Global: Color"
     mode: values
     name: vail/digital_blue/950
     type: color
@@ -320,7 +339,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_color
+    collection: "_Global: Color"
     mode: values
     name: vail/navy/50
     type: color
@@ -328,7 +347,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_color
+    collection: "_Global: Color"
     mode: values
     name: vail/navy/100
     type: color
@@ -336,7 +355,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_color
+    collection: "_Global: Color"
     mode: values
     name: vail/navy/200
     type: color
@@ -344,7 +363,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_color
+    collection: "_Global: Color"
     mode: values
     name: vail/navy/300
     type: color
@@ -352,7 +371,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_color
+    collection: "_Global: Color"
     mode: values
     name: vail/navy/400
     type: color
@@ -360,7 +379,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_color
+    collection: "_Global: Color"
     mode: values
     name: vail/navy/500
     type: color
@@ -368,7 +387,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_color
+    collection: "_Global: Color"
     mode: values
     name: vail/navy/600
     type: color
@@ -376,7 +395,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_color
+    collection: "_Global: Color"
     mode: values
     name: vail/navy/700
     type: color
@@ -384,7 +403,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_color
+    collection: "_Global: Color"
     mode: values
     name: vail/navy/800
     type: color
@@ -392,7 +411,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_color
+    collection: "_Global: Color"
     mode: values
     name: vail/navy/900
     type: color
@@ -400,7 +419,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_color
+    collection: "_Global: Color"
     mode: values
     name: vail/navy/950
     type: color
@@ -408,7 +427,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_color
+    collection: "_Global: Color"
     mode: values
     name: vail/yellow/50
     type: color
@@ -416,7 +435,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_color
+    collection: "_Global: Color"
     mode: values
     name: vail/yellow/100
     type: color
@@ -424,7 +443,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_color
+    collection: "_Global: Color"
     mode: values
     name: vail/yellow/200
     type: color
@@ -432,7 +451,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_color
+    collection: "_Global: Color"
     mode: values
     name: vail/yellow/300
     type: color
@@ -440,7 +459,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_color
+    collection: "_Global: Color"
     mode: values
     name: vail/yellow/400
     type: color
@@ -448,7 +467,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_color
+    collection: "_Global: Color"
     mode: values
     name: vail/yellow/500
     type: color
@@ -456,7 +475,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_color
+    collection: "_Global: Color"
     mode: values
     name: vail/yellow/600
     type: color
@@ -464,7 +483,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_color
+    collection: "_Global: Color"
     mode: values
     name: vail/yellow/700
     type: color
@@ -472,7 +491,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_color
+    collection: "_Global: Color"
     mode: values
     name: vail/yellow/800
     type: color
@@ -480,7 +499,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_color
+    collection: "_Global: Color"
     mode: values
     name: vail/yellow/900
     type: color
@@ -488,7 +507,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_color
+    collection: "_Global: Color"
     mode: values
     name: vail/yellow/950
     type: color
@@ -496,7 +515,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_typography
+    collection: "_Global: Typography"
     mode: values
     name: universal/family/primary
     type: string
@@ -504,7 +523,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_typography
+    collection: "_Global: Typography"
     mode: values
     name: universal/family/web_safe
     type: string
@@ -512,7 +531,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_typography
+    collection: "_Global: Typography"
     mode: values
     name: vail/family/display
     type: string
@@ -520,7 +539,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_typography
+    collection: "_Global: Typography"
     mode: values
     name: vail/family/primary
     type: string
@@ -528,7 +547,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_typography
+    collection: "_Global: Typography"
     mode: values
     name: universal/weight/normal
     type: float
@@ -536,7 +555,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_typography
+    collection: "_Global: Typography"
     mode: values
     name: universal/weight/medium
     type: float
@@ -544,7 +563,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_typography
+    collection: "_Global: Typography"
     mode: values
     name: universal/weight/black
     type: float
@@ -552,7 +571,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_typography
+    collection: "_Global: Typography"
     mode: values
     name: universal/size/100
     type: float
@@ -560,7 +579,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_typography
+    collection: "_Global: Typography"
     mode: values
     name: universal/size/200
     type: float
@@ -568,7 +587,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_typography
+    collection: "_Global: Typography"
     mode: values
     name: universal/size/300
     type: float
@@ -576,7 +595,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_typography
+    collection: "_Global: Typography"
     mode: values
     name: universal/size/400
     type: float
@@ -584,7 +603,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_typography
+    collection: "_Global: Typography"
     mode: values
     name: universal/size/500
     type: float
@@ -592,7 +611,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_typography
+    collection: "_Global: Typography"
     mode: values
     name: universal/size/600
     type: float
@@ -600,7 +619,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_typography
+    collection: "_Global: Typography"
     mode: values
     name: universal/size/700
     type: float
@@ -608,7 +627,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_typography
+    collection: "_Global: Typography"
     mode: values
     name: universal/size/800
     type: float
@@ -616,7 +635,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: semantic
-    collection: semantic_typography
+    collection: "Semantic: Typography"
     mode: values
     name: family/heading
     type: string
@@ -625,7 +644,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: semantic
-    collection: semantic_typography
+    collection: "Semantic: Typography"
     mode: values
     name: family/heading_safe
     type: string
@@ -634,7 +653,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: semantic
-    collection: semantic_typography
+    collection: "Semantic: Typography"
     mode: values
     name: family/body
     type: string
@@ -643,7 +662,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: semantic
-    collection: semantic_typography
+    collection: "Semantic: Typography"
     mode: values
     name: family/body_safe
     type: string
@@ -652,7 +671,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: semantic
-    collection: semantic_typography
+    collection: "Semantic: Typography"
     mode: values
     name: family/action
     type: string
@@ -661,7 +680,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: semantic
-    collection: semantic_typography
+    collection: "Semantic: Typography"
     mode: values
     name: family/action_safe
     type: string
@@ -670,67 +689,1133 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: semantic
-    collection: vail
+    collection: "Semantic: Typography"
+    mode: values
+    name: weight/heading/base
+    type: float
+    value: 900
+    alias_of: universal/weight/black
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: "Semantic: Typography"
+    mode: values
+    name: weight/body/base
+    type: float
+    value: 500
+    alias_of: universal/weight/medium
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: "Semantic: Typography"
+    mode: values
+    name: weight/action/base
+    type: float
+    value: 900
+    alias_of: universal/weight/black
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: "Semantic: Typography"
+    mode: values
+    name: size/heading/sm
+    type: float
+    value: 18
+    alias_of: universal/size/400
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: "Semantic: Typography"
+    mode: values
+    name: size/heading/base
+    type: float
+    value: 24
+    alias_of: universal/size/600
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: "Semantic: Typography"
+    mode: values
+    name: size/heading/lg
+    type: float
+    value: 30
+    alias_of: universal/size/700
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: "Semantic: Typography"
+    mode: values
+    name: size/heading/xl
+    type: float
+    value: 36
+    alias_of: universal/size/800
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: "Semantic: Typography"
+    mode: values
+    name: size/body/base
+    type: float
+    value: 16
+    alias_of: universal/size/300
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: "Semantic: Typography"
+    mode: values
+    name: size/action/base
+    type: float
+    value: 16
+    alias_of: universal/size/300
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: Vail
+    extension_of: "Semantic: Typography"
     mode: values
     name: family/heading
     type: string
     value: Termina
     alias_of: vail/family/display
     status: active
-    notes: Brand override in the Vail semantic extension.
+    notes: "Brand override in the Vail semantic extension."
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: semantic
-    collection: vail
+    collection: Vail
+    extension_of: "Semantic: Typography"
     mode: values
     name: family/heading_safe
     type: string
     value: Arial
     alias_of: universal/family/web_safe
     status: active
-    notes: Inherits the shared safe alias from the base semantic collection; no Vail-specific override.
+    notes: "Inherits the shared semantic value from Semantic: Typography; no Vail-specific override."
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: semantic
-    collection: vail
+    collection: Vail
+    extension_of: "Semantic: Typography"
     mode: values
     name: family/body
     type: string
     value: Avenir
     alias_of: vail/family/primary
     status: active
-    notes: Brand override in the Vail semantic extension.
+    notes: "Brand override in the Vail semantic extension."
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: semantic
-    collection: vail
+    collection: Vail
+    extension_of: "Semantic: Typography"
     mode: values
     name: family/body_safe
     type: string
     value: Arial
     alias_of: universal/family/web_safe
     status: active
-    notes: Inherits the shared safe alias from the base semantic collection; no Vail-specific override.
+    notes: "Inherits the shared semantic value from Semantic: Typography; no Vail-specific override."
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: semantic
-    collection: vail
+    collection: Vail
+    extension_of: "Semantic: Typography"
     mode: values
     name: family/action
     type: string
     value: Avenir
     alias_of: vail/family/primary
     status: active
-    notes: Brand override in the Vail semantic extension.
+    notes: "Brand override in the Vail semantic extension."
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: semantic
-    collection: vail
+    collection: Vail
+    extension_of: "Semantic: Typography"
     mode: values
     name: family/action_safe
     type: string
     value: Arial
     alias_of: universal/family/web_safe
     status: active
-    notes: Inherits the shared safe alias from the base semantic collection; no Vail-specific override.
+    notes: "Inherits the shared semantic value from Semantic: Typography; no Vail-specific override."
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: Vail
+    extension_of: "Semantic: Typography"
+    mode: values
+    name: weight/heading/base
+    type: float
+    value: 900
+    alias_of: universal/weight/black
+    status: active
+    notes: "Inherits the shared semantic value from Semantic: Typography; no Vail-specific override."
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: Vail
+    extension_of: "Semantic: Typography"
+    mode: values
+    name: weight/body/base
+    type: float
+    value: 500
+    alias_of: universal/weight/medium
+    status: active
+    notes: "Inherits the shared semantic value from Semantic: Typography; no Vail-specific override."
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: Vail
+    extension_of: "Semantic: Typography"
+    mode: values
+    name: weight/action/base
+    type: float
+    value: 900
+    alias_of: universal/weight/black
+    status: active
+    notes: "Inherits the shared semantic value from Semantic: Typography; no Vail-specific override."
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: Vail
+    extension_of: "Semantic: Typography"
+    mode: values
+    name: size/heading/sm
+    type: float
+    value: 18
+    alias_of: universal/size/400
+    status: active
+    notes: "Inherits the shared semantic value from Semantic: Typography; no Vail-specific override."
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: Vail
+    extension_of: "Semantic: Typography"
+    mode: values
+    name: size/heading/base
+    type: float
+    value: 24
+    alias_of: universal/size/600
+    status: active
+    notes: "Inherits the shared semantic value from Semantic: Typography; no Vail-specific override."
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: Vail
+    extension_of: "Semantic: Typography"
+    mode: values
+    name: size/heading/lg
+    type: float
+    value: 30
+    alias_of: universal/size/700
+    status: active
+    notes: "Inherits the shared semantic value from Semantic: Typography; no Vail-specific override."
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: Vail
+    extension_of: "Semantic: Typography"
+    mode: values
+    name: size/heading/xl
+    type: float
+    value: 36
+    alias_of: universal/size/800
+    status: active
+    notes: "Inherits the shared semantic value from Semantic: Typography; no Vail-specific override."
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: Vail
+    extension_of: "Semantic: Typography"
+    mode: values
+    name: size/body/base
+    type: float
+    value: 16
+    alias_of: universal/size/300
+    status: active
+    notes: "Inherits the shared semantic value from Semantic: Typography; no Vail-specific override."
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: Vail
+    extension_of: "Semantic: Typography"
+    mode: values
+    name: size/action/base
+    type: float
+    value: 16
+    alias_of: universal/size/300
+    status: active
+    notes: "Inherits the shared semantic value from Semantic: Typography; no Vail-specific override."
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: "Semantic: Color"
+    mode: values
+    name: neutral/50
+    type: color
+    value: "#f8fafc"
+    alias_of: universal/slate/50
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: "Semantic: Color"
+    mode: values
+    name: neutral/100
+    type: color
+    value: "#f1f5f9"
+    alias_of: universal/slate/100
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: "Semantic: Color"
+    mode: values
+    name: neutral/200
+    type: color
+    value: "#e2e8f0"
+    alias_of: universal/slate/200
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: "Semantic: Color"
+    mode: values
+    name: neutral/300
+    type: color
+    value: "#cbd5e1"
+    alias_of: universal/slate/300
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: "Semantic: Color"
+    mode: values
+    name: neutral/400
+    type: color
+    value: "#94a3b8"
+    alias_of: universal/slate/400
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: "Semantic: Color"
+    mode: values
+    name: neutral/500
+    type: color
+    value: "#64748b"
+    alias_of: universal/slate/500
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: "Semantic: Color"
+    mode: values
+    name: neutral/600
+    type: color
+    value: "#475569"
+    alias_of: universal/slate/600
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: "Semantic: Color"
+    mode: values
+    name: neutral/700
+    type: color
+    value: "#334155"
+    alias_of: universal/slate/700
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: "Semantic: Color"
+    mode: values
+    name: neutral/800
+    type: color
+    value: "#1e293b"
+    alias_of: universal/slate/800
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: "Semantic: Color"
+    mode: values
+    name: neutral/900
+    type: color
+    value: "#0f172a"
+    alias_of: universal/slate/900
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: "Semantic: Color"
+    mode: values
+    name: neutral/950
+    type: color
+    value: "#020617"
+    alias_of: universal/slate/950
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: "Semantic: Color"
+    mode: values
+    name: brand/50
+    type: color
+    value: "#ecfeff"
+    alias_of: universal/cyan/50
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: "Semantic: Color"
+    mode: values
+    name: brand/100
+    type: color
+    value: "#cffafe"
+    alias_of: universal/cyan/100
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: "Semantic: Color"
+    mode: values
+    name: brand/200
+    type: color
+    value: "#a5f3fc"
+    alias_of: universal/cyan/200
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: "Semantic: Color"
+    mode: values
+    name: brand/300
+    type: color
+    value: "#67e8f9"
+    alias_of: universal/cyan/300
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: "Semantic: Color"
+    mode: values
+    name: brand/400
+    type: color
+    value: "#22d3ee"
+    alias_of: universal/cyan/400
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: "Semantic: Color"
+    mode: values
+    name: brand/500
+    type: color
+    value: "#06b6d4"
+    alias_of: universal/cyan/500
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: "Semantic: Color"
+    mode: values
+    name: brand/600
+    type: color
+    value: "#0891b2"
+    alias_of: universal/cyan/600
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: "Semantic: Color"
+    mode: values
+    name: brand/700
+    type: color
+    value: "#0e7490"
+    alias_of: universal/cyan/700
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: "Semantic: Color"
+    mode: values
+    name: brand/800
+    type: color
+    value: "#155e75"
+    alias_of: universal/cyan/800
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: "Semantic: Color"
+    mode: values
+    name: brand/900
+    type: color
+    value: "#164e63"
+    alias_of: universal/cyan/900
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: "Semantic: Color"
+    mode: values
+    name: brand/950
+    type: color
+    value: "#083344"
+    alias_of: universal/cyan/950
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: "Semantic: Color"
+    mode: values
+    name: brand_secondary/50
+    type: color
+    value: "#ecfeff"
+    alias_of: universal/cyan/50
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: "Semantic: Color"
+    mode: values
+    name: brand_secondary/100
+    type: color
+    value: "#cffafe"
+    alias_of: universal/cyan/100
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: "Semantic: Color"
+    mode: values
+    name: brand_secondary/200
+    type: color
+    value: "#a5f3fc"
+    alias_of: universal/cyan/200
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: "Semantic: Color"
+    mode: values
+    name: brand_secondary/300
+    type: color
+    value: "#67e8f9"
+    alias_of: universal/cyan/300
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: "Semantic: Color"
+    mode: values
+    name: brand_secondary/400
+    type: color
+    value: "#22d3ee"
+    alias_of: universal/cyan/400
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: "Semantic: Color"
+    mode: values
+    name: brand_secondary/500
+    type: color
+    value: "#06b6d4"
+    alias_of: universal/cyan/500
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: "Semantic: Color"
+    mode: values
+    name: brand_secondary/600
+    type: color
+    value: "#0891b2"
+    alias_of: universal/cyan/600
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: "Semantic: Color"
+    mode: values
+    name: brand_secondary/700
+    type: color
+    value: "#0e7490"
+    alias_of: universal/cyan/700
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: "Semantic: Color"
+    mode: values
+    name: brand_secondary/800
+    type: color
+    value: "#155e75"
+    alias_of: universal/cyan/800
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: "Semantic: Color"
+    mode: values
+    name: brand_secondary/900
+    type: color
+    value: "#164e63"
+    alias_of: universal/cyan/900
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: "Semantic: Color"
+    mode: values
+    name: brand_secondary/950
+    type: color
+    value: "#083344"
+    alias_of: universal/cyan/950
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: "Semantic: Color"
+    mode: values
+    name: brand_tertiary/50
+    type: color
+    value: "#ecfeff"
+    alias_of: universal/cyan/50
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: "Semantic: Color"
+    mode: values
+    name: brand_tertiary/100
+    type: color
+    value: "#cffafe"
+    alias_of: universal/cyan/100
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: "Semantic: Color"
+    mode: values
+    name: brand_tertiary/200
+    type: color
+    value: "#a5f3fc"
+    alias_of: universal/cyan/200
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: "Semantic: Color"
+    mode: values
+    name: brand_tertiary/300
+    type: color
+    value: "#67e8f9"
+    alias_of: universal/cyan/300
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: "Semantic: Color"
+    mode: values
+    name: brand_tertiary/400
+    type: color
+    value: "#22d3ee"
+    alias_of: universal/cyan/400
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: "Semantic: Color"
+    mode: values
+    name: brand_tertiary/500
+    type: color
+    value: "#06b6d4"
+    alias_of: universal/cyan/500
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: "Semantic: Color"
+    mode: values
+    name: brand_tertiary/600
+    type: color
+    value: "#0891b2"
+    alias_of: universal/cyan/600
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: "Semantic: Color"
+    mode: values
+    name: brand_tertiary/700
+    type: color
+    value: "#0e7490"
+    alias_of: universal/cyan/700
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: "Semantic: Color"
+    mode: values
+    name: brand_tertiary/800
+    type: color
+    value: "#155e75"
+    alias_of: universal/cyan/800
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: "Semantic: Color"
+    mode: values
+    name: brand_tertiary/900
+    type: color
+    value: "#164e63"
+    alias_of: universal/cyan/900
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: "Semantic: Color"
+    mode: values
+    name: brand_tertiary/950
+    type: color
+    value: "#083344"
+    alias_of: universal/cyan/950
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: Vail
+    extension_of: "Semantic: Color"
+    mode: values
+    name: neutral/50
+    type: color
+    value: "#f8fafc"
+    alias_of: universal/slate/50
+    status: active
+    notes: "Inherits the shared semantic value from Semantic: Color; no Vail-specific override."
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: Vail
+    extension_of: "Semantic: Color"
+    mode: values
+    name: neutral/100
+    type: color
+    value: "#f1f5f9"
+    alias_of: universal/slate/100
+    status: active
+    notes: "Inherits the shared semantic value from Semantic: Color; no Vail-specific override."
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: Vail
+    extension_of: "Semantic: Color"
+    mode: values
+    name: neutral/200
+    type: color
+    value: "#e2e8f0"
+    alias_of: universal/slate/200
+    status: active
+    notes: "Inherits the shared semantic value from Semantic: Color; no Vail-specific override."
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: Vail
+    extension_of: "Semantic: Color"
+    mode: values
+    name: neutral/300
+    type: color
+    value: "#cbd5e1"
+    alias_of: universal/slate/300
+    status: active
+    notes: "Inherits the shared semantic value from Semantic: Color; no Vail-specific override."
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: Vail
+    extension_of: "Semantic: Color"
+    mode: values
+    name: neutral/400
+    type: color
+    value: "#94a3b8"
+    alias_of: universal/slate/400
+    status: active
+    notes: "Inherits the shared semantic value from Semantic: Color; no Vail-specific override."
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: Vail
+    extension_of: "Semantic: Color"
+    mode: values
+    name: neutral/500
+    type: color
+    value: "#64748b"
+    alias_of: universal/slate/500
+    status: active
+    notes: "Inherits the shared semantic value from Semantic: Color; no Vail-specific override."
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: Vail
+    extension_of: "Semantic: Color"
+    mode: values
+    name: neutral/600
+    type: color
+    value: "#475569"
+    alias_of: universal/slate/600
+    status: active
+    notes: "Inherits the shared semantic value from Semantic: Color; no Vail-specific override."
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: Vail
+    extension_of: "Semantic: Color"
+    mode: values
+    name: neutral/700
+    type: color
+    value: "#334155"
+    alias_of: universal/slate/700
+    status: active
+    notes: "Inherits the shared semantic value from Semantic: Color; no Vail-specific override."
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: Vail
+    extension_of: "Semantic: Color"
+    mode: values
+    name: neutral/800
+    type: color
+    value: "#1e293b"
+    alias_of: universal/slate/800
+    status: active
+    notes: "Inherits the shared semantic value from Semantic: Color; no Vail-specific override."
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: Vail
+    extension_of: "Semantic: Color"
+    mode: values
+    name: neutral/900
+    type: color
+    value: "#0f172a"
+    alias_of: universal/slate/900
+    status: active
+    notes: "Inherits the shared semantic value from Semantic: Color; no Vail-specific override."
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: Vail
+    extension_of: "Semantic: Color"
+    mode: values
+    name: neutral/950
+    type: color
+    value: "#020617"
+    alias_of: universal/slate/950
+    status: active
+    notes: "Inherits the shared semantic value from Semantic: Color; no Vail-specific override."
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: Vail
+    extension_of: "Semantic: Color"
+    mode: values
+    name: brand/50
+    type: color
+    value: "#f7faff"
+    alias_of: vail/digital_blue/50
+    status: active
+    notes: "Brand override in the Vail semantic extension."
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: Vail
+    extension_of: "Semantic: Color"
+    mode: values
+    name: brand/100
+    type: color
+    value: "#e7f1ff"
+    alias_of: vail/digital_blue/100
+    status: active
+    notes: "Brand override in the Vail semantic extension."
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: Vail
+    extension_of: "Semantic: Color"
+    mode: values
+    name: brand/200
+    type: color
+    value: "#cee3ff"
+    alias_of: vail/digital_blue/200
+    status: active
+    notes: "Brand override in the Vail semantic extension."
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: Vail
+    extension_of: "Semantic: Color"
+    mode: values
+    name: brand/300
+    type: color
+    value: "#aacfff"
+    alias_of: vail/digital_blue/300
+    status: active
+    notes: "Brand override in the Vail semantic extension."
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: Vail
+    extension_of: "Semantic: Color"
+    mode: values
+    name: brand/400
+    type: color
+    value: "#7cb4fc"
+    alias_of: vail/digital_blue/400
+    status: active
+    notes: "Brand override in the Vail semantic extension."
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: Vail
+    extension_of: "Semantic: Color"
+    mode: values
+    name: brand/500
+    type: color
+    value: "#4592ef"
+    alias_of: vail/digital_blue/500
+    status: active
+    notes: "Brand override in the Vail semantic extension."
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: Vail
+    extension_of: "Semantic: Color"
+    mode: values
+    name: brand/600
+    type: color
+    value: "#006cd1"
+    alias_of: vail/digital_blue/600
+    status: active
+    notes: "Brand override in the Vail semantic extension."
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: Vail
+    extension_of: "Semantic: Color"
+    mode: values
+    name: brand/700
+    type: color
+    value: "#0056a9"
+    alias_of: vail/digital_blue/700
+    status: active
+    notes: "Brand override in the Vail semantic extension."
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: Vail
+    extension_of: "Semantic: Color"
+    mode: values
+    name: brand/800
+    type: color
+    value: "#003e7d"
+    alias_of: vail/digital_blue/800
+    status: active
+    notes: "Brand override in the Vail semantic extension."
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: Vail
+    extension_of: "Semantic: Color"
+    mode: values
+    name: brand/900
+    type: color
+    value: "#0f2949"
+    alias_of: vail/digital_blue/900
+    status: active
+    notes: "Brand override in the Vail semantic extension."
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: Vail
+    extension_of: "Semantic: Color"
+    mode: values
+    name: brand/950
+    type: color
+    value: "#091627"
+    alias_of: vail/digital_blue/950
+    status: active
+    notes: "Brand override in the Vail semantic extension."
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: Vail
+    extension_of: "Semantic: Color"
+    mode: values
+    name: brand_secondary/50
+    type: color
+    value: "#f8fafd"
+    alias_of: vail/navy/50
+    status: active
+    notes: "Brand override in the Vail semantic extension."
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: Vail
+    extension_of: "Semantic: Color"
+    mode: values
+    name: brand_secondary/100
+    type: color
+    value: "#edf0f4"
+    alias_of: vail/navy/100
+    status: active
+    notes: "Brand override in the Vail semantic extension."
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: Vail
+    extension_of: "Semantic: Color"
+    mode: values
+    name: brand_secondary/200
+    type: color
+    value: "#dde2e8"
+    alias_of: vail/navy/200
+    status: active
+    notes: "Brand override in the Vail semantic extension."
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: Vail
+    extension_of: "Semantic: Color"
+    mode: values
+    name: brand_secondary/300
+    type: color
+    value: "#c4cdd8"
+    alias_of: vail/navy/300
+    status: active
+    notes: "Brand override in the Vail semantic extension."
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: Vail
+    extension_of: "Semantic: Color"
+    mode: values
+    name: brand_secondary/400
+    type: color
+    value: "#a4b3c5"
+    alias_of: vail/navy/400
+    status: active
+    notes: "Brand override in the Vail semantic extension."
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: Vail
+    extension_of: "Semantic: Color"
+    mode: values
+    name: brand_secondary/500
+    type: color
+    value: "#7a93b2"
+    alias_of: vail/navy/500
+    status: active
+    notes: "Brand override in the Vail semantic extension."
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: Vail
+    extension_of: "Semantic: Color"
+    mode: values
+    name: brand_secondary/600
+    type: color
+    value: "#5275a1"
+    alias_of: vail/navy/600
+    status: active
+    notes: "Brand override in the Vail semantic extension."
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: Vail
+    extension_of: "Semantic: Color"
+    mode: values
+    name: brand_secondary/700
+    type: color
+    value: "#2f598c"
+    alias_of: vail/navy/700
+    status: active
+    notes: "Brand override in the Vail semantic extension."
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: Vail
+    extension_of: "Semantic: Color"
+    mode: values
+    name: brand_secondary/800
+    type: color
+    value: "#144276"
+    alias_of: vail/navy/800
+    status: active
+    notes: "Brand override in the Vail semantic extension."
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: Vail
+    extension_of: "Semantic: Color"
+    mode: values
+    name: brand_secondary/900
+    type: color
+    value: "#08294d"
+    alias_of: vail/navy/900
+    status: active
+    notes: "Brand override in the Vail semantic extension."
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: Vail
+    extension_of: "Semantic: Color"
+    mode: values
+    name: brand_secondary/950
+    type: color
+    value: "#021630"
+    alias_of: vail/navy/950
+    status: active
+    notes: "Brand override in the Vail semantic extension."
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: Vail
+    extension_of: "Semantic: Color"
+    mode: values
+    name: brand_tertiary/50
+    type: color
+    value: "#fff9f1"
+    alias_of: vail/yellow/50
+    status: active
+    notes: "Brand override in the Vail semantic extension."
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: Vail
+    extension_of: "Semantic: Color"
+    mode: values
+    name: brand_tertiary/100
+    type: color
+    value: "#ffedd6"
+    alias_of: vail/yellow/100
+    status: active
+    notes: "Brand override in the Vail semantic extension."
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: Vail
+    extension_of: "Semantic: Color"
+    mode: values
+    name: brand_tertiary/200
+    type: color
+    value: "#ffdbaa"
+    alias_of: vail/yellow/200
+    status: active
+    notes: "Brand override in the Vail semantic extension."
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: Vail
+    extension_of: "Semantic: Color"
+    mode: values
+    name: brand_tertiary/300
+    type: color
+    value: "#ffaf18"
+    alias_of: vail/yellow/300
+    status: active
+    notes: "Brand override in the Vail semantic extension."
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: Vail
+    extension_of: "Semantic: Color"
+    mode: values
+    name: brand_tertiary/400
+    type: color
+    value: "#eba000"
+    alias_of: vail/yellow/400
+    status: active
+    notes: "Brand override in the Vail semantic extension."
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: Vail
+    extension_of: "Semantic: Color"
+    mode: values
+    name: brand_tertiary/500
+    type: color
+    value: "#bd8427"
+    alias_of: vail/yellow/500
+    status: active
+    notes: "Brand override in the Vail semantic extension."
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: Vail
+    extension_of: "Semantic: Color"
+    mode: values
+    name: brand_tertiary/600
+    type: color
+    value: "#8d6c3e"
+    alias_of: vail/yellow/600
+    status: active
+    notes: "Brand override in the Vail semantic extension."
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: Vail
+    extension_of: "Semantic: Color"
+    mode: values
+    name: brand_tertiary/700
+    type: color
+    value: "#655540"
+    alias_of: vail/yellow/700
+    status: active
+    notes: "Brand override in the Vail semantic extension."
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: Vail
+    extension_of: "Semantic: Color"
+    mode: values
+    name: brand_tertiary/800
+    type: color
+    value: "#453f36"
+    alias_of: vail/yellow/800
+    status: active
+    notes: "Brand override in the Vail semantic extension."
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: Vail
+    extension_of: "Semantic: Color"
+    mode: values
+    name: brand_tertiary/900
+    type: color
+    value: "#2a2926"
+    alias_of: vail/yellow/900
+    status: active
+    notes: "Brand override in the Vail semantic extension."
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: Vail
+    extension_of: "Semantic: Color"
+    mode: values
+    name: brand_tertiary/950
+    type: color
+    value: "#161615"
+    alias_of: vail/yellow/950
+    status: active
+    notes: "Brand override in the Vail semantic extension."
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_dimensions
+    collection: "_Global: Dimensions"
     mode: values
     name: space/0_5
     type: float
@@ -738,7 +1823,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_dimensions
+    collection: "_Global: Dimensions"
     mode: values
     name: space/1
     type: float
@@ -746,7 +1831,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_dimensions
+    collection: "_Global: Dimensions"
     mode: values
     name: space/1_5
     type: float
@@ -754,7 +1839,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_dimensions
+    collection: "_Global: Dimensions"
     mode: values
     name: space/2
     type: float
@@ -762,7 +1847,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_dimensions
+    collection: "_Global: Dimensions"
     mode: values
     name: space/2_5
     type: float
@@ -770,7 +1855,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_dimensions
+    collection: "_Global: Dimensions"
     mode: values
     name: space/3
     type: float
@@ -778,7 +1863,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_dimensions
+    collection: "_Global: Dimensions"
     mode: values
     name: space/3_5
     type: float
@@ -786,7 +1871,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_dimensions
+    collection: "_Global: Dimensions"
     mode: values
     name: space/4
     type: float
@@ -794,7 +1879,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_dimensions
+    collection: "_Global: Dimensions"
     mode: values
     name: space/5
     type: float
@@ -802,7 +1887,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_dimensions
+    collection: "_Global: Dimensions"
     mode: values
     name: space/6
     type: float
@@ -810,7 +1895,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_dimensions
+    collection: "_Global: Dimensions"
     mode: values
     name: space/7
     type: float
@@ -818,7 +1903,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_dimensions
+    collection: "_Global: Dimensions"
     mode: values
     name: space/8
     type: float
@@ -826,7 +1911,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_dimensions
+    collection: "_Global: Dimensions"
     mode: values
     name: space/9
     type: float
@@ -834,7 +1919,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_dimensions
+    collection: "_Global: Dimensions"
     mode: values
     name: space/10
     type: float
@@ -842,7 +1927,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_dimensions
+    collection: "_Global: Dimensions"
     mode: values
     name: space/11
     type: float
@@ -850,7 +1935,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_dimensions
+    collection: "_Global: Dimensions"
     mode: values
     name: space/12
     type: float
@@ -858,7 +1943,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_dimensions
+    collection: "_Global: Dimensions"
     mode: values
     name: space/14
     type: float
@@ -866,7 +1951,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_dimensions
+    collection: "_Global: Dimensions"
     mode: values
     name: space/16
     type: float
@@ -874,7 +1959,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_dimensions
+    collection: "_Global: Dimensions"
     mode: values
     name: space/20
     type: float
@@ -882,7 +1967,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_dimensions
+    collection: "_Global: Dimensions"
     mode: values
     name: space/24
     type: float
@@ -890,7 +1975,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_dimensions
+    collection: "_Global: Dimensions"
     mode: values
     name: space/28
     type: float
@@ -898,7 +1983,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_dimensions
+    collection: "_Global: Dimensions"
     mode: values
     name: space/32
     type: float
@@ -906,7 +1991,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_dimensions
+    collection: "_Global: Dimensions"
     mode: values
     name: space/36
     type: float
@@ -914,7 +1999,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_dimensions
+    collection: "_Global: Dimensions"
     mode: values
     name: space/40
     type: float
@@ -922,7 +2007,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_dimensions
+    collection: "_Global: Dimensions"
     mode: values
     name: space/44
     type: float
@@ -930,7 +2015,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_dimensions
+    collection: "_Global: Dimensions"
     mode: values
     name: space/48
     type: float
@@ -938,7 +2023,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_dimensions
+    collection: "_Global: Dimensions"
     mode: values
     name: space/52
     type: float
@@ -946,7 +2031,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_dimensions
+    collection: "_Global: Dimensions"
     mode: values
     name: space/56
     type: float
@@ -954,7 +2039,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_dimensions
+    collection: "_Global: Dimensions"
     mode: values
     name: space/60
     type: float
@@ -962,7 +2047,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_dimensions
+    collection: "_Global: Dimensions"
     mode: values
     name: space/64
     type: float
@@ -970,7 +2055,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_dimensions
+    collection: "_Global: Dimensions"
     mode: values
     name: space/72
     type: float
@@ -978,7 +2063,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_dimensions
+    collection: "_Global: Dimensions"
     mode: values
     name: space/80
     type: float
@@ -986,7 +2071,7 @@ variables:
     status: active
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
-    collection: _global_dimensions
+    collection: "_Global: Dimensions"
     mode: values
     name: space/96
     type: float

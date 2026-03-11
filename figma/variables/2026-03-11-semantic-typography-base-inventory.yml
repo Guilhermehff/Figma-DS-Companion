@@ -1,0 +1,137 @@
+date: 2026-03-11
+status: written
+figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+figma_file: Design System
+target_collection:
+  name: semantic_typography
+  id: VariableCollectionId:38:114
+  mode: values
+  mode_id: "38:3"
+source_basis:
+  figma_reads:
+    - collection: _global_typography
+      id: VariableCollectionId:23:3
+    - collection: semantic_typography
+      id: VariableCollectionId:38:114
+  reviewed_artifacts:
+    - figma/variables/2026-03-10-vail-brand-typography-intake.yml
+    - figma/variables/2026-03-10-vail-brand-typography-preview.md
+  derivation_rule: Create only the role-scoped semantic aliases justified by the approved shared baseline and the currently reviewed brand typography recipes. Heading may start with a broader size ladder than body or action so the baseline has enough reusable display options without over-expanding the other roles.
+
+role_mapping:
+  eyebrow: heading
+  headline: heading
+  subhead: heading
+  body: body
+  cta: action
+
+existing_base_aliases:
+  family_aliases:
+    - semantic_token: family/heading
+      global_token: universal/family/primary
+      raw_value: Inter
+    - semantic_token: family/heading_safe
+      global_token: universal/family/web_safe
+      raw_value: Arial
+    - semantic_token: family/body
+      global_token: universal/family/primary
+      raw_value: Inter
+    - semantic_token: family/body_safe
+      global_token: universal/family/web_safe
+      raw_value: Arial
+    - semantic_token: family/action
+      global_token: universal/family/primary
+      raw_value: Inter
+    - semantic_token: family/action_safe
+      global_token: universal/family/web_safe
+      raw_value: Arial
+
+written_additions:
+  weight_aliases:
+    - semantic_token: weight/heading/base
+      global_token: universal/weight/black
+      raw_value: 900
+      justified_by_roles:
+        - eyebrow
+        - headline
+        - subhead
+      rationale: The currently approved heading-like recipes all use the shared raw black weight, so black is the default heading weight in the present shared baseline.
+    - semantic_token: weight/body/base
+      global_token: universal/weight/medium
+      raw_value: 500
+      justified_by_roles:
+        - body
+      rationale: The currently approved body recipe uses the shared raw medium weight, so medium is the default body weight in the present shared baseline.
+    - semantic_token: weight/action/base
+      global_token: universal/weight/black
+      raw_value: 900
+      justified_by_roles:
+        - cta
+      rationale: The currently approved action recipe uses the shared raw black weight, so black is the default action weight in the present shared baseline.
+  size_aliases:
+    - semantic_token: size/heading/sm
+      global_token: universal/size/400
+      raw_value: 18
+      justified_by_roles:
+        - eyebrow
+        - subhead
+      rationale: The approved eyebrow and subhead recipes are both governed as half-headline supporting heading sizes, so they share one smaller heading step.
+    - semantic_token: size/heading/base
+      global_token: universal/size/600
+      raw_value: 24
+      justified_by_roles: []
+      rationale: The heading ladder needs more starting options at the semantic layer than the current approved recipes alone provide, so 24 becomes the baseline intermediate heading size.
+    - semantic_token: size/heading/lg
+      global_token: universal/size/700
+      raw_value: 30
+      justified_by_roles: []
+      rationale: The heading ladder needs a reusable larger display step between the default heading size and the smaller supporting heading size.
+    - semantic_token: size/heading/xl
+      global_token: universal/size/800
+      raw_value: 36
+      justified_by_roles:
+        - headline
+      rationale: The approved headline recipe is the largest currently reviewed display heading size, so it anchors the initial extra-large heading step.
+    - semantic_token: size/body/base
+      global_token: universal/size/300
+      raw_value: 16
+      justified_by_roles:
+        - body
+      rationale: The approved body recipe uses the shared reading-size baseline, so 16 is the default body size in the present shared baseline.
+    - semantic_token: size/action/base
+      global_token: universal/size/300
+      raw_value: 16
+      justified_by_roles:
+        - cta
+      rationale: The approved action recipe uses the shared base action size, so 16 is the default action size in the present shared baseline.
+
+intentionally_not_written_yet:
+  weight_aliases:
+    - weight/heading/subtle
+    - weight/heading/strong
+    - weight/body/subtle
+    - weight/body/strong
+    - weight/action/subtle
+    - weight/action/strong
+  size_aliases:
+    - size/heading/2xl
+    - size/body/sm
+    - size/body/lg
+    - size/action/sm
+    - size/action/lg
+  notes:
+    - These aliases are intentionally withheld because no approved shared baseline or reviewed brand recipe requires them yet.
+    - Add new t-shirt or emphasis steps only when another approved recipe introduces a distinct reusable size or weight inside the same semantic role.
+
+write_result:
+  performed_on: 2026-03-11
+  status: written
+  safe_alias_changes_required: false
+  brand_extension_changes_required: false
+  executed_scope:
+    - added role-scoped weight aliases to semantic_typography
+    - added role-scoped size aliases to semantic_typography
+  collection_variable_count_after_write: 15
+  notes:
+    - The existing Vail extension remained family-only because the reviewed Vail typography recipes already reuse the shared universal weight and size baselines.
+    - The live plugin runtime confirmed the 9 new aliases after write; the cached figma_get_variables response lagged behind the live document state.

@@ -1,0 +1,318 @@
+date: 2026-03-11
+status: written
+figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+figma_file: Design System
+target_collection:
+  name: "Semantic: Color"
+  id: VariableCollectionId:41:135
+  mode: values
+  mode_id: "41:6"
+  write_status: written
+brand_extension_collection:
+  name: "Vail"
+  id: VariableCollectionId:41:180
+  mode: values
+  mode_id: "VariableCollectionId:41:180/41:7"
+  parent_collection: "Semantic: Color"
+  write_status: written
+source_basis:
+  local_registry_snapshot:
+    - figma/variables/registry.yml
+  reviewed_artifacts:
+    - figma/variables/2026-03-10-vail-brand-color-intake.yml
+    - figma/variables/2026-03-10-vail-brand-color-preview.md
+    - figma/decisions/2026-03-11-shared-semantic-collections-with-brand-extensions.md
+    - figma/decisions/2026-03-11-initial-semantic-color-family-model.md
+  derivation_rule: Create only the semantic color ladders justified by the approved shared baseline and reviewed brand color foundations. Keep the semantic layer palette-scoped and meaning-light. Reserve stable primary, secondary, and tertiary brand slots now. Do not promote every raw brand family into semantic aliases until a stable cross-brand slot exists.
+
+recommended_family_strategy:
+  model: conservative_palette_slot_baseline
+  families_now:
+    - neutral
+    - brand
+    - brand_secondary
+    - brand_tertiary
+  rationale:
+    - neutral is the stable shared ladder for non-brand surfaces and text relationships.
+    - brand, brand_secondary, and brand_tertiary reserve the stable cross-brand schema needed by future brands and channels.
+    - when a brand lacks secondary or tertiary colors, those semantic slots should still exist and should map to the brand primary family in the brand extension.
+    - the current approved inventory does not yet justify broader shared slots beyond this three-family brand ladder.
+
+proposed_base_aliases:
+  neutral:
+    - semantic_token: neutral/50
+      global_token: universal/slate/50
+      raw_value: "#f8fafc"
+    - semantic_token: neutral/100
+      global_token: universal/slate/100
+      raw_value: "#f1f5f9"
+    - semantic_token: neutral/200
+      global_token: universal/slate/200
+      raw_value: "#e2e8f0"
+    - semantic_token: neutral/300
+      global_token: universal/slate/300
+      raw_value: "#cbd5e1"
+    - semantic_token: neutral/400
+      global_token: universal/slate/400
+      raw_value: "#94a3b8"
+    - semantic_token: neutral/500
+      global_token: universal/slate/500
+      raw_value: "#64748b"
+    - semantic_token: neutral/600
+      global_token: universal/slate/600
+      raw_value: "#475569"
+    - semantic_token: neutral/700
+      global_token: universal/slate/700
+      raw_value: "#334155"
+    - semantic_token: neutral/800
+      global_token: universal/slate/800
+      raw_value: "#1e293b"
+    - semantic_token: neutral/900
+      global_token: universal/slate/900
+      raw_value: "#0f172a"
+    - semantic_token: neutral/950
+      global_token: universal/slate/950
+      raw_value: "#020617"
+  brand:
+    - semantic_token: brand/50
+      global_token: universal/cyan/50
+      raw_value: "#ecfeff"
+    - semantic_token: brand/100
+      global_token: universal/cyan/100
+      raw_value: "#cffafe"
+    - semantic_token: brand/200
+      global_token: universal/cyan/200
+      raw_value: "#a5f3fc"
+    - semantic_token: brand/300
+      global_token: universal/cyan/300
+      raw_value: "#67e8f9"
+    - semantic_token: brand/400
+      global_token: universal/cyan/400
+      raw_value: "#22d3ee"
+    - semantic_token: brand/500
+      global_token: universal/cyan/500
+      raw_value: "#06b6d4"
+    - semantic_token: brand/600
+      global_token: universal/cyan/600
+      raw_value: "#0891b2"
+    - semantic_token: brand/700
+      global_token: universal/cyan/700
+      raw_value: "#0e7490"
+    - semantic_token: brand/800
+      global_token: universal/cyan/800
+      raw_value: "#155e75"
+    - semantic_token: brand/900
+      global_token: universal/cyan/900
+      raw_value: "#164e63"
+    - semantic_token: brand/950
+      global_token: universal/cyan/950
+      raw_value: "#083344"
+  brand_secondary:
+    - semantic_token: brand_secondary/50
+      global_token: universal/cyan/50
+      raw_value: "#ecfeff"
+    - semantic_token: brand_secondary/100
+      global_token: universal/cyan/100
+      raw_value: "#cffafe"
+    - semantic_token: brand_secondary/200
+      global_token: universal/cyan/200
+      raw_value: "#a5f3fc"
+    - semantic_token: brand_secondary/300
+      global_token: universal/cyan/300
+      raw_value: "#67e8f9"
+    - semantic_token: brand_secondary/400
+      global_token: universal/cyan/400
+      raw_value: "#22d3ee"
+    - semantic_token: brand_secondary/500
+      global_token: universal/cyan/500
+      raw_value: "#06b6d4"
+    - semantic_token: brand_secondary/600
+      global_token: universal/cyan/600
+      raw_value: "#0891b2"
+    - semantic_token: brand_secondary/700
+      global_token: universal/cyan/700
+      raw_value: "#0e7490"
+    - semantic_token: brand_secondary/800
+      global_token: universal/cyan/800
+      raw_value: "#155e75"
+    - semantic_token: brand_secondary/900
+      global_token: universal/cyan/900
+      raw_value: "#164e63"
+    - semantic_token: brand_secondary/950
+      global_token: universal/cyan/950
+      raw_value: "#083344"
+  brand_tertiary:
+    - semantic_token: brand_tertiary/50
+      global_token: universal/cyan/50
+      raw_value: "#ecfeff"
+    - semantic_token: brand_tertiary/100
+      global_token: universal/cyan/100
+      raw_value: "#cffafe"
+    - semantic_token: brand_tertiary/200
+      global_token: universal/cyan/200
+      raw_value: "#a5f3fc"
+    - semantic_token: brand_tertiary/300
+      global_token: universal/cyan/300
+      raw_value: "#67e8f9"
+    - semantic_token: brand_tertiary/400
+      global_token: universal/cyan/400
+      raw_value: "#22d3ee"
+    - semantic_token: brand_tertiary/500
+      global_token: universal/cyan/500
+      raw_value: "#06b6d4"
+    - semantic_token: brand_tertiary/600
+      global_token: universal/cyan/600
+      raw_value: "#0891b2"
+    - semantic_token: brand_tertiary/700
+      global_token: universal/cyan/700
+      raw_value: "#0e7490"
+    - semantic_token: brand_tertiary/800
+      global_token: universal/cyan/800
+      raw_value: "#155e75"
+    - semantic_token: brand_tertiary/900
+      global_token: universal/cyan/900
+      raw_value: "#164e63"
+    - semantic_token: brand_tertiary/950
+      global_token: universal/cyan/950
+      raw_value: "#083344"
+
+proposed_brand_extension:
+  brand: Vail
+  scope: override_only
+  status: written
+  overrides:
+    - semantic_token: brand/50
+      global_token: vail/digital_blue/50
+      raw_value: "#f7faff"
+    - semantic_token: brand/100
+      global_token: vail/digital_blue/100
+      raw_value: "#e7f1ff"
+    - semantic_token: brand/200
+      global_token: vail/digital_blue/200
+      raw_value: "#cee3ff"
+    - semantic_token: brand/300
+      global_token: vail/digital_blue/300
+      raw_value: "#aacfff"
+    - semantic_token: brand/400
+      global_token: vail/digital_blue/400
+      raw_value: "#7cb4fc"
+    - semantic_token: brand/500
+      global_token: vail/digital_blue/500
+      raw_value: "#4592ef"
+    - semantic_token: brand/600
+      global_token: vail/digital_blue/600
+      raw_value: "#006cd1"
+    - semantic_token: brand/700
+      global_token: vail/digital_blue/700
+      raw_value: "#0056a9"
+    - semantic_token: brand/800
+      global_token: vail/digital_blue/800
+      raw_value: "#003e7d"
+    - semantic_token: brand/900
+      global_token: vail/digital_blue/900
+      raw_value: "#0f2949"
+    - semantic_token: brand/950
+      global_token: vail/digital_blue/950
+      raw_value: "#091627"
+    - semantic_token: brand_secondary/50
+      global_token: vail/navy/50
+      raw_value: "#f8fafd"
+    - semantic_token: brand_secondary/100
+      global_token: vail/navy/100
+      raw_value: "#edf0f4"
+    - semantic_token: brand_secondary/200
+      global_token: vail/navy/200
+      raw_value: "#dde2e8"
+    - semantic_token: brand_secondary/300
+      global_token: vail/navy/300
+      raw_value: "#c4cdd8"
+    - semantic_token: brand_secondary/400
+      global_token: vail/navy/400
+      raw_value: "#a4b3c5"
+    - semantic_token: brand_secondary/500
+      global_token: vail/navy/500
+      raw_value: "#7a93b2"
+    - semantic_token: brand_secondary/600
+      global_token: vail/navy/600
+      raw_value: "#5275a1"
+    - semantic_token: brand_secondary/700
+      global_token: vail/navy/700
+      raw_value: "#2f598c"
+    - semantic_token: brand_secondary/800
+      global_token: vail/navy/800
+      raw_value: "#144276"
+    - semantic_token: brand_secondary/900
+      global_token: vail/navy/900
+      raw_value: "#08294d"
+    - semantic_token: brand_secondary/950
+      global_token: vail/navy/950
+      raw_value: "#021630"
+    - semantic_token: brand_tertiary/50
+      global_token: vail/yellow/50
+      raw_value: "#fff9f1"
+    - semantic_token: brand_tertiary/100
+      global_token: vail/yellow/100
+      raw_value: "#ffedd6"
+    - semantic_token: brand_tertiary/200
+      global_token: vail/yellow/200
+      raw_value: "#ffdbaa"
+    - semantic_token: brand_tertiary/300
+      global_token: vail/yellow/300
+      raw_value: "#ffaf18"
+    - semantic_token: brand_tertiary/400
+      global_token: vail/yellow/400
+      raw_value: "#eba000"
+    - semantic_token: brand_tertiary/500
+      global_token: vail/yellow/500
+      raw_value: "#bd8427"
+    - semantic_token: brand_tertiary/600
+      global_token: vail/yellow/600
+      raw_value: "#8d6c3e"
+    - semantic_token: brand_tertiary/700
+      global_token: vail/yellow/700
+      raw_value: "#655540"
+    - semantic_token: brand_tertiary/800
+      global_token: vail/yellow/800
+      raw_value: "#453f36"
+    - semantic_token: brand_tertiary/900
+      global_token: vail/yellow/900
+      raw_value: "#2a2926"
+    - semantic_token: brand_tertiary/950
+      global_token: vail/yellow/950
+      raw_value: "#161615"
+  mapping_rationale:
+    brand: Vail Digital Blue is the primary digital brand family in the reviewed color intake.
+    brand_secondary: Vail Navy is the second approved Vail family and provides the darker companion brand ladder.
+    brand_tertiary: Vail Yellow is the third approved Vail family and provides the warm tertiary ladder.
+  fallback_rule:
+    description: When a brand does not define secondary or tertiary semantic colors, map those slots to the same raw family as the primary brand slot.
+    applied_here: false
+
+intentionally_not_written_yet:
+  semantic_families:
+    - accent/50-950
+  exact_extremes:
+    - dedicated_white_alias
+    - dedicated_black_alias
+  vail_raw_families_without_shared_slot: []
+  notes:
+    - The primary, secondary, and tertiary brand slots are now reserved in the semantic schema. Some brands may resolve more than one slot to the same raw family, but Vail does not.
+    - Add dedicated semantic aliases for exact white and black only when a channel baseline shows that the neutral ladder is insufficient.
+
+open_questions:
+  - When channels need exact white or black, should Semantic: Color add dedicated aliases or should they continue to rely on the neutral ladder alone?
+
+write_result:
+  performed_on: 2026-03-11
+  status: written
+  executed_scope:
+    - created base collection Semantic: Color
+    - added 44 base semantic color aliases to Semantic: Color
+    - created Vail extension collection for Semantic: Color
+    - added 33 Vail brand override values in the color extension mode
+  collection_variable_count_after_write:
+    semantic_color: 44
+    vail_color_extension: 44
+  notes:
+    - The live file now has two distinct extension collections named Vail, one for Semantic: Typography and one for Semantic: Color.
+    - The color Vail extension is scoped by parent collection VariableCollectionId:41:135 and carries 33 override entries for brand, brand_secondary, and brand_tertiary.
