@@ -22,6 +22,21 @@ collections:
     mode: values
     status: active
     variable_count: 33
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    id: VariableCollectionId:38:114
+    level: semantic
+    collection: semantic_typography
+    mode: base
+    status: active
+    variable_count: 6
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    id: VariableCollectionId:38:121
+    level: semantic
+    collection: semantic_typography/vail
+    mode: base
+    status: active
+    variable_count: 6
+    extension_of: semantic_typography
 variables:
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
@@ -599,6 +614,120 @@ variables:
     type: float
     value: 36
     status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: semantic_typography
+    mode: base
+    name: family/heading
+    type: string
+    value: Inter
+    alias_of: universal/family/primary
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: semantic_typography
+    mode: base
+    name: family/heading_safe
+    type: string
+    value: Arial
+    alias_of: universal/family/web_safe
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: semantic_typography
+    mode: base
+    name: family/body
+    type: string
+    value: Inter
+    alias_of: universal/family/primary
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: semantic_typography
+    mode: base
+    name: family/body_safe
+    type: string
+    value: Arial
+    alias_of: universal/family/web_safe
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: semantic_typography
+    mode: base
+    name: family/action
+    type: string
+    value: Inter
+    alias_of: universal/family/primary
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: semantic_typography
+    mode: base
+    name: family/action_safe
+    type: string
+    value: Arial
+    alias_of: universal/family/web_safe
+    status: active
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: semantic_typography/vail
+    mode: base
+    name: family/heading
+    type: string
+    value: Termina
+    alias_of: vail/family/display
+    status: active
+    notes: Brand override in the Vail semantic extension.
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: semantic_typography/vail
+    mode: base
+    name: family/heading_safe
+    type: string
+    value: Arial
+    alias_of: universal/family/web_safe
+    status: active
+    notes: Inherits the shared safe alias from the base semantic collection; no Vail-specific override.
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: semantic_typography/vail
+    mode: base
+    name: family/body
+    type: string
+    value: Avenir
+    alias_of: vail/family/primary
+    status: active
+    notes: Brand override in the Vail semantic extension.
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: semantic_typography/vail
+    mode: base
+    name: family/body_safe
+    type: string
+    value: Arial
+    alias_of: universal/family/web_safe
+    status: active
+    notes: Inherits the shared safe alias from the base semantic collection; no Vail-specific override.
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: semantic_typography/vail
+    mode: base
+    name: family/action
+    type: string
+    value: Avenir
+    alias_of: vail/family/primary
+    status: active
+    notes: Brand override in the Vail semantic extension.
+  - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+    level: semantic
+    collection: semantic_typography/vail
+    mode: base
+    name: family/action_safe
+    type: string
+    value: Arial
+    alias_of: universal/family/web_safe
+    status: active
+    notes: Inherits the shared safe alias from the base semantic collection; no Vail-specific override.
   - figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
     level: global
     collection: _global_dimensions

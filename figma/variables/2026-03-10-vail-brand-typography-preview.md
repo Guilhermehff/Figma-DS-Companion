@@ -4,7 +4,7 @@
 - Brand: vail
 - Source reference: User-provided image in chat showing Vail typography guidance
 - Intake artifact: [2026-03-10-vail-brand-typography-intake.yml](/Users/guilhermefidelio/Documents/GitHub/Vail Resorts DS/figma/variables/2026-03-10-vail-brand-typography-intake.yml)
-- Write status: approved and global family primitives written to `_global_typography` in `Design System` on 2026-03-11; semantic aliases remain documentation until semantic collection structure is finalized
+- Write status: approved and written to `_global_typography`, `semantic_typography`, and `semantic_typography/vail` in `Design System` on 2026-03-11
 
 ## Original Source Roles
 
@@ -131,8 +131,8 @@
 
 ## Hold For Review
 
-- Item: `Semantic typography collection structure`
-  Reason: The approved semantic tokens are clear, but the multi-brand collection shape in Figma still needs an explicit decision before aliases are written.
+- Item: `None`
+  Reason: The shared semantic collection and brand-extension model is now approved and written.
 
 ## Semantic Mapping
 
@@ -300,6 +300,7 @@ Recipe notes:
 - Missing fallback stacks default to `universal/family/web_safe`.
 - Missing numeric sizes are mapped provisionally to the universal size ladder and should be revisited after design experimentation.
 - Global family naming is now approved as `primary`, `display`, and `web_safe`.
+- The semantic typography baseline now lives in `semantic_typography`, with Vail overrides in `semantic_typography/vail`.
 
 ## Review Readiness
 

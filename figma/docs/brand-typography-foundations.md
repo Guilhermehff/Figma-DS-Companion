@@ -108,6 +108,15 @@ Use brand family primitives as raw ingredients, then alias them into semantic fa
 Safe-alias rule:
 Use the safe semantic aliases for email and any other constrained channel that cannot rely on the brand family being delivered. The safe aliases should point to `universal/family/web_safe`.
 
+Collection strategy:
+
+- Base collection: `semantic_typography`
+- Base mode: `base`
+- Brand extension collection format: `semantic_typography/<brand>`
+
+Implementation rule:
+The base semantic collection aliases universal typography primitives. A brand extension collection should override only the semantic tokens that actually differ for that brand. If a token still points to the universal baseline, it should remain untouched in the base collection rather than being redundantly reassigned in the brand extension.
+
 Opinion:
 Use `action` instead of `cta` at the semantic layer. `cta` is already channel language, while `action` still covers buttons, links, chips, navigation prompts, and promotional actions without tying the semantic ladder to one UI term.
 
@@ -127,6 +136,7 @@ At minimum, capture:
 - fallback behavior for constrained channels
 - case, punctuation, tracking, and leading rules
 - any usage restrictions or exceptions stated by the source
+- which semantic tokens stay on the universal baseline and which ones are overridden by the brand extension
 
 ## Artifact Separation
 

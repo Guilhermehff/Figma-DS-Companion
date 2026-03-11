@@ -63,6 +63,9 @@ token_levels:
       - Each semantic token category uses its own dedicated collection.
       - Variable names inside a semantic collection do not repeat the collection category.
       - Extended collections are used at the Semantic level to support brands.
+      - The base semantic collection must point to universal primitives first.
+      - Brand-specific differences should be expressed only in the brand extension collection for that semantic category.
+      - A semantic extension should override only the tokens that materially differ from the shared universal baseline.
       - Semantic naming must support laddering into channel meaning.
     ladder_examples:
       - "universal/slate/50 -> neutral/50 -> color/bg/surface"
@@ -128,6 +131,9 @@ collections:
     level: semantic
     category: typography
     extended_collections: true
+    extension_naming:
+      base_collection: semantic_typography
+      brand_extension_format: "semantic_typography/<brand>"
 
 brand_color_foundations:
   description: Rules for evaluating and expanding brand-specific color families inside _global_color
@@ -290,6 +296,11 @@ brand_typography_foundations:
         - continue using the shared universal size ladder for raw sizes.
         - if a source guide only provides relational size rules, preserve the relation in role recipes and map the working assumption to an existing universal size token.
   semantic_family_aliases:
+    collection_strategy:
+      base_collection: semantic_typography
+      base_mode: base
+      brand_extension_format: "semantic_typography/<brand>"
+      brand_extension_rule: The base collection aliases universal families. Each brand extension overrides only the semantic tokens that differ for that brand.
     default_tokens:
       - family/heading
       - family/heading_safe
@@ -300,6 +311,7 @@ brand_typography_foundations:
     notes:
       - safe aliases are semantic substitutes for channels such as email that need safe-family behavior.
       - until a more specific safe raw family is approved, safe aliases should point to universal/family/web_safe.
+      - safe aliases should normally remain on the universal safe family in both the base collection and brand extensions unless a constrained-channel brand exception is explicitly approved.
   role_recipe_rules:
     description: Usage-bearing typography specs that later become channel styles
     required_fields:
