@@ -27,15 +27,11 @@ figma:
       collection_id: semantic-color-typography-override
       parent_collection: "Semantic: Color"
       parent_collection_id: semantic-color
-      figma_variable_count: 0
-      tracked_override_count: 0
     typography:
       collection_name: Typography Override
       collection_id: semantic-typography-override
       parent_collection: "Semantic: Typography"
       parent_collection_id: semantic-typography
-      figma_variable_count: 3
-      tracked_override_count: 3
 artifacts:
   color:
     intake_artifact: brands/typography-override/color-intake.yml

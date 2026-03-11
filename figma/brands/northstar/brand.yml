@@ -1,0 +1,88 @@
+version: 1
+updated: 2026-03-11
+brand_id: northstar
+display_name: Northstar
+status: active
+owners:
+  - design_system_governance
+supported_channels:
+  - web
+  - email
+  - ads
+design_system_file_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+staged_paths:
+  color_dir: figma/brands/northstar/color
+  typography_dir: figma/brands/northstar/typography
+source_references:
+  - figma/brands/northstar/color/intake.yml
+  - figma/brands/northstar/color/preview.md
+  - figma/brands/northstar/typography/intake.yml
+  - figma/brands/northstar/typography/preview.md
+figma:
+  design_system_file_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+  global_collections:
+    color_id: VariableCollectionId:23:2
+    typography_id: VariableCollectionId:23:3
+    dimensions_id: VariableCollectionId:23:4
+  semantic_extensions:
+    color:
+      collection_name: Northstar
+      collection_id: VariableCollectionId:47:478
+      parent_collection: "Semantic: Color"
+      parent_collection_id: VariableCollectionId:41:135
+    typography:
+      collection_name: Northstar
+      collection_id: VariableCollectionId:47:525
+      parent_collection: "Semantic: Typography"
+      parent_collection_id: VariableCollectionId:38:114
+artifacts:
+  color:
+    intake_artifact: figma/brands/northstar/color/intake.yml
+    preview_artifact: figma/brands/northstar/color/preview.md
+    decision_artifacts: []
+  typography:
+    intake_artifact: figma/brands/northstar/typography/intake.yml
+    preview_artifact: figma/brands/northstar/typography/preview.md
+    decision_artifacts: []
+semantic_overrides:
+  color:
+    status: active
+    override_scopes:
+      - semantic_slot: brand
+        raw_family: northstar/burgundy
+      - semantic_slot: brand_secondary
+        raw_family: northstar/copper
+      - semantic_slot: brand_tertiary
+        raw_family: northstar/burgundy
+      - semantic_slot: neutral
+        raw_family: northstar/graphite
+    inherited_from_base:
+      - positive/*
+      - warning/*
+      - negative/*
+    notes:
+      - The source clearly supports primary burgundy, secondary copper, and a branded neutral ladder built from snow white, gray, and near-black.
+      - brand_tertiary/* is approved and written to reuse the burgundy ladder rather than remaining inherited from the semantic base.
+  typography:
+    status: active
+    override_scopes:
+      - semantic_token: family/heading
+        alias_of: northstar/family/primary
+      - semantic_token: family/body
+        alias_of: northstar/family/primary
+      - semantic_token: weight/heading/base
+        alias_of: universal/weight/medium
+      - semantic_token: weight/body/base
+        alias_of: universal/weight/normal
+    inherited_from_base:
+      - family/heading_safe
+      - family/body_safe
+      - family/action
+      - family/action_safe
+      - weight/action/*
+      - size/*
+    notes:
+      - The supplied guidance shows one brand family, `New Order`, with Medium used for headlines and Regular used for sub-headlines and body copy.
+      - Action typography remains intentionally inherited because the approved source did not define a CTA or button-specific rule.
+notes:
+  - Northstar is live in the Design System file with global color ladders, a global typography family, and semantic color and typography extensions.

@@ -1,0 +1,257 @@
+date: 2026-03-11
+brand: northstar
+source_reference: User-provided image in chat showing the Northstar color palette
+source_type: image
+figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+status: active
+preview:
+  required_before_write: true
+  artifact: figma/brands/northstar/color/preview.md
+  status: written_in_figma
+
+source_swatches:
+  - source_name: Northstar Burgundy
+    provided_value: "#7d1c25"
+    source_usage_scope: primary_brand_palette
+    channel_restrictions: not specified in source
+    notes: Source image lists RGB 125 28 37 and CMYK 27 100 96 27.
+  - source_name: Northstar Copper
+    provided_value: "#d7941d"
+    source_usage_scope: primary_brand_palette
+    channel_restrictions: not specified in source
+    notes: Source image lists RGB 215 148 29 and CMYK 5 47 100 0.
+  - source_name: Northstar Snow White
+    provided_value: "#f2f0ef"
+    source_usage_scope: secondary_brand_palette
+    channel_restrictions: not specified in source
+    notes: Source image lists RGB 242 240 234 and CMYK 3 3 3 0.
+  - source_name: Northstar Gray
+    provided_value: "#808080"
+    source_usage_scope: secondary_brand_palette
+    channel_restrictions: not specified in source
+    notes: Source image lists RGB 128 128 128 and CMYK 51 43 43 7.
+  - source_name: Northstar Black
+    provided_value: "#101010"
+    source_usage_scope: secondary_brand_palette
+    channel_restrictions: not specified in source
+    notes: Source image lists RGB 16 16 16 and CMYK 74 68 67 87.
+
+universal_reuse:
+  reuse_universal: []
+  new_brand_families:
+    - family: burgundy
+      source_name: Northstar Burgundy
+      provided_value: "#7d1c25"
+      rationale: Core brand red that should anchor the primary brand ladder and remain separate from shared feedback semantics.
+      anchor_step: 700
+      anchor_label: 700_source
+    - family: copper
+      source_name: Northstar Copper
+      provided_value: "#d7941d"
+      rationale: Distinct warm metallic accent that works as the secondary brand ladder.
+      anchor_step: 400
+      anchor_label: 400_source
+    - family: graphite
+      source_name: Northstar Black, Northstar Gray, and Northstar Snow White
+      provided_value: "#101010 / #808080 / #f2f0ef"
+      rationale: Northstar supplies a branded neutral system rather than a single neutral swatch, so one graphite ladder can carry off-white, gray, and near-black together.
+      anchor_step: 950
+      anchor_label: 950_source
+  hold_for_review:
+    - source_name: Northstar tertiary brand family
+      provided_value: n/a
+      reason: The source only names two primary brand colors, so `brand_tertiary/*` is intentionally left inherited until a third family is approved.
+
+scale_spec:
+  working_space: OKLCH
+  steps:
+    - 50
+    - 100
+    - 200
+    - 300
+    - 400
+    - 500
+    - 600
+    - 700
+    - 800
+    - 900
+    - 950
+  contrast_targets:
+    white:
+      "800": "4.5:1 preferred"
+      "900": "7:1 required"
+      "950": "7:1 required"
+    black:
+      "50": "7:1 required"
+      "100": "7:1 required"
+      "200": "4.5:1 required"
+
+family_scales:
+  - family: burgundy
+    source_name: Northstar Burgundy
+    source_value: "#7d1c25"
+    source_anchor: 700_source
+    tokens:
+      - name: northstar/burgundy/50
+        value: "#fff7f7"
+        source_anchor: false
+      - name: northstar/burgundy/100
+        value: "#fde9e8"
+        source_anchor: false
+      - name: northstar/burgundy/200
+        value: "#f9d3d1"
+        source_anchor: false
+      - name: northstar/burgundy/300
+        value: "#efb1ad"
+        source_anchor: false
+      - name: northstar/burgundy/400
+        value: "#df8782"
+        source_anchor: false
+      - name: northstar/burgundy/500
+        value: "#c95b59"
+        source_anchor: false
+      - name: northstar/burgundy/600
+        value: "#a9363f"
+        source_anchor: false
+      - name: northstar/burgundy/700
+        value: "#7d1c25"
+        source_anchor: true
+      - name: northstar/burgundy/800
+        value: "#5f0f18"
+        source_anchor: false
+      - name: northstar/burgundy/900
+        value: "#40070d"
+        source_anchor: false
+      - name: northstar/burgundy/950
+        value: "#280306"
+        source_anchor: false
+  - family: copper
+    source_name: Northstar Copper
+    source_value: "#d7941d"
+    source_anchor: 400_source
+    tokens:
+      - name: northstar/copper/50
+        value: "#fff8ec"
+        source_anchor: false
+      - name: northstar/copper/100
+        value: "#ffefcf"
+        source_anchor: false
+      - name: northstar/copper/200
+        value: "#ffdca0"
+        source_anchor: false
+      - name: northstar/copper/300
+        value: "#f2bf58"
+        source_anchor: false
+      - name: northstar/copper/400
+        value: "#d7941d"
+        source_anchor: true
+      - name: northstar/copper/500
+        value: "#b87d17"
+        source_anchor: false
+      - name: northstar/copper/600
+        value: "#956614"
+        source_anchor: false
+      - name: northstar/copper/700
+        value: "#755113"
+        source_anchor: false
+      - name: northstar/copper/800
+        value: "#594011"
+        source_anchor: false
+      - name: northstar/copper/900
+        value: "#3b2b0d"
+        source_anchor: false
+      - name: northstar/copper/950
+        value: "#231907"
+        source_anchor: false
+  - family: graphite
+    source_name: Northstar Black, Northstar Gray, and Northstar Snow White
+    source_value: "#101010 / #808080 / #f2f0ef"
+    source_anchor: 950_source
+    tokens:
+      - name: northstar/graphite/50
+        value: "#faf8f7"
+        source_anchor: false
+      - name: northstar/graphite/100
+        value: "#f2f0ef"
+        source_anchor: true
+      - name: northstar/graphite/200
+        value: "#e2dfdc"
+        source_anchor: false
+      - name: northstar/graphite/300
+        value: "#c9c3bf"
+        source_anchor: false
+      - name: northstar/graphite/400
+        value: "#afa7a0"
+        source_anchor: false
+      - name: northstar/graphite/500
+        value: "#968e87"
+        source_anchor: false
+      - name: northstar/graphite/600
+        value: "#808080"
+        source_anchor: true
+      - name: northstar/graphite/700
+        value: "#5f5d5b"
+        source_anchor: false
+      - name: northstar/graphite/800
+        value: "#403d3b"
+        source_anchor: false
+      - name: northstar/graphite/900
+        value: "#262322"
+        source_anchor: false
+      - name: northstar/graphite/950
+        value: "#101010"
+        source_anchor: true
+
+validation:
+  perceptual_consistency_notes:
+    - Burgundy lands at `700` because the supplied swatch is already a dark, high-contrast brand red rather than a middle accent.
+    - Copper lands at `400` because the source color behaves as a bright accent rather than a deep tone.
+    - Northstar's off-white, gray, and near-black are treated as one branded neutral ladder so the semantic neutral system can stay coherent without duplicating isolated one-off swatches.
+    - brand_tertiary/* is approved to reuse the burgundy ladder so the semantic brand system stays inside the primary Northstar hue family.
+  contrast_checks:
+    - token: northstar/burgundy/700
+      foreground: white
+      ratio: "8.89:1"
+      result: pass
+    - token: northstar/copper/900
+      foreground: white
+      ratio: "10.20:1"
+      result: pass
+    - token: northstar/graphite/100
+      foreground: black
+      ratio: "18.28:1"
+      result: pass
+    - token: northstar/graphite/950
+      foreground: white
+      ratio: "19.03:1"
+      result: pass
+
+review_readiness:
+  intended_review_channels:
+    - web
+    - email
+    - ads
+  review_rules:
+    - subject: Northstar Burgundy and Copper
+      channels:
+        - web
+        - email
+        - ads
+      rule: Treat burgundy as the primary brand ladder and copper as the secondary ladder.
+      source_basis: The source explicitly names Burgundy and Copper as the Northstar primary colors.
+    - subject: Northstar branded neutrals
+      channels:
+        - web
+        - email
+        - ads
+      rule: Use the graphite ladder to represent Snow White, Gray, and the near-black brand neutral system.
+      source_basis: The source groups Snow White, Gray, and Black as the secondary colors.
+    - subject: Northstar tertiary color
+      channels:
+        - web
+        - email
+        - ads
+      rule: Alias brand_tertiary/* to the burgundy ladder rather than introducing a third family.
+      source_basis: Approved review decision after the initial staged palette pass.
+
+open_questions: []

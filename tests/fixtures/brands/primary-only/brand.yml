@@ -26,15 +26,11 @@ figma:
       collection_id: semantic-color-primary-only
       parent_collection: "Semantic: Color"
       parent_collection_id: semantic-color
-      figma_variable_count: 11
-      tracked_override_count: 11
     typography:
       collection_name: Primary Only
       collection_id: semantic-typography-primary-only
       parent_collection: "Semantic: Typography"
       parent_collection_id: semantic-typography
-      figma_variable_count: 0
-      tracked_override_count: 0
 artifacts:
   color:
     intake_artifact: brands/primary-only/color-intake.yml

@@ -30,7 +30,8 @@ baseVariable.setValueForMode(
 8. Verify the extension through:
    - `extensionCollection.variableOverrides`
    - `await baseVariable.valuesByModeForCollectionAsync(extensionCollection)`
-9. Write the resulting collection IDs and override inventories back into repo artifacts.
+   - `figma.variables.getLocalVariableCollectionsAsync()` to confirm there is only one extension collection for that brand in the target semantic category
+9. Update the brand manifest with the resulting collection IDs and any approved non-obvious override notes. Create local extension or registry exports only when explicitly requested.
 
 ## Why This Route
 
@@ -45,6 +46,7 @@ baseVariable.setValueForMode(
   - `parentCollection.extend()` fails validation.
 - `valuesByModeForCollectionAsync()` expects the collection object, not a collection ID string.
 - `figma_get_variables` can temporarily return stale cached data after a write, so plugin-runtime verification through `figma_execute` is the reliable source immediately after mutation.
+- `extend(\"Brand\")` can create a duplicate brand extension if the write flow is retried mid-session, so duplicate checks must run before repo sync.
 
 ## Minimal Verification Checklist
 
@@ -53,4 +55,5 @@ baseVariable.setValueForMode(
 - Extension mode ID is captured from `extensionCollection.modes[0].modeId`.
 - `variableOverrides` contains the expected base semantic variable IDs.
 - At least one representative base variable resolves to the expected brand raw token through `valuesByModeForCollectionAsync(extensionCollection)`.
-- Repo manifests and extension snapshots are updated before ending the task.
+- No duplicate extension collection exists for the same brand and semantic parent.
+- The brand manifest is updated if live collection IDs changed, and any optional local exports requested for the task are regenerated before ending the task.

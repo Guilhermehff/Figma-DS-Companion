@@ -157,10 +157,13 @@ When creating or updating a Semantic extension collection in the Design System f
    - Inspect `extensionCollection.variableOverrides` to confirm which base variables are overridden.
    - Use `await baseVariable.valuesByModeForCollectionAsync(extensionCollection)` to verify the extension-specific alias target.
    - Important: `valuesByModeForCollectionAsync()` expects the collection object, not the collection ID string.
+   - Immediately query local variable collections for duplicate brand extension collections in the same semantic category.
+   - If more than one extension collection exists for the same brand and parent category, stop and remove the stray duplicate before syncing repo state.
 
 6. Sync repo state immediately
-   - Persist the extension collection ID, override count, and approved override inventory back into `figma/brands/<brand>/brand.yml` and `figma/variables/extensions/*.yml`.
-   - Rebuild `figma/variables/registry.yml` after the write.
+   - Persist the extension collection ID and any approved non-obvious mapping notes back into `figma/brands/<brand>/brand.yml`.
+   - Create `figma/variables/extensions/*.yml` only when a local audit or export is explicitly requested.
+   - Create or rebuild `figma/variables/registry.yml` only when a local compatibility export is explicitly requested.
 
 7. Treat cached inventory reads carefully
    - `figma_get_variables` may lag after a write.
@@ -184,8 +187,8 @@ Do not invent new conventions silently.
 - figma/config/variable-taxonomy.yml is the governing taxonomy and must match this AGENTS.md.
 - figma/brands/registry.yml is the governed source of truth for which brands currently exist in repo governance.
 - figma/brands/<brand>/brand.yml is the canonical per-brand metadata record.
-- figma/variables/index.yml is the source manifest for split collection and extension inventories.
-- figma/variables/registry.yml is a generated compatibility export and must not be hand-edited.
+- figma/variables/index.yml is the optional export manifest for local collection snapshots and compatibility exports.
+- figma/variables/registry.yml, when present, is an on-demand generated compatibility export and must not be hand-edited.
 - figma/templates/variable-audit.md, figma/templates/component-spec.md, figma/templates/decision-log.md must be used for repeatable output.
 - Preserve decision history. Record governance changes in figma/decisions rather than overwriting prior decisions silently.
 
@@ -193,7 +196,7 @@ Do not invent new conventions silently.
 
 - figma/config: taxonomies and governance rules
 - figma/brands: brand registry, per-brand manifests, and staged brand artifacts
-- figma/variables: structured inventories, registries, and naming proposals
+- figma/variables: optional local exports, collection snapshots, and naming proposals
 - figma/history: migrated dated artifacts that are no longer current source files
 - figma/components: inventories and component level specs
 - figma/templates: reusable output templates

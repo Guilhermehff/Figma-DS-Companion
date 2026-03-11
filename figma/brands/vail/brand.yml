@@ -30,15 +30,11 @@ figma:
       collection_id: VariableCollectionId:41:180
       parent_collection: "Semantic: Color"
       parent_collection_id: VariableCollectionId:41:135
-      figma_variable_count: 77
-      tracked_override_count: 33
     typography:
       collection_name: Vail
       collection_id: VariableCollectionId:38:121
       parent_collection: "Semantic: Typography"
       parent_collection_id: VariableCollectionId:38:114
-      figma_variable_count: 15
-      tracked_override_count: 3
 artifacts:
   color:
     intake_artifact: figma/brands/vail/color/intake.yml

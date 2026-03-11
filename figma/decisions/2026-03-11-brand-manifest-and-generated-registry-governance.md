@@ -4,6 +4,8 @@ Date: 2026-03-11
 Status: accepted
 Figma URL: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
 
+Superseded in part by: `figma/decisions/2026-03-11-figma-first-governance-exports.md`
+
 ## Context
 
 The repository had enough governance rules to model tokens, but not enough operational structure to scale to dozens of brands without documentation drift, extension sprawl, and manual registry maintenance.

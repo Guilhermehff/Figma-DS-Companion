@@ -32,7 +32,8 @@ governance_sources:
   generated_registry_path: figma/variables/registry.yml
   notes:
     - Governed brand ids come from the brand manifest registry instead of a hardcoded taxonomy list.
-    - figma/variables/registry.yml is a generated compatibility export and must not be hand-edited.
+    - figma/variables/index.yml describes optional local collection and compatibility exports.
+    - figma/variables/registry.yml may be generated on demand and must not be hand-edited when present.
 
 token_levels:
   global:
@@ -176,9 +177,9 @@ registry_generation:
   source_index: figma/variables/index.yml
   generated_export: figma/variables/registry.yml
   rules:
-    - Update split collection and extension manifests first, then regenerate figma/variables/registry.yml.
-    - Treat figma/variables/registry.yml as a generated compatibility export for broad reads and diffs.
-    - Brand extension manifests track only material overrides and should not restate inherited base aliases.
+    - Maintain local collection or extension manifests only when an audit or compatibility export is explicitly requested.
+    - Treat figma/variables/registry.yml as an optional compatibility export for broad reads and diffs.
+    - If local brand extension exports are created, they should track only material overrides and should not restate inherited base aliases.
 
 brand_color_foundations:
   description: "Rules for evaluating and expanding brand-specific color families inside `_Global: Color`"
@@ -538,4 +539,4 @@ review_checks:
   - Flag typography artifacts that omit semantic safe aliases or downstream review guidance for email and other constrained channels.
   - "Flag `Semantic: Typography` inventories that use flat raw-like weight or size aliases such as weight/medium or size/300 instead of approved role-scoped semantic ladders."
   - Flag typography proposals that do not include a preview artifact before write.
-  - Flag direct manual edits to figma/variables/registry.yml instead of regenerating it from figma/variables/index.yml.
+  - If `figma/variables/registry.yml` is created, flag direct manual edits instead of regenerating it from `figma/variables/index.yml`.

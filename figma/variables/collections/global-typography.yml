@@ -8,7 +8,7 @@ collection:
   category: typography
   mode: values
   status: active
-  figma_variable_count: 20
+  figma_variable_count: 21
 tokens:
 - name: universal/family/primary
   type: string
@@ -37,6 +37,10 @@ tokens:
 - name: vail/family/primary
   type: string
   value: Avenir
+  status: active
+- name: northstar/family/primary
+  type: string
+  value: New Order
   status: active
 - name: universal/weight/normal
   type: float

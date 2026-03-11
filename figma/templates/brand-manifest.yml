@@ -25,15 +25,11 @@ figma:
       collection_id: ""
       parent_collection: "Semantic: Color"
       parent_collection_id: ""
-      figma_variable_count: 0
-      tracked_override_count: 0
     typography:
       collection_name: ""
       collection_id: ""
       parent_collection: "Semantic: Typography"
       parent_collection_id: ""
-      figma_variable_count: 0
-      tracked_override_count: 0
 artifacts:
   color:
     intake_artifact: ""

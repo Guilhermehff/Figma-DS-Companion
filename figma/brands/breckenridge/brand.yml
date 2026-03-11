@@ -30,15 +30,11 @@ figma:
       collection_id: VariableCollectionId:45:317
       parent_collection: "Semantic: Color"
       parent_collection_id: VariableCollectionId:41:135
-      figma_variable_count: 77
-      tracked_override_count: 44
     typography:
       collection_name: Breckenridge
       collection_id: VariableCollectionId:45:318
       parent_collection: "Semantic: Typography"
       parent_collection_id: VariableCollectionId:38:114
-      figma_variable_count: 15
-      tracked_override_count: 6
 artifacts:
   color:
     intake_artifact: figma/brands/breckenridge/color/intake.yml

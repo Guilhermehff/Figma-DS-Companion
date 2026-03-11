@@ -359,6 +359,5 @@ def write_registry(root: Path = ROOT) -> Path:
 def validate_repo(root: Path = ROOT) -> list[str]:
     errors: list[str] = []
     errors.extend(validate_brand_registry(root))
-    errors.extend(validate_variable_index(root))
     errors.extend(validate_active_docs(root))
     return errors

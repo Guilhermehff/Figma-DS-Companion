@@ -30,15 +30,11 @@ figma:
       collection_id: VariableCollectionId:46:393
       parent_collection: "Semantic: Color"
       parent_collection_id: VariableCollectionId:41:135
-      figma_variable_count: 77
-      tracked_override_count: 44
     typography:
       collection_name: Crested Butte
       collection_id: VariableCollectionId:46:394
       parent_collection: "Semantic: Typography"
       parent_collection_id: VariableCollectionId:38:114
-      figma_variable_count: 15
-      tracked_override_count: 6
 artifacts:
   color:
     intake_artifact: figma/brands/crested_butte/color/intake.yml

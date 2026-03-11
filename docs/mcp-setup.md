@@ -25,11 +25,11 @@ After setup, the minimum governance validation loop is:
 1. `mcp__figma_console__figma_get_status`
 2. `mcp__figma_console__figma_list_open_files`
 3. `mcp__figma_console__figma_get_variables`
-4. Refresh the relevant brand manifest or split inventory in this repo
+4. Refresh the relevant brand manifest only if live file IDs or source links changed
 5. Run `python -m scripts.figma_governance validate`
 
 ## Repository Outputs
 
 - Update `figma/brands/<brand>/brand.yml` when live brand context changes.
-- Update `figma/variables/collections/` or `figma/variables/extensions/` after governed reads or writes.
-- Regenerate `figma/variables/registry.yml` after inventory changes.
+- Update `figma/variables/collections/` or `figma/variables/extensions/` only when a local audit or export is explicitly requested.
+- Regenerate `figma/variables/registry.yml` only when a local compatibility export is explicitly requested.

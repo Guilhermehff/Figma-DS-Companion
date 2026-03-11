@@ -38,8 +38,8 @@ During the staged migration phase, existing approved typography artifacts may re
 
 - Raw family, weight, and size primitives belong in `_Global: Typography`.
 - Shared semantic ladders belong in `Semantic: Typography`.
-- Brand semantic overrides belong in `figma/variables/extensions/` and should track only material overrides.
-- `figma/variables/registry.yml` is generated from split inventories and should not be hand-edited.
+- Brand semantic overrides live in Figma. Create `figma/variables/extensions/` exports only when an audit or compatibility export is explicitly requested.
+- `figma/variables/registry.yml`, when present, is an on-demand compatibility export and should not be hand-edited.
 
 ## Templates
 

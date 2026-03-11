@@ -27,15 +27,11 @@ figma:
       collection_id: semantic-color-multi-family
       parent_collection: "Semantic: Color"
       parent_collection_id: semantic-color
-      figma_variable_count: 33
-      tracked_override_count: 33
     typography:
       collection_name: Multi Family
       collection_id: semantic-typography-multi-family
       parent_collection: "Semantic: Typography"
       parent_collection_id: semantic-typography
-      figma_variable_count: 0
-      tracked_override_count: 0
 artifacts:
   color:
     intake_artifact: brands/multi-family/color-intake.yml

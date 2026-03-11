@@ -7,7 +7,6 @@ import yaml
 from scripts.figma_governance.core import (
     DOC_RULES,
     ROOT,
-    build_registry,
     validate_brand_manifest,
     validate_extension_snapshot,
     validate_repo,
@@ -99,13 +98,6 @@ def test_extension_override_only_rule_rejects_redundant_override(tmp_path: Path)
         tmp_path,
     )
     assert any("repeats the base target" in error for error in errors)
-
-
-def test_build_registry_matches_repo_registry() -> None:
-    expected = yaml.safe_load((ROOT / "figma/variables/registry.yml").read_text(encoding="utf-8"))
-    generated = build_registry(ROOT)
-    assert generated == expected
-
 
 def test_check_docs_rejects_legacy_guidance(tmp_path: Path) -> None:
     doc = tmp_path / "legacy.md"

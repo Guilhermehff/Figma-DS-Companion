@@ -28,36 +28,7 @@ collections:
     collection: "Semantic: Color"
     category: color
     level: semantic
-extensions:
-  - key: vail-semantic-typography
-    path: figma/variables/extensions/vail-semantic-typography.yml
-    brand_id: vail
-    category: typography
-    parent_collection: "Semantic: Typography"
-  - key: vail-semantic-color
-    path: figma/variables/extensions/vail-semantic-color.yml
-    brand_id: vail
-    category: color
-    parent_collection: "Semantic: Color"
-  - key: breckenridge-semantic-typography
-    path: figma/variables/extensions/breckenridge-semantic-typography.yml
-    brand_id: breckenridge
-    category: typography
-    parent_collection: "Semantic: Typography"
-  - key: breckenridge-semantic-color
-    path: figma/variables/extensions/breckenridge-semantic-color.yml
-    brand_id: breckenridge
-    category: color
-    parent_collection: "Semantic: Color"
-  - key: crested-butte-semantic-typography
-    path: figma/variables/extensions/crested-butte-semantic-typography.yml
-    brand_id: crested_butte
-    category: typography
-    parent_collection: "Semantic: Typography"
-  - key: crested-butte-semantic-color
-    path: figma/variables/extensions/crested-butte-semantic-color.yml
-    brand_id: crested_butte
-    category: color
-    parent_collection: "Semantic: Color"
+extensions: []
 notes:
-  - figma/variables/registry.yml is a generated compatibility export composed from the collection and extension snapshots listed here.
+  - figma/variables/collections/ entries support optional local collection exports from Figma.
+  - Create figma/variables/extensions/ and figma/variables/registry.yml only when a local audit or compatibility export is explicitly requested.

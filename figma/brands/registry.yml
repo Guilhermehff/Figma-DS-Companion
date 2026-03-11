@@ -43,3 +43,17 @@ brands:
       color: approved
       typography: approved
     design_system_file_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+  - brand_id: northstar
+    display_name: Northstar
+    status: active
+    manifest_path: figma/brands/northstar/brand.yml
+    owners:
+      - design_system_governance
+    supported_channels:
+      - web
+      - email
+      - ads
+    foundation_status:
+      color: approved
+      typography: approved
+    design_system_file_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
