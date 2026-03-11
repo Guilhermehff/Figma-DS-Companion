@@ -1,0 +1,53 @@
+version: 4
+updated: 2026-03-11
+brand_manifest_source: figma/brands/registry.yml
+generated_registry_path: figma/variables/registry.yml
+collections:
+  - key: global-color
+    path: figma/variables/collections/global-color.yml
+    collection: "_Global: Color"
+    category: color
+    level: global
+  - key: global-typography
+    path: figma/variables/collections/global-typography.yml
+    collection: "_Global: Typography"
+    category: typography
+    level: global
+  - key: global-dimensions
+    path: figma/variables/collections/global-dimensions.yml
+    collection: "_Global: Dimensions"
+    category: dimensions
+    level: global
+  - key: semantic-typography-base
+    path: figma/variables/collections/semantic-typography-base.yml
+    collection: "Semantic: Typography"
+    category: typography
+    level: semantic
+  - key: semantic-color-base
+    path: figma/variables/collections/semantic-color-base.yml
+    collection: "Semantic: Color"
+    category: color
+    level: semantic
+extensions:
+  - key: vail-semantic-typography
+    path: figma/variables/extensions/vail-semantic-typography.yml
+    brand_id: vail
+    category: typography
+    parent_collection: "Semantic: Typography"
+  - key: vail-semantic-color
+    path: figma/variables/extensions/vail-semantic-color.yml
+    brand_id: vail
+    category: color
+    parent_collection: "Semantic: Color"
+  - key: breckenridge-semantic-typography
+    path: figma/variables/extensions/breckenridge-semantic-typography.yml
+    brand_id: breckenridge
+    category: typography
+    parent_collection: "Semantic: Typography"
+  - key: breckenridge-semantic-color
+    path: figma/variables/extensions/breckenridge-semantic-color.yml
+    brand_id: breckenridge
+    category: color
+    parent_collection: "Semantic: Color"
+notes:
+  - figma/variables/registry.yml is a generated compatibility export composed from the collection and extension snapshots listed here.

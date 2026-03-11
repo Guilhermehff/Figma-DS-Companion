@@ -1,0 +1,84 @@
+version: 1
+updated: 2026-03-11
+figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+collection:
+  name: '_Global: Typography'
+  id: VariableCollectionId:23:3
+  level: global
+  category: typography
+  mode: values
+  status: active
+  figma_variable_count: 18
+tokens:
+- name: universal/family/primary
+  type: string
+  value: Inter
+  status: active
+- name: universal/family/web_safe
+  type: string
+  value: Arial
+  status: active
+- name: breckenridge/family/primary
+  type: string
+  value: Poppins
+  status: active
+- name: breckenridge/family/secondary
+  type: string
+  value: Avenir Next
+  status: active
+- name: vail/family/display
+  type: string
+  value: Termina
+  status: active
+- name: vail/family/primary
+  type: string
+  value: Avenir
+  status: active
+- name: universal/weight/normal
+  type: float
+  value: 400
+  status: active
+- name: universal/weight/medium
+  type: float
+  value: 500
+  status: active
+- name: universal/weight/bold
+  type: float
+  value: 700
+  status: active
+- name: universal/weight/black
+  type: float
+  value: 900
+  status: active
+- name: universal/size/100
+  type: float
+  value: 12
+  status: active
+- name: universal/size/200
+  type: float
+  value: 14
+  status: active
+- name: universal/size/300
+  type: float
+  value: 16
+  status: active
+- name: universal/size/400
+  type: float
+  value: 18
+  status: active
+- name: universal/size/500
+  type: float
+  value: 20
+  status: active
+- name: universal/size/600
+  type: float
+  value: 24
+  status: active
+- name: universal/size/700
+  type: float
+  value: 30
+  status: active
+- name: universal/size/800
+  type: float
+  value: 36
+  status: active

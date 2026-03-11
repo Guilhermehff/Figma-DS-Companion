@@ -1,5 +1,7 @@
 # Variable Audit
 
+Status: historical reference
+
 - Date: 2026-03-11
 - Figma URL: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
 - Scope: semantic_typography completeness for typography weight and size aliases
@@ -8,7 +10,7 @@
 
 ## Summary
 
-`_global_typography` contains the approved universal raw weight primitives and the full universal size ladder, and `semantic_typography` now includes the approved role-scoped baseline additions for weight and size. The base semantic typography collection is aligned with the current shared baseline, while `vail` remains a family-only extension.
+`_global_typography` contains the approved universal raw weight primitives and the full universal size ladder, and `semantic_typography` now includes the approved role-scoped baseline additions for weight and size. The base semantic typography collection is aligned with the shared baseline captured at the time of this audit, while `vail` remains a family-only extension.
 
 ## Findings
 

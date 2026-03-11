@@ -1,45 +1,50 @@
 # Workspace Guide
 
-This repository is organized so Codex can turn MCP output into durable design-system artifacts.
+This repository is organized to keep design-system governance durable as more brands are added.
 
 ## Recommended Workflow
 
-1. Start from a specific Figma link or node.
-2. Check the standing repository references before making assumptions:
-   - `figma/config/variable-taxonomy.yml` for token structure and naming rules
-   - `figma/variables/registry.yml` for the current normalized token inventory
-   - `figma/components/index.yml` for the current component inventory
-3. Pull context with the MCP tool that matches the task.
-4. Normalize the result into Markdown or YAML in this repo.
-5. Update existing artifacts instead of creating parallel versions.
-6. Record decisions when taxonomy or naming changes affect multiple files.
+1. Start from the active governance references before making assumptions:
+   - `figma/config/variable-taxonomy.yml` for naming, ladder, and review rules
+   - `figma/brands/registry.yml` for governed brand membership
+   - `figma/brands/<brand>/brand.yml` for the canonical brand record
+   - `figma/variables/index.yml` for split inventory sources
+   - `figma/variables/registry.yml` for the generated compatibility export
+2. Pull Figma context with Figma Console MCP when the task depends on live file state.
+3. Normalize findings into the brand manifest, brand artifacts, or split variable inventories instead of creating parallel notes.
+4. Record cross-cutting governance changes in `figma/decisions/`.
+5. Regenerate `figma/variables/registry.yml` after inventory changes.
+6. Run the governance validator before treating the repo snapshot as current.
+7. For Semantic extension writes, use the native extension workflow in `figma/docs/semantic-extension-write-workflow.md`.
 
 ## Tool Selection
 
-- Token and variable work: `mcp__figma_console__figma_get_variables` first, then `mcp__figma_console__figma_get_token_values` for focused lookups.
-- Component documentation: `mcp__figma_console__figma_get_component` first, plus `mcp__figma_console__figma_get_component_image` or `mcp__figma_console__figma_capture_screenshot` for visual evidence.
-- Broad file discovery: `mcp__figma_console__figma_get_design_system_summary` first.
-- Current selection workflows: `mcp__figma_console__figma_get_selection`.
-- Only use `mcp__figma_console__figma_get_component_for_development` when the task is explicitly implementation-oriented.
+- Live variable and collection work: `mcp__figma_console__figma_get_status`, `mcp__figma_console__figma_list_open_files`, then `mcp__figma_console__figma_get_variables`
+- Semantic extension writes: `mcp__figma_console__figma_execute` using the native Variables API route documented in `figma/docs/semantic-extension-write-workflow.md`
+- Focused token checks: `mcp__figma_console__figma_get_token_values`
+- Component documentation: `mcp__figma_console__figma_get_component`
+- Selection-based workflows: `mcp__figma_console__figma_get_selection`
 
 ## Directory Use
 
-- `figma/variables/`: token registries, naming proposals, mode maps, alias cleanup
-- `figma/components/`: component specs, inventories, usage notes
-- `figma/docs/`: stable reference docs for the system
-- `figma/audits/`: dated audits and cleanup reports
-- `figma/decisions/`: design-system governance decisions
+- `figma/brands/`: brand registry, per-brand manifests, and staged brand artifacts
+- `figma/variables/collections/`: base collection snapshots
+- `figma/variables/extensions/`: tracked semantic overrides only
+- `figma/variables/index.yml`: source manifest for generated inventories
+- `figma/variables/registry.yml`: generated compatibility export
+- `figma/history/variables/`: migrated dated variable artifacts that are kept for reference only
+- `figma/decisions/`: accepted governance decisions
+- `figma/docs/`: stable process guidance
+
+## Governance Commands
+
+- `python -m scripts.figma_governance validate`
+- `python -m scripts.figma_governance build-registry`
+- `python -m scripts.figma_governance check-docs`
 
 ## Good Task Examples
 
-- Audit all color variables used in a frame and write the findings to `figma/audits/`
-- Convert the variables in a library section into `figma/variables/registry.yml`
-- Document a component family and its variants in `figma/components/`
-- Propose a cleaner naming taxonomy and capture the decision in `figma/decisions/`
-
-## Default Output Style
-
-- concise
-- explicit about unknowns
-- grounded in the exact Figma scope provided
-- easy to diff in Git
+- Add a new brand by creating `figma/brands/<brand>/brand.yml` plus its reviewed color and typography artifacts
+- Refresh a semantic extension snapshot in `figma/variables/extensions/` and regenerate the compatibility registry
+- Audit active docs for legacy collection naming or stale MCP guidance
+- Document a new governance decision that changes slot admission or deprecation behavior

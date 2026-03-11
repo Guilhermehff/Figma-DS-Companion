@@ -1,0 +1,214 @@
+version: 1
+updated: 2026-03-11
+figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+extension:
+  brand_id: vail
+  brand_display_name: Vail
+  category: color
+  collection_name: Vail
+  collection_id: VariableCollectionId:41:180
+  parent_collection: 'Semantic: Color'
+  parent_collection_id: VariableCollectionId:41:135
+  mode: values
+  status: active
+  figma_variable_count: 77
+  tracked_override_count: 33
+overrides:
+- name: brand/50
+  type: color
+  value: '#f7faff'
+  status: active
+  alias_of: vail/digital_blue/50
+  notes: Brand override in the Vail semantic extension.
+- name: brand/100
+  type: color
+  value: '#e7f1ff'
+  status: active
+  alias_of: vail/digital_blue/100
+  notes: Brand override in the Vail semantic extension.
+- name: brand/200
+  type: color
+  value: '#cee3ff'
+  status: active
+  alias_of: vail/digital_blue/200
+  notes: Brand override in the Vail semantic extension.
+- name: brand/300
+  type: color
+  value: '#aacfff'
+  status: active
+  alias_of: vail/digital_blue/300
+  notes: Brand override in the Vail semantic extension.
+- name: brand/400
+  type: color
+  value: '#7cb4fc'
+  status: active
+  alias_of: vail/digital_blue/400
+  notes: Brand override in the Vail semantic extension.
+- name: brand/500
+  type: color
+  value: '#4592ef'
+  status: active
+  alias_of: vail/digital_blue/500
+  notes: Brand override in the Vail semantic extension.
+- name: brand/600
+  type: color
+  value: '#006cd1'
+  status: active
+  alias_of: vail/digital_blue/600
+  notes: Brand override in the Vail semantic extension.
+- name: brand/700
+  type: color
+  value: '#0056a9'
+  status: active
+  alias_of: vail/digital_blue/700
+  notes: Brand override in the Vail semantic extension.
+- name: brand/800
+  type: color
+  value: '#003e7d'
+  status: active
+  alias_of: vail/digital_blue/800
+  notes: Brand override in the Vail semantic extension.
+- name: brand/900
+  type: color
+  value: '#0f2949'
+  status: active
+  alias_of: vail/digital_blue/900
+  notes: Brand override in the Vail semantic extension.
+- name: brand/950
+  type: color
+  value: '#091627'
+  status: active
+  alias_of: vail/digital_blue/950
+  notes: Brand override in the Vail semantic extension.
+- name: brand_secondary/50
+  type: color
+  value: '#f8fafd'
+  status: active
+  alias_of: vail/navy/50
+  notes: Brand override in the Vail semantic extension.
+- name: brand_secondary/100
+  type: color
+  value: '#edf0f4'
+  status: active
+  alias_of: vail/navy/100
+  notes: Brand override in the Vail semantic extension.
+- name: brand_secondary/200
+  type: color
+  value: '#dde2e8'
+  status: active
+  alias_of: vail/navy/200
+  notes: Brand override in the Vail semantic extension.
+- name: brand_secondary/300
+  type: color
+  value: '#c4cdd8'
+  status: active
+  alias_of: vail/navy/300
+  notes: Brand override in the Vail semantic extension.
+- name: brand_secondary/400
+  type: color
+  value: '#a4b3c5'
+  status: active
+  alias_of: vail/navy/400
+  notes: Brand override in the Vail semantic extension.
+- name: brand_secondary/500
+  type: color
+  value: '#7a93b2'
+  status: active
+  alias_of: vail/navy/500
+  notes: Brand override in the Vail semantic extension.
+- name: brand_secondary/600
+  type: color
+  value: '#5275a1'
+  status: active
+  alias_of: vail/navy/600
+  notes: Brand override in the Vail semantic extension.
+- name: brand_secondary/700
+  type: color
+  value: '#2f598c'
+  status: active
+  alias_of: vail/navy/700
+  notes: Brand override in the Vail semantic extension.
+- name: brand_secondary/800
+  type: color
+  value: '#144276'
+  status: active
+  alias_of: vail/navy/800
+  notes: Brand override in the Vail semantic extension.
+- name: brand_secondary/900
+  type: color
+  value: '#08294d'
+  status: active
+  alias_of: vail/navy/900
+  notes: Brand override in the Vail semantic extension.
+- name: brand_secondary/950
+  type: color
+  value: '#021630'
+  status: active
+  alias_of: vail/navy/950
+  notes: Brand override in the Vail semantic extension.
+- name: brand_tertiary/50
+  type: color
+  value: '#fff9f1'
+  status: active
+  alias_of: vail/yellow/50
+  notes: Brand override in the Vail semantic extension.
+- name: brand_tertiary/100
+  type: color
+  value: '#ffedd6'
+  status: active
+  alias_of: vail/yellow/100
+  notes: Brand override in the Vail semantic extension.
+- name: brand_tertiary/200
+  type: color
+  value: '#ffdbaa'
+  status: active
+  alias_of: vail/yellow/200
+  notes: Brand override in the Vail semantic extension.
+- name: brand_tertiary/300
+  type: color
+  value: '#ffaf18'
+  status: active
+  alias_of: vail/yellow/300
+  notes: Brand override in the Vail semantic extension.
+- name: brand_tertiary/400
+  type: color
+  value: '#eba000'
+  status: active
+  alias_of: vail/yellow/400
+  notes: Brand override in the Vail semantic extension.
+- name: brand_tertiary/500
+  type: color
+  value: '#bd8427'
+  status: active
+  alias_of: vail/yellow/500
+  notes: Brand override in the Vail semantic extension.
+- name: brand_tertiary/600
+  type: color
+  value: '#8d6c3e'
+  status: active
+  alias_of: vail/yellow/600
+  notes: Brand override in the Vail semantic extension.
+- name: brand_tertiary/700
+  type: color
+  value: '#655540'
+  status: active
+  alias_of: vail/yellow/700
+  notes: Brand override in the Vail semantic extension.
+- name: brand_tertiary/800
+  type: color
+  value: '#453f36'
+  status: active
+  alias_of: vail/yellow/800
+  notes: Brand override in the Vail semantic extension.
+- name: brand_tertiary/900
+  type: color
+  value: '#2a2926'
+  status: active
+  alias_of: vail/yellow/900
+  notes: Brand override in the Vail semantic extension.
+- name: brand_tertiary/950
+  type: color
+  value: '#161615'
+  status: active
+  alias_of: vail/yellow/950
+  notes: Brand override in the Vail semantic extension.

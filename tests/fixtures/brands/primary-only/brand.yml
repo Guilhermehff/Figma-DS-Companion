@@ -1,0 +1,66 @@
+version: 1
+updated: 2026-03-11
+brand_id: primary_only
+display_name: Primary Only
+status: active
+owners:
+  - governance
+supported_channels:
+  - web
+design_system_file_url: https://example.com/figma/primary-only
+staged_paths:
+  color_dir: brands/primary-only/color
+  typography_dir: brands/primary-only/typography
+source_references:
+  - brands/primary-only/color-intake.yml
+  - brands/primary-only/typography-intake.yml
+figma:
+  design_system_file_url: https://example.com/figma/primary-only
+  global_collections:
+    color_id: global-color
+    typography_id: global-typography
+    dimensions_id: global-dimensions
+  semantic_extensions:
+    color:
+      collection_name: Primary Only
+      collection_id: semantic-color-primary-only
+      parent_collection: "Semantic: Color"
+      parent_collection_id: semantic-color
+      figma_variable_count: 11
+      tracked_override_count: 11
+    typography:
+      collection_name: Primary Only
+      collection_id: semantic-typography-primary-only
+      parent_collection: "Semantic: Typography"
+      parent_collection_id: semantic-typography
+      figma_variable_count: 0
+      tracked_override_count: 0
+artifacts:
+  color:
+    intake_artifact: brands/primary-only/color-intake.yml
+    preview_artifact: brands/primary-only/color-preview.md
+    decision_artifacts: []
+  typography:
+    intake_artifact: brands/primary-only/typography-intake.yml
+    preview_artifact: brands/primary-only/typography-preview.md
+    decision_artifacts: []
+semantic_overrides:
+  color:
+    status: active
+    override_scopes:
+      - semantic_slot: brand
+        raw_family: primary_only/blue
+    inherited_from_base:
+      - neutral/*
+      - brand_secondary/*
+      - brand_tertiary/*
+    notes: []
+  typography:
+    status: inherited
+    override_scopes: []
+    inherited_from_base:
+      - family/*
+      - weight/*
+      - size/*
+    notes: []
+notes: []

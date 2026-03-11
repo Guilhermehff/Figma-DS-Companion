@@ -3,8 +3,8 @@
 - Date: 2026-03-10
 - Brand: vail
 - Source reference: User-provided image in chat showing Vail logo or typography colors and CTA or website or online use only colors
-- Intake artifact: [2026-03-10-vail-brand-color-intake.yml](/Users/guilhermefidelio/Documents/GitHub/Vail Resorts DS/figma/variables/2026-03-10-vail-brand-color-intake.yml)
-- Write status: approved and written to `_global_color` in `Design System` on 2026-03-10
+- Intake artifact: [intake.yml](/Users/guilhermefidelio/Documents/GitHub/Vail Resorts DS/figma/brands/vail/color/intake.yml)
+- Write status: approved and written to `_Global: Color` in `Design System` on 2026-03-10
 
 ## Original Source Swatches
 

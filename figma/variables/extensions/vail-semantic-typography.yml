@@ -1,0 +1,34 @@
+version: 1
+updated: 2026-03-11
+figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+extension:
+  brand_id: vail
+  brand_display_name: Vail
+  category: typography
+  collection_name: Vail
+  collection_id: VariableCollectionId:38:121
+  parent_collection: 'Semantic: Typography'
+  parent_collection_id: VariableCollectionId:38:114
+  mode: values
+  status: active
+  figma_variable_count: 15
+  tracked_override_count: 3
+overrides:
+- name: family/heading
+  type: string
+  value: Termina
+  status: active
+  alias_of: vail/family/display
+  notes: Brand override in the Vail semantic extension.
+- name: family/body
+  type: string
+  value: Avenir
+  status: active
+  alias_of: vail/family/primary
+  notes: Brand override in the Vail semantic extension.
+- name: family/action
+  type: string
+  value: Avenir
+  status: active
+  alias_of: vail/family/primary
+  notes: Brand override in the Vail semantic extension.

@@ -1,0 +1,58 @@
+version: 1
+updated: YYYY-MM-DD
+brand_id: ""
+display_name: ""
+status: planned
+owners:
+  - ""
+supported_channels:
+  - web
+design_system_file_url: ""
+staged_paths:
+  color_dir: ""
+  typography_dir: ""
+source_references:
+  - ""
+figma:
+  design_system_file_url: ""
+  global_collections:
+    color_id: ""
+    typography_id: ""
+    dimensions_id: ""
+  semantic_extensions:
+    color:
+      collection_name: ""
+      collection_id: ""
+      parent_collection: "Semantic: Color"
+      parent_collection_id: ""
+      figma_variable_count: 0
+      tracked_override_count: 0
+    typography:
+      collection_name: ""
+      collection_id: ""
+      parent_collection: "Semantic: Typography"
+      parent_collection_id: ""
+      figma_variable_count: 0
+      tracked_override_count: 0
+artifacts:
+  color:
+    intake_artifact: ""
+    preview_artifact: ""
+    decision_artifacts: []
+  typography:
+    intake_artifact: ""
+    preview_artifact: ""
+    decision_artifacts: []
+semantic_overrides:
+  color:
+    status: pending
+    override_scopes: []
+    inherited_from_base: []
+    notes: []
+  typography:
+    status: pending
+    override_scopes: []
+    inherited_from_base: []
+    notes: []
+notes:
+  - ""

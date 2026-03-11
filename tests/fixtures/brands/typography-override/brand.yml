@@ -1,0 +1,72 @@
+version: 1
+updated: 2026-03-11
+brand_id: typography_override
+display_name: Typography Override
+status: active
+owners:
+  - governance
+supported_channels:
+  - web
+  - ads
+design_system_file_url: https://example.com/figma/typography-override
+staged_paths:
+  color_dir: brands/typography-override/color
+  typography_dir: brands/typography-override/typography
+source_references:
+  - brands/typography-override/color-intake.yml
+  - brands/typography-override/typography-intake.yml
+figma:
+  design_system_file_url: https://example.com/figma/typography-override
+  global_collections:
+    color_id: global-color
+    typography_id: global-typography
+    dimensions_id: global-dimensions
+  semantic_extensions:
+    color:
+      collection_name: Typography Override
+      collection_id: semantic-color-typography-override
+      parent_collection: "Semantic: Color"
+      parent_collection_id: semantic-color
+      figma_variable_count: 0
+      tracked_override_count: 0
+    typography:
+      collection_name: Typography Override
+      collection_id: semantic-typography-override
+      parent_collection: "Semantic: Typography"
+      parent_collection_id: semantic-typography
+      figma_variable_count: 3
+      tracked_override_count: 3
+artifacts:
+  color:
+    intake_artifact: brands/typography-override/color-intake.yml
+    preview_artifact: brands/typography-override/color-preview.md
+    decision_artifacts: []
+  typography:
+    intake_artifact: brands/typography-override/typography-intake.yml
+    preview_artifact: brands/typography-override/typography-preview.md
+    decision_artifacts: []
+semantic_overrides:
+  color:
+    status: inherited
+    override_scopes: []
+    inherited_from_base:
+      - neutral/*
+      - brand/*
+      - brand_secondary/*
+      - brand_tertiary/*
+    notes: []
+  typography:
+    status: active
+    override_scopes:
+      - semantic_token: family/heading
+        alias_of: typography_override/family/display
+      - semantic_token: family/body
+        alias_of: typography_override/family/primary
+      - semantic_token: family/action
+        alias_of: typography_override/family/primary
+    inherited_from_base:
+      - family/*_safe
+      - weight/*
+      - size/*
+    notes: []
+notes: []

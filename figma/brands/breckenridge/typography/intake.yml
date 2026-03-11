@@ -1,0 +1,296 @@
+date: 2026-03-11
+brand: breckenridge
+source_reference: User-provided image in chat showing the Breckenridge type hierarchy
+source_type: image
+figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+status: active
+preview:
+  required_before_write: true
+  artifact: figma/brands/breckenridge/typography/preview.md
+  status: written_in_figma
+
+source_roles:
+  - source_role: headline
+    source_family_name: Poppins
+    source_style_name: Poppins Bold
+    source_weight_label: Bold
+    source_usage_scope: primary_display_headline
+    text_case: all_caps
+    tracking: 0px
+    leading: not specified
+    size_rule: h1 headline size not numerically specified
+    punctuation_rule: not specified
+    sample_copy: LOREM IPSUM DOLOR SIT.
+    notes: Source labels this as H1 Headline.
+  - source_role: subhead
+    source_family_name: Poppins
+    source_style_name: Poppins Bold
+    source_weight_label: Bold
+    source_usage_scope: supporting_headline_copy
+    text_case: sentence_case
+    tracking: -15px
+    leading: not specified
+    size_rule: h1 subhead size not numerically specified
+    punctuation_rule: not specified
+    sample_copy: Lorem ipsum dolor sit sed elit dolore magna aliqua.
+    notes: Source labels this as H1 Subhead.
+  - source_role: body
+    source_family_name: Avenir Next
+    source_style_name: Avenir Next
+    source_weight_label: not specified
+    source_usage_scope: reading_copy
+    text_case: sentence_case
+    tracking: 0px
+    leading: not specified
+    size_rule: body copy size not numerically specified
+    punctuation_rule: sentence punctuation allowed
+    sample_copy: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+    notes: Source labels this as Body Copy.
+  - source_role: cta
+    source_family_name: Poppins
+    source_style_name: Poppins Bold
+    source_weight_label: Bold
+    source_usage_scope: action_or_button_copy
+    text_case: sentence_case
+    tracking: -15px
+    leading: not specified
+    size_rule: cta size not numerically specified
+    punctuation_rule: not specified
+    sample_copy: Learn more
+    notes: Source labels this as CTA.
+
+primitive_recommendations:
+  reuse_existing:
+    families: []
+    weights:
+      - source_weight_label: body copy default assumption
+        existing_token: universal/weight/normal
+        reason: The source does not specify a numeric body weight, so the initial review keeps body copy on the existing universal normal weight until a stricter raw mapping is approved.
+    sizes:
+      - source_size_reference: headline default
+        existing_token: universal/size/800
+        assumption_status: assumed
+        assumption_note: Source provides no numeric headline size, so the initial review uses the current extra-large heading step.
+        reason: Keeps the role on the governed size ladder without inventing a new raw size.
+      - source_size_reference: subhead default
+        existing_token: universal/size/600
+        assumption_status: assumed
+        assumption_note: The image shows a strong but clearly smaller supporting heading, so the first review uses a mid-large heading step.
+        reason: Preserves the hierarchy visually while staying inside the shared size ladder.
+      - source_size_reference: body copy default
+        existing_token: universal/size/300
+        assumption_status: assumed
+        assumption_note: Source provides no numeric body size, so body defaults to the universal base reading size.
+        reason: Keeps body on the shared raw ladder until channel testing suggests a change.
+      - source_size_reference: cta default
+        existing_token: universal/size/300
+        assumption_status: assumed
+        assumption_note: Source provides no numeric CTA size, so the review uses the base action size for the initial pass.
+        reason: Preserves the brand relationship without inventing a new raw size.
+  proposed_primitives:
+    families:
+      - token_name: breckenridge/family/primary
+        source_family_name: Poppins
+        source_style_reference: Poppins Bold across headline, subhead, and cta
+        rationale: Shared Breckenridge brand family across the display and action roles.
+        fallback_token: universal/family/web_safe
+        fallback_note: Source artifact does not specify a fallback stack, so the review defaults to the global web-safe family.
+      - token_name: breckenridge/family/secondary
+        source_family_name: Avenir Next
+        source_style_reference: Avenir Next body copy
+        rationale: Secondary reading family used for body copy.
+        fallback_token: universal/family/web_safe
+        fallback_note: Source artifact does not specify a fallback stack, so the review defaults to the global web-safe family.
+    weights:
+      - token_name: universal/weight/bold
+        source_weight_label: Bold
+        proposed_value: "700"
+        rationale: Breckenridge introduces a recurring Bold label, and the shared raw typography ladder should expose it as a universal weight instead of a brand-specific token.
+  hold_for_review: []
+
+semantic_recommendations:
+  family_aliases:
+    - semantic_token: family/heading
+      global_token: breckenridge/family/primary
+      safe_semantic_token: family/heading_safe
+      safe_global_token: universal/family/web_safe
+      intended_channels:
+        - web
+        - email
+        - ads
+      notes: Breckenridge headings should use Poppins where the brand family can be delivered and the safe alias where it cannot.
+    - semantic_token: family/body
+      global_token: breckenridge/family/secondary
+      safe_semantic_token: family/body_safe
+      safe_global_token: universal/family/web_safe
+      intended_channels:
+        - web
+        - email
+        - ads
+      notes: Body copy should stay on Avenir Next in brand-capable channels and move to the safe alias in constrained channels.
+    - semantic_token: family/action
+      global_token: breckenridge/family/primary
+      safe_semantic_token: family/action_safe
+      safe_global_token: universal/family/web_safe
+      intended_channels:
+        - web
+        - email
+        - ads
+      notes: CTA copy should stay on Poppins in brand-capable channels and use the safe action alias when necessary.
+  weight_aliases:
+    - semantic_token: weight/heading/base
+      global_token: universal/weight/bold
+      intended_channels:
+        - web
+        - email
+        - ads
+      notes: Uses the shared raw bold weight now approved for the global typography ladder.
+    - semantic_token: weight/body/base
+      global_token: universal/weight/normal
+      intended_channels:
+        - web
+        - email
+        - ads
+      notes: Assumed baseline body weight because the source does not list a numeric or named body weight beyond the family.
+    - semantic_token: weight/action/base
+      global_token: universal/weight/bold
+      intended_channels:
+        - web
+        - email
+        - ads
+      notes: Uses the shared raw bold weight now approved for the global typography ladder.
+  size_aliases:
+    - semantic_token: size/heading/base
+      global_token: universal/size/600
+      intended_channels:
+        - web
+        - email
+        - ads
+      notes: Assumed supporting heading size for the H1 subhead treatment.
+    - semantic_token: size/heading/xl
+      global_token: universal/size/800
+      intended_channels:
+        - web
+        - email
+        - ads
+      notes: Assumed display heading size for the H1 headline treatment.
+    - semantic_token: size/body/base
+      global_token: universal/size/300
+      intended_channels:
+        - web
+        - email
+        - ads
+      notes: Assumed base body size pending any numeric source guidance.
+    - semantic_token: size/action/base
+      global_token: universal/size/300
+      intended_channels:
+        - web
+        - email
+        - ads
+      notes: Assumed base CTA size pending any numeric source guidance.
+
+role_recipes:
+  - role_name: headline
+    source_role: H1 Headline | Poppins Bold
+    proposed_family_token: breckenridge/family/primary
+    fallback_token: universal/family/web_safe
+    proposed_weight_token: universal/weight/bold
+    proposed_size_token: universal/size/800
+    size_assumption_status: assumed
+    text_case: all_caps
+    tracking: 0px
+    leading_rule: not specified in source
+    size_rule: h1 headline size not numerically specified
+    punctuation_rule: not specified in source
+    sample_copy: LOREM IPSUM DOLOR SIT.
+    notes: Proposed family mapping is ready for review and uses the shared raw bold weight in the global typography ladder.
+  - role_name: subhead
+    source_role: H1 Subhead | Poppins Bold
+    proposed_family_token: breckenridge/family/primary
+    fallback_token: universal/family/web_safe
+    proposed_weight_token: universal/weight/bold
+    proposed_size_token: universal/size/600
+    size_assumption_status: assumed
+    text_case: sentence_case
+    tracking: -15px
+    leading_rule: not specified in source
+    size_rule: h1 subhead size not numerically specified
+    punctuation_rule: not specified in source
+    sample_copy: Lorem ipsum dolor sit sed elit dolore magna aliqua.
+    notes: Uses the same family as the headline with a smaller assumed size and negative tracking.
+  - role_name: body
+    source_role: Body Copy | Avenir Next
+    proposed_family_token: breckenridge/family/secondary
+    fallback_token: universal/family/web_safe
+    proposed_weight_token: universal/weight/normal
+    proposed_size_token: universal/size/300
+    size_assumption_status: assumed
+    text_case: sentence_case
+    tracking: 0px
+    leading_rule: not specified in source
+    size_rule: body copy size not numerically specified
+    punctuation_rule: sentence punctuation allowed
+    sample_copy: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+    notes: Body weight remains a provisional normal-weight assumption until the source provides a stricter raw mapping.
+  - role_name: cta
+    source_role: CTA | Poppins Bold
+    proposed_family_token: breckenridge/family/primary
+    fallback_token: universal/family/web_safe
+    proposed_weight_token: universal/weight/bold
+    proposed_size_token: universal/size/300
+    size_assumption_status: assumed
+    text_case: sentence_case
+    tracking: -15px
+    leading_rule: not specified in source
+    size_rule: cta size not numerically specified
+    punctuation_rule: not specified in source
+    sample_copy: Learn more
+    notes: CTA shares the brand family and tracking direction of the headline system.
+
+validation:
+  extraction_notes:
+    - The source clearly defines family, case, and tracking behavior but does not provide numeric sizes or numeric font-weight values.
+    - Poppins is the repeated brand family across heading and CTA roles, while Avenir Next is reserved for body copy.
+  governance_notes:
+    - The shared raw bold token can be written into the global typography collection without creating a Breckenridge-specific weight token.
+    - The body weight mapping remains a provisional normal-weight assumption because the source names only the family, not a specific weight.
+
+review_readiness:
+  intended_review_channels:
+    - web
+    - email
+    - ads
+  review_rules:
+    - subject: family/heading_safe
+      channels:
+        - email
+      rule: Use the safe semantic alias when Poppins cannot be relied on in the delivery channel.
+      source_basis: Safe-family governance for constrained channels.
+    - subject: family/body_safe
+      channels:
+        - email
+      rule: Use the safe semantic alias when Avenir Next cannot be relied on in the delivery channel.
+      source_basis: Safe-family governance for constrained channels.
+    - subject: headline
+      channels:
+        - web
+        - email
+        - ads
+      rule: Keep the headline in all caps with 0px tracking.
+      source_basis: Breckenridge type hierarchy image.
+    - subject: subhead
+      channels:
+        - web
+        - email
+        - ads
+      rule: Keep the subhead in sentence case with -15px tracking.
+      source_basis: Breckenridge type hierarchy image.
+    - subject: cta
+      channels:
+        - web
+        - email
+        - ads
+      rule: Keep CTA text in sentence case with -15px tracking.
+      source_basis: Breckenridge type hierarchy image.
+
+open_questions: []

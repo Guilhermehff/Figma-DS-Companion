@@ -57,12 +57,12 @@ Global tokens are raw values.
 Rules:
 
 - Each global token category lives in its **own dedicated collection**.
-- Global collection names must always start with `_` so they are not published.
-- Every `_global_*` collection uses an initial mode named `values`.
+- Global collection names must use the `_Global: *` pattern so they are not published.
+- Every `_Global: *` collection uses an initial mode named `values`.
 - Variable names inside a collection must not repeat the collection category.
 - Brand separation at the Global level is achieved through **groups** inside that shared collection.
 - The first group is **universal**.
-- Additional groups are **brand specific** (e.g., vail, beaver_creek, breckenridge, park_city).
+- Additional groups are **brand specific** and come from `figma/brands/registry.yml`.
 - Global tokens do not carry UI meaning.
 
 ### Level 2: Semantic
@@ -86,7 +86,7 @@ Rules:
 Naming note:
 
 - Figma variable names use slash-delimited paths, not dot-delimited names.
-- In `_global_color`, `_global_typography`, and `_global_dimensions`, the collection already defines the category, so variable names start at the child path (for example `universal/slate/50`, `universal/size/100`, `space/4`).
+- In `_Global: Color`, `_Global: Typography`, and `_Global: Dimensions`, the collection already defines the category, so variable names start at the child path (for example `universal/slate/50`, `universal/size/100`, `space/4`).
 
 ### Level 3: Channel
 
@@ -129,6 +129,43 @@ When MCP is available and the task references a Figma file, selection, or node:
    - Use native figma-console write tools when available.
    - Do not switch to capture based generation paths unless explicitly requested.
 
+## Confirmed Semantic Extension Write Route
+
+When creating or updating a Semantic extension collection in the Design System file, use this exact route first.
+
+1. Confirm context
+   - Use `mcp__figma_console__figma_get_status` and `mcp__figma_console__figma_list_open_files`.
+   - Only proceed when the intended DS file is the sole confirmed write target.
+
+2. Read the parent collection and source variables
+   - Use `mcp__figma_console__figma_execute` with the native Variables API.
+   - Resolve the parent collection with `await figma.variables.getVariableCollectionByIdAsync(...)`.
+   - Resolve reusable source variables from the Global collection before writing aliases.
+
+3. Create the extension natively
+   - Do not create a parallel semantic collection by hand.
+   - Call `parentCollection.extend("Brand Name")`.
+   - Important: `extend()` requires the extension name string. Calling `extend()` without a name fails validation.
+
+4. Write overrides on the base semantic variables
+   - Use the extension mode ID from `extensionCollection.modes[0].modeId`.
+   - Set overrides on the base semantic variables with:
+     `baseVariable.setValueForMode(extensionModeId, figma.variables.createVariableAlias(sourceVariable))`
+   - The override key is the base semantic variable ID, not a duplicate variable name inside a new collection.
+
+5. Verify through the extension collection object
+   - Inspect `extensionCollection.variableOverrides` to confirm which base variables are overridden.
+   - Use `await baseVariable.valuesByModeForCollectionAsync(extensionCollection)` to verify the extension-specific alias target.
+   - Important: `valuesByModeForCollectionAsync()` expects the collection object, not the collection ID string.
+
+6. Sync repo state immediately
+   - Persist the extension collection ID, override count, and approved override inventory back into `figma/brands/<brand>/brand.yml` and `figma/variables/extensions/*.yml`.
+   - Rebuild `figma/variables/registry.yml` after the write.
+
+7. Treat cached inventory reads carefully
+   - `figma_get_variables` may lag after a write.
+   - If results look stale, verify with `figma_execute` against the plugin runtime before changing repo artifacts again.
+
 If the user wants Figma analysis or writes but does not provide a selection, URL, or node, ask for the exact Figma link.
 
 ## Naming dispute protocol (mandatory when ambiguous)
@@ -145,13 +182,19 @@ Do not invent new conventions silently.
 ## Persistent workspace references
 
 - figma/config/variable-taxonomy.yml is the governing taxonomy and must match this AGENTS.md.
+- figma/brands/registry.yml is the governed source of truth for which brands currently exist in repo governance.
+- figma/brands/<brand>/brand.yml is the canonical per-brand metadata record.
+- figma/variables/index.yml is the source manifest for split collection and extension inventories.
+- figma/variables/registry.yml is a generated compatibility export and must not be hand-edited.
 - figma/templates/variable-audit.md, figma/templates/component-spec.md, figma/templates/decision-log.md must be used for repeatable output.
 - Preserve decision history. Record governance changes in figma/decisions rather than overwriting prior decisions silently.
 
 ## Repository map
 
 - figma/config: taxonomies and governance rules
+- figma/brands: brand registry, per-brand manifests, and staged brand artifacts
 - figma/variables: structured inventories, registries, and naming proposals
+- figma/history: migrated dated artifacts that are no longer current source files
 - figma/components: inventories and component level specs
 - figma/templates: reusable output templates
 - docs: setup and onboarding guidance

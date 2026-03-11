@@ -1,136 +1,48 @@
 # Brand Color Foundations
 
-This document defines how to intake brand-provided colors and turn them into governable global primitives for the Vail Resorts Design System.
-
-It applies before any Figma write. The output of this workflow is a reviewed brand-color intake artifact, not immediate variable creation.
+This workflow governs how brand-provided colors become durable design-system artifacts before any Figma write.
 
 ## Core Rules
 
-1. Start with the source artifact.
-   Use the official brand guide, asset sheet, or user-provided image. Prefer explicit RGB or HEX values over visually sampled approximations.
+1. Start from the official source artifact and prefer provided RGB or HEX values over sampling.
+2. Preserve all source swatches, labels, usage scopes, and channel restrictions in the intake and preview artifacts.
+3. Reuse existing universal tokens first, especially `universal/white` and `universal/black`.
+4. Add brand families only for materially distinct brand hues or contractually important neutrals.
+5. Keep raw brand families in `_Global: Color` and keep them on the shared `50-950` scale.
+6. Generate ramps in `OKLCH` and validate contrast before proposing a write.
+7. Produce a preview artifact before any write is proposed or executed.
+8. Register the approved artifact paths in `figma/brands/<brand>/brand.yml`.
 
-2. Preserve the original source colors in the artifacts.
-   Copy every source swatch name and provided value into the intake artifact and the preview artifact so future reviews do not depend on reopening the original image.
+## Brand-Centered Output
 
-3. Preserve source usage scopes and channel restrictions.
-   If the source distinguishes logo colors, typography colors, online-only colors, or other usage scopes, record that structure in the artifacts so later page, email, and ad reviews can validate usage.
+Every reviewed brand should have:
 
-4. Reuse universal tokens first.
-   If a source color is an exact match to `universal/white` or `universal/black`, reuse the universal token and do not create a brand duplicate.
+- a canonical brand record in `figma/brands/registry.yml`
+- a per-brand manifest at `figma/brands/<brand>/brand.yml`
+- color staging space at `figma/brands/<brand>/color/`
+- approved intake and preview artifacts referenced from the brand manifest
 
-5. Only add brand families for distinct brand hues.
-   Signature accents and materially distinct neutrals become new families under the brand group. Commodity neutrals can stay universal.
-
-6. Keep brand groups inside `_Global: Color`.
-   New raw color families live under the brand name, for example `vail/digital_blue/500`.
-
-7. Build every new family on the shared 50 to 950 ladder.
-   The required steps are `50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 950`.
-
-8. Use perceptual lightness, not a fixed HSL recipe.
-   Generate ramps in `OKLCH` so a `950` yellow and a `950` navy land in a comparable darkness band.
-
-9. Document the source-matched swatch explicitly.
-   Use the documentation suffix `<step>_source` in the intake artifact, such as `500_source`, to show which scale step matches the original brand swatch.
-
-10. Keep Figma primitive names clean.
-   The global variable in Figma remains the numeric step, for example `vail/navy/500`. The `_source` suffix is documentation metadata, not a duplicate primitive.
-
-11. Generate a preview before write.
-   Every proposal that would add or change brand colors must produce a preview artifact for review before any Figma write is proposed or executed.
-
-12. Keep the artifacts review-ready.
-   Brand color instructions must preserve the usage rules needed for later review of pages, emails, and ads, including whether a color is logo-only, typography-only, or digital-only.
+During the staged migration phase, existing approved color artifacts may remain in `figma/variables/` if the brand manifest points to them explicitly.
 
 ## Intake Workflow
 
-1. Record the brand and the source reference.
-2. List every source swatch with its provided name and digital value in the intake artifact.
-3. Mirror the same original source swatches in the preview artifact.
-4. Mark each source swatch as one of:
-   - `reuse_universal`
-   - `new_brand_family`
-   - `hold_for_review`
-5. For each new family, choose a hue-based family name that is stable across channels.
-6. Set the source anchor step.
-   Match the official source swatch to the scale step whose lightness band fits best. `500` is only the default starting assumption, not a requirement.
-7. Expand the family to the full 50 to 950 scale.
-8. Validate contrast and perceptual consistency.
-9. Record downstream review guidance so later channel audits can test whether a color is being used within its approved scope.
-10. Generate a preview artifact that shows the original source swatches, universal reuse, every proposed family scale, and the downstream review guidance.
-11. Store the result in the intake artifact before any Figma write is proposed.
+1. Confirm the brand record or create it if it does not exist.
+2. Record the source reference and source swatches in the intake artifact.
+3. Mark each source swatch as `reuse_universal`, `new_brand_family`, or `hold_for_review`.
+4. Choose stable hue-based family names.
+5. Assign the source anchor step and expand the family to the full scale.
+6. Document semantic slot recommendations for `brand`, `brand_secondary`, and `brand_tertiary`.
+7. Capture downstream review guidance for web, email, and ads.
+8. Generate the preview artifact and link both artifacts from the brand manifest.
 
-## Naming Rules
+## Inventory Impact
 
-- Use slash-delimited paths.
-- Use the brand as the first path segment.
-- Use hue-based family names, not usage names.
-- Use lowercase names.
-- Use underscores only inside a term when the source name has multiple words.
+- Global color writes belong in `_Global: Color`.
+- Shared semantic color ladders belong in `Semantic: Color`.
+- Brand semantic overrides belong in `figma/variables/extensions/` and should track only material overrides.
+- `figma/variables/registry.yml` is generated from split inventories and should not be hand-edited.
 
-Examples:
+## Templates
 
-- `vail/digital_blue/500`
-- `vail/navy/600`
-- `beaver_creek/gold/500`
-
-## Semantic Slot Preparation
-
-- Every approved brand-color review should also recommend mappings for the semantic slots `brand`, `brand_secondary`, and `brand_tertiary`.
-- Each semantic slot uses the full `50` to `950` ladder.
-- If a brand does not have a distinct secondary or tertiary color family, map that semantic slot to the same raw family used for `brand`.
-- Raw brand families that do not yet fit a stable cross-brand semantic slot should remain in `_Global: Color` only until a new semantic slot is approved.
-
-## Scale Rules
-
-- Working color space: `OKLCH`
-- Default source anchor step: `500` when the source swatch sits near the center of the ladder
-- Common source anchor range: `300` through `800`
-- Dark steps may reduce chroma to preserve contrast and family coherence.
-- Do not force the same saturation behavior across all hues.
-
-Target lightness bands:
-
-- `50`: `0.98-0.99`
-- `100`: `0.95-0.96`
-- `200`: `0.90-0.92`
-- `300`: `0.83-0.86`
-- `400`: `0.74-0.78`
-- `500`: `0.63-0.68`
-- `600`: `0.53-0.58`
-- `700`: `0.44-0.48`
-- `800`: `0.35-0.39`
-- `900`: `0.26-0.30`
-- `950`: `0.18-0.22`
-
-Contrast gates:
-
-- `50` and `100` must support black at `7:1` or better.
-- `200` must support black at `4.5:1` or better.
-- `800` should support white at `4.5:1` or better.
-- `900` and `950` must support white at `7:1` or better.
-
-## Output Per Brand
-
-Each new brand-color intake should produce:
-
-- the original source swatches preserved in intake and preview
-- the source usage scopes preserved in intake and preview
-- a universal reuse recommendation
-- a list of new brand families
-- a recommended semantic mapping for `brand`, `brand_secondary`, and `brand_tertiary`
-- a documented source anchor step for each family
-- a full 50 to 950 scale proposal for each family
-- contrast validation notes
-- downstream review guidance for pages, emails, and ads
-- a preview artifact generated before write
-- any open naming or taxonomy questions
-
-## Artifact Separation
-
-When a brand submission includes both color and typography, keep the color artifacts separate from the typography artifacts.
-
-Do not merge color and typography into a single intake or preview file.
-
-Use [brand-color-intake.yml](/Users/guilhermefidelio/Documents/GitHub/Vail Resorts DS/figma/templates/brand-color-intake.yml) for the repeatable artifact.
+Use [brand-color-intake.yml](/Users/guilhermefidelio/Documents/GitHub/Vail Resorts DS/figma/templates/brand-color-intake.yml) for intake work.
 Use [brand-color-preview.md](/Users/guilhermefidelio/Documents/GitHub/Vail Resorts DS/figma/templates/brand-color-preview.md) for the required pre-write preview.

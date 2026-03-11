@@ -1,65 +1,35 @@
-# Figma MCP Setup For Codex
+# Figma Console MCP Setup
 
-This workspace is ready for Figma MCP-driven work, but the MCP connection itself must be enabled in Codex.
+This workspace uses **Figma Console MCP** for governance reads and writes.
 
-## Recommended Setup
+Do not use the remote Figma MCP server as the primary governance path for this repository.
 
-Use the Figma remote MCP server unless you specifically need desktop-only selection workflows inside the Figma desktop app.
+## Required Setup
 
-- Remote server endpoint: `https://mcp.figma.com/mcp`
-- Desktop server endpoint: `http://127.0.0.1:3845/mcp`
+1. Start the local Figma Console MCP server in your Codex environment.
+2. Open the Figma Desktop app.
+3. Open the **Figma Desktop Bridge** plugin inside the target file.
+4. In Codex, confirm connectivity with `mcp__figma_console__figma_get_status`.
+5. If multiple files are connected, use `mcp__figma_console__figma_list_open_files` before any write.
 
-## Codex App Setup
+## Recovery Steps
 
-Based on Figma's official documentation current on March 10, 2026:
+- If `figma_get_status` reports that the Desktop Bridge plugin is not connected, reopen the plugin in Figma Desktop.
+- If the server reports a fallback port or stale plugin connection, re-import the Desktop Bridge plugin from the local Figma Console MCP install and reopen it in the target file.
+- If the active file is unclear, stop and confirm the target before any write.
 
-1. Open the Codex app.
-2. Open `Skills` and install the Figma skill.
-3. Open `Settings` -> `MCP servers`.
-4. In recommended servers, install and authenticate the Figma server.
-5. After authentication, start a new session in this workspace.
+## Validation Tasks
 
-## When To Use Remote Vs Desktop
+After setup, the minimum governance validation loop is:
 
-Use the remote server when:
+1. `mcp__figma_console__figma_get_status`
+2. `mcp__figma_console__figma_list_open_files`
+3. `mcp__figma_console__figma_get_variables`
+4. Refresh the relevant brand manifest or split inventory in this repo
+5. Run `python -m scripts.figma_governance validate`
 
-- you want the simplest setup
-- you are working from shared Figma links
-- you want Codex to access Figma without the desktop app
+## Repository Outputs
 
-Use the desktop server when:
-
-- you want selection-based prompting from the Figma desktop app
-- you want to inspect the currently selected layer directly in Dev Mode
-- you have a paid Figma plan with a Dev or Full seat
-
-## Figma Access Notes
-
-- The remote MCP server is available on all Figma seats and plans.
-- The desktop MCP server requires a Dev or Full seat on a paid Figma plan.
-- Figma documents daily and per-minute rate limits; if MCP calls start failing unexpectedly, check seat type and rate limits first.
-
-## How To Confirm It Worked
-
-After setup, a Codex session should expose Figma MCP tools such as:
-
-- `mcp__figma_console__figma_get_variables`
-- `mcp__figma_console__figma_get_component`
-- `mcp__figma_console__figma_get_component_image`
-- `mcp__figma_console__figma_get_selection`
-- `mcp__figma_console__figma_get_design_system_summary`
-
-In this workspace, the fastest validation task is:
-
-`Use mcp__figma_console__figma_get_variables for this Figma scope and normalize the result into figma/variables/registry.yml.`
-
-## Current Workspace State
-
-Connection state is session-specific. Confirm the active session with `mcp__figma_console__figma_get_status` or `mcp__figma_console__figma_get_selection` before assuming Figma context is available.
-
-## Sources
-
-- [Figma MCP guide](https://help.figma.com/hc/en-us/articles/32132100833559-Guide-to-the-Figma-MCP-server)
-- [Figma remote MCP installation](https://developers.figma.com/docs/figma-mcp-server/remote-server-installation/)
-- [Figma MCP tools and prompts](https://developers.figma.com/docs/figma-mcp-server/tools-and-prompts/)
-- [Figma plans, access, and permissions](https://developers.figma.com/docs/figma-mcp-server/plans-access-and-permissions/)
+- Update `figma/brands/<brand>/brand.yml` when live brand context changes.
+- Update `figma/variables/collections/` or `figma/variables/extensions/` after governed reads or writes.
+- Regenerate `figma/variables/registry.yml` after inventory changes.

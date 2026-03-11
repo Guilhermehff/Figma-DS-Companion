@@ -1,5 +1,6 @@
 date: 2026-03-11
 status: written
+archive_status: historical_reference
 figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
 figma_file: Design System
 target_collection:
@@ -14,8 +15,8 @@ source_basis:
     - collection: semantic_typography
       id: VariableCollectionId:38:114
   reviewed_artifacts:
-    - figma/variables/2026-03-10-vail-brand-typography-intake.yml
-    - figma/variables/2026-03-10-vail-brand-typography-preview.md
+    - figma/brands/vail/typography/intake.yml
+    - figma/brands/vail/typography/preview.md
   derivation_rule: Create only the role-scoped semantic aliases justified by the approved shared baseline and the currently reviewed brand typography recipes. Heading may start with a broader size ladder than body or action so the baseline has enough reusable display options without over-expanding the other roles.
 
 role_mapping:

@@ -1,5 +1,6 @@
 date: 2026-03-11
 status: written
+archive_status: historical_reference
 figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
 figma_file: Design System
 target_collection:
@@ -19,12 +20,12 @@ source_basis:
   local_registry_snapshot:
     - figma/variables/registry.yml
   reviewed_artifacts:
-    - figma/variables/2026-03-10-vail-brand-color-intake.yml
-    - figma/variables/2026-03-10-vail-brand-color-preview.md
+    - figma/brands/vail/color/intake.yml
+    - figma/brands/vail/color/preview.md
     - figma/decisions/2026-03-11-shared-semantic-collections-with-brand-extensions.md
     - figma/decisions/2026-03-11-initial-semantic-color-family-model.md
     - figma/decisions/2026-03-11-semantic-feedback-color-family-naming.md
-    - figma/variables/2026-03-11-universal-global-feedback-color-proposal.yml
+    - figma/history/variables/2026-03-11-universal-global-feedback-color-proposal.yml
   derivation_rule: Create only the semantic color ladders justified by the approved shared baseline, the governed shared feedback family naming, and the reviewed brand color foundations. Keep the semantic layer palette-scoped and meaning-light. Reserve stable primary, secondary, and tertiary brand slots now. Add shared feedback ladders only when approved universal raw families exist.
 
 recommended_family_strategy:

@@ -6,7 +6,7 @@ figma_url: ""
 status: active
 preview:
   required_before_write: true
-  artifact: figma/variables/2026-03-10-vail-brand-color-preview.md
+  artifact: figma/brands/vail/color/preview.md
   status: approved
 
 source_swatches:

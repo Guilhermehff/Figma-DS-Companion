@@ -1,0 +1,280 @@
+version: 1
+updated: 2026-03-11
+figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+extension:
+  brand_id: breckenridge
+  brand_display_name: Breckenridge
+  category: color
+  collection_name: Breckenridge
+  collection_id: VariableCollectionId:45:317
+  parent_collection: 'Semantic: Color'
+  parent_collection_id: VariableCollectionId:41:135
+  mode: values
+  status: active
+  figma_variable_count: 77
+  tracked_override_count: 44
+overrides:
+- name: brand/50
+  type: color
+  value: '#f0fcff'
+  status: active
+  alias_of: breckenridge/navy/50
+  notes: Brand override in the Breckenridge semantic extension.
+- name: brand/100
+  type: color
+  value: '#e2f2ff'
+  status: active
+  alias_of: breckenridge/navy/100
+  notes: Brand override in the Breckenridge semantic extension.
+- name: brand/200
+  type: color
+  value: '#cee4fa'
+  status: active
+  alias_of: breckenridge/navy/200
+  notes: Brand override in the Breckenridge semantic extension.
+- name: brand/300
+  type: color
+  value: '#b1d0ee'
+  status: active
+  alias_of: breckenridge/navy/300
+  notes: Brand override in the Breckenridge semantic extension.
+- name: brand/400
+  type: color
+  value: '#8cb6de'
+  status: active
+  alias_of: breckenridge/navy/400
+  notes: Brand override in the Breckenridge semantic extension.
+- name: brand/500
+  type: color
+  value: '#6396c4'
+  status: active
+  alias_of: breckenridge/navy/500
+  notes: Brand override in the Breckenridge semantic extension.
+- name: brand/600
+  type: color
+  value: '#3c77ac'
+  status: active
+  alias_of: breckenridge/navy/600
+  notes: Brand override in the Breckenridge semantic extension.
+- name: brand/700
+  type: color
+  value: '#195b91'
+  status: active
+  alias_of: breckenridge/navy/700
+  notes: Brand override in the Breckenridge semantic extension.
+- name: brand/800
+  type: color
+  value: '#004c80'
+  status: active
+  alias_of: breckenridge/navy/800
+  notes: Brand override in the Breckenridge semantic extension.
+- name: brand/900
+  type: color
+  value: '#002a50'
+  status: active
+  alias_of: breckenridge/navy/900
+  notes: Brand override in the Breckenridge semantic extension.
+- name: brand/950
+  type: color
+  value: '#001730'
+  status: active
+  alias_of: breckenridge/navy/950
+  notes: Brand override in the Breckenridge semantic extension.
+- name: brand_secondary/50
+  type: color
+  value: '#fff1ec'
+  status: active
+  alias_of: breckenridge/red/50
+  notes: Brand override in the Breckenridge semantic extension.
+- name: brand_secondary/100
+  type: color
+  value: '#ffe1da'
+  status: active
+  alias_of: breckenridge/red/100
+  notes: Brand override in the Breckenridge semantic extension.
+- name: brand_secondary/200
+  type: color
+  value: '#ffcac1'
+  status: active
+  alias_of: breckenridge/red/200
+  notes: Brand override in the Breckenridge semantic extension.
+- name: brand_secondary/300
+  type: color
+  value: '#ffa699'
+  status: active
+  alias_of: breckenridge/red/300
+  notes: Brand override in the Breckenridge semantic extension.
+- name: brand_secondary/400
+  type: color
+  value: '#ff786c'
+  status: active
+  alias_of: breckenridge/red/400
+  notes: Brand override in the Breckenridge semantic extension.
+- name: brand_secondary/500
+  type: color
+  value: '#fa453f'
+  status: active
+  alias_of: breckenridge/red/500
+  notes: Brand override in the Breckenridge semantic extension.
+- name: brand_secondary/600
+  type: color
+  value: '#d71920'
+  status: active
+  alias_of: breckenridge/red/600
+  notes: Brand override in the Breckenridge semantic extension.
+- name: brand_secondary/700
+  type: color
+  value: '#ac0003'
+  status: active
+  alias_of: breckenridge/red/700
+  notes: Brand override in the Breckenridge semantic extension.
+- name: brand_secondary/800
+  type: color
+  value: '#830000'
+  status: active
+  alias_of: breckenridge/red/800
+  notes: Brand override in the Breckenridge semantic extension.
+- name: brand_secondary/900
+  type: color
+  value: '#590000'
+  status: active
+  alias_of: breckenridge/red/900
+  notes: Brand override in the Breckenridge semantic extension.
+- name: brand_secondary/950
+  type: color
+  value: '#350000'
+  status: active
+  alias_of: breckenridge/red/950
+  notes: Brand override in the Breckenridge semantic extension.
+- name: neutral/50
+  type: color
+  value: '#fafaf7'
+  status: active
+  alias_of: breckenridge/dark_gray/50
+  notes: Brand override in the Breckenridge semantic extension.
+- name: neutral/100
+  type: color
+  value: '#f1f0ec'
+  status: active
+  alias_of: breckenridge/dark_gray/100
+  notes: Brand override in the Breckenridge semantic extension.
+- name: neutral/200
+  type: color
+  value: '#e2e2db'
+  status: active
+  alias_of: breckenridge/dark_gray/200
+  notes: Brand override in the Breckenridge semantic extension.
+- name: neutral/300
+  type: color
+  value: '#cdcdc4'
+  status: active
+  alias_of: breckenridge/dark_gray/300
+  notes: Brand override in the Breckenridge semantic extension.
+- name: neutral/400
+  type: color
+  value: '#b2b2a8'
+  status: active
+  alias_of: breckenridge/dark_gray/400
+  notes: Brand override in the Breckenridge semantic extension.
+- name: neutral/500
+  type: color
+  value: '#929186'
+  status: active
+  alias_of: breckenridge/dark_gray/500
+  notes: Brand override in the Breckenridge semantic extension.
+- name: neutral/600
+  type: color
+  value: '#757469'
+  status: active
+  alias_of: breckenridge/dark_gray/600
+  notes: Brand override in the Breckenridge semantic extension.
+- name: neutral/700
+  type: color
+  value: '#59594f'
+  status: active
+  alias_of: breckenridge/dark_gray/700
+  notes: Brand override in the Breckenridge semantic extension.
+- name: neutral/800
+  type: color
+  value: '#444339'
+  status: active
+  alias_of: breckenridge/dark_gray/800
+  notes: Brand override in the Breckenridge semantic extension.
+- name: neutral/900
+  type: color
+  value: '#2a2921'
+  status: active
+  alias_of: breckenridge/dark_gray/900
+  notes: Brand override in the Breckenridge semantic extension.
+- name: neutral/950
+  type: color
+  value: '#171611'
+  status: active
+  alias_of: breckenridge/dark_gray/950
+  notes: Brand override in the Breckenridge semantic extension.
+- name: brand_tertiary/50
+  type: color
+  value: '#f0fcff'
+  status: active
+  alias_of: breckenridge/navy/50
+  notes: Brand override in the Breckenridge semantic extension.
+- name: brand_tertiary/100
+  type: color
+  value: '#e2f2ff'
+  status: active
+  alias_of: breckenridge/navy/100
+  notes: Brand override in the Breckenridge semantic extension.
+- name: brand_tertiary/200
+  type: color
+  value: '#cee4fa'
+  status: active
+  alias_of: breckenridge/navy/200
+  notes: Brand override in the Breckenridge semantic extension.
+- name: brand_tertiary/300
+  type: color
+  value: '#b1d0ee'
+  status: active
+  alias_of: breckenridge/navy/300
+  notes: Brand override in the Breckenridge semantic extension.
+- name: brand_tertiary/400
+  type: color
+  value: '#8cb6de'
+  status: active
+  alias_of: breckenridge/navy/400
+  notes: Brand override in the Breckenridge semantic extension.
+- name: brand_tertiary/500
+  type: color
+  value: '#6396c4'
+  status: active
+  alias_of: breckenridge/navy/500
+  notes: Brand override in the Breckenridge semantic extension.
+- name: brand_tertiary/600
+  type: color
+  value: '#3c77ac'
+  status: active
+  alias_of: breckenridge/navy/600
+  notes: Brand override in the Breckenridge semantic extension.
+- name: brand_tertiary/700
+  type: color
+  value: '#195b91'
+  status: active
+  alias_of: breckenridge/navy/700
+  notes: Brand override in the Breckenridge semantic extension.
+- name: brand_tertiary/800
+  type: color
+  value: '#004c80'
+  status: active
+  alias_of: breckenridge/navy/800
+  notes: Brand override in the Breckenridge semantic extension.
+- name: brand_tertiary/900
+  type: color
+  value: '#002a50'
+  status: active
+  alias_of: breckenridge/navy/900
+  notes: Brand override in the Breckenridge semantic extension.
+- name: brand_tertiary/950
+  type: color
+  value: '#001730'
+  status: active
+  alias_of: breckenridge/navy/950
+  notes: Brand override in the Breckenridge semantic extension.

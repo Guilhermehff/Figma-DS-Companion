@@ -1,4 +1,4 @@
-version: 3
+version: 4
 updated: 2026-03-11
 owner: vail_resorts
 scope:
@@ -24,12 +24,15 @@ principles:
   - Brand color ramps must reuse universal neutrals where appropriate and keep a consistent lightness ladder across hues.
   - When a brand review includes multiple foundation types, keep separate intake and preview artifacts per foundation.
 
-brands:
-  - universal
-  - vail
-  - beaver_creek
-  - breckenridge
-  - park_city
+governance_sources:
+  reserved_groups:
+    - universal
+  brand_manifest_source: figma/brands/registry.yml
+  variable_index_source: figma/variables/index.yml
+  generated_registry_path: figma/variables/registry.yml
+  notes:
+    - Governed brand ids come from the brand manifest registry instead of a hardcoded taxonomy list.
+    - figma/variables/registry.yml is a generated compatibility export and must not be hand-edited.
 
 token_levels:
   global:
@@ -45,7 +48,7 @@ token_levels:
     naming:
       format: "<group>/<token>"
       notes:
-        - group is one of: universal, vail, beaver_creek, breckenridge, park_city
+        - group is universal or a brand_id defined in figma/brands/registry.yml
         - token is a scale key or a descriptive primitive key
         - use underscore for decimal scale keys in Figma (for example 0_5, 1_5)
       examples:
@@ -145,6 +148,37 @@ collections:
     extension_naming:
       base_collection: "Semantic: Typography"
       brand_extension_format: "<Brand>"
+
+slot_admission:
+  semantic_color:
+    rules:
+      - New semantic color slots require an accepted decision artifact before they are added to the taxonomy or written into Figma.
+      - A new semantic color slot must support a shared cross-brand or cross-channel need, not a one-off brand hue.
+      - Raw brand families that do not yet justify a shared semantic slot remain in `_Global: Color` only.
+  semantic_typography:
+    rules:
+      - New semantic typography roles require an accepted decision artifact and a reusable downstream need that cannot be covered by heading, body, or action.
+      - New semantic weight or size steps must be justified by approved role recipes or a shared baseline need.
+      - Channel-specific naming should not be introduced at the semantic layer unless another accepted decision explicitly allows it.
+
+deprecation_lifecycle:
+  statuses:
+    - proposed
+    - active
+    - deprecated
+    - removed
+  rules:
+    - Deprecations must be recorded in figma/decisions before status changes are applied to governed artifacts.
+    - Deprecated tokens or manifests must retain a replacement or migration note until they are removed.
+    - Removed items should disappear from active inventories but remain discoverable through historical decisions or archived artifacts.
+
+registry_generation:
+  source_index: figma/variables/index.yml
+  generated_export: figma/variables/registry.yml
+  rules:
+    - Update split collection and extension manifests first, then regenerate figma/variables/registry.yml.
+    - Treat figma/variables/registry.yml as a generated compatibility export for broad reads and diffs.
+    - Brand extension manifests track only material overrides and should not restate inherited base aliases.
 
 brand_color_foundations:
   description: "Rules for evaluating and expanding brand-specific color families inside `_Global: Color`"
@@ -480,10 +514,12 @@ recommended_statuses:
   - proposed
 
 review_checks:
+  - Flag brand ids that are not present in figma/brands/registry.yml.
   - Flag names that use numeric suffixes without scale meaning.
   - Flag names that encode temporary migration context.
   - Flag duplicated values with inconsistent semantic names.
   - Flag semantic tokens that resolve to different primitives without using semantic extended collections.
+  - Flag extension manifests that restate inherited base aliases without changing the target primitive.
   - Flag channel tokens created in the DS file instead of the channel file.
   - "Flag global collections that do not use the `_Global: *` pattern."
   - "Flag `_Global: *` collections whose default mode is not named values."
@@ -502,3 +538,4 @@ review_checks:
   - Flag typography artifacts that omit semantic safe aliases or downstream review guidance for email and other constrained channels.
   - "Flag `Semantic: Typography` inventories that use flat raw-like weight or size aliases such as weight/medium or size/300 instead of approved role-scoped semantic ladders."
   - Flag typography proposals that do not include a preview artifact before write.
+  - Flag direct manual edits to figma/variables/registry.yml instead of regenerating it from figma/variables/index.yml.
