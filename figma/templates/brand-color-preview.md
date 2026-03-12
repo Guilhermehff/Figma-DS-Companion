@@ -21,6 +21,8 @@ Review state: pending preview review. Verify live write state in `figma/brands/<
 
 Source anchor: 
 
+Repeat this family block for each approved or held family.
+
 Swatch strip:
 
 <div>
@@ -37,23 +39,22 @@ Swatch strip:
   <span title="950 #000000" style="display:inline-block;width:32px;height:32px;background:#000000;border:1px solid #d1d5db;"></span>
 </div>
 
-Hex values:
+## Hold For Review
 
-- `50`:
-- `100`:
-- `200`:
-- `300`:
-- `400`:
-- `500`:
-- `600`:
-- `700`:
-- `800`:
-- `900`:
-- `950`:
+- Item:
+  Reason:
 
 ## Review Notes
 
 - 
+
+## Proposed Semantic Mapping
+
+- `brand/*` ->
+- `brand_secondary/*` ->
+- `neutral/*` ->
+- `brand_tertiary/*` ->
+- Inherited or deferred notes:
 
 ## Review Readiness
 

@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from datetime import date
 from pathlib import Path
 import signal
 import subprocess
@@ -79,7 +80,7 @@ def _make_export_repo(
         },
     )
     _write_yaml(
-        root / "figma/variables/collections/semantic-color-base.yml",
+        root / "figma/exports/2026-03-11-semantic-color-base.yml",
         {
             "version": 1,
             "updated": "2026-03-11",
@@ -108,11 +109,15 @@ def _make_export_repo(
     index = {
         "version": 1,
         "updated": "2026-03-11",
-        "generated_registry_path": "figma/variables/registry.yml",
+        "purpose": "optional_local_exports",
+        "freshness_warning": (
+            "Exports are dated snapshots and may be out of date relative to live Figma."
+        ),
+        "generated_registry_path": "figma/exports/YYYY-MM-DD-registry.yml",
         "collections": [
             {
                 "key": "semantic-color-base",
-                "path": "figma/variables/collections/semantic-color-base.yml",
+                "path": "figma/exports/2026-03-11-semantic-color-base.yml",
                 "collection": "Semantic: Color",
                 "category": "color",
                 "level": "semantic",
@@ -124,17 +129,17 @@ def _make_export_repo(
         index["extensions"].append(
             {
                 "key": "demo-semantic-color",
-                "path": "figma/variables/extensions/demo-semantic-color.yml",
+                "path": "figma/exports/2026-03-11-demo-semantic-color-extension.yml",
                 "brand_id": "demo",
                 "category": "color",
                 "parent_collection": "Semantic: Color",
             }
         )
-    _write_yaml(root / "figma/variables/index.yml", index)
+    _write_yaml(root / "figma/exports/index.yml", index)
 
     if include_extension_snapshot:
         _write_yaml(
-            root / "figma/variables/extensions/demo-semantic-color.yml",
+            root / "figma/exports/2026-03-11-demo-semantic-color-extension.yml",
             {
                 "version": 1,
                 "updated": "2026-03-11",
@@ -335,7 +340,7 @@ def test_build_registry_base_only_uses_whatever_base_collections_are_indexed(tmp
     root = _make_export_repo(tmp_path)
 
     registry = build_registry(root, base_only=True)
-    index = yaml.safe_load((root / "figma/variables/index.yml").read_text(encoding="utf-8"))
+    index = yaml.safe_load((root / "figma/exports/index.yml").read_text(encoding="utf-8"))
 
     assert registry["scope"] == "base_only"
     assert len(registry["collections"]) == len(index["collections"])
@@ -348,7 +353,7 @@ def test_write_registry_base_only_uses_a_distinct_output_path(tmp_path: Path) ->
     output_path = write_registry(root, base_only=True)
     registry = yaml.safe_load(output_path.read_text(encoding="utf-8"))
 
-    assert output_path.name == "registry.base-only.yml"
+    assert output_path.name == f"{date.today().isoformat()}-registry.base-only.yml"
     assert registry["scope"] == "base_only"
 
 
@@ -392,7 +397,7 @@ def test_validate_export_inputs_rejects_extension_snapshot_identity_mismatch(
         include_extension_entry=True,
         include_extension_snapshot=True,
     )
-    snapshot_path = root / "figma/variables/extensions/demo-semantic-color.yml"
+    snapshot_path = root / "figma/exports/2026-03-11-demo-semantic-color-extension.yml"
     snapshot = yaml.safe_load(snapshot_path.read_text(encoding="utf-8"))
     snapshot["extension"][field] = bad_value
     _write_yaml(snapshot_path, snapshot)
@@ -400,6 +405,18 @@ def test_validate_export_inputs_rejects_extension_snapshot_identity_mismatch(
     errors = validate_export_inputs(root)
 
     assert any(f"extension `{field}`" in error for error in errors)
+
+
+def test_validate_export_inputs_rejects_undated_export_paths(tmp_path: Path) -> None:
+    root = _make_export_repo(tmp_path)
+    index_path = root / "figma/exports/index.yml"
+    index = yaml.safe_load(index_path.read_text(encoding="utf-8"))
+    index["collections"][0]["path"] = "figma/exports/semantic-color-base.yml"
+    _write_yaml(index_path, index)
+
+    errors = validate_export_inputs(root, base_only=True)
+
+    assert any("must use a filename starting with `YYYY-MM-DD-`" in error for error in errors)
 
 
 def test_check_docs_rejects_legacy_guidance(tmp_path: Path) -> None:

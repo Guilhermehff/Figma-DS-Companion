@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
+from datetime import date
 from pathlib import Path
 import os
 import re
@@ -14,6 +15,10 @@ ROOT = Path(__file__).resolve().parents[2]
 MCP_PORT_START = 9223
 MCP_PORT_END = 9227
 MCP_MANAGED_COMMANDS = frozenset({"node", "bun"})
+EXPORT_INDEX_PATH = Path("figma/exports/index.yml")
+EXPORT_ROOT_PREFIX = "figma/exports/"
+EXPORT_DATE_PREFIX_PATTERN = re.compile(r"^\d{4}-\d{2}-\d{2}-")
+EXPORT_DATE_TEMPLATE = "YYYY-MM-DD"
 ACTIVE_DOCS = [
     ROOT / "AGENTS.md",
     ROOT / "docs/mcp-setup.md",
@@ -63,6 +68,40 @@ def dump_yaml(path: Path, data: Any) -> None:
 
 def resolve_repo_path(root: Path, relative_path: str) -> Path:
     return root / relative_path
+
+
+def _has_dated_export_filename(relative_path: str, *, allow_template: bool = False) -> bool:
+    name = Path(relative_path).name
+    if EXPORT_DATE_PREFIX_PATTERN.match(name):
+        return True
+    return allow_template and name.startswith(f"{EXPORT_DATE_TEMPLATE}-")
+
+
+def _validate_export_reference_path(
+    *,
+    index_path: Path,
+    root: Path,
+    field_name: str,
+    relative_path: str | None,
+    allow_template: bool = False,
+) -> list[str]:
+    errors: list[str] = []
+    if not relative_path:
+        errors.append(f"{index_path.relative_to(root)}: missing `{field_name}`")
+        return errors
+
+    if not relative_path.startswith(EXPORT_ROOT_PREFIX):
+        errors.append(
+            f"{index_path.relative_to(root)}: `{field_name}` must live under `{EXPORT_ROOT_PREFIX}`"
+        )
+
+    if not _has_dated_export_filename(relative_path, allow_template=allow_template):
+        prefix = f"{EXPORT_DATE_TEMPLATE}-" if allow_template else "YYYY-MM-DD-"
+        errors.append(
+            f"{index_path.relative_to(root)}: `{field_name}` must use a filename starting with `{prefix}`"
+        )
+
+    return errors
 
 
 def _parse_mcp_listener_output(text: str) -> list[McpPortListener]:
@@ -361,16 +400,37 @@ def load_brand_registry_data(root: Path = ROOT) -> dict[str, Any]:
     return load_yaml(root / "figma/brands/registry.yml")
 
 
-def load_variable_index(root: Path = ROOT) -> dict[str, Any]:
-    return load_yaml(root / "figma/variables/index.yml")
+def load_export_index(root: Path = ROOT) -> dict[str, Any]:
+    return load_yaml(root / EXPORT_INDEX_PATH)
+
+
+def validate_export_index_metadata(root: Path = ROOT) -> tuple[dict[str, Any], list[str]]:
+    index = load_export_index(root)
+    index_path = root / EXPORT_INDEX_PATH
+    errors = _validate_export_reference_path(
+        index_path=index_path,
+        root=root,
+        field_name="generated_registry_path",
+        relative_path=index.get("generated_registry_path"),
+        allow_template=True,
+    )
+    return index, errors
 
 
 def validate_collection_index(root: Path = ROOT) -> tuple[dict[str, dict[str, Any]], list[str]]:
-    index = load_variable_index(root)
-    errors: list[str] = []
+    index, errors = validate_export_index_metadata(root)
+    index_path = root / EXPORT_INDEX_PATH
     base_collections: dict[str, dict[str, Any]] = {}
 
     for item in index.get("collections", []):
+        errors.extend(
+            _validate_export_reference_path(
+                index_path=index_path,
+                root=root,
+                field_name=f"collections[{item.get('key', '?')}].path",
+                relative_path=item.get("path"),
+            )
+        )
         path = resolve_repo_path(root, item["path"])
         if not path.exists():
             errors.append(f"{path.relative_to(root)}: missing collection snapshot")
@@ -386,9 +446,18 @@ def validate_collection_index(root: Path = ROOT) -> tuple[dict[str, dict[str, An
 
 def validate_variable_index(root: Path = ROOT) -> list[str]:
     base_collections, errors = validate_collection_index(root)
-    index = load_variable_index(root)
+    index = load_export_index(root)
+    index_path = root / EXPORT_INDEX_PATH
 
     for item in index.get("extensions", []):
+        errors.extend(
+            _validate_export_reference_path(
+                index_path=index_path,
+                root=root,
+                field_name=f"extensions[{item.get('key', '?')}].path",
+                relative_path=item.get("path"),
+            )
+        )
         path = resolve_repo_path(root, item["path"])
         if not path.exists():
             errors.append(f"{path.relative_to(root)}: missing extension snapshot")
@@ -444,12 +513,20 @@ def validate_extension_exports(
     else:
         errors: list[str] = []
 
-    index = load_variable_index(root)
-    index_path = root / "figma/variables/index.yml"
+    index = load_export_index(root)
+    index_path = root / EXPORT_INDEX_PATH
     indexed_extensions: dict[tuple[str | None, str | None], dict[str, Any]] = {}
     snapshot_data_by_key: dict[tuple[str | None, str | None], dict[str, Any]] = {}
 
     for item in index.get("extensions", []):
+        errors.extend(
+            _validate_export_reference_path(
+                index_path=index_path,
+                root=root,
+                field_name=f"extensions[{item.get('key', '?')}].path",
+                relative_path=item.get("path"),
+            )
+        )
         key = (item.get("brand_id"), item.get("category"))
         if key in indexed_extensions:
             errors.append(
@@ -538,7 +615,7 @@ def build_registry(root: Path = ROOT, *, base_only: bool = False) -> dict[str, A
     if errors:
         raise GovernanceError("\n".join(errors))
 
-    index = load_variable_index(root)
+    index = load_export_index(root)
     registry: dict[str, Any] = {
         "version": index["version"],
         "updated": index["updated"],
@@ -618,8 +695,12 @@ def build_registry(root: Path = ROOT, *, base_only: bool = False) -> dict[str, A
 
 
 def resolve_registry_output_path(root: Path, *, base_only: bool = False) -> Path:
-    index = load_variable_index(root)
-    output_path = resolve_repo_path(root, index["generated_registry_path"])
+    index = load_export_index(root)
+    dated_relative_path = index["generated_registry_path"].replace(
+        EXPORT_DATE_TEMPLATE,
+        date.today().isoformat(),
+    )
+    output_path = resolve_repo_path(root, dated_relative_path)
     if not base_only:
         return output_path
 

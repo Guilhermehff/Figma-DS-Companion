@@ -3,6 +3,8 @@
 - Date: 2026-03-10
 - Title: Global Variable Path Cleanup
 - Status: Accepted
+- Superseded in part by: `2026-03-11-user-facing-collection-naming.md`
+- Historical naming note: References to `_global_*` describe the pre-rename collection display names. The path rule remains active, but current display names use `_Global: *`.
 - Stakeholders: Design System Governance
 
 ## Context

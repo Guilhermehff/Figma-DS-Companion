@@ -14,9 +14,9 @@ Those mirrors improved local diffability, but they added repetitive sync work af
 
 1. Treat live Figma variables and extension collections as the only active token source of truth.
 2. Keep `figma/brands/<brand>/brand.yml` as the canonical repo record for brand targeting metadata, source references, and governance notes, but stop mirroring live token counts in that manifest.
-3. Stop treating `figma/variables/extensions/*.yml` as required live governance artifacts. Create them only when a local audit or compatibility export is explicitly requested.
-4. Stop treating `figma/variables/registry.yml` as a required post-write artifact. Generate it only on demand.
-5. Keep existing collection snapshots and export tooling as optional local export paths rather than mandatory write-follow-up steps.
+3. Stop treating repo-side export snapshots as required live governance artifacts. Create dated files under `figma/exports/` only when a local audit or compatibility export is explicitly requested.
+4. Stop treating the compatibility registry as a required post-write artifact. Generate dated compatibility exports under `figma/exports/` only on demand.
+5. Keep export tooling as an optional local export path rather than a mandatory write-follow-up step.
 
 ## Consequences
 

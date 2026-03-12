@@ -3,6 +3,8 @@
 - Date: 2026-03-10
 - Title: Initial Global Values Baseline
 - Status: Accepted
+- Superseded in part by: `2026-03-10-global-variable-path-cleanup.md` and `2026-03-11-user-facing-collection-naming.md`
+- Historical implementation note: This file captures the first baseline state before path cleanup and collection renaming.
 - Stakeholders: Design System Governance
 
 ## Context

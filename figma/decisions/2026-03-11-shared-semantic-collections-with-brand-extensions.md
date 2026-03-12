@@ -2,6 +2,7 @@
 
 Date: 2026-03-11
 Status: accepted
+Historical naming note: References to `semantic_typography` describe the pre-rename display name. The current collection is `Semantic: Typography`.
 
 ## Context
 

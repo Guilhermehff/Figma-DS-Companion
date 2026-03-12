@@ -1,6 +1,8 @@
 date: 2026-03-11
 status: written
 archive_status: historical_reference
+historical_naming_note: "This snapshot uses the pre-rename display name `semantic_typography`. The current collection display name is `Semantic: Typography`."
+historical_state_note: "This snapshot captures the 2026-03-11 write state before later approved additions increased the live base collection beyond the recorded 15 variables."
 figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
 figma_file: Design System
 target_collection:

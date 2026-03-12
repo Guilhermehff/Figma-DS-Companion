@@ -3,6 +3,7 @@
 - Date: 2026-03-10
 - Title: Brand Typography Governance
 - Status: Accepted
+- Historical naming note: References to `_global_typography` describe the pre-rename collection display name. The current collection is `_Global: Typography`.
 - Stakeholders: Design System Governance
 
 ## Context

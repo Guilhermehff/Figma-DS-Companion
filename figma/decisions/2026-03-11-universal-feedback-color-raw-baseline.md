@@ -31,6 +31,6 @@ Treat these raw families as inputs for the shared semantic feedback families def
 
 These families become approved raw inputs for future shared semantic `positive`, `warning`, and `negative` aliases used by web and other channel libraries.
 
-`figma/variables/registry.yml` must only be updated after the Figma write is completed and verified through Figma Console MCP.
+Any dated compatibility export under `figma/exports/` must only be generated after the Figma write is completed and verified through Figma Console MCP.
 
 The Figma write for these raw families was completed on 2026-03-11 in the `Design System` file. The registry and proposal artifact should mirror the live `_Global: Color` count of 90 variables.

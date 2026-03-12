@@ -23,7 +23,7 @@ Every reviewed brand should have:
 - approved intake and preview artifacts referenced from the brand manifest
 - Figma provenance captured in the manifest and intake artifact; preview Markdown should stay focused on review content unless a node-specific reference materially helps
 
-During the staged migration phase, existing approved color artifacts may remain in `figma/variables/` if the brand manifest points to them explicitly.
+When a local export is explicitly requested, store the dated snapshot under `figma/exports/` and treat it as potentially stale relative to live Figma.
 
 ## Intake Workflow
 
@@ -40,8 +40,8 @@ During the staged migration phase, existing approved color artifacts may remain 
 
 - Global color writes belong in `_Global: Color`.
 - Shared semantic color ladders belong in `Semantic: Color`.
-- Brand semantic overrides live in Figma. Create `figma/variables/extensions/` exports only when an audit or compatibility export is explicitly requested.
-- `figma/variables/registry.yml`, when present, is an on-demand compatibility export and should not be hand-edited.
+- Brand semantic overrides live in Figma. Create dated exports under `figma/exports/` only when an audit or compatibility export is explicitly requested.
+- Compatibility exports under `figma/exports/` are on-demand snapshots and should not be hand-edited.
 
 ## Templates
 

@@ -38,28 +38,19 @@ Review state: pending preview review. Verify live write state in `figma/brands/<
 
 ## Semantic Mapping
 
-Repeat this block for family, weight, and size aliases. Only family aliases use safe counterparts.
-
-- Semantic token:
-  Global token:
-  Safe semantic token:
-  Safe global token:
-  Intended channels:
-  Notes:
+- `family/heading` ->
+- `family/body` ->
+- `family/action` ->
+- `family/heading_safe` ->
+- `family/body_safe` ->
+- `family/action_safe` ->
+- `weight/...` ->
+- `size/...` ->
+- Inherited or deferred notes:
 
 ## Role Recipes
 
 ### Role:
-
-Proposed family token:
-
-Fallback token:
-
-Proposed weight token:
-
-Proposed size token:
-
-Size assumption:
 
 Sample block:
 
@@ -67,13 +58,9 @@ Sample block:
   SAMPLE TYPOGRAPHY
 </div>
 
-Recipe notes:
-
-- Case:
-- Tracking:
-- Leading:
-- Size rule:
-- Punctuation:
+- Proposed family token:
+- Proposed weight token:
+- Proposed size token:
 - Notes:
 
 ## Review Notes

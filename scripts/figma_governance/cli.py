@@ -107,7 +107,7 @@ def build_parser() -> argparse.ArgumentParser:
     build_registry_parser.add_argument(
         "--base-only",
         action="store_true",
-        help="Build a compatibility export from only the collection snapshots listed in figma/variables/index.yml",
+        help="Build a compatibility export from only the dated snapshots listed in figma/exports/index.yml",
     )
     validate_exports_parser = subparsers.add_parser("validate-exports")
     validate_exports_parser.add_argument(

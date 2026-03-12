@@ -4,6 +4,7 @@ Date: 2026-03-11
 Status: superseded
 Figma URL: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
 Superseded by: `2026-03-11-role-scoped-semantic-typography-ladders.md`
+Historical naming note: References to `semantic_typography` and `_global_typography` describe the pre-rename display names. Current display names are `Semantic: Typography` and `_Global: Typography`.
 
 ## Context
 

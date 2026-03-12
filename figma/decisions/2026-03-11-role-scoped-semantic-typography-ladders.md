@@ -4,6 +4,7 @@ Date: 2026-03-11
 Status: accepted
 Figma URL: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
 Supersedes: `2026-03-11-semantic-typography-weight-and-size-aliases.md`
+Historical naming note: References to `semantic_typography` describe the pre-rename display name. The current collection is `Semantic: Typography`.
 
 ## Context
 

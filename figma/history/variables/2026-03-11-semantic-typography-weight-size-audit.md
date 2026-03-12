@@ -1,6 +1,8 @@
 # Variable Audit
 
 Status: historical reference
+Historical naming note: References to `_global_typography` and `semantic_typography` describe the 2026-03-11 display names. Current display names are `_Global: Typography` and `Semantic: Typography`.
+Historical state note: This audit reflects the base semantic typography collection at 15 variables on 2026-03-11. The live collection changed later and should be verified in Figma for current state.
 
 - Date: 2026-03-11
 - Figma URL: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1

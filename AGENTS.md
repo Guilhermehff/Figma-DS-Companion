@@ -174,8 +174,8 @@ When creating or updating a Semantic extension collection in the Design System f
 
 6. Sync repo state immediately
    - Persist the extension collection ID and any approved non-obvious mapping notes back into `figma/brands/<brand>/brand.yml`.
-   - Create `figma/variables/extensions/*.yml` only when a local audit or export is explicitly requested.
-   - Create or rebuild `figma/variables/registry.yml` only when a local compatibility export is explicitly requested.
+   - Create dated files under `figma/exports/` only when a local audit or export is explicitly requested.
+   - Create or rebuild dated compatibility exports under `figma/exports/` only when a local compatibility export is explicitly requested.
 
 7. Treat cached inventory reads carefully
    - `figma_get_variables` may lag after a write.
@@ -194,13 +194,37 @@ When a new token does not clearly fit the taxonomy or the ladder:
 
 Do not invent new conventions silently.
 
+## Decision log rules
+
+Create a decision log in `figma/decisions` when any of the following is true:
+
+1. A governance rule changes the system shape.
+   This includes naming, collection strategy, semantic slot admission, extension behavior, deprecation policy, or write workflow.
+2. A brand staging pass introduces a non-obvious approved interpretation that should survive beyond the intake and preview artifacts.
+3. A live Figma write includes an approved exception, sequencing defect, or non-obvious mapping choice that is not obvious from `figma/brands/<brand>/brand.yml` alone.
+4. An accepted decision is being superseded, narrowed, or deprecated and the change needs durable historical traceability.
+
+Do not create a decision log for:
+
+- routine cleanup or copy edits
+- straightforward repo maintenance already explained by the edited canonical file
+- normal Figma writes when `figma/brands/<brand>/brand.yml` already captures the resulting state and there was no exception or special approval
+- duplicate summaries of intake, preview, or manifest content when no actual governance choice was made
+
+Decision log requirements:
+
+- Use `figma/templates/decision-log.md` for new decision artifacts unless the user explicitly wants another format.
+- Date filenames using ISO format and keep the title specific to the governance choice being recorded.
+- If the decision is brand-specific, link it from the relevant `decision_artifacts` list in `figma/brands/<brand>/brand.yml`.
+- If a newer decision supersedes an older one, mark that relationship explicitly in the newer file and update the older file when appropriate.
+
 ## Persistent workspace references
 
 - figma/config/variable-taxonomy.yml is the governing taxonomy and must match this AGENTS.md.
 - figma/brands/registry.yml is the governed source of truth for which brands currently exist in repo governance.
 - figma/brands/<brand>/brand.yml is the canonical per-brand metadata record.
-- figma/variables/index.yml is the optional export manifest for local collection snapshots and compatibility exports.
-- figma/variables/registry.yml, when present, is an on-demand generated compatibility export and must not be hand-edited.
+- figma/exports/index.yml is the optional manifest for dated local exports and compatibility snapshots.
+- Exports under figma/exports may be out of date relative to live Figma, must use `YYYY-MM-DD-` filename prefixes, and generated compatibility exports there must not be hand-edited.
 - figma/templates/variable-audit.md and figma/templates/decision-log.md must be used for repeatable output when those artifact types are requested.
 - Preserve decision history. Record governance changes in figma/decisions rather than overwriting prior decisions silently.
 
@@ -208,7 +232,7 @@ Do not invent new conventions silently.
 
 - figma/config: taxonomies and governance rules
 - figma/brands: brand registry, per-brand manifests, and staged brand artifacts
-- figma/variables: optional local exports, collection snapshots, and naming proposals
+- figma/exports: optional dated local exports and compatibility snapshots
 - figma/history: migrated dated artifacts that are no longer current source files
 - figma/templates: reusable output templates
 - docs: minimal MCP setup and recovery guidance only
