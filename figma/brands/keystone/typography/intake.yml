@@ -1,0 +1,273 @@
+date: 2026-03-12
+brand: keystone
+source_reference: User-provided image in chat showing the Keystone typography guidance
+source_type: image
+figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+status: active
+preview:
+  required_before_write: true
+  artifact: figma/brands/keystone/typography/preview.md
+  status: written_in_figma
+
+source_roles:
+  - source_role: headline
+    source_family_name: Futura
+    source_style_name: Futura Bold
+    source_weight_label: Bold
+    source_usage_scope: primary_display_headline
+    text_case: sentence_case
+    tracking: 0%
+    leading: 4px_difference
+    size_rule: explicit 48px with 52px leading example
+    punctuation_rule: not specified in source
+    sample_copy: Headline
+    notes: The source explicitly says `Futura Bold / Sentence case`, `Leading: 4px difference (Ex: 48px / 52px leading)`, and `Kerning: 0%`.
+  - source_role: subheadline
+    source_family_name: Avenir
+    source_style_name: Avenir Medium
+    source_weight_label: Medium
+    source_usage_scope: supporting_headline_copy
+    text_case: sentence_case
+    tracking: 0%
+    leading: 4px_difference
+    size_rule: explicit 36px with 40px leading example
+    punctuation_rule: not specified in source
+    sample_copy: Sub Headline
+    notes: The source explicitly says `Avenir Medium / Sentence case`, `Leading: 4px difference (Ex: 36px / 40px leading)`, and `Kerning: 0%`.
+  - source_role: body
+    source_family_name: Avenir
+    source_style_name: Avenir Medium
+    source_weight_label: Medium
+    source_usage_scope: reading_copy
+    text_case: sentence_case
+    tracking: 0%
+    leading: 4px_difference
+    size_rule: explicit 16px with 20px leading example
+    punctuation_rule: sentence punctuation allowed
+    sample_copy: Body Copy
+    notes: The source explicitly says `Avenir Medium / Sentence case`, `Leading: 4px difference (Ex: 16px / 20px leading)`, and `Kerning: 0%`.
+  - source_role: emphasized_body_copy
+    source_family_name: Futura
+    source_style_name: Futura Bold
+    source_weight_label: Bold
+    source_usage_scope: emphasized_short_body_copy
+    text_case: sentence_case
+    tracking: 0%
+    leading: 4px_difference
+    size_rule: explicit 16px with 20px leading example
+    punctuation_rule: sentence punctuation allowed
+    sample_copy: Emphasized body copy
+    notes: The source explicitly says `Futura Bold / Sentence case`, `Leading: 4px difference (Ex: 16px / 20px leading)`, and `Kerning: 0%`.
+  - source_role: cta
+    source_family_name: Futura
+    source_style_name: Futura Bold
+    source_weight_label: Bold
+    source_usage_scope: action_or_button_copy
+    text_case: title_case
+    tracking: not specified in source
+    leading: not specified in source
+    size_rule: explicit 20px in CTA example
+    punctuation_rule: not specified in source
+    sample_copy: CTA
+    notes: User-approved review decision resolves the source contradiction in favor of the CTA example: Futura Bold in Title Case at 20px.
+
+primitive_recommendations:
+  reuse_existing:
+    families: []
+    weights:
+      - source_weight_label: Bold
+        existing_token: universal/weight/bold
+        reason: Headline, emphasized body copy, and CTA use Futura Bold.
+      - source_weight_label: Medium
+        existing_token: universal/weight/medium
+        reason: Subheadline and body copy use Avenir Medium.
+    sizes:
+      - source_size_reference: body default
+        existing_token: universal/size/300
+        assumption_status: explicit
+        assumption_note: The source explicitly gives a 16px body example, matching the current shared `300` size.
+        reason: No new raw size step is needed for the body lane.
+      - source_size_reference: cta default
+        existing_token: universal/size/500
+        assumption_status: explicit
+        assumption_note: The CTA example explicitly shows 20px.
+        reason: Matches the current shared `500` size.
+  proposed_primitives:
+    families:
+      - token_name: keystone/family/primary
+        source_family_name: Futura
+        source_style_reference: Futura Bold across headline, emphasized body copy, and CTA
+        rationale: Futura is the primary Keystone display and emphasis family.
+        fallback_token: universal/family/web_safe
+        fallback_note: The source does not define a fallback stack.
+      - token_name: keystone/family/secondary
+        source_family_name: Avenir
+        source_style_reference: Avenir Medium across subheadline and body copy
+        rationale: Avenir is the secondary reading family in the supplied Keystone guidance.
+        fallback_token: universal/family/web_safe
+        fallback_note: The source does not define a fallback stack.
+  hold_for_review: []
+
+semantic_recommendations:
+  family_aliases:
+    - semantic_token: family/heading
+      global_token: keystone/family/primary
+      safe_semantic_token: family/heading_safe
+      safe_global_token: universal/family/web_safe
+      intended_channels:
+        - web
+        - email
+        - ads
+      notes: Futura is the approved display family in the Keystone system.
+    - semantic_token: family/body
+      global_token: keystone/family/secondary
+      safe_semantic_token: family/body_safe
+      safe_global_token: universal/family/web_safe
+      intended_channels:
+        - web
+        - email
+        - ads
+      notes: Avenir remains the approved body and subheadline family.
+    - semantic_token: family/action
+      global_token: keystone/family/primary
+      safe_semantic_token: family/action_safe
+      safe_global_token: universal/family/web_safe
+      intended_channels:
+        - web
+        - email
+        - ads
+      notes: CTA is approved to use the Futura family rather than Avenir.
+  weight_aliases:
+    - semantic_token: weight/heading/base
+      global_token: universal/weight/bold
+      intended_channels:
+        - web
+        - email
+        - ads
+      notes: The headline lane is explicitly bold.
+    - semantic_token: weight/body/base
+      global_token: universal/weight/medium
+      intended_channels:
+        - web
+        - email
+        - ads
+      notes: Keystone body copy explicitly uses Avenir Medium rather than a normal reading weight.
+    - semantic_token: weight/action/base
+      global_token: universal/weight/bold
+      intended_channels:
+        - web
+        - email
+        - ads
+      notes: CTA is approved to use Futura Bold.
+  size_aliases:
+    - semantic_token: size/action/base
+      global_token: universal/size/500
+      intended_channels:
+        - web
+        - email
+        - ads
+      notes: The CTA example is explicitly 20px and can stage on the existing shared size ladder.
+
+role_recipes:
+  - role_name: headline
+    source_role: Headline | Futura Bold
+    proposed_family_token: keystone/family/primary
+    fallback_token: universal/family/web_safe
+    proposed_weight_token: universal/weight/bold
+    proposed_size_token: inherited current heading ladder
+    size_assumption_status: deferred_no_new_size
+    text_case: sentence_case
+    tracking: 0%
+    leading_rule: 4px difference
+    size_rule: 48px / 52px example
+    punctuation_rule: not specified in source
+    sample_copy: Headline
+    notes: The source is explicit, but no new shared size step was added in this pass, so the 48px headline recipe remains documented for later follow-up.
+  - role_name: subheadline
+    source_role: Sub Headline | Avenir Medium
+    proposed_family_token: keystone/family/secondary
+    fallback_token: universal/family/web_safe
+    proposed_weight_token: universal/weight/medium
+    proposed_size_token: inherited current heading ladder
+    size_assumption_status: deferred_no_new_size
+    text_case: sentence_case
+    tracking: 0%
+    leading_rule: 4px difference
+    size_rule: 36px / 40px example
+    punctuation_rule: not specified in source
+    sample_copy: Sub Headline
+    notes: The explicit source size remains documented, but no new size override was written in this pass.
+  - role_name: body
+    source_role: Body Copy | Avenir Medium
+    proposed_family_token: keystone/family/secondary
+    fallback_token: universal/family/web_safe
+    proposed_weight_token: universal/weight/medium
+    proposed_size_token: universal/size/300
+    size_assumption_status: explicit
+    text_case: sentence_case
+    tracking: 0%
+    leading_rule: 4px difference
+    size_rule: 16px / 20px example
+    punctuation_rule: sentence punctuation allowed
+    sample_copy: Body Copy
+    notes: Source is explicit and fits the current shared body size step.
+  - role_name: emphasized_body_copy
+    source_role: Emphasized body copy | Futura Bold
+    proposed_family_token: keystone/family/primary
+    fallback_token: universal/family/web_safe
+    proposed_weight_token: universal/weight/bold
+    proposed_size_token: universal/size/300
+    size_assumption_status: explicit
+    text_case: sentence_case
+    tracking: 0%
+    leading_rule: 4px difference
+    size_rule: 16px / 20px example
+    punctuation_rule: sentence punctuation allowed
+    sample_copy: Emphasized body copy
+    notes: Uses the headline family in a small-size emphasis role.
+  - role_name: cta
+    source_role: CTA | Futura Bold
+    proposed_family_token: keystone/family/primary
+    fallback_token: universal/family/web_safe
+    proposed_weight_token: universal/weight/bold
+    proposed_size_token: universal/size/500
+    size_assumption_status: explicit
+    text_case: title_case
+    tracking: not specified in source
+    leading_rule: not specified in source
+    size_rule: 20px example
+    punctuation_rule: not specified in source
+    sample_copy: CTA
+    notes: Final approved CTA mapping for the live Keystone write.
+
+validation:
+  extraction_notes:
+    - The source is explicit about family names, case rules, size examples, and line-height examples.
+    - The preview review resolved the CTA contradiction in favor of the example block.
+    - The source headline size still exceeds the current shared raw size ladder.
+  governance_notes:
+    - Keystone stages on two raw family primitives: Futura and Avenir.
+    - The live write intentionally avoids adding a new shared size step until that ladder expansion is reviewed separately.
+
+review_readiness:
+  intended_review_channels:
+    - web
+    - email
+    - ads
+  review_rules:
+    - subject: Keystone CTA family
+      channels:
+        - web
+        - email
+        - ads
+      rule: CTA uses Futura Bold in Title Case.
+      source_basis: User-approved preview review after the source contradiction was surfaced.
+    - subject: Keystone size ladder scope
+      channels:
+        - web
+        - email
+        - ads
+      rule: Do not add a new shared raw size step in this pass.
+      source_basis: User-approved preview review direction.
+
+open_questions: []

@@ -1,5 +1,5 @@
 version: 1
-updated: 2026-03-11
+updated: 2026-03-12
 brands:
   - brand_id: vail
     display_name: Vail
@@ -47,6 +47,48 @@ brands:
     display_name: Northstar
     status: active
     manifest_path: figma/brands/northstar/brand.yml
+    owners:
+      - design_system_governance
+    supported_channels:
+      - web
+      - email
+      - ads
+    foundation_status:
+      color: approved
+      typography: approved
+    design_system_file_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+  - brand_id: heavenly
+    display_name: Heavenly
+    status: active
+    manifest_path: figma/brands/heavenly/brand.yml
+    owners:
+      - design_system_governance
+    supported_channels:
+      - web
+      - email
+      - ads
+    foundation_status:
+      color: approved
+      typography: approved
+    design_system_file_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+  - brand_id: kirkwood
+    display_name: Kirkwood
+    status: active
+    manifest_path: figma/brands/kirkwood/brand.yml
+    owners:
+      - design_system_governance
+    supported_channels:
+      - web
+      - email
+      - ads
+    foundation_status:
+      color: approved
+      typography: approved
+    design_system_file_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+  - brand_id: keystone
+    display_name: Keystone
+    status: active
+    manifest_path: figma/brands/keystone/brand.yml
     owners:
       - design_system_governance
     supported_channels:

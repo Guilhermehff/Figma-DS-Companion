@@ -1,0 +1,274 @@
+date: 2026-03-12
+brand: kirkwood
+source_reference: User-provided image in chat showing the Kirkwood typography guidance
+source_type: image
+figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+status: active
+preview:
+  required_before_write: true
+  artifact: figma/brands/kirkwood/typography/preview.md
+  status: written_in_figma
+  review_exception: written_before_preview_review
+
+source_roles:
+  - source_role: title_or_small_type
+    source_family_name: Futura
+    source_style_name: Futura Bold
+    source_weight_label: Bold
+    source_usage_scope: title lines and small type elements
+    text_case: all_caps_or_title_case
+    tracking: not specified in source
+    leading: around_120_percent_of_font_height
+    size_rule: title size not numerically specified
+    punctuation_rule: not specified in source
+    sample_copy: Futura Bold
+    notes: The source says to use Futura Bold in all caps as well as title case and to keep leading around 120 percent of font height.
+  - source_role: headline
+    source_family_name: Trade Gothic Bold Condensed No. 20
+    source_style_name: Trade Gothic Bold Condensed No. 20
+    source_weight_label: Bold
+    source_usage_scope: primary_display_headline
+    text_case: all_caps
+    tracking: not specified in source
+    leading: 100_percent_of_font_height_or_less
+    size_rule: headline size not numerically specified
+    punctuation_rule: not specified in source
+    sample_copy: ABCDEFGHIJKLMNOP QRSTUVWXYZ
+    notes: The source explicitly says headlines should use this family in all caps only and can be stacked to create a more square headline shape.
+  - source_role: body
+    source_family_name: Avenir Next
+    source_style_name: Avenir Next Regular
+    source_weight_label: Regular
+    source_usage_scope: reading_copy
+    text_case: sentence_case
+    tracking: not specified in source
+    leading: 150_percent_of_font_height
+    size_rule: max type size 16 pt
+    punctuation_rule: sentence punctuation allowed
+    sample_copy: AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSs TtUuVvWwXxYyZz
+    notes: The source says to use Avenir Next Regular in sentence case only, with loose leading at 150 percent and a max size of 16 pt.
+  - source_role: limited_space_emphasis
+    source_family_name: Trade Gothic Condensed No. 18
+    source_style_name: Trade Gothic Condensed No. 18
+    source_weight_label: Regular
+    source_usage_scope: limited-space emphasis or short supporting phrases
+    text_case: not specified in source
+    tracking: not specified in source
+    leading: 150_percent_of_font_height
+    size_rule: short emphasized copy only
+    punctuation_rule: not specified in source
+    sample_copy: AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSs
+    notes: The source says to use this family when space is limited or when only a few words need emphasis, with loose leading at 150 percent.
+
+primitive_recommendations:
+  reuse_existing:
+    families:
+      - source_family_name: Avenir Next
+        existing_token: breckenridge/family/secondary
+        reason: The global typography warehouse already contains the same family string, but Kirkwood still receives its own raw token for brand-local governance.
+    weights:
+      - source_weight_label: Bold
+        existing_token: universal/weight/bold
+        reason: Kirkwood headline and title lanes both explicitly call for bold styles.
+      - source_weight_label: Regular
+        existing_token: universal/weight/normal
+        reason: The body and Trade Gothic No. 18 support lane both stage cleanly on the shared normal weight.
+    sizes:
+      - source_size_reference: headline default
+        existing_token: universal/size/800
+        assumption_status: assumed
+        assumption_note: The source shows a dominant condensed display treatment without a numeric size.
+        reason: Uses the largest governed heading size for the first staged pass.
+      - source_size_reference: title_or_small_type default
+        existing_token: universal/size/400
+        assumption_status: assumed
+        assumption_note: The source shows compact supporting titling rather than a full display headline.
+        reason: Keeps the title lane inside the shared size ladder without creating a new raw size.
+      - source_size_reference: body default
+        existing_token: universal/size/300
+        assumption_status: explicit
+        assumption_note: The source caps body at 16 pt, which matches the current shared base body size.
+        reason: Preserves the governed raw body step without adding a duplicate size token.
+      - source_size_reference: action_or_short_emphasis default
+        existing_token: universal/size/300
+        assumption_status: assumed
+        assumption_note: The source describes short emphasis behavior but does not define a numeric size.
+        reason: Stages the action-support lane on the shared reading size for the first pass.
+  proposed_primitives:
+    families:
+      - token_name: kirkwood/family/primary
+        source_family_name: Trade Gothic Bold Condensed No. 20
+        source_style_reference: headline system
+        rationale: Primary condensed headline family for the Kirkwood brand expression.
+        fallback_token: universal/family/web_safe
+        fallback_note: The source does not define a digital fallback stack.
+      - token_name: kirkwood/family/secondary
+        source_family_name: Avenir Next
+        source_style_reference: body system
+        rationale: Reading family for sentence-case body copy.
+        fallback_token: universal/family/web_safe
+        fallback_note: The source does not define a digital fallback stack.
+      - token_name: kirkwood/family/action
+        source_family_name: Futura Bold
+        source_style_reference: title and small type system
+        rationale: Futura Bold is the closest stable semantic fit for action-style short emphasis because it supports both all caps and title case.
+        fallback_token: universal/family/web_safe
+        fallback_note: The source does not define a digital fallback stack.
+      - token_name: kirkwood/family/utility
+        source_family_name: Trade Gothic Condensed No. 18
+        source_style_reference: limited-space emphasis system
+        rationale: Preserved as a raw utility family until the semantic typography schema gains a dedicated fourth family slot.
+        fallback_token: universal/family/web_safe
+        fallback_note: The source does not define a digital fallback stack.
+  hold_for_review:
+    - item: semantic slot for Trade Gothic Condensed No. 18
+      reason: The current semantic typography schema exposes only heading, body, and action family lanes.
+
+semantic_recommendations:
+  family_aliases:
+    - semantic_token: family/heading
+      global_token: kirkwood/family/primary
+      safe_semantic_token: family/heading_safe
+      safe_global_token: universal/family/web_safe
+      intended_channels:
+        - web
+        - email
+        - ads
+      notes: Kirkwood display headlines use Trade Gothic Bold Condensed No. 20.
+    - semantic_token: family/body
+      global_token: kirkwood/family/secondary
+      safe_semantic_token: family/body_safe
+      safe_global_token: universal/family/web_safe
+      intended_channels:
+        - web
+        - email
+        - ads
+      notes: Avenir Next remains the sentence-case reading family.
+    - semantic_token: family/action
+      global_token: kirkwood/family/action
+      safe_semantic_token: family/action_safe
+      safe_global_token: universal/family/web_safe
+      intended_channels:
+        - web
+        - email
+        - ads
+      notes: Futura Bold stages as the semantic action lane because it supports short, emphatic copy in both all caps and title case.
+  weight_aliases:
+    - semantic_token: weight/heading/base
+      global_token: universal/weight/bold
+      intended_channels:
+        - web
+        - email
+        - ads
+      notes: The headline lane is explicitly bold.
+    - semantic_token: weight/body/base
+      global_token: universal/weight/normal
+      intended_channels:
+        - web
+        - email
+        - ads
+      notes: Avenir Next Regular remains the body baseline.
+    - semantic_token: weight/action/base
+      global_token: universal/weight/bold
+      intended_channels:
+        - web
+        - email
+        - ads
+      notes: Futura Bold preserves the short-emphasis lane without creating a brand-specific weight token.
+  size_aliases: []
+
+role_recipes:
+  - role_name: title_or_small_type
+    source_role: Title / Small Type | Futura Bold
+    proposed_family_token: kirkwood/family/action
+    fallback_token: universal/family/web_safe
+    proposed_weight_token: universal/weight/bold
+    proposed_size_token: universal/size/400
+    size_assumption_status: assumed
+    text_case: all_caps_or_title_case
+    tracking: not specified in source
+    leading_rule: around 120 percent of font height
+    size_rule: title size not numerically specified
+    punctuation_rule: not specified in source
+    sample_copy: Futura Bold
+    notes: Best-fit semantic staging for the short title lane.
+  - role_name: headline
+    source_role: Headline | Trade Gothic Bold Condensed No. 20
+    proposed_family_token: kirkwood/family/primary
+    fallback_token: universal/family/web_safe
+    proposed_weight_token: universal/weight/bold
+    proposed_size_token: universal/size/800
+    size_assumption_status: assumed
+    text_case: all_caps
+    tracking: not specified in source
+    leading_rule: 100 percent of font height or less
+    size_rule: headline size not numerically specified
+    punctuation_rule: not specified in source
+    sample_copy: ABCDEFGHIJKLMNOP QRSTUVWXYZ
+    notes: Primary condensed display treatment.
+  - role_name: body
+    source_role: Body | Avenir Next Regular
+    proposed_family_token: kirkwood/family/secondary
+    fallback_token: universal/family/web_safe
+    proposed_weight_token: universal/weight/normal
+    proposed_size_token: universal/size/300
+    size_assumption_status: explicit
+    text_case: sentence_case
+    tracking: not specified in source
+    leading_rule: 150 percent of font height
+    size_rule: max 16 pt
+    punctuation_rule: sentence punctuation allowed
+    sample_copy: Avenir Next Regular
+    notes: Reading copy remains on the shared base body step.
+  - role_name: limited_space_emphasis
+    source_role: Limited Space | Trade Gothic Condensed No. 18
+    proposed_family_token: kirkwood/family/utility
+    fallback_token: universal/family/web_safe
+    proposed_weight_token: universal/weight/normal
+    proposed_size_token: universal/size/300
+    size_assumption_status: assumed
+    text_case: not specified in source
+    tracking: not specified in source
+    leading_rule: 150 percent of font height
+    size_rule: short emphasized copy only
+    punctuation_rule: not specified in source
+    sample_copy: Trade Gothic Condensed No. 18
+    notes: Raw-only utility recipe pending a future semantic slot decision.
+
+validation:
+  extraction_notes:
+    - The source is explicit about family choice, case behavior, and leading rules, but not about numeric type sizes beyond the 16 pt cap for body copy.
+    - Kirkwood uses four distinct named families or family-styles across the supplied guidance, which exceeds the current three-lane semantic family schema.
+  governance_notes:
+    - Futura Bold is staged into `family/action` because it best fits short emphatic copy that can appear in title case or all caps.
+    - Trade Gothic Condensed No. 18 is preserved as a raw primitive only, avoiding a silent semantic schema expansion.
+
+review_readiness:
+  intended_review_channels:
+    - web
+    - email
+    - ads
+  review_rules:
+    - subject: Kirkwood headline lane
+      channels:
+        - web
+        - email
+        - ads
+      rule: Use Trade Gothic Bold Condensed No. 20 in all caps for primary display headlines.
+      source_basis: Kirkwood typography image headline guidance.
+    - subject: Kirkwood body lane
+      channels:
+        - web
+        - email
+        - ads
+      rule: Use Avenir Next Regular in sentence case only, with loose leading at 150 percent and a max size of 16 pt.
+      source_basis: Kirkwood typography image body guidance.
+    - subject: Kirkwood short emphasis lane
+      channels:
+        - web
+        - email
+        - ads
+      rule: Stage Futura Bold as the semantic action family and preserve Trade Gothic Condensed No. 18 as a raw utility family until a fourth semantic lane is approved.
+      source_basis: Kirkwood typography image and current semantic schema limits.
+
+open_questions: []

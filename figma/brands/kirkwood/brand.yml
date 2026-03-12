@@ -1,0 +1,95 @@
+version: 1
+updated: 2026-03-12
+brand_id: kirkwood
+display_name: Kirkwood
+status: active
+owners:
+  - design_system_governance
+supported_channels:
+  - web
+  - email
+  - ads
+design_system_file_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+staged_paths:
+  color_dir: figma/brands/kirkwood/color
+  typography_dir: figma/brands/kirkwood/typography
+source_references:
+  - figma/brands/kirkwood/color/intake.yml
+  - figma/brands/kirkwood/color/preview.md
+  - figma/brands/kirkwood/typography/intake.yml
+  - figma/brands/kirkwood/typography/preview.md
+figma:
+  design_system_file_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+  global_collections:
+    color_id: VariableCollectionId:23:2
+    typography_id: VariableCollectionId:23:3
+    dimensions_id: VariableCollectionId:23:4
+  semantic_extensions:
+    color:
+      collection_name: Kirkwood
+      collection_id: VariableCollectionId:55:665
+      parent_collection: "Semantic: Color"
+      parent_collection_id: VariableCollectionId:41:135
+    typography:
+      collection_name: Kirkwood
+      collection_id: VariableCollectionId:55:666
+      parent_collection: "Semantic: Typography"
+      parent_collection_id: VariableCollectionId:38:114
+artifacts:
+  color:
+    intake_artifact: figma/brands/kirkwood/color/intake.yml
+    preview_artifact: figma/brands/kirkwood/color/preview.md
+    decision_artifacts:
+      - figma/decisions/2026-03-12-kirkwood-foundations-written-to-figma.md
+  typography:
+    intake_artifact: figma/brands/kirkwood/typography/intake.yml
+    preview_artifact: figma/brands/kirkwood/typography/preview.md
+    decision_artifacts:
+      - figma/decisions/2026-03-12-kirkwood-foundations-written-to-figma.md
+semantic_overrides:
+  color:
+    status: active
+    override_scopes:
+      - semantic_slot: brand
+        raw_family: kirkwood/orange_021_c
+      - semantic_slot: brand_secondary
+        raw_family: kirkwood/blue_648_c
+      - semantic_slot: brand_tertiary
+        raw_family: kirkwood/teal_633_c
+      - semantic_slot: neutral
+        raw_family: kirkwood/cool_gray
+    inherited_from_base:
+      - positive/*
+      - warning/*
+      - negative/*
+    notes:
+      - Kirkwood's `642 C` pale blue is intentionally absorbed into the branded neutral ladder rather than creating a fourth semantic accent family.
+      - Exact white and black are preserved inside the neutral ladder because the supplied foundational palette treats them as a governed brand system alongside the cool grays.
+  typography:
+    status: active
+    override_scopes:
+      - semantic_token: family/heading
+        alias_of: kirkwood/family/primary
+      - semantic_token: family/body
+        alias_of: kirkwood/family/secondary
+      - semantic_token: family/action
+        alias_of: kirkwood/family/action
+      - semantic_token: weight/heading/base
+        alias_of: universal/weight/bold
+      - semantic_token: weight/body/base
+        alias_of: universal/weight/normal
+      - semantic_token: weight/action/base
+        alias_of: universal/weight/bold
+    inherited_from_base:
+      - family/heading_safe
+      - family/body_safe
+      - family/action_safe
+      - weight/heading/strong
+      - weight/body/strong
+      - size/*
+    notes:
+      - Trade Gothic Bold Condensed No. 20 drives the headline lane, Avenir Next remains the reading family, and Futura Bold stages as the action-emphasis family.
+      - `kirkwood/family/utility` preserves Trade Gothic Condensed No. 18 as a raw primitive because the current semantic typography schema has no stable fourth family slot for limited-space emphasis.
+notes:
+  - Kirkwood is live in the Design System file with four raw color families, four raw typography family primitives, and semantic color and typography extensions.
+  - Governance exception: the Kirkwood write occurred before preview review was completed, so the decision log and preview artifacts explicitly record the sequencing defect.

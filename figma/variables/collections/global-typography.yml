@@ -1,5 +1,5 @@
 version: 1
-updated: 2026-03-11
+updated: 2026-03-12
 figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
 collection:
   name: '_Global: Typography'
@@ -8,7 +8,7 @@ collection:
   category: typography
   mode: values
   status: active
-  figma_variable_count: 21
+  figma_variable_count: 30
 tokens:
 - name: universal/family/primary
   type: string
@@ -42,9 +42,45 @@ tokens:
   type: string
   value: New Order
   status: active
+- name: heavenly/family/primary
+  type: string
+  value: Din Condensed
+  status: active
+- name: heavenly/family/secondary
+  type: string
+  value: Brandon Grotesque
+  status: active
+- name: kirkwood/family/primary
+  type: string
+  value: Trade Gothic Bold Condensed No. 20
+  status: active
+- name: kirkwood/family/secondary
+  type: string
+  value: Avenir Next
+  status: active
+- name: kirkwood/family/action
+  type: string
+  value: Futura Bold
+  status: active
+- name: kirkwood/family/utility
+  type: string
+  value: Trade Gothic Condensed No. 18
+  status: active
+- name: keystone/family/primary
+  type: string
+  value: Futura
+  status: active
+- name: keystone/family/secondary
+  type: string
+  value: Avenir
+  status: active
 - name: universal/weight/normal
   type: float
   value: 400
+  status: active
+- name: universal/weight/light
+  type: float
+  value: 300
   status: active
 - name: universal/weight/medium
   type: float

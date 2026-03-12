@@ -1,0 +1,253 @@
+date: 2026-03-11
+brand: heavenly
+source_reference: User-provided image in chat showing the Heavenly color palette
+source_type: image
+figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+status: active
+preview:
+  required_before_write: true
+  artifact: figma/brands/heavenly/color/preview.md
+  status: written_in_figma
+
+source_swatches:
+  - source_name: Fresh Powder White
+    provided_value: "#ffffff"
+    source_usage_scope: primary_brand_palette
+    channel_restrictions: not specified in source
+    notes: Source image lists RGB 255 255 255, CMYK 0 0 0 0, and HEX #FFFFFF.
+  - source_name: Mountain Shadow Black
+    provided_value: "#000000"
+    source_usage_scope: primary_brand_palette
+    channel_restrictions: not specified in source
+    notes: Source image lists RGB 0 0 0, CMYK 75 68 67 90, and HEX #000000.
+  - source_name: Snow Flower Red
+    provided_value: "#cb1f30"
+    source_usage_scope: primary_brand_palette
+    channel_restrictions: not specified in source
+    notes: Source image lists RGB 204 32 49, CMYK 13 100 89 4, and HEX #CB1F30.
+  - source_name: Deep Water Blue
+    provided_value: "#1e5eb9"
+    source_usage_scope: supporting_brand_palette
+    channel_restrictions: not specified in source
+    notes: Source image lists RGB 30 94 185, CMYK 88 67 0 0, and HEX #1E5EB9.
+  - source_name: Shore Blue
+    provided_value: "#54c3f2"
+    source_usage_scope: supporting_brand_palette
+    channel_restrictions: not specified in source
+    notes: Source image lists RGB 84 195 242, CMYK 57 0 4 0, and HEX #54C3F2.
+
+universal_reuse:
+  reuse_universal:
+    - source_name: Fresh Powder White
+      existing_token: universal/white
+      reason: Exact match to the existing universal white primitive.
+    - source_name: Mountain Shadow Black
+      existing_token: universal/black
+      reason: Exact match to the existing universal black primitive.
+  new_brand_families:
+    - family: snow_flower_red
+      source_name: Snow Flower Red
+      provided_value: "#cb1f30"
+      rationale: The red swatch is the strongest brand-signature accent in both the palette image and the supplied typography examples.
+      anchor_step: 600
+      anchor_label: 600_source
+    - family: deep_water_blue
+      source_name: Deep Water Blue
+      provided_value: "#1e5eb9"
+      rationale: The darker blue is a distinct brand support ladder that can carry secondary emphasis without colliding with shared feedback blues.
+      anchor_step: 700
+      anchor_label: 700_source
+    - family: shore_blue
+      source_name: Shore Blue
+      provided_value: "#54c3f2"
+      rationale: The lighter cyan-blue is materially distinct from the darker blue and reads as a tertiary accent family rather than a neutral.
+      anchor_step: 300
+      anchor_label: 300_source
+  hold_for_review: []
+
+scale_spec:
+  working_space: OKLCH
+  steps:
+    - 50
+    - 100
+    - 200
+    - 300
+    - 400
+    - 500
+    - 600
+    - 700
+    - 800
+    - 900
+    - 950
+  contrast_targets:
+    white:
+      "800": "4.5:1 preferred"
+      "900": "7:1 required"
+      "950": "7:1 required"
+    black:
+      "50": "7:1 required"
+      "100": "7:1 required"
+      "200": "4.5:1 required"
+
+family_scales:
+  - family: snow_flower_red
+    source_name: Snow Flower Red
+    source_value: "#cb1f30"
+    source_anchor: 600_source
+    tokens:
+      - name: heavenly/snow_flower_red/50
+        value: "#fff1f3"
+        source_anchor: false
+      - name: heavenly/snow_flower_red/100
+        value: "#ffe0e5"
+        source_anchor: false
+      - name: heavenly/snow_flower_red/200
+        value: "#ffc7d0"
+        source_anchor: false
+      - name: heavenly/snow_flower_red/300
+        value: "#ff9aa8"
+        source_anchor: false
+      - name: heavenly/snow_flower_red/400
+        value: "#f8677c"
+        source_anchor: false
+      - name: heavenly/snow_flower_red/500
+        value: "#e33f54"
+        source_anchor: false
+      - name: heavenly/snow_flower_red/600
+        value: "#cb1f30"
+        source_anchor: true
+      - name: heavenly/snow_flower_red/700
+        value: "#a10f21"
+        source_anchor: false
+      - name: heavenly/snow_flower_red/800
+        value: "#7b0918"
+        source_anchor: false
+      - name: heavenly/snow_flower_red/900
+        value: "#540410"
+        source_anchor: false
+      - name: heavenly/snow_flower_red/950
+        value: "#320107"
+        source_anchor: false
+  - family: deep_water_blue
+    source_name: Deep Water Blue
+    source_value: "#1e5eb9"
+    source_anchor: 700_source
+    tokens:
+      - name: heavenly/deep_water_blue/50
+        value: "#f2f8ff"
+        source_anchor: false
+      - name: heavenly/deep_water_blue/100
+        value: "#e2eeff"
+        source_anchor: false
+      - name: heavenly/deep_water_blue/200
+        value: "#c7ddff"
+        source_anchor: false
+      - name: heavenly/deep_water_blue/300
+        value: "#a6c6f8"
+        source_anchor: false
+      - name: heavenly/deep_water_blue/400
+        value: "#7ea8ea"
+        source_anchor: false
+      - name: heavenly/deep_water_blue/500
+        value: "#5c8ddc"
+        source_anchor: false
+      - name: heavenly/deep_water_blue/600
+        value: "#3c74cb"
+        source_anchor: false
+      - name: heavenly/deep_water_blue/700
+        value: "#1e5eb9"
+        source_anchor: true
+      - name: heavenly/deep_water_blue/800
+        value: "#12428d"
+        source_anchor: false
+      - name: heavenly/deep_water_blue/900
+        value: "#082a61"
+        source_anchor: false
+      - name: heavenly/deep_water_blue/950
+        value: "#03173a"
+        source_anchor: false
+  - family: shore_blue
+    source_name: Shore Blue
+    source_value: "#54c3f2"
+    source_anchor: 300_source
+    tokens:
+      - name: heavenly/shore_blue/50
+        value: "#f1fcff"
+        source_anchor: false
+      - name: heavenly/shore_blue/100
+        value: "#ddf7ff"
+        source_anchor: false
+      - name: heavenly/shore_blue/200
+        value: "#bdefff"
+        source_anchor: false
+      - name: heavenly/shore_blue/300
+        value: "#54c3f2"
+        source_anchor: true
+      - name: heavenly/shore_blue/400
+        value: "#2baada"
+        source_anchor: false
+      - name: heavenly/shore_blue/500
+        value: "#0f8fbc"
+        source_anchor: false
+      - name: heavenly/shore_blue/600
+        value: "#00729a"
+        source_anchor: false
+      - name: heavenly/shore_blue/700
+        value: "#005979"
+        source_anchor: false
+      - name: heavenly/shore_blue/800
+        value: "#00405a"
+        source_anchor: false
+      - name: heavenly/shore_blue/900
+        value: "#00293c"
+        source_anchor: false
+      - name: heavenly/shore_blue/950
+        value: "#001824"
+        source_anchor: false
+
+validation:
+  perceptual_consistency_notes:
+    - Snow Flower Red lands at 600 because the supplied swatch behaves as a vivid mid-dark brand accent rather than an extreme dark tone.
+    - Deep Water Blue lands at 700 because the source value is already a dark, high-contrast support color with room for deeper white-contrast steps.
+    - Shore Blue lands at 300 because the supplied swatch reads as a bright highlight accent rather than a middle-value core brand tone.
+    - White and black are exact universal matches and should not be duplicated under the Heavenly group.
+  contrast_checks:
+    - token: heavenly/snow_flower_red/700
+      foreground: white
+      ratio: "7.60:1"
+      result: pass
+    - token: heavenly/deep_water_blue/700
+      foreground: white
+      ratio: "6.35:1"
+      result: pass
+    - token: heavenly/shore_blue/900
+      foreground: white
+      ratio: "14.24:1"
+      result: pass
+    - token: heavenly/deep_water_blue/100
+      foreground: black
+      ratio: "17.89:1"
+      result: pass
+
+review_readiness:
+  intended_review_channels:
+    - web
+    - email
+    - ads
+  review_rules:
+    - subject: Heavenly white and black
+      channels:
+        - web
+        - email
+        - ads
+      rule: Reuse universal white and universal black instead of creating duplicate Heavenly exact tokens.
+      source_basis: The supplied palette matches the governed universal exact values.
+    - subject: Heavenly primary palette
+      channels:
+        - web
+        - email
+        - ads
+      rule: Treat Snow Flower Red as the primary brand ladder, Deep Water Blue as the secondary ladder, and Shore Blue as the tertiary accent ladder unless a broader brand guide says otherwise.
+      source_basis: The palette image presents these as the remaining non-neutral brand-defining colors and the typography sample visually emphasizes the red system.
+
+open_questions: []

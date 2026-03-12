@@ -1,0 +1,96 @@
+version: 1
+updated: 2026-03-11
+brand_id: heavenly
+display_name: Heavenly
+status: active
+owners:
+  - design_system_governance
+supported_channels:
+  - web
+  - email
+  - ads
+design_system_file_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+staged_paths:
+  color_dir: figma/brands/heavenly/color
+  typography_dir: figma/brands/heavenly/typography
+source_references:
+  - figma/brands/heavenly/color/intake.yml
+  - figma/brands/heavenly/color/preview.md
+  - figma/brands/heavenly/typography/intake.yml
+  - figma/brands/heavenly/typography/preview.md
+figma:
+  design_system_file_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+  global_collections:
+    color_id: VariableCollectionId:23:2
+    typography_id: VariableCollectionId:23:3
+    dimensions_id: VariableCollectionId:23:4
+  semantic_extensions:
+    color:
+      collection_name: Heavenly
+      collection_id: VariableCollectionId:53:576
+      parent_collection: "Semantic: Color"
+      parent_collection_id: VariableCollectionId:41:135
+    typography:
+      collection_name: Heavenly
+      collection_id: VariableCollectionId:53:577
+      parent_collection: "Semantic: Typography"
+      parent_collection_id: VariableCollectionId:38:114
+artifacts:
+  color:
+    intake_artifact: figma/brands/heavenly/color/intake.yml
+    preview_artifact: figma/brands/heavenly/color/preview.md
+    decision_artifacts:
+      - figma/decisions/2026-03-11-heavenly-staged-foundations-from-source-images.md
+      - figma/decisions/2026-03-11-heavenly-foundations-written-to-figma.md
+  typography:
+    intake_artifact: figma/brands/heavenly/typography/intake.yml
+    preview_artifact: figma/brands/heavenly/typography/preview.md
+    decision_artifacts:
+      - figma/decisions/2026-03-11-heavenly-staged-foundations-from-source-images.md
+      - figma/decisions/2026-03-11-heavenly-foundations-written-to-figma.md
+semantic_overrides:
+  color:
+    status: active
+    override_scopes:
+      - semantic_slot: brand
+        raw_family: heavenly/snow_flower_red
+      - semantic_slot: brand_secondary
+        raw_family: heavenly/deep_water_blue
+      - semantic_slot: brand_tertiary
+        raw_family: heavenly/shore_blue
+    inherited_from_base:
+      - neutral/*
+      - positive/*
+      - warning/*
+      - negative/*
+    notes:
+      - Exact white and black are direct matches to universal primitives and should remain inherited rather than duplicated under the Heavenly brand group.
+      - The live Heavenly semantic color extension maps `brand/*` to `snow_flower_red/*`, `brand_secondary/*` to `deep_water_blue/*`, and `brand_tertiary/*` to `shore_blue/*`.
+  typography:
+    status: active
+    override_scopes:
+      - semantic_token: family/heading
+        alias_of: heavenly/family/primary
+      - semantic_token: family/body
+        alias_of: heavenly/family/secondary
+      - semantic_token: weight/heading/base
+        alias_of: universal/weight/light
+      - semantic_token: weight/heading/strong
+        alias_of: universal/weight/bold
+      - semantic_token: weight/body/base
+        alias_of: universal/weight/normal
+      - semantic_token: weight/body/strong
+        alias_of: universal/weight/medium
+    inherited_from_base:
+      - family/heading_safe
+      - family/body_safe
+      - family/action
+      - family/action_safe
+      - weight/action/*
+      - size/*
+    notes:
+      - Heavenly stages on a two-family system: Din Condensed for titles and headlines, and Brandon Grotesque for subheads and body copy.
+      - CTA typography remains intentionally inherited because the supplied image specifies CTA tracking but does not explicitly name a CTA family or weight.
+      - The shared semantic typography base now also includes `weight/heading/strong`, `weight/body/strong`, and `size/body/lg` so the Heavenly extension can override against governed base variables rather than a parallel schema.
+notes:
+  - Heavenly is live in the Design System file with global color ladders, two global typography families, the shared raw light weight, and semantic color and typography extensions.
