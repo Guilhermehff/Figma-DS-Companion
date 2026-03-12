@@ -1,5 +1,5 @@
-version: 4
-updated: 2026-03-11
+version: 5
+updated: 2026-03-12
 owner: vail_resorts
 scope:
   purpose: Token naming and structure rules for the Vail Resorts Design System
@@ -7,7 +7,6 @@ scope:
     - global_tokens
     - semantic_tokens
     - channel_tokens
-    - component_scoped_variables
 
 principles:
   - Global tokens are raw values only and do not carry UI meaning.
@@ -28,12 +27,8 @@ governance_sources:
   reserved_groups:
     - universal
   brand_manifest_source: figma/brands/registry.yml
-  variable_index_source: figma/variables/index.yml
-  generated_registry_path: figma/variables/registry.yml
   notes:
     - Governed brand ids come from the brand manifest registry instead of a hardcoded taxonomy list.
-    - figma/variables/index.yml describes optional local collection and compatibility exports.
-    - figma/variables/registry.yml may be generated on demand and must not be hand-edited when present.
 
 token_levels:
   global:
@@ -54,10 +49,10 @@ token_levels:
         - use underscore for decimal scale keys in Figma (for example 0_5, 1_5)
       examples:
         - universal/slate/50
-        - vail/blue/600
+        - vail/digital_blue/600
         - universal/family/primary
         - universal/family/web_safe
-        - park_city/family/primary
+        - northstar/family/primary
         - space/4
 
   semantic:
@@ -173,14 +168,6 @@ deprecation_lifecycle:
     - Deprecated tokens or manifests must retain a replacement or migration note until they are removed.
     - Removed items should disappear from active inventories but remain discoverable through historical decisions or archived artifacts.
 
-registry_generation:
-  source_index: figma/variables/index.yml
-  generated_export: figma/variables/registry.yml
-  rules:
-    - Maintain local collection or extension manifests only when an audit or compatibility export is explicitly requested.
-    - Treat figma/variables/registry.yml as an optional compatibility export for broad reads and diffs.
-    - If local brand extension exports are created, they should track only material overrides and should not restate inherited base aliases.
-
 brand_color_foundations:
   description: "Rules for evaluating and expanding brand-specific color families inside `_Global: Color`"
   applies_to:
@@ -206,7 +193,7 @@ brand_color_foundations:
     examples:
       - vail/digital_blue/500
       - vail/navy/600
-      - beaver_creek/gold/500
+      - northstar/copper/500
     source_anchor_notation:
       format: "<step>_source"
       scope: documentation_only
@@ -361,7 +348,7 @@ brand_typography_foundations:
       examples:
         - vail/family/display
         - vail/family/primary
-        - beaver_creek/family/accent
+        - breckenridge/family/secondary
     weight_naming:
       format: "<group>/weight/<weight_key>"
       notes:
@@ -488,18 +475,6 @@ brand_typography_foundations:
     - hold_for_review_summary_when_needed
     - preview_artifact_before_write
 
-component_scoped_variables:
-  description: Variables scoped to a component or pattern
-  rules:
-    - Only introduce if semantic and channel tokens cannot cover the need.
-    - Must reference which component owns it.
-    - Must not duplicate global or semantic scales.
-  naming:
-    format: "component/<component_name>/<part>/<property>/<state_optional>"
-    examples:
-      - component/button/container/color/default
-      - component/input/border/color/focus
-
 required_fields:
   - level
   - collection
@@ -539,4 +514,3 @@ review_checks:
   - Flag typography artifacts that omit semantic safe aliases or downstream review guidance for email and other constrained channels.
   - "Flag `Semantic: Typography` inventories that use flat raw-like weight or size aliases such as weight/medium or size/300 instead of approved role-scoped semantic ladders."
   - Flag typography proposals that do not include a preview artifact before write.
-  - If `figma/variables/registry.yml` is created, flag direct manual edits instead of regenerating it from `figma/variables/index.yml`.

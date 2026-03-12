@@ -16,6 +16,7 @@ Do not treat this repository as the live source of truth for tokens, variables, 
 - This repository is a companion layer for brand governance, brand metadata, intake artifacts, decision history, and minimal operating guidance.
 - Prefer updating a canonical existing file over creating a new parallel note, report, or duplicate process document.
 - Keep repo artifacts lean. If a file mostly mirrors live Figma state and is not needed for an active audit, export, or decision record, it is a cleanup candidate.
+- Do not create local component inventories or component specs unless the user explicitly asks for component governance work.
 
 ## Primary goals
 
@@ -200,7 +201,7 @@ Do not invent new conventions silently.
 - figma/brands/<brand>/brand.yml is the canonical per-brand metadata record.
 - figma/variables/index.yml is the optional export manifest for local collection snapshots and compatibility exports.
 - figma/variables/registry.yml, when present, is an on-demand generated compatibility export and must not be hand-edited.
-- figma/templates/variable-audit.md, figma/templates/component-spec.md, figma/templates/decision-log.md must be used for repeatable output.
+- figma/templates/variable-audit.md and figma/templates/decision-log.md must be used for repeatable output when those artifact types are requested.
 - Preserve decision history. Record governance changes in figma/decisions rather than overwriting prior decisions silently.
 
 ## Repository map
@@ -209,7 +210,6 @@ Do not invent new conventions silently.
 - figma/brands: brand registry, per-brand manifests, and staged brand artifacts
 - figma/variables: optional local exports, collection snapshots, and naming proposals
 - figma/history: migrated dated artifacts that are no longer current source files
-- figma/components: inventories and component level specs
 - figma/templates: reusable output templates
 - docs: minimal MCP setup and recovery guidance only
 
@@ -219,6 +219,7 @@ Do not invent new conventions silently.
 - Prefer Markdown for audits, decisions, and narrative documentation.
 - Keep Figma provenance in canonical artifacts such as `figma/brands/<brand>/brand.yml`, intake YAML, and node-specific specs or audits.
 - Preview Markdown may omit repeated Figma file links or node IDs when that provenance is already captured in the linked canonical artifact.
+- Create local component inventories or specs only when the user explicitly requests component governance artifacts.
 - Avoid duplicating process guidance across `AGENTS.md`, `docs/`, and `figma/docs/`. If the same rule appears in multiple places, consolidate toward one canonical location and simplify the rest.
 - When brand documentation contains contradictions, missing provenance, stale write status, broken cross-references, or other documentation defects, call them out explicitly and fix or log them as part of the governance task instead of leaving them implicit.
 - Date new reports using ISO format (YYYY-MM-DD).
