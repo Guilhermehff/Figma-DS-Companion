@@ -175,7 +175,7 @@ When creating or updating a Semantic extension collection in the Design System f
 6. Sync repo state immediately
    - Persist the extension collection ID and any approved non-obvious mapping notes back into `figma/brands/<brand>/brand.yml`.
    - Create dated files under `figma/exports/` only when a local audit or export is explicitly requested.
-   - Create or rebuild dated compatibility exports under `figma/exports/` only when a local compatibility export is explicitly requested.
+   - Treat any files under `figma/exports/` as manual dated snapshots, not as a maintained registry pipeline.
 
 7. Treat cached inventory reads carefully
    - `figma_get_variables` may lag after a write.
@@ -223,8 +223,8 @@ Decision log requirements:
 - figma/config/variable-taxonomy.yml is the governing taxonomy and must match this AGENTS.md.
 - figma/brands/registry.yml is the governed source of truth for which brands currently exist in repo governance.
 - figma/brands/<brand>/brand.yml is the canonical per-brand metadata record.
-- figma/exports/index.yml is the optional manifest for dated local exports and compatibility snapshots.
-- Exports under figma/exports may be out of date relative to live Figma, must use `YYYY-MM-DD-` filename prefixes, and generated compatibility exports there must not be hand-edited.
+- figma/exports/index.yml is the optional manifest for dated manual exports and snapshot references.
+- Exports under figma/exports may be out of date relative to live Figma and must use `YYYY-MM-DD-` filename prefixes.
 - figma/templates/variable-audit.md and figma/templates/decision-log.md must be used for repeatable output when those artifact types are requested.
 - Preserve decision history. Record governance changes in figma/decisions rather than overwriting prior decisions silently.
 
@@ -232,7 +232,7 @@ Decision log requirements:
 
 - figma/config: taxonomies and governance rules
 - figma/brands: brand registry, per-brand manifests, and staged brand artifacts
-- figma/exports: optional dated local exports and compatibility snapshots
+- figma/exports: optional dated manual exports and snapshot references
 - figma/history: migrated dated artifacts that are no longer current source files
 - figma/templates: reusable output templates
 - docs: minimal MCP setup and recovery guidance only

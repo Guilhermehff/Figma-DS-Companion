@@ -16,7 +16,7 @@ Do not use the remote Figma MCP server as the primary governance path for this r
 
 - If `mcp__figma_console__figma_get_status` reports that the Desktop Bridge plugin is not connected, reopen the plugin in Figma Desktop.
 - If the server reports a fallback port or stale plugin connection, re-import the Desktop Bridge plugin from the local Figma Console MCP install and reopen it in the target file.
-- If stale local MCP listeners have accumulated, run `python3 -m scripts.figma_governance reset-mcp` before restarting the server. Add `--keep-port <port>` only when you intentionally need to preserve one active listener.
+- If stale local MCP listeners have accumulated, run `python3 -m scripts.figma_governance reset-mcp` before restarting the server. By default it scans the broader fallback-safe range `9223-9235`. Add `--keep-port <port>` only when you intentionally need to preserve one active listener.
 - If the active file is unclear, stop and confirm the target before any write.
 
 ## Scope

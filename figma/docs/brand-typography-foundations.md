@@ -39,8 +39,8 @@ When a local export is explicitly requested, store the dated snapshot under `fig
 
 - Raw family, weight, and size primitives belong in `_Global: Typography`.
 - Shared semantic ladders belong in `Semantic: Typography`.
-- Brand semantic overrides live in Figma. Create dated exports under `figma/exports/` only when an audit or compatibility export is explicitly requested.
-- Compatibility exports under `figma/exports/` are on-demand snapshots and should not be hand-edited.
+- Brand semantic overrides live in Figma. Create dated exports under `figma/exports/` only when an audit or manual snapshot is explicitly requested.
+- Treat exports under `figma/exports/` as dated reference snapshots, not as live governance state.
 
 ## Templates
 

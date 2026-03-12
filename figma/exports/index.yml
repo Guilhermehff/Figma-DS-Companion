@@ -2,10 +2,9 @@ version: 1
 updated: 2026-03-12
 purpose: optional_local_exports
 freshness_warning: Exports in this folder are dated snapshots from Figma and may be out of date relative to the live file. Verify current state in Figma before relying on them.
-generated_registry_path: figma/exports/YYYY-MM-DD-registry.yml
 collections: []
 extensions: []
 notes:
-  - Use this folder only for optional exports requested for audits, diffs, or compatibility reads.
+  - Use this folder only for optional exports requested for audits, diffs, or manual reference snapshots.
   - Do not treat exports here as live governance state.
   - Every export filename must start with YYYY-MM-DD-.
