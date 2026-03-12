@@ -1,6 +1,8 @@
 from __future__ import annotations
 
 from pathlib import Path
+import signal
+import subprocess
 
 import pytest
 import yaml
@@ -8,8 +10,12 @@ import yaml
 from scripts.figma_governance.core import (
     DOC_RULES,
     GovernanceError,
+    MCP_PORT_END,
+    MCP_PORT_START,
     ROOT,
     build_registry,
+    list_mcp_port_listeners,
+    reset_mcp_listeners,
     validate_brand_manifest,
     validate_export_inputs,
     validate_extension_snapshot,
@@ -343,6 +349,122 @@ def test_check_docs_rejects_legacy_guidance(tmp_path: Path) -> None:
         rule_name for rule_name, pattern in DOC_RULES.items() if pattern.search(text)
     ]
     assert errors
+
+
+def test_list_mcp_port_listeners_parses_lsof_output() -> None:
+    def fake_runner(*_args: object, **_kwargs: object) -> subprocess.CompletedProcess[str]:
+        return subprocess.CompletedProcess(
+            args=["lsof"],
+            returncode=0,
+            stdout="\n".join(
+                [
+                    "p60652",
+                    "cnode",
+                    "f18",
+                    "n[::1]:9223",
+                    "p70117",
+                    "cbun",
+                    "f19",
+                    "n127.0.0.1:9226",
+                ]
+            ),
+            stderr="",
+        )
+
+    listeners = list_mcp_port_listeners(
+        port_start=MCP_PORT_START,
+        port_end=MCP_PORT_END,
+        runner=fake_runner,
+    )
+
+    assert [(listener.pid, listener.port, listener.command) for listener in listeners] == [
+        (60652, 9223, "node"),
+        (70117, 9226, "bun"),
+    ]
+
+
+def test_reset_mcp_listeners_terminates_all_non_preserved_ports() -> None:
+    killed: list[tuple[int, int]] = []
+
+    def fake_runner(*_args: object, **_kwargs: object) -> subprocess.CompletedProcess[str]:
+        return subprocess.CompletedProcess(
+            args=["lsof"],
+            returncode=0,
+            stdout="\n".join(
+                [
+                    "p60652",
+                    "cnode",
+                    "f18",
+                    "n[::1]:9223",
+                    "p65997",
+                    "cnode",
+                    "f18",
+                    "n[::1]:9224",
+                ]
+            ),
+            stderr="",
+        )
+
+    def fake_killer(pid: int, sig: int) -> None:
+        killed.append((pid, sig))
+
+    result = reset_mcp_listeners(
+        keep_ports={9224},
+        runner=fake_runner,
+        killer=fake_killer,
+    )
+
+    assert [(listener.pid, listener.port) for listener in result.terminated] == [(60652, 9223)]
+    assert [(listener.pid, listener.port) for listener in result.preserved] == [(65997, 9224)]
+    assert killed == [(60652, signal.SIGTERM)]
+
+
+def test_reset_mcp_listeners_dry_run_skips_sigterm() -> None:
+    killed: list[tuple[int, int]] = []
+
+    def fake_runner(*_args: object, **_kwargs: object) -> subprocess.CompletedProcess[str]:
+        return subprocess.CompletedProcess(
+            args=["lsof"],
+            returncode=0,
+            stdout="\n".join(
+                [
+                    "p70117",
+                    "cnode",
+                    "f19",
+                    "n[::1]:9226",
+                ]
+            ),
+            stderr="",
+        )
+
+    result = reset_mcp_listeners(
+        dry_run=True,
+        runner=fake_runner,
+        killer=lambda pid, sig: killed.append((pid, sig)),
+    )
+
+    assert [(listener.pid, listener.port) for listener in result.terminated] == [(70117, 9226)]
+    assert killed == []
+
+
+def test_reset_mcp_listeners_rejects_non_mcp_listener() -> None:
+    def fake_runner(*_args: object, **_kwargs: object) -> subprocess.CompletedProcess[str]:
+        return subprocess.CompletedProcess(
+            args=["lsof"],
+            returncode=0,
+            stdout="\n".join(
+                [
+                    "p60652",
+                    "cpython",
+                    "f18",
+                    "n[::1]:9223",
+                ]
+            ),
+            stderr="",
+        )
+
+    with pytest.raises(GovernanceError, match="non-MCP listeners were found"):
+        reset_mcp_listeners(runner=fake_runner)
 
 
 def test_validate_repo_passes() -> None:

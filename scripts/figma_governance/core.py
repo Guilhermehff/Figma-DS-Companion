@@ -1,16 +1,22 @@
 from __future__ import annotations
 
+from dataclasses import dataclass
 from pathlib import Path
+import os
 import re
+import signal
+import subprocess
 from typing import Any
 
 import yaml
 
 ROOT = Path(__file__).resolve().parents[2]
+MCP_PORT_START = 9223
+MCP_PORT_END = 9227
+MCP_MANAGED_COMMANDS = frozenset({"node", "bun"})
 ACTIVE_DOCS = [
     ROOT / "AGENTS.md",
     ROOT / "docs/mcp-setup.md",
-    ROOT / "docs/workspace-guide.md",
     ROOT / "figma/docs/brand-color-foundations.md",
     ROOT / "figma/docs/brand-typography-foundations.md",
 ]
@@ -28,6 +34,21 @@ class GovernanceError(RuntimeError):
     """Raised when validation cannot proceed."""
 
 
+@dataclass(frozen=True)
+class McpPortListener:
+    pid: int
+    port: int
+    command: str
+    endpoint: str
+
+
+@dataclass(frozen=True)
+class McpResetResult:
+    listeners: list[McpPortListener]
+    terminated: list[McpPortListener]
+    preserved: list[McpPortListener]
+
+
 def load_yaml(path: Path) -> Any:
     with path.open("r", encoding="utf-8") as handle:
         return yaml.safe_load(handle)
@@ -42,6 +63,115 @@ def dump_yaml(path: Path, data: Any) -> None:
 
 def resolve_repo_path(root: Path, relative_path: str) -> Path:
     return root / relative_path
+
+
+def _parse_mcp_listener_output(text: str) -> list[McpPortListener]:
+    listeners: list[McpPortListener] = []
+    pid: int | None = None
+    command: str | None = None
+
+    for raw_line in text.splitlines():
+        if not raw_line:
+            continue
+        field = raw_line[0]
+        value = raw_line[1:]
+        if field == "p":
+            pid = int(value)
+            command = None
+            continue
+        if field == "c":
+            command = value
+            continue
+        if field != "n" or pid is None or command is None:
+            continue
+
+        match = re.search(r":(\d+)$", value)
+        if match is None:
+            continue
+        listeners.append(
+            McpPortListener(
+                pid=pid,
+                port=int(match.group(1)),
+                command=command,
+                endpoint=value,
+            )
+        )
+
+    listeners.sort(key=lambda item: (item.port, item.pid))
+    return listeners
+
+
+def list_mcp_port_listeners(
+    *,
+    port_start: int = MCP_PORT_START,
+    port_end: int = MCP_PORT_END,
+    runner: Any = subprocess.run,
+) -> list[McpPortListener]:
+    command = [
+        "lsof",
+        "-nP",
+        f"-iTCP:{port_start}-{port_end}",
+        "-sTCP:LISTEN",
+        "-Fpcn",
+    ]
+    completed = runner(command, capture_output=True, text=True, check=False)
+    if completed.returncode not in {0, 1}:
+        detail = completed.stderr.strip() or completed.stdout.strip() or "lsof failed"
+        raise GovernanceError(detail)
+    if completed.returncode == 1 and not completed.stdout.strip():
+        return []
+    return _parse_mcp_listener_output(completed.stdout)
+
+
+def reset_mcp_listeners(
+    *,
+    port_start: int = MCP_PORT_START,
+    port_end: int = MCP_PORT_END,
+    keep_ports: set[int] | None = None,
+    dry_run: bool = False,
+    runner: Any = subprocess.run,
+    killer: Any = os.kill,
+) -> McpResetResult:
+    listeners = list_mcp_port_listeners(
+        port_start=port_start,
+        port_end=port_end,
+        runner=runner,
+    )
+    managed = [listener for listener in listeners if listener.command in MCP_MANAGED_COMMANDS]
+    unmanaged = [listener for listener in listeners if listener.command not in MCP_MANAGED_COMMANDS]
+    if unmanaged:
+        details = ", ".join(
+            f"pid={listener.pid} port={listener.port} command={listener.command}"
+            for listener in unmanaged
+        )
+        raise GovernanceError(
+            "refusing to reset reserved MCP ports because non-MCP listeners were found: "
+            f"{details}"
+        )
+
+    requested_keep_ports = set() if keep_ports is None else set(keep_ports)
+    found_ports = {listener.port for listener in managed}
+    missing_keep_ports = sorted(requested_keep_ports - found_ports)
+    if missing_keep_ports:
+        missing = ", ".join(str(port) for port in missing_keep_ports)
+        raise GovernanceError(f"requested keep port is not listening: {missing}")
+
+    preserved = [listener for listener in managed if listener.port in requested_keep_ports]
+    terminated = [listener for listener in managed if listener.port not in requested_keep_ports]
+
+    if not dry_run:
+        killed_pids: set[int] = set()
+        for listener in terminated:
+            if listener.pid in killed_pids:
+                continue
+            killer(listener.pid, signal.SIGTERM)
+            killed_pids.add(listener.pid)
+
+    return McpResetResult(
+        listeners=managed,
+        terminated=terminated,
+        preserved=preserved,
+    )
 
 
 def validate_active_docs(root: Path = ROOT) -> list[str]:

@@ -8,6 +8,14 @@ This companion is authorized to:
 2. Read and write directly in Figma using **Figma Console MCP (local)**, including creating and updating variables, collections, modes, aliases, styles, and DS helper structures.
 
 Do not treat this repository as an application codebase by default.
+Do not treat this repository as the live source of truth for tokens, variables, styles, or components when those artifacts already exist in Figma.
+
+## Companion model
+
+- Figma is the live source of truth for current variables, collections, aliases, styles, components, and write state.
+- This repository is a companion layer for brand governance, brand metadata, intake artifacts, decision history, and minimal operating guidance.
+- Prefer updating a canonical existing file over creating a new parallel note, report, or duplicate process document.
+- Keep repo artifacts lean. If a file mostly mirrors live Figma state and is not needed for an active audit, export, or decision record, it is a cleanup candidate.
 
 ## Primary goals
 
@@ -16,11 +24,13 @@ Do not treat this repository as an application codebase by default.
 - Use Figma Console MCP as the operational interface to Figma so the companion can perform write operations.
 - Keep the DS governable: consistent naming, predictable ladders, controlled changes, and traceable decisions.
 - Expand brand foundations over time (tones, fonts, typography systems, color ramps), without breaking the token schema.
+- Keep the repository focused on companion value and avoid maintenance-heavy duplication of live Figma data.
 
 ## Mandatory MCP tooling
 
 - Use **Figma Console MCP** for all Figma reads and writes.
 - Do not rely on the official remote Figma MCP server for governance work because it may not expose native write operations.
+- Keep `docs/mcp-setup.md` as the only standalone top-level setup and recovery note. Do not maintain a parallel workspace workflow guide outside `AGENTS.md` unless the user explicitly asks for it.
 
 ## Source of truth order
 
@@ -30,6 +40,7 @@ Do not treat this repository as an application codebase by default.
 4. Prior assumptions
 
 When MCP data conflicts with local notes, update the local notes unless the user says otherwise.
+When local documentation duplicates other local documentation, keep the clearest canonical version and remove or reduce the duplicate unless the user wants both preserved.
 
 ## Pre flight checklist (required before any Figma write)
 
@@ -62,7 +73,7 @@ Rules:
 - Variable names inside a collection must not repeat the collection category.
 - Brand separation at the Global level is achieved through **groups** inside that shared collection.
 - The first group is **universal**.
-- Additional groups are **brand specific** and come from `figma/brands/registry.yml`.
+- Additional groups are **brand specific** and should use the `brand_id` values governed in `figma/brands/registry.yml`.
 - Global tokens do not carry UI meaning.
 
 ### Level 2: Semantic
@@ -200,7 +211,7 @@ Do not invent new conventions silently.
 - figma/history: migrated dated artifacts that are no longer current source files
 - figma/components: inventories and component level specs
 - figma/templates: reusable output templates
-- docs: setup and onboarding guidance
+- docs: minimal MCP setup and recovery guidance only
 
 ## Output conventions
 
@@ -208,6 +219,7 @@ Do not invent new conventions silently.
 - Prefer Markdown for audits, decisions, and narrative documentation.
 - Keep Figma provenance in canonical artifacts such as `figma/brands/<brand>/brand.yml`, intake YAML, and node-specific specs or audits.
 - Preview Markdown may omit repeated Figma file links or node IDs when that provenance is already captured in the linked canonical artifact.
+- Avoid duplicating process guidance across `AGENTS.md`, `docs/`, and `figma/docs/`. If the same rule appears in multiple places, consolidate toward one canonical location and simplify the rest.
 - When brand documentation contains contradictions, missing provenance, stale write status, broken cross-references, or other documentation defects, call them out explicitly and fix or log them as part of the governance task instead of leaving them implicit.
 - Date new reports using ISO format (YYYY-MM-DD).
 
