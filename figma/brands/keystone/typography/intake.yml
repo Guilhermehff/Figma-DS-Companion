@@ -21,7 +21,7 @@ source_roles:
     size_rule: explicit 48px with 52px leading example
     punctuation_rule: not specified in source
     sample_copy: Headline
-    notes: The source explicitly says `Futura Bold / Sentence case`, `Leading: 4px difference (Ex: 48px / 52px leading)`, and `Kerning: 0%`.
+    notes: "The source explicitly says `Futura Bold / Sentence case`, `Leading: 4px difference (Ex: 48px / 52px leading)`, and `Kerning: 0%`."
   - source_role: subheadline
     source_family_name: Avenir
     source_style_name: Avenir Medium
@@ -33,7 +33,7 @@ source_roles:
     size_rule: explicit 36px with 40px leading example
     punctuation_rule: not specified in source
     sample_copy: Sub Headline
-    notes: The source explicitly says `Avenir Medium / Sentence case`, `Leading: 4px difference (Ex: 36px / 40px leading)`, and `Kerning: 0%`.
+    notes: "The source explicitly says `Avenir Medium / Sentence case`, `Leading: 4px difference (Ex: 36px / 40px leading)`, and `Kerning: 0%`."
   - source_role: body
     source_family_name: Avenir
     source_style_name: Avenir Medium
@@ -45,7 +45,7 @@ source_roles:
     size_rule: explicit 16px with 20px leading example
     punctuation_rule: sentence punctuation allowed
     sample_copy: Body Copy
-    notes: The source explicitly says `Avenir Medium / Sentence case`, `Leading: 4px difference (Ex: 16px / 20px leading)`, and `Kerning: 0%`.
+    notes: "The source explicitly says `Avenir Medium / Sentence case`, `Leading: 4px difference (Ex: 16px / 20px leading)`, and `Kerning: 0%`."
   - source_role: emphasized_body_copy
     source_family_name: Futura
     source_style_name: Futura Bold
@@ -57,7 +57,7 @@ source_roles:
     size_rule: explicit 16px with 20px leading example
     punctuation_rule: sentence punctuation allowed
     sample_copy: Emphasized body copy
-    notes: The source explicitly says `Futura Bold / Sentence case`, `Leading: 4px difference (Ex: 16px / 20px leading)`, and `Kerning: 0%`.
+    notes: "The source explicitly says `Futura Bold / Sentence case`, `Leading: 4px difference (Ex: 16px / 20px leading)`, and `Kerning: 0%`."
   - source_role: cta
     source_family_name: Futura
     source_style_name: Futura Bold
@@ -69,7 +69,7 @@ source_roles:
     size_rule: explicit 20px in CTA example
     punctuation_rule: not specified in source
     sample_copy: CTA
-    notes: User-approved review decision resolves the source contradiction in favor of the CTA example: Futura Bold in Title Case at 20px.
+    notes: "User-approved review decision resolves the source contradiction in favor of the CTA example: Futura Bold in Title Case at 20px."
 
 primitive_recommendations:
   reuse_existing:

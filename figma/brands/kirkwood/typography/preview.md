@@ -1,6 +1,6 @@
 # Kirkwood Typography Preview
 
-Status: written to `_Global: Typography`, `Semantic: Typography`, and `Kirkwood` in `Design System` on 2026-03-12 before preview review; retrospective review required
+Review state: retrospective review artifact documenting the pre-review write exception. Verify live write state in `figma/brands/kirkwood/brand.yml` and Figma.
 
 ## Original Source Roles
 

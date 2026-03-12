@@ -1,6 +1,6 @@
 # <Brand> Color Preview
 
-Status: blocked pending preview review
+Review state: pending preview review. Verify live write state in `figma/brands/<brand>/brand.yml` and Figma.
 
 ## Original Source Swatches
 

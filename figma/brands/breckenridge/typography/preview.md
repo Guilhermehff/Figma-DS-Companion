@@ -1,6 +1,6 @@
 # Breckenridge Typography Preview
 
-Status: global typography primitives are written in Figma, while Breckenridge semantic typography aliases remain staged only
+Review state: approved preview artifact. Verify live write state in `figma/brands/breckenridge/brand.yml` and Figma.
 
 ## Original Source Roles
 
@@ -119,7 +119,7 @@ Status: global typography primitives are written in Figma, while Breckenridge se
 - Proposed family token: `breckenridge/family/primary`
 - Proposed weight token: `universal/weight/bold`
 - Proposed size token: `universal/size/300`
-- Notes: CTA uses the shared raw bold weight and remains staged until the Breckenridge semantic typography extension is created.
+- Notes: CTA uses the shared raw bold weight and is now covered by the live Breckenridge semantic typography extension.
 
 ## Review Readiness
 

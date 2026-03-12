@@ -1,5 +1,5 @@
 version: 1
-updated: 2026-03-11
+updated: 2026-03-12
 brand_id: heavenly
 display_name: Heavenly
 status: active
@@ -9,15 +9,6 @@ supported_channels:
   - web
   - email
   - ads
-design_system_file_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
-staged_paths:
-  color_dir: figma/brands/heavenly/color
-  typography_dir: figma/brands/heavenly/typography
-source_references:
-  - figma/brands/heavenly/color/intake.yml
-  - figma/brands/heavenly/color/preview.md
-  - figma/brands/heavenly/typography/intake.yml
-  - figma/brands/heavenly/typography/preview.md
 figma:
   design_system_file_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
   global_collections:

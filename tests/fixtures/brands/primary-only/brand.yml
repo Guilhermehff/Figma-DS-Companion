@@ -7,13 +7,6 @@ owners:
   - governance
 supported_channels:
   - web
-design_system_file_url: https://example.com/figma/primary-only
-staged_paths:
-  color_dir: brands/primary-only/color
-  typography_dir: brands/primary-only/typography
-source_references:
-  - brands/primary-only/color-intake.yml
-  - brands/primary-only/typography-intake.yml
 figma:
   design_system_file_url: https://example.com/figma/primary-only
   global_collections:

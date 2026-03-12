@@ -268,8 +268,8 @@ family_scales:
 validation:
   perceptual_consistency_notes:
     - Orange 021 C lands at `500` because the supplied swatch behaves as a vivid mid-tone highlight rather than a dark foundation color.
-    - `648 C` lands at `800` because the supplied swatch is already a deep, high-contrast accent in the source palette.
-    - `633 C` lands at `600` because it reads as a darker mid-tone support accent rather than a pale highlight.
+    - "`648 C` lands at `800` because the supplied swatch is already a deep, high-contrast accent in the source palette."
+    - "`633 C` lands at `600` because it reads as a darker mid-tone support accent rather than a pale highlight."
     - The approved Kirkwood neutral family absorbs `642 C` at `300` and keeps exact source anchors at `50`, `100`, `300`, `700`, and `950`.
   contrast_checks:
     - token: kirkwood/orange_021_c/500

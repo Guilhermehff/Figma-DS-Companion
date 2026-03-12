@@ -1,6 +1,6 @@
 # Crested Butte Typography Preview
 
-Status: global typography primitives and semantic typography extension are written in Figma
+Review state: approved preview artifact. Verify live write state in `figma/brands/crested_butte/brand.yml` and Figma.
 
 ## Original Source Roles
 

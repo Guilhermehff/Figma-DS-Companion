@@ -5,97 +5,27 @@ brands:
     display_name: Vail
     status: active
     manifest_path: figma/brands/vail/brand.yml
-    owners:
-      - design_system_governance
-    supported_channels:
-      - web
-      - email
-      - ads
-    foundation_status:
-      color: approved
-      typography: approved
-    design_system_file_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
   - brand_id: breckenridge
     display_name: Breckenridge
     status: active
     manifest_path: figma/brands/breckenridge/brand.yml
-    owners:
-      - design_system_governance
-    supported_channels:
-      - web
-      - email
-      - ads
-    foundation_status:
-      color: approved
-      typography: approved
-    design_system_file_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
   - brand_id: crested_butte
     display_name: Crested Butte
     status: active
     manifest_path: figma/brands/crested_butte/brand.yml
-    owners:
-      - design_system_governance
-    supported_channels:
-      - web
-      - email
-      - ads
-    foundation_status:
-      color: approved
-      typography: approved
-    design_system_file_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
   - brand_id: northstar
     display_name: Northstar
     status: active
     manifest_path: figma/brands/northstar/brand.yml
-    owners:
-      - design_system_governance
-    supported_channels:
-      - web
-      - email
-      - ads
-    foundation_status:
-      color: approved
-      typography: approved
-    design_system_file_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
   - brand_id: heavenly
     display_name: Heavenly
     status: active
     manifest_path: figma/brands/heavenly/brand.yml
-    owners:
-      - design_system_governance
-    supported_channels:
-      - web
-      - email
-      - ads
-    foundation_status:
-      color: approved
-      typography: approved
-    design_system_file_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
   - brand_id: kirkwood
     display_name: Kirkwood
     status: active
     manifest_path: figma/brands/kirkwood/brand.yml
-    owners:
-      - design_system_governance
-    supported_channels:
-      - web
-      - email
-      - ads
-    foundation_status:
-      color: approved
-      typography: approved
-    design_system_file_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
   - brand_id: keystone
     display_name: Keystone
     status: active
     manifest_path: figma/brands/keystone/brand.yml
-    owners:
-      - design_system_governance
-    supported_channels:
-      - web
-      - email
-      - ads
-    foundation_status:
-      color: approved
-      typography: approved
-    design_system_file_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1

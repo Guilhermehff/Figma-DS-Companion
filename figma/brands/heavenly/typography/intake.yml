@@ -261,7 +261,7 @@ validation:
     - Heavenly uses a split-family system: Din Condensed for display work and Brandon Grotesque for supportive and body copy.
     - The source explicitly says titles and headlines keep tracking at 0 while CTAs move to tracking 50.
   governance_notes:
-    - `universal/weight/light` is staged as a proposed shared raw weight because Heavenly's headline system depends on a Light weight that is materially different from Normal.
+    - "`universal/weight/light` is staged as a proposed shared raw weight because Heavenly's headline system depends on a Light weight that is materially different from Normal."
     - CTA family and size remain open rather than guessed because the supplied image does not name them.
     - The digital note about URW Din Condensed Regular is preserved as guidance, not yet as a semantic override, until channel delivery rules are explicitly approved.
 

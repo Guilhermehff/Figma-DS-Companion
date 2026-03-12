@@ -1,6 +1,6 @@
 # Crested Butte Color Preview
 
-Status: global ladders and semantic color extension are written in Figma
+Review state: approved preview artifact. Verify live write state in `figma/brands/crested_butte/brand.yml` and Figma.
 
 ## Original Source Swatches
 

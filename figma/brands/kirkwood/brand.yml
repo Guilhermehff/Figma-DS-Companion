@@ -9,15 +9,6 @@ supported_channels:
   - web
   - email
   - ads
-design_system_file_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
-staged_paths:
-  color_dir: figma/brands/kirkwood/color
-  typography_dir: figma/brands/kirkwood/typography
-source_references:
-  - figma/brands/kirkwood/color/intake.yml
-  - figma/brands/kirkwood/color/preview.md
-  - figma/brands/kirkwood/typography/intake.yml
-  - figma/brands/kirkwood/typography/preview.md
 figma:
   design_system_file_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
   global_collections:
@@ -89,7 +80,7 @@ semantic_overrides:
       - size/*
     notes:
       - Trade Gothic Bold Condensed No. 20 drives the headline lane, Avenir Next remains the reading family, and Futura Bold stages as the action-emphasis family.
-      - `kirkwood/family/utility` preserves Trade Gothic Condensed No. 18 as a raw primitive because the current semantic typography schema has no stable fourth family slot for limited-space emphasis.
+      - "`kirkwood/family/utility` preserves Trade Gothic Condensed No. 18 as a raw primitive because the current semantic typography schema has no stable fourth family slot for limited-space emphasis."
 notes:
   - Kirkwood is live in the Design System file with four raw color families, four raw typography family primitives, and semantic color and typography extensions.
   - Governance exception: the Kirkwood write occurred before preview review was completed, so the decision log and preview artifacts explicitly record the sequencing defect.

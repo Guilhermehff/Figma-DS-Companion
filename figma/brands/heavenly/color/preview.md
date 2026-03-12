@@ -1,6 +1,6 @@
 # Heavenly Color Preview
 
-Status: approved and written to `_Global: Color`, `Semantic: Color`, and `Heavenly` in `Design System` on 2026-03-11
+Review state: approved preview artifact. Verify live write state in `figma/brands/heavenly/brand.yml` and Figma.
 
 ## Original Source Swatches
 

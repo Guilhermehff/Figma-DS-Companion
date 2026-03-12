@@ -8,13 +8,6 @@ owners:
 supported_channels:
   - web
   - email
-design_system_file_url: https://example.com/figma/multi-family
-staged_paths:
-  color_dir: brands/multi-family/color
-  typography_dir: brands/multi-family/typography
-source_references:
-  - brands/multi-family/color-intake.yml
-  - brands/multi-family/typography-intake.yml
 figma:
   design_system_file_url: https://example.com/figma/multi-family
   global_collections:

@@ -1,6 +1,6 @@
 # Keystone Typography Preview
 
-Status: approved and written to `_Global: Typography`, `Semantic: Typography`, and `Keystone` in `Design System` on 2026-03-12
+Review state: approved preview artifact. Verify live write state in `figma/brands/keystone/brand.yml` and Figma.
 
 ## Original Source Roles
 

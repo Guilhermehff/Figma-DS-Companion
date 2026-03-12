@@ -1,6 +1,6 @@
 # Vail Color Preview
 
-Status: approved and written to `_Global: Color` in `Design System` on 2026-03-10
+Review state: approved preview artifact. Verify live write state in `figma/brands/vail/brand.yml` and Figma.
 
 ## Original Source Swatches
 
@@ -156,7 +156,7 @@ Hex values:
 
 - The preview confirms that the darkest `900` and `950` steps across all three families remain visually aligned enough to support white foreground use.
 - `Vail Gray` is treated as a universal neutral use, not a new brand family.
-- The approved preview has been implemented in Figma as global color primitives.
+- The approved preview is now reflected in Figma through global color primitives and the live Vail semantic color extension.
 
 ## Review Readiness
 

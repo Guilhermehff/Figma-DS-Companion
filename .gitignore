@@ -12,6 +12,5 @@ build/
 __pycache__/
 
 figma/inbox/.gitkeep
-figma/audits/.gitkeep
 figma/docs/.gitkeep
 figma/decisions/.gitkeep

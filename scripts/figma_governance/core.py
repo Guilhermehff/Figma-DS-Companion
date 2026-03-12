@@ -188,7 +188,7 @@ def validate_active_docs(root: Path = ROOT) -> list[str]:
 def validate_brand_manifest(path: Path, root: Path = ROOT) -> list[str]:
     data = load_yaml(path)
     errors: list[str] = []
-    required_scalars = ["brand_id", "display_name", "status", "design_system_file_url"]
+    required_scalars = ["brand_id", "display_name", "status"]
     for field in required_scalars:
         if not data.get(field):
             errors.append(f"{path.relative_to(root)}: missing `{field}`")
@@ -197,19 +197,6 @@ def validate_brand_manifest(path: Path, root: Path = ROOT) -> list[str]:
         errors.append(f"{path.relative_to(root)}: missing `owners`")
     if not data.get("supported_channels"):
         errors.append(f"{path.relative_to(root)}: missing `supported_channels`")
-
-    staged_paths = data.get("staged_paths", {})
-    for field in ["color_dir", "typography_dir"]:
-        staged_path = staged_paths.get(field)
-        if not staged_path:
-            errors.append(f"{path.relative_to(root)}: missing `staged_paths.{field}`")
-            continue
-        if not resolve_repo_path(root, staged_path).exists():
-            errors.append(f"{path.relative_to(root)}: staged path `{staged_path}` does not exist")
-
-    for source_path in data.get("source_references", []):
-        if not resolve_repo_path(root, source_path).exists():
-            errors.append(f"{path.relative_to(root)}: source reference `{source_path}` does not exist")
 
     figma = data.get("figma", {})
     if not figma.get("design_system_file_url"):
@@ -240,6 +227,15 @@ def validate_brand_manifest(path: Path, root: Path = ROOT) -> list[str]:
                 errors.append(
                     f"{path.relative_to(root)}: artifact `{artifact_path}` does not exist"
                 )
+                continue
+            resolved_artifact = resolve_repo_path(root, artifact_path)
+            if resolved_artifact.suffix in {".yml", ".yaml"}:
+                try:
+                    load_yaml(resolved_artifact)
+                except yaml.YAMLError as exc:
+                    errors.append(
+                        f"{path.relative_to(root)}: artifact `{artifact_path}` is invalid YAML: {exc}"
+                    )
         for decision_path in artifact_group.get("decision_artifacts", []):
             if not resolve_repo_path(root, decision_path).exists():
                 errors.append(
@@ -258,16 +254,7 @@ def validate_brand_registry(root: Path = ROOT) -> list[str]:
 
     seen: set[str] = set()
     for brand in data["brands"]:
-        for field in [
-            "brand_id",
-            "display_name",
-            "status",
-            "manifest_path",
-            "owners",
-            "supported_channels",
-            "foundation_status",
-            "design_system_file_url",
-        ]:
+        for field in ["brand_id", "display_name", "status", "manifest_path"]:
             if field not in brand or brand[field] in (None, "", []):
                 errors.append(f"{path.relative_to(root)}: missing `{field}` for brand entry")
         brand_id = brand.get("brand_id")
