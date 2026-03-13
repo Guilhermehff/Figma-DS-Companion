@@ -77,6 +77,20 @@ validation:
       ratio: ""
       result: pass
 
+semantic_recommendations:
+  - semantic_slot: neutral
+    raw_family: ""
+    rationale: ""
+  - semantic_slot: brand
+    raw_family: ""
+    rationale: ""
+  - semantic_slot: brand_secondary
+    raw_family: ""
+    rationale: ""
+  - semantic_slot: brand_tertiary
+    raw_family: ""
+    rationale: ""
+
 review_readiness:
   intended_review_channels:
     - web

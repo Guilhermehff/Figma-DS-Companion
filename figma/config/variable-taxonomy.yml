@@ -183,6 +183,7 @@ brand_color_foundations:
     - Exact matches to universal/white or universal/black must reuse the universal token and must not be duplicated under a brand group.
     - Neutral colors may reuse universal neutrals when they are not materially distinct and are not contractually brand-defining.
     - Signature or saturated hues that establish brand identity must receive their own brand family under the brand group.
+    - If a brand family is used primarily as a background or system neutral, map it to semantic `neutral/*` rather than a brand accent slot.
     - Generate a preview artifact for the proposed brand colors before any Figma write is proposed or executed.
   naming:
     family_format: "<brand>/<family>/<step>"
@@ -309,6 +310,7 @@ semantic_color_aliases:
     - brand_tertiary/500
   notes:
     - neutral aliases the shared universal neutral ladder.
+    - Brand-specific families used as background or system neutrals should override `neutral/*` before being considered for `brand/*`, `brand_secondary/*`, or `brand_tertiary/*`.
     - brand, brand_secondary, and brand_tertiary keep the semantic schema stable across brands even when the current universal baseline or a specific brand maps more than one slot to the same raw family.
     - raw brand families that do not yet have a stable cross-brand semantic slot remain global-only until another decision approves the new slot.
 
