@@ -2,6 +2,8 @@
 
 Date: 2026-03-11
 Status: accepted
+Superseded in part by: `2026-03-16-global-first-spacing-and-published-dimensions.md`
+Historical naming note: `Global: Dimensions` later became a published exception to the `_Global: *` display-name rule.
 Figma URL: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
 
 ## Context

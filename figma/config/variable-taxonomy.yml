@@ -1,5 +1,5 @@
-version: 6
-updated: 2026-03-14
+version: 7
+updated: 2026-03-16
 owner: vail_resorts
 scope:
   purpose: Token naming and structure rules for the Vail Resorts Design System
@@ -13,7 +13,7 @@ principles:
   - Semantic tokens form an abstraction ladder and remain meaning-light.
   - Channel tokens define final meaning and usage for a specific channel.
   - Each global and semantic token category must live in its own dedicated collection.
-  - "Global collection names must use the `_Global: *` pattern so they remain unpublished and readable in user-facing contexts."
+  - "Global collection names default to the `_Global: *` pattern so they remain unpublished and readable in user-facing contexts; `Global: Dimensions` is the approved published exception."
   - Figma variable names use slash-delimited paths.
   - Variable names inside a collection must not repeat the collection category.
   - Prefer semantic names over visual-only names.
@@ -35,8 +35,8 @@ token_levels:
     description: Raw values warehouse for all brands
     rules:
       - Each global token category uses its own dedicated collection containing all brands.
-      - "Global collection names must use the `_Global: *` pattern so they remain unpublished and readable in user-facing contexts."
-      - "Every `_Global: *` collection uses an initial mode named values."
+      - "Global collection names default to the `_Global: *` pattern; `Global: Dimensions` is the approved published exception."
+      - Every global collection uses an initial mode named values.
       - Variable names inside a global collection do not repeat the collection category.
       - Brand separation is done through groups within the collection.
       - The first group is always universal.
@@ -100,6 +100,8 @@ token_levels:
       - "Channel collection names must use the `Channel: *` pattern in title case."
       - Channel naming encodes meaning such as bg, text, border, icon, state.
       - Channel typography is typically expressed as styles in the channel library.
+      - Channel dimensions may define only the modes needed by that channel.
+      - Do not introduce responsive modes in Global or Semantic dimensions collections.
     naming:
       format: "<category>/<meaning_path>"
       examples:
@@ -107,6 +109,9 @@ token_levels:
         - color/text/primary
         - color/border/default
         - color/icon/secondary
+        - layout/page/padding_inline
+        - layout/section/gap
+        - component/button/padding_block
 
 exceptions:
   dimensions:
@@ -114,7 +119,12 @@ exceptions:
     notes:
       - Keep sizing scales stable and consistent.
       - Use a single global space ladder at the raw level; sizing meaning is assigned later.
+      - "`Global: Dimensions` is intentionally published as a library-visible exception to the default `_Global: *` rule."
       - Global dimensions start at 0_5 and do not include 0 or px.
+      - Do not create `Semantic: Dimensions` by default; introduce it only after repeated cross-channel alias roles justify it and record that decision first.
+      - If `Semantic: Dimensions` is introduced later, it must remain universal and must not use brand extensions.
+      - Responsive spacing variation belongs in channel collections, not in global or semantic dimensions.
+      - Web and Email may use channel-specific responsive modes; Ads should remain single-mode unless a real need appears.
       - Channel specific sizing should be rare and justified.
 
 collections:
@@ -126,7 +136,7 @@ collections:
     level: global
     category: typography
     grouping: by_brand
-  - name: "_Global: Dimensions"
+  - name: "Global: Dimensions"
     level: global
     category: dimensions
     grouping: universal_first
@@ -156,6 +166,11 @@ slot_admission:
       - New semantic typography roles require an accepted decision artifact and a reusable downstream need that cannot be covered by heading, body, or action.
       - New semantic weight or size steps must be justified by approved role recipes or a shared baseline need.
       - Channel-specific naming should not be introduced at the semantic layer unless another accepted decision explicitly allows it.
+  semantic_dimensions:
+    rules:
+      - "Do not create `Semantic: Dimensions` by default; introduce it only when repeated cross-channel alias roles justify a shared abstraction."
+      - "`Semantic: Dimensions`, if added later, must remain universal and must not use brand extensions."
+      - "Responsive modes belong in channel dimensions collections, not in `Semantic: Dimensions`."
 
 deprecation_lifecycle:
   statuses:
