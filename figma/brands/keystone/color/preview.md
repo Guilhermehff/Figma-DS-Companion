@@ -85,14 +85,14 @@ Source anchor: `800_source`
 
 - Valencia is the approved primary brand lane.
 - Curious Blue is the approved secondary accent and CTA-support lane.
-- Cool Grey is approved for `neutral/*` only. `brand_tertiary/*` remains inherited from the shared semantic base.
+- Cool Grey is approved for `neutral/*` only. No third expressive semantic lane is retained.
 
 ## Approved Semantic Mapping
 
 - `brand/*` -> `keystone/valencia/*`
 - `brand_secondary/*` -> `keystone/curious_blue/*`
 - `neutral/*` -> `keystone/cool_grey/*`
-- `brand_tertiary/*` remains inherited
+- Global-only extra families: none
 
 ## Review Readiness
 

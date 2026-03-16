@@ -36,7 +36,16 @@ artifacts:
 semantic_overrides:
   color:
     status: pending
-    override_scopes: []
+    override_scopes:
+      - scope: neutral
+        source_family: ""
+        targets:
+          - surface/neutral/*
+          - on_surface/neutral/*
+          - foreground/default
+          - foreground/subtle
+          - border/default
+          - border/subtle
     inherited_from_base: []
     notes: []
   typography:

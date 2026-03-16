@@ -1,5 +1,5 @@
 version: 1
-updated: 2026-03-11
+updated: 2026-03-14
 brand_id: multi_family
 display_name: Multi Family
 status: active
@@ -38,17 +38,40 @@ semantic_overrides:
   color:
     status: active
     override_scopes:
-      - semantic_slot: brand
-        raw_family: multi_family/blue
-      - semantic_slot: brand_secondary
-        raw_family: multi_family/gold
-      - semantic_slot: brand_tertiary
-        raw_family: multi_family/green
+      - scope: brand
+        source_family: multi_family/blue
+        targets:
+          - surface/brand/*
+          - on_surface/brand/*
+          - foreground/brand
+          - border/brand
+      - scope: brand_secondary
+        source_family: multi_family/gold
+        targets:
+          - surface/brand_secondary/*
+          - on_surface/brand_secondary/*
+          - foreground/brand_secondary
+          - border/brand_secondary
     inherited_from_base:
-      - neutral/*
-      - positive/*
-      - warning/*
-      - negative/*
+      - surface/neutral/*
+      - on_surface/neutral/*
+      - foreground/default
+      - foreground/subtle
+      - foreground/inverse
+      - border/default
+      - border/subtle
+      - surface/positive/*
+      - on_surface/positive/*
+      - surface/warning/*
+      - on_surface/warning/*
+      - surface/critical/*
+      - on_surface/critical/*
+      - foreground/positive
+      - foreground/warning
+      - foreground/critical
+      - border/positive
+      - border/warning
+      - border/critical
     notes: []
   typography:
     status: inherited

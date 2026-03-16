@@ -138,8 +138,8 @@ Hex values:
 
 - The proposed palette keeps `white` on the universal layer and gives Breckenridge three distinct brand families: `navy`, `red`, and `dark_gray`.
 - `navy/700`, `red/700`, and `dark_gray/700` or darker support white foreground use, while `50-200` steps stay safely readable with black.
-- `Breckenridge Dark Gray` should feed semantic `neutral/*` rather than `brand_tertiary/*`.
-- `brand_tertiary/*` intentionally reuses `breckenridge/navy/*` so the tertiary ladder stays inside the primary blue family.
+- `Breckenridge Dark Gray` should feed semantic `neutral/*` rather than a third expressive semantic lane.
+- `Breckenridge Navy` remains the primary expressive lane; no third expressive semantic lane is promoted.
 - `Breckenridge Red` remains a brand family, not a shared semantic feedback token, because the source presents it as part of the brand palette rather than a state color.
 
 ## Recommended Semantic Mapping
@@ -147,7 +147,7 @@ Hex values:
 - `brand/*` -> `breckenridge/navy/*`
 - `brand_secondary/*` -> `breckenridge/red/*`
 - `neutral/*` -> `breckenridge/dark_gray/*`
-- `brand_tertiary/*` -> `breckenridge/navy/*`
+- Global-only extra families: none
 
 ## Review Readiness
 

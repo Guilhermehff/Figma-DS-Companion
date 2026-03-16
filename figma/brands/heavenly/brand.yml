@@ -1,5 +1,5 @@
 version: 1
-updated: 2026-03-12
+updated: 2026-03-14
 brand_id: heavenly
 display_name: Heavenly
 status: active
@@ -18,7 +18,7 @@ figma:
   semantic_extensions:
     color:
       collection_name: Heavenly
-      collection_id: VariableCollectionId:53:576
+      collection_id: VariableCollectionId:79:1034
       parent_collection: "Semantic: Color"
       parent_collection_id: VariableCollectionId:41:135
     typography:
@@ -33,6 +33,7 @@ artifacts:
     decision_artifacts:
       - figma/decisions/2026-03-11-heavenly-staged-foundations-from-source-images.md
       - figma/decisions/2026-03-11-heavenly-foundations-written-to-figma.md
+      - figma/decisions/2026-03-13-proposed-semantic-role-channel-color-model.md
   typography:
     intake_artifact: figma/brands/heavenly/typography/intake.yml
     preview_artifact: figma/brands/heavenly/typography/preview.md
@@ -43,20 +44,44 @@ semantic_overrides:
   color:
     status: active
     override_scopes:
-      - semantic_slot: brand
-        raw_family: heavenly/snow_flower_red
-      - semantic_slot: brand_secondary
-        raw_family: heavenly/deep_water_blue
-      - semantic_slot: brand_tertiary
-        raw_family: heavenly/shore_blue
+      - scope: brand
+        source_family: heavenly/snow_flower_red
+        targets:
+          - surface/brand/*
+          - on_surface/brand/*
+          - foreground/brand
+          - border/brand
+      - scope: brand_secondary
+        source_family: heavenly/deep_water_blue
+        targets:
+          - surface/brand_secondary/*
+          - on_surface/brand_secondary/*
+          - foreground/brand_secondary
+          - border/brand_secondary
     inherited_from_base:
-      - neutral/*
-      - positive/*
-      - warning/*
-      - negative/*
+      - surface/neutral/*
+      - on_surface/neutral/*
+      - foreground/default
+      - foreground/subtle
+      - foreground/inverse
+      - border/default
+      - border/subtle
+      - surface/positive/*
+      - on_surface/positive/*
+      - surface/warning/*
+      - on_surface/warning/*
+      - surface/critical/*
+      - on_surface/critical/*
+      - foreground/positive
+      - foreground/warning
+      - foreground/critical
+      - border/positive
+      - border/warning
+      - border/critical
     notes:
-      - Exact white and black are direct matches to universal primitives and should remain inherited rather than duplicated under the Heavenly brand group.
-      - The live Heavenly semantic color extension maps `brand/*` to `snow_flower_red/*`, `brand_secondary/*` to `deep_water_blue/*`, and `brand_tertiary/*` to `shore_blue/*`.
+      - Exact white and black remain inherited through the shared neutral and status role recipes.
+      - The role-based migration keeps `snow_flower_red` and `deep_water_blue` as the only expressive semantic lanes.
+      - "`shore_blue` remains a governed global family but is no longer promoted into semantic."
   typography:
     status: active
     override_scopes:

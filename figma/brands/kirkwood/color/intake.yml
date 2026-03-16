@@ -311,7 +311,7 @@ review_readiness:
         - web
         - email
         - ads
-      rule: Use Orange 021 C as `brand/*`, 648 C as `brand_secondary/*`, and 633 C as `brand_tertiary/*`.
+      rule: Use Orange 021 C as `brand/*`, 648 C as `brand_secondary/*`, and keep 633 C as a global-only family.
       source_basis: The supplied palette image and approved semantic mapping choice.
 
 open_questions: []

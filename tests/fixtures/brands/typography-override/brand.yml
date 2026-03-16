@@ -1,5 +1,5 @@
 version: 1
-updated: 2026-03-11
+updated: 2026-03-14
 brand_id: typography_override
 display_name: Typography Override
 status: active
@@ -39,10 +39,33 @@ semantic_overrides:
     status: inherited
     override_scopes: []
     inherited_from_base:
-      - neutral/*
-      - brand/*
-      - brand_secondary/*
-      - brand_tertiary/*
+      - surface/neutral/*
+      - on_surface/neutral/*
+      - surface/brand/*
+      - on_surface/brand/*
+      - surface/brand_secondary/*
+      - on_surface/brand_secondary/*
+      - foreground/default
+      - foreground/subtle
+      - foreground/inverse
+      - foreground/brand
+      - foreground/brand_secondary
+      - border/default
+      - border/subtle
+      - border/brand
+      - border/brand_secondary
+      - surface/positive/*
+      - on_surface/positive/*
+      - surface/warning/*
+      - on_surface/warning/*
+      - surface/critical/*
+      - on_surface/critical/*
+      - foreground/positive
+      - foreground/warning
+      - foreground/critical
+      - border/positive
+      - border/warning
+      - border/critical
     notes: []
   typography:
     status: active

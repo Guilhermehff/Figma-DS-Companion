@@ -194,7 +194,7 @@ validation:
     - Valencia lands at `500` because the supplied source behaves as a bright mid-tone brand primary rather than a dark accent.
     - Curious Blue lands at `600` because the source describes it as the standout CTA and information lane, not a pale support tint.
     - Cool Grey lands at `800` because the supplied swatch is already dark enough for copy and recessive module use.
-    - The approved write maps Cool Grey to the branded neutral lane only and leaves `brand_tertiary/*` inherited.
+    - The approved role-based write maps Cool Grey to the branded neutral lane only and retains no third expressive semantic lane.
   contrast_checks:
     - token: keystone/valencia/600
       foreground: white
@@ -235,7 +235,7 @@ review_readiness:
         - web
         - email
         - ads
-      rule: Keep Cool Grey in `neutral/*` only and leave `brand_tertiary/*` inherited from the semantic base.
+      rule: Keep Cool Grey in `neutral/*` only and do not promote a third expressive semantic lane.
       source_basis: User-approved review decision after preview.
 
 open_questions: []

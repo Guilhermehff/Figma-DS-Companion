@@ -1,5 +1,5 @@
 version: 1
-updated: 2026-03-12
+updated: 2026-03-14
 brand_id: breckenridge
 display_name: Breckenridge
 status: active
@@ -18,7 +18,7 @@ figma:
   semantic_extensions:
     color:
       collection_name: Breckenridge
-      collection_id: VariableCollectionId:45:317
+      collection_id: VariableCollectionId:79:937
       parent_collection: "Semantic: Color"
       parent_collection_id: VariableCollectionId:41:135
     typography:
@@ -33,6 +33,7 @@ artifacts:
     decision_artifacts:
       - figma/decisions/2026-03-11-brand-manifest-and-generated-registry-governance.md
       - figma/decisions/2026-03-11-initial-semantic-color-family-model.md
+      - figma/decisions/2026-03-13-proposed-semantic-role-channel-color-model.md
   typography:
     intake_artifact: figma/brands/breckenridge/typography/intake.yml
     preview_artifact: figma/brands/breckenridge/typography/preview.md
@@ -43,22 +44,47 @@ semantic_overrides:
   color:
     status: active
     override_scopes:
-      - semantic_slot: brand
-        raw_family: breckenridge/navy
-      - semantic_slot: brand_secondary
-        raw_family: breckenridge/red
-      - semantic_slot: neutral
-        raw_family: breckenridge/dark_gray
-      - semantic_slot: brand_tertiary
-        raw_family: breckenridge/navy
+      - scope: neutral
+        source_family: breckenridge/dark_gray
+        targets:
+          - surface/neutral/*
+          - on_surface/neutral/*
+          - foreground/default
+          - foreground/subtle
+          - border/default
+          - border/subtle
+      - scope: brand
+        source_family: breckenridge/navy
+        targets:
+          - surface/brand/*
+          - on_surface/brand/*
+          - foreground/brand
+          - border/brand
+      - scope: brand_secondary
+        source_family: breckenridge/red
+        targets:
+          - surface/brand_secondary/*
+          - on_surface/brand_secondary/*
+          - foreground/brand_secondary
+          - border/brand_secondary
     inherited_from_base:
-      - positive/*
-      - warning/*
-      - negative/*
+      - foreground/inverse
+      - surface/positive/*
+      - on_surface/positive/*
+      - surface/warning/*
+      - on_surface/warning/*
+      - surface/critical/*
+      - on_surface/critical/*
+      - foreground/positive
+      - foreground/warning
+      - foreground/critical
+      - border/positive
+      - border/warning
+      - border/critical
     notes:
       - White is reused from universal/white and does not require a brand-specific override.
-      - Dark gray is intended to feed the brand neutral ladder, so brand_tertiary intentionally reuses the navy family.
-      - The approved Breckenridge color ladders are written into _Global: Color and connected through the Breckenridge semantic color extension.
+      - Dark Gray now drives the neutral role set, while navy and red remain the two expressive semantic lanes.
+      - No third expressive semantic lane survives the role-based migration; any additional approved family remains global-only.
   typography:
     status: active
     override_scopes:

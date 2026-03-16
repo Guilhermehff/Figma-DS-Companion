@@ -100,14 +100,14 @@ Hex values:
 - The first Crested Butte palette pass keeps `powder_white` on the universal layer and stages only two brand families: `wild_red` and `beyond_black`.
 - `wild_red/800` and darker plus `beyond_black/800` and darker all clear the white-contrast target, while the lightest steps remain safe for black foreground use.
 - `beyond_black/*` should drive `neutral/*` rather than a second branded accent ladder.
-- The approved semantic color extension now maps `brand/*`, `brand_secondary/*`, and `brand_tertiary/*` to `wild_red/*`, while `neutral/*` maps to `beyond_black/*`.
+- The approved role-based semantic extension maps `brand/*` and `brand_secondary/*` to `wild_red/*`, while `neutral/*` maps to `beyond_black/*`.
 
 ## Recommended Semantic Mapping
 
 - `brand/*` -> `crested_butte/wild_red/*`
 - `neutral/*` -> `crested_butte/beyond_black/*`
 - `brand_secondary/*` -> `crested_butte/wild_red/*`
-- `brand_tertiary/*` -> `crested_butte/wild_red/*`
+- Global-only extra families: none
 
 ## Review Readiness
 

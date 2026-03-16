@@ -154,7 +154,7 @@ validation:
     - Wild Red lands at `700` because the provided source swatch already sits in a dark, high-contrast brand zone rather than a mid-scale accent zone.
     - Beyond Black lands at `950` because the official source is nearly the darkest usable brand neutral and should remain distinct from universal black while preserving white contrast.
     - Exact white is reused from the universal palette and is not duplicated under the Crested Butte brand group.
-    - The approved semantic extension now maps `brand/*`, `brand_secondary/*`, and `brand_tertiary/*` to the Wild Red ladder while `neutral/*` maps to Beyond Black.
+    - The approved role-based semantic extension maps `brand/*` and `brand_secondary/*` to the Wild Red ladder while `neutral/*` maps to Beyond Black.
   contrast_checks:
     - token: crested_butte/wild_red/100
       foreground: black
@@ -215,7 +215,7 @@ review_readiness:
         - web
         - email
         - ads
-      rule: Treat `wild_red/*` as the source for `brand/*`, `brand_secondary/*`, and `brand_tertiary/*` while keeping it separate from shared feedback semantics.
+      rule: Treat `wild_red/*` as the source for `brand/*` and `brand_secondary/*` while keeping any extra reuse global-only and separate from shared feedback semantics.
       source_basis: The source presents Wild Red as part of the core brand palette, not as a state color.
     - subject: Crested Butte Beyond Black
       channels:

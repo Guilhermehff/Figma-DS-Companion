@@ -1,5 +1,5 @@
 version: 1
-updated: 2026-03-12
+updated: 2026-03-14
 brand_id: keystone
 display_name: Keystone
 status: active
@@ -18,7 +18,7 @@ figma:
   semantic_extensions:
     color:
       collection_name: Keystone
-      collection_id: VariableCollectionId:56:752
+      collection_id: VariableCollectionId:79:1085
       parent_collection: "Semantic: Color"
       parent_collection_id: VariableCollectionId:41:135
     typography:
@@ -33,6 +33,7 @@ artifacts:
     decision_artifacts:
       - figma/decisions/2026-03-12-keystone-staged-foundations-from-source-images.md
       - figma/decisions/2026-03-12-keystone-foundations-written-to-figma.md
+      - figma/decisions/2026-03-13-proposed-semantic-role-channel-color-model.md
   typography:
     intake_artifact: figma/brands/keystone/typography/intake.yml
     preview_artifact: figma/brands/keystone/typography/preview.md
@@ -43,20 +44,46 @@ semantic_overrides:
   color:
     status: active
     override_scopes:
-      - semantic_slot: brand
-        raw_family: keystone/valencia
-      - semantic_slot: brand_secondary
-        raw_family: keystone/curious_blue
-      - semantic_slot: neutral
-        raw_family: keystone/cool_grey
+      - scope: neutral
+        source_family: keystone/cool_grey
+        targets:
+          - surface/neutral/*
+          - on_surface/neutral/*
+          - foreground/default
+          - foreground/subtle
+          - border/default
+          - border/subtle
+      - scope: brand
+        source_family: keystone/valencia
+        targets:
+          - surface/brand/*
+          - on_surface/brand/*
+          - foreground/brand
+          - border/brand
+      - scope: brand_secondary
+        source_family: keystone/curious_blue
+        targets:
+          - surface/brand_secondary/*
+          - on_surface/brand_secondary/*
+          - foreground/brand_secondary
+          - border/brand_secondary
     inherited_from_base:
-      - brand_tertiary/*
-      - positive/*
-      - warning/*
-      - negative/*
+      - foreground/inverse
+      - surface/positive/*
+      - on_surface/positive/*
+      - surface/warning/*
+      - on_surface/warning/*
+      - surface/critical/*
+      - on_surface/critical/*
+      - foreground/positive
+      - foreground/warning
+      - foreground/critical
+      - border/positive
+      - border/warning
+      - border/critical
     notes:
-      - Cool Grey is approved to map to the semantic neutral lane only.
-      - "`brand_tertiary/*` intentionally remains inherited from the semantic base in this first Keystone write."
+      - Cool Grey continues to map to the neutral role set only.
+      - The reviewed role-based migration uses `valencia` and `curious_blue` as the only expressive semantic lanes.
   typography:
     status: active
     override_scopes:

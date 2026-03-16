@@ -1,5 +1,5 @@
-version: 5
-updated: 2026-03-12
+version: 6
+updated: 2026-03-14
 owner: vail_resorts
 scope:
   purpose: Token naming and structure rules for the Vail Resorts Design System
@@ -65,28 +65,28 @@ token_levels:
       - The base semantic collection must point to universal primitives first.
       - Brand-specific differences should be expressed only in the brand extension collection for that semantic category.
       - A semantic extension should override only the tokens that materially differ from the shared universal baseline.
-      - Semantic naming must support laddering into channel meaning.
+      - Semantic naming must stay channel-agnostic while supporting laddering into channel meaning.
     ladder_examples:
-      - "universal/slate/50 -> neutral/50 -> color/bg/surface"
-      - "universal/green/500 -> positive/500 -> color/state/success"
+      - "universal/slate/50 -> surface/neutral/subtle -> background/module/default"
+      - "universal/green/700 -> surface/positive/strong -> background/status/positive"
+      - "universal/slate/900 -> foreground/default -> text/body/default"
+      - "vail/digital_blue/800 -> surface/brand/default -> background/action/default"
       - "vail/family/display -> family/heading -> typography/heading/display"
       - "vail/family/primary -> family/body -> typography/body/default"
       - "universal/family/web_safe -> family/body_safe -> typography/body/email"
       - "universal/weight/black -> weight/heading/strong -> typography/heading/display"
       - "universal/size/300 -> size/body/base -> typography/body/default"
     naming:
-      format: "<semantic_group>/<scale_or_role>"
+      format: "<semantic_role_path>"
       notes:
-        - semantic_group is category-like and stable across channels (e.g., neutral, brand, brand_secondary, brand_tertiary, positive, warning, negative)
-        - scale_or_role is typically a scale key (50, 60, 70) or a role key for typography
+        - semantic role paths are slash-delimited and stable across channels.
+        - semantic color uses role groups such as surface, on_surface, foreground, and border.
+        - semantic typography keeps role-based paths such as family/heading and size/body/base.
       examples:
-        - neutral/50
-        - brand/600
-        - brand_secondary/500
-        - brand_tertiary/300
-        - positive/500
-        - warning/500
-        - negative/600
+        - surface/neutral/default
+        - on_surface/brand/default
+        - foreground/critical
+        - border/brand_secondary
         - family/heading
         - family/body_safe
         - size/body/base
@@ -183,7 +183,7 @@ brand_color_foundations:
     - Exact matches to universal/white or universal/black must reuse the universal token and must not be duplicated under a brand group.
     - Neutral colors may reuse universal neutrals when they are not materially distinct and are not contractually brand-defining.
     - Signature or saturated hues that establish brand identity must receive their own brand family under the brand group.
-    - If a brand family is used primarily as a background or system neutral, map it to semantic `neutral/*` rather than a brand accent slot.
+    - If a brand family is used primarily as a background or system neutral, map it to the semantic neutral role set rather than a brand accent lane.
     - Generate a preview artifact for the proposed brand colors before any Figma write is proposed or executed.
   naming:
     family_format: "<brand>/<family>/<step>"
@@ -280,39 +280,77 @@ brand_color_foundations:
     - preview_artifact_before_write
 
 semantic_color_aliases:
-  description: "Stable semantic color slots that alias `_Global: Color` primitives before channel meaning is applied"
+  description: "Role-based semantic color slots that alias `_Global: Color` primitives before channel meaning is applied"
   collection_strategy:
     base_collection: "Semantic: Color"
     base_mode: values
     brand_extension_format: "<Brand>"
-    brand_extension_rule: The base collection defines neutral, brand, brand_secondary, and brand_tertiary. Brand extensions override only the tokens that differ from the base universal baseline. If a brand lacks secondary or tertiary colors, those slots should map to the same raw family as the brand primary slot. Extension display names may repeat across semantic categories; the parent semantic collection is the differentiator.
-  default_families:
-    - neutral
-    - brand
-    - brand_secondary
-    - brand_tertiary
-  required_steps:
-    - 50
-    - 100
-    - 200
-    - 300
-    - 400
-    - 500
-    - 600
-    - 700
-    - 800
-    - 900
-    - 950
+    brand_extension_rule: The base collection defines shared neutral, expressive, and status role sets. Brand extensions override only the neutral, brand, and brand_secondary role groups that materially differ from the shared universal baseline. A third brand family stays global-only until another accepted decision promotes it into semantic.
+  neutral_role_set:
+    surfaces:
+      - canvas
+      - subtle
+      - default
+      - strong
+      - emphasis
+      - inverse
+    notes:
+      - Each neutral surface token is paired with a readable `on_surface/neutral/*` foreground token.
+      - The shared base neutral recipe uses universal white and the universal slate ladder unless an approved brand neutral overrides it.
+  expressive_role_sets:
+    lanes:
+      - brand
+      - brand_secondary
+    surface_steps:
+      - muted
+      - subtle
+      - default
+      - strong
+      - emphasis
+    notes:
+      - Expressive role sets are shared across brands, but each brand extension may map them to approved raw families.
+      - If a brand has a third approved family, keep it global-only until another accepted decision promotes a new semantic lane.
+  status_role_sets:
+    lanes:
+      - positive
+      - warning
+      - critical
+    surface_steps:
+      - subtle
+      - default
+      - strong
+      - emphasis
+    notes:
+      - Shared status roles remain on the base collection and are not brand-specific unless another accepted decision explicitly allows it.
+  foreground_tokens:
+    - foreground/default
+    - foreground/subtle
+    - foreground/inverse
+    - foreground/brand
+    - foreground/brand_secondary
+    - foreground/positive
+    - foreground/warning
+    - foreground/critical
+  border_tokens:
+    - border/default
+    - border/subtle
+    - border/brand
+    - border/brand_secondary
+    - border/positive
+    - border/warning
+    - border/critical
   examples:
-    - neutral/50
-    - brand/500
-    - brand_secondary/500
-    - brand_tertiary/500
+    - surface/neutral/default
+    - on_surface/neutral/default
+    - surface/brand/strong
+    - on_surface/brand_secondary/subtle
+    - surface/critical/default
+    - foreground/brand
+    - border/subtle
   notes:
-    - neutral aliases the shared universal neutral ladder.
-    - Brand-specific families used as background or system neutrals should override `neutral/*` before being considered for `brand/*`, `brand_secondary/*`, or `brand_tertiary/*`.
-    - brand, brand_secondary, and brand_tertiary keep the semantic schema stable across brands even when the current universal baseline or a specific brand maps more than one slot to the same raw family.
-    - raw brand families that do not yet have a stable cross-brand semantic slot remain global-only until another decision approves the new slot.
+    - Semantic color is role-based and channel-agnostic; do not encode hover, pressed, or component names in this layer.
+    - Brand-specific families used as structural surfaces should override the neutral role set before they are considered for brand or brand_secondary.
+    - Channel libraries own usage-first naming such as background/action/default, text/body/default, and border/input/default.
 
 brand_typography_foundations:
   description: "Rules for evaluating and documenting brand typography using `_Global: Typography` primitives plus later channel style recipes"

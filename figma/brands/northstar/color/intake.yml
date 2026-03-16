@@ -204,7 +204,7 @@ validation:
     - Burgundy lands at `700` because the supplied swatch is already a dark, high-contrast brand red rather than a middle accent.
     - Copper lands at `400` because the source color behaves as a bright accent rather than a deep tone.
     - Northstar's off-white, gray, and near-black are treated as one branded neutral ladder so the semantic neutral system can stay coherent without duplicating isolated one-off swatches.
-    - brand_tertiary/* is approved to reuse the burgundy ladder so the semantic brand system stays inside the primary Northstar hue family.
+    - No third expressive semantic lane is promoted; any extra burgundy reuse stays global-only so the semantic brand system remains two-lane.
   contrast_checks:
     - token: northstar/burgundy/700
       foreground: white
@@ -248,7 +248,7 @@ review_readiness:
         - web
         - email
         - ads
-      rule: Alias brand_tertiary/* to the burgundy ladder rather than introducing a third family.
+      rule: Keep any extra burgundy reuse global-only rather than introducing a third expressive semantic lane.
       source_basis: Approved review decision after the initial staged palette pass.
 
 open_questions: []

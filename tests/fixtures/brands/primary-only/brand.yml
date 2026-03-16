@@ -1,5 +1,5 @@
 version: 1
-updated: 2026-03-11
+updated: 2026-03-14
 brand_id: primary_only
 display_name: Primary Only
 status: active
@@ -37,12 +37,37 @@ semantic_overrides:
   color:
     status: active
     override_scopes:
-      - semantic_slot: brand
-        raw_family: primary_only/blue
+      - scope: brand
+        source_family: primary_only/blue
+        targets:
+          - surface/brand/*
+          - on_surface/brand/*
+          - foreground/brand
+          - border/brand
     inherited_from_base:
-      - neutral/*
-      - brand_secondary/*
-      - brand_tertiary/*
+      - surface/neutral/*
+      - on_surface/neutral/*
+      - foreground/default
+      - foreground/subtle
+      - foreground/inverse
+      - border/default
+      - border/subtle
+      - surface/brand_secondary/*
+      - on_surface/brand_secondary/*
+      - foreground/brand_secondary
+      - border/brand_secondary
+      - surface/positive/*
+      - on_surface/positive/*
+      - surface/warning/*
+      - on_surface/warning/*
+      - surface/critical/*
+      - on_surface/critical/*
+      - foreground/positive
+      - foreground/warning
+      - foreground/critical
+      - border/positive
+      - border/warning
+      - border/critical
     notes: []
   typography:
     status: inherited

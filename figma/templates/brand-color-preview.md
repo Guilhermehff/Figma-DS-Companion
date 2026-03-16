@@ -50,10 +50,11 @@ Swatch strip:
 
 ## Proposed Semantic Mapping
 
-- `brand/*` ->
-- `brand_secondary/*` ->
-- `neutral/*` ->
-- `brand_tertiary/*` ->
+- `surface/neutral/*`, `on_surface/neutral/*`, `foreground/default`, `foreground/subtle`, `border/default`, `border/subtle` ->
+- `surface/brand/*`, `on_surface/brand/*`, `foreground/brand`, `border/brand` ->
+- `surface/brand_secondary/*`, `on_surface/brand_secondary/*`, `foreground/brand_secondary`, `border/brand_secondary` ->
+- Global-only extra families:
+- Role exceptions:
 - Inherited or deferred notes:
 
 ## Review Readiness

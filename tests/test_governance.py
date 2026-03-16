@@ -162,6 +162,81 @@ def test_fixture_brand_manifests_validate() -> None:
         assert validate_brand_manifest(path, FIXTURES) == []
 
 
+def test_validate_brand_manifest_rejects_legacy_color_override_shape(tmp_path: Path) -> None:
+    intake_path = tmp_path / "brands/demo/color-intake.yml"
+    intake_path.parent.mkdir(parents=True, exist_ok=True)
+    intake_path.write_text("date: 2026-03-14\n", encoding="utf-8")
+    (tmp_path / "brands/demo/color-preview.md").write_text("# Preview\n", encoding="utf-8")
+    (tmp_path / "brands/demo/typography-intake.yml").write_text("date: 2026-03-14\n", encoding="utf-8")
+    (tmp_path / "brands/demo/typography-preview.md").write_text("# Preview\n", encoding="utf-8")
+    manifest_path = tmp_path / "brands/demo/brand.yml"
+    _write_yaml(
+        manifest_path,
+        {
+            "version": 1,
+            "updated": "2026-03-14",
+            "brand_id": "demo",
+            "display_name": "Demo",
+            "status": "active",
+            "owners": ["design_system_governance"],
+            "supported_channels": ["web"],
+            "figma": {
+                "design_system_file_url": "https://example.com/file",
+                "global_collections": {
+                    "color_id": "global-color",
+                    "typography_id": "global-typography",
+                    "dimensions_id": "global-dimensions",
+                },
+                "semantic_extensions": {
+                    "color": {
+                        "collection_name": "Demo",
+                        "collection_id": "ext-color",
+                        "parent_collection": "Semantic: Color",
+                        "parent_collection_id": "base-color",
+                    },
+                    "typography": {
+                        "collection_name": "Demo",
+                        "collection_id": "ext-typography",
+                        "parent_collection": "Semantic: Typography",
+                        "parent_collection_id": "base-typography",
+                    },
+                },
+            },
+            "artifacts": {
+                "color": {
+                    "intake_artifact": "brands/demo/color-intake.yml",
+                    "preview_artifact": "brands/demo/color-preview.md",
+                    "decision_artifacts": [],
+                },
+                "typography": {
+                    "intake_artifact": "brands/demo/typography-intake.yml",
+                    "preview_artifact": "brands/demo/typography-preview.md",
+                    "decision_artifacts": [],
+                },
+            },
+            "semantic_overrides": {
+                "color": {
+                    "status": "active",
+                    "override_scopes": [{"semantic_slot": "brand", "raw_family": "demo/blue"}],
+                    "inherited_from_base": [],
+                    "notes": [],
+                },
+                "typography": {
+                    "status": "active",
+                    "override_scopes": [],
+                    "inherited_from_base": [],
+                    "notes": [],
+                },
+            },
+            "notes": [],
+        },
+    )
+
+    errors = validate_brand_manifest(manifest_path, tmp_path)
+
+    assert any("must use exactly `scope`, `source_family`, and `targets`" in error for error in errors)
+
+
 def test_validate_brand_manifest_rejects_invalid_intake_yaml(tmp_path: Path) -> None:
     intake_path = tmp_path / "brands/demo/color-intake.yml"
     intake_path.parent.mkdir(parents=True, exist_ok=True)

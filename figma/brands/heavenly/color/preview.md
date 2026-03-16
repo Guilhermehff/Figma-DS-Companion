@@ -153,8 +153,8 @@ Hex values:
 
 - `brand/*` -> `heavenly/snow_flower_red/*`
 - `brand_secondary/*` -> `heavenly/deep_water_blue/*`
-- `brand_tertiary/*` -> `heavenly/shore_blue/*`
 - `neutral/*` remains inherited from the base semantic collection
+- Global-only extra families: `heavenly/shore_blue/*`
 
 ## Review Readiness
 

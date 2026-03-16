@@ -141,14 +141,14 @@ Hex values:
 
 - The proposed palette stages two expressive brand ladders, `burgundy` and `copper`, plus one branded neutral ladder, `graphite`.
 - `graphite` intentionally absorbs Snow White, Gray, and the near-black swatch so semantic neutrals can remain one coherent ladder instead of three disconnected one-off tokens.
-- `brand_tertiary/*` is approved to reuse the `burgundy` ladder.
+- No third expressive semantic lane is promoted; any extra burgundy reuse stays global-only.
 
 ## Recommended Semantic Mapping
 
 - `brand/*` -> `northstar/burgundy/*`
 - `brand_secondary/*` -> `northstar/copper/*`
 - `neutral/*` -> `northstar/graphite/*`
-- `brand_tertiary/*` -> `northstar/burgundy/*`
+- Global-only extra families: none
 
 ## Review Readiness
 

@@ -139,8 +139,8 @@ Source anchor: `300_source`
 
 - `brand/*` -> `kirkwood/orange_021_c/*`
 - `brand_secondary/*` -> `kirkwood/blue_648_c/*`
-- `brand_tertiary/*` -> `kirkwood/teal_633_c/*`
 - `neutral/*` -> `kirkwood/cool_gray/*`
+- Global-only extra families: `kirkwood/teal_633_c/*`
 
 ## Review Readiness
 

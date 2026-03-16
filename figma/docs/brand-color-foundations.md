@@ -9,7 +9,7 @@ This workflow governs how brand-provided colors become durable design-system art
 3. Reuse existing universal tokens first, especially `universal/white` and `universal/black`.
 4. Add brand families only for materially distinct brand hues or contractually important neutrals.
 5. Keep raw brand families in `_Global: Color` and keep them on the shared `50-950` scale.
-6. If a brand family is acting as a neutral system color, especially for backgrounds or system surfaces, map it to semantic `neutral/*` instead of a brand accent slot.
+6. If a brand family is acting as a neutral system color, especially for backgrounds or system surfaces, map it to the semantic neutral role set instead of a brand accent lane.
 7. Generate ramps in `OKLCH` and validate contrast before proposing a write.
 8. Produce a preview artifact before any write is proposed or executed.
 9. Register the approved artifact paths in `figma/brands/<brand>/brand.yml`.
@@ -33,8 +33,8 @@ When a local export is explicitly requested, store the dated snapshot under `fig
 3. Mark each source swatch as `reuse_universal`, `new_brand_family`, or `hold_for_review`.
 4. Choose stable hue-based family names.
 5. Assign the source anchor step and expand the family to the full scale.
-6. Document semantic slot recommendations for `neutral`, `brand`, `brand_secondary`, and `brand_tertiary`.
-7. If a brand color is being used as a background or system neutral, recommend it for `neutral/*` before considering any accent slot.
+6. Document role-set recommendations for `neutral`, `brand`, `brand_secondary`, any global-only extra family, and any role-specific exceptions.
+7. If a brand color is being used as a background or system neutral, recommend it for the semantic neutral role set before considering any accent lane.
 8. Capture downstream review guidance for web, email, and ads.
 9. Generate the preview artifact and link both artifacts from the brand manifest.
 

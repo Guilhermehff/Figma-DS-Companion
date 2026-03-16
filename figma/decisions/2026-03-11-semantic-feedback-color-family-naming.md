@@ -4,6 +4,7 @@
 - Title: Semantic Feedback Color Family Naming
 - Status: Accepted
 - Stakeholders: Design System Governance
+- Superseded by: figma/decisions/2026-03-13-proposed-semantic-role-channel-color-model.md
 
 ## Context
 

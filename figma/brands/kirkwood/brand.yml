@@ -1,5 +1,5 @@
 version: 1
-updated: 2026-03-12
+updated: 2026-03-14
 brand_id: kirkwood
 display_name: Kirkwood
 status: active
@@ -18,7 +18,7 @@ figma:
   semantic_extensions:
     color:
       collection_name: Kirkwood
-      collection_id: VariableCollectionId:55:665
+      collection_id: VariableCollectionId:79:1053
       parent_collection: "Semantic: Color"
       parent_collection_id: VariableCollectionId:41:135
     typography:
@@ -32,6 +32,7 @@ artifacts:
     preview_artifact: figma/brands/kirkwood/color/preview.md
     decision_artifacts:
       - figma/decisions/2026-03-12-kirkwood-foundations-written-to-figma.md
+      - figma/decisions/2026-03-13-proposed-semantic-role-channel-color-model.md
   typography:
     intake_artifact: figma/brands/kirkwood/typography/intake.yml
     preview_artifact: figma/brands/kirkwood/typography/preview.md
@@ -41,21 +42,47 @@ semantic_overrides:
   color:
     status: active
     override_scopes:
-      - semantic_slot: brand
-        raw_family: kirkwood/orange_021_c
-      - semantic_slot: brand_secondary
-        raw_family: kirkwood/blue_648_c
-      - semantic_slot: brand_tertiary
-        raw_family: kirkwood/teal_633_c
-      - semantic_slot: neutral
-        raw_family: kirkwood/cool_gray
+      - scope: neutral
+        source_family: kirkwood/cool_gray
+        targets:
+          - surface/neutral/*
+          - on_surface/neutral/*
+          - foreground/default
+          - foreground/subtle
+          - border/default
+          - border/subtle
+      - scope: brand
+        source_family: kirkwood/orange_021_c
+        targets:
+          - surface/brand/*
+          - on_surface/brand/*
+          - foreground/brand
+          - border/brand
+      - scope: brand_secondary
+        source_family: kirkwood/blue_648_c
+        targets:
+          - surface/brand_secondary/*
+          - on_surface/brand_secondary/*
+          - foreground/brand_secondary
+          - border/brand_secondary
     inherited_from_base:
-      - positive/*
-      - warning/*
-      - negative/*
+      - foreground/inverse
+      - surface/positive/*
+      - on_surface/positive/*
+      - surface/warning/*
+      - on_surface/warning/*
+      - surface/critical/*
+      - on_surface/critical/*
+      - foreground/positive
+      - foreground/warning
+      - foreground/critical
+      - border/positive
+      - border/warning
+      - border/critical
     notes:
-      - Kirkwood's `642 C` pale blue is intentionally absorbed into the branded neutral ladder rather than creating a fourth semantic accent family.
-      - Exact white and black are preserved inside the neutral ladder because the supplied foundational palette treats them as a governed brand system alongside the cool grays.
+      - Kirkwood's `642 C` pale blue remains absorbed into the neutral role set rather than creating a third expressive semantic lane.
+      - "`teal_633_c` remains global-only after the role-based migration."
+      - Exact white and black stay inherited through the shared role recipes.
   typography:
     status: active
     override_scopes:

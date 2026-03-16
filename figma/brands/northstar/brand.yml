@@ -1,5 +1,5 @@
 version: 1
-updated: 2026-03-12
+updated: 2026-03-14
 brand_id: northstar
 display_name: Northstar
 status: active
@@ -18,7 +18,7 @@ figma:
   semantic_extensions:
     color:
       collection_name: Northstar
-      collection_id: VariableCollectionId:47:478
+      collection_id: VariableCollectionId:79:1003
       parent_collection: "Semantic: Color"
       parent_collection_id: VariableCollectionId:41:135
     typography:
@@ -32,6 +32,7 @@ artifacts:
     preview_artifact: figma/brands/northstar/color/preview.md
     decision_artifacts:
       - figma/decisions/2026-03-11-northstar-foundations-written-to-figma.md
+      - figma/decisions/2026-03-13-proposed-semantic-role-channel-color-model.md
   typography:
     intake_artifact: figma/brands/northstar/typography/intake.yml
     preview_artifact: figma/brands/northstar/typography/preview.md
@@ -41,21 +42,47 @@ semantic_overrides:
   color:
     status: active
     override_scopes:
-      - semantic_slot: brand
-        raw_family: northstar/burgundy
-      - semantic_slot: brand_secondary
-        raw_family: northstar/copper
-      - semantic_slot: brand_tertiary
-        raw_family: northstar/burgundy
-      - semantic_slot: neutral
-        raw_family: northstar/graphite
+      - scope: neutral
+        source_family: northstar/graphite
+        targets:
+          - surface/neutral/*
+          - on_surface/neutral/*
+          - foreground/default
+          - foreground/subtle
+          - border/default
+          - border/subtle
+      - scope: brand
+        source_family: northstar/burgundy
+        targets:
+          - surface/brand/*
+          - on_surface/brand/*
+          - foreground/brand
+          - border/brand
+      - scope: brand_secondary
+        source_family: northstar/copper
+        targets:
+          - surface/brand_secondary/*
+          - on_surface/brand_secondary/*
+          - foreground/brand_secondary
+          - border/brand_secondary
     inherited_from_base:
-      - positive/*
-      - warning/*
-      - negative/*
+      - foreground/inverse
+      - surface/positive/*
+      - on_surface/positive/*
+      - surface/warning/*
+      - on_surface/warning/*
+      - surface/critical/*
+      - on_surface/critical/*
+      - foreground/positive
+      - foreground/warning
+      - foreground/critical
+      - border/positive
+      - border/warning
+      - border/critical
     notes:
-      - The source clearly supports primary burgundy, secondary copper, and a branded neutral ladder built from snow white, gray, and near-black.
-      - brand_tertiary/* is approved and written to reuse the burgundy ladder rather than remaining inherited from the semantic base.
+      - The role-based migration keeps burgundy and copper as the expressive semantic lanes.
+      - Graphite drives the neutral role set.
+      - The former tertiary burgundy reuse is removed from semantic and remains only as a global family.
   typography:
     status: active
     override_scopes:

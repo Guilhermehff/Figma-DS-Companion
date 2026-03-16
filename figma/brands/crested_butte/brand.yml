@@ -1,5 +1,5 @@
 version: 1
-updated: 2026-03-12
+updated: 2026-03-14
 brand_id: crested_butte
 display_name: Crested Butte
 status: active
@@ -18,7 +18,7 @@ figma:
   semantic_extensions:
     color:
       collection_name: Crested Butte
-      collection_id: VariableCollectionId:46:393
+      collection_id: VariableCollectionId:79:970
       parent_collection: "Semantic: Color"
       parent_collection_id: VariableCollectionId:41:135
     typography:
@@ -34,6 +34,7 @@ artifacts:
       - figma/decisions/2026-03-11-brand-manifest-and-generated-registry-governance.md
       - figma/decisions/2026-03-11-crested-butte-staged-foundations-from-source-images.md
       - figma/decisions/2026-03-11-crested-butte-foundations-written-to-figma.md
+      - figma/decisions/2026-03-13-proposed-semantic-role-channel-color-model.md
   typography:
     intake_artifact: figma/brands/crested_butte/typography/intake.yml
     preview_artifact: figma/brands/crested_butte/typography/preview.md
@@ -45,21 +46,46 @@ semantic_overrides:
   color:
     status: active
     override_scopes:
-      - semantic_slot: brand
-        raw_family: crested_butte/wild_red
-      - semantic_slot: brand_secondary
-        raw_family: crested_butte/wild_red
-      - semantic_slot: brand_tertiary
-        raw_family: crested_butte/wild_red
-      - semantic_slot: neutral
-        raw_family: crested_butte/beyond_black
+      - scope: neutral
+        source_family: crested_butte/beyond_black
+        targets:
+          - surface/neutral/*
+          - on_surface/neutral/*
+          - foreground/default
+          - foreground/subtle
+          - border/default
+          - border/subtle
+      - scope: brand
+        source_family: crested_butte/wild_red
+        targets:
+          - surface/brand/*
+          - on_surface/brand/*
+          - foreground/brand
+          - border/brand
+      - scope: brand_secondary
+        source_family: crested_butte/wild_red
+        targets:
+          - surface/brand_secondary/*
+          - on_surface/brand_secondary/*
+          - foreground/brand_secondary
+          - border/brand_secondary
     inherited_from_base:
-      - positive/*
-      - warning/*
-      - negative/*
+      - foreground/inverse
+      - surface/positive/*
+      - on_surface/positive/*
+      - surface/warning/*
+      - on_surface/warning/*
+      - surface/critical/*
+      - on_surface/critical/*
+      - foreground/positive
+      - foreground/warning
+      - foreground/critical
+      - border/positive
+      - border/warning
+      - border/critical
     notes:
-      - Wild Red is now the approved source for `brand/*`, `brand_secondary/*`, and `brand_tertiary/*` in the Crested Butte semantic color extension.
-      - Exact white remains on the universal layer and is not duplicated under the brand group.
+      - Wild Red now feeds both expressive role sets in the role-based migration.
+      - Beyond Black drives the neutral role set, and no third expressive semantic lane survives this migration.
   typography:
     status: active
     override_scopes:
