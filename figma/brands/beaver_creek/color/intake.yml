@@ -1,0 +1,178 @@
+date: 2026-03-17
+brand: beaver_creek
+source_reference: User-provided image in chat showing the Beaver Creek color palette
+source_type: image
+figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Foundations?node-id=1-3
+status: active
+preview:
+  required_before_write: true
+  artifact: figma/brands/beaver_creek/color/preview.md
+  status: written_in_figma
+
+source_swatches:
+  - source_name: Beaver Creek Primary Silver
+    provided_value: "#5c6f7c"
+    source_usage_scope: primary_brand_palette
+    channel_restrictions: not specified in source
+    notes: Source image lists RGB 92 111 124 and PMS 7545.
+  - source_name: Beaver Creek Medium Silver
+    provided_value: "#80a1b6"
+    source_usage_scope: primary_brand_palette
+    channel_restrictions: not specified in source
+    notes: Source image lists RGB 128 161 182 and PMS 5425.
+  - source_name: Beaver Creek Light Silver
+    provided_value: "#b9c7d4"
+    source_usage_scope: primary_brand_palette
+    channel_restrictions: not specified in source
+    notes: Source image lists RGB 185 199 212 and PMS 5435.
+  - source_name: Beaver Creek Light Silver 25% Tint
+    provided_value: "#dee3e9"
+    source_usage_scope: primary_brand_palette
+    channel_restrictions: not specified in source
+    notes: Source image lists RGB 222 227 233 and PMS 5435 Tint 50%.
+  - source_name: Beaver Creek White
+    provided_value: "#ffffff"
+    source_usage_scope: neutral_brand_palette
+    channel_restrictions: not specified in source
+    notes: Exact match to the shared universal white primitive.
+  - source_name: Beaver Creek Black
+    provided_value: "#0a2030"
+    source_usage_scope: neutral_brand_palette
+    channel_restrictions: not specified in source
+    notes: Source image lists RGB 10 3 3, but the displayed HEX is `#0a2030`. Governance preserves the displayed HEX as the canonical source value until the source artifact is corrected.
+
+universal_reuse:
+  reuse_universal:
+    - source_name: Beaver Creek White
+      existing_token: universal/white
+      provided_value: "#ffffff"
+      rationale: Exact match to the shared universal white primitive, so no duplicate brand token is created.
+  new_brand_families:
+    - family: silver
+      source_name: Beaver Creek Light Silver 25% Tint, Beaver Creek Light Silver, Beaver Creek Medium Silver, Beaver Creek Primary Silver, and Beaver Creek Black
+      provided_value: "#dee3e9 / #b9c7d4 / #80a1b6 / #5c6f7c / #0a2030"
+      rationale: Beaver Creek supplies one cohesive silver-to-near-black system rather than separate expressive and neutral families, so one silver ladder can carry both the branded neutral system and the approved expressive semantic lanes.
+      anchor_step: 700
+      anchor_label: 700_source
+  hold_for_review: []
+
+scale_spec:
+  working_space: OKLCH
+  steps:
+    - 50
+    - 100
+    - 200
+    - 300
+    - 400
+    - 500
+    - 600
+    - 700
+    - 800
+    - 900
+    - 950
+  contrast_targets:
+    white:
+      "700": "4.5:1 required"
+      "800": "7:1 preferred"
+      "900": "7:1 required"
+    black:
+      "50": "7:1 required"
+      "100": "7:1 required"
+      "200": "4.5:1 required"
+
+family_scales:
+  - family: silver
+    source_name: Beaver Creek Light Silver 25% Tint, Beaver Creek Light Silver, Beaver Creek Medium Silver, Beaver Creek Primary Silver, and Beaver Creek Black
+    source_value: "#dee3e9 / #b9c7d4 / #80a1b6 / #5c6f7c / #0a2030"
+    source_anchor: 100_source / 300_source / 500_source / 700_source / 950_source
+    tokens:
+      - name: beaver_creek/silver/50
+        value: "#eef1f4"
+        source_anchor: false
+      - name: beaver_creek/silver/100
+        value: "#dee3e9"
+        source_anchor: true
+      - name: beaver_creek/silver/200
+        value: "#cbd5de"
+        source_anchor: false
+      - name: beaver_creek/silver/300
+        value: "#b9c7d4"
+        source_anchor: true
+      - name: beaver_creek/silver/400
+        value: "#9cb4c5"
+        source_anchor: false
+      - name: beaver_creek/silver/500
+        value: "#80a1b6"
+        source_anchor: true
+      - name: beaver_creek/silver/600
+        value: "#6e8898"
+        source_anchor: false
+      - name: beaver_creek/silver/700
+        value: "#5c6f7c"
+        source_anchor: true
+      - name: beaver_creek/silver/800
+        value: "#3a4e5c"
+        source_anchor: false
+      - name: beaver_creek/silver/900
+        value: "#1a2f3e"
+        source_anchor: false
+      - name: beaver_creek/silver/950
+        value: "#0a2030"
+        source_anchor: true
+
+validation:
+  perceptual_consistency_notes:
+    - The supplied palette behaves as one blue-silver neutral system, so the ramp keeps every provided swatch on one coherent OKLCH ladder instead of splitting the family into separate neutral and accent groups.
+    - Exact white is intentionally reused from `universal/white`, while the supplied near-black anchors the silver family at `950` so the family can support both neutral and expressive semantic roles.
+    - Approved exception: the same silver family feeds semantic `neutral/*`, `brand/*`, and `brand_secondary/*` for Beaver Creek.
+  contrast_checks:
+    - token: beaver_creek/silver/700
+      foreground: white
+      ratio: "5.22:1"
+      result: pass
+    - token: beaver_creek/silver/800
+      foreground: white
+      ratio: "8.66:1"
+      result: pass
+    - token: beaver_creek/silver/900
+      foreground: white
+      ratio: "13.81:1"
+      result: pass
+    - token: beaver_creek/silver/50
+      foreground: black
+      ratio: "18.52:1"
+      result: pass
+    - token: beaver_creek/silver/200
+      foreground: black
+      ratio: "14.11:1"
+      result: pass
+
+review_readiness:
+  intended_review_channels:
+    - web
+    - email
+    - ads
+  review_rules:
+    - subject: Beaver Creek silver system
+      channels:
+        - web
+        - email
+        - ads
+      rule: Use the governed silver ladder as the one approved Beaver Creek family, with exact white reused from `universal/white`.
+      source_basis: Source image explicitly provides four silver steps plus white and black.
+    - subject: Beaver Creek semantic neutral mapping
+      channels:
+        - web
+        - email
+        - ads
+      rule: Map the silver family to semantic `neutral/*` because the source behaves as a branded background and surface system.
+      source_basis: Accepted neutral-family governance and the supplied light, tint, and near-black support swatches.
+    - subject: Beaver Creek expressive semantic exception
+      channels:
+        - web
+        - email
+        - ads
+      rule: Also map the same silver family to semantic `brand/*` and `brand_secondary/*` per the explicit user-approved exception for this brand.
+      source_basis: User approval of option 2 in chat on 2026-03-17.
+
+open_questions: []

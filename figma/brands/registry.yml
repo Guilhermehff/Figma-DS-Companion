@@ -1,5 +1,5 @@
 version: 1
-updated: 2026-03-12
+updated: 2026-03-17
 brands:
   - brand_id: vail
     display_name: Vail
@@ -29,3 +29,11 @@ brands:
     display_name: Keystone
     status: active
     manifest_path: figma/brands/keystone/brand.yml
+  - brand_id: beaver_creek
+    display_name: Beaver Creek
+    status: active
+    manifest_path: figma/brands/beaver_creek/brand.yml
+  - brand_id: mount_snow
+    display_name: Mount Snow
+    status: active
+    manifest_path: figma/brands/mount_snow/brand.yml
