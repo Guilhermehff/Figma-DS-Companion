@@ -1,0 +1,433 @@
+date: 2026-03-17
+brand: jfbb
+source_reference: User-provided image in chat showing the JFBB / Jack Frost Big Boulder color palette
+source_type: image
+figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Foundations?node-id=1-3
+status: active
+preview:
+  required_before_write: true
+  artifact: figma/brands/jfbb/color/preview.md
+  status: written_in_figma
+
+source_swatches:
+  - source_name: Early Sunrise
+    provided_value: "#ff8220"
+    source_usage_scope: primary brand palette
+    channel_restrictions: not specified in source
+    notes: Source image lists RGB 255 130 32.
+  - source_name: Last Chair
+    provided_value: "#07183a"
+    source_usage_scope: primary brand palette
+    channel_restrictions: not specified in source
+    notes: Source image lists RGB 7 24 58.
+  - source_name: Snow Day
+    provided_value: "#f2f9ff"
+    source_usage_scope: primary brand palette
+    channel_restrictions: not specified in source
+    notes: Source image lists RGB 242 249 255.
+  - source_name: Frost
+    provided_value: "#11c4ed"
+    source_usage_scope: secondary brand palette
+    channel_restrictions: not specified in source
+    notes: Source image lists RGB 17 196 237.
+  - source_name: Bluebird
+    provided_value: "#1b66d0"
+    source_usage_scope: secondary brand palette
+    channel_restrictions: not specified in source
+    notes: Source image lists RGB 27 102 208.
+  - source_name: Night Ski
+    provided_value: "#030d1f"
+    source_usage_scope: secondary brand palette
+    channel_restrictions: not specified in source
+    notes: Source image lists RGB 3 13 31.
+
+universal_reuse:
+  reuse_universal: []
+  new_brand_families:
+    - family: early_sunrise
+      source_name: Early Sunrise
+      provided_value: "#ff8220"
+      rationale: Primary brand orange that carries the loudest expressive accent in the supplied hierarchy.
+      anchor_step: 400
+      anchor_label: 400_source
+    - family: last_chair
+      source_name: Last Chair
+      provided_value: "#07183a"
+      rationale: Dark primary navy that anchors readable type and dark brand contrast without collapsing into exact shared black.
+      anchor_step: 950
+      anchor_label: 950_source
+    - family: snow_day
+      source_name: Snow Day
+      provided_value: "#f2f9ff"
+      rationale: Light icy background color that should drive the neutral surface system in the first semantic pass.
+      anchor_step: 50
+      anchor_label: 50_source
+    - family: frost
+      source_name: Frost
+      provided_value: "#11c4ed"
+      rationale: Bright cyan accent preserved as an extra governed family for future channel or component-specific use.
+      anchor_step: 400
+      anchor_label: 400_source
+    - family: bluebird
+      source_name: Bluebird
+      provided_value: "#1b66d0"
+      rationale: Strong secondary blue that is the cleanest supporting expressive lane for the current two-lane semantic model.
+      anchor_step: 600
+      anchor_label: 600_source
+    - family: night_ski
+      source_name: Night Ski
+      provided_value: "#030d1f"
+      rationale: Near-black blue family kept distinct from both exact black and Last Chair for future dark-theme or campaign use.
+      anchor_step: 950
+      anchor_label: 950_source
+  hold_for_review: []
+
+scale_spec:
+  working_space: OKLCH
+  steps:
+    - 50
+    - 100
+    - 200
+    - 300
+    - 400
+    - 500
+    - 600
+    - 700
+    - 800
+    - 900
+    - 950
+  contrast_targets:
+    white:
+      "800": "4.5:1 preferred"
+      "900": "7:1 required"
+      "950": "7:1 required"
+    black:
+      "50": "7:1 required"
+      "100": "7:1 required"
+      "200": "4.5:1 required"
+
+family_scales:
+  - family: early_sunrise
+    source_name: Early Sunrise
+    source_value: "#ff8220"
+    source_anchor: 400_source
+    tokens:
+      - name: jfbb/early_sunrise/50
+        value: "#fff9f5"
+        source_anchor: false
+      - name: jfbb/early_sunrise/100
+        value: "#ffece1"
+        source_anchor: false
+      - name: jfbb/early_sunrise/200
+        value: "#ffd8c2"
+        source_anchor: false
+      - name: jfbb/early_sunrise/300
+        value: "#ffbb92"
+        source_anchor: false
+      - name: jfbb/early_sunrise/400
+        value: "#ff8220"
+        source_anchor: true
+      - name: jfbb/early_sunrise/500
+        value: "#d77127"
+        source_anchor: false
+      - name: jfbb/early_sunrise/600
+        value: "#ac5a1e"
+        source_anchor: false
+      - name: jfbb/early_sunrise/700
+        value: "#854416"
+        source_anchor: false
+      - name: jfbb/early_sunrise/800
+        value: "#61310f"
+        source_anchor: false
+      - name: jfbb/early_sunrise/900
+        value: "#401f08"
+        source_anchor: false
+      - name: jfbb/early_sunrise/950
+        value: "#241005"
+        source_anchor: false
+  - family: last_chair
+    source_name: Last Chair
+    source_value: "#07183a"
+    source_anchor: 950_source
+    tokens:
+      - name: jfbb/last_chair/50
+        value: "#f7faff"
+        source_anchor: false
+      - name: jfbb/last_chair/100
+        value: "#e9f1fd"
+        source_anchor: false
+      - name: jfbb/last_chair/200
+        value: "#d9e2f2"
+        source_anchor: false
+      - name: jfbb/last_chair/300
+        value: "#c2cde0"
+        source_anchor: false
+      - name: jfbb/last_chair/400
+        value: "#a5b2c8"
+        source_anchor: false
+      - name: jfbb/last_chair/500
+        value: "#8391aa"
+        source_anchor: false
+      - name: jfbb/last_chair/600
+        value: "#64738e"
+        source_anchor: false
+      - name: jfbb/last_chair/700
+        value: "#485875"
+        source_anchor: false
+      - name: jfbb/last_chair/800
+        value: "#2f405f"
+        source_anchor: false
+      - name: jfbb/last_chair/900
+        value: "#172849"
+        source_anchor: false
+      - name: jfbb/last_chair/950
+        value: "#07183a"
+        source_anchor: true
+  - family: snow_day
+    source_name: Snow Day
+    source_value: "#f2f9ff"
+    source_anchor: 50_source
+    tokens:
+      - name: jfbb/snow_day/50
+        value: "#f2f9ff"
+        source_anchor: true
+      - name: jfbb/snow_day/100
+        value: "#edf1f4"
+        source_anchor: false
+      - name: jfbb/snow_day/200
+        value: "#dfe2e4"
+        source_anchor: false
+      - name: jfbb/snow_day/300
+        value: "#cacccf"
+        source_anchor: false
+      - name: jfbb/snow_day/400
+        value: "#afb1b3"
+        source_anchor: false
+      - name: jfbb/snow_day/500
+        value: "#8f9193"
+        source_anchor: false
+      - name: jfbb/snow_day/600
+        value: "#717375"
+        source_anchor: false
+      - name: jfbb/snow_day/700
+        value: "#575859"
+        source_anchor: false
+      - name: jfbb/snow_day/800
+        value: "#3f4041"
+        source_anchor: false
+      - name: jfbb/snow_day/900
+        value: "#28292a"
+        source_anchor: false
+      - name: jfbb/snow_day/950
+        value: "#151617"
+        source_anchor: false
+  - family: frost
+    source_name: Frost
+    source_value: "#11c4ed"
+    source_anchor: 400_source
+    tokens:
+      - name: jfbb/frost/50
+        value: "#f3fcff"
+        source_anchor: false
+      - name: jfbb/frost/100
+        value: "#daf6ff"
+        source_anchor: false
+      - name: jfbb/frost/200
+        value: "#b3ecff"
+        source_anchor: false
+      - name: jfbb/frost/300
+        value: "#6dddff"
+        source_anchor: false
+      - name: jfbb/frost/400
+        value: "#11c4ed"
+        source_anchor: true
+      - name: jfbb/frost/500
+        value: "#17a0c2"
+        source_anchor: false
+      - name: jfbb/frost/600
+        value: "#13809a"
+        source_anchor: false
+      - name: jfbb/frost/700
+        value: "#0f6277"
+        source_anchor: false
+      - name: jfbb/frost/800
+        value: "#0b4757"
+        source_anchor: false
+      - name: jfbb/frost/900
+        value: "#062e39"
+        source_anchor: false
+      - name: jfbb/frost/950
+        value: "#04191f"
+        source_anchor: false
+  - family: bluebird
+    source_name: Bluebird
+    source_value: "#1b66d0"
+    source_anchor: 600_source
+    tokens:
+      - name: jfbb/bluebird/50
+        value: "#f7faff"
+        source_anchor: false
+      - name: jfbb/bluebird/100
+        value: "#e8f1ff"
+        source_anchor: false
+      - name: jfbb/bluebird/200
+        value: "#d0e3ff"
+        source_anchor: false
+      - name: jfbb/bluebird/300
+        value: "#aeceff"
+        source_anchor: false
+      - name: jfbb/bluebird/400
+        value: "#81b2fe"
+        source_anchor: false
+      - name: jfbb/bluebird/500
+        value: "#5590e9"
+        source_anchor: false
+      - name: jfbb/bluebird/600
+        value: "#1b66d0"
+        source_anchor: true
+      - name: jfbb/bluebird/700
+        value: "#1854aa"
+        source_anchor: false
+      - name: jfbb/bluebird/800
+        value: "#0b3c81"
+        source_anchor: false
+      - name: jfbb/bluebird/900
+        value: "#01255b"
+        source_anchor: false
+      - name: jfbb/bluebird/950
+        value: "#001437"
+        source_anchor: false
+  - family: night_ski
+    source_name: Night Ski
+    source_value: "#030d1f"
+    source_anchor: 950_source
+    tokens:
+      - name: jfbb/night_ski/50
+        value: "#f7faff"
+        source_anchor: false
+      - name: jfbb/night_ski/100
+        value: "#ecf1f8"
+        source_anchor: false
+      - name: jfbb/night_ski/200
+        value: "#dce2eb"
+        source_anchor: false
+      - name: jfbb/night_ski/300
+        value: "#c5cdd8"
+        source_anchor: false
+      - name: jfbb/night_ski/400
+        value: "#a9b2bf"
+        source_anchor: false
+      - name: jfbb/night_ski/500
+        value: "#8891a0"
+        source_anchor: false
+      - name: jfbb/night_ski/600
+        value: "#697484"
+        source_anchor: false
+      - name: jfbb/night_ski/700
+        value: "#4d596a"
+        source_anchor: false
+      - name: jfbb/night_ski/800
+        value: "#344052"
+        source_anchor: false
+      - name: jfbb/night_ski/900
+        value: "#1d293c"
+        source_anchor: false
+      - name: jfbb/night_ski/950
+        value: "#030d1f"
+        source_anchor: true
+
+validation:
+  perceptual_consistency_notes:
+    - The orange, blue, and navy families preserve their hue identity across the central 300-700 range while the darkest steps intentionally compress chroma for white contrast.
+    - Snow Day anchors at 50_source so the neutral surface system keeps the exact supplied icy background rather than drifting back to universal white.
+  contrast_checks:
+    - token: jfbb/snow_day/50
+      foreground: "#000000"
+      ratio: "19.77:1"
+      result: pass
+    - token: jfbb/early_sunrise/800
+      foreground: "#ffffff"
+      ratio: "10.74:1"
+      result: pass
+    - token: jfbb/bluebird/800
+      foreground: "#ffffff"
+      ratio: "10.62:1"
+      result: pass
+    - token: jfbb/last_chair/950
+      foreground: "#ffffff"
+      ratio: "17.49:1"
+      result: pass
+
+semantic_recommendations:
+  role_sets:
+    - scope: neutral
+      source_family: jfbb/snow_day
+      rationale: Snow Day is the explicit light background color across the supplied brand guidance and should drive the neutral surface stack.
+      targets:
+        - surface/neutral/*
+        - border/default
+        - border/subtle
+    - scope: brand
+      source_family: jfbb/early_sunrise
+      rationale: Early Sunrise is the loudest primary expressive accent and the clearest first brand lane for the current semantic model.
+      targets:
+        - surface/brand/*
+        - on_surface/brand/*
+        - foreground/brand
+        - border/brand
+    - scope: brand_secondary
+      source_family: jfbb/bluebird
+      rationale: Bluebird is the cleanest supporting expressive lane and preserves a balanced warm/cool pairing with Early Sunrise.
+      targets:
+        - surface/brand_secondary/*
+        - on_surface/brand_secondary/*
+        - foreground/brand_secondary
+        - border/brand_secondary
+  global_only_families:
+    - family: jfbb/frost
+      rationale: Frost remains available as a governed cyan accent but does not displace Bluebird in the shared second expressive lane.
+    - family: jfbb/night_ski
+      rationale: Night Ski stays global-only so the first semantic pass does not promote a second dark navy lane beyond the readable Last Chair exception.
+  role_exceptions:
+    - target: on_surface/neutral/*
+      source_token: jfbb/last_chair/950
+      rationale: Readable neutral copy follows the supplied dark navy rather than the very light Snow Day surface ladder.
+    - target: foreground/default
+      source_token: jfbb/last_chair/950
+      rationale: Default foreground needs the same brand navy used across the supplied hierarchy sheet.
+    - target: foreground/subtle
+      source_token: jfbb/last_chair/800
+      rationale: Subtle neutral foreground keeps a softer navy tone without leaving the brand palette.
+    - target: assets/logo
+      source_token: JFBB
+      rationale: The semantic color extension overrides the shared logo string to the JFBB brand name.
+
+review_readiness:
+  intended_review_channels:
+    - web
+    - email
+    - ads
+  review_rules:
+    - subject: JFBB expressive lane order
+      channels:
+        - web
+        - email
+        - ads
+      rule: Use Early Sunrise as the first expressive semantic lane and Bluebird as the second.
+      source_basis: The supplied palette presents Early Sunrise as a primary brand color and Bluebird as the strongest supporting blue.
+    - subject: JFBB neutral system
+      channels:
+        - web
+        - email
+        - ads
+      rule: Keep Snow Day on neutral surfaces and Last Chair on readable dark neutral copy roles.
+      source_basis: The source imagery pairs an icy background with dark navy typography.
+    - subject: JFBB extra families
+      channels:
+        - web
+        - email
+        - ads
+      rule: Keep Frost and Night Ski global-only until another review promotes an additional semantic lane.
+      source_basis: The current shared semantic model only admits two expressive brand lanes.
+
+open_questions: []

@@ -69,7 +69,6 @@ semantic_overrides:
         targets:
           - assets/logo
     inherited_from_base:
-      - foreground/inverse
       - surface/positive/*
       - on_surface/positive/*
       - surface/warning/*

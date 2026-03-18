@@ -1,5 +1,5 @@
 version: 1
-updated: 2026-03-14
+updated: 2026-03-17
 brand_id: northstar
 display_name: Northstar
 status: active
@@ -10,7 +10,7 @@ supported_channels:
   - email
   - ads
 figma:
-  design_system_file_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+  design_system_file_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Foundations?node-id=1-3
   global_collections:
     color_id: VariableCollectionId:23:2
     typography_id: VariableCollectionId:23:3
@@ -65,8 +65,11 @@ semantic_overrides:
           - on_surface/brand_secondary/*
           - foreground/brand_secondary
           - border/brand_secondary
+      - scope: asset_logo
+        source_value: Northstar
+        targets:
+          - assets/logo
     inherited_from_base:
-      - foreground/inverse
       - surface/positive/*
       - on_surface/positive/*
       - surface/warning/*
@@ -82,6 +85,7 @@ semantic_overrides:
     notes:
       - The role-based migration keeps burgundy and copper as the expressive semantic lanes.
       - Graphite drives the neutral role set.
+      - "`assets/logo` is overridden to the string `Northstar` in the semantic color extension."
       - The former tertiary burgundy reuse is removed from semantic and remains only as a global family.
   typography:
     status: active
@@ -105,4 +109,4 @@ semantic_overrides:
       - The supplied guidance shows one brand family, `New Order`, with Medium used for headlines and Regular used for sub-headlines and body copy.
       - Action typography remains intentionally inherited because the approved source did not define a CTA or button-specific rule.
 notes:
-  - Northstar is live in the Design System file with global color ladders, a global typography family, and semantic color and typography extensions.
+  - Northstar is live in the Foundations file with global color ladders, a global typography family, a semantic color logo-name override, and semantic color and typography extensions.

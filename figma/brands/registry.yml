@@ -1,5 +1,5 @@
 version: 1
-updated: 2026-03-17
+updated: 2026-03-18
 brands:
   - brand_id: vail
     display_name: Vail
@@ -37,3 +37,11 @@ brands:
     display_name: Mount Snow
     status: active
     manifest_path: figma/brands/mount_snow/brand.yml
+  - brand_id: jfbb
+    display_name: JFBB
+    status: active
+    manifest_path: figma/brands/jfbb/brand.yml
+  - brand_id: park_city
+    display_name: Park City
+    status: active
+    manifest_path: figma/brands/park_city/brand.yml

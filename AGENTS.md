@@ -57,6 +57,7 @@ Before performing any write operation in Figma:
 
 3. Confirm write intent
    - If the task is destructive (delete, merge, bulk rename, remove modes), stop and request explicit confirmation.
+   - If the proposed write depends on an exception, a non-obvious interpretation, an unresolved contradiction, or any mapping that falls outside the currently established rules in `AGENTS.md`, `figma/config/variable-taxonomy.yml`, or accepted decision logs, stop and request explicit confirmation before writing into Figma.
 
 ## Token model
 

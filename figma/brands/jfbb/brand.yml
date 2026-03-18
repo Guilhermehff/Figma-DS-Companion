@@ -1,7 +1,7 @@
 version: 1
 updated: 2026-03-17
-brand_id: breckenridge
-display_name: Breckenridge
+brand_id: jfbb
+display_name: JFBB
 status: active
 owners:
   - design_system_governance
@@ -17,35 +17,32 @@ figma:
     dimensions_id: VariableCollectionId:23:4
   semantic_extensions:
     color:
-      collection_name: Breckenridge
-      collection_id: VariableCollectionId:79:937
+      collection_name: JFBB
+      collection_id: VariableCollectionId:135:244
       parent_collection: "Semantic: Color"
       parent_collection_id: VariableCollectionId:41:135
     typography:
-      collection_name: Breckenridge
-      collection_id: VariableCollectionId:45:318
+      collection_name: JFBB
+      collection_id: VariableCollectionId:135:245
       parent_collection: "Semantic: Typography"
       parent_collection_id: VariableCollectionId:38:114
 artifacts:
   color:
-    intake_artifact: figma/brands/breckenridge/color/intake.yml
-    preview_artifact: figma/brands/breckenridge/color/preview.md
+    intake_artifact: figma/brands/jfbb/color/intake.yml
+    preview_artifact: figma/brands/jfbb/color/preview.md
     decision_artifacts:
-      - figma/decisions/2026-03-11-brand-manifest-and-generated-registry-governance.md
-      - figma/decisions/2026-03-11-initial-semantic-color-family-model.md
-      - figma/decisions/2026-03-13-proposed-semantic-role-channel-color-model.md
+      - figma/decisions/2026-03-17-jfbb-foundations-written-to-figma.md
   typography:
-    intake_artifact: figma/brands/breckenridge/typography/intake.yml
-    preview_artifact: figma/brands/breckenridge/typography/preview.md
+    intake_artifact: figma/brands/jfbb/typography/intake.yml
+    preview_artifact: figma/brands/jfbb/typography/preview.md
     decision_artifacts:
-      - figma/decisions/2026-03-11-brand-manifest-and-generated-registry-governance.md
-      - figma/decisions/2026-03-11-role-scoped-semantic-typography-ladders.md
+      - figma/decisions/2026-03-17-jfbb-foundations-written-to-figma.md
 semantic_overrides:
   color:
     status: active
     override_scopes:
       - scope: neutral
-        source_family: breckenridge/dark_gray
+        source_family: jfbb/snow_day
         targets:
           - surface/neutral/*
           - on_surface/neutral/*
@@ -54,21 +51,21 @@ semantic_overrides:
           - border/default
           - border/subtle
       - scope: brand
-        source_family: breckenridge/navy
+        source_family: jfbb/early_sunrise
         targets:
           - surface/brand/*
           - on_surface/brand/*
           - foreground/brand
           - border/brand
       - scope: brand_secondary
-        source_family: breckenridge/red
+        source_family: jfbb/bluebird
         targets:
           - surface/brand_secondary/*
           - on_surface/brand_secondary/*
           - foreground/brand_secondary
           - border/brand_secondary
       - scope: asset_logo
-        source_value: Breckenridge
+        source_value: JFBB
         targets:
           - assets/logo
     inherited_from_base:
@@ -85,32 +82,33 @@ semantic_overrides:
       - border/warning
       - border/critical
     notes:
-      - White is reused from universal/white and does not require a brand-specific override.
-      - Dark Gray now drives the neutral role set, while navy and red remain the two expressive semantic lanes.
-      - "`assets/logo` is overridden to the string `Breckenridge` in the semantic color extension."
-      - No third expressive semantic lane survives the role-based migration; any additional approved family remains global-only.
+      - Snow Day drives the light neutral surface system, while Last Chair supplies the readable dark neutral roles so the brand keeps the supplied icy-background and navy-type pairing.
+      - The reviewed expressive semantic lanes use Early Sunrise as `brand/*` and Bluebird as `brand_secondary/*`.
+      - Frost and Night Ski remain governed global-only extra families after the first semantic pass.
+      - "`assets/logo` is overridden to the string `JFBB` in the semantic color extension."
   typography:
     status: active
     override_scopes:
       - semantic_token: family/heading
-        alias_of: breckenridge/family/primary
+        alias_of: jfbb/family/primary
       - semantic_token: family/body
-        alias_of: breckenridge/family/secondary
-      - semantic_token: family/action
-        alias_of: breckenridge/family/primary
+        alias_of: jfbb/family/primary
       - semantic_token: weight/heading/base
-        alias_of: universal/weight/bold
+        alias_of: universal/weight/black
       - semantic_token: weight/body/base
         alias_of: universal/weight/normal
-      - semantic_token: weight/action/base
+      - semantic_token: weight/body/strong
         alias_of: universal/weight/bold
     inherited_from_base:
       - family/heading_safe
       - family/body_safe
+      - family/action
       - family/action_safe
+      - weight/action/*
       - size/*
     notes:
-      - Shared raw typography support now includes universal/weight/bold in the global typography collection.
-      - The Breckenridge semantic typography extension is written and maps heading and action to bold while body remains on normal.
+      - JFBB uses one raw family, Vista Sans NAR OTCE, across headline, subheadline, and body roles, with weight carrying the hierarchy.
+      - "`Book` stages on `universal/weight/normal` because the shared raw ladder has no separate book primitive."
+      - "The source body-leading example is internally inconsistent (`100px difference` / `24px / 124px`), so live size semantics remain inherited."
 notes:
-  - Breckenridge is now live in the Foundations file with global color ladders, a semantic color logo-name override, and semantic typography and color extensions.
+  - JFBB is live in the Foundations file with six raw color families, one raw typography family, a semantic color logo-name override, and JFBB semantic color and typography extensions.

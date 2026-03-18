@@ -1,5 +1,5 @@
 version: 1
-updated: 2026-03-14
+updated: 2026-03-17
 brand_id: vail
 display_name: Vail
 status: active
@@ -10,7 +10,7 @@ supported_channels:
   - email
   - ads
 figma:
-  design_system_file_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+  design_system_file_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Foundations?node-id=1-3
   global_collections:
     color_id: VariableCollectionId:23:2
     typography_id: VariableCollectionId:23:3
@@ -59,12 +59,15 @@ semantic_overrides:
           - on_surface/brand_secondary/*
           - foreground/brand_secondary
           - border/brand_secondary
+      - scope: asset_logo
+        source_value: Vail
+        targets:
+          - assets/logo
     inherited_from_base:
       - surface/neutral/*
       - on_surface/neutral/*
       - foreground/default
       - foreground/subtle
-      - foreground/inverse
       - border/default
       - border/subtle
       - surface/positive/*
@@ -81,6 +84,7 @@ semantic_overrides:
       - border/critical
     notes:
       - The role-based migration rebuilds Vail around `digital_blue` and `navy` while inheriting the shared neutral and status role sets from the base collection.
+      - "`assets/logo` is overridden to the string `Vail` in the semantic color extension."
       - "`yellow` remains a governed global family but is no longer promoted into semantic."
   typography:
     status: active

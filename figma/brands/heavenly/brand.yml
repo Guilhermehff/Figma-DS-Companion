@@ -1,5 +1,5 @@
 version: 1
-updated: 2026-03-14
+updated: 2026-03-17
 brand_id: heavenly
 display_name: Heavenly
 status: active
@@ -10,7 +10,7 @@ supported_channels:
   - email
   - ads
 figma:
-  design_system_file_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+  design_system_file_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Foundations?node-id=1-3
   global_collections:
     color_id: VariableCollectionId:23:2
     typography_id: VariableCollectionId:23:3
@@ -58,12 +58,15 @@ semantic_overrides:
           - on_surface/brand_secondary/*
           - foreground/brand_secondary
           - border/brand_secondary
+      - scope: asset_logo
+        source_value: Heavenly
+        targets:
+          - assets/logo
     inherited_from_base:
       - surface/neutral/*
       - on_surface/neutral/*
       - foreground/default
       - foreground/subtle
-      - foreground/inverse
       - border/default
       - border/subtle
       - surface/positive/*
@@ -81,6 +84,7 @@ semantic_overrides:
     notes:
       - Exact white and black remain inherited through the shared neutral and status role recipes.
       - The role-based migration keeps `snow_flower_red` and `deep_water_blue` as the only expressive semantic lanes.
+      - "`assets/logo` is overridden to the string `Heavenly` in the semantic color extension."
       - "`shore_blue` remains a governed global family but is no longer promoted into semantic."
   typography:
     status: active
@@ -109,4 +113,4 @@ semantic_overrides:
       - CTA typography remains intentionally inherited because the supplied image specifies CTA tracking but does not explicitly name a CTA family or weight.
       - The shared semantic typography base now also includes `weight/heading/strong`, `weight/body/strong`, and `size/body/lg` so the Heavenly extension can override against governed base variables rather than a parallel schema.
 notes:
-  - Heavenly is live in the Design System file with global color ladders, two global typography families, the shared raw light weight, and semantic color and typography extensions.
+  - Heavenly is live in the Foundations file with global color ladders, two global typography families, the shared raw light weight, a semantic color logo-name override, and semantic color and typography extensions.

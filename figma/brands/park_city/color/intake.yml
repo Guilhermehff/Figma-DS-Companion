@@ -1,0 +1,272 @@
+date: 2026-03-18
+brand: park_city
+source_reference: User-provided images in chat showing the Park City color palette and proportion guidance
+source_type: image
+figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Foundations?node-id=1-3
+status: active
+preview:
+  required_before_write: true
+  artifact: figma/brands/park_city/color/preview.md
+  status: written_in_figma
+
+source_swatches:
+  - source_name: Park City Red
+    provided_value: "#971b1f"
+    source_usage_scope: primary brand palette
+    channel_restrictions: not specified in source
+    notes: Source image lists PMS 187 C, CMYK 25-100-100-25, and RGB 151-27-31.
+  - source_name: Bright Red
+    provided_value: "#db0032"
+    source_usage_scope: primary brand palette
+    channel_restrictions: not specified in source
+    notes: Source image lists PMS 199 C, CMYK 0-98-71-0, and RGB 219-0-50.
+  - source_name: Pale Red
+    provided_value: "#f0d9ea"
+    source_usage_scope: primary brand palette
+    channel_restrictions: not specified in source
+    notes: Source image lists PMS 7436 C, CMYK 4-16-0-0, and RGB 240-217-234.
+  - source_name: Park City Gray
+    provided_value: "#414042"
+    source_usage_scope: primary brand palette
+    channel_restrictions: not specified in source
+    notes: Source image lists PMS 447 C, CMYK 0-0-0-90, and RGB 65-64-66.
+  - source_name: Cool Gray
+    provided_value: "#b1b3b6"
+    source_usage_scope: primary brand palette
+    channel_restrictions: not specified in source
+    notes: Source image lists PMS Cool Gray 5 C, CMYK 0-0-0-30, and RGB 177-179-182.
+  - source_name: White
+    provided_value: "#ffffff"
+    source_usage_scope: primary brand palette
+    channel_restrictions: not specified in source
+    notes: Exact white swatch shown in the palette image.
+
+universal_reuse:
+  reuse_universal:
+    - source_name: White
+      provided_value: "#ffffff"
+      existing_token: universal/white
+      rationale: Exact match to the shared universal white primitive, so no duplicate Park City white token is created.
+  new_brand_families:
+    - family: park_city_red
+      source_name: Park City Red
+      provided_value: "#971b1f"
+      rationale: Dominant signature red and the darkest supplied expressive swatch in the Park City palette.
+      anchor_step: 700
+      anchor_label: 700_source
+    - family: bright_red
+      source_name: Bright Red
+      provided_value: "#db0032"
+      rationale: Saturated supporting red that cleanly serves as the secondary expressive semantic lane.
+      anchor_step: 600
+      anchor_label: 600_source
+    - family: park_city_gray
+      source_name: Park City Gray
+      provided_value: "#414042"
+      rationale: Low-chroma neutral ladder that absorbs Pale Red, Cool Gray, and Park City Gray into one governed brand-neutral family for surfaces, borders, and readable foregrounds.
+      anchor_step: 800
+      anchor_label: 800_source
+      source_anchors:
+        - source_name: Pale Red
+          provided_value: "#f0d9ea"
+          anchor_step: 200
+          anchor_label: 200_source
+        - source_name: Cool Gray
+          provided_value: "#b1b3b6"
+          anchor_step: 400
+          anchor_label: 400_source
+  hold_for_review: []
+
+scale_spec:
+  working_space: OKLCH
+  steps:
+    - 50
+    - 100
+    - 200
+    - 300
+    - 400
+    - 500
+    - 600
+    - 700
+    - 800
+    - 900
+    - 950
+  contrast_targets:
+    white:
+      "800": "4.5:1 preferred"
+      "900": "7:1 required"
+      "950": "7:1 required"
+    black:
+      "50": "7:1 required"
+      "100": "7:1 required"
+      "200": "4.5:1 required"
+
+family_scales:
+  - family: park_city_red
+    source_name: Park City Red
+    source_value: "#971b1f"
+    source_anchor: 700_source
+    tokens:
+      - name: park_city/park_city_red/50
+        value: "#fff6f4"
+        source_anchor: false
+      - name: park_city/park_city_red/100
+        value: "#ffe6e1"
+        source_anchor: false
+      - name: park_city/park_city_red/200
+        value: "#ffd2cc"
+        source_anchor: false
+      - name: park_city/park_city_red/300
+        value: "#ffb7b0"
+        source_anchor: false
+      - name: park_city/park_city_red/400
+        value: "#ec978f"
+        source_anchor: false
+      - name: park_city/park_city_red/500
+        value: "#d17169"
+        source_anchor: false
+      - name: park_city/park_city_red/600
+        value: "#b74b46"
+        source_anchor: false
+      - name: park_city/park_city_red/700
+        value: "#971b1f"
+        source_anchor: true
+      - name: park_city/park_city_red/800
+        value: "#761417"
+        source_anchor: false
+      - name: park_city/park_city_red/900
+        value: "#520308"
+        source_anchor: false
+      - name: park_city/park_city_red/950
+        value: "#340001"
+        source_anchor: false
+  - family: bright_red
+    source_name: Bright Red
+    source_value: "#db0032"
+    source_anchor: 600_source
+    tokens:
+      - name: park_city/bright_red/50
+        value: "#fff3f2"
+        source_anchor: false
+      - name: park_city/bright_red/100
+        value: "#ffdfdc"
+        source_anchor: false
+      - name: park_city/bright_red/200
+        value: "#ffc7c3"
+        source_anchor: false
+      - name: park_city/bright_red/300
+        value: "#ffa7a5"
+        source_anchor: false
+      - name: park_city/bright_red/400
+        value: "#ff8181"
+        source_anchor: false
+      - name: park_city/bright_red/500
+        value: "#f15058"
+        source_anchor: false
+      - name: park_city/bright_red/600
+        value: "#db0032"
+        source_anchor: true
+      - name: park_city/bright_red/700
+        value: "#ab001f"
+        source_anchor: false
+      - name: park_city/bright_red/800
+        value: "#830010"
+        source_anchor: false
+      - name: park_city/bright_red/900
+        value: "#5d0002"
+        source_anchor: false
+      - name: park_city/bright_red/950
+        value: "#3d0000"
+        source_anchor: false
+  - family: park_city_gray
+    source_name: Park City Gray
+    source_value: "#414042"
+    source_anchor: 800_source
+    source_anchors:
+      - step: 200
+        source_name: Pale Red
+        source_value: "#f0d9ea"
+      - step: 400
+        source_name: Cool Gray
+        source_value: "#b1b3b6"
+    tokens:
+      - name: park_city/park_city_gray/50
+        value: "#fff7fd"
+        source_anchor: false
+      - name: park_city/park_city_gray/100
+        value: "#f9ecf5"
+        source_anchor: false
+      - name: park_city/park_city_gray/200
+        value: "#f0d9ea"
+        source_anchor: true
+      - name: park_city/park_city_gray/300
+        value: "#d3c8d2"
+        source_anchor: false
+      - name: park_city/park_city_gray/400
+        value: "#b1b3b6"
+        source_anchor: true
+      - name: park_city/park_city_gray/500
+        value: "#8f9193"
+        source_anchor: false
+      - name: park_city/park_city_gray/600
+        value: "#727375"
+        source_anchor: false
+      - name: park_city/park_city_gray/700
+        value: "#58585a"
+        source_anchor: false
+      - name: park_city/park_city_gray/800
+        value: "#414042"
+        source_anchor: true
+      - name: park_city/park_city_gray/900
+        value: "#29282a"
+        source_anchor: false
+      - name: park_city/park_city_gray/950
+        value: "#161617"
+        source_anchor: false
+
+validation:
+  perceptual_consistency_notes:
+    - Park City Red lands at `700` because the supplied swatch is already a dark, high-contrast brand red rather than a mid-tone accent.
+    - Bright Red lands at `600` because the supplied swatch sits cleanly in the governed mid-dark expressive band while still supporting lighter and darker steps above and below it.
+    - Park City stages `Pale Red`, `Cool Gray`, and `Park City Gray` into one neutral ladder because the palette and proportion guidance present them as one continuous low-chroma system from soft background tint to dark readable neutral.
+    - Exact white is reused from `universal/white` rather than duplicated under the Park City group.
+  contrast_checks:
+    - token: park_city/park_city_gray/800
+      foreground: white
+      ratio: "10.31:1"
+      result: pass
+    - token: park_city/park_city_gray/700
+      foreground: white
+      ratio: "7.10:1"
+      result: pass
+    - token: park_city/park_city_red/700
+      foreground: white
+      ratio: "8.43:1"
+      result: pass
+    - token: park_city/bright_red/600
+      foreground: white
+      ratio: "5.17:1"
+      result: pass
+
+review_readiness:
+  intended_review_channels:
+    - web
+    - email
+    - ads
+  review_rules:
+    - subject: Park City neutral system
+      channels:
+        - web
+        - email
+        - ads
+      rule: Use the absorbed `park_city_gray` family for tinted canvases, soft neutral surfaces, borders, and dark readable foregrounds before introducing any extra neutral lane.
+      source_basis: The supplied palette and ratio image pair a pale pink field with cool and dark grays as one brand-neutral system.
+    - subject: Park City expressive lane order
+      channels:
+        - web
+        - email
+        - ads
+      rule: Keep `park_city_red` as the primary expressive lane and `bright_red` as the secondary expressive lane.
+      source_basis: The palette image presents Park City Red as the dominant signature swatch and Bright Red as the supporting saturated accent.
+
+open_questions: []

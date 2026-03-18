@@ -1,7 +1,7 @@
 version: 1
-updated: 2026-03-17
-brand_id: kirkwood
-display_name: Kirkwood
+updated: 2026-03-18
+brand_id: park_city
+display_name: Park City
 status: active
 owners:
   - design_system_governance
@@ -17,33 +17,32 @@ figma:
     dimensions_id: VariableCollectionId:23:4
   semantic_extensions:
     color:
-      collection_name: Kirkwood
-      collection_id: VariableCollectionId:79:1053
+      collection_name: Park City
+      collection_id: VariableCollectionId:186:46
       parent_collection: "Semantic: Color"
       parent_collection_id: VariableCollectionId:41:135
     typography:
-      collection_name: Kirkwood
-      collection_id: VariableCollectionId:55:666
+      collection_name: Park City
+      collection_id: VariableCollectionId:186:47
       parent_collection: "Semantic: Typography"
       parent_collection_id: VariableCollectionId:38:114
 artifacts:
   color:
-    intake_artifact: figma/brands/kirkwood/color/intake.yml
-    preview_artifact: figma/brands/kirkwood/color/preview.md
+    intake_artifact: figma/brands/park_city/color/intake.yml
+    preview_artifact: figma/brands/park_city/color/preview.md
     decision_artifacts:
-      - figma/decisions/2026-03-12-kirkwood-foundations-written-to-figma.md
-      - figma/decisions/2026-03-13-proposed-semantic-role-channel-color-model.md
+      - figma/decisions/2026-03-18-park-city-foundations-written-to-figma.md
   typography:
-    intake_artifact: figma/brands/kirkwood/typography/intake.yml
-    preview_artifact: figma/brands/kirkwood/typography/preview.md
+    intake_artifact: figma/brands/park_city/typography/intake.yml
+    preview_artifact: figma/brands/park_city/typography/preview.md
     decision_artifacts:
-      - figma/decisions/2026-03-12-kirkwood-foundations-written-to-figma.md
+      - figma/decisions/2026-03-18-park-city-foundations-written-to-figma.md
 semantic_overrides:
   color:
     status: active
     override_scopes:
       - scope: neutral
-        source_family: kirkwood/cool_gray
+        source_family: park_city/park_city_gray
         targets:
           - surface/neutral/*
           - on_surface/neutral/*
@@ -52,21 +51,21 @@ semantic_overrides:
           - border/default
           - border/subtle
       - scope: brand
-        source_family: kirkwood/orange_021_c
+        source_family: park_city/park_city_red
         targets:
           - surface/brand/*
           - on_surface/brand/*
           - foreground/brand
           - border/brand
       - scope: brand_secondary
-        source_family: kirkwood/blue_648_c
+        source_family: park_city/bright_red
         targets:
           - surface/brand_secondary/*
           - on_surface/brand_secondary/*
           - foreground/brand_secondary
           - border/brand_secondary
       - scope: asset_logo
-        source_value: Kirkwood
+        source_value: Park City
         targets:
           - assets/logo
     inherited_from_base:
@@ -83,23 +82,23 @@ semantic_overrides:
       - border/warning
       - border/critical
     notes:
-      - Kirkwood's `642 C` pale blue remains absorbed into the neutral role set rather than creating a third expressive semantic lane.
-      - "`teal_633_c` remains global-only after the role-based migration."
-      - "`assets/logo` is overridden to the string `Kirkwood` in the semantic color extension."
-      - Exact white and black stay inherited through the shared role recipes.
+      - Park City stages `Pale Red`, `Cool Gray`, and `Park City Gray` into one absorbed neutral family, `park_city/park_city_gray`, so the tinted background wash and the darker readable neutrals remain on one governed ladder.
+      - `park_city_red` drives the primary expressive semantic lane, while `bright_red` drives the secondary expressive lane.
+      - "`assets/logo` is overridden to the string `Park City` in the semantic color extension."
+      - Exact white remains shared through `universal/white` rather than duplicated under the Park City group.
   typography:
     status: active
     override_scopes:
       - semantic_token: family/heading
-        alias_of: kirkwood/family/primary
+        alias_of: park_city/family/primary
       - semantic_token: family/body
-        alias_of: kirkwood/family/secondary
+        alias_of: park_city/family/primary
       - semantic_token: family/action
-        alias_of: kirkwood/family/action
+        alias_of: park_city/family/primary
       - semantic_token: weight/heading/base
         alias_of: universal/weight/bold
       - semantic_token: weight/body/base
-        alias_of: universal/weight/normal
+        alias_of: universal/weight/light
       - semantic_token: weight/action/base
         alias_of: universal/weight/bold
     inherited_from_base:
@@ -110,8 +109,8 @@ semantic_overrides:
       - weight/body/strong
       - size/*
     notes:
-      - Trade Gothic Bold Condensed No. 20 drives the headline lane, Avenir Next remains the reading family, and Futura Bold stages as the action-emphasis family.
-      - "`kirkwood/family/utility` preserves Trade Gothic Condensed No. 18 as a raw primitive because the current semantic typography schema has no stable fourth family slot for limited-space emphasis."
+      - Park City uses `Futura Std` across headline, body, and CTA work, with Bold and Light carrying the hierarchy.
+      - "`park_city/family/utility` preserves `Trade Gothic LT Std Bold Condensed No. 20` as a raw primitive because the current semantic typography schema has no dedicated subhead family lane."
+      - Live size semantics remain inherited because the supplied hierarchy guidance defines case, tracking, and leading behavior but not governed numeric size tokens.
 notes:
-  - Kirkwood is live in the Foundations file with four raw color families, four raw typography family primitives, a semantic color logo-name override, and semantic color and typography extensions.
-  - Governance exception: the Kirkwood write occurred before preview review was completed, so the decision log and preview artifacts explicitly record the sequencing defect.
+  - Park City is live in the Foundations file with three raw color families, two raw typography family primitives, a semantic color logo-name override, and Park City semantic color and typography extensions.

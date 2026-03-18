@@ -1,0 +1,209 @@
+date: 2026-03-17
+brand: jfbb
+source_reference: User-provided image in chat showing the JFBB / Jack Frost Big Boulder typography hierarchy guidance
+source_type: image
+figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Foundations?node-id=1-3
+status: active
+preview:
+  required_before_write: true
+  artifact: figma/brands/jfbb/typography/preview.md
+  status: written_in_figma
+
+source_roles:
+  - source_role: headline
+    source_family_name: Vista Sans NAR OTCE
+    source_style_name: Black
+    source_weight_label: Black
+    source_usage_scope: primary_display_headline
+    text_case: all_caps
+    tracking: 0%
+    leading: plus_10px_over_font_size
+    size_rule: source gives example 44px / 54px leading but not a governed token size
+    punctuation_rule: not specified in source
+    sample_copy: THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG
+    notes: Use for headlines and bold impactful type.
+  - source_role: subheadline
+    source_family_name: Vista Sans NAR OTCE
+    source_style_name: Bold
+    source_weight_label: Bold
+    source_usage_scope: supporting_headline_copy
+    text_case: all_caps
+    tracking: 0%
+    leading: plus_10px_over_font_size
+    size_rule: source gives example 36px / 46px leading but not a governed token size
+    punctuation_rule: punctuation allowed
+    sample_copy: THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG.
+    notes: The hierarchy sheet says subheads should lean into Bold.
+  - source_role: body
+    source_family_name: Vista Sans NAR OTCE
+    source_style_name: Book
+    source_weight_label: Book
+    source_usage_scope: reading_copy
+    text_case: sentence_case
+    tracking: 0%
+    leading: source lists 100px difference and 24px / 124px example; treated as inconsistent
+    size_rule: source body example is internally inconsistent and not treated as a governed token size
+    punctuation_rule: sentence punctuation allowed
+    sample_copy: The quick brown fox jumps over the lazy dog.
+    notes: The source explicitly says body should use Book.
+
+primitive_recommendations:
+  reuse_existing:
+    families: []
+    weights:
+      - source_weight_label: Black
+        existing_token: universal/weight/black
+        reason: Direct match to the strongest shared raw weight.
+      - source_weight_label: Bold
+        existing_token: universal/weight/bold
+        reason: Direct match to the shared bold weight.
+      - source_weight_label: Book
+        existing_token: universal/weight/normal
+        reason: The current shared raw ladder does not include a separate book primitive, and the source does not provide a numeric distinction from normal.
+    sizes:
+      - source_size_reference: headline default
+        existing_token: universal/size/700
+        assumption_status: assumed
+        assumption_note: The source provides an example size pair but not a governed semantic size token.
+        reason: Keeps headline sizing inside the current shared raw ladder.
+      - source_size_reference: subheadline default
+        existing_token: universal/size/500
+        assumption_status: assumed
+        assumption_note: The source provides an example pair but no governed semantic size step.
+        reason: Preserves hierarchy without introducing a new raw size.
+      - source_size_reference: body default
+        existing_token: universal/size/200
+        assumption_status: assumed
+        assumption_note: The body example is internally inconsistent, so the live extension keeps size semantics inherited.
+        reason: Keeps body sizing aligned to the shared base layer until a channel comp clarifies the intended recipe.
+  proposed_primitives:
+    families:
+      - token_name: jfbb/family/primary
+        source_family_name: Vista Sans NAR OTCE
+        source_style_reference: Black, Bold, and Book hierarchy system
+        rationale: JFBB uses one type family across headline, subheadline, and body roles, with weight carrying the distinction.
+        fallback_token: universal/family/web_safe
+        fallback_note: The source does not provide a governed fallback stack.
+    weights: []
+  hold_for_review:
+    - item: action typography
+      reason: The source does not define CTA, button, or action-specific typography behavior.
+
+semantic_recommendations:
+  family_aliases:
+    - semantic_token: family/heading
+      global_token: jfbb/family/primary
+      safe_semantic_token: family/heading_safe
+      safe_global_token: universal/family/web_safe
+      intended_channels:
+        - web
+        - email
+        - ads
+      notes: Headline work stays on the single JFBB family.
+    - semantic_token: family/body
+      global_token: jfbb/family/primary
+      safe_semantic_token: family/body_safe
+      safe_global_token: universal/family/web_safe
+      intended_channels:
+        - web
+        - email
+        - ads
+      notes: Body and subheadline copy use the same family, with weight carrying hierarchy.
+  weight_aliases:
+    - semantic_token: weight/heading/base
+      global_token: universal/weight/black
+      intended_channels:
+        - web
+        - email
+        - ads
+      notes: Headline weight is an explicit direct match to the shared black raw weight.
+    - semantic_token: weight/body/base
+      global_token: universal/weight/normal
+      intended_channels:
+        - web
+        - email
+        - ads
+      notes: Book is staged on normal because there is no separate shared raw book primitive.
+    - semantic_token: weight/body/strong
+      global_token: universal/weight/bold
+      intended_channels:
+        - web
+        - email
+        - ads
+      notes: Subheadline emphasis uses the supplied bold treatment.
+  size_aliases: []
+
+role_recipes:
+  - role_name: headline
+    source_role: Headline | Vista Sans NAR OTCE Black
+    proposed_family_token: jfbb/family/primary
+    fallback_token: universal/family/web_safe
+    proposed_weight_token: universal/weight/black
+    proposed_size_token: universal/size/700
+    size_assumption_status: assumed
+    text_case: all_caps
+    tracking: 0%
+    leading_rule: add 10px to the font size
+    size_rule: example 44px / 54px leading, not a governed token size
+    punctuation_rule: not specified in source
+    sample_copy: THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG
+    notes: Strong all-caps headline lane.
+  - role_name: subheadline
+    source_role: Subheadline | Vista Sans NAR OTCE Bold
+    proposed_family_token: jfbb/family/primary
+    fallback_token: universal/family/web_safe
+    proposed_weight_token: universal/weight/bold
+    proposed_size_token: universal/size/500
+    size_assumption_status: assumed
+    text_case: all_caps
+    tracking: 0%
+    leading_rule: add 10px to the font size
+    size_rule: example 36px / 46px leading, not a governed token size
+    punctuation_rule: punctuation allowed
+    sample_copy: THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG.
+    notes: Supportive all-caps headline lane.
+  - role_name: body
+    source_role: Body | Vista Sans NAR OTCE Book
+    proposed_family_token: jfbb/family/primary
+    fallback_token: universal/family/web_safe
+    proposed_weight_token: universal/weight/normal
+    proposed_size_token: universal/size/200
+    size_assumption_status: assumed
+    text_case: sentence_case
+    tracking: 0%
+    leading_rule: source body example is internally inconsistent; do not create a size override from it
+    size_rule: source lists 100px difference and 24px / 124px leading, so the live extension keeps shared size semantics
+    punctuation_rule: sentence punctuation allowed
+    sample_copy: The quick brown fox jumps over the lazy dog.
+    notes: Reading-copy treatment on the shared JFBB family.
+
+validation:
+  extraction_notes:
+    - The source uses one family across headline, subheadline, and body roles, with weight carrying the hierarchy.
+    - The body-leading example is internally inconsistent with the headline and subheadline examples and should not drive a new raw size or leading token.
+  governance_notes:
+    - "`Book` stages on `universal/weight/normal` because the current raw ladder has no separate book primitive and the source does not provide a numeric weight."
+    - Size semantics remain inherited from the shared baseline in the live Figma extension.
+
+review_readiness:
+  intended_review_channels:
+    - web
+    - email
+    - ads
+  review_rules:
+    - subject: JFBB headline lane
+      channels:
+        - web
+        - email
+        - ads
+      rule: Keep headlines on Vista Sans NAR OTCE Black in all caps with 0 tracking and a 10px leading offset.
+      source_basis: JFBB hierarchy guidance image.
+    - subject: JFBB supporting and body copy
+      channels:
+        - web
+        - email
+        - ads
+      rule: Keep subheadlines on Vista Sans NAR OTCE Bold in all caps and body on Vista Sans NAR OTCE Book in sentence case; do not create a size override from the inconsistent body-leading example.
+      source_basis: JFBB hierarchy guidance image.
+
+open_questions: []

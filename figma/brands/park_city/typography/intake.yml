@@ -1,0 +1,254 @@
+date: 2026-03-18
+brand: park_city
+source_reference: User-provided image in chat showing the Park City typography hierarchy guidance
+source_type: image
+figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Foundations?node-id=1-3
+status: active
+preview:
+  required_before_write: true
+  artifact: figma/brands/park_city/typography/preview.md
+  status: written_in_figma
+
+source_roles:
+  - source_role: headline
+    source_family_name: Futura Std
+    source_style_name: Bold
+    source_weight_label: Bold
+    source_usage_scope: primary_display_headline
+    text_case: all_caps
+    tracking: 0px
+    leading: equal_to_point_size
+    size_rule: source gives no governed size token
+    punctuation_rule: not specified in source
+    sample_copy: THIS IS YOUR HEADLINE.
+    notes: The source says headlines are all caps with 0px tracking, leading equal to the point size, and should usually be center justified.
+  - source_role: subhead
+    source_family_name: Trade Gothic LT Std Bold Condensed No. 20
+    source_style_name: Bold Condensed No. 20
+    source_weight_label: Bold
+    source_usage_scope: supporting_headline_copy
+    text_case: all_caps
+    tracking: 100px
+    leading: plus_2_over_point_size
+    size_rule: source gives no governed size token
+    punctuation_rule: not specified in source
+    sample_copy: THIS IS YOUR SUBHEAD.
+    notes: The source explicitly uses the condensed Trade Gothic face for subheads with 100px tracking.
+  - source_role: body
+    source_family_name: Futura Std
+    source_style_name: Light
+    source_weight_label: Light
+    source_usage_scope: reading_copy
+    text_case: sentence_case
+    tracking: 0px
+    leading: font_size_times_1_6
+    size_rule: source gives no governed size token
+    punctuation_rule: sentence punctuation allowed
+    sample_copy: This is your body copy.
+    notes: The source explicitly says body copy should be highly legible and use Futura Std Light with 0px tracking and 1.6x leading.
+  - source_role: cta
+    source_family_name: Futura Std
+    source_style_name: Bold
+    source_weight_label: Bold
+    source_usage_scope: action_or_button_copy
+    text_case: all_caps
+    tracking: 0px
+    leading: not specified in source
+    size_rule: source gives no governed size token
+    punctuation_rule: not specified in source
+    sample_copy: PLAN YOUR VISIT
+    notes: The source explicitly names CTA as Futura Std Bold in all caps with 0px tracking.
+
+primitive_recommendations:
+  reuse_existing:
+    families: []
+    weights:
+      - source_weight_label: Bold
+        existing_token: universal/weight/bold
+        reason: Headlines, CTA, and the condensed subhead face all explicitly use bold treatments.
+      - source_weight_label: Light
+        existing_token: universal/weight/light
+        reason: Body copy explicitly uses Light.
+    sizes:
+      - source_size_reference: headline default
+        existing_token: inherited current heading ladder
+        assumption_status: deferred_no_new_size
+        assumption_note: The source gives hierarchy and leading behavior but not a governed headline size token.
+        reason: Live semantic size aliases remain inherited from the shared baseline in this pass.
+      - source_size_reference: body default
+        existing_token: inherited current body ladder
+        assumption_status: deferred_no_new_size
+        assumption_note: The source defines leading but not a governed numeric size.
+        reason: Keeps live size semantics inherited.
+      - source_size_reference: cta default
+        existing_token: inherited current action ladder
+        assumption_status: deferred_no_new_size
+        assumption_note: The source defines family, case, and tracking but not a governed CTA size.
+        reason: Keeps live size semantics inherited.
+  proposed_primitives:
+    families:
+      - token_name: park_city/family/primary
+        source_family_name: Futura Std
+        source_style_reference: Bold headline and CTA system plus Light body system
+        rationale: Futura Std is the repeated Park City brand family across heading, body, and action copy, with weight carrying the distinction.
+        fallback_token: universal/family/web_safe
+        fallback_note: The source does not define a fallback stack.
+      - token_name: park_city/family/utility
+        source_family_name: Trade Gothic LT Std Bold Condensed No. 20
+        source_style_reference: subhead system
+        rationale: Preserve the condensed Park City subhead face as a raw utility family until the semantic typography schema gains a dedicated subhead lane.
+        fallback_token: universal/family/web_safe
+        fallback_note: The source does not define a fallback stack.
+  hold_for_review:
+    - item: semantic subhead lane
+      reason: The current semantic typography schema exposes `heading`, `body`, and `action` families only, so the distinct condensed Park City subhead face is preserved as a raw utility recipe rather than forced into the live semantic extension.
+
+semantic_recommendations:
+  family_aliases:
+    - semantic_token: family/heading
+      global_token: park_city/family/primary
+      safe_semantic_token: family/heading_safe
+      safe_global_token: universal/family/web_safe
+      intended_channels:
+        - web
+        - email
+        - ads
+      notes: Futura Std drives the Park City display system.
+    - semantic_token: family/body
+      global_token: park_city/family/primary
+      safe_semantic_token: family/body_safe
+      safe_global_token: universal/family/web_safe
+      intended_channels:
+        - web
+        - email
+        - ads
+      notes: Park City body copy stays on the same Futura Std family, with Light carrying the reading tone.
+    - semantic_token: family/action
+      global_token: park_city/family/primary
+      safe_semantic_token: family/action_safe
+      safe_global_token: universal/family/web_safe
+      intended_channels:
+        - web
+        - email
+        - ads
+      notes: CTA is explicitly Futura Std Bold, so the action lane remains on the primary Park City family.
+  weight_aliases:
+    - semantic_token: weight/heading/base
+      global_token: universal/weight/bold
+      intended_channels:
+        - web
+        - email
+        - ads
+      notes: Headlines explicitly use Bold.
+    - semantic_token: weight/body/base
+      global_token: universal/weight/light
+      intended_channels:
+        - web
+        - email
+        - ads
+      notes: Body copy explicitly uses Light.
+    - semantic_token: weight/action/base
+      global_token: universal/weight/bold
+      intended_channels:
+        - web
+        - email
+        - ads
+      notes: CTA explicitly uses Bold.
+  size_aliases: []
+
+role_recipes:
+  - role_name: headline
+    source_role: Headline | Futura Std Bold
+    proposed_family_token: park_city/family/primary
+    fallback_token: universal/family/web_safe
+    proposed_weight_token: universal/weight/bold
+    proposed_size_token: inherited current heading ladder
+    size_assumption_status: deferred_no_new_size
+    text_case: all_caps
+    tracking: 0px
+    leading_rule: leading equals the point size
+    size_rule: no governed source size token
+    punctuation_rule: not specified in source
+    sample_copy: THIS IS YOUR HEADLINE.
+    notes: Usually center justified, with left alignment allowed in certain layouts.
+  - role_name: subhead
+    source_role: Subhead | Trade Gothic LT Std Bold Condensed No. 20
+    proposed_family_token: park_city/family/utility
+    fallback_token: universal/family/web_safe
+    proposed_weight_token: universal/weight/bold
+    proposed_size_token: inherited current heading ladder
+    size_assumption_status: deferred_no_new_size
+    text_case: all_caps
+    tracking: 100px
+    leading_rule: add 2 to the point size
+    size_rule: no governed source size token
+    punctuation_rule: not specified in source
+    sample_copy: THIS IS YOUR SUBHEAD.
+    notes: Raw-only utility recipe. It remains outside the live semantic extension until a subhead lane exists.
+  - role_name: body
+    source_role: Body Copy | Futura Std Light
+    proposed_family_token: park_city/family/primary
+    fallback_token: universal/family/web_safe
+    proposed_weight_token: universal/weight/light
+    proposed_size_token: inherited current body ladder
+    size_assumption_status: deferred_no_new_size
+    text_case: sentence_case
+    tracking: 0px
+    leading_rule: 1.6 times the font size
+    size_rule: no governed source size token
+    punctuation_rule: sentence punctuation allowed
+    sample_copy: This is your body copy.
+    notes: Reading copy remains on the primary family with weight carrying the distinction.
+  - role_name: cta
+    source_role: CTA | Futura Std Bold
+    proposed_family_token: park_city/family/primary
+    fallback_token: universal/family/web_safe
+    proposed_weight_token: universal/weight/bold
+    proposed_size_token: inherited current action ladder
+    size_assumption_status: deferred_no_new_size
+    text_case: all_caps
+    tracking: 0px
+    leading_rule: not specified in source
+    size_rule: no governed source size token
+    punctuation_rule: not specified in source
+    sample_copy: PLAN YOUR VISIT
+    notes: The CTA lane stays on Futura Std Bold in all caps.
+
+validation:
+  extraction_notes:
+    - The source is explicit about family choice, case, tracking, and leading behavior.
+    - The source does not provide governed numeric sizes, so live size semantics remain inherited from the shared baseline.
+    - Park City uses one primary family across headline, body, and CTA, with a separate condensed face only for subheads.
+  governance_notes:
+    - The Park City condensed Trade Gothic face is preserved as a raw utility family rather than forced into a semantic slot that would misrepresent the CTA guidance.
+    - No new shared raw weight or size primitives are needed in this pass.
+
+review_readiness:
+  intended_review_channels:
+    - web
+    - email
+    - ads
+  review_rules:
+    - subject: Park City headline and CTA lane
+      channels:
+        - web
+        - email
+        - ads
+      rule: Keep headline and CTA work on Futura Std Bold in all caps with 0px tracking.
+      source_basis: Park City typography guidance image.
+    - subject: Park City subhead lane
+      channels:
+        - web
+        - email
+        - ads
+      rule: Preserve Trade Gothic LT Std Bold Condensed No. 20 for subheads with 100px tracking and leading plus 2.
+      source_basis: Park City typography guidance image.
+    - subject: Park City body lane
+      channels:
+        - web
+        - email
+        - ads
+      rule: Keep body copy on Futura Std Light with 0px tracking and 1.6x leading.
+      source_basis: Park City typography guidance image.
+
+open_questions: []

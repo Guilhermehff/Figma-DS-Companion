@@ -1,5 +1,5 @@
 version: 1
-updated: 2026-03-14
+updated: 2026-03-17
 brand_id: crested_butte
 display_name: Crested Butte
 status: active
@@ -10,7 +10,7 @@ supported_channels:
   - email
   - ads
 figma:
-  design_system_file_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+  design_system_file_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Foundations?node-id=1-3
   global_collections:
     color_id: VariableCollectionId:23:2
     typography_id: VariableCollectionId:23:3
@@ -69,8 +69,11 @@ semantic_overrides:
           - on_surface/brand_secondary/*
           - foreground/brand_secondary
           - border/brand_secondary
+      - scope: asset_logo
+        source_value: Crested Butte
+        targets:
+          - assets/logo
     inherited_from_base:
-      - foreground/inverse
       - surface/positive/*
       - on_surface/positive/*
       - surface/warning/*
@@ -86,6 +89,7 @@ semantic_overrides:
     notes:
       - Wild Red now feeds both expressive role sets in the role-based migration.
       - Beyond Black drives the neutral role set, and no third expressive semantic lane survives this migration.
+      - "`assets/logo` is overridden to the string `Crested Butte` in the semantic color extension."
   typography:
     status: active
     override_scopes:
@@ -110,4 +114,4 @@ semantic_overrides:
       - The supplied typography source uses Gibson across all reviewed roles, so a single brand family primitive is sufficient.
       - "`universal/weight/semibold` is now written in `_Global: Typography` and used by the Crested Butte semantic typography extension."
 notes:
-  - Crested Butte is live in the Design System file with global color ladders, a global typography family, the shared semibold raw weight, and semantic color and typography extensions.
+  - Crested Butte is live in the Foundations file with global color ladders, a global typography family, the shared semibold raw weight, a semantic color logo-name override, and semantic color and typography extensions.

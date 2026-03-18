@@ -2,11 +2,11 @@
 
 Date: 2026-03-11
 Status: active
-Figma URL: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+Figma URL: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Foundations?node-id=1-3
 
 ## Purpose
 
-Use this route whenever a brand needs a Semantic extension collection in the Design System file.
+Use this route whenever a brand needs a Semantic extension collection in the Foundations file.
 
 This is the confirmed native workflow for the current Figma Variables API and should be the default route before trying alternative approaches.
 
@@ -38,7 +38,7 @@ baseVariable.setValueForMode(
 
 - Semantic extensions in this file are true Figma extension collections, not separate hand-built collections that merely reuse the same names.
 - The extension override state is attached to the base semantic variables and keyed by the base variable IDs.
-- This route matches the already-working Vail and Breckenridge collections.
+- This route matches the current live extension collections in Foundations.
 
 ## Confirmed API Behaviors
 

@@ -1,5 +1,5 @@
 version: 1
-updated: 2026-03-14
+updated: 2026-03-17
 brand_id: keystone
 display_name: Keystone
 status: active
@@ -10,7 +10,7 @@ supported_channels:
   - email
   - ads
 figma:
-  design_system_file_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Design-System?node-id=1-3&t=jagoUKe5gyKCbAbG-1
+  design_system_file_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Foundations?node-id=1-3
   global_collections:
     color_id: VariableCollectionId:23:2
     typography_id: VariableCollectionId:23:3
@@ -67,8 +67,11 @@ semantic_overrides:
           - on_surface/brand_secondary/*
           - foreground/brand_secondary
           - border/brand_secondary
+      - scope: asset_logo
+        source_value: Keystone
+        targets:
+          - assets/logo
     inherited_from_base:
-      - foreground/inverse
       - surface/positive/*
       - on_surface/positive/*
       - surface/warning/*
@@ -84,6 +87,7 @@ semantic_overrides:
     notes:
       - Cool Grey continues to map to the neutral role set only.
       - The reviewed role-based migration uses `valencia` and `curious_blue` as the only expressive semantic lanes.
+      - "`assets/logo` is overridden to the string `Keystone` in the semantic color extension."
   typography:
     status: active
     override_scopes:
@@ -113,5 +117,5 @@ semantic_overrides:
       - CTA is approved to use Futura Bold, so the semantic action family now aliases the Keystone primary family.
       - No new raw size step was introduced in this pass; the explicit 48px headline recipe remains documented for a future ladder decision.
 notes:
-  - Keystone is live in the Design System file with three raw color families, two raw typography family primitives, and semantic color and typography extensions.
+  - Keystone is live in the Foundations file with three raw color families, two raw typography family primitives, a semantic color logo-name override, and semantic color and typography extensions.
   - The live write intentionally defers any shared size-ladder expansion beyond the current governed steps.

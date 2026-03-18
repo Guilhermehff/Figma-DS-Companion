@@ -1,5 +1,5 @@
 version: 7
-updated: 2026-03-16
+updated: 2026-03-17
 owner: vail_resorts
 scope:
   purpose: Token naming and structure rules for the Vail Resorts Design System
@@ -298,9 +298,9 @@ semantic_color_aliases:
   description: "Role-based semantic color slots that alias `_Global: Color` primitives before channel meaning is applied"
   collection_strategy:
     base_collection: "Semantic: Color"
-    base_mode: values
+    base_mode: Default
     brand_extension_format: "<Brand>"
-    brand_extension_rule: The base collection defines shared neutral, expressive, and status role sets. Brand extensions override only the neutral, brand, and brand_secondary role groups that materially differ from the shared universal baseline. A third brand family stays global-only until another accepted decision promotes it into semantic.
+    brand_extension_rule: The base collection defines shared neutral, expressive, status, and asset role sets. Brand extensions override only the neutral, brand, and brand_secondary role groups that materially differ from the shared universal baseline, plus `assets/logo` when that base token is present. A third brand family stays global-only until another accepted decision promotes it into semantic.
   neutral_role_set:
     surfaces:
       - canvas
@@ -308,7 +308,6 @@ semantic_color_aliases:
       - default
       - strong
       - emphasis
-      - inverse
     notes:
       - Each neutral surface token is paired with a readable `on_surface/neutral/*` foreground token.
       - The shared base neutral recipe uses universal white and the universal slate ladder unless an approved brand neutral overrides it.
@@ -340,12 +339,13 @@ semantic_color_aliases:
   foreground_tokens:
     - foreground/default
     - foreground/subtle
-    - foreground/inverse
     - foreground/brand
     - foreground/brand_secondary
     - foreground/positive
     - foreground/warning
     - foreground/critical
+  asset_tokens:
+    - assets/logo
   border_tokens:
     - border/default
     - border/subtle
@@ -365,6 +365,7 @@ semantic_color_aliases:
   notes:
     - Semantic color is role-based and channel-agnostic; do not encode hover, pressed, or component names in this layer.
     - Brand-specific families used as structural surfaces should override the neutral role set before they are considered for brand or brand_secondary.
+    - "`assets/logo` is a governed string token in the base semantic color collection and should be overridden in each brand extension to the brand display name."
     - Channel libraries own usage-first naming such as background/action/default, text/body/default, and border/input/default.
 
 brand_typography_foundations:
