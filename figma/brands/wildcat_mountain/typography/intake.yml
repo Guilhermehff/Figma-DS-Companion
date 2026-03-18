@@ -1,0 +1,41 @@
+date: 2026-03-18
+brand: wildcat_mountain
+source_reference: User instruction in chat to use the universal typography baseline because no Wildcat Mountain-specific font guidance was supplied
+source_type: chat_instruction
+figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Foundations?node-id=1-3
+status: active
+preview:
+  required_before_write: true
+  artifact: figma/brands/wildcat_mountain/typography/preview.md
+  status: written_in_figma
+primitive_recommendations:
+  reuse_existing:
+    families: []
+    weights:
+      - source_weight_label: inherit
+        existing_token: universal/weight/*
+        reason: No Wildcat Mountain typography system was supplied.
+    sizes: []
+  proposed_primitives:
+    families:
+      - token_name: wildcat_mountain/family/primary
+        source_family_name: Inter
+        source_style_reference: mirror of universal/family/primary
+        rationale: Wildcat Mountain gets a governed raw family token while keeping the universal value.
+        fallback_token: universal/family/web_safe
+  hold_for_review: []
+semantic_recommendations:
+  family_aliases:
+    - semantic_token: family/heading
+      global_token: wildcat_mountain/family/primary
+    - semantic_token: family/body
+      global_token: wildcat_mountain/family/primary
+    - semantic_token: family/action
+      global_token: wildcat_mountain/family/primary
+  weight_aliases: []
+  size_aliases: []
+review_readiness:
+  review_rules:
+    - subject: Wildcat Mountain mirrored typography baseline
+      rule: Keep the effective typography values identical to the universal baseline.
+open_questions: []

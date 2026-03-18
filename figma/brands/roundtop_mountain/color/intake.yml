@@ -1,0 +1,78 @@
+date: 2026-03-18
+brand: roundtop_mountain
+source_reference: User-provided image in chat showing the Roundtop Mountain logo and color guidelines
+source_type: image
+figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Foundations?node-id=1-3
+status: active
+preview:
+  required_before_write: true
+  artifact: figma/brands/roundtop_mountain/color/preview.md
+  status: written_in_figma
+source_swatches:
+  - source_name: Green
+    provided_value: "#75c045"
+  - source_name: Blue
+    provided_value: "#007fad"
+  - source_name: Yellow
+    provided_value: "#f6c542"
+  - source_name: Orange
+    provided_value: "#faa552"
+  - source_name: Red
+    provided_value: "#e25c5c"
+  - source_name: Cyan
+    provided_value: "#93cfd2"
+universal_reuse:
+  reuse_universal:
+    - source_name: Black logo variation
+      provided_value: "#000000"
+      existing_token: universal/black
+      rationale: Exact black remains inherited through the shared neutral baseline.
+    - source_name: White logo variation
+      provided_value: "#ffffff"
+      existing_token: universal/white
+      rationale: Exact white remains inherited through the shared neutral baseline.
+  new_brand_families:
+    - family: green
+      provided_value: "#75c045"
+      anchor_step: 500
+    - family: blue
+      provided_value: "#007fad"
+      anchor_step: 600
+    - family: yellow
+      provided_value: "#f6c542"
+      anchor_step: 300
+    - family: orange
+      provided_value: "#faa552"
+      anchor_step: 300
+    - family: red
+      provided_value: "#e25c5c"
+      anchor_step: 400
+    - family: cyan
+      provided_value: "#93cfd2"
+      anchor_step: 300
+semantic_recommendations:
+  role_sets:
+    - scope: neutral
+      source_family: inherited_base
+      rationale: Exact black and white remain inherited from the shared neutral baseline.
+    - scope: brand
+      source_family: roundtop_mountain/green
+      rationale: Green is the first primary color and drives the primary expressive lane.
+    - scope: brand_secondary
+      source_family: roundtop_mountain/blue
+      rationale: Blue is the second primary color and drives the secondary expressive lane.
+  global_only_families:
+    - roundtop_mountain/yellow
+    - roundtop_mountain/orange
+    - roundtop_mountain/red
+    - roundtop_mountain/cyan
+  role_exceptions:
+    - target: assets/logo
+      source_token: Roundtop Mountain
+review_readiness:
+  review_rules:
+    - subject: Roundtop Mountain expressive mapping
+      rule: Use `green` for `brand/*` and `blue` for `brand_secondary/*`.
+    - subject: Roundtop Mountain extra palette families
+      rule: Keep `yellow`, `orange`, `red`, and `cyan` as governed raw-only families in the first pass.
+open_questions: []

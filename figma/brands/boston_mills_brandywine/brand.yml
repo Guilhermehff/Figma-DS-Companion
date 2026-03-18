@@ -1,0 +1,100 @@
+version: 1
+updated: 2026-03-18
+brand_id: boston_mills_brandywine
+display_name: Boston Mills / Brandywine
+status: active
+owners:
+  - design_system_governance
+supported_channels:
+  - web
+  - email
+  - ads
+figma:
+  design_system_file_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Foundations?node-id=1-3
+  global_collections:
+    color_id: VariableCollectionId:23:2
+    typography_id: VariableCollectionId:23:3
+    dimensions_id: VariableCollectionId:23:4
+  semantic_extensions:
+    color:
+      collection_name: Boston Mills / Brandywine
+      collection_id: VariableCollectionId:205:807
+      parent_collection: "Semantic: Color"
+      parent_collection_id: VariableCollectionId:41:135
+    typography:
+      collection_name: Boston Mills / Brandywine
+      collection_id: VariableCollectionId:205:808
+      parent_collection: "Semantic: Typography"
+      parent_collection_id: VariableCollectionId:38:114
+artifacts:
+  color:
+    intake_artifact: figma/brands/boston_mills_brandywine/color/intake.yml
+    preview_artifact: figma/brands/boston_mills_brandywine/color/preview.md
+    decision_artifacts: []
+  typography:
+    intake_artifact: figma/brands/boston_mills_brandywine/typography/intake.yml
+    preview_artifact: figma/brands/boston_mills_brandywine/typography/preview.md
+    decision_artifacts: []
+semantic_overrides:
+  color:
+    status: active
+    override_scopes:
+      - scope: brand
+        source_family: universal/black
+        targets:
+          - surface/brand/*
+          - on_surface/brand/*
+          - foreground/brand
+          - border/brand
+      - scope: brand_secondary
+        source_family: universal/black
+        targets:
+          - surface/brand_secondary/*
+          - on_surface/brand_secondary/*
+          - foreground/brand_secondary
+          - border/brand_secondary
+      - scope: asset_logo
+        source_value: Boston Mills / Brandywine
+        targets:
+          - assets/logo
+    inherited_from_base:
+      - surface/neutral/*
+      - on_surface/neutral/*
+      - foreground/default
+      - foreground/subtle
+      - border/default
+      - border/subtle
+      - surface/positive/*
+      - on_surface/positive/*
+      - surface/warning/*
+      - on_surface/warning/*
+      - surface/critical/*
+      - on_surface/critical/*
+      - foreground/positive
+      - foreground/warning
+      - foreground/critical
+      - border/positive
+      - border/warning
+      - border/critical
+    notes:
+      - The supplied palette is monochrome, so both expressive semantic lanes alias `universal/black`.
+      - No brand-specific raw color family was added in the first pass.
+  typography:
+    status: active
+    override_scopes:
+      - semantic_token: family/heading
+        alias_of: boston_mills_brandywine/family/primary
+      - semantic_token: family/body
+        alias_of: boston_mills_brandywine/family/primary
+      - semantic_token: family/action
+        alias_of: boston_mills_brandywine/family/primary
+    inherited_from_base:
+      - family/heading_safe
+      - family/body_safe
+      - family/action_safe
+      - weight/*
+      - size/*
+    notes:
+      - Boston Mills / Brandywine adds a governed raw family token with the same string value as `universal/family/primary`.
+notes:
+  - Boston Mills / Brandywine is live in the Foundations file with no raw color families, one mirrored raw typography family primitive, and Boston Mills / Brandywine semantic color and typography extensions.

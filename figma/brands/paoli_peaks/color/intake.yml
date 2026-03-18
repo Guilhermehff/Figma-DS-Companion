@@ -1,0 +1,62 @@
+date: 2026-03-18
+brand: paoli_peaks
+source_reference: User-provided image in chat showing the Paoli Peaks logo and color guidelines
+source_type: image
+figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Foundations?node-id=1-3
+status: active
+preview:
+  required_before_write: true
+  artifact: figma/brands/paoli_peaks/color/preview.md
+  status: written_in_figma
+source_swatches:
+  - source_name: Paoli Blue
+    provided_value: "#192957"
+  - source_name: Peak's Gradient
+    provided_value: documented_gradient
+  - source_name: Peak's Peak
+    provided_value: "#d8dfe1"
+  - source_name: Peak's Valley
+    provided_value: "#8fd16a"
+universal_reuse:
+  reuse_universal:
+    - source_name: Black logo variation
+      provided_value: "#000000"
+      existing_token: universal/black
+      rationale: Exact black remains inherited through the shared neutral baseline.
+    - source_name: White logo variation
+      provided_value: "#ffffff"
+      existing_token: universal/white
+      rationale: Exact white remains inherited through the shared neutral baseline.
+  new_brand_families:
+    - family: paoli_blue
+      provided_value: "#192957"
+      anchor_step: 900
+    - family: peaks_peak
+      provided_value: "#d8dfe1"
+      anchor_step: 200
+    - family: peaks_valley
+      provided_value: "#8fd16a"
+      anchor_step: 500
+semantic_recommendations:
+  role_sets:
+    - scope: neutral
+      source_family: inherited_base
+      rationale: Exact black and white remain inherited from the shared neutral baseline.
+    - scope: brand
+      source_family: paoli_peaks/paoli_blue
+      rationale: Paoli Blue drives the primary expressive lane.
+    - scope: brand_secondary
+      source_family: paoli_peaks/peaks_valley
+      rationale: Peak's Valley provides the most reusable supporting accent in the first pass.
+  global_only_families:
+    - paoli_peaks/peaks_peak
+  role_exceptions:
+    - target: assets/logo
+      source_token: Paoli Peaks
+review_readiness:
+  review_rules:
+    - subject: Paoli Peaks expressive mapping
+      rule: Use `paoli_blue` for `brand/*` and `peaks_valley` for `brand_secondary/*`.
+    - subject: Paoli Peaks gradient handling
+      rule: Keep the documented gradient out of the current solid-color variable model and stage its supporting solids instead.
+open_questions: []

@@ -1,0 +1,251 @@
+date: 2026-03-18
+brand: hidden_valley
+source_reference: User-provided image in chat showing the Hidden Valley logo and color guidelines
+source_type: image
+figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Foundations?node-id=1-3
+status: active
+preview:
+  required_before_write: true
+  artifact: figma/brands/hidden_valley/color/preview.md
+  status: written_in_figma
+
+source_swatches:
+  - source_name: HV Blue
+    provided_value: "#0e9fb4"
+    source_usage_scope: primary color system
+    channel_restrictions: not specified in source
+    notes: Source image lists PMS 7710C and 7711U, CMYK 78 19 26 0, web RGB 14 159 180, and HEX #0E9FB4.
+  - source_name: Tagline Grey
+    provided_value: "#51544a"
+    source_usage_scope: primary color system
+    channel_restrictions: not specified in source
+    notes: Source image lists PMS 4230C and 419U, web RGB 81 84 74, and HEX #51544A.
+  - source_name: Black
+    provided_value: "#000000"
+    source_usage_scope: logo toolkit black variation
+    channel_restrictions: not specified in source
+    notes: The supplied logo toolkit includes a black variation that matches the shared universal black primitive.
+  - source_name: White
+    provided_value: "#ffffff"
+    source_usage_scope: logo toolkit white variation
+    channel_restrictions: not specified in source
+    notes: The supplied logo toolkit includes a white variation that matches the shared universal white primitive.
+
+universal_reuse:
+  reuse_universal:
+    - source_name: Black
+      provided_value: "#000000"
+      existing_token: universal/black
+      rationale: Exact match to the shared universal black primitive, so no duplicate Hidden Valley black token should be created.
+    - source_name: White
+      provided_value: "#ffffff"
+      existing_token: universal/white
+      rationale: Exact match to the shared universal white primitive, so no duplicate Hidden Valley white token should be created.
+  new_brand_families:
+    - family: hv_blue
+      source_name: HV Blue
+      provided_value: "#0e9fb4"
+      rationale: Signature Hidden Valley blue that should anchor the primary expressive lane.
+      anchor_step: 500
+      anchor_label: 500_source
+    - family: tagline_grey
+      source_name: Tagline Grey
+      provided_value: "#51544a"
+      rationale: Dark supporting brand color that should drive the secondary expressive lane without collapsing into exact shared black.
+      anchor_step: 800
+      anchor_label: 800_source
+  hold_for_review: []
+
+scale_spec:
+  working_space: OKLCH
+  steps:
+    - 50
+    - 100
+    - 200
+    - 300
+    - 400
+    - 500
+    - 600
+    - 700
+    - 800
+    - 900
+    - 950
+  contrast_targets:
+    white:
+      "800": "4.5:1 preferred"
+      "900": "7:1 required"
+      "950": "7:1 required"
+    black:
+      "50": "7:1 required"
+      "100": "7:1 required"
+      "200": "4.5:1 required"
+
+family_scales:
+  - family: hv_blue
+    source_name: HV Blue
+    source_value: "#0e9fb4"
+    source_anchor: 500_source
+    tokens:
+      - name: hidden_valley/hv_blue/50
+        value: "#f2fcfd"
+        source_anchor: false
+      - name: hidden_valley/hv_blue/100
+        value: "#d8f3f7"
+        source_anchor: false
+      - name: hidden_valley/hv_blue/200
+        value: "#ace3eb"
+        source_anchor: false
+      - name: hidden_valley/hv_blue/300
+        value: "#79d1de"
+        source_anchor: false
+      - name: hidden_valley/hv_blue/400
+        value: "#42bdd0"
+        source_anchor: false
+      - name: hidden_valley/hv_blue/500
+        value: "#0e9fb4"
+        source_anchor: true
+      - name: hidden_valley/hv_blue/600
+        value: "#0c8497"
+        source_anchor: false
+      - name: hidden_valley/hv_blue/700
+        value: "#096a77"
+        source_anchor: false
+      - name: hidden_valley/hv_blue/800
+        value: "#07525d"
+        source_anchor: false
+      - name: hidden_valley/hv_blue/900
+        value: "#053c45"
+        source_anchor: false
+      - name: hidden_valley/hv_blue/950
+        value: "#02242a"
+        source_anchor: false
+  - family: tagline_grey
+    source_name: Tagline Grey
+    source_value: "#51544a"
+    source_anchor: 800_source
+    tokens:
+      - name: hidden_valley/tagline_grey/50
+        value: "#f7f8f6"
+        source_anchor: false
+      - name: hidden_valley/tagline_grey/100
+        value: "#ecede9"
+        source_anchor: false
+      - name: hidden_valley/tagline_grey/200
+        value: "#d7d9d2"
+        source_anchor: false
+      - name: hidden_valley/tagline_grey/300
+        value: "#babeb3"
+        source_anchor: false
+      - name: hidden_valley/tagline_grey/400
+        value: "#9ba093"
+        source_anchor: false
+      - name: hidden_valley/tagline_grey/500
+        value: "#7d8277"
+        source_anchor: false
+      - name: hidden_valley/tagline_grey/600
+        value: "#686c61"
+        source_anchor: false
+      - name: hidden_valley/tagline_grey/700
+        value: "#5c5f56"
+        source_anchor: false
+      - name: hidden_valley/tagline_grey/800
+        value: "#51544a"
+        source_anchor: true
+      - name: hidden_valley/tagline_grey/900
+        value: "#3e4038"
+        source_anchor: false
+      - name: hidden_valley/tagline_grey/950
+        value: "#262721"
+        source_anchor: false
+
+validation:
+  perceptual_consistency_notes:
+    - Exact black and white remain shared through the universal neutral primitives, so Hidden Valley only adds the two branded expressive families supplied by the source.
+    - `hv_blue` preserves the supplied source value as the mid expressive step and darkens enough to support accessible branded surfaces.
+    - `tagline_grey` preserves the source value as the readable secondary default step while remaining distinct from exact black.
+  contrast_checks:
+    - token: hidden_valley/hv_blue/700
+      foreground: white
+      ratio: "6.29:1"
+      result: pass
+    - token: hidden_valley/hv_blue/800
+      foreground: white
+      ratio: "8.85:1"
+      result: pass
+    - token: hidden_valley/hv_blue/900
+      foreground: white
+      ratio: "12.08:1"
+      result: pass
+    - token: hidden_valley/tagline_grey/800
+      foreground: white
+      ratio: "7.73:1"
+      result: pass
+    - token: hidden_valley/tagline_grey/900
+      foreground: white
+      ratio: "10.52:1"
+      result: pass
+    - token: hidden_valley/hv_blue/100
+      foreground: black
+      ratio: "18.08:1"
+      result: pass
+    - token: hidden_valley/tagline_grey/100
+      foreground: black
+      ratio: "17.86:1"
+      result: pass
+
+semantic_recommendations:
+  role_sets:
+    - scope: neutral
+      source_family: inherited_base
+      rationale: Exact black and white are already governed by the shared universal primitives, so the first pass keeps the neutral role set inherited.
+      targets:
+        - surface/neutral/*
+        - on_surface/neutral/*
+        - foreground/default
+        - foreground/subtle
+        - border/default
+        - border/subtle
+    - scope: brand
+      source_family: hidden_valley/hv_blue
+      rationale: HV Blue is the signature Hidden Valley color and should drive the primary expressive semantic lane.
+      targets:
+        - surface/brand/*
+        - on_surface/brand/*
+        - foreground/brand
+        - border/brand
+    - scope: brand_secondary
+      source_family: hidden_valley/tagline_grey
+      rationale: Tagline Grey is the dark supporting brand color and should drive the secondary expressive lane.
+      targets:
+        - surface/brand_secondary/*
+        - on_surface/brand_secondary/*
+        - foreground/brand_secondary
+        - border/brand_secondary
+  global_only_families: []
+  role_exceptions:
+    - target: assets/logo
+      source_token: Hidden Valley
+      rationale: The live semantic color schema stores the governed brand display label in `assets/logo`.
+
+review_readiness:
+  intended_review_channels:
+    - web
+    - email
+    - ads
+  review_rules:
+    - subject: Hidden Valley expressive lane order
+      channels:
+        - web
+        - email
+        - ads
+      rule: Use `hv_blue` as the primary expressive lane and `tagline_grey` as the secondary expressive lane.
+      source_basis: Source image names the supplied branded colors and distinguishes them from exact black and white logo variants.
+    - subject: Hidden Valley neutral reuse
+      channels:
+        - web
+        - email
+        - ads
+      rule: Reuse `universal/black` and `universal/white` rather than duplicating exact neutral primitives.
+      source_basis: Source image provides black and white logo variants that match the shared universal tokens.
+
+open_questions: []

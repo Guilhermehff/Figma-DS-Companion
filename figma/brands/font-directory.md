@@ -13,7 +13,7 @@ Updated: 2026-03-18
 | Futura Bold | Kirkwood |
 | Futura Std | Park City |
 | Gibson | Crested Butte, Stevens Pass |
-| Inter | Afton Alps, Crotched |
+| Inter | Afton Alps, Crotched, Hidden Valley, Wildcat Mountain, Whitetail Resort, Snow Creek, Roundtop Mountain, Paoli Peaks, Mad River Mountain, Boston Mills / Brandywine |
 | IvyPresto Display | Beaver Creek |
 | New Order | Northstar |
 | Poppins | Breckenridge |

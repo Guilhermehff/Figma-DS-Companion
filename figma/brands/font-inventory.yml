@@ -222,3 +222,83 @@ brands:
     - crotched/family/primary
     source_style_references:
     - mirror of universal/family/primary because no brand-specific typography was supplied
+- brand_id: hidden_valley
+  display_name: Hidden Valley
+  status: active
+  typography_intake_artifact: figma/brands/hidden_valley/typography/intake.yml
+  fonts:
+  - family_name: Inter
+    token_names:
+    - hidden_valley/family/primary
+    source_style_references:
+    - mirror of universal/family/primary because no brand-specific typography was supplied
+- brand_id: wildcat_mountain
+  display_name: Wildcat Mountain
+  status: active
+  typography_intake_artifact: figma/brands/wildcat_mountain/typography/intake.yml
+  fonts:
+  - family_name: Inter
+    token_names:
+    - wildcat_mountain/family/primary
+    source_style_references:
+    - mirror of universal/family/primary because no brand-specific typography was supplied
+- brand_id: whitetail_resort
+  display_name: Whitetail Resort
+  status: active
+  typography_intake_artifact: figma/brands/whitetail_resort/typography/intake.yml
+  fonts:
+  - family_name: Inter
+    token_names:
+    - whitetail_resort/family/primary
+    source_style_references:
+    - mirror of universal/family/primary because no brand-specific typography was supplied
+- brand_id: snow_creek
+  display_name: Snow Creek
+  status: active
+  typography_intake_artifact: figma/brands/snow_creek/typography/intake.yml
+  fonts:
+  - family_name: Inter
+    token_names:
+    - snow_creek/family/primary
+    source_style_references:
+    - mirror of universal/family/primary because no brand-specific typography was supplied
+- brand_id: roundtop_mountain
+  display_name: Roundtop Mountain
+  status: active
+  typography_intake_artifact: figma/brands/roundtop_mountain/typography/intake.yml
+  fonts:
+  - family_name: Inter
+    token_names:
+    - roundtop_mountain/family/primary
+    source_style_references:
+    - mirror of universal/family/primary because no brand-specific typography was supplied
+- brand_id: paoli_peaks
+  display_name: Paoli Peaks
+  status: active
+  typography_intake_artifact: figma/brands/paoli_peaks/typography/intake.yml
+  fonts:
+  - family_name: Inter
+    token_names:
+    - paoli_peaks/family/primary
+    source_style_references:
+    - mirror of universal/family/primary because no brand-specific typography was supplied
+- brand_id: mad_river_mountain
+  display_name: Mad River Mountain
+  status: active
+  typography_intake_artifact: figma/brands/mad_river_mountain/typography/intake.yml
+  fonts:
+  - family_name: Inter
+    token_names:
+    - mad_river_mountain/family/primary
+    source_style_references:
+    - mirror of universal/family/primary because no brand-specific typography was supplied
+- brand_id: boston_mills_brandywine
+  display_name: Boston Mills / Brandywine
+  status: active
+  typography_intake_artifact: figma/brands/boston_mills_brandywine/typography/intake.yml
+  fonts:
+  - family_name: Inter
+    token_names:
+    - boston_mills_brandywine/family/primary
+    source_style_references:
+    - mirror of universal/family/primary because no brand-specific typography was supplied

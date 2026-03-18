@@ -1,0 +1,101 @@
+version: 1
+updated: 2026-03-18
+brand_id: wildcat_mountain
+display_name: Wildcat Mountain
+status: active
+owners:
+  - design_system_governance
+supported_channels:
+  - web
+  - email
+  - ads
+figma:
+  design_system_file_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Foundations?node-id=1-3
+  global_collections:
+    color_id: VariableCollectionId:23:2
+    typography_id: VariableCollectionId:23:3
+    dimensions_id: VariableCollectionId:23:4
+  semantic_extensions:
+    color:
+      collection_name: Wildcat Mountain
+      collection_id: VariableCollectionId:205:627
+      parent_collection: "Semantic: Color"
+      parent_collection_id: VariableCollectionId:41:135
+    typography:
+      collection_name: Wildcat Mountain
+      collection_id: VariableCollectionId:205:628
+      parent_collection: "Semantic: Typography"
+      parent_collection_id: VariableCollectionId:38:114
+artifacts:
+  color:
+    intake_artifact: figma/brands/wildcat_mountain/color/intake.yml
+    preview_artifact: figma/brands/wildcat_mountain/color/preview.md
+    decision_artifacts: []
+  typography:
+    intake_artifact: figma/brands/wildcat_mountain/typography/intake.yml
+    preview_artifact: figma/brands/wildcat_mountain/typography/preview.md
+    decision_artifacts: []
+semantic_overrides:
+  color:
+    status: active
+    override_scopes:
+      - scope: brand
+        source_family: wildcat_mountain/wildcat_green
+        targets:
+          - surface/brand/*
+          - on_surface/brand/*
+          - foreground/brand
+          - border/brand
+      - scope: brand_secondary
+        source_family: wildcat_mountain/wildcat_teal
+        targets:
+          - surface/brand_secondary/*
+          - on_surface/brand_secondary/*
+          - foreground/brand_secondary
+          - border/brand_secondary
+      - scope: asset_logo
+        source_value: Wildcat Mountain
+        targets:
+          - assets/logo
+    inherited_from_base:
+      - surface/neutral/*
+      - on_surface/neutral/*
+      - foreground/default
+      - foreground/subtle
+      - border/default
+      - border/subtle
+      - surface/positive/*
+      - on_surface/positive/*
+      - surface/warning/*
+      - on_surface/warning/*
+      - surface/critical/*
+      - on_surface/critical/*
+      - foreground/positive
+      - foreground/warning
+      - foreground/critical
+      - border/positive
+      - border/warning
+      - border/critical
+    notes:
+      - Exact black and white remain inherited through the shared neutral role recipes.
+      - `wildcat_green` drives the primary expressive lane and `wildcat_teal` drives the secondary expressive lane.
+      - `wildcat_tan` and `wedding_blue` are governed raw-only families in the first pass.
+  typography:
+    status: active
+    override_scopes:
+      - semantic_token: family/heading
+        alias_of: wildcat_mountain/family/primary
+      - semantic_token: family/body
+        alias_of: wildcat_mountain/family/primary
+      - semantic_token: family/action
+        alias_of: wildcat_mountain/family/primary
+    inherited_from_base:
+      - family/heading_safe
+      - family/body_safe
+      - family/action_safe
+      - weight/*
+      - size/*
+    notes:
+      - Wildcat Mountain adds a governed raw family token with the same string value as `universal/family/primary`.
+notes:
+  - Wildcat Mountain is live in the Foundations file with four raw color families, one mirrored raw typography family primitive, and Wildcat Mountain semantic color and typography extensions.
