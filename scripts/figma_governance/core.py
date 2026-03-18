@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
+from datetime import date, datetime
 from pathlib import Path
 import os
 import re
@@ -14,9 +15,12 @@ ROOT = Path(__file__).resolve().parents[2]
 MCP_PORT_START = 9223
 MCP_PORT_END = 9235
 MCP_MANAGED_COMMANDS = frozenset({"node", "bun"})
+BRAND_FONT_INVENTORY_PATH = Path("figma/brands/font-inventory.yml")
+BRAND_FONT_DIRECTORY_PATH = Path("figma/brands/font-directory.md")
 EXPORT_INDEX_PATH = Path("figma/exports/index.yml")
 EXPORT_ROOT_PATH = Path("figma/exports")
 EXPORT_DATE_PREFIX_PATTERN = re.compile(r"^\d{4}-\d{2}-\d{2}-")
+ISO_DATE_PATTERN = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 ACTIVE_DOC_PATHS = [
     Path("AGENTS.md"),
     Path("docs/mcp-setup.md"),
@@ -57,8 +61,319 @@ def load_yaml(path: Path) -> Any:
         return yaml.safe_load(handle)
 
 
+def write_yaml(path: Path, data: Any) -> None:
+    text = yaml.safe_dump(data, sort_keys=False)
+    write_text(path, text)
+
+
+def write_text(path: Path, text: str) -> None:
+    if not text.endswith("\n"):
+        text += "\n"
+    path.write_text(text, encoding="utf-8")
+
+
 def resolve_repo_path(root: Path, relative_path: str) -> Path:
     return root / relative_path
+
+
+def _load_yaml_from_repo(root: Path, relative_path: str) -> Any:
+    path = resolve_repo_path(root, relative_path)
+    try:
+        return load_yaml(path)
+    except FileNotFoundError as exc:
+        raise GovernanceError(f"{path.relative_to(root)}: file does not exist") from exc
+    except yaml.YAMLError as exc:
+        raise GovernanceError(f"{path.relative_to(root)}: invalid YAML: {exc}") from exc
+
+
+def _append_unique(items: list[str], value: Any) -> None:
+    if isinstance(value, str) and value and value not in items:
+        items.append(value)
+
+
+def _coerce_iso_date(value: Any) -> str | None:
+    if isinstance(value, datetime):
+        return value.date().isoformat()
+    if isinstance(value, date):
+        return value.isoformat()
+    if isinstance(value, str) and ISO_DATE_PATTERN.match(value):
+        return value
+    return None
+
+
+def _latest_iso_date(values: list[Any]) -> str | None:
+    dates = [coerced for value in values if (coerced := _coerce_iso_date(value)) is not None]
+    if not dates:
+        return None
+    return max(dates)
+
+
+def _normalize_yaml_scalars(value: Any) -> Any:
+    coerced = _coerce_iso_date(value)
+    if coerced is not None:
+        return coerced
+    if isinstance(value, list):
+        return [_normalize_yaml_scalars(item) for item in value]
+    if isinstance(value, dict):
+        return {key: _normalize_yaml_scalars(item) for key, item in value.items()}
+    return value
+
+
+def _extract_brand_fonts(intake: Any) -> list[dict[str, Any]]:
+    if not isinstance(intake, dict):
+        return []
+
+    fonts_by_name: dict[str, dict[str, list[str]]] = {}
+    font_order: list[str] = []
+
+    primitive_recommendations = intake.get("primitive_recommendations", {})
+    if isinstance(primitive_recommendations, dict):
+        proposed_primitives = primitive_recommendations.get("proposed_primitives", {})
+        if isinstance(proposed_primitives, dict):
+            proposed_families = proposed_primitives.get("families", [])
+            if isinstance(proposed_families, list):
+                for family in proposed_families:
+                    if not isinstance(family, dict):
+                        continue
+                    family_name = family.get("source_family_name")
+                    if not isinstance(family_name, str) or not family_name:
+                        continue
+                    if family_name not in fonts_by_name:
+                        fonts_by_name[family_name] = {
+                            "token_names": [],
+                            "source_style_references": [],
+                        }
+                        font_order.append(family_name)
+                    entry = fonts_by_name[family_name]
+                    _append_unique(entry["token_names"], family.get("token_name"))
+                    _append_unique(entry["source_style_references"], family.get("source_style_reference"))
+
+    if not font_order:
+        source_roles = intake.get("source_roles", [])
+        if isinstance(source_roles, list):
+            for role in source_roles:
+                if not isinstance(role, dict):
+                    continue
+                family_name = role.get("source_family_name")
+                if not isinstance(family_name, str) or not family_name:
+                    continue
+                if family_name not in fonts_by_name:
+                    fonts_by_name[family_name] = {
+                        "token_names": [],
+                        "source_style_references": [],
+                    }
+                    font_order.append(family_name)
+                entry = fonts_by_name[family_name]
+                _append_unique(entry["source_style_references"], role.get("source_style_name"))
+
+    fonts: list[dict[str, Any]] = []
+    for family_name in font_order:
+        entry = {"family_name": family_name}
+        details = fonts_by_name[family_name]
+        if details["token_names"]:
+            entry["token_names"] = details["token_names"]
+        if details["source_style_references"]:
+            entry["source_style_references"] = details["source_style_references"]
+        fonts.append(entry)
+    return fonts
+
+
+def _build_brand_font_directory_entries(inventory: dict[str, Any]) -> list[dict[str, Any]]:
+    font_to_brands: dict[str, list[str]] = {}
+    brands = inventory.get("brands", [])
+    if not isinstance(brands, list):
+        return []
+
+    for brand in brands:
+        if not isinstance(brand, dict):
+            continue
+        display_name = brand.get("display_name")
+        if not isinstance(display_name, str) or not display_name:
+            continue
+        fonts = brand.get("fonts", [])
+        if not isinstance(fonts, list):
+            continue
+        for font in fonts:
+            if not isinstance(font, dict):
+                continue
+            family_name = font.get("family_name")
+            if not isinstance(family_name, str) or not family_name:
+                continue
+            brand_names = font_to_brands.setdefault(family_name, [])
+            if display_name not in brand_names:
+                brand_names.append(display_name)
+
+    entries: list[dict[str, Any]] = []
+    for family_name in sorted(font_to_brands, key=str.casefold):
+        entries.append(
+            {
+                "family_name": family_name,
+                "brands": sorted(font_to_brands[family_name], key=str.casefold),
+            }
+        )
+    return entries
+
+
+def _escape_markdown_cell(value: str) -> str:
+    return value.replace("|", "\\|")
+
+
+def build_brand_font_directory_markdown(inventory: dict[str, Any]) -> str:
+    entries = _build_brand_font_directory_entries(inventory)
+    updated = inventory.get("updated")
+
+    lines = ["# Font Directory", ""]
+    if isinstance(updated, str) and updated:
+        lines.extend([f"Updated: {updated}", ""])
+    lines.extend(
+        [
+            "| Font | Brands |",
+            "| --- | --- |",
+        ]
+    )
+    if not entries:
+        lines.append("| None recorded | - |")
+    else:
+        for entry in entries:
+            family_name = _escape_markdown_cell(entry["family_name"])
+            brands = ", ".join(entry["brands"])
+            lines.append(f"| {family_name} | {_escape_markdown_cell(brands)} |")
+    return "\n".join(lines)
+
+
+def build_brand_font_inventory(root: Path = ROOT) -> dict[str, Any]:
+    registry_path = root / "figma/brands/registry.yml"
+    try:
+        registry = load_yaml(registry_path)
+    except FileNotFoundError as exc:
+        raise GovernanceError(f"{registry_path.relative_to(root)}: file does not exist") from exc
+    except yaml.YAMLError as exc:
+        raise GovernanceError(f"{registry_path.relative_to(root)}: invalid YAML: {exc}") from exc
+
+    if not isinstance(registry, dict):
+        raise GovernanceError(f"{registry_path.relative_to(root)}: top-level YAML must be a mapping")
+
+    brands = registry.get("brands")
+    if not isinstance(brands, list):
+        raise GovernanceError(f"{registry_path.relative_to(root)}: `brands` must be a list")
+
+    source_dates: list[Any] = [registry.get("updated")]
+    inventory_brands: list[dict[str, Any]] = []
+
+    for brand in brands:
+        if not isinstance(brand, dict):
+            continue
+
+        manifest_path = brand.get("manifest_path")
+        if not isinstance(manifest_path, str) or not manifest_path:
+            raise GovernanceError(f"{registry_path.relative_to(root)}: brand entry is missing `manifest_path`")
+        manifest = _load_yaml_from_repo(root, manifest_path)
+        if not isinstance(manifest, dict):
+            raise GovernanceError(f"{manifest_path}: top-level YAML must be a mapping")
+
+        artifacts = manifest.get("artifacts", {})
+        if not isinstance(artifacts, dict):
+            raise GovernanceError(f"{manifest_path}: `artifacts` must be a mapping")
+        typography = artifacts.get("typography", {})
+        if not isinstance(typography, dict):
+            raise GovernanceError(f"{manifest_path}: `artifacts.typography` must be a mapping")
+
+        intake_artifact = typography.get("intake_artifact")
+        if not isinstance(intake_artifact, str) or not intake_artifact:
+            raise GovernanceError(f"{manifest_path}: missing `artifacts.typography.intake_artifact`")
+        intake = _load_yaml_from_repo(root, intake_artifact)
+
+        source_dates.extend([manifest.get("updated")])
+        if isinstance(intake, dict):
+            source_dates.append(intake.get("date"))
+
+        inventory_brands.append(
+            {
+                "brand_id": manifest.get("brand_id") or brand.get("brand_id"),
+                "display_name": manifest.get("display_name") or brand.get("display_name"),
+                "status": manifest.get("status") or brand.get("status"),
+                "typography_intake_artifact": intake_artifact,
+                "fonts": _extract_brand_fonts(intake),
+            }
+        )
+
+    return {
+        "version": 1,
+        "updated": _latest_iso_date(source_dates),
+        "purpose": "generated_brand_font_inventory",
+        "generated_from": {
+            "registry": "figma/brands/registry.yml",
+            "extraction_rule": (
+                "Collect unique family names from each brand typography intake artifact, "
+                "preferring `primitive_recommendations.proposed_primitives.families`."
+            ),
+        },
+        "brands": inventory_brands,
+    }
+
+
+def sync_brand_font_inventory(root: Path = ROOT) -> tuple[Path, Path]:
+    inventory = build_brand_font_inventory(root)
+    inventory_path = root / BRAND_FONT_INVENTORY_PATH
+    directory_path = root / BRAND_FONT_DIRECTORY_PATH
+    inventory_path.parent.mkdir(parents=True, exist_ok=True)
+    write_yaml(inventory_path, inventory)
+    write_text(directory_path, build_brand_font_directory_markdown(inventory))
+    return inventory_path, directory_path
+
+
+def validate_brand_font_inventory(root: Path = ROOT) -> list[str]:
+    try:
+        expected = build_brand_font_inventory(root)
+        expected_directory = build_brand_font_directory_markdown(expected)
+    except GovernanceError as exc:
+        return [str(exc)]
+
+    errors: list[str] = []
+
+    inventory_path = root / BRAND_FONT_INVENTORY_PATH
+    inventory_relative_path = inventory_path.relative_to(root).as_posix()
+    if not inventory_path.exists():
+        errors.append(
+            (
+                f"{inventory_relative_path}: generated brand font inventory is missing; run "
+                "`python3 -m scripts.figma_governance sync-brand-fonts`"
+            )
+        )
+    else:
+        try:
+            current = _normalize_yaml_scalars(load_yaml(inventory_path))
+        except yaml.YAMLError as exc:
+            errors.append(f"{inventory_relative_path}: invalid YAML: {exc}")
+        else:
+            if current != _normalize_yaml_scalars(expected):
+                errors.append(
+                    (
+                        f"{inventory_relative_path}: generated brand font inventory is stale; run "
+                        "`python3 -m scripts.figma_governance sync-brand-fonts`"
+                    )
+                )
+
+    directory_path = root / BRAND_FONT_DIRECTORY_PATH
+    directory_relative_path = directory_path.relative_to(root).as_posix()
+    if not directory_path.exists():
+        errors.append(
+            (
+                f"{directory_relative_path}: generated font directory is missing; run "
+                "`python3 -m scripts.figma_governance sync-brand-fonts`"
+            )
+        )
+    else:
+        current_directory = directory_path.read_text(encoding="utf-8")
+        if current_directory != f"{expected_directory}\n":
+            errors.append(
+                (
+                    f"{directory_relative_path}: generated font directory is stale; run "
+                    "`python3 -m scripts.figma_governance sync-brand-fonts`"
+                )
+            )
+
+    return errors
 
 
 def _has_dated_export_filename(relative_path: str) -> bool:
@@ -337,20 +652,28 @@ def validate_brand_manifest(path: Path, root: Path = ROOT) -> list[str]:
                     f"{path.relative_to(root)}: `semantic_overrides.color.override_scopes[{index}]` must be a mapping"
                 )
                 continue
-            expected_keys = {"scope", "source_family", "targets"}
             scope_keys = set(scope.keys())
-            if scope_keys != expected_keys:
+            allowed_keys = {"scope", "source_family", "source_value", "targets"}
+            has_source_family = isinstance(scope.get("source_family"), str) and bool(scope.get("source_family"))
+            has_source_value = isinstance(scope.get("source_value"), str) and bool(scope.get("source_value"))
+            if (
+                scope_keys - allowed_keys
+                or "scope" not in scope_keys
+                or "targets" not in scope_keys
+                or has_source_family == has_source_value
+            ):
                 errors.append(
                     f"{path.relative_to(root)}: `semantic_overrides.color.override_scopes[{index}]` "
-                    "must use exactly `scope`, `source_family`, and `targets`"
+                    "must use exactly `scope`, one of `source_family` or `source_value`, and `targets`"
                 )
             if not scope.get("scope"):
                 errors.append(
                     f"{path.relative_to(root)}: `semantic_overrides.color.override_scopes[{index}].scope` is required"
                 )
-            if not scope.get("source_family"):
+            if not has_source_family and not has_source_value:
                 errors.append(
-                    f"{path.relative_to(root)}: `semantic_overrides.color.override_scopes[{index}].source_family` is required"
+                    f"{path.relative_to(root)}: `semantic_overrides.color.override_scopes[{index}]` "
+                    "must define either `source_family` or `source_value`"
                 )
             targets = scope.get("targets")
             if not isinstance(targets, list) or not all(isinstance(item, str) and item for item in targets):
@@ -469,7 +792,10 @@ def validate_export_inputs(root: Path = ROOT) -> list[str]:
 
 def validate_repo(root: Path = ROOT) -> list[str]:
     errors: list[str] = []
-    errors.extend(validate_brand_registry(root))
+    brand_errors = validate_brand_registry(root)
+    errors.extend(brand_errors)
+    if not brand_errors:
+        errors.extend(validate_brand_font_inventory(root))
     errors.extend(validate_active_docs(root))
     errors.extend(validate_export_inputs(root))
     return errors

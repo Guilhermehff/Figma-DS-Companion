@@ -15,7 +15,9 @@ from scripts.figma_governance.core import (
     ROOT,
     list_mcp_port_listeners,
     reset_mcp_listeners,
+    sync_brand_font_inventory,
     validate_brand_manifest,
+    validate_brand_font_inventory,
     validate_export_inputs,
     validate_repo,
 )
@@ -234,7 +236,10 @@ def test_validate_brand_manifest_rejects_legacy_color_override_shape(tmp_path: P
 
     errors = validate_brand_manifest(manifest_path, tmp_path)
 
-    assert any("must use exactly `scope`, `source_family`, and `targets`" in error for error in errors)
+    assert any(
+        "must use exactly `scope`, one of `source_family` or `source_value`, and `targets`" in error
+        for error in errors
+    )
 
 
 def test_validate_brand_manifest_rejects_invalid_intake_yaml(tmp_path: Path) -> None:
@@ -376,6 +381,130 @@ def test_validate_export_inputs_rejects_invalid_yaml_exports(tmp_path: Path) -> 
     errors = validate_export_inputs(tmp_path)
 
     assert any("invalid YAML export" in error for error in errors)
+
+
+def test_sync_brand_font_inventory_collects_fonts_by_brand(tmp_path: Path) -> None:
+    _make_valid_brand_repo(tmp_path)
+    _write_yaml(
+        tmp_path / "figma/brands/demo/typography-intake.yml",
+        {
+            "date": "2026-03-13",
+            "primitive_recommendations": {
+                "proposed_primitives": {
+                    "families": [
+                        {
+                            "token_name": "demo/family/primary",
+                            "source_family_name": "Inter",
+                            "source_style_reference": "Inter Bold",
+                        },
+                        {
+                            "token_name": "demo/family/secondary",
+                            "source_family_name": "Avenir Next",
+                            "source_style_reference": "Avenir Next Regular",
+                        },
+                        {
+                            "token_name": "demo/family/utility",
+                            "source_family_name": "Avenir Next",
+                            "source_style_reference": "Avenir Next Demi Bold",
+                        },
+                    ]
+                }
+            },
+        },
+    )
+
+    sync_brand_font_inventory(tmp_path)
+
+    inventory = yaml.safe_load((tmp_path / "figma/brands/font-inventory.yml").read_text(encoding="utf-8"))
+    directory = (tmp_path / "figma/brands/font-directory.md").read_text(encoding="utf-8")
+
+    assert inventory == {
+        "version": 1,
+        "updated": "2026-03-13",
+        "purpose": "generated_brand_font_inventory",
+        "generated_from": {
+            "registry": "figma/brands/registry.yml",
+            "extraction_rule": (
+                "Collect unique family names from each brand typography intake artifact, "
+                "preferring `primitive_recommendations.proposed_primitives.families`."
+            ),
+        },
+        "brands": [
+            {
+                "brand_id": "demo",
+                "display_name": "Demo",
+                "status": "active",
+                "typography_intake_artifact": "figma/brands/demo/typography-intake.yml",
+                "fonts": [
+                    {
+                        "family_name": "Inter",
+                        "token_names": ["demo/family/primary"],
+                        "source_style_references": ["Inter Bold"],
+                    },
+                    {
+                        "family_name": "Avenir Next",
+                        "token_names": ["demo/family/secondary", "demo/family/utility"],
+                        "source_style_references": [
+                            "Avenir Next Regular",
+                            "Avenir Next Demi Bold",
+                        ],
+                    },
+                ],
+            }
+        ],
+    }
+    assert directory == (
+        "# Font Directory\n\n"
+        "Updated: 2026-03-13\n\n"
+        "| Font | Brands |\n"
+        "| --- | --- |\n"
+        "| Avenir Next | Demo |\n"
+        "| Inter | Demo |\n"
+    )
+
+
+def test_validate_brand_font_inventory_rejects_stale_generated_file(tmp_path: Path) -> None:
+    _make_valid_brand_repo(tmp_path)
+    _write_yaml(
+        tmp_path / "figma/brands/demo/typography-intake.yml",
+        {
+            "date": "2026-03-13",
+            "primitive_recommendations": {
+                "proposed_primitives": {
+                    "families": [
+                        {
+                            "token_name": "demo/family/primary",
+                            "source_family_name": "Inter",
+                            "source_style_reference": "Inter Regular",
+                        }
+                    ]
+                }
+            },
+        },
+    )
+    sync_brand_font_inventory(tmp_path)
+    _write_yaml(
+        tmp_path / "figma/brands/demo/typography-intake.yml",
+        {
+            "date": "2026-03-14",
+            "primitive_recommendations": {
+                "proposed_primitives": {
+                    "families": [
+                        {
+                            "token_name": "demo/family/primary",
+                            "source_family_name": "Prompt",
+                            "source_style_reference": "Prompt Regular",
+                        }
+                    ]
+                }
+            },
+        },
+    )
+
+    errors = validate_brand_font_inventory(tmp_path)
+
+    assert any("generated brand font inventory is stale" in error for error in errors)
+    assert any("generated font directory is stale" in error for error in errors)
 
 
 def test_validate_repo_includes_export_guardrails(tmp_path: Path) -> None:

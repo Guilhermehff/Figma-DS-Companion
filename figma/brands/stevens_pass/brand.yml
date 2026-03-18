@@ -80,7 +80,7 @@ semantic_overrides:
       - border/critical
     notes:
       - Exact black and white remain inherited through the shared neutral role recipes because the supplied palette matches `universal/black` and `universal/white`.
-      - `stevens_blue` drives the primary expressive semantic lane, while `secondary_blue` drives the secondary expressive lane.
+      - "`stevens_blue` drives the primary expressive semantic lane, while `secondary_blue` drives the secondary expressive lane."
       - "`mossy_green` remains a governed global-only family for special-case use after the first semantic pass."
       - "`assets/logo` is overridden to the string `Stevens Pass` in the semantic color extension."
   typography:
@@ -108,7 +108,7 @@ semantic_overrides:
       - size/*
     notes:
       - Stevens Pass stages on one raw family, `Gibson`, across headline, subhead, body, and CTA roles, with weight carrying the hierarchy.
-      - User-approved exception: `weight/body/base` stages on Light, `weight/body/strong` stages on Medium, and `weight/action/base` stages on Medium even though the source labels subheads as Semi Bold and CTA as Regular.
+      - "User-approved exception: `weight/body/base` stages on Light, `weight/body/strong` stages on Medium, and `weight/action/base` stages on Medium even though the source labels subheads as Semi Bold and CTA as Regular."
       - The source body variants and italics remain documented in the intake and preview artifacts rather than becoming separate semantic lanes.
 notes:
   - Stevens Pass is live in the Foundations file with three raw color families, one raw typography family primitive, a semantic color logo-name override, and Stevens Pass semantic color and typography extensions.

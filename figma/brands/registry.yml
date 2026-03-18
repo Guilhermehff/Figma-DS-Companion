@@ -61,3 +61,7 @@ brands:
     display_name: Alpine Valley
     status: active
     manifest_path: figma/brands/alpine_valley/brand.yml
+  - brand_id: crotched
+    display_name: Crotched
+    status: active
+    manifest_path: figma/brands/crotched/brand.yml

@@ -1,0 +1,224 @@
+version: 1
+updated: '2026-03-18'
+purpose: generated_brand_font_inventory
+generated_from:
+  registry: figma/brands/registry.yml
+  extraction_rule: Collect unique family names from each brand typography intake artifact,
+    preferring `primitive_recommendations.proposed_primitives.families`.
+brands:
+- brand_id: vail
+  display_name: Vail
+  status: active
+  typography_intake_artifact: figma/brands/vail/typography/intake.yml
+  fonts:
+  - family_name: Avenir
+    token_names:
+    - vail/family/primary
+    source_style_references:
+    - Avenir Black and Avenir Medium across eyebrow, subhead, body, and cta
+  - family_name: Termina
+    token_names:
+    - vail/family/display
+    source_style_references:
+    - Termina Black for headline
+- brand_id: breckenridge
+  display_name: Breckenridge
+  status: active
+  typography_intake_artifact: figma/brands/breckenridge/typography/intake.yml
+  fonts:
+  - family_name: Poppins
+    token_names:
+    - breckenridge/family/primary
+    source_style_references:
+    - Poppins Bold across headline, subhead, and cta
+  - family_name: Avenir Next
+    token_names:
+    - breckenridge/family/secondary
+    source_style_references:
+    - Avenir Next body copy
+- brand_id: crested_butte
+  display_name: Crested Butte
+  status: active
+  typography_intake_artifact: figma/brands/crested_butte/typography/intake.yml
+  fonts:
+  - family_name: Gibson
+    token_names:
+    - crested_butte/family/primary
+    source_style_references:
+    - Gibson Semibold and Gibson Regular across headline, sub-headline, and body
+- brand_id: northstar
+  display_name: Northstar
+  status: active
+  typography_intake_artifact: figma/brands/northstar/typography/intake.yml
+  fonts:
+  - family_name: New Order
+    token_names:
+    - northstar/family/primary
+    source_style_references:
+    - New Order Medium and New Order Regular across headline, sub-headline, and body
+- brand_id: heavenly
+  display_name: Heavenly
+  status: active
+  typography_intake_artifact: figma/brands/heavenly/typography/intake.yml
+  fonts:
+  - family_name: Din Condensed
+    token_names:
+    - heavenly/family/primary
+    source_style_references:
+    - Din Condensed Bold and Din Condensed Light across title and headline roles
+  - family_name: Brandon Grotesque
+    token_names:
+    - heavenly/family/secondary
+    source_style_references:
+    - Brandon Grotesque Medium and Brandon Grotesque Regular across subhead and body
+      roles
+- brand_id: kirkwood
+  display_name: Kirkwood
+  status: active
+  typography_intake_artifact: figma/brands/kirkwood/typography/intake.yml
+  fonts:
+  - family_name: Trade Gothic Bold Condensed No. 20
+    token_names:
+    - kirkwood/family/primary
+    source_style_references:
+    - headline system
+  - family_name: Avenir Next
+    token_names:
+    - kirkwood/family/secondary
+    source_style_references:
+    - body system
+  - family_name: Futura Bold
+    token_names:
+    - kirkwood/family/action
+    source_style_references:
+    - title and small type system
+  - family_name: Trade Gothic Condensed No. 18
+    token_names:
+    - kirkwood/family/utility
+    source_style_references:
+    - limited-space emphasis system
+- brand_id: keystone
+  display_name: Keystone
+  status: active
+  typography_intake_artifact: figma/brands/keystone/typography/intake.yml
+  fonts:
+  - family_name: Futura
+    token_names:
+    - keystone/family/primary
+    source_style_references:
+    - Futura Bold across headline, emphasized body copy, and CTA
+  - family_name: Avenir
+    token_names:
+    - keystone/family/secondary
+    source_style_references:
+    - Avenir Medium across subheadline and body copy
+- brand_id: beaver_creek
+  display_name: Beaver Creek
+  status: active
+  typography_intake_artifact: figma/brands/beaver_creek/typography/intake.yml
+  fonts:
+  - family_name: IvyPresto Display
+    token_names:
+    - beaver_creek/family/primary
+    source_style_references:
+    - Thin headline system
+  - family_name: Vinila
+    token_names:
+    - beaver_creek/family/secondary
+    source_style_references:
+    - Light body system
+  - family_name: Vinila Condensed
+    token_names:
+    - beaver_creek/family/action
+    source_style_references:
+    - Bold CTA and subheadline system
+- brand_id: mount_snow
+  display_name: Mount Snow
+  status: active
+  typography_intake_artifact: figma/brands/mount_snow/typography/intake.yml
+  fonts:
+  - family_name: Vastago Grotesk
+    token_names:
+    - mount_snow/family/primary
+    source_style_references:
+    - Heavy headline system
+  - family_name: Area Extended
+    token_names:
+    - mount_snow/family/secondary
+    source_style_references:
+    - Extra Bold subheadline and Medium body system
+- brand_id: jfbb
+  display_name: JFBB
+  status: active
+  typography_intake_artifact: figma/brands/jfbb/typography/intake.yml
+  fonts:
+  - family_name: Vista Sans NAR OTCE
+    token_names:
+    - jfbb/family/primary
+    source_style_references:
+    - Black, Bold, and Book hierarchy system
+- brand_id: park_city
+  display_name: Park City
+  status: active
+  typography_intake_artifact: figma/brands/park_city/typography/intake.yml
+  fonts:
+  - family_name: Futura Std
+    token_names:
+    - park_city/family/primary
+    source_style_references:
+    - Bold headline and CTA system plus Light body system
+  - family_name: Trade Gothic LT Std Bold Condensed No. 20
+    token_names:
+    - park_city/family/utility
+    source_style_references:
+    - subhead system
+- brand_id: stevens_pass
+  display_name: Stevens Pass
+  status: active
+  typography_intake_artifact: figma/brands/stevens_pass/typography/intake.yml
+  fonts:
+  - family_name: Gibson
+    token_names:
+    - stevens_pass/family/primary
+    source_style_references:
+    - Bold, Semi Bold, Medium, Regular, Light, and italic variants
+- brand_id: whistler_blackcomb
+  display_name: Whistler Blackcomb
+  status: active
+  typography_intake_artifact: figma/brands/whistler_blackcomb/typography/intake.yml
+  fonts:
+  - family_name: Proxima Nova
+    token_names:
+    - whistler_blackcomb/family/primary
+    source_style_references:
+    - Black, Bold, and Regular hierarchy
+- brand_id: afton_alps
+  display_name: Afton Alps
+  status: active
+  typography_intake_artifact: figma/brands/afton_alps/typography/intake.yml
+  fonts:
+  - family_name: Inter
+    token_names:
+    - afton_alps/family/primary
+    source_style_references:
+    - mirror of universal/family/primary
+- brand_id: alpine_valley
+  display_name: Alpine Valley
+  status: active
+  typography_intake_artifact: figma/brands/alpine_valley/typography/intake.yml
+  fonts:
+  - family_name: Prompt
+    token_names:
+    - alpine_valley/family/primary
+    source_style_references:
+    - Regular, Bold, Extra Bold, and italic variants shown in the campaign guide
+- brand_id: crotched
+  display_name: Crotched
+  status: active
+  typography_intake_artifact: figma/brands/crotched/typography/intake.yml
+  fonts:
+  - family_name: Inter
+    token_names:
+    - crotched/family/primary
+    source_style_references:
+    - mirror of universal/family/primary because no brand-specific typography was supplied

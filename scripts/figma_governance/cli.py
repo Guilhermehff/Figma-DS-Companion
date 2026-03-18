@@ -10,6 +10,7 @@ from .core import (
     ROOT,
     GovernanceError,
     reset_mcp_listeners,
+    sync_brand_font_inventory,
     validate_repo,
 )
 
@@ -19,6 +20,13 @@ def _resolve_root(value: str | None) -> Path:
 
 
 def cmd_validate(root: Path) -> int:
+    try:
+        sync_brand_font_inventory(root)
+    except GovernanceError as exc:
+        for error in str(exc).splitlines():
+            print(error, file=sys.stderr)
+        return 1
+
     errors = validate_repo(root)
     if errors:
         for error in errors:
@@ -64,11 +72,24 @@ def cmd_reset_mcp(
     return 0
 
 
+def cmd_sync_brand_fonts(root: Path) -> int:
+    try:
+        paths = sync_brand_font_inventory(root)
+    except GovernanceError as exc:
+        for error in str(exc).splitlines():
+            print(error, file=sys.stderr)
+        return 1
+    for path in paths:
+        print(f"synced {path.relative_to(root)}")
+    return 0
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(prog="python3 -m scripts.figma_governance")
     parser.add_argument("--root", help="Repository root override")
     subparsers = parser.add_subparsers(dest="command", required=True)
     subparsers.add_parser("validate")
+    subparsers.add_parser("sync-brand-fonts")
     reset_mcp_parser = subparsers.add_parser("reset-mcp")
     reset_mcp_parser.add_argument(
         "--dry-run",
@@ -103,6 +124,8 @@ def main(argv: list[str] | None = None) -> int:
     root = _resolve_root(args.root)
     if args.command == "validate":
         return cmd_validate(root)
+    if args.command == "sync-brand-fonts":
+        return cmd_sync_brand_fonts(root)
     if args.command == "reset-mcp":
         return cmd_reset_mcp(
             port_start=args.port_start,

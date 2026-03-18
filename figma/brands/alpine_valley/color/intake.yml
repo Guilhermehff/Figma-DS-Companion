@@ -159,7 +159,7 @@ semantic_recommendations:
   role_exceptions:
     - target: assets/logo
       source_token: Alpine Valley
-      rationale: The live `Semantic: Color` schema includes `assets/logo`, and each brand extension overrides it to the brand display name string.
+      rationale: "The live `Semantic: Color` schema includes `assets/logo`, and each brand extension overrides it to the brand display name string."
 
 review_readiness:
   intended_review_channels:

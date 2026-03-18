@@ -20,7 +20,7 @@ source_roles:
     leading: not specified in source
     size_rule: source labels H1 but does not define governed token sizes
     punctuation_rule: not specified in source
-    sample_copy: PROMPT BOLD: PRIMARY HEADER (H1)
+    sample_copy: "PROMPT BOLD: PRIMARY HEADER (H1)"
     notes: The source explicitly shows Prompt Bold for the primary header.
   - source_role: secondary_header
     source_family_name: Prompt
@@ -32,7 +32,7 @@ source_roles:
     leading: not specified in source
     size_rule: source labels H2 but does not define governed token sizes
     punctuation_rule: not specified in source
-    sample_copy: PROMPT BOLD: SECONDARY HEADER (H2)
+    sample_copy: "PROMPT BOLD: SECONDARY HEADER (H2)"
     notes: The source explicitly shows Prompt Bold for the secondary header.
   - source_role: body
     source_family_name: Prompt
@@ -44,7 +44,7 @@ source_roles:
     leading: not specified in source
     size_rule: source labels body copy but does not define governed token sizes
     punctuation_rule: sentence punctuation allowed
-    sample_copy: PROMPT REGULAR: Alpine Valley is an easy getaway...
+    sample_copy: "PROMPT REGULAR: Alpine Valley is an easy getaway..."
     notes: The source explicitly shows Prompt Regular for body copy.
 
 primitive_recommendations:
@@ -142,7 +142,7 @@ role_recipes:
     leading_rule: not specified in source
     size_rule: source labels H1 but does not define governed token sizes
     punctuation_rule: not specified in source
-    sample_copy: PROMPT BOLD: PRIMARY HEADER (H1)
+    sample_copy: "PROMPT BOLD: PRIMARY HEADER (H1)"
     notes: The source explicitly shows H1 on Prompt Bold.
   - role_name: secondary_header
     source_role: Secondary Header (H2) | Prompt Bold
@@ -156,7 +156,7 @@ role_recipes:
     leading_rule: not specified in source
     size_rule: source labels H2 but does not define governed token sizes
     punctuation_rule: not specified in source
-    sample_copy: PROMPT BOLD: SECONDARY HEADER (H2)
+    sample_copy: "PROMPT BOLD: SECONDARY HEADER (H2)"
     notes: The source explicitly shows H2 on Prompt Bold.
   - role_name: body
     source_role: Body Copy | Prompt Regular
@@ -170,7 +170,7 @@ role_recipes:
     leading_rule: not specified in source
     size_rule: source labels body copy but does not define governed token sizes
     punctuation_rule: sentence punctuation allowed
-    sample_copy: PROMPT REGULAR: Alpine Valley is an easy getaway...
+    sample_copy: "PROMPT REGULAR: Alpine Valley is an easy getaway..."
     notes: The source explicitly shows body copy on Prompt Regular.
   - role_name: action
     source_role: CTA | Prompt Bold

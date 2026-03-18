@@ -83,7 +83,7 @@ semantic_overrides:
       - border/critical
     notes:
       - Park City stages `Pale Red`, `Cool Gray`, and `Park City Gray` into one absorbed neutral family, `park_city/park_city_gray`, so the tinted background wash and the darker readable neutrals remain on one governed ladder.
-      - `park_city_red` drives the primary expressive semantic lane, while `bright_red` drives the secondary expressive lane.
+      - "`park_city_red` drives the primary expressive semantic lane, while `bright_red` drives the secondary expressive lane."
       - "`assets/logo` is overridden to the string `Park City` in the semantic color extension."
       - Exact white remains shared through `universal/white` rather than duplicated under the Park City group.
   typography:
