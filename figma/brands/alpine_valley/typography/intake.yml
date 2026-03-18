@@ -1,0 +1,220 @@
+date: 2026-03-18
+brand: alpine_valley
+source_reference: User-provided image in chat showing the Alpine Valley typography guidance
+source_type: image
+figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Foundations?node-id=1-3
+status: active
+preview:
+  required_before_write: true
+  artifact: figma/brands/alpine_valley/typography/preview.md
+  status: written_in_figma
+
+source_roles:
+  - source_role: primary_header
+    source_family_name: Prompt
+    source_style_name: Bold
+    source_weight_label: Bold
+    source_usage_scope: primary_header_h1
+    text_case: all_caps_in_example
+    tracking: not specified in source
+    leading: not specified in source
+    size_rule: source labels H1 but does not define governed token sizes
+    punctuation_rule: not specified in source
+    sample_copy: PROMPT BOLD: PRIMARY HEADER (H1)
+    notes: The source explicitly shows Prompt Bold for the primary header.
+  - source_role: secondary_header
+    source_family_name: Prompt
+    source_style_name: Bold
+    source_weight_label: Bold
+    source_usage_scope: secondary_header_h2
+    text_case: all_caps_in_example
+    tracking: not specified in source
+    leading: not specified in source
+    size_rule: source labels H2 but does not define governed token sizes
+    punctuation_rule: not specified in source
+    sample_copy: PROMPT BOLD: SECONDARY HEADER (H2)
+    notes: The source explicitly shows Prompt Bold for the secondary header.
+  - source_role: body
+    source_family_name: Prompt
+    source_style_name: Regular
+    source_weight_label: Regular
+    source_usage_scope: body_copy
+    text_case: sentence_case
+    tracking: not specified in source
+    leading: not specified in source
+    size_rule: source labels body copy but does not define governed token sizes
+    punctuation_rule: sentence punctuation allowed
+    sample_copy: PROMPT REGULAR: Alpine Valley is an easy getaway...
+    notes: The source explicitly shows Prompt Regular for body copy.
+
+primitive_recommendations:
+  reuse_existing:
+    families: []
+    weights:
+      - source_weight_label: Bold
+        existing_token: universal/weight/bold
+        reason: The H1 and H2 examples explicitly use Prompt Bold.
+      - source_weight_label: Regular
+        existing_token: universal/weight/normal
+        reason: The body example explicitly uses Prompt Regular.
+    sizes: []
+  proposed_primitives:
+    families:
+      - token_name: alpine_valley/family/primary
+        source_family_name: Prompt
+        source_style_reference: Regular, Bold, Extra Bold, and italic variants shown in the campaign guide
+        rationale: Alpine Valley uses one family across the reviewed digital campaign typography system, with weight and role carrying the distinction.
+        fallback_token: universal/family/web_safe
+        fallback_note: The source points to the Google Font specimen page but does not provide a fallback stack.
+    weights: []
+  hold_for_review: []
+
+semantic_recommendations:
+  family_aliases:
+    - semantic_token: family/heading
+      global_token: alpine_valley/family/primary
+      safe_semantic_token: family/heading_safe
+      safe_global_token: universal/family/web_safe
+      intended_channels:
+        - web
+        - email
+        - ads
+      notes: Prompt is the reviewed heading family for Alpine Valley digital campaign work.
+    - semantic_token: family/body
+      global_token: alpine_valley/family/primary
+      safe_semantic_token: family/body_safe
+      safe_global_token: universal/family/web_safe
+      intended_channels:
+        - web
+        - email
+        - ads
+      notes: Body copy uses the same family at Regular weight.
+    - semantic_token: family/action
+      global_token: alpine_valley/family/primary
+      safe_semantic_token: family/action_safe
+      safe_global_token: universal/family/web_safe
+      intended_channels:
+        - web
+        - email
+        - ads
+      notes: User-approved follow-up. CTA should also use Prompt.
+  weight_aliases:
+    - semantic_token: weight/heading/base
+      global_token: universal/weight/bold
+      intended_channels:
+        - web
+        - email
+        - ads
+      notes: Both H1 and H2 examples use Prompt Bold.
+    - semantic_token: weight/body/base
+      global_token: universal/weight/normal
+      intended_channels:
+        - web
+        - email
+        - ads
+      notes: The body example uses Prompt Regular.
+    - semantic_token: weight/body/strong
+      global_token: universal/weight/bold
+      intended_channels:
+        - web
+        - email
+        - ads
+      notes: Secondary header and strong body emphasis can stage on the same bold raw weight without introducing a separate extra-bold primitive.
+    - semantic_token: weight/action/base
+      global_token: universal/weight/bold
+      intended_channels:
+        - web
+        - email
+        - ads
+      notes: User-approved follow-up. CTA should use Prompt and stages on Bold rather than inheriting the current action base.
+  size_aliases: []
+
+role_recipes:
+  - role_name: primary_header
+    source_role: Primary Header (H1) | Prompt Bold
+    proposed_family_token: alpine_valley/family/primary
+    fallback_token: universal/family/web_safe
+    proposed_weight_token: universal/weight/bold
+    proposed_size_token: inherited current heading ladder
+    size_assumption_status: deferred_no_new_size
+    text_case: all_caps_in_example
+    tracking: not specified in source
+    leading_rule: not specified in source
+    size_rule: source labels H1 but does not define governed token sizes
+    punctuation_rule: not specified in source
+    sample_copy: PROMPT BOLD: PRIMARY HEADER (H1)
+    notes: The source explicitly shows H1 on Prompt Bold.
+  - role_name: secondary_header
+    source_role: Secondary Header (H2) | Prompt Bold
+    proposed_family_token: alpine_valley/family/primary
+    fallback_token: universal/family/web_safe
+    proposed_weight_token: universal/weight/bold
+    proposed_size_token: inherited current heading ladder
+    size_assumption_status: deferred_no_new_size
+    text_case: all_caps_in_example
+    tracking: not specified in source
+    leading_rule: not specified in source
+    size_rule: source labels H2 but does not define governed token sizes
+    punctuation_rule: not specified in source
+    sample_copy: PROMPT BOLD: SECONDARY HEADER (H2)
+    notes: The source explicitly shows H2 on Prompt Bold.
+  - role_name: body
+    source_role: Body Copy | Prompt Regular
+    proposed_family_token: alpine_valley/family/primary
+    fallback_token: universal/family/web_safe
+    proposed_weight_token: universal/weight/normal
+    proposed_size_token: inherited current body ladder
+    size_assumption_status: deferred_no_new_size
+    text_case: sentence_case
+    tracking: not specified in source
+    leading_rule: not specified in source
+    size_rule: source labels body copy but does not define governed token sizes
+    punctuation_rule: sentence punctuation allowed
+    sample_copy: PROMPT REGULAR: Alpine Valley is an easy getaway...
+    notes: The source explicitly shows body copy on Prompt Regular.
+  - role_name: action
+    source_role: CTA | Prompt Bold
+    proposed_family_token: alpine_valley/family/primary
+    fallback_token: universal/family/web_safe
+    proposed_weight_token: universal/weight/bold
+    proposed_size_token: inherited current action ladder
+    size_assumption_status: approved_follow_up
+    text_case: not specified in source
+    tracking: not specified in source
+    leading_rule: not specified in source
+    size_rule: source does not define CTA behavior
+    punctuation_rule: not specified in source
+    sample_copy: CTA
+    notes: User-approved follow-up. CTA uses Prompt and stages on Bold even though the source image does not explicitly define a CTA recipe.
+
+validation:
+  extraction_notes:
+    - The source explicitly shows Prompt as the selected digital campaign family and demonstrates Regular, Bold, and Extra Bold variants.
+    - The source is explicit about H1, H2, and body treatments but does not provide CTA guidance.
+  governance_notes:
+    - Alpine Valley can stage on a single raw family primitive, `Prompt`, without introducing extra family tokens.
+    - User-approved follow-up. CTA now stages on Prompt Bold even though the source image does not explicitly define action typography behavior.
+
+review_readiness:
+  intended_review_channels:
+    - web
+    - email
+    - ads
+  review_rules:
+    - subject: Alpine Valley reviewed campaign typography
+      channels:
+        - web
+        - email
+        - ads
+      rule: Keep H1 and H2 on Prompt Bold and body on Prompt Regular.
+      source_basis: Alpine Valley campaign typography guide image.
+    - subject: Alpine Valley CTA typography
+      channels:
+        - web
+        - email
+        - ads
+      rule: Use Prompt for CTA copy and stage the first semantic action pass on Bold.
+      source_basis: User-approved follow-up in chat.
+
+open_questions:
+  - none

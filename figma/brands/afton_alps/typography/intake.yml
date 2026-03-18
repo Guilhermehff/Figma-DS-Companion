@@ -1,0 +1,143 @@
+date: 2026-03-18
+brand: afton_alps
+source_reference: User instruction in chat to create raw Afton Alps typography tokens using the same values as the universal typography baseline
+source_type: chat_instruction
+figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Foundations?node-id=1-3
+status: active
+preview:
+  required_before_write: true
+  artifact: figma/brands/afton_alps/typography/preview.md
+  status: written_in_figma
+
+source_roles:
+  - source_role: shared_brand_typography
+    source_family_name: universal/family/primary
+    source_style_name: primary
+    source_weight_label: inherit
+    source_usage_scope: heading_body_action
+    text_case: inherit_base
+    tracking: inherit_base
+    leading: inherit_base
+    size_rule: inherit_base
+    punctuation_rule: inherit_base
+    sample_copy: Afton Alps
+    notes: User instructed the brand raw typography tokens to mirror the universal values rather than introducing a distinct brand family.
+
+primitive_recommendations:
+  reuse_existing:
+    families: []
+    weights:
+      - source_weight_label: inherit
+        existing_token: universal/weight/*
+        reason: The user asked to keep Afton Alps typography values aligned to the universal baseline rather than introducing brand-specific weight values.
+    sizes: []
+  proposed_primitives:
+    families:
+      - token_name: afton_alps/family/primary
+        source_family_name: Inter
+        source_style_reference: mirror of universal/family/primary
+        rationale: Afton Alps should have a raw brand family token for governance parity, but the value should remain identical to the universal primary family.
+        fallback_token: universal/family/web_safe
+        fallback_note: Safe-family behavior remains inherited from the universal baseline.
+    weights: []
+  hold_for_review: []
+
+semantic_recommendations:
+  family_aliases:
+    - semantic_token: family/heading
+      global_token: afton_alps/family/primary
+      safe_semantic_token: family/heading_safe
+      safe_global_token: universal/family/web_safe
+      intended_channels:
+        - web
+        - email
+        - ads
+      notes: Heading family aliases to the Afton Alps raw token, which intentionally mirrors the universal primary family value.
+    - semantic_token: family/body
+      global_token: afton_alps/family/primary
+      safe_semantic_token: family/body_safe
+      safe_global_token: universal/family/web_safe
+      intended_channels:
+        - web
+        - email
+        - ads
+      notes: Body family aliases to the same raw token.
+    - semantic_token: family/action
+      global_token: afton_alps/family/primary
+      safe_semantic_token: family/action_safe
+      safe_global_token: universal/family/web_safe
+      intended_channels:
+        - web
+        - email
+        - ads
+      notes: Action family aliases to the same raw token.
+  weight_aliases: []
+  size_aliases: []
+
+role_recipes:
+  - role_name: heading
+    source_role: User instruction | mirror universal primary family
+    proposed_family_token: afton_alps/family/primary
+    fallback_token: universal/family/web_safe
+    proposed_weight_token: inherited current heading weights
+    proposed_size_token: inherited current heading ladder
+    size_assumption_status: inherited
+    text_case: inherit_base
+    tracking: inherit_base
+    leading_rule: inherit_base
+    size_rule: inherit_base
+    punctuation_rule: inherit_base
+    sample_copy: Afton Alps
+    notes: The Afton Alps heading lane remains semantically identical to the universal baseline except for the raw family alias path.
+  - role_name: body
+    source_role: User instruction | mirror universal primary family
+    proposed_family_token: afton_alps/family/primary
+    fallback_token: universal/family/web_safe
+    proposed_weight_token: inherited current body weights
+    proposed_size_token: inherited current body ladder
+    size_assumption_status: inherited
+    text_case: inherit_base
+    tracking: inherit_base
+    leading_rule: inherit_base
+    size_rule: inherit_base
+    punctuation_rule: inherit_base
+    sample_copy: Afton Alps
+    notes: Body remains on the inherited universal weight and size system.
+  - role_name: action
+    source_role: User instruction | mirror universal primary family
+    proposed_family_token: afton_alps/family/primary
+    fallback_token: universal/family/web_safe
+    proposed_weight_token: inherited current action weights
+    proposed_size_token: inherited current action ladder
+    size_assumption_status: inherited
+    text_case: inherit_base
+    tracking: inherit_base
+    leading_rule: inherit_base
+    size_rule: inherit_base
+    punctuation_rule: inherit_base
+    sample_copy: Afton Alps
+    notes: Action remains on the inherited universal weight and size system.
+
+validation:
+  extraction_notes:
+    - No separate typography image or brand-specific family was supplied.
+    - The user explicitly requested raw brand typography tokens that mirror the universal values.
+  governance_notes:
+    - The live semantic typography pass only overrides the family aliases to the raw Afton Alps token.
+    - Weight, safe-family, and size tokens remain inherited from the semantic base because the requested values are unchanged from universal.
+
+review_readiness:
+  intended_review_channels:
+    - web
+    - email
+    - ads
+  review_rules:
+    - subject: Afton Alps mirrored typography baseline
+      channels:
+        - web
+        - email
+        - ads
+      rule: Use a raw Afton Alps primary family token, but keep its value identical to `universal/family/primary`.
+      source_basis: User instruction in chat.
+
+open_questions: []

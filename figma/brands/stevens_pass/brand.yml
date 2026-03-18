@@ -1,0 +1,114 @@
+version: 1
+updated: 2026-03-18
+brand_id: stevens_pass
+display_name: Stevens Pass
+status: active
+owners:
+  - design_system_governance
+supported_channels:
+  - web
+  - email
+  - ads
+figma:
+  design_system_file_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Foundations?node-id=1-3
+  global_collections:
+    color_id: VariableCollectionId:23:2
+    typography_id: VariableCollectionId:23:3
+    dimensions_id: VariableCollectionId:23:4
+  semantic_extensions:
+    color:
+      collection_name: Stevens Pass
+      collection_id: VariableCollectionId:188:127
+      parent_collection: "Semantic: Color"
+      parent_collection_id: VariableCollectionId:41:135
+    typography:
+      collection_name: Stevens Pass
+      collection_id: VariableCollectionId:188:128
+      parent_collection: "Semantic: Typography"
+      parent_collection_id: VariableCollectionId:38:114
+artifacts:
+  color:
+    intake_artifact: figma/brands/stevens_pass/color/intake.yml
+    preview_artifact: figma/brands/stevens_pass/color/preview.md
+    decision_artifacts:
+      - figma/decisions/2026-03-18-stevens-pass-foundations-written-to-figma.md
+  typography:
+    intake_artifact: figma/brands/stevens_pass/typography/intake.yml
+    preview_artifact: figma/brands/stevens_pass/typography/preview.md
+    decision_artifacts:
+      - figma/decisions/2026-03-18-stevens-pass-foundations-written-to-figma.md
+semantic_overrides:
+  color:
+    status: active
+    override_scopes:
+      - scope: brand
+        source_family: stevens_pass/stevens_blue
+        targets:
+          - surface/brand/*
+          - on_surface/brand/*
+          - foreground/brand
+          - border/brand
+      - scope: brand_secondary
+        source_family: stevens_pass/secondary_blue
+        targets:
+          - surface/brand_secondary/*
+          - on_surface/brand_secondary/*
+          - foreground/brand_secondary
+          - border/brand_secondary
+      - scope: asset_logo
+        source_value: Stevens Pass
+        targets:
+          - assets/logo
+    inherited_from_base:
+      - surface/neutral/*
+      - on_surface/neutral/*
+      - foreground/default
+      - foreground/subtle
+      - border/default
+      - border/subtle
+      - surface/positive/*
+      - on_surface/positive/*
+      - surface/warning/*
+      - on_surface/warning/*
+      - surface/critical/*
+      - on_surface/critical/*
+      - foreground/positive
+      - foreground/warning
+      - foreground/critical
+      - border/positive
+      - border/warning
+      - border/critical
+    notes:
+      - Exact black and white remain inherited through the shared neutral role recipes because the supplied palette matches `universal/black` and `universal/white`.
+      - `stevens_blue` drives the primary expressive semantic lane, while `secondary_blue` drives the secondary expressive lane.
+      - "`mossy_green` remains a governed global-only family for special-case use after the first semantic pass."
+      - "`assets/logo` is overridden to the string `Stevens Pass` in the semantic color extension."
+  typography:
+    status: active
+    override_scopes:
+      - semantic_token: family/heading
+        alias_of: stevens_pass/family/primary
+      - semantic_token: family/body
+        alias_of: stevens_pass/family/primary
+      - semantic_token: family/action
+        alias_of: stevens_pass/family/primary
+      - semantic_token: weight/heading/base
+        alias_of: universal/weight/bold
+      - semantic_token: weight/body/base
+        alias_of: universal/weight/light
+      - semantic_token: weight/body/strong
+        alias_of: universal/weight/medium
+      - semantic_token: weight/action/base
+        alias_of: universal/weight/medium
+    inherited_from_base:
+      - family/heading_safe
+      - family/body_safe
+      - family/action_safe
+      - weight/heading/strong
+      - size/*
+    notes:
+      - Stevens Pass stages on one raw family, `Gibson`, across headline, subhead, body, and CTA roles, with weight carrying the hierarchy.
+      - User-approved exception: `weight/body/base` stages on Light, `weight/body/strong` stages on Medium, and `weight/action/base` stages on Medium even though the source labels subheads as Semi Bold and CTA as Regular.
+      - The source body variants and italics remain documented in the intake and preview artifacts rather than becoming separate semantic lanes.
+notes:
+  - Stevens Pass is live in the Foundations file with three raw color families, one raw typography family primitive, a semantic color logo-name override, and Stevens Pass semantic color and typography extensions.

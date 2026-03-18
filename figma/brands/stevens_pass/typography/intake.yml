@@ -1,0 +1,242 @@
+date: 2026-03-18
+brand: stevens_pass
+source_reference: User-provided image in chat showing the Stevens Pass typography hierarchy guidance
+source_type: image
+figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Foundations?node-id=1-3
+status: active
+preview:
+  required_before_write: true
+  artifact: figma/brands/stevens_pass/typography/preview.md
+  status: written_in_figma
+
+source_roles:
+  - source_role: headline
+    source_family_name: Gibson
+    source_style_name: Bold
+    source_weight_label: Bold
+    source_usage_scope: primary_display_headline
+    text_case: not specified in source
+    tracking: not specified in source
+    leading: not specified in source
+    size_rule: source shows family and weight only
+    punctuation_rule: not specified in source
+    sample_copy: GIBSON BOLD
+    notes: The typography sheet explicitly labels headlines as Gibson Bold.
+  - source_role: subhead
+    source_family_name: Gibson
+    source_style_name: Semi Bold
+    source_weight_label: Semi Bold
+    source_usage_scope: supporting_headline_copy
+    text_case: not specified in source
+    tracking: not specified in source
+    leading: not specified in source
+    size_rule: source shows family and weight only
+    punctuation_rule: not specified in source
+    sample_copy: GIBSON SEMI BOLD
+    notes: The typography sheet explicitly labels subheads as Gibson Semi Bold.
+  - source_role: cta
+    source_family_name: Gibson
+    source_style_name: Regular
+    source_weight_label: Regular
+    source_usage_scope: action_or_button_copy
+    text_case: not specified in source
+    tracking: not specified in source
+    leading: not specified in source
+    size_rule: source shows family and weight only
+    punctuation_rule: not specified in source
+    sample_copy: GIBSON REGULAR
+    notes: The typography sheet explicitly labels CTA as Gibson Regular.
+  - source_role: body
+    source_family_name: Gibson
+    source_style_name: Medium, Regular, Light, and italic variants
+    source_weight_label: Mixed
+    source_usage_scope: reading_copy
+    text_case: not specified in source
+    tracking: not specified in source
+    leading: not specified in source
+    size_rule: source shows approved family variants rather than a single governed body recipe
+    punctuation_rule: not specified in source
+    sample_copy: GIBSON MEDIUM / REGULAR / LIGHT
+    notes: The source lists multiple acceptable body weights and italics without stating which one is the semantic default.
+
+primitive_recommendations:
+  reuse_existing:
+    families: []
+    weights:
+      - source_weight_label: Bold
+        existing_token: universal/weight/bold
+        reason: Direct match for the headline lane.
+      - source_weight_label: Semi Bold
+        existing_token: universal/weight/semibold
+        reason: Direct match for the subhead lane.
+      - source_weight_label: Medium
+        existing_token: universal/weight/medium
+        reason: Direct match for one allowed body weight.
+      - source_weight_label: Regular
+        existing_token: universal/weight/normal
+        reason: Direct match for CTA and one allowed body weight.
+      - source_weight_label: Light
+        existing_token: universal/weight/light
+        reason: Direct match for one allowed body weight.
+    sizes: []
+  proposed_primitives:
+    families:
+      - token_name: stevens_pass/family/primary
+        source_family_name: Gibson
+        source_style_reference: Bold, Semi Bold, Medium, Regular, Light, and italic variants
+        rationale: Stevens Pass uses one type family across headline, subhead, CTA, and body roles, with weight and italic carrying the distinction.
+        fallback_token: universal/family/web_safe
+        fallback_note: The source does not define a fallback stack.
+    weights: []
+  hold_for_review:
+    - item: semantic body baseline
+      reason: The source lists multiple allowed body weights and italics without naming one semantic default for `body/base`.
+
+semantic_recommendations:
+  family_aliases:
+    - semantic_token: family/heading
+      global_token: stevens_pass/family/primary
+      safe_semantic_token: family/heading_safe
+      safe_global_token: universal/family/web_safe
+      intended_channels:
+        - web
+        - email
+        - ads
+      notes: Headline work stays on Gibson.
+    - semantic_token: family/body
+      global_token: stevens_pass/family/primary
+      safe_semantic_token: family/body_safe
+      safe_global_token: universal/family/web_safe
+      intended_channels:
+        - web
+        - email
+        - ads
+      notes: Body and subhead copy stay on the same Gibson family, with weight carrying the hierarchy.
+    - semantic_token: family/action
+      global_token: stevens_pass/family/primary
+      safe_semantic_token: family/action_safe
+      safe_global_token: universal/family/web_safe
+      intended_channels:
+        - web
+        - email
+        - ads
+      notes: CTA is explicitly Gibson Regular.
+  weight_aliases:
+    - semantic_token: weight/heading/base
+      global_token: universal/weight/bold
+      intended_channels:
+        - web
+        - email
+        - ads
+      notes: Headline weight is an explicit direct match to bold.
+    - semantic_token: weight/body/base
+      global_token: universal/weight/light
+      intended_channels:
+        - web
+        - email
+        - ads
+      notes: User-approved exception. Stevens Pass body base stages on Light rather than Medium or Regular.
+    - semantic_token: weight/body/strong
+      global_token: universal/weight/medium
+      intended_channels:
+        - web
+        - email
+        - ads
+      notes: User-approved exception. Stevens Pass stronger body and subhead emphasis stages on Medium rather than Semi Bold.
+    - semantic_token: weight/action/base
+      global_token: universal/weight/medium
+      intended_channels:
+        - web
+        - email
+        - ads
+      notes: User-approved exception. CTA stages on Medium rather than the source-labeled Regular treatment.
+  size_aliases: []
+
+role_recipes:
+  - role_name: headline
+    source_role: Headline | Gibson Bold
+    proposed_family_token: stevens_pass/family/primary
+    fallback_token: universal/family/web_safe
+    proposed_weight_token: universal/weight/bold
+    proposed_size_token: inherited current heading ladder
+    size_assumption_status: deferred_no_new_size
+    text_case: not specified in source
+    tracking: not specified in source
+    leading_rule: not specified in source
+    size_rule: source shows family and weight only
+    punctuation_rule: not specified in source
+    sample_copy: GIBSON BOLD
+    notes: Straightforward headline mapping.
+  - role_name: subhead
+    source_role: Subhead | Gibson Semi Bold
+    proposed_family_token: stevens_pass/family/primary
+    fallback_token: universal/family/web_safe
+    proposed_weight_token: universal/weight/medium
+    proposed_size_token: inherited current heading ladder
+    size_assumption_status: deferred_no_new_size
+    text_case: not specified in source
+    tracking: not specified in source
+    leading_rule: not specified in source
+    size_rule: source shows family and weight only
+    punctuation_rule: not specified in source
+    sample_copy: GIBSON SEMI BOLD
+    notes: User-approved exception. Subheads stage through `weight/body/strong = medium` rather than a separate semantic family or the source-labeled semibold.
+  - role_name: cta
+    source_role: CTA | Gibson Regular
+    proposed_family_token: stevens_pass/family/primary
+    fallback_token: universal/family/web_safe
+    proposed_weight_token: universal/weight/medium
+    proposed_size_token: inherited current action ladder
+    size_assumption_status: deferred_no_new_size
+    text_case: not specified in source
+    tracking: not specified in source
+    leading_rule: not specified in source
+    size_rule: source shows family and weight only
+    punctuation_rule: not specified in source
+    sample_copy: GIBSON REGULAR
+    notes: User-approved exception. The live semantic action baseline will use Medium rather than the source-labeled Regular treatment.
+  - role_name: body
+    source_role: Body | Gibson Medium / Regular / Light
+    proposed_family_token: stevens_pass/family/primary
+    fallback_token: universal/family/web_safe
+    proposed_weight_token: universal/weight/light
+    proposed_size_token: inherited current body ladder
+    size_assumption_status: deferred_no_new_size
+    text_case: not specified in source
+    tracking: not specified in source
+    leading_rule: not specified in source
+    size_rule: source shows approved variants rather than a single default recipe
+    punctuation_rule: not specified in source
+    sample_copy: GIBSON MEDIUM / REGULAR / LIGHT
+    notes: User-approved exception. Light becomes the semantic body baseline, while Medium becomes the stronger body or subhead emphasis weight. Regular and italic variants remain documented raw options.
+
+validation:
+  extraction_notes:
+    - The source is explicit about the Gibson family and named weight recipes for headlines, subheads, and CTA.
+    - The body section is not explicit about one canonical semantic default because it presents multiple allowed weights and italics.
+  governance_notes:
+    - The proposed live mapping stays inside the current semantic typography schema by using one family with weight-driven hierarchy.
+    - User-approved exception: `weight/body/base` stages on Light, `weight/body/strong` stages on Medium, and `weight/action/base` stages on Medium even though the source labels subheads as Semi Bold and CTA as Regular.
+
+review_readiness:
+  intended_review_channels:
+    - web
+    - email
+    - ads
+  review_rules:
+    - subject: Stevens Pass Gibson family
+      channels:
+        - web
+        - email
+        - ads
+      rule: Keep headline, subhead, CTA, and body work on the Gibson family, with weight carrying the hierarchy.
+      source_basis: Stevens Pass typography guidance image.
+    - subject: Stevens Pass body baseline
+      channels:
+        - web
+        - email
+        - ads
+      rule: Use Light as the semantic body baseline, Medium as the stronger body or subhead weight, and Medium as the action baseline.
+      source_basis: User-approved exception in chat resolving the ambiguous body and CTA baseline.
+
+open_questions: []

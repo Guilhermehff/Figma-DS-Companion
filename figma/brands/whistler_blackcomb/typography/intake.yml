@@ -1,0 +1,260 @@
+date: 2026-03-18
+brand: whistler_blackcomb
+source_reference: User-provided image in chat showing the Whistler Blackcomb typography hierarchy guidance
+source_type: image
+figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Foundations?node-id=1-3
+status: active
+preview:
+  required_before_write: true
+  artifact: figma/brands/whistler_blackcomb/typography/preview.md
+  status: written_in_figma
+
+source_roles:
+  - source_role: headline
+    source_family_name: Proxima Nova
+    source_style_name: Black
+    source_weight_label: Black
+    source_usage_scope: primary_display_headline
+    text_case: uppercase
+    tracking: 15
+    leading: 90%
+    size_rule: source demonstrates hierarchy behavior but does not define governed token sizes
+    punctuation_rule: not specified in source
+    sample_copy: HEADLINES
+    notes: The source explicitly labels headlines as Proxima Nova Black.
+  - source_role: eyebrow
+    source_family_name: Proxima Nova
+    source_style_name: Black
+    source_weight_label: Black
+    source_usage_scope: supporting_label_or_eyebrow
+    text_case: uppercase
+    tracking: 15
+    leading: 100%
+    size_rule: source demonstrates hierarchy behavior but does not define governed token sizes
+    punctuation_rule: not specified in source
+    sample_copy: EYEBROW
+    notes: Eyebrow uses the same family and weight as the headline lane, with a smaller role recipe.
+  - source_role: subhead
+    source_family_name: Proxima Nova
+    source_style_name: Bold
+    source_weight_label: Bold
+    source_usage_scope: supporting_headline_copy
+    text_case: title_case_from_sample
+    tracking: 0
+    leading: 100%
+    size_rule: source demonstrates hierarchy behavior but does not define governed token sizes
+    punctuation_rule: sentence punctuation allowed
+    sample_copy: Subheads
+    notes: The source explicitly labels subheads as Proxima Nova Bold.
+  - source_role: body
+    source_family_name: Proxima Nova
+    source_style_name: Regular
+    source_weight_label: Regular
+    source_usage_scope: reading_copy
+    text_case: sentence_case_from_sample
+    tracking: 0
+    leading: 140%
+    size_rule: source demonstrates hierarchy behavior but does not define governed token sizes
+    punctuation_rule: sentence punctuation allowed
+    sample_copy: Body
+    notes: The source explicitly labels body as Proxima Nova Regular.
+  - source_role: action
+    source_family_name: Proxima Nova
+    source_style_name: Bold
+    source_weight_label: Bold
+    source_usage_scope: button_or_action_copy
+    text_case: not specified in source
+    tracking: 0
+    leading: not specified in source
+    size_rule: source demonstrates hierarchy behavior but does not define governed token sizes
+    punctuation_rule: not specified in source
+    sample_copy: Button
+    notes: The source explicitly labels button copy as Proxima Nova Bold.
+
+primitive_recommendations:
+  reuse_existing:
+    families: []
+    weights:
+      - source_weight_label: Black
+        existing_token: universal/weight/black
+        reason: Direct match for the headline and eyebrow lane.
+      - source_weight_label: Bold
+        existing_token: universal/weight/bold
+        reason: Direct match for the subhead and action lane.
+      - source_weight_label: Regular
+        existing_token: universal/weight/normal
+        reason: Direct match for body copy.
+    sizes: []
+  proposed_primitives:
+    families:
+      - token_name: whistler_blackcomb/family/primary
+        source_family_name: Proxima Nova
+        source_style_reference: Black, Bold, and Regular hierarchy
+        rationale: Whistler Blackcomb uses one type family across headline, eyebrow, subhead, body, and button roles, with weight and recipe behavior carrying the distinction.
+        fallback_token: universal/family/web_safe
+        fallback_note: The source does not define a fallback stack.
+    weights: []
+  hold_for_review: []
+
+semantic_recommendations:
+  family_aliases:
+    - semantic_token: family/heading
+      global_token: whistler_blackcomb/family/primary
+      safe_semantic_token: family/heading_safe
+      safe_global_token: universal/family/web_safe
+      intended_channels:
+        - web
+        - email
+        - ads
+      notes: Headline and eyebrow work stay on Proxima Nova.
+    - semantic_token: family/body
+      global_token: whistler_blackcomb/family/primary
+      safe_semantic_token: family/body_safe
+      safe_global_token: universal/family/web_safe
+      intended_channels:
+        - web
+        - email
+        - ads
+      notes: Body and subhead copy stay on the same family, with weight carrying the distinction.
+    - semantic_token: family/action
+      global_token: whistler_blackcomb/family/primary
+      safe_semantic_token: family/action_safe
+      safe_global_token: universal/family/web_safe
+      intended_channels:
+        - web
+        - email
+        - ads
+      notes: Button and action copy stay on Proxima Nova.
+  weight_aliases:
+    - semantic_token: weight/heading/base
+      global_token: universal/weight/black
+      intended_channels:
+        - web
+        - email
+        - ads
+      notes: Headline and eyebrow weight map directly to black.
+    - semantic_token: weight/body/base
+      global_token: universal/weight/normal
+      intended_channels:
+        - web
+        - email
+        - ads
+      notes: Body copy maps directly to regular.
+    - semantic_token: weight/body/strong
+      global_token: universal/weight/bold
+      intended_channels:
+        - web
+        - email
+        - ads
+      notes: Subheads map directly to bold without introducing a new semantic family lane.
+    - semantic_token: weight/action/base
+      global_token: universal/weight/bold
+      intended_channels:
+        - web
+        - email
+        - ads
+      notes: Action copy maps directly to bold.
+  size_aliases: []
+
+role_recipes:
+  - role_name: headline
+    source_role: Headline | Proxima Nova Black
+    proposed_family_token: whistler_blackcomb/family/primary
+    fallback_token: universal/family/web_safe
+    proposed_weight_token: universal/weight/black
+    proposed_size_token: inherited current heading ladder
+    size_assumption_status: deferred_no_new_size
+    text_case: uppercase
+    tracking: 15
+    leading_rule: 90%
+    size_rule: source demonstrates hierarchy behavior but does not define governed token sizes
+    punctuation_rule: not specified in source
+    sample_copy: HEADLINES
+    notes: Core display headline treatment.
+  - role_name: eyebrow
+    source_role: Eyebrow | Proxima Nova Black
+    proposed_family_token: whistler_blackcomb/family/primary
+    fallback_token: universal/family/web_safe
+    proposed_weight_token: universal/weight/black
+    proposed_size_token: inherited current heading ladder
+    size_assumption_status: deferred_no_new_size
+    text_case: uppercase
+    tracking: 15
+    leading_rule: 100%
+    size_rule: source demonstrates hierarchy behavior but does not define governed token sizes
+    punctuation_rule: not specified in source
+    sample_copy: EYEBROW
+    notes: Eyebrow remains a role recipe under the heading family and weight rather than becoming a new semantic lane.
+  - role_name: subhead
+    source_role: Subhead | Proxima Nova Bold
+    proposed_family_token: whistler_blackcomb/family/primary
+    fallback_token: universal/family/web_safe
+    proposed_weight_token: universal/weight/bold
+    proposed_size_token: inherited current heading ladder
+    size_assumption_status: deferred_no_new_size
+    text_case: title_case_from_sample
+    tracking: 0
+    leading_rule: 100%
+    size_rule: source demonstrates hierarchy behavior but does not define governed token sizes
+    punctuation_rule: sentence punctuation allowed
+    sample_copy: Subheads
+    notes: Subheads stage through the stronger body weight lane in the current semantic typography schema.
+  - role_name: body
+    source_role: Body | Proxima Nova Regular
+    proposed_family_token: whistler_blackcomb/family/primary
+    fallback_token: universal/family/web_safe
+    proposed_weight_token: universal/weight/normal
+    proposed_size_token: inherited current body ladder
+    size_assumption_status: deferred_no_new_size
+    text_case: sentence_case_from_sample
+    tracking: 0
+    leading_rule: 140%
+    size_rule: source demonstrates hierarchy behavior but does not define governed token sizes
+    punctuation_rule: sentence punctuation allowed
+    sample_copy: Body
+    notes: Reading-copy treatment.
+  - role_name: action
+    source_role: Button | Proxima Nova Bold
+    proposed_family_token: whistler_blackcomb/family/primary
+    fallback_token: universal/family/web_safe
+    proposed_weight_token: universal/weight/bold
+    proposed_size_token: inherited current action ladder
+    size_assumption_status: deferred_no_new_size
+    text_case: not specified in source
+    tracking: 0
+    leading_rule: not specified in source
+    size_rule: source demonstrates hierarchy behavior but does not define governed token sizes
+    punctuation_rule: not specified in source
+    sample_copy: Button
+    notes: Button copy maps cleanly to the existing action lane.
+
+validation:
+  extraction_notes:
+    - The source is explicit about family choice, weight labels, tracking, and leading behavior for headline, eyebrow, subhead, and body roles.
+    - The source uses one family throughout, so the first semantic pass stays on one raw family with weight carrying the hierarchy.
+  governance_notes:
+    - The proposed live mapping stays inside the current semantic typography schema by using one family across heading, body, and action.
+    - Eyebrow remains a documented role recipe rather than becoming a new semantic role because the current semantic schema has no separate eyebrow lane.
+
+review_readiness:
+  intended_review_channels:
+    - web
+    - email
+    - ads
+  review_rules:
+    - subject: Whistler Blackcomb headline lane
+      channels:
+        - web
+        - email
+        - ads
+      rule: Keep headlines and eyebrows on Proxima Nova Black with 15 tracking; headlines use 90 percent leading and eyebrows use 100 percent leading.
+      source_basis: Whistler Blackcomb hierarchy guidance image.
+    - subject: Whistler Blackcomb supporting copy
+      channels:
+        - web
+        - email
+        - ads
+      rule: Keep subheads on Proxima Nova Bold, body on Proxima Nova Regular, and button copy on Proxima Nova Bold without introducing a separate semantic eyebrow or subhead family.
+      source_basis: Whistler Blackcomb hierarchy guidance image.
+
+open_questions: []
