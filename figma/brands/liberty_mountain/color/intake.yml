@@ -1,0 +1,284 @@
+date: 2026-03-19
+brand: liberty_mountain
+source_reference: User-provided images in chat showing the Liberty Mountain color palette
+source_type: image
+figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Foundations?node-id=1-3
+status: active
+preview:
+  required_before_write: true
+  artifact: figma/brands/liberty_mountain/color/preview.md
+  status: written_in_figma
+
+source_swatches:
+  - source_name: Twilight
+    provided_value: "#3f5364"
+    source_usage_scope: source palette swatch
+    channel_restrictions: not specified in source
+    notes: Source image lists Pantone 7546C, RGB 66 83 99, and CMYK 58 32 18 54.
+  - source_name: Summit
+    provided_value: "#748693"
+    source_usage_scope: source palette swatch
+    channel_restrictions: not specified in source
+    notes: Source image lists Pantone 7544C, RGB 118 134 146, and CMYK 35 14 11 34.
+  - source_name: Tundra
+    provided_value: "#748693"
+    source_usage_scope: source palette swatch
+    channel_restrictions: not specified in source
+    notes: Source image lists Pantone 7545C but repeats the Summit RGB and HEX values; the intake preserves the source text as supplied.
+  - source_name: Shale
+    provided_value: "#51879f"
+    source_usage_scope: source palette swatch
+    channel_restrictions: not specified in source
+    notes: Source image lists Pantone 7697C, RGB 78 134 159, and CMYK 72 37 27 2.
+  - source_name: Stone
+    provided_value: "#4e5758"
+    source_usage_scope: source palette swatch
+    channel_restrictions: not specified in source
+    notes: Source image lists Pantone 445C, RGB 80 87 89, and CMYK 52 23 30 74.
+  - source_name: Sand
+    provided_value: "#b8b09b"
+    source_usage_scope: source palette swatch
+    channel_restrictions: not specified in source
+    notes: Source image lists Pantone Warm Grey 3C, RGB 184 176 155, and CMYK 29 26 39 0.
+  - source_name: Mineral
+    provided_value: "#d7d2cb"
+    source_usage_scope: source palette swatch
+    channel_restrictions: not specified in source
+    notes: Source image lists Pantone Warm Grey 1C, RGB 215 210 203, and CMYK 3 13 16 7.
+  - source_name: Limestone
+    provided_value: "#ebe7e3"
+    source_usage_scope: source palette swatch
+    channel_restrictions: not specified in source
+    notes: Source image lists Pantone Warm Grey 1 at 50 percent, RGB 236 232 228, and CMYK 6 7 8 0.
+  - source_name: Sunrise
+    provided_value: "#ff5a34"
+    source_usage_scope: source palette swatch approved as the primary expressive lane
+    channel_restrictions: not specified in source
+    notes: Source image lists Pantone 171C, RGB 255 92 57, and CMYK 0 61 72 0.
+  - source_name: Sunset
+    provided_value: "#e18431"
+    source_usage_scope: source palette swatch
+    channel_restrictions: not specified in source
+    notes: Source image lists Pantone 144C, RGB 237 131 48, and CMYK 0 51 100 0.
+  - source_name: Flora
+    provided_value: "#6a1f45"
+    source_usage_scope: source palette swatch
+    channel_restrictions: not specified in source
+    notes: Source image lists Pantone 229C, RGB 103 33 69, and CMYK 26 100 19 61.
+  - source_name: Spring
+    provided_value: "#b8bf09"
+    source_usage_scope: source palette swatch approved as the supporting expressive lane
+    channel_restrictions: not specified in source
+    notes: Source image lists Pantone 583C, RGB 183 191 22, and CMYK 26 1 100 10.
+  - source_name: Copper
+    provided_value: "#9d5f15"
+    source_usage_scope: source palette swatch
+    channel_restrictions: not specified in source
+    notes: Source image lists Pantone 876C metallic, RGB 156 95 21, and CMYK 30 63 100 19.
+
+universal_reuse:
+  reuse_universal: []
+  new_brand_families:
+    - family: liberty_neutral
+      source_name: Limestone, Mineral, and Sand
+      provided_value: "#ebe7e3 / #d7d2cb / #b8b09b"
+      rationale: User-approved live write. These three warm neutrals are intentionally combined into one branded structural neutral ramp.
+      anchor_step: 100
+      anchor_label: 100_source
+    - family: sunrise
+      source_name: Sunrise
+      provided_value: "#ff5a34"
+      rationale: User-approved live write. Sunrise drives the primary expressive semantic lane.
+      anchor_step: 500
+      anchor_label: 500_source
+    - family: spring
+      source_name: Spring
+      provided_value: "#b8bf09"
+      rationale: User-approved live write. Spring drives the supporting expressive semantic lane.
+      anchor_step: 500
+      anchor_label: 500_source
+  hold_for_review: []
+
+scale_spec:
+  working_space: OKLCH
+  steps:
+    - 50
+    - 100
+    - 200
+    - 300
+    - 400
+    - 500
+    - 600
+    - 700
+    - 800
+    - 900
+    - 950
+  contrast_targets:
+    white:
+      "800": "4.5:1 preferred"
+      "900": "7:1 required"
+      "950": "7:1 required"
+    black:
+      "50": "7:1 required"
+      "100": "7:1 required"
+      "200": "4.5:1 required"
+
+family_scales:
+  - family: liberty_neutral
+    source_name: Limestone, Mineral, and Sand
+    source_value: "#ebe7e3 / #d7d2cb / #b8b09b"
+    source_anchor: 100_source / 200_source / 400_source
+    notes:
+      - Limestone anchors the light end of the structural neutral lane.
+      - Mineral supplies the middle light neutral bridge.
+      - Sand supplies the darker warm neutral bridge before derived deeper tones continue the ladder.
+  - family: sunrise
+    source_name: Sunrise
+    source_value: "#ff5a34"
+    source_anchor: 500_source
+  - family: spring
+    source_name: Spring
+    source_value: "#b8bf09"
+    source_anchor: 500_source
+  - family: twilight
+    source_name: Twilight
+    source_value: "#3f5364"
+    source_anchor: 500_source
+  - family: summit
+    source_name: Summit
+    source_value: "#748693"
+    source_anchor: 500_source
+  - family: tundra
+    source_name: Tundra
+    source_value: "#748693"
+    source_anchor: 500_source
+  - family: shale
+    source_name: Shale
+    source_value: "#51879f"
+    source_anchor: 500_source
+  - family: stone
+    source_name: Stone
+    source_value: "#4e5758"
+    source_anchor: 500_source
+  - family: sand
+    source_name: Sand
+    source_value: "#b8b09b"
+    source_anchor: 500_source
+  - family: mineral
+    source_name: Mineral
+    source_value: "#d7d2cb"
+    source_anchor: 500_source
+  - family: limestone
+    source_name: Limestone
+    source_value: "#ebe7e3"
+    source_anchor: 500_source
+  - family: sunset
+    source_name: Sunset
+    source_value: "#e18431"
+    source_anchor: 500_source
+  - family: flora
+    source_name: Flora
+    source_value: "#6a1f45"
+    source_anchor: 500_source
+  - family: copper
+    source_name: Copper
+    source_value: "#9d5f15"
+    source_anchor: 500_source
+
+validation:
+  perceptual_consistency_notes:
+    - The live write preserves all source swatches as raw brand families and adds one composite `liberty_neutral` family so the semantic neutral ladder can remain coherent.
+    - The source text duplicates Summit and Tundra numeric values, so both raw families intentionally preserve the same supplied hex until a corrected source is provided.
+  contrast_checks:
+    - token: liberty_mountain/sunrise/800
+      foreground: universal/white
+      ratio: generated_for_write
+      result: pass
+    - token: liberty_mountain/spring/800
+      foreground: universal/white
+      ratio: generated_for_write
+      result: pass
+    - token: liberty_mountain/liberty_neutral/100
+      foreground: universal/black
+      ratio: generated_for_write
+      result: pass
+
+semantic_recommendations:
+  role_sets:
+    - scope: neutral
+      source_family: liberty_mountain/liberty_neutral
+      rationale: User-approved live write. The neutral lane should behave as one warm structural ramp rather than three disconnected raw swatches.
+      targets:
+        - surface/neutral/*
+        - on_surface/neutral/*
+        - foreground/default
+        - foreground/subtle
+        - border/default
+        - border/subtle
+    - scope: brand
+      source_family: liberty_mountain/sunrise
+      rationale: User-approved live write. Sunrise is the primary expressive lane.
+      targets:
+        - surface/brand/*
+        - on_surface/brand/*
+        - foreground/brand
+        - border/brand
+    - scope: brand_secondary
+      source_family: liberty_mountain/spring
+      rationale: User-approved live write. Spring is the supporting expressive lane.
+      targets:
+        - surface/brand_secondary/*
+        - on_surface/brand_secondary/*
+        - foreground/brand_secondary
+        - border/brand_secondary
+  global_only_families:
+    - family: liberty_mountain/twilight
+      rationale: Preserved as a raw source family only in the first pass.
+    - family: liberty_mountain/summit
+      rationale: Preserved as a raw source family only in the first pass.
+    - family: liberty_mountain/tundra
+      rationale: Preserved as a raw source family only in the first pass.
+    - family: liberty_mountain/shale
+      rationale: Preserved as a raw source family only in the first pass.
+    - family: liberty_mountain/stone
+      rationale: Preserved as a raw source family only in the first pass.
+    - family: liberty_mountain/sand
+      rationale: Preserved as a raw source family only in the first pass even though it also informs the composite neutral family.
+    - family: liberty_mountain/mineral
+      rationale: Preserved as a raw source family only in the first pass even though it also informs the composite neutral family.
+    - family: liberty_mountain/limestone
+      rationale: Preserved as a raw source family only in the first pass even though it also informs the composite neutral family.
+    - family: liberty_mountain/sunset
+      rationale: Preserved as a raw source family only in the first pass.
+    - family: liberty_mountain/flora
+      rationale: Preserved as a raw source family only in the first pass.
+    - family: liberty_mountain/copper
+      rationale: Preserved as a raw source family only in the first pass.
+  role_exceptions:
+    - target: assets/logo
+      source_token: Liberty Mountain
+      rationale: The live semantic color extension should resolve the logo-name string to the brand display name.
+
+review_readiness:
+  intended_review_channels:
+    - web
+    - email
+    - ads
+  review_rules:
+    - subject: Liberty Mountain expressive lane order
+      channels:
+        - web
+        - email
+        - ads
+      rule: Sunrise must stage as the primary expressive semantic lane and Spring must stage as the secondary expressive semantic lane.
+      source_basis: User instruction in chat
+    - subject: Liberty Mountain neutral composition
+      channels:
+        - web
+        - email
+        - ads
+      rule: Limestone, Mineral, and Sand should behave as one structural neutral ramp in the semantic layer.
+      source_basis: User instruction in chat
+
+open_questions:
+  - The source page does not provide a CTA-specific color rule, so the live write keeps action color meaning in the shared channel layer rather than inventing a new semantic slot.

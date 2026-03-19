@@ -78,7 +78,7 @@ semantic_overrides:
       - border/critical
     notes:
       - Exact black and white remain inherited through the shared neutral role recipes because the supplied palette matches `universal/black` and `universal/white`.
-      - `rocket_fuel` drives the primary expressive semantic lane, while `snow_gun` drives the secondary expressive lane.
+      - "`rocket_fuel` drives the primary expressive semantic lane, while `snow_gun` drives the secondary expressive lane."
       - "`assets/logo` is overridden to the string `Crotched` in the semantic color extension even though the source logo guide also shows `Crotched Mountain` and `CrotchedMTN` lockups."
   typography:
     status: active

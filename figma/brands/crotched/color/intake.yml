@@ -161,8 +161,8 @@ family_scales:
 validation:
   perceptual_consistency_notes:
     - Exact black and white remain shared through the universal neutral primitives, so Crotched only adds the two branded expressive families supplied by the source.
-    - `rocket_fuel` stays bright at the source step and darkens quickly enough to support accessible branded surfaces.
-    - `snow_gun` remains a deep brown-charcoal family distinct from exact black while preserving the supplied source swatch as the stronger secondary step.
+    - "`rocket_fuel` stays bright at the source step and darkens quickly enough to support accessible branded surfaces."
+    - "`snow_gun` remains a deep brown-charcoal family distinct from exact black while preserving the supplied source swatch as the stronger secondary step."
   contrast_checks:
     - token: crotched/rocket_fuel/700
       foreground: white

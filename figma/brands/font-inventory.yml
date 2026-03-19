@@ -1,5 +1,5 @@
 version: 1
-updated: '2026-03-18'
+updated: '2026-03-19'
 purpose: generated_brand_font_inventory
 generated_from:
   registry: figma/brands/registry.yml
@@ -221,17 +221,19 @@ brands:
     token_names:
     - crotched/family/primary
     source_style_references:
-    - mirror of universal/family/primary because no brand-specific typography was supplied
-- brand_id: hidden_valley
-  display_name: Hidden Valley
+    - mirror of universal/family/primary because no brand-specific font family was
+      supplied
+- brand_id: hidden_valley_mo
+  display_name: Hidden Valley MO
   status: active
-  typography_intake_artifact: figma/brands/hidden_valley/typography/intake.yml
+  typography_intake_artifact: figma/brands/hidden_valley_mo/typography/intake.yml
   fonts:
   - family_name: Inter
     token_names:
-    - hidden_valley/family/primary
+    - hidden_valley_mo/family/primary
     source_style_references:
-    - mirror of universal/family/primary because no brand-specific typography was supplied
+    - mirror of universal/family/primary because no brand-specific font family was
+      supplied
 - brand_id: wildcat_mountain
   display_name: Wildcat Mountain
   status: active
@@ -241,7 +243,7 @@ brands:
     token_names:
     - wildcat_mountain/family/primary
     source_style_references:
-    - mirror of universal/family/primary because no brand-specific typography was supplied
+    - mirror of universal/family/primary
 - brand_id: whitetail_resort
   display_name: Whitetail Resort
   status: active
@@ -251,7 +253,7 @@ brands:
     token_names:
     - whitetail_resort/family/primary
     source_style_references:
-    - mirror of universal/family/primary because no brand-specific typography was supplied
+    - mirror of universal/family/primary
 - brand_id: snow_creek
   display_name: Snow Creek
   status: active
@@ -261,7 +263,7 @@ brands:
     token_names:
     - snow_creek/family/primary
     source_style_references:
-    - mirror of universal/family/primary because no brand-specific typography was supplied
+    - mirror of universal/family/primary
 - brand_id: roundtop_mountain
   display_name: Roundtop Mountain
   status: active
@@ -271,7 +273,7 @@ brands:
     token_names:
     - roundtop_mountain/family/primary
     source_style_references:
-    - mirror of universal/family/primary because no brand-specific typography was supplied
+    - mirror of universal/family/primary
 - brand_id: paoli_peaks
   display_name: Paoli Peaks
   status: active
@@ -281,7 +283,7 @@ brands:
     token_names:
     - paoli_peaks/family/primary
     source_style_references:
-    - mirror of universal/family/primary because no brand-specific typography was supplied
+    - mirror of universal/family/primary
 - brand_id: mad_river_mountain
   display_name: Mad River Mountain
   status: active
@@ -291,7 +293,7 @@ brands:
     token_names:
     - mad_river_mountain/family/primary
     source_style_references:
-    - mirror of universal/family/primary because no brand-specific typography was supplied
+    - mirror of universal/family/primary
 - brand_id: boston_mills_brandywine
   display_name: Boston Mills / Brandywine
   status: active
@@ -301,4 +303,71 @@ brands:
     token_names:
     - boston_mills_brandywine/family/primary
     source_style_references:
-    - mirror of universal/family/primary because no brand-specific typography was supplied
+    - mirror of universal/family/primary
+- brand_id: seven_springs
+  display_name: Seven Springs
+  status: active
+  typography_intake_artifact: figma/brands/seven_springs/typography/intake.yml
+  fonts:
+  - family_name: Hoss Sharp
+    token_names:
+    - seven_springs/family/primary
+    source_style_references:
+    - Black headline, Bold subhead, Medium body, and Heavy CTA system
+- brand_id: stowe
+  display_name: Stowe
+  status: active
+  typography_intake_artifact: figma/brands/stowe/typography/intake.yml
+  fonts:
+  - family_name: Athena
+    token_names:
+    - stowe/family/display
+    source_style_references:
+    - Athena Regular headline system
+  - family_name: Raleway
+    token_names:
+    - stowe/family/primary
+    source_style_references:
+    - Raleway Bold, Regular, and Light across subhead, body, and contrasting body
+      roles
+- brand_id: mount_sunapee
+  display_name: Mount Sunapee
+  status: active
+  typography_intake_artifact: figma/brands/mount_sunapee/typography/intake.yml
+  fonts:
+  - family_name: Graphik
+    token_names:
+    - mount_sunapee/family/primary
+    source_style_references:
+    - Bold, Regular, and Light across H1, H2, and body copy
+  - family_name: Neutraface Text Bold Italic
+    token_names:
+    - mount_sunapee/family/utility
+    source_style_references:
+    - Bold Italic subheader system
+- brand_id: hunter
+  display_name: Hunter
+  status: active
+  typography_intake_artifact: figma/brands/hunter/typography/intake.yml
+  fonts:
+  - family_name: Galano Grotesque
+    token_names:
+    - hunter/family/primary
+    source_style_references:
+    - Bold, Semibold, Regular, and Light across headline, subheadline, body, and contrasting
+      body roles
+- brand_id: liberty_mountain
+  display_name: Liberty Mountain
+  status: active
+  typography_intake_artifact: figma/brands/liberty_mountain/typography/intake.yml
+  fonts:
+  - family_name: Brown
+    token_names:
+    - liberty_mountain/family/primary
+    source_style_references:
+    - Brown Regular / Brown Light
+  - family_name: Sentinel Book
+    token_names:
+    - liberty_mountain/family/alternate
+    source_style_references:
+    - Sentinel Book

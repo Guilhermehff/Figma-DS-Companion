@@ -1,7 +1,7 @@
 version: 1
-updated: 2026-03-18
-brand_id: hidden_valley
-display_name: Hidden Valley
+updated: 2026-03-19
+brand_id: hidden_valley_mo
+display_name: Hidden Valley MO
 status: active
 owners:
   - design_system_governance
@@ -17,44 +17,44 @@ figma:
     dimensions_id: VariableCollectionId:23:4
   semantic_extensions:
     color:
-      collection_name: Hidden Valley
+      collection_name: Hidden Valley MO
       collection_id: VariableCollectionId:203:381
       parent_collection: "Semantic: Color"
       parent_collection_id: VariableCollectionId:41:135
     typography:
-      collection_name: Hidden Valley
+      collection_name: Hidden Valley MO
       collection_id: VariableCollectionId:203:382
       parent_collection: "Semantic: Typography"
       parent_collection_id: VariableCollectionId:38:114
 artifacts:
   color:
-    intake_artifact: figma/brands/hidden_valley/color/intake.yml
-    preview_artifact: figma/brands/hidden_valley/color/preview.md
+    intake_artifact: figma/brands/hidden_valley_mo/color/intake.yml
+    preview_artifact: figma/brands/hidden_valley_mo/color/preview.md
     decision_artifacts: []
   typography:
-    intake_artifact: figma/brands/hidden_valley/typography/intake.yml
-    preview_artifact: figma/brands/hidden_valley/typography/preview.md
+    intake_artifact: figma/brands/hidden_valley_mo/typography/intake.yml
+    preview_artifact: figma/brands/hidden_valley_mo/typography/preview.md
     decision_artifacts: []
 semantic_overrides:
   color:
     status: active
     override_scopes:
       - scope: brand
-        source_family: hidden_valley/hv_blue
+        source_family: hidden_valley_mo/hv_blue
         targets:
           - surface/brand/*
           - on_surface/brand/*
           - foreground/brand
           - border/brand
       - scope: brand_secondary
-        source_family: hidden_valley/tagline_grey
+        source_family: hidden_valley_mo/tagline_grey
         targets:
           - surface/brand_secondary/*
           - on_surface/brand_secondary/*
           - foreground/brand_secondary
           - border/brand_secondary
       - scope: asset_logo
-        source_value: Hidden Valley
+        source_value: Hidden Valley MO
         targets:
           - assets/logo
     inherited_from_base:
@@ -78,17 +78,17 @@ semantic_overrides:
       - border/critical
     notes:
       - Exact black and white remain inherited through the shared neutral role recipes because the supplied logo variants match `universal/black` and `universal/white`.
-      - `hv_blue` drives the primary expressive semantic lane, while `tagline_grey` drives the secondary expressive lane.
-      - "`assets/logo` is overridden to the string `Hidden Valley` in the semantic color extension."
+      - "`hv_blue` drives the primary expressive semantic lane, while `tagline_grey` drives the secondary expressive lane."
+      - "`assets/logo` is overridden to the string `Hidden Valley MO` in the semantic color extension."
   typography:
     status: active
     override_scopes:
       - semantic_token: family/heading
-        alias_of: hidden_valley/family/primary
+        alias_of: hidden_valley_mo/family/primary
       - semantic_token: family/body
-        alias_of: hidden_valley/family/primary
+        alias_of: hidden_valley_mo/family/primary
       - semantic_token: family/action
-        alias_of: hidden_valley/family/primary
+        alias_of: hidden_valley_mo/family/primary
     inherited_from_base:
       - family/heading_safe
       - family/body_safe
@@ -96,8 +96,8 @@ semantic_overrides:
       - weight/*
       - size/*
     notes:
-      - Hidden Valley adds a governed raw family token, `hidden_valley/family/primary`, with the same string value as `universal/family/primary`.
+      - Hidden Valley MO adds a governed raw family token, `hidden_valley_mo/family/primary`, with the same string value as `universal/family/primary`.
       - The source does not define a brand-specific typography system, and the user explicitly instructed the brand to use the universal baseline.
       - Weight, safe-family, and size semantics remain inherited from the live base collection because the requested values are unchanged from universal.
 notes:
-  - Hidden Valley is live in the Foundations file with two raw color families, one mirrored raw typography family primitive, a semantic color logo-name override, and Hidden Valley semantic color and typography extensions.
+  - Hidden Valley MO is live in the Foundations file with two raw color families, one mirrored raw typography family primitive, a semantic color logo-name override, and Hidden Valley MO semantic color and typography extensions.

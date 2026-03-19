@@ -77,8 +77,8 @@ semantic_overrides:
       - border/warning
       - border/critical
     notes:
-      - `creek_blue` drives the primary expressive lane and `tagline_gold` drives the secondary expressive lane.
-      - `snow_white` remains a governed raw-only family in the first pass.
+      - "`creek_blue` drives the primary expressive lane and `tagline_gold` drives the secondary expressive lane."
+      - "`snow_white` remains a governed raw-only family in the first pass."
   typography:
     status: active
     override_scopes:

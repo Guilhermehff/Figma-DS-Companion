@@ -78,8 +78,8 @@ semantic_overrides:
       - border/critical
     notes:
       - Exact black and white remain inherited through the shared neutral role recipes.
-      - `wildcat_green` drives the primary expressive lane and `wildcat_teal` drives the secondary expressive lane.
-      - `wildcat_tan` and `wedding_blue` are governed raw-only families in the first pass.
+      - "`wildcat_green` drives the primary expressive lane and `wildcat_teal` drives the secondary expressive lane."
+      - "`wildcat_tan` and `wedding_blue` are governed raw-only families in the first pass."
   typography:
     status: active
     override_scopes:

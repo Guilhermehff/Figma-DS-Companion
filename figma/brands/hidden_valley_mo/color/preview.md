@@ -1,6 +1,6 @@
-# Hidden Valley Color Preview
+# Hidden Valley MO Color Preview
 
-Review state: approved preview artifact. Verify live write state in `figma/brands/hidden_valley/brand.yml` and Figma.
+Review state: approved preview artifact. Verify live write state in `figma/brands/hidden_valley_mo/brand.yml` and Figma.
 
 ## Original Source Swatches
 
@@ -69,24 +69,24 @@ Source anchor: `800_source`
 
 ## Review Notes
 
-- Hidden Valley supplies two branded expressive colors plus exact black and white logo variants that already exist in the shared universal set.
+- Hidden Valley MO supplies two branded expressive colors plus exact black and white logo variants that already exist in the shared universal set.
 - The live first pass keeps neutral roles inherited from base, uses `hv_blue/*` for the primary expressive lane, and uses `tagline_grey/*` for the secondary expressive lane.
 
 ## Live Semantic Mapping
 
 - `surface/neutral/*`, `on_surface/neutral/*`, `foreground/default`, `foreground/subtle`, `border/default`, `border/subtle` -> inherit shared base
-- `surface/brand/*`, `on_surface/brand/*`, `foreground/brand`, `border/brand` -> `hidden_valley/hv_blue/*`
-- `surface/brand_secondary/*`, `on_surface/brand_secondary/*`, `foreground/brand_secondary`, `border/brand_secondary` -> `hidden_valley/tagline_grey/*`
-- `assets/logo` -> `Hidden Valley`
+- `surface/brand/*`, `on_surface/brand/*`, `foreground/brand`, `border/brand` -> `hidden_valley_mo/hv_blue/*`
+- `surface/brand_secondary/*`, `on_surface/brand_secondary/*`, `foreground/brand_secondary`, `border/brand_secondary` -> `hidden_valley_mo/tagline_grey/*`
+- `assets/logo` -> `Hidden Valley MO`
 
 ## Review Readiness
 
-- Subject: `Hidden Valley expressive lane order`
+- Subject: `Hidden Valley MO expressive lane order`
   Channels: `web, email, ads`
   Rule: Use `hv_blue` as the primary expressive lane and `tagline_grey` as the secondary expressive lane.
   Source basis: Source image names the supplied branded colors and distinguishes them from exact black and white logo variants.
 
-- Subject: `Hidden Valley neutral reuse`
+- Subject: `Hidden Valley MO neutral reuse`
   Channels: `web, email, ads`
   Rule: Reuse `universal/black` and `universal/white` rather than duplicating exact neutral primitives.
   Source basis: Source image provides black and white logo variants that match the shared universal tokens.

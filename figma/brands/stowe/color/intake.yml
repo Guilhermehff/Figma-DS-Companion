@@ -1,0 +1,273 @@
+date: 2026-03-19
+brand: stowe
+source_reference: User-provided image in chat showing the Stowe primary color palette
+source_type: image
+figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Foundations?node-id=1-3
+status: active
+preview:
+  required_before_write: true
+  artifact: figma/brands/stowe/color/preview.md
+  status: written_in_figma
+
+source_swatches:
+  - source_name: Powder White
+    provided_value: "#ffffff"
+    source_usage_scope: primary brand palette
+    channel_restrictions: not specified in source
+    notes: Exact shared white. The source image also shows CMYK 0 0 0 0.
+  - source_name: Stowe Red
+    provided_value: "#c4272f"
+    source_usage_scope: primary brand palette and visual brand identifier
+    channel_restrictions: not specified in source
+    notes: Source image shows RGB 197 38 47 and CMYK 22 100 95 0.
+  - source_name: Ice Blue
+    provided_value: "#74838e"
+    source_usage_scope: primary brand palette
+    channel_restrictions: not specified in source
+    notes: Source image shows CMYK 57 41 36 5.
+  - source_name: Winter Blue
+    provided_value: "#384851"
+    source_usage_scope: primary brand palette
+    channel_restrictions: not specified in source
+    notes: The source image clearly shows the HEX value; the remaining CMYK line is not fully legible in the attachment.
+
+universal_reuse:
+  reuse_universal:
+    - source_name: Powder White
+      provided_value: "#ffffff"
+      existing_token: universal/white
+      reason: Exact shared white should remain on the governed universal primitive rather than being duplicated under the Stowe group.
+  new_brand_families:
+    - family: stowe_red
+      source_name: Stowe Red
+      provided_value: "#c4272f"
+      rationale: Stowe Red is the dominant expressive brand swatch and should drive the primary expressive semantic lane.
+      anchor_step: 600
+      anchor_label: 600_source
+    - family: stowe_blue
+      source_name: Ice Blue
+      provided_value: "#74838e"
+      rationale: Approved live write. Ice Blue and Winter Blue behave as one blue-gray structural system from cool surfaces through dark readable foregrounds, so they stage most cleanly as one governed family.
+      anchor_step: 500
+      anchor_label: 500_source
+      source_anchors:
+        - source_name: Winter Blue
+          provided_value: "#384851"
+          anchor_step: 800
+          anchor_label: 800_source
+  hold_for_review: []
+
+scale_spec:
+  working_space: OKLCH
+  steps:
+    - 50
+    - 100
+    - 200
+    - 300
+    - 400
+    - 500
+    - 600
+    - 700
+    - 800
+    - 900
+    - 950
+  contrast_targets:
+    white:
+      "800": "4.5:1 preferred"
+      "900": "7:1 required"
+      "950": "7:1 required"
+    black:
+      "50": "7:1 required"
+      "100": "7:1 required"
+      "200": "4.5:1 required"
+
+family_scales:
+  - family: stowe_red
+    source_name: Stowe Red
+    source_value: "#c4272f"
+    source_anchor: 600_source
+    tokens:
+      - name: stowe/stowe_red/50
+        value: "#fff6f5"
+        source_anchor: false
+      - name: stowe/stowe_red/100
+        value: "#ffe5e2"
+        source_anchor: false
+      - name: stowe/stowe_red/200
+        value: "#f9c2bd"
+        source_anchor: false
+      - name: stowe/stowe_red/300
+        value: "#efa099"
+        source_anchor: false
+      - name: stowe/stowe_red/400
+        value: "#e27c76"
+        source_anchor: false
+      - name: stowe/stowe_red/500
+        value: "#d45653"
+        source_anchor: false
+      - name: stowe/stowe_red/600
+        value: "#c4272f"
+        source_anchor: true
+      - name: stowe/stowe_red/700
+        value: "#961e23"
+        source_anchor: false
+      - name: stowe/stowe_red/800
+        value: "#6a1417"
+        source_anchor: false
+      - name: stowe/stowe_red/900
+        value: "#420b0c"
+        source_anchor: false
+      - name: stowe/stowe_red/950
+        value: "#2f0707"
+        source_anchor: false
+  - family: stowe_blue
+    source_name: Ice Blue and Winter Blue
+    source_value: "#74838e / #384851"
+    source_anchor: 500_source / 800_source
+    tokens:
+      - name: stowe/stowe_blue/50
+        value: "#f7fbfe"
+        source_anchor: false
+      - name: stowe/stowe_blue/100
+        value: "#e7edf1"
+        source_anchor: false
+      - name: stowe/stowe_blue/200
+        value: "#c9d1d7"
+        source_anchor: false
+      - name: stowe/stowe_blue/300
+        value: "#acb7be"
+        source_anchor: false
+      - name: stowe/stowe_blue/400
+        value: "#8f9ca6"
+        source_anchor: false
+      - name: stowe/stowe_blue/500
+        value: "#74838e"
+        source_anchor: true
+      - name: stowe/stowe_blue/600
+        value: "#5f6f79"
+        source_anchor: false
+      - name: stowe/stowe_blue/700
+        value: "#4b5b65"
+        source_anchor: false
+      - name: stowe/stowe_blue/800
+        value: "#384851"
+        source_anchor: true
+      - name: stowe/stowe_blue/900
+        value: "#1e272d"
+        source_anchor: false
+      - name: stowe/stowe_blue/950
+        value: "#12181c"
+        source_anchor: false
+
+validation:
+  perceptual_consistency_notes:
+    - Stowe Red lands cleanly at `600`, keeping the supplied red in the expected mid-dark expressive band while preserving usable lighter and darker extensions.
+    - Ice Blue and Winter Blue sit naturally at `500` and `800`, which supports a single blue-gray system spanning cool surfaces, readable default text, and darker emphasis.
+    - Exact white remains shared through `universal/white` instead of creating a duplicate Stowe white family.
+    - User-approved live write. The supporting expressive lane uses `stowe_blue`, but its semantic `default/strong/emphasis` steps stage on `600/700/800` because the raw `500` source anchor does not support the shared white on-surface contract.
+  contrast_checks:
+    - token: stowe/stowe_red/800
+      foreground: white
+      ratio: "12.17:1"
+      result: pass
+    - token: stowe/stowe_red/900
+      foreground: white
+      ratio: "16.34:1"
+      result: pass
+    - token: stowe/stowe_red/950
+      foreground: white
+      ratio: "18.19:1"
+      result: pass
+    - token: stowe/stowe_red/50
+      foreground: black
+      ratio: "19.75:1"
+      result: pass
+    - token: stowe/stowe_red/100
+      foreground: black
+      ratio: "17.56:1"
+      result: pass
+    - token: stowe/stowe_red/200
+      foreground: black
+      ratio: "13.48:1"
+      result: pass
+    - token: stowe/stowe_blue/800
+      foreground: white
+      ratio: "9.49:1"
+      result: pass
+    - token: stowe/stowe_blue/900
+      foreground: white
+      ratio: "15.18:1"
+      result: pass
+    - token: stowe/stowe_blue/950
+      foreground: white
+      ratio: "17.90:1"
+      result: pass
+    - token: stowe/stowe_blue/50
+      foreground: black
+      ratio: "20.18:1"
+      result: pass
+    - token: stowe/stowe_blue/100
+      foreground: black
+      ratio: "17.78:1"
+      result: pass
+    - token: stowe/stowe_blue/200
+      foreground: black
+      ratio: "13.58:1"
+      result: pass
+
+semantic_recommendations:
+  role_sets:
+    - scope: neutral
+      source_family: stowe/stowe_blue
+      rationale: Stowe's supplied blues are already doing structural work in the brand specimen pages, so the first governed recommendation is to let the blue-gray family drive neutral surfaces, borders, and readable default foregrounds.
+      targets:
+        - surface/neutral/*
+        - on_surface/neutral/*
+        - foreground/default
+        - foreground/subtle
+        - border/default
+        - border/subtle
+    - scope: brand
+      source_family: stowe/stowe_red
+      rationale: Stowe Red is the dominant expressive brand identifier and should drive the primary expressive semantic lane.
+      targets:
+        - surface/brand/*
+        - on_surface/brand/*
+        - foreground/brand
+        - border/brand
+    - scope: brand_secondary
+      source_family: stowe/stowe_blue
+      rationale: Approved live write. `stowe_blue` is the only supporting non-red hue in the supplied palette, so it stages as the supporting expressive lane, with the semantic default/strong/emphasis steps landing at `600/700/800` for readable white foreground use.
+      targets:
+        - surface/brand_secondary/*
+        - on_surface/brand_secondary/*
+        - foreground/brand_secondary
+        - border/brand_secondary
+  global_only_families: []
+  role_exceptions:
+    - target: surface/neutral/canvas
+      source_token: universal/white
+      rationale: Powder White is an exact shared white and the specimen pages use it as the dominant page canvas.
+
+review_readiness:
+  intended_review_channels:
+    - web
+    - email
+    - ads
+  review_rules:
+    - subject: Stowe blue-gray neutral system
+      channels:
+        - web
+        - email
+        - ads
+      rule: Keep Ice Blue and Winter Blue in one governed structural lane so cool surfaces and readable default text stay visually related.
+      source_basis: The supplied palette and typography specimen both use the darker blue-gray as the default readable text color and the lighter blue-gray as a supporting brand color.
+    - subject: Stowe expressive lane order
+      channels:
+        - web
+        - email
+        - ads
+      rule: Use Stowe Red as the primary expressive lane and treat the blue-gray family as the supporting system lane.
+      source_basis: The supplied palette page positions Stowe Red as the dominant visual brand identifier.
+
+open_questions: []

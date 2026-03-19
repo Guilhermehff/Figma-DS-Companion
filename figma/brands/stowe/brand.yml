@@ -1,0 +1,121 @@
+version: 1
+updated: 2026-03-19
+brand_id: stowe
+display_name: Stowe
+status: active
+owners:
+  - design_system_governance
+supported_channels:
+  - web
+  - email
+  - ads
+figma:
+  design_system_file_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Foundations?node-id=1-3
+  global_collections:
+    color_id: VariableCollectionId:23:2
+    typography_id: VariableCollectionId:23:3
+    dimensions_id: VariableCollectionId:23:4
+  semantic_extensions:
+    color:
+      collection_name: Stowe
+      collection_id: VariableCollectionId:211:943
+      parent_collection: "Semantic: Color"
+      parent_collection_id: VariableCollectionId:41:135
+    typography:
+      collection_name: Stowe
+      collection_id: VariableCollectionId:211:944
+      parent_collection: "Semantic: Typography"
+      parent_collection_id: VariableCollectionId:38:114
+artifacts:
+  color:
+    intake_artifact: figma/brands/stowe/color/intake.yml
+    preview_artifact: figma/brands/stowe/color/preview.md
+    decision_artifacts:
+      - figma/decisions/2026-03-19-stowe-foundations-written-to-figma.md
+  typography:
+    intake_artifact: figma/brands/stowe/typography/intake.yml
+    preview_artifact: figma/brands/stowe/typography/preview.md
+    decision_artifacts:
+      - figma/decisions/2026-03-19-stowe-foundations-written-to-figma.md
+semantic_overrides:
+  color:
+    status: active
+    override_scopes:
+      - scope: neutral
+        source_family: stowe/stowe_blue
+        targets:
+          - on_surface/neutral/*
+          - surface/neutral/subtle
+          - surface/neutral/default
+          - surface/neutral/strong
+          - surface/neutral/emphasis
+          - foreground/default
+          - foreground/subtle
+          - border/default
+          - border/subtle
+      - scope: brand
+        source_family: stowe/stowe_red
+        targets:
+          - surface/brand/*
+          - on_surface/brand/*
+          - foreground/brand
+          - border/brand
+      - scope: brand_secondary
+        source_family: stowe/stowe_blue
+        targets:
+          - surface/brand_secondary/*
+          - on_surface/brand_secondary/*
+          - foreground/brand_secondary
+          - border/brand_secondary
+      - scope: asset_logo
+        source_value: Stowe
+        targets:
+          - assets/logo
+    inherited_from_base:
+      - surface/positive/*
+      - on_surface/positive/*
+      - surface/warning/*
+      - on_surface/warning/*
+      - surface/critical/*
+      - on_surface/critical/*
+      - foreground/positive
+      - foreground/warning
+      - foreground/critical
+      - border/positive
+      - border/warning
+      - border/critical
+    notes:
+      - Stowe is live in the Foundations file with `stowe_red` as the primary expressive lane and `stowe_blue` as both the structural neutral lane and the approved supporting expressive lane.
+      - User-approved live write. `surface/neutral/canvas` remains on shared `universal/white`, while the rest of the neutral structural roles override to `stowe_blue`.
+      - User-approved live write. `brand_secondary` aliases `stowe_blue`, with the semantic default/strong/emphasis steps landing at `600/700/800` because the raw `500` source anchor does not support the shared white on-surface contract.
+      - "`assets/logo` resolves to the string `Stowe` in the semantic color extension."
+  typography:
+    status: active
+    override_scopes:
+      - semantic_token: family/heading
+        alias_of: stowe/family/display
+      - semantic_token: family/body
+        alias_of: stowe/family/primary
+      - semantic_token: family/action
+        alias_of: stowe/family/display
+      - semantic_token: weight/heading/base
+        alias_of: universal/weight/normal
+      - semantic_token: weight/body/base
+        alias_of: universal/weight/normal
+      - semantic_token: weight/body/strong
+        alias_of: universal/weight/bold
+      - semantic_token: weight/action/base
+        alias_of: universal/weight/normal
+    inherited_from_base:
+      - family/heading_safe
+      - family/body_safe
+      - family/action_safe
+      - weight/heading/strong
+      - size/*
+    notes:
+      - Stowe is live as a two-family system with `Athena` in the display lane and `Raleway` across the reading hierarchy.
+      - User-approved exception. The live write treats the headline prose word `bold` as a source copy mistake and follows the explicit `Headline: Athena Regular` label.
+      - User-approved mapping. `family/action` and `weight/action/base` now follow the same family and weight as heading.
+      - "`weight/body/strong = universal/weight/bold` stages the explicit Raleway Bold subhead treatment through the existing semantic typography ladder."
+notes:
+  - Stowe is live in the Foundations file with two raw color families, two raw typography family primitives, a semantic color logo-name override, and Stowe semantic color and typography extensions.

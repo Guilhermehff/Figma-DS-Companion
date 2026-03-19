@@ -78,7 +78,7 @@ semantic_overrides:
       - border/critical
     notes:
       - Exact black and white remain inherited through the shared neutral role recipes.
-      - `two_top_green` drives both expressive semantic lanes because the source provides one non-neutral hue.
+      - "`two_top_green` drives both expressive semantic lanes because the source provides one non-neutral hue."
   typography:
     status: active
     override_scopes:

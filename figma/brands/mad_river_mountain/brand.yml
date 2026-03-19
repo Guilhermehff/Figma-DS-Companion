@@ -77,7 +77,7 @@ semantic_overrides:
       - border/warning
       - border/critical
     notes:
-      - `river_blue` drives the primary expressive lane and `mountain_green` drives the supporting expressive lane.
+      - "`river_blue` drives the primary expressive lane and `mountain_green` drives the supporting expressive lane."
   typography:
     status: active
     override_scopes:

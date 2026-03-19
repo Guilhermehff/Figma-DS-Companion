@@ -1,0 +1,338 @@
+date: 2026-03-19
+brand: seven_springs
+source_reference: User-provided images in chat showing the Seven Springs resort color palette and the separate Seven Springs Terrain Park palette
+source_type: image
+figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Foundations?node-id=1-3
+status: active
+preview:
+  required_before_write: true
+  artifact: figma/brands/seven_springs/color/preview.md
+  status: written_in_figma
+
+source_swatches:
+  - source_name: Springs Green
+    provided_value: "#008d55"
+    source_usage_scope: primary resort brand palette
+    channel_restrictions: not specified in source
+    notes: Source image lists RGB 0 141 85 and CMYK 86 20 86 6.
+  - source_name: Mini Golf Green
+    provided_value: "#89ebad"
+    source_usage_scope: primary resort brand palette
+    channel_restrictions: not specified in source
+    notes: Source image labels HEX #89EBAD, but the displayed RGB line appears inconsistent with that hex. The live write uses the explicit HEX field by user approval in chat.
+  - source_name: Grandma's Axe
+    provided_value: "#141418"
+    source_usage_scope: primary resort brand palette
+    channel_restrictions: not specified in source
+    notes: Source image lists RGB 20 20 24 and CMYK 75 69 63 79.
+  - source_name: Mashed Potatoes
+    provided_value: "#f6fff7"
+    source_usage_scope: primary resort brand palette
+    channel_restrictions: not specified in source
+    notes: Source image lists RGB 246 255 247 and CMYK 2 0 3 0.
+  - source_name: Tupelo
+    provided_value: "#002e1c"
+    source_usage_scope: secondary resort brand color used when the primary colors do not work
+    channel_restrictions: not specified in source
+    notes: Source image lists RGB 0 46 28 and CMYK 86 51 81 69.
+  - source_name: Black Rails
+    provided_value: "#000000"
+    source_usage_scope: Seven Springs Terrain Park sub-brand palette
+    channel_restrictions: source says these are not the Seven Springs resort brand colors
+    notes: Terrain Park source image lists RGB 0 0 0 and CMYK 75 68 67 90.
+  - source_name: Wildin' Yellow
+    provided_value: "#fbce0a"
+    source_usage_scope: Seven Springs Terrain Park sub-brand palette
+    channel_restrictions: source says these are not the Seven Springs resort brand colors
+    notes: Terrain Park source image lists RGB 251 206 10 and CMYK 2 17 100 0.
+
+universal_reuse:
+  reuse_universal: []
+  new_brand_families:
+    - family: springs_green
+      source_name: Springs Green
+      provided_value: "#008d55"
+      rationale: Approved live write. Springs Green remains the primary expressive family, with Mini Golf Green retained as its lighter brand anchor.
+      anchor_step: 600
+      anchor_label: 600_source
+      source_anchors:
+        - source_name: Mini Golf Green
+          provided_value: "#89ebad"
+          anchor_step: 300
+          anchor_label: 300_source
+    - family: tupelo
+      source_name: Tupelo
+      provided_value: "#002e1c"
+      rationale: Approved live write. Tupelo remains its own dark green family as the separate secondary expressive lane.
+      anchor_step: 900
+      anchor_label: 900_source
+    - family: springs_neutral
+      source_name: Grandma's Axe
+      provided_value: "#141418"
+      rationale: Recommended first pass. Grandma's Axe and Mashed Potatoes behave as a branded neutral system for backgrounds, borders, and readable foregrounds, so they stage most cleanly as one governed neutral ladder.
+      anchor_step: 950
+      anchor_label: 950_source
+      source_anchors:
+        - source_name: Mashed Potatoes
+          provided_value: "#f6fff7"
+          anchor_step: 50
+          anchor_label: 50_source
+  hold_for_review:
+    - source_name: Black Rails
+      provided_value: "#000000"
+      reason: Separate Seven Springs Terrain Park sub-brand palette. Do not merge into the resort brand foundations unless the user explicitly asks for terrain park governance.
+    - source_name: Wildin' Yellow
+      provided_value: "#fbce0a"
+      reason: Separate Seven Springs Terrain Park sub-brand palette. Do not merge into the resort brand foundations unless the user explicitly asks for terrain park governance.
+
+scale_spec:
+  working_space: OKLCH
+  steps:
+    - 50
+    - 100
+    - 200
+    - 300
+    - 400
+    - 500
+    - 600
+    - 700
+    - 800
+    - 900
+    - 950
+  contrast_targets:
+    white:
+      "800": "4.5:1 preferred"
+      "900": "7:1 required"
+      "950": "7:1 required"
+    black:
+      "50": "7:1 required"
+      "100": "7:1 required"
+      "200": "4.5:1 required"
+
+family_scales:
+  - family: springs_green
+    source_name: Springs Green and Mini Golf Green
+    source_value: "#008d55 / #89ebad"
+    source_anchor: 300_source / 600_source
+    tokens:
+      - name: seven_springs/springs_green/50
+        value: "#edfff3"
+        source_anchor: false
+      - name: seven_springs/springs_green/100
+        value: "#dbfce5"
+        source_anchor: false
+      - name: seven_springs/springs_green/200
+        value: "#b4f4c9"
+        source_anchor: false
+      - name: seven_springs/springs_green/300
+        value: "#89ebad"
+        source_anchor: true
+      - name: seven_springs/springs_green/400
+        value: "#65cb8f"
+        source_anchor: false
+      - name: seven_springs/springs_green/500
+        value: "#3fab71"
+        source_anchor: false
+      - name: seven_springs/springs_green/600
+        value: "#008d55"
+        source_anchor: true
+      - name: seven_springs/springs_green/700
+        value: "#006b3e"
+        source_anchor: false
+      - name: seven_springs/springs_green/800
+        value: "#004a28"
+        source_anchor: false
+      - name: seven_springs/springs_green/900
+        value: "#002c13"
+        source_anchor: false
+      - name: seven_springs/springs_green/950
+        value: "#001e0a"
+        source_anchor: false
+  - family: tupelo
+    source_name: Tupelo
+    source_value: "#002e1c"
+    source_anchor: 900_source
+    tokens:
+      - name: seven_springs/tupelo/50
+        value: "#f6fcf8"
+        source_anchor: false
+      - name: seven_springs/tupelo/100
+        value: "#e6eeea"
+        source_anchor: false
+      - name: seven_springs/tupelo/200
+        value: "#c7d4cd"
+        source_anchor: false
+      - name: seven_springs/tupelo/300
+        value: "#a9bab1"
+        source_anchor: false
+      - name: seven_springs/tupelo/400
+        value: "#8ca195"
+        source_anchor: false
+      - name: seven_springs/tupelo/500
+        value: "#70887b"
+        source_anchor: false
+      - name: seven_springs/tupelo/600
+        value: "#547161"
+        source_anchor: false
+      - name: seven_springs/tupelo/700
+        value: "#395949"
+        source_anchor: false
+      - name: seven_springs/tupelo/800
+        value: "#1e4332"
+        source_anchor: false
+      - name: seven_springs/tupelo/900
+        value: "#002e1c"
+        source_anchor: true
+      - name: seven_springs/tupelo/950
+        value: "#021c10"
+        source_anchor: false
+  - family: springs_neutral
+    source_name: Grandma's Axe and Mashed Potatoes
+    source_value: "#141418 / #f6fff7"
+    source_anchor: 50_source / 950_source
+    tokens:
+      - name: seven_springs/springs_neutral/50
+        value: "#f6fff7"
+        source_anchor: true
+      - name: seven_springs/springs_neutral/100
+        value: "#e6f0ea"
+        source_anchor: false
+      - name: seven_springs/springs_neutral/200
+        value: "#c8d3cf"
+        source_anchor: false
+      - name: seven_springs/springs_neutral/300
+        value: "#acb7b5"
+        source_anchor: false
+      - name: seven_springs/springs_neutral/400
+        value: "#919b9b"
+        source_anchor: false
+      - name: seven_springs/springs_neutral/500
+        value: "#778082"
+        source_anchor: false
+      - name: seven_springs/springs_neutral/600
+        value: "#5f6569"
+        source_anchor: false
+      - name: seven_springs/springs_neutral/700
+        value: "#484c51"
+        source_anchor: false
+      - name: seven_springs/springs_neutral/800
+        value: "#323439"
+        source_anchor: false
+      - name: seven_springs/springs_neutral/900
+        value: "#1e1e23"
+        source_anchor: false
+      - name: seven_springs/springs_neutral/950
+        value: "#141418"
+        source_anchor: true
+
+validation:
+  perceptual_consistency_notes:
+    - Springs Green lands at `600` and Mini Golf Green at `300`, keeping the primary Seven Springs green ladder aligned to the supplied lighter and mid-dark brand greens.
+    - User-approved interpretation. Tupelo lands at `900` on its own dark-green ladder so the secondary expressive lane stays distinct from the primary Springs Green family.
+    - Mashed Potatoes and Grandma's Axe land cleanly at `50` and `950`, so they can support a branded neutral surface and foreground system without inventing extra neutral swatches.
+    - The Terrain Park palette is explicitly preserved in the intake but intentionally excluded from the resort-brand raw families because the source says not to treat those colors as Seven Springs brand colors.
+  contrast_checks:
+    - token: seven_springs/springs_green/700
+      foreground: white
+      ratio: "6.62:1"
+      result: pass
+    - token: seven_springs/springs_green/800
+      foreground: white
+      ratio: "10.45:1"
+      result: pass
+    - token: seven_springs/springs_green/900
+      foreground: white
+      ratio: "15.33:1"
+      result: pass
+    - token: seven_springs/tupelo/800
+      foreground: white
+      ratio: "11.03:1"
+      result: pass
+    - token: seven_springs/tupelo/900
+      foreground: white
+      ratio: "14.92:1"
+      result: pass
+    - token: seven_springs/tupelo/950
+      foreground: white
+      ratio: "17.85:1"
+      result: pass
+    - token: seven_springs/springs_neutral/50
+      foreground: black
+      ratio: "20.57:1"
+      result: pass
+    - token: seven_springs/springs_neutral/200
+      foreground: black
+      ratio: "13.67:1"
+      result: pass
+    - token: seven_springs/springs_neutral/800
+      foreground: white
+      ratio: "12.46:1"
+      result: pass
+    - token: seven_springs/springs_neutral/950
+      foreground: white
+      ratio: "18.37:1"
+      result: pass
+
+semantic_recommendations:
+  role_sets:
+    - scope: neutral
+      source_family: seven_springs/springs_neutral
+      rationale: Recommended first pass. Mashed Potatoes and Grandma's Axe are the strongest candidates for branded surfaces, borders, and readable neutral foregrounds.
+      targets:
+        - surface/neutral/*
+        - on_surface/neutral/*
+        - foreground/default
+        - foreground/subtle
+        - border/default
+        - border/subtle
+    - scope: brand
+      source_family: seven_springs/springs_green
+      rationale: Approved live write. The governed Seven Springs green ladder is the primary brand-capable expressive lane across web, email, and ads.
+      targets:
+        - surface/brand/*
+        - on_surface/brand/*
+        - foreground/brand
+        - border/brand
+    - scope: brand_secondary
+      source_family: seven_springs/tupelo
+      rationale: Approved live write. Tupelo is the separate dark green family for the `brand_secondary/*` lane.
+      targets:
+        - surface/brand_secondary/*
+        - on_surface/brand_secondary/*
+        - foreground/brand_secondary
+        - border/brand_secondary
+  global_only_families: []
+  role_exceptions:
+    - target: assets/logo
+      source_token: Seven Springs
+      rationale: "The live `Semantic: Color` schema includes `assets/logo`, and each brand extension should override it to the brand display name string."
+
+review_readiness:
+  intended_review_channels:
+    - web
+    - email
+    - ads
+  review_rules:
+    - subject: Seven Springs resort versus terrain park colors
+      channels:
+        - web
+        - email
+        - ads
+      rule: Keep the Terrain Park colors out of the Seven Springs resort-brand write path unless terrain park governance is explicitly requested.
+      source_basis: The source explicitly says the Terrain Park colors are not the Seven Springs resort brand colors and should be treated separately.
+    - subject: Seven Springs green family staging
+      channels:
+        - web
+        - email
+        - ads
+      rule: Use `springs_green/*` as the primary expressive lane and `tupelo/*` as the separate secondary expressive lane.
+      source_basis: User approval in chat overrode the earlier single-family recommendation for the dark green lane.
+    - subject: Seven Springs branded neutral system
+      channels:
+        - web
+        - email
+        - ads
+      rule: Use `springs_neutral/*` for branded neutral surfaces, borders, and readable foregrounds rather than defaulting back to universal white and black.
+      source_basis: Mashed Potatoes and Grandma's Axe are explicit primary resort brand colors, not incidental neutrals.
+
+open_questions: []

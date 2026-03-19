@@ -77,8 +77,8 @@ semantic_overrides:
       - border/warning
       - border/critical
     notes:
-      - `paoli_blue` drives the primary expressive lane and `peaks_valley` drives the supporting expressive lane.
-      - `peaks_peak` remains a governed raw-only family in the first pass.
+      - "`paoli_blue` drives the primary expressive lane and `peaks_valley` drives the supporting expressive lane."
+      - "`peaks_peak` remains a governed raw-only family in the first pass."
       - The documented gradient remains outside the current solid-color variable model.
   typography:
     status: active

@@ -77,8 +77,8 @@ semantic_overrides:
       - border/warning
       - border/critical
     notes:
-      - `green` drives the primary expressive lane and `blue` drives the secondary expressive lane.
-      - `yellow`, `orange`, `red`, and `cyan` remain governed raw-only families in the first pass.
+      - "`green` drives the primary expressive lane and `blue` drives the secondary expressive lane."
+      - "`yellow`, `orange`, `red`, and `cyan` remain governed raw-only families in the first pass."
   typography:
     status: active
     override_scopes:

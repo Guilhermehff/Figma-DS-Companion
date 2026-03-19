@@ -1,0 +1,240 @@
+date: 2026-03-19
+brand: mount_sunapee
+source_reference: User-provided images in chat showing the Mount Sunapee typography guidance and example application
+source_type: image
+figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Foundations?node-id=1-3
+status: active
+preview:
+  required_before_write: true
+  artifact: figma/brands/mount_sunapee/typography/preview.md
+  status: written_in_figma
+
+source_roles:
+  - source_role: headline
+    source_family_name: Graphik
+    source_style_name: Bold
+    source_weight_label: Bold
+    source_usage_scope: primary_headers_h1
+    text_case: sentence_case
+    tracking: 75
+    leading: not specified in source
+    size_rule: source names the role and tracking but does not define governed numeric sizes
+    punctuation_rule: not specified in source
+    sample_copy: We lift people up.
+    notes: The typography sheet explicitly labels Graphik Bold for Primary Headers (H1). The source does not specify the tracking unit, so the artifact preserves the numeric label as shown.
+  - source_role: secondary_header
+    source_family_name: Graphik
+    source_style_name: Regular
+    source_weight_label: Regular
+    source_usage_scope: secondary_headers_h2
+    text_case: sentence_case
+    tracking: 75
+    leading: not specified in source
+    size_rule: source names the role and tracking but does not define governed numeric sizes
+    punctuation_rule: not specified in source
+    sample_copy: We elevate spirits by creating fun, invigorating mountain experiences for everyone.
+    notes: The typography sheet explicitly labels Graphik Regular for Secondary Headers (H2).
+  - source_role: body
+    source_family_name: Graphik
+    source_style_name: Light
+    source_weight_label: Light
+    source_usage_scope: body_copy
+    text_case: sentence_case
+    tracking: 25
+    leading: not specified in source
+    size_rule: source names the role and tracking but does not define governed numeric sizes
+    punctuation_rule: sentence punctuation allowed
+    sample_copy: Memories and stories of which are the reason families continue to leave their homes, flock to the mountains, and enjoy the awe-inspiring outdoors to be uplifted again and again.
+    notes: The typography sheet explicitly labels Graphik Light for Body Copy.
+  - source_role: subheader
+    source_family_name: Neutraface Text
+    source_style_name: Bold Italic
+    source_weight_label: Bold Italic
+    source_usage_scope: subheaders_h3
+    text_case: sentence_case
+    tracking: 0
+    leading: not specified in source
+    size_rule: source names the role and tracking but does not define governed numeric sizes
+    punctuation_rule: not specified in source
+    sample_copy: Activities
+    notes: The typography sheet explicitly labels Neutraface Text Bold Italic for Subheaders (H3). The example page confirms this as a distinct utility lane rather than the default Graphik heading system.
+
+primitive_recommendations:
+  reuse_existing:
+    families: []
+    weights:
+      - source_weight_label: Bold
+        existing_token: universal/weight/bold
+        reason: Direct match for Graphik Bold in the H1 lane.
+      - source_weight_label: Regular
+        existing_token: universal/weight/normal
+        reason: Direct match for Graphik Regular in the H2 lane.
+      - source_weight_label: Light
+        existing_token: universal/weight/light
+        reason: Direct match for Graphik Light in the body lane.
+    sizes:
+      - source_size_reference: headline default
+        existing_token: inherited current heading ladder
+        assumption_status: deferred_no_new_size
+        assumption_note: The source names roles and tracking only, without governed numeric sizes.
+        reason: Live semantic size aliases can remain inherited in the first pass.
+      - source_size_reference: secondary header default
+        existing_token: inherited current heading and body ladders
+        assumption_status: deferred_no_new_size
+        assumption_note: The source names roles and tracking only, without governed numeric sizes.
+        reason: No new raw size values are justified yet.
+      - source_size_reference: body default
+        existing_token: inherited current body ladder
+        assumption_status: deferred_no_new_size
+        assumption_note: The source names roles and tracking only, without governed numeric sizes.
+        reason: Live semantic size aliases can remain inherited in the first pass.
+  proposed_primitives:
+    families:
+      - token_name: mount_sunapee/family/primary
+        source_family_name: Graphik
+        source_style_reference: Bold, Regular, and Light across H1, H2, and body copy
+        rationale: Graphik is the repeated Mount Sunapee typography system across both display and reading roles, with weight carrying the hierarchy.
+        fallback_token: universal/family/web_safe
+        fallback_note: The source does not define a fallback stack.
+      - token_name: mount_sunapee/family/utility
+        source_family_name: Neutraface Text Bold Italic
+        source_style_reference: Bold Italic subheader system
+        rationale: Approved live write. Preserve the distinct H3 subheader face as a raw utility family until the semantic typography schema gains a dedicated subhead lane.
+        fallback_token: universal/family/web_safe
+        fallback_note: The source does not define a fallback stack.
+    weights: []
+  hold_for_review: []
+
+semantic_recommendations:
+  family_aliases:
+    - semantic_token: family/heading
+      global_token: mount_sunapee/family/primary
+      safe_semantic_token: family/heading_safe
+      safe_global_token: universal/family/web_safe
+      intended_channels:
+        - web
+        - email
+        - ads
+      notes: Graphik drives the H1 and H2 heading hierarchy.
+    - semantic_token: family/body
+      global_token: mount_sunapee/family/primary
+      safe_semantic_token: family/body_safe
+      safe_global_token: universal/family/web_safe
+      intended_channels:
+        - web
+        - email
+        - ads
+      notes: Graphik also drives the reading-copy lane.
+  weight_aliases:
+    - semantic_token: weight/heading/base
+      global_token: universal/weight/bold
+      intended_channels:
+        - web
+        - email
+        - ads
+      notes: H1 explicitly uses Graphik Bold.
+    - semantic_token: weight/body/base
+      global_token: universal/weight/light
+      intended_channels:
+        - web
+        - email
+        - ads
+      notes: Body copy explicitly uses Graphik Light.
+    - semantic_token: weight/body/strong
+      global_token: universal/weight/normal
+      intended_channels:
+        - web
+        - email
+        - ads
+      notes: Approved live write. Graphik Regular stages the H2 secondary-header recipe through the stronger body emphasis slot because the current semantic typography schema has no dedicated secondary-heading weight lane.
+  size_aliases: []
+
+role_recipes:
+  - role_name: headline
+    source_role: Primary Headers (H1) | Graphik Bold
+    proposed_family_token: mount_sunapee/family/primary
+    fallback_token: universal/family/web_safe
+    proposed_weight_token: universal/weight/bold
+    proposed_size_token: inherited current heading ladder
+    size_assumption_status: deferred_no_new_size
+    text_case: sentence_case
+    tracking: 75
+    leading_rule: not specified in source
+    size_rule: no governed source size token
+    punctuation_rule: not specified in source
+    sample_copy: We lift people up.
+    notes: H1 remains on Graphik Bold.
+  - role_name: secondary_header
+    source_role: Secondary Headers (H2) | Graphik Regular
+    proposed_family_token: mount_sunapee/family/primary
+    fallback_token: universal/family/web_safe
+    proposed_weight_token: universal/weight/normal
+    proposed_size_token: inherited current heading and body ladders
+    size_assumption_status: deferred_no_new_size
+    text_case: sentence_case
+    tracking: 75
+    leading_rule: not specified in source
+    size_rule: no governed source size token
+    punctuation_rule: not specified in source
+    sample_copy: We elevate spirits by creating fun, invigorating mountain experiences for everyone.
+    notes: Approved live write. H2 stages through the Graphik family with the shared normal weight.
+  - role_name: body
+    source_role: Body Copy | Graphik Light
+    proposed_family_token: mount_sunapee/family/primary
+    fallback_token: universal/family/web_safe
+    proposed_weight_token: universal/weight/light
+    proposed_size_token: inherited current body ladder
+    size_assumption_status: deferred_no_new_size
+    text_case: sentence_case
+    tracking: 25
+    leading_rule: not specified in source
+    size_rule: no governed source size token
+    punctuation_rule: sentence punctuation allowed
+    sample_copy: Memories and stories of which are the reason families continue to leave their homes, flock to the mountains, and enjoy the awe-inspiring outdoors to be uplifted again and again.
+    notes: Body copy remains on Graphik Light.
+  - role_name: subheader
+    source_role: Subheaders (H3) | Neutraface Text Bold Italic
+    proposed_family_token: mount_sunapee/family/utility
+    fallback_token: universal/family/web_safe
+    proposed_weight_token: universal/weight/bold
+    proposed_size_token: inherited current heading ladder
+    size_assumption_status: deferred_no_new_size
+    text_case: sentence_case
+    tracking: 0
+    leading_rule: not specified in source
+    size_rule: no governed source size token
+    punctuation_rule: not specified in source
+    sample_copy: Activities
+    notes: Raw-only utility recipe. It remains outside the live semantic extension until a subhead family lane exists.
+
+validation:
+  extraction_notes:
+    - The source is explicit about family choice, role names, and tracking labels, but not about governed numeric sizes or leading.
+    - Mount Sunapee uses one repeated Graphik family across H1, H2, and body, with a separate Neutraface Text utility face only for H3 subheaders.
+  governance_notes:
+    - Graphik stages cleanly as the shared heading and body family, with weight carrying the hierarchy between H1, H2, and body.
+    - User-approved live write. The distinct Neutraface Text Bold Italic H3 treatment is preserved as a raw utility family rather than forced into a semantic slot that would misrepresent the primary Graphik system.
+    - The source does not define a CTA or action recipe, so the action family and weight remain inherited in the live semantic extension.
+
+review_readiness:
+  intended_review_channels:
+    - web
+    - email
+    - ads
+  review_rules:
+    - subject: Mount Sunapee Graphik system
+      channels:
+        - web
+        - email
+        - ads
+      rule: Keep H1 on Graphik Bold, H2 on Graphik Regular, and body copy on Graphik Light.
+      source_basis: Mount Sunapee typography image.
+    - subject: Mount Sunapee H3 lane
+      channels:
+        - web
+        - email
+        - ads
+      rule: Preserve Neutraface Text Bold Italic as a distinct raw subheader recipe rather than forcing it into the primary Graphik semantic family mapping.
+      source_basis: Mount Sunapee typography image and application example.
+
+open_questions: []
