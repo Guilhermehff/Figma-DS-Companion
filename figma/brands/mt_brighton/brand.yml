@@ -1,0 +1,112 @@
+version: 1
+updated: 2026-03-19
+brand_id: mt_brighton
+display_name: Mt. Brighton
+status: active
+owners:
+  - design_system_governance
+supported_channels:
+  - web
+  - email
+  - ads
+figma:
+  design_system_file_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Foundations?node-id=1-3
+  global_collections:
+    color_id: VariableCollectionId:23:2
+    typography_id: VariableCollectionId:23:3
+    dimensions_id: VariableCollectionId:23:4
+  semantic_extensions:
+    color:
+      collection_name: Mt. Brighton
+      collection_id: VariableCollectionId:221:1701
+      parent_collection: "Semantic: Color"
+      parent_collection_id: VariableCollectionId:41:135
+    typography:
+      collection_name: Mt. Brighton
+      collection_id: VariableCollectionId:221:1702
+      parent_collection: "Semantic: Typography"
+      parent_collection_id: VariableCollectionId:38:114
+artifacts:
+  color:
+    intake_artifact: figma/brands/mt_brighton/color/intake.yml
+    preview_artifact: figma/brands/mt_brighton/color/preview.md
+    decision_artifacts: []
+  typography:
+    intake_artifact: figma/brands/mt_brighton/typography/intake.yml
+    preview_artifact: figma/brands/mt_brighton/typography/preview.md
+    decision_artifacts: []
+semantic_overrides:
+  color:
+    status: active
+    override_scopes:
+      - scope: neutral
+        source_family: mt_brighton/brighton_grey
+        targets:
+          - surface/neutral/*
+          - on_surface/neutral/*
+          - foreground/default
+          - foreground/subtle
+          - border/default
+          - border/subtle
+      - scope: brand
+        source_family: mt_brighton/brighton_purple
+        targets:
+          - surface/brand/*
+          - on_surface/brand/*
+          - foreground/brand
+          - border/brand
+      - scope: brand_secondary
+        source_family: mt_brighton/brighton_purple_alt
+        targets:
+          - surface/brand_secondary/*
+          - on_surface/brand_secondary/*
+          - foreground/brand_secondary
+          - border/brand_secondary
+      - scope: asset_logo
+        source_value: Mt. Brighton
+        targets:
+          - assets/logo
+    inherited_from_base:
+      - surface/positive/*
+      - on_surface/positive/*
+      - surface/warning/*
+      - on_surface/warning/*
+      - surface/critical/*
+      - on_surface/critical/*
+      - foreground/positive
+      - foreground/warning
+      - foreground/critical
+      - border/positive
+      - border/warning
+      - border/critical
+    notes:
+      - 'Mt. Brighton is live in the Foundations file with `brighton_grey` as the structural lane, `brighton_purple` as the primary expressive lane, and `brighton_purple_alt` as the supporting expressive lane.'
+      - "`assets/logo` resolves to the string `Mt. Brighton` in the semantic color extension."
+  typography:
+    status: active
+    override_scopes:
+      - semantic_token: family/heading
+        alias_of: mt_brighton/family/display
+      - semantic_token: family/body
+        alias_of: mt_brighton/family/primary
+      - semantic_token: family/action
+        alias_of: mt_brighton/family/display
+      - semantic_token: weight/heading/base
+        alias_of: universal/weight/black
+      - semantic_token: weight/heading/strong
+        alias_of: universal/weight/black
+      - semantic_token: weight/body/base
+        alias_of: universal/weight/bold
+      - semantic_token: weight/body/strong
+        alias_of: universal/weight/bold
+      - semantic_token: weight/action/base
+        alias_of: universal/weight/black
+    inherited_from_base:
+      - family/heading_safe
+      - family/body_safe
+      - family/action_safe
+      - size/*
+    notes:
+      - 'Mt. Brighton is live as a Museo-led semantic system, with `Museo Slab` on display and action work, `Museo Sans` on the reading lane, and `Prompt` preserved as the raw utility family for digital fallback contexts.'
+notes:
+  - Mt. Brighton is live in the Foundations file with three raw color families, three raw typography family primitives, a semantic color logo-name override, and Mt. Brighton semantic color and typography extensions.

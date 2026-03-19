@@ -1,0 +1,115 @@
+version: 1
+updated: 2026-03-19
+brand_id: hidden_valley_pa
+display_name: Hidden Valley PA
+status: active
+owners:
+  - design_system_governance
+supported_channels:
+  - web
+  - email
+  - ads
+figma:
+  design_system_file_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Foundations?node-id=1-3
+  global_collections:
+    color_id: VariableCollectionId:23:2
+    typography_id: VariableCollectionId:23:3
+    dimensions_id: VariableCollectionId:23:4
+  semantic_extensions:
+    color:
+      collection_name: Hidden Valley PA
+      collection_id: VariableCollectionId:221:1532
+      parent_collection: "Semantic: Color"
+      parent_collection_id: VariableCollectionId:41:135
+    typography:
+      collection_name: Hidden Valley PA
+      collection_id: VariableCollectionId:221:1533
+      parent_collection: "Semantic: Typography"
+      parent_collection_id: VariableCollectionId:38:114
+artifacts:
+  color:
+    intake_artifact: figma/brands/hidden_valley_pa/color/intake.yml
+    preview_artifact: figma/brands/hidden_valley_pa/color/preview.md
+    decision_artifacts: []
+  typography:
+    intake_artifact: figma/brands/hidden_valley_pa/typography/intake.yml
+    preview_artifact: figma/brands/hidden_valley_pa/typography/preview.md
+    decision_artifacts: []
+semantic_overrides:
+  color:
+    status: active
+    override_scopes:
+      - scope: neutral
+        source_family: hidden_valley_pa/hidden_valley_pa_neutral
+        targets:
+          - surface/neutral/*
+          - on_surface/neutral/*
+          - foreground/default
+          - foreground/subtle
+          - border/default
+          - border/subtle
+      - scope: brand
+        source_family: hidden_valley_pa/laurel_blue
+        targets:
+          - surface/brand/*
+          - on_surface/brand/*
+          - foreground/brand
+          - border/brand
+      - scope: brand_secondary
+        source_family: hidden_valley_pa/dark_beige
+        targets:
+          - surface/brand_secondary/*
+          - on_surface/brand_secondary/*
+          - foreground/brand_secondary
+          - border/brand_secondary
+      - scope: asset_logo
+        source_value: Hidden Valley PA
+        targets:
+          - assets/logo
+    inherited_from_base:
+      - surface/positive/*
+      - on_surface/positive/*
+      - surface/warning/*
+      - on_surface/warning/*
+      - surface/critical/*
+      - on_surface/critical/*
+      - foreground/positive
+      - foreground/warning
+      - foreground/critical
+      - border/positive
+      - border/warning
+      - border/critical
+    notes:
+      - Hidden Valley PA is live in the Foundations file as a Pennsylvania-distinguished brand record separate from Hidden Valley MO.
+      - 'The first semantic pass uses the composite `hidden_valley_pa_neutral` family for structure, `laurel_blue` for the primary expressive lane, and `dark_beige` for the supporting expressive lane.'
+      - '`light_beige` remains a governed raw global-only family in the first pass.'
+      - "`assets/logo` resolves to the string `Hidden Valley PA` in the semantic color extension."
+  typography:
+    status: active
+    override_scopes:
+      - semantic_token: family/heading
+        alias_of: hidden_valley_pa/family/primary
+      - semantic_token: family/body
+        alias_of: hidden_valley_pa/family/primary
+      - semantic_token: family/action
+        alias_of: hidden_valley_pa/family/primary
+      - semantic_token: weight/heading/base
+        alias_of: universal/weight/black
+      - semantic_token: weight/heading/strong
+        alias_of: universal/weight/black
+      - semantic_token: weight/body/base
+        alias_of: universal/weight/normal
+      - semantic_token: weight/body/strong
+        alias_of: universal/weight/black
+      - semantic_token: weight/action/base
+        alias_of: universal/weight/black
+    inherited_from_base:
+      - family/heading_safe
+      - family/body_safe
+      - family/action_safe
+      - size/*
+    notes:
+      - 'Hidden Valley PA is live as a Roboto-led semantic system, with `Mrs Eaves XL Regular` preserved as the raw display family used for logo and design applications.'
+      - 'The first semantic pass keeps heading, body, and action on `hidden_valley_pa/family/primary` because the current shared typography ladder does not have a dedicated ornamental display role.'
+notes:
+  - Hidden Valley PA is live in the Foundations file with four raw color families, two raw typography family primitives, a semantic color logo-name override, and Hidden Valley PA semantic color and typography extensions.

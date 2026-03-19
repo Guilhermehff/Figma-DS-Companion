@@ -117,3 +117,23 @@ brands:
     display_name: Liberty Mountain
     status: active
     manifest_path: figma/brands/liberty_mountain/brand.yml
+  - brand_id: attitash
+    display_name: Attitash
+    status: active
+    manifest_path: figma/brands/attitash/brand.yml
+  - brand_id: hidden_valley_pa
+    display_name: Hidden Valley PA
+    status: active
+    manifest_path: figma/brands/hidden_valley_pa/brand.yml
+  - brand_id: laurel_mountain
+    display_name: Laurel Mountain
+    status: active
+    manifest_path: figma/brands/laurel_mountain/brand.yml
+  - brand_id: mt_brighton
+    display_name: Mt. Brighton
+    status: active
+    manifest_path: figma/brands/mt_brighton/brand.yml
+  - brand_id: wilmot
+    display_name: Wilmot
+    status: active
+    manifest_path: figma/brands/wilmot/brand.yml

@@ -1,0 +1,114 @@
+version: 1
+updated: 2026-03-19
+brand_id: attitash
+display_name: Attitash
+status: active
+owners:
+  - design_system_governance
+supported_channels:
+  - web
+  - email
+  - ads
+figma:
+  design_system_file_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Foundations?node-id=1-3
+  global_collections:
+    color_id: VariableCollectionId:23:2
+    typography_id: VariableCollectionId:23:3
+    dimensions_id: VariableCollectionId:23:4
+  semantic_extensions:
+    color:
+      collection_name: Attitash
+      collection_id: VariableCollectionId:221:1437
+      parent_collection: "Semantic: Color"
+      parent_collection_id: VariableCollectionId:41:135
+    typography:
+      collection_name: Attitash
+      collection_id: VariableCollectionId:221:1438
+      parent_collection: "Semantic: Typography"
+      parent_collection_id: VariableCollectionId:38:114
+artifacts:
+  color:
+    intake_artifact: figma/brands/attitash/color/intake.yml
+    preview_artifact: figma/brands/attitash/color/preview.md
+    decision_artifacts: []
+  typography:
+    intake_artifact: figma/brands/attitash/typography/intake.yml
+    preview_artifact: figma/brands/attitash/typography/preview.md
+    decision_artifacts: []
+semantic_overrides:
+  color:
+    status: active
+    override_scopes:
+      - scope: neutral
+        source_family: attitash/attitash_neutral
+        targets:
+          - surface/neutral/*
+          - on_surface/neutral/*
+          - foreground/default
+          - foreground/subtle
+          - border/default
+          - border/subtle
+      - scope: brand
+        source_family: attitash/attitash_blue
+        targets:
+          - surface/brand/*
+          - on_surface/brand/*
+          - foreground/brand
+          - border/brand
+      - scope: brand_secondary
+        source_family: attitash/daybreak
+        targets:
+          - surface/brand_secondary/*
+          - on_surface/brand_secondary/*
+          - foreground/brand_secondary
+          - border/brand_secondary
+      - scope: asset_logo
+        source_value: Attitash
+        targets:
+          - assets/logo
+    inherited_from_base:
+      - surface/positive/*
+      - on_surface/positive/*
+      - surface/warning/*
+      - on_surface/warning/*
+      - surface/critical/*
+      - on_surface/critical/*
+      - foreground/positive
+      - foreground/warning
+      - foreground/critical
+      - border/positive
+      - border/warning
+      - border/critical
+    notes:
+      - 'Attitash is live in the Foundations file with `attitash_neutral` as the structural lane, `attitash_blue` as the primary expressive lane, and `daybreak` as the supporting expressive lane.'
+      - 'The accent source swatches `mogul_shadow`, `mogul_shadow_20`, and `sharp_edge_grey` are preserved as governed raw global-only families and are intentionally not mapped into the first semantic pass.'
+      - "`assets/logo` resolves to the string `Attitash` in the semantic color extension."
+  typography:
+    status: active
+    override_scopes:
+      - semantic_token: family/heading
+        alias_of: attitash/family/primary
+      - semantic_token: family/body
+        alias_of: attitash/family/primary
+      - semantic_token: family/action
+        alias_of: attitash/family/primary
+      - semantic_token: weight/heading/base
+        alias_of: universal/weight/bold
+      - semantic_token: weight/heading/strong
+        alias_of: universal/weight/bold
+      - semantic_token: weight/body/base
+        alias_of: universal/weight/light
+      - semantic_token: weight/body/strong
+        alias_of: universal/weight/medium
+      - semantic_token: weight/action/base
+        alias_of: universal/weight/bold
+    inherited_from_base:
+      - family/heading_safe
+      - family/body_safe
+      - family/action_safe
+      - size/*
+    notes:
+      - 'Attitash is live as a Buenos Aires-led semantic system, with `Coordinates` preserved as the raw alternate family for subhead-style work that does not yet have its own semantic lane.'
+      - 'The first semantic pass keeps heading, body, and action on `attitash/family/primary` because the current shared typography schema has no dedicated alternate subhead family slot.'
+notes:
+  - Attitash is live in the Foundations file with six raw color families, two raw typography family primitives, a semantic color logo-name override, and Attitash semantic color and typography extensions.

@@ -371,3 +371,88 @@ brands:
     - liberty_mountain/family/alternate
     source_style_references:
     - Sentinel Book
+- brand_id: attitash
+  display_name: Attitash
+  status: active
+  typography_intake_artifact: figma/brands/attitash/typography/intake.yml
+  fonts:
+  - family_name: Buenos Aires
+    token_names:
+    - attitash/family/primary
+    source_style_references:
+    - Bold and Light across heading, body, and CTA
+  - family_name: Coordinates
+    token_names:
+    - attitash/family/alternate
+    source_style_references:
+    - Medium subhead treatment
+- brand_id: hidden_valley_pa
+  display_name: Hidden Valley PA
+  status: active
+  typography_intake_artifact: figma/brands/hidden_valley_pa/typography/intake.yml
+  fonts:
+  - family_name: Roboto
+    token_names:
+    - hidden_valley_pa/family/primary
+    source_style_references:
+    - Black and Regular across the functional hierarchy
+  - family_name: Mrs Eaves XL Regular
+    token_names:
+    - hidden_valley_pa/family/display
+    source_style_references:
+    - logo and design applications
+- brand_id: laurel_mountain
+  display_name: Laurel Mountain
+  status: active
+  typography_intake_artifact: figma/brands/laurel_mountain/typography/intake.yml
+  fonts:
+  - family_name: Roboto
+    token_names:
+    - laurel_mountain/family/primary
+    source_style_references:
+    - Digital headline alt, subhead, CTA, and body
+  - family_name: Niagara
+    token_names:
+    - laurel_mountain/family/display
+    source_style_references:
+    - Logo and design headline treatment
+- brand_id: mt_brighton
+  display_name: Mt. Brighton
+  status: active
+  typography_intake_artifact: figma/brands/mt_brighton/typography/intake.yml
+  fonts:
+  - family_name: Museo Slab
+    token_names:
+    - mt_brighton/family/display
+    source_style_references:
+    - 900 headline and CTA
+  - family_name: Museo Sans
+    token_names:
+    - mt_brighton/family/primary
+    source_style_references:
+    - 700 subhead family
+  - family_name: Prompt
+    token_names:
+    - mt_brighton/family/utility
+    source_style_references:
+    - digital fallback when Museo fonts are unavailable
+- brand_id: wilmot
+  display_name: Wilmot
+  status: active
+  typography_intake_artifact: figma/brands/wilmot/typography/intake.yml
+  fonts:
+  - family_name: Museo Slab
+    token_names:
+    - wilmot/family/display
+    source_style_references:
+    - 700 headline and CTA
+  - family_name: Museo Sans
+    token_names:
+    - wilmot/family/primary
+    source_style_references:
+    - 700 subhead and 500 body
+  - family_name: Prompt
+    token_names:
+    - wilmot/family/utility
+    source_style_references:
+    - digital-only headline, body, and CTA family

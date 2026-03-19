@@ -1,0 +1,97 @@
+date: 2026-03-19
+brand: wilmot
+source_reference: User-provided exported Wilmot brand sheet image in chat
+source_type: image
+figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Foundations?node-id=1-3
+status: active
+preview:
+  required_before_write: true
+  artifact: figma/brands/wilmot/color/preview.md
+  status: written_in_figma
+
+source_swatches:
+  - source_name: PMS 201C
+    provided_value: "#a42036"
+    source_usage_scope: core brand color
+    notes: Source image lists RGB 163 33 54.
+  - source_name: PMS 704U
+    provided_value: "#a5565f"
+    source_usage_scope: core brand color
+    notes: Source image lists RGB 165 86 95.
+  - source_name: Grey
+    provided_value: "#58595b"
+    source_usage_scope: core brand color
+    notes: Source image lists RGB 88 89 91.
+
+universal_reuse:
+  reuse_universal: []
+  new_brand_families:
+    - family: wilmot_red
+      source_name: PMS 201C
+      provided_value: "#a42036"
+      rationale: Primary expressive brand lane.
+    - family: wilmot_rose
+      source_name: PMS 704U
+      provided_value: "#a5565f"
+      rationale: Supporting expressive brand lane.
+    - family: wilmot_grey
+      source_name: Grey
+      provided_value: "#58595b"
+      rationale: Structural neutral lane.
+  hold_for_review: []
+
+semantic_recommendations:
+  role_sets:
+    - scope: neutral
+      source_family: wilmot/wilmot_grey
+      targets:
+        - surface/neutral/*
+        - on_surface/neutral/*
+        - foreground/default
+        - foreground/subtle
+        - border/default
+        - border/subtle
+    - scope: brand
+      source_family: wilmot/wilmot_red
+      targets:
+        - surface/brand/*
+        - on_surface/brand/*
+        - foreground/brand
+        - border/brand
+    - scope: brand_secondary
+      source_family: wilmot/wilmot_rose
+      targets:
+        - surface/brand_secondary/*
+        - on_surface/brand_secondary/*
+        - foreground/brand_secondary
+        - border/brand_secondary
+  global_only_families: []
+  role_exceptions:
+    - target: assets/logo
+      source_token: Wilmot
+      rationale: The semantic color extension stores the governed display label.
+
+live_figma_write:
+  semantic_extension_id: VariableCollectionId:221:1786
+  raw_color_families:
+    - wilmot/wilmot_red/*
+    - wilmot/wilmot_rose/*
+    - wilmot/wilmot_grey/*
+  notes:
+    - 'User-corrected naming pass. The live namespace and extension names now use `Wilmot`, not `Wilmot Mountain`.'
+
+review_readiness:
+  intended_review_channels:
+    - web
+    - email
+    - ads
+  review_rules:
+    - subject: Wilmot naming
+      channels:
+        - web
+        - email
+        - ads
+      rule: 'Use `Wilmot` as the governed display name across repo artifacts and live Figma extensions.'
+      source_basis: User correction in chat after the first pass.
+
+open_questions: []

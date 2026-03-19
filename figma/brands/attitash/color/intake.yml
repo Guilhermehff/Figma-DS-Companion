@@ -1,0 +1,132 @@
+date: 2026-03-19
+brand: attitash
+source_reference: User-provided exported Attitash brand sheet image in chat
+source_type: image
+figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Foundations?node-id=1-3
+status: active
+preview:
+  required_before_write: true
+  artifact: figma/brands/attitash/color/preview.md
+  status: written_in_figma
+
+source_swatches:
+  - source_name: Attitash Blue
+    provided_value: "#2a51a3"
+    source_usage_scope: core brand color
+    notes: Source image lists PMS 2728C, RGB 42 81 163, and CMYK 93 78 0 0.
+  - source_name: Daybreak
+    provided_value: "#ffc629"
+    source_usage_scope: core brand color
+    notes: Source image lists PMS 1235C, RGB 255 198 41, and CMYK 0 23 91 0.
+  - source_name: Pure White
+    provided_value: "#ffffff"
+    source_usage_scope: accent sub-palette
+    notes: Exact shared white.
+  - source_name: Mogul Shadow
+    provided_value: "#c6c8c8"
+    source_usage_scope: accent sub-palette
+    notes: Source image lists PMS 420.
+  - source_name: Mogul Shadow 20%
+    provided_value: "#f1f2f2"
+    source_usage_scope: accent sub-palette
+    notes: Source image explicitly labels the tint as 20%.
+  - source_name: Sharp Edge Grey
+    provided_value: "#3d4347"
+    source_usage_scope: accent sub-palette
+    notes: Source image lists PMS 423C.
+
+universal_reuse:
+  reuse_universal:
+    - source_name: Pure White
+      provided_value: "#ffffff"
+      existing_token: universal/white
+      rationale: Exact shared white.
+  new_brand_families:
+    - family: attitash_blue
+      source_name: Attitash Blue
+      provided_value: "#2a51a3"
+      rationale: Primary expressive brand lane.
+    - family: daybreak
+      source_name: Daybreak
+      provided_value: "#ffc629"
+      rationale: Supporting expressive brand lane.
+    - family: attitash_neutral
+      source_name: Pure White + Mogul Shadow + Sharp Edge Grey
+      provided_value: composite_family
+      rationale: Structural neutral lane written live in Figma.
+    - family: mogul_shadow
+      source_name: Mogul Shadow
+      provided_value: "#c6c8c8"
+      rationale: Preserved as a raw global-only accent family.
+    - family: mogul_shadow_20
+      source_name: Mogul Shadow 20%
+      provided_value: "#f1f2f2"
+      rationale: Preserved as a raw global-only accent family.
+    - family: sharp_edge_grey
+      source_name: Sharp Edge Grey
+      provided_value: "#3d4347"
+      rationale: Preserved as a raw global-only accent family.
+  hold_for_review: []
+
+semantic_recommendations:
+  role_sets:
+    - scope: neutral
+      source_family: attitash/attitash_neutral
+      targets:
+        - surface/neutral/*
+        - on_surface/neutral/*
+        - foreground/default
+        - foreground/subtle
+        - border/default
+        - border/subtle
+    - scope: brand
+      source_family: attitash/attitash_blue
+      targets:
+        - surface/brand/*
+        - on_surface/brand/*
+        - foreground/brand
+        - border/brand
+    - scope: brand_secondary
+      source_family: attitash/daybreak
+      targets:
+        - surface/brand_secondary/*
+        - on_surface/brand_secondary/*
+        - foreground/brand_secondary
+        - border/brand_secondary
+  global_only_families:
+    - attitash/mogul_shadow/*
+    - attitash/mogul_shadow_20/*
+    - attitash/sharp_edge_grey/*
+  role_exceptions:
+    - target: assets/logo
+      source_token: Attitash
+      rationale: The semantic color extension stores the governed display label.
+
+live_figma_write:
+  semantic_extension_id: VariableCollectionId:221:1437
+  raw_color_families:
+    - attitash/attitash_blue/*
+    - attitash/daybreak/*
+    - attitash/attitash_neutral/*
+    - attitash/mogul_shadow/*
+    - attitash/mogul_shadow_20/*
+    - attitash/sharp_edge_grey/*
+  notes:
+    - 'Live semantic mapping uses `attitash_blue` for the primary expressive lane and `daybreak` for the supporting expressive lane.'
+    - 'The accent sub-palette remains available as raw-only families in `_Global: Color`.'
+
+review_readiness:
+  intended_review_channels:
+    - web
+    - email
+    - ads
+  review_rules:
+    - subject: Attitash accent-family preservation
+      channels:
+        - web
+        - email
+        - ads
+      rule: Keep the mogul and sharp-edge greys raw-only in the first semantic pass.
+      source_basis: Source sheet explicitly presents them as an accent sub-palette.
+
+open_questions: []
