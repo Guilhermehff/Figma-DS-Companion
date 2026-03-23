@@ -224,6 +224,7 @@ Decision log requirements:
 - figma/config/variable-taxonomy.yml is the governing taxonomy and must match this AGENTS.md.
 - figma/brands/registry.yml is the governed source of truth for which brands currently exist in repo governance.
 - figma/brands/<brand>/brand.yml is the canonical per-brand metadata record.
+- The Figma file `Documentation Library` (`https://www.figma.com/design/x06pdECSS2rS2mHRvtt297/Docs%20Library`, file key `x06pdECSS2rS2mHRvtt297`) is the canonical source for documentation-only variables and text styles.
 - figma/exports/index.yml is the optional manifest for dated manual exports and snapshot references.
 - Exports under figma/exports may be out of date relative to live Figma and must use `YYYY-MM-DD-` filename prefixes.
 - figma/templates/variable-audit.md and figma/templates/decision-log.md must be used for repeatable output when those artifact types are requested.
@@ -243,6 +244,7 @@ Decision log requirements:
 - Prefer YAML for structured inventories that will be updated repeatedly.
 - Prefer Markdown for audits, decisions, and narrative documentation.
 - Keep Figma provenance in canonical artifacts such as `figma/brands/<brand>/brand.yml`, intake YAML, and node-specific specs or audits.
+- When creating or updating documentation in Figma, use the variables and text styles from `Documentation Library` by default. Do not create ad hoc documentation styling in other files unless the user explicitly requests an exception.
 - Preview Markdown may omit repeated Figma file links or node IDs when that provenance is already captured in the linked canonical artifact.
 - Create local component inventories or specs only when the user explicitly requests component governance artifacts.
 - Avoid duplicating process guidance across `AGENTS.md`, `docs/`, and `figma/docs/`. If the same rule appears in multiple places, consolidate toward one canonical location and simplify the rest.
