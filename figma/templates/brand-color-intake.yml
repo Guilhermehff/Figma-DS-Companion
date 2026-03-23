@@ -84,31 +84,42 @@ semantic_recommendations:
       rationale: ""
       targets:
         - surface/neutral/*
-        - on_surface/neutral/*
+        - surface/neutral/*_inverse
         - foreground/default
+        - foreground/default_inverse
         - foreground/subtle
+        - foreground/subtle_inverse
         - border/default
+        - border/default_inverse
         - border/subtle
+        - border/subtle_inverse
     - scope: brand
       source_family: ""
       rationale: ""
       targets:
         - surface/brand/*
-        - on_surface/brand/*
+        - surface/brand/*_inverse
         - foreground/brand
+        - foreground/brand_inverse
         - border/brand
+        - border/brand_inverse
     - scope: brand_secondary
       source_family: ""
       rationale: ""
       targets:
         - surface/brand_secondary/*
-        - on_surface/brand_secondary/*
+        - surface/brand_secondary/*_inverse
         - foreground/brand_secondary
+        - foreground/brand_secondary_inverse
         - border/brand_secondary
+        - border/brand_secondary_inverse
   global_only_families:
     - family: ""
       rationale: ""
   role_exceptions:
+    - target: on_surface/*
+      source_token: universal/black or universal/white
+      rationale: Readable content on semantic surfaces must be chosen from universal neutrals according to contrast against the paired surface.
     - target: ""
       source_token: ""
       rationale: ""

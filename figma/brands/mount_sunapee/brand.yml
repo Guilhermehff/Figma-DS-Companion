@@ -1,5 +1,5 @@
 version: 1
-updated: 2026-03-19
+updated: 2026-03-23
 brand_id: mount_sunapee
 display_name: Mount Sunapee
 status: active
@@ -45,43 +45,68 @@ semantic_overrides:
         source_family: mount_sunapee/sunapee_neutral
         targets:
           - surface/neutral/*
-          - on_surface/neutral/*
+          - surface/neutral/*_inverse
           - foreground/default
+          - foreground/default_inverse
           - foreground/subtle
+          - foreground/subtle_inverse
           - border/default
+          - border/default_inverse
           - border/subtle
+          - border/subtle_inverse
       - scope: brand
         source_family: mount_sunapee/cold_wax
         targets:
           - surface/brand/*
+          - surface/brand/*_inverse
           - on_surface/brand/*
+          - on_surface/brand/*_inverse
           - foreground/brand
+          - foreground/brand_inverse
           - border/brand
+          - border/brand_inverse
       - scope: brand_secondary
         source_family: mount_sunapee/golden_hour
         targets:
           - surface/brand_secondary/*
+          - surface/brand_secondary/*_inverse
           - on_surface/brand_secondary/*
+          - on_surface/brand_secondary/*_inverse
           - foreground/brand_secondary
+          - foreground/brand_secondary_inverse
           - border/brand_secondary
+          - border/brand_secondary_inverse
       - scope: asset_logo
         source_value: Mount Sunapee
         targets:
           - assets/logo
     inherited_from_base:
       - surface/positive/*
+      - surface/positive/*_inverse
       - on_surface/positive/*
+      - on_surface/positive/*_inverse
       - surface/warning/*
+      - surface/warning/*_inverse
       - on_surface/warning/*
+      - on_surface/warning/*_inverse
       - surface/critical/*
+      - surface/critical/*_inverse
       - on_surface/critical/*
+      - on_surface/critical/*_inverse
       - foreground/positive
+      - foreground/positive_inverse
       - foreground/warning
+      - foreground/warning_inverse
       - foreground/critical
+      - foreground/critical_inverse
       - border/positive
+      - border/positive_inverse
       - border/warning
+      - border/warning_inverse
       - border/critical
+      - border/critical_inverse
     notes:
+      - '`on_surface/*` tokens in the live semantic color extension are contrast-derived from `universal/black` or `universal/white` and are not hue-tinted.'
       - 'Mount Sunapee is live in the Foundations file with `sunapee_neutral` as the structural neutral lane, `cold_wax` as the primary expressive lane, and `golden_hour` as the supporting expressive lane.'
       - 'User-approved live write. `sunapee_neutral` absorbs Snow Gun, Verde Slate, and Lake Sunapee into one structural family because the source usage guidance gives the white canvas, the dark Lake block, and the muted support tones more structural weight than a classic gray-neutral system.'
       - 'User-approved live write. `surface/brand/default`, `surface/brand/strong`, and `surface/brand/emphasis` stage on `mount_sunapee/cold_wax/700`, `800`, and `900` so the shared white on-surface contract holds on brand surfaces.'

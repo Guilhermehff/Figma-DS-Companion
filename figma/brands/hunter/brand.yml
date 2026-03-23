@@ -1,5 +1,5 @@
 version: 1
-updated: 2026-03-19
+updated: 2026-03-23
 brand_id: hunter
 display_name: Hunter
 status: active
@@ -45,43 +45,68 @@ semantic_overrides:
         source_family: hunter/hunter_neutral
         targets:
           - surface/neutral/*
-          - on_surface/neutral/*
+          - surface/neutral/*_inverse
           - foreground/default
+          - foreground/default_inverse
           - foreground/subtle
+          - foreground/subtle_inverse
           - border/default
+          - border/default_inverse
           - border/subtle
+          - border/subtle_inverse
       - scope: brand
         source_family: hunter/mountain_blue
         targets:
           - surface/brand/*
+          - surface/brand/*_inverse
           - on_surface/brand/*
+          - on_surface/brand/*_inverse
           - foreground/brand
+          - foreground/brand_inverse
           - border/brand
+          - border/brand_inverse
       - scope: brand_secondary
         source_family: hunter/sunrise_orange
         targets:
           - surface/brand_secondary/*
+          - surface/brand_secondary/*_inverse
           - on_surface/brand_secondary/*
+          - on_surface/brand_secondary/*_inverse
           - foreground/brand_secondary
+          - foreground/brand_secondary_inverse
           - border/brand_secondary
+          - border/brand_secondary_inverse
       - scope: asset_logo
         source_value: Hunter
         targets:
           - assets/logo
     inherited_from_base:
       - surface/positive/*
+      - surface/positive/*_inverse
       - on_surface/positive/*
+      - on_surface/positive/*_inverse
       - surface/warning/*
+      - surface/warning/*_inverse
       - on_surface/warning/*
+      - on_surface/warning/*_inverse
       - surface/critical/*
+      - surface/critical/*_inverse
       - on_surface/critical/*
+      - on_surface/critical/*_inverse
       - foreground/positive
+      - foreground/positive_inverse
       - foreground/warning
+      - foreground/warning_inverse
       - foreground/critical
+      - foreground/critical_inverse
       - border/positive
+      - border/positive_inverse
       - border/warning
+      - border/warning_inverse
       - border/critical
+      - border/critical_inverse
     notes:
+      - '`on_surface/*` tokens in the live semantic color extension are contrast-derived from `universal/black` or `universal/white` and are not hue-tinted.'
       - 'Hunter is live in the Foundations file with `hunter_neutral` as the structural neutral lane, `mountain_blue` as the primary expressive lane, and `sunrise_orange` as the supporting expressive lane.'
       - 'User-approved live write. `hunter_neutral` maps only Flurry White and City Grey into the structural neutral family, while Snow Blue and Mountain Blue move together into the expressive `mountain_blue` ramp.'
       - 'User-approved live write. `surface/brand/default`, `surface/brand/strong`, and `surface/brand/emphasis` stage on `hunter/mountain_blue/600`, `700`, and `800` so the primary expressive lane holds the shared white on-surface contract.'

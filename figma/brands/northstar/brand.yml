@@ -1,5 +1,5 @@
 version: 1
-updated: 2026-03-17
+updated: 2026-03-23
 brand_id: northstar
 display_name: Northstar
 status: active
@@ -46,43 +46,68 @@ semantic_overrides:
         source_family: northstar/graphite
         targets:
           - surface/neutral/*
-          - on_surface/neutral/*
+          - surface/neutral/*_inverse
           - foreground/default
+          - foreground/default_inverse
           - foreground/subtle
+          - foreground/subtle_inverse
           - border/default
+          - border/default_inverse
           - border/subtle
+          - border/subtle_inverse
       - scope: brand
         source_family: northstar/burgundy
         targets:
           - surface/brand/*
+          - surface/brand/*_inverse
           - on_surface/brand/*
+          - on_surface/brand/*_inverse
           - foreground/brand
+          - foreground/brand_inverse
           - border/brand
+          - border/brand_inverse
       - scope: brand_secondary
         source_family: northstar/copper
         targets:
           - surface/brand_secondary/*
+          - surface/brand_secondary/*_inverse
           - on_surface/brand_secondary/*
+          - on_surface/brand_secondary/*_inverse
           - foreground/brand_secondary
+          - foreground/brand_secondary_inverse
           - border/brand_secondary
+          - border/brand_secondary_inverse
       - scope: asset_logo
         source_value: Northstar
         targets:
           - assets/logo
     inherited_from_base:
       - surface/positive/*
+      - surface/positive/*_inverse
       - on_surface/positive/*
+      - on_surface/positive/*_inverse
       - surface/warning/*
+      - surface/warning/*_inverse
       - on_surface/warning/*
+      - on_surface/warning/*_inverse
       - surface/critical/*
+      - surface/critical/*_inverse
       - on_surface/critical/*
+      - on_surface/critical/*_inverse
       - foreground/positive
+      - foreground/positive_inverse
       - foreground/warning
+      - foreground/warning_inverse
       - foreground/critical
+      - foreground/critical_inverse
       - border/positive
+      - border/positive_inverse
       - border/warning
+      - border/warning_inverse
       - border/critical
+      - border/critical_inverse
     notes:
+      - '`on_surface/*` tokens in the live semantic color extension are contrast-derived from `universal/black` or `universal/white` and are not hue-tinted.'
       - The role-based migration keeps burgundy and copper as the expressive semantic lanes.
       - Graphite drives the neutral role set.
       - "`assets/logo` is overridden to the string `Northstar` in the semantic color extension."

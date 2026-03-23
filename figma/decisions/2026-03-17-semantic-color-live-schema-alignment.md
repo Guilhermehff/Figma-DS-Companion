@@ -2,7 +2,7 @@
 
 - Date: 2026-03-17
 - Title: Semantic Color Live Schema Alignment
-- Status: active
+- Status: superseded
 - Scope: systemwide
 - Brand (if brand-specific): n/a
 - Figma file (if applicable): https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Foundations?node-id=1-3
@@ -11,6 +11,7 @@
 - Supersedes:
   - figma/decisions/2026-03-13-proposed-semantic-role-channel-color-model.md (active semantic color base-schema references only)
 - Superseded by:
+  - figma/decisions/2026-03-23-semantic-color-full-inverse-matrix.md
 
 ## Context
 

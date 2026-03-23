@@ -50,9 +50,10 @@ Swatch strip:
 
 ## Proposed Semantic Mapping
 
-- `surface/neutral/*`, `on_surface/neutral/*`, `foreground/default`, `foreground/subtle`, `border/default`, `border/subtle` ->
-- `surface/brand/*`, `on_surface/brand/*`, `foreground/brand`, `border/brand` ->
-- `surface/brand_secondary/*`, `on_surface/brand_secondary/*`, `foreground/brand_secondary`, `border/brand_secondary` ->
+- `surface/neutral/*`, `surface/neutral/*_inverse`, `foreground/default`, `foreground/default_inverse`, `foreground/subtle`, `foreground/subtle_inverse`, `border/default`, `border/default_inverse`, `border/subtle`, `border/subtle_inverse` ->
+- `surface/brand/*`, `surface/brand/*_inverse`, `foreground/brand`, `foreground/brand_inverse`, `border/brand`, `border/brand_inverse` ->
+- `surface/brand_secondary/*`, `surface/brand_secondary/*_inverse`, `foreground/brand_secondary`, `foreground/brand_secondary_inverse`, `border/brand_secondary`, `border/brand_secondary_inverse` ->
+- `on_surface/{brand,brand_secondary,positive,warning,critical}/*` and `_inverse` companions -> contrast-derived from `universal/black` or `universal/white`
 - Global-only extra families:
 - Role exceptions:
 - Inherited or deferred notes:
