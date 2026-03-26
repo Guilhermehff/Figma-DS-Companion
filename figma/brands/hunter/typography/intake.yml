@@ -143,7 +143,7 @@ semantic_recommendations:
         - web
         - email
         - ads
-      notes: Approved live write. The stronger body-emphasis lane stages the explicit Galano Grotesque Semibold subheadline treatment through the current semantic typography ladder.
+      notes: Approved live write. The stronger body-emphasis lane stages the explicit Galano Grotesque Semibold subheadline treatment through the current semantic theme typography ladder.
   size_aliases: []
 
 role_recipes:
@@ -210,7 +210,7 @@ validation:
     - Hunter uses one repeated Galano Grotesque family across headline, subheadline, body, and contrasting body work.
   governance_notes:
     - Galano Grotesque stages cleanly as one shared family, with weight carrying the hierarchy between H1, H2, body, and the lighter contrasting-copy lane.
-    - Approved live write. `weight/body/strong` uses `universal/weight/semibold` so the explicit subheadline treatment remains available through the current semantic typography ladder.
+    - Approved live write. `weight/body/strong` uses `universal/weight/semibold` so the explicit subheadline treatment remains available through the current semantic theme typography ladder.
     - The source does not define a CTA or action recipe, so the action family and weight remain inherited in the live semantic extension.
 
 review_readiness:

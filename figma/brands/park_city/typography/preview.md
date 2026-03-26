@@ -85,7 +85,7 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
 ## Hold For Review
 
 - Item: `semantic subhead lane`
-  Reason: The current semantic typography schema exposes only `heading`, `body`, and `action`, so the distinct condensed subhead face remains a raw utility recipe in this pass.
+  Reason: The current semantic theme typography schema exposes only `heading`, `body`, and `action`, so the distinct condensed subhead face remains a raw utility recipe in this pass.
 
 ## Semantic Mapping
 

@@ -577,18 +577,15 @@ def validate_brand_manifest(path: Path, root: Path = ROOT) -> list[str]:
     if not isinstance(semantic_extensions, dict):
         errors.append(f"{path.relative_to(root)}: `figma.semantic_extensions` must be a mapping")
         semantic_extensions = {}
-    for category in ["color", "typography"]:
-        entry = semantic_extensions.get(category, {})
-        if not isinstance(entry, dict):
+    theme_extension = semantic_extensions.get("theme", {})
+    if not isinstance(theme_extension, dict):
+        errors.append(f"{path.relative_to(root)}: `figma.semantic_extensions.theme` must be a mapping")
+        theme_extension = {}
+    for field in ["collection_name", "collection_id", "parent_collection", "parent_collection_id"]:
+        if not theme_extension.get(field):
             errors.append(
-                f"{path.relative_to(root)}: `figma.semantic_extensions.{category}` must be a mapping"
+                f"{path.relative_to(root)}: missing `figma.semantic_extensions.theme.{field}`"
             )
-            entry = {}
-        for field in ["collection_name", "collection_id", "parent_collection", "parent_collection_id"]:
-            if not entry.get(field):
-                errors.append(
-                    f"{path.relative_to(root)}: missing `figma.semantic_extensions.{category}.{field}`"
-                )
 
     artifacts = data.get("artifacts", {})
     if not isinstance(artifacts, dict):
@@ -634,22 +631,32 @@ def validate_brand_manifest(path: Path, root: Path = ROOT) -> list[str]:
         errors.append(f"{path.relative_to(root)}: `semantic_overrides` must be a mapping")
         return errors
 
-    color_overrides = semantic_overrides.get("color", {})
+    theme_overrides = semantic_overrides.get("theme", {})
+    if not isinstance(theme_overrides, dict):
+        errors.append(f"{path.relative_to(root)}: `semantic_overrides.theme` must be a mapping")
+        theme_overrides = {}
+    status = theme_overrides.get("status")
+    if not isinstance(status, str) or not status:
+        errors.append(f"{path.relative_to(root)}: missing `semantic_overrides.theme.status`")
+
+    color_overrides = theme_overrides.get("color", {})
     if not isinstance(color_overrides, dict):
-        errors.append(f"{path.relative_to(root)}: `semantic_overrides.color` must be a mapping")
+        errors.append(f"{path.relative_to(root)}: `semantic_overrides.theme.color` must be a mapping")
         color_overrides = {}
-    for field in ["status", "override_scopes", "inherited_from_base", "notes"]:
+    for field in ["override_scopes", "inherited_from_base", "notes"]:
         if field not in color_overrides:
-            errors.append(f"{path.relative_to(root)}: missing `semantic_overrides.color.{field}`")
+            errors.append(f"{path.relative_to(root)}: missing `semantic_overrides.theme.color.{field}`")
 
     color_override_scopes = color_overrides.get("override_scopes", [])
     if not isinstance(color_override_scopes, list):
-        errors.append(f"{path.relative_to(root)}: `semantic_overrides.color.override_scopes` must be a list")
+        errors.append(
+            f"{path.relative_to(root)}: `semantic_overrides.theme.color.override_scopes` must be a list"
+        )
     else:
         for index, scope in enumerate(color_override_scopes):
             if not isinstance(scope, dict):
                 errors.append(
-                    f"{path.relative_to(root)}: `semantic_overrides.color.override_scopes[{index}]` must be a mapping"
+                    f"{path.relative_to(root)}: `semantic_overrides.theme.color.override_scopes[{index}]` must be a mapping"
                 )
                 continue
             scope_keys = set(scope.keys())
@@ -663,42 +670,61 @@ def validate_brand_manifest(path: Path, root: Path = ROOT) -> list[str]:
                 or has_source_family == has_source_value
             ):
                 errors.append(
-                    f"{path.relative_to(root)}: `semantic_overrides.color.override_scopes[{index}]` "
+                    f"{path.relative_to(root)}: `semantic_overrides.theme.color.override_scopes[{index}]` "
                     "must use exactly `scope`, one of `source_family` or `source_value`, and `targets`"
                 )
             if not scope.get("scope"):
                 errors.append(
-                    f"{path.relative_to(root)}: `semantic_overrides.color.override_scopes[{index}].scope` is required"
+                    f"{path.relative_to(root)}: `semantic_overrides.theme.color.override_scopes[{index}].scope` is required"
                 )
             if not has_source_family and not has_source_value:
                 errors.append(
-                    f"{path.relative_to(root)}: `semantic_overrides.color.override_scopes[{index}]` "
+                    f"{path.relative_to(root)}: `semantic_overrides.theme.color.override_scopes[{index}]` "
                     "must define either `source_family` or `source_value`"
                 )
             targets = scope.get("targets")
             if not isinstance(targets, list) or not all(isinstance(item, str) and item for item in targets):
                 errors.append(
-                    f"{path.relative_to(root)}: `semantic_overrides.color.override_scopes[{index}].targets` "
+                    f"{path.relative_to(root)}: `semantic_overrides.theme.color.override_scopes[{index}].targets` "
                     "must be a non-empty string list"
                 )
 
     for field in ["inherited_from_base", "notes"]:
         items = color_overrides.get(field, [])
         if not isinstance(items, list):
-            errors.append(f"{path.relative_to(root)}: `semantic_overrides.color.{field}` must be a list")
+            errors.append(f"{path.relative_to(root)}: `semantic_overrides.theme.color.{field}` must be a list")
 
-    typography_overrides = semantic_overrides.get("typography", {})
+    typography_overrides = theme_overrides.get("typography", {})
     if not isinstance(typography_overrides, dict):
-        errors.append(f"{path.relative_to(root)}: `semantic_overrides.typography` must be a mapping")
+        errors.append(f"{path.relative_to(root)}: `semantic_overrides.theme.typography` must be a mapping")
         typography_overrides = {}
-    for field in ["status", "override_scopes", "inherited_from_base", "notes"]:
+    for field in ["override_scopes", "inherited_from_base", "notes"]:
         if field not in typography_overrides:
-            errors.append(f"{path.relative_to(root)}: missing `semantic_overrides.typography.{field}`")
-        elif not isinstance(typography_overrides[field], list if field != "status" else str):
-            expected = "string" if field == "status" else "list"
+            errors.append(f"{path.relative_to(root)}: missing `semantic_overrides.theme.typography.{field}`")
+            continue
+        if not isinstance(typography_overrides[field], list):
             errors.append(
-                f"{path.relative_to(root)}: `semantic_overrides.typography.{field}` must be a {expected}"
+                f"{path.relative_to(root)}: `semantic_overrides.theme.typography.{field}` must be a list"
             )
+
+    typography_override_scopes = typography_overrides.get("override_scopes", [])
+    if isinstance(typography_override_scopes, list):
+        for index, scope in enumerate(typography_override_scopes):
+            if not isinstance(scope, dict):
+                errors.append(
+                    f"{path.relative_to(root)}: `semantic_overrides.theme.typography.override_scopes[{index}]` must be a mapping"
+                )
+                continue
+            if set(scope.keys()) != {"semantic_token", "alias_of"}:
+                errors.append(
+                    f"{path.relative_to(root)}: `semantic_overrides.theme.typography.override_scopes[{index}]` "
+                    "must use exactly `semantic_token` and `alias_of`"
+                )
+            for field in ["semantic_token", "alias_of"]:
+                if not isinstance(scope.get(field), str) or not scope.get(field):
+                    errors.append(
+                        f"{path.relative_to(root)}: `semantic_overrides.theme.typography.override_scopes[{index}].{field}` is required"
+                    )
 
     return errors
 

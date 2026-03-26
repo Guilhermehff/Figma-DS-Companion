@@ -117,7 +117,7 @@ primitive_recommendations:
         rationale: Beaver Creek introduces a repeated Thin display weight that should be preserved as a shared raw primitive rather than collapsed into Light.
   hold_for_review:
     - item: semantic URL lane
-      reason: The current semantic typography schema exposes one action family and one action base weight, so the non-clickable URL treatment remains a documented raw recipe rather than a new semantic slot.
+      reason: The current semantic theme typography schema exposes one action family and one action base weight, so the non-clickable URL treatment remains a documented raw recipe rather than a new semantic slot.
 
 semantic_recommendations:
   family_aliases:

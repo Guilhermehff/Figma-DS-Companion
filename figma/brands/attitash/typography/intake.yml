@@ -151,7 +151,7 @@ validation:
   extraction_notes:
     - The source defines Buenos Aires for headline, body, and CTA work and uses Coordinates only for subhead treatment.
   governance_notes:
-    - The current shared semantic typography model has no dedicated alternate subhead family lane, so Coordinates remains raw-only in the first pass.
+    - The current shared semantic theme typography model has no dedicated alternate subhead family lane, so Coordinates remains raw-only in the first pass.
 
 review_readiness:
   intended_review_channels:

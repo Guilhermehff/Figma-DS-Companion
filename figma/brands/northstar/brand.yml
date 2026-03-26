@@ -1,14 +1,14 @@
 version: 1
-updated: 2026-03-23
+updated: '2026-03-26'
 brand_id: northstar
 display_name: Northstar
 status: active
 owners:
-  - design_system_governance
+- design_system_governance
 supported_channels:
-  - web
-  - email
-  - ads
+- web
+- email
+- ads
 figma:
   design_system_file_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Foundations?node-id=1-3
   global_collections:
@@ -16,72 +16,68 @@ figma:
     typography_id: VariableCollectionId:23:3
     dimensions_id: VariableCollectionId:23:4
   semantic_extensions:
-    color:
+    theme:
       collection_name: Northstar
       collection_id: VariableCollectionId:79:1003
-      parent_collection: "Semantic: Color"
+      parent_collection: 'Semantic: Theme'
       parent_collection_id: VariableCollectionId:41:135
-    typography:
-      collection_name: Northstar
-      collection_id: VariableCollectionId:47:525
-      parent_collection: "Semantic: Typography"
-      parent_collection_id: VariableCollectionId:38:114
 artifacts:
   color:
     intake_artifact: figma/brands/northstar/color/intake.yml
     preview_artifact: figma/brands/northstar/color/preview.md
     decision_artifacts:
-      - figma/decisions/2026-03-11-northstar-foundations-written-to-figma.md
-      - figma/decisions/2026-03-13-proposed-semantic-role-channel-color-model.md
+    - figma/decisions/2026-03-11-northstar-foundations-written-to-figma.md
+    - figma/decisions/2026-03-13-proposed-semantic-role-channel-color-model.md
   typography:
     intake_artifact: figma/brands/northstar/typography/intake.yml
     preview_artifact: figma/brands/northstar/typography/preview.md
     decision_artifacts:
-      - figma/decisions/2026-03-11-northstar-foundations-written-to-figma.md
+    - figma/decisions/2026-03-11-northstar-foundations-written-to-figma.md
 semantic_overrides:
-  color:
+  theme:
     status: active
-    override_scopes:
+    color:
+      override_scopes:
       - scope: neutral
         source_family: northstar/graphite
         targets:
-          - surface/neutral/*
-          - surface/neutral/*_inverse
-          - foreground/default
-          - foreground/default_inverse
-          - foreground/subtle
-          - foreground/subtle_inverse
-          - border/default
-          - border/default_inverse
-          - border/subtle
-          - border/subtle_inverse
+        - surface/neutral/*
+        - surface/neutral/*_inverse
+        - foreground/default
+        - foreground/default_inverse
+        - foreground/subtle
+        - foreground/subtle_inverse
+        - border/default
+        - border/default_inverse
+        - border/subtle
+        - border/subtle_inverse
       - scope: brand
         source_family: northstar/burgundy
         targets:
-          - surface/brand/*
-          - surface/brand/*_inverse
-          - on_surface/brand/*
-          - on_surface/brand/*_inverse
-          - foreground/brand
-          - foreground/brand_inverse
-          - border/brand
-          - border/brand_inverse
+        - surface/brand/*
+        - surface/brand/*_inverse
+        - on_surface/brand/*
+        - on_surface/brand/*_inverse
+        - foreground/brand
+        - foreground/brand_inverse
+        - border/brand
+        - border/brand_inverse
       - scope: brand_secondary
         source_family: northstar/copper
         targets:
-          - surface/brand_secondary/*
-          - surface/brand_secondary/*_inverse
-          - on_surface/brand_secondary/*
-          - on_surface/brand_secondary/*_inverse
-          - foreground/brand_secondary
-          - foreground/brand_secondary_inverse
-          - border/brand_secondary
-          - border/brand_secondary_inverse
+        - surface/brand_secondary/*
+        - surface/brand_secondary/*_inverse
+        - on_surface/brand_secondary/*
+        - on_surface/brand_secondary/*_inverse
+        - foreground/brand_secondary
+        - foreground/brand_secondary_inverse
+        - border/brand_secondary
+        - border/brand_secondary_inverse
       - scope: asset_logo
         source_value: Northstar
         targets:
-          - assets/logo
-    inherited_from_base:
+        - assets/logo
+      inherited_from_base:
       - surface/positive/*
       - surface/positive/*_inverse
       - on_surface/positive/*
@@ -106,15 +102,14 @@ semantic_overrides:
       - border/warning_inverse
       - border/critical
       - border/critical_inverse
-    notes:
-      - '`on_surface/*` tokens in the live semantic color extension are contrast-derived from `universal/black` or `universal/white` and are not hue-tinted.'
+      notes:
+      - "`on_surface/*` tokens in the live semantic theme extension are contrast-derived from `universal/black` or `universal/white` and are not hue-tinted."
       - The role-based migration keeps burgundy and copper as the expressive semantic lanes.
       - Graphite drives the neutral role set.
-      - "`assets/logo` is overridden to the string `Northstar` in the semantic color extension."
+      - "`assets/logo` is overridden to the string `Northstar` in the semantic theme extension."
       - The former tertiary burgundy reuse is removed from semantic and remains only as a global family.
-  typography:
-    status: active
-    override_scopes:
+    typography:
+      override_scopes:
       - semantic_token: family/heading
         alias_of: northstar/family/primary
       - semantic_token: family/body
@@ -123,15 +118,14 @@ semantic_overrides:
         alias_of: universal/weight/medium
       - semantic_token: weight/body/base
         alias_of: universal/weight/normal
-    inherited_from_base:
+      inherited_from_base:
       - family/heading_safe
       - family/body_safe
       - family/action
       - family/action_safe
       - weight/action/*
-      - size/*
-    notes:
+      notes:
       - The supplied guidance shows one brand family, `New Order`, with Medium used for headlines and Regular used for sub-headlines and body copy.
       - Action typography remains intentionally inherited because the approved source did not define a CTA or button-specific rule.
 notes:
-  - Northstar is live in the Foundations file with global color ladders, a global typography family, a semantic color logo-name override, and semantic color and typography extensions.
+- Northstar is live in the Foundations file with global color ladders, a global typography family, a semantic theme logo-name override, and semantic theme extension.

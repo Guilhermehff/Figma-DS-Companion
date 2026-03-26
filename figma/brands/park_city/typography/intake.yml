@@ -96,12 +96,12 @@ primitive_recommendations:
       - token_name: park_city/family/utility
         source_family_name: Trade Gothic LT Std Bold Condensed No. 20
         source_style_reference: subhead system
-        rationale: Preserve the condensed Park City subhead face as a raw utility family until the semantic typography schema gains a dedicated subhead lane.
+        rationale: Preserve the condensed Park City subhead face as a raw utility family until the semantic theme typography schema gains a dedicated subhead lane.
         fallback_token: universal/family/web_safe
         fallback_note: The source does not define a fallback stack.
   hold_for_review:
     - item: semantic subhead lane
-      reason: The current semantic typography schema exposes `heading`, `body`, and `action` families only, so the distinct condensed Park City subhead face is preserved as a raw utility recipe rather than forced into the live semantic extension.
+      reason: The current semantic theme typography schema exposes `heading`, `body`, and `action` families only, so the distinct condensed Park City subhead face is preserved as a raw utility recipe rather than forced into the live semantic extension.
 
 semantic_recommendations:
   family_aliases:

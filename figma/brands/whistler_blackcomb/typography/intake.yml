@@ -198,7 +198,7 @@ role_recipes:
     size_rule: source demonstrates hierarchy behavior but does not define governed token sizes
     punctuation_rule: sentence punctuation allowed
     sample_copy: Subheads
-    notes: Subheads stage through the stronger body weight lane in the current semantic typography schema.
+    notes: Subheads stage through the stronger body weight lane in the current semantic theme typography schema.
   - role_name: body
     source_role: Body | Proxima Nova Regular
     proposed_family_token: whistler_blackcomb/family/primary
@@ -233,7 +233,7 @@ validation:
     - The source is explicit about family choice, weight labels, tracking, and leading behavior for headline, eyebrow, subhead, and body roles.
     - The source uses one family throughout, so the first semantic pass stays on one raw family with weight carrying the hierarchy.
   governance_notes:
-    - The proposed live mapping stays inside the current semantic typography schema by using one family across heading, body, and action.
+    - The proposed live mapping stays inside the current semantic theme typography schema by using one family across heading, body, and action.
     - Eyebrow remains a documented role recipe rather than becoming a new semantic role because the current semantic schema has no separate eyebrow lane.
 
 review_readiness:

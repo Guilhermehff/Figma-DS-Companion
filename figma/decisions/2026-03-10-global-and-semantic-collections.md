@@ -2,8 +2,8 @@
 
 - Date: 2026-03-10
 - Title: Separate Global And Semantic Collections
-- Status: Accepted
-- Superseded in part by: `2026-03-11-user-facing-collection-naming.md` and `2026-03-16-global-first-spacing-and-published-dimensions.md`
+- Status: Superseded in part
+- Superseded in part by: `2026-03-11-user-facing-collection-naming.md`, `2026-03-16-global-first-spacing-and-published-dimensions.md`, and `2026-03-26-semantic-theme-and-published-global-typography.md`
 - Historical naming note: References to `_global_*` and `semantic_*` describe the pre-rename Figma state. Current display names are `_Global: *`, `Global: Dimensions`, and `Semantic: *`.
 - Stakeholders: Design System Governance
 

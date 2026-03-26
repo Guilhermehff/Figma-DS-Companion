@@ -296,7 +296,7 @@ Recipe notes:
 - Missing fallback stacks default to `universal/family/web_safe`.
 - Missing numeric sizes are mapped provisionally to the universal size ladder and should be revisited after design experimentation.
 - Global family naming is now approved as `primary`, `display`, and `web_safe`.
-- The semantic typography baseline now lives in `semantic_typography`, with Vail overrides in `vail`.
+- The shared family and weight baseline now lives in `Semantic: Theme`, while Vail-specific family overrides live in the Vail theme extension.
 
 ## Review Readiness
 

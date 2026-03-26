@@ -10,7 +10,7 @@ This workflow governs how brand typography guidance becomes durable design-syste
 4. Keep raw family tokens structural, not role-based.
 5. Default missing fallback stacks to `universal/family/web_safe`.
 6. Default missing raw sizes to the governed universal size ladder and mark them as assumptions.
-7. Keep semantic typography role-based and use safe family aliases only where constrained channels need them.
+7. Keep semantic theme family and weight aliases role-based and use safe family aliases only where constrained channels need them.
 8. Generate a preview artifact before any write is proposed or executed.
 9. Register approved artifact paths and override status in `figma/brands/<brand>/brand.yml`.
 
@@ -31,14 +31,15 @@ When a local export is explicitly requested, store the dated snapshot under `fig
 1. Confirm the brand record or create it if it does not exist.
 2. Capture the original source roles in the intake artifact.
 3. Split the review into primitive recommendations and role recipes.
-4. Record semantic family, semantic weight, semantic size, and safe-family mappings.
+4. Record semantic family, semantic weight, global size, and safe-family mappings.
 5. Capture downstream review guidance for web, email, and ads.
 6. Generate the preview artifact and link both artifacts from the brand manifest.
 
 ## Inventory Impact
 
-- Raw family, weight, and size primitives belong in `_Global: Typography`.
-- Shared semantic ladders belong in `Semantic: Typography`.
+- Raw family, weight, and size primitives belong in `Global: Typography`.
+- Shared semantic typography family and weight ladders belong in `Semantic: Theme`.
+- Published size consumption belongs on `Global: Typography`.
 - Brand semantic overrides live in Figma. Create dated exports under `figma/exports/` only when an audit or manual snapshot is explicitly requested.
 - Treat exports under `figma/exports/` as dated reference snapshots, not as live governance state.
 

@@ -69,7 +69,7 @@ source_roles:
     size_rule: follows the paired role
     punctuation_rule: not specified in source
     sample_copy: Nullam id dolor! Nibh ultricies ut id elit.
-    notes: Preserved as a raw alternate family because the current semantic typography schema has no dedicated alternate serif lane.
+    notes: Preserved as a raw alternate family because the current semantic theme typography schema has no dedicated alternate serif lane.
 
 primitive_recommendations:
   reuse_existing:
@@ -95,7 +95,7 @@ primitive_recommendations:
         source_style_reference: Sentinel Book
         rationale: Sentinel Book is an explicit alternate reading and subhead family in the source.
         fallback_token: universal/family/web_safe
-        fallback_note: The current semantic typography schema has no dedicated alternate serif slot, so the family is preserved raw-only in the first pass.
+        fallback_note: The current semantic theme typography schema has no dedicated alternate serif slot, so the family is preserved raw-only in the first pass.
     weights: []
   hold_for_review: []
 
@@ -213,7 +213,7 @@ role_recipes:
 validation:
   extraction_notes:
     - The source defines Brown as the primary family and Sentinel Book as an alternate family for subheadline and body work.
-    - The source provides tracking and leading guidance but the current shared semantic typography schema does not include tracking variables.
+    - The source provides tracking and leading guidance but the current shared semantic theme typography schema does not include tracking variables.
   governance_notes:
     - The live write preserves `liberty_mountain/family/alternate` as a raw-only family because there is no dedicated alternate serif semantic slot.
     - The live write overrides `weight/heading/strong` and `weight/action/base` away from the shared black default because the source never specifies a heavy or black Liberty Mountain treatment.
@@ -236,7 +236,7 @@ review_readiness:
         - web
         - email
         - ads
-      rule: Sentinel Book remains a raw alternate family until the semantic typography schema gains a dedicated alternate lane.
+      rule: Sentinel Book remains a raw alternate family until the semantic theme typography schema gains a dedicated alternate lane.
       source_basis: Source typography page lists Sentinel Book as an alternate family only.
 
 open_questions:

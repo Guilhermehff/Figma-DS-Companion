@@ -1,14 +1,14 @@
 version: 1
-updated: 2026-03-23
+updated: '2026-03-26'
 brand_id: mount_snow
 display_name: Mount Snow
 status: active
 owners:
-  - design_system_governance
+- design_system_governance
 supported_channels:
-  - web
-  - email
-  - ads
+- web
+- email
+- ads
 figma:
   design_system_file_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Foundations?node-id=1-3
   global_collections:
@@ -16,71 +16,67 @@ figma:
     typography_id: VariableCollectionId:23:3
     dimensions_id: VariableCollectionId:23:4
   semantic_extensions:
-    color:
+    theme:
       collection_name: Mount Snow
       collection_id: VariableCollectionId:133:132
-      parent_collection: "Semantic: Color"
+      parent_collection: 'Semantic: Theme'
       parent_collection_id: VariableCollectionId:41:135
-    typography:
-      collection_name: Mount Snow
-      collection_id: VariableCollectionId:133:133
-      parent_collection: "Semantic: Typography"
-      parent_collection_id: VariableCollectionId:38:114
 artifacts:
   color:
     intake_artifact: figma/brands/mount_snow/color/intake.yml
     preview_artifact: figma/brands/mount_snow/color/preview.md
     decision_artifacts:
-      - figma/decisions/2026-03-17-mount-snow-foundations-written-to-figma.md
+    - figma/decisions/2026-03-17-mount-snow-foundations-written-to-figma.md
   typography:
     intake_artifact: figma/brands/mount_snow/typography/intake.yml
     preview_artifact: figma/brands/mount_snow/typography/preview.md
     decision_artifacts:
-      - figma/decisions/2026-03-17-mount-snow-foundations-written-to-figma.md
+    - figma/decisions/2026-03-17-mount-snow-foundations-written-to-figma.md
 semantic_overrides:
-  color:
+  theme:
     status: active
-    override_scopes:
+    color:
+      override_scopes:
       - scope: neutral
         source_family: mount_snow/whipped_cream
         targets:
-          - surface/neutral/*
-          - surface/neutral/*_inverse
-          - foreground/default
-          - foreground/default_inverse
-          - foreground/subtle
-          - foreground/subtle_inverse
-          - border/default
-          - border/default_inverse
-          - border/subtle
-          - border/subtle_inverse
+        - surface/neutral/*
+        - surface/neutral/*_inverse
+        - foreground/default
+        - foreground/default_inverse
+        - foreground/subtle
+        - foreground/subtle_inverse
+        - border/default
+        - border/default_inverse
+        - border/subtle
+        - border/subtle_inverse
       - scope: brand
         source_family: mount_snow/bluebird_express
         targets:
-          - surface/brand/*
-          - surface/brand/*_inverse
-          - on_surface/brand/*
-          - on_surface/brand/*_inverse
-          - foreground/brand
-          - foreground/brand_inverse
-          - border/brand
-          - border/brand_inverse
+        - surface/brand/*
+        - surface/brand/*_inverse
+        - on_surface/brand/*
+        - on_surface/brand/*_inverse
+        - foreground/brand
+        - foreground/brand_inverse
+        - border/brand
+        - border/brand_inverse
       - scope: brand_secondary
         source_family: mount_snow/heart_red
         targets:
-          - surface/brand_secondary/*
-          - surface/brand_secondary/*_inverse
-          - on_surface/brand_secondary/*
-          - on_surface/brand_secondary/*_inverse
-          - foreground/brand_secondary
-          - foreground/brand_secondary_inverse
-          - border/brand_secondary
-          - border/brand_secondary_inverse
+        - surface/brand_secondary/*
+        - surface/brand_secondary/*_inverse
+        - on_surface/brand_secondary/*
+        - on_surface/brand_secondary/*_inverse
+        - foreground/brand_secondary
+        - foreground/brand_secondary_inverse
+        - border/brand_secondary
+        - border/brand_secondary_inverse
       - scope: asset_logo
         source_value: Mount Snow
         targets:
-          - assets/logo
-    inherited_from_base:
+        - assets/logo
+      inherited_from_base:
       - surface/positive/*
       - surface/positive/*_inverse
       - on_surface/positive/*
@@ -105,15 +101,14 @@ semantic_overrides:
       - border/warning_inverse
       - border/critical
       - border/critical_inverse
-    notes:
-      - '`on_surface/*` tokens in the live semantic color extension are contrast-derived from `universal/black` or `universal/white` and are not hue-tinted.'
+      notes:
+      - "`on_surface/*` tokens in the live semantic theme extension are contrast-derived from `universal/black` or `universal/white` and are not hue-tinted."
       - Mount Snow stages Bluebird Express and Heart Red as the two expressive semantic lanes because they are the strongest supplied primary accents.
       - Whipped Cream drives the neutral surface system, while exact black is reused from `universal/black` for readable neutral foregrounds and the dark end of the palette.
       - Somerset Blue and Rosy Cheeks remain governed global-only extra families after the two-lane semantic mapping.
-      - "`assets/logo` is overridden to the string `Mount Snow` in the semantic color extension."
-  typography:
-    status: active
-    override_scopes:
+      - "`assets/logo` is overridden to the string `Mount Snow` in the semantic theme extension."
+    typography:
+      override_scopes:
       - semantic_token: family/heading
         alias_of: mount_snow/family/primary
       - semantic_token: family/body
@@ -124,16 +119,15 @@ semantic_overrides:
         alias_of: universal/weight/medium
       - semantic_token: weight/body/strong
         alias_of: universal/weight/black
-    inherited_from_base:
+      inherited_from_base:
       - family/heading_safe
       - family/body_safe
       - family/action
       - family/action_safe
       - weight/action/*
-      - size/*
-    notes:
+      notes:
       - Vastago Grotesk drives the Mount Snow headline lane, and Area Extended covers both subheadline and body copy.
       - "`Heavy` and `Extra Bold` are both staged on `universal/weight/black` because the current shared raw ladder has no separate heavy or extra-bold primitive and the source does not provide numeric weight values."
-      - Size semantics remain inherited from the shared baseline because the source uses example leading pairs rather than governed raw size tokens.
+      - 'Typography size binds directly from published `Global: Typography` because the source uses example leading pairs rather than governed raw size tokens.'
 notes:
-  - Mount Snow is live in the Foundations file with five raw color families, two raw typography families, a semantic color logo-name override, and Mount Snow semantic color and typography extensions.
+- Mount Snow is live in the Foundations file with five raw color families, two raw typography families, a semantic theme logo-name override, and Mount Snow semantic theme extension.

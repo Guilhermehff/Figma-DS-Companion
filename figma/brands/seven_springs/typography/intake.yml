@@ -145,7 +145,7 @@ semantic_recommendations:
         - web
         - email
         - ads
-      notes: Approved live write. Subheads stage through the stronger heading emphasis slot because the current semantic typography schema has no dedicated subhead role.
+      notes: Approved live write. Subheads stage through the stronger heading emphasis slot because the current semantic theme typography schema has no dedicated subhead role.
     - semantic_token: weight/body/base
       global_token: universal/weight/medium
       intended_channels:
@@ -190,7 +190,7 @@ role_recipes:
     size_rule: no governed source size token
     punctuation_rule: not specified in source
     sample_copy: HEADLINES
-    notes: The live mapping routes the subhead recipe through `weight/heading/strong` because the semantic typography model has no dedicated subhead slot.
+    notes: The live mapping routes the subhead recipe through `weight/heading/strong` because the semantic theme typography model has no dedicated subhead slot.
   - role_name: body
     source_role: Body Copy | Hoss Sharp Medium
     proposed_family_token: seven_springs/family/primary
@@ -225,7 +225,7 @@ validation:
     - The source is explicit about family choice, weight, tracking, kerning behavior, alignment behavior, and relative leading.
     - The source does not provide governed numeric sizes, so live size aliases can remain inherited in the first pass.
   governance_notes:
-    - The proposed live mapping stays inside the current semantic typography schema by using one family and weight-driven hierarchy.
+    - The proposed live mapping stays inside the current semantic theme typography schema by using one family and weight-driven hierarchy.
     - "`Heavy` stages on `universal/weight/black` because the shared raw ladder has no dedicated heavy primitive."
     - User-approved live interpretation. The Seven Springs Bold subhead recipe stages through `weight/heading/strong` because the current schema has no dedicated subhead role.
 

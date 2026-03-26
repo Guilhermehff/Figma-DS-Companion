@@ -1,14 +1,14 @@
 version: 1
-updated: 2026-03-23
+updated: '2026-03-26'
 brand_id: liberty_mountain
 display_name: Liberty Mountain
 status: active
 owners:
-  - design_system_governance
+- design_system_governance
 supported_channels:
-  - web
-  - email
-  - ads
+- web
+- email
+- ads
 figma:
   design_system_file_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Foundations?node-id=1-3
   global_collections:
@@ -16,71 +16,67 @@ figma:
     typography_id: VariableCollectionId:23:3
     dimensions_id: VariableCollectionId:23:4
   semantic_extensions:
-    color:
+    theme:
       collection_name: Liberty Mountain
       collection_id: VariableCollectionId:221:1164
-      parent_collection: "Semantic: Color"
+      parent_collection: 'Semantic: Theme'
       parent_collection_id: VariableCollectionId:41:135
-    typography:
-      collection_name: Liberty Mountain
-      collection_id: VariableCollectionId:221:1165
-      parent_collection: "Semantic: Typography"
-      parent_collection_id: VariableCollectionId:38:114
 artifacts:
   color:
     intake_artifact: figma/brands/liberty_mountain/color/intake.yml
     preview_artifact: figma/brands/liberty_mountain/color/preview.md
     decision_artifacts:
-      - figma/decisions/2026-03-19-liberty-mountain-foundations-written-to-figma.md
+    - figma/decisions/2026-03-19-liberty-mountain-foundations-written-to-figma.md
   typography:
     intake_artifact: figma/brands/liberty_mountain/typography/intake.yml
     preview_artifact: figma/brands/liberty_mountain/typography/preview.md
     decision_artifacts:
-      - figma/decisions/2026-03-19-liberty-mountain-foundations-written-to-figma.md
+    - figma/decisions/2026-03-19-liberty-mountain-foundations-written-to-figma.md
 semantic_overrides:
-  color:
+  theme:
     status: active
-    override_scopes:
+    color:
+      override_scopes:
       - scope: neutral
         source_family: liberty_mountain/liberty_neutral
         targets:
-          - surface/neutral/*
-          - surface/neutral/*_inverse
-          - foreground/default
-          - foreground/default_inverse
-          - foreground/subtle
-          - foreground/subtle_inverse
-          - border/default
-          - border/default_inverse
-          - border/subtle
-          - border/subtle_inverse
+        - surface/neutral/*
+        - surface/neutral/*_inverse
+        - foreground/default
+        - foreground/default_inverse
+        - foreground/subtle
+        - foreground/subtle_inverse
+        - border/default
+        - border/default_inverse
+        - border/subtle
+        - border/subtle_inverse
       - scope: brand
         source_family: liberty_mountain/sunrise
         targets:
-          - surface/brand/*
-          - surface/brand/*_inverse
-          - on_surface/brand/*
-          - on_surface/brand/*_inverse
-          - foreground/brand
-          - foreground/brand_inverse
-          - border/brand
-          - border/brand_inverse
+        - surface/brand/*
+        - surface/brand/*_inverse
+        - on_surface/brand/*
+        - on_surface/brand/*_inverse
+        - foreground/brand
+        - foreground/brand_inverse
+        - border/brand
+        - border/brand_inverse
       - scope: brand_secondary
         source_family: liberty_mountain/spring
         targets:
-          - surface/brand_secondary/*
-          - surface/brand_secondary/*_inverse
-          - on_surface/brand_secondary/*
-          - on_surface/brand_secondary/*_inverse
-          - foreground/brand_secondary
-          - foreground/brand_secondary_inverse
-          - border/brand_secondary
-          - border/brand_secondary_inverse
+        - surface/brand_secondary/*
+        - surface/brand_secondary/*_inverse
+        - on_surface/brand_secondary/*
+        - on_surface/brand_secondary/*_inverse
+        - foreground/brand_secondary
+        - foreground/brand_secondary_inverse
+        - border/brand_secondary
+        - border/brand_secondary_inverse
       - scope: asset_logo
         source_value: Liberty Mountain
         targets:
-          - assets/logo
-    inherited_from_base:
+        - assets/logo
+      inherited_from_base:
       - surface/positive/*
       - surface/positive/*_inverse
       - on_surface/positive/*
@@ -105,18 +101,17 @@ semantic_overrides:
       - border/warning_inverse
       - border/critical
       - border/critical_inverse
-    notes:
-      - '`on_surface/*` tokens in the live semantic color extension are contrast-derived from `universal/black` or `universal/white` and are not hue-tinted.'
+      notes:
+      - "`on_surface/*` tokens in the live semantic theme extension are contrast-derived from `universal/black` or `universal/white` and are not hue-tinted."
       - Liberty Mountain is live in the Foundations file with `liberty_neutral` as the structural neutral lane, `sunrise` as the primary expressive lane, and `spring` as the supporting expressive lane.
       - User-approved live write. `Limestone`, `Mineral`, and `Sand` now combine into the composite raw family `liberty_neutral`, while the original three source swatches are also preserved as governed raw families.
       - User-approved live write. Every remaining source swatch is preserved as a raw global-only family in `_Global: Color`.
       - User-approved live write. `surface/brand/default`, `surface/brand/strong`, and `surface/brand/emphasis` stage on `liberty_mountain/sunrise/600`, `700`, and `800` because that is the lightest readable set that holds the shared white on-surface contract.
       - User-approved live write. `surface/brand_secondary/default`, `surface/brand_secondary/strong`, and `surface/brand_secondary/emphasis` stage on `liberty_mountain/spring/700`, `800`, and `900` because the brighter Spring hue needed a darker set to hold the shared white on-surface contract.
       - Source-note preservation. The intake keeps Summit and Tundra as separate raw families even though the source text repeats the same supplied HEX and RGB values for both.
-      - "`assets/logo` resolves to the string `Liberty Mountain` in the semantic color extension."
-  typography:
-    status: active
-    override_scopes:
+      - "`assets/logo` resolves to the string `Liberty Mountain` in the semantic theme extension."
+    typography:
+      override_scopes:
       - semantic_token: family/heading
         alias_of: liberty_mountain/family/primary
       - semantic_token: family/body
@@ -133,16 +128,15 @@ semantic_overrides:
         alias_of: universal/weight/normal
       - semantic_token: weight/action/base
         alias_of: universal/weight/normal
-    inherited_from_base:
+      inherited_from_base:
       - family/heading_safe
       - family/body_safe
       - family/action_safe
-      - size/*
-    notes:
+      notes:
       - Liberty Mountain is live as a Brown-led typography system with `family/heading`, `family/body`, and `family/action` all mapped to `liberty_mountain/family/primary`.
       - User-approved live write by source interpretation. The source says Brown is the primary Liberty Mountain font for print and web materials, so the first semantic pass also routes the action family through Brown rather than inheriting the shared default family.
-      - "`Sentinel Book` is preserved as the raw primitive `liberty_mountain/family/alternate`, but it remains raw-only because the current shared semantic typography schema has no alternate serif lane."
+      - "`Sentinel Book` is preserved as the raw primitive `liberty_mountain/family/alternate`, but it remains raw-only because the current shared semantic theme typography schema has no alternate serif lane."
       - "`weight/heading/strong` and `weight/action/base` both override to `universal/weight/normal` so Liberty Mountain does not inherit the shared black default that the source never specifies."
       - "`weight/body/base = universal/weight/light` and `weight/body/strong = universal/weight/normal` stage the Brown Light and Brown Regular reading hierarchy through the current semantic ladder."
 notes:
-  - Liberty Mountain is live in the Foundations file with fourteen raw color families, two raw typography family primitives, a semantic color logo-name override, and Liberty Mountain semantic color and typography extensions.
+- Liberty Mountain is live in the Foundations file with fourteen raw color families, two raw typography family primitives, a semantic theme logo-name override, and Liberty Mountain semantic theme extension.

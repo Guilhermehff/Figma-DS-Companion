@@ -215,7 +215,7 @@ validation:
     - The source is explicit about the Gibson family and named weight recipes for headlines, subheads, and CTA.
     - The body section is not explicit about one canonical semantic default because it presents multiple allowed weights and italics.
   governance_notes:
-    - The proposed live mapping stays inside the current semantic typography schema by using one family with weight-driven hierarchy.
+    - The proposed live mapping stays inside the current semantic theme typography schema by using one family with weight-driven hierarchy.
     - "User-approved exception: `weight/body/base` stages on Light, `weight/body/strong` stages on Medium, and `weight/action/base` stages on Medium even though the source labels subheads as Semi Bold and CTA as Regular."
 
 review_readiness:

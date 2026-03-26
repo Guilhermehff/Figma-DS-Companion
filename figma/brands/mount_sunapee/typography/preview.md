@@ -86,20 +86,20 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
   Token name: `mount_sunapee/family/utility`
   Source item: `Neutraface Text Bold Italic`
   Fallback token: `universal/family/web_safe`
-  Notes: Preserve the H3 subheader face as a raw utility family until the semantic typography schema gains a dedicated subhead lane.
+  Notes: Preserve the H3 subheader face as a raw utility family until the semantic theme typography schema gains a dedicated subhead lane.
 
 ## Semantic Mapping
 
 - `family/heading` -> `mount_sunapee/family/primary`
 - `family/body` -> `mount_sunapee/family/primary`
-- `family/action` -> inherited from the base semantic typography collection in the first pass
+- `family/action` -> inherited from the base semantic theme mapping in the first pass
 - `family/heading_safe` -> `universal/family/web_safe`
 - `family/body_safe` -> `universal/family/web_safe`
-- `family/action_safe` -> inherited from the base semantic typography collection in the first pass
+- `family/action_safe` -> inherited from the base semantic theme mapping in the first pass
 - `weight/heading/base` -> `universal/weight/bold`
 - `weight/body/base` -> `universal/weight/light`
 - `weight/body/strong` -> `universal/weight/normal`
-- `size/...` -> inherited from the current semantic typography ladder
+- `size/...` -> published directly from `Global: Typography`
 - Inherited or deferred notes: action remains inherited because the source does not define a CTA recipe
 
 ## Role Recipes

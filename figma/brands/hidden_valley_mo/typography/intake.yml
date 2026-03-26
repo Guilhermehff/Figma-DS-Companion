@@ -123,7 +123,7 @@ validation:
     - The supplied source image provides logo and color guidance only; it does not define a Hidden Valley MO typography system.
     - The user explicitly instructed the brand to use the universal typography baseline.
   governance_notes:
-    - The live semantic typography pass only overrides the family aliases to the raw Hidden Valley MO token.
+    - The live semantic theme typography pass only overrides the family aliases to the raw Hidden Valley MO token.
     - Weight, safe-family, and size tokens remain inherited from the semantic base because the requested values are unchanged from universal.
 
 review_readiness:

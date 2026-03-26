@@ -119,7 +119,7 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
 - Proposed family token: `breckenridge/family/primary`
 - Proposed weight token: `universal/weight/bold`
 - Proposed size token: `universal/size/300`
-- Notes: CTA uses the shared raw bold weight and is now covered by the live Breckenridge semantic typography extension.
+- Notes: CTA uses the shared raw bold weight and is now covered by the live Breckenridge semantic theme typography overrides.
 
 ## Review Readiness
 

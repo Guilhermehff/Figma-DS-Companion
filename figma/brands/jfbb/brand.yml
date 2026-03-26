@@ -1,14 +1,14 @@
 version: 1
-updated: 2026-03-23
+updated: '2026-03-26'
 brand_id: jfbb
 display_name: JFBB
 status: active
 owners:
-  - design_system_governance
+- design_system_governance
 supported_channels:
-  - web
-  - email
-  - ads
+- web
+- email
+- ads
 figma:
   design_system_file_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Foundations?node-id=1-3
   global_collections:
@@ -16,71 +16,67 @@ figma:
     typography_id: VariableCollectionId:23:3
     dimensions_id: VariableCollectionId:23:4
   semantic_extensions:
-    color:
+    theme:
       collection_name: JFBB
       collection_id: VariableCollectionId:135:244
-      parent_collection: "Semantic: Color"
+      parent_collection: 'Semantic: Theme'
       parent_collection_id: VariableCollectionId:41:135
-    typography:
-      collection_name: JFBB
-      collection_id: VariableCollectionId:135:245
-      parent_collection: "Semantic: Typography"
-      parent_collection_id: VariableCollectionId:38:114
 artifacts:
   color:
     intake_artifact: figma/brands/jfbb/color/intake.yml
     preview_artifact: figma/brands/jfbb/color/preview.md
     decision_artifacts:
-      - figma/decisions/2026-03-17-jfbb-foundations-written-to-figma.md
+    - figma/decisions/2026-03-17-jfbb-foundations-written-to-figma.md
   typography:
     intake_artifact: figma/brands/jfbb/typography/intake.yml
     preview_artifact: figma/brands/jfbb/typography/preview.md
     decision_artifacts:
-      - figma/decisions/2026-03-17-jfbb-foundations-written-to-figma.md
+    - figma/decisions/2026-03-17-jfbb-foundations-written-to-figma.md
 semantic_overrides:
-  color:
+  theme:
     status: active
-    override_scopes:
+    color:
+      override_scopes:
       - scope: neutral
         source_family: jfbb/snow_day
         targets:
-          - surface/neutral/*
-          - surface/neutral/*_inverse
-          - foreground/default
-          - foreground/default_inverse
-          - foreground/subtle
-          - foreground/subtle_inverse
-          - border/default
-          - border/default_inverse
-          - border/subtle
-          - border/subtle_inverse
+        - surface/neutral/*
+        - surface/neutral/*_inverse
+        - foreground/default
+        - foreground/default_inverse
+        - foreground/subtle
+        - foreground/subtle_inverse
+        - border/default
+        - border/default_inverse
+        - border/subtle
+        - border/subtle_inverse
       - scope: brand
         source_family: jfbb/early_sunrise
         targets:
-          - surface/brand/*
-          - surface/brand/*_inverse
-          - on_surface/brand/*
-          - on_surface/brand/*_inverse
-          - foreground/brand
-          - foreground/brand_inverse
-          - border/brand
-          - border/brand_inverse
+        - surface/brand/*
+        - surface/brand/*_inverse
+        - on_surface/brand/*
+        - on_surface/brand/*_inverse
+        - foreground/brand
+        - foreground/brand_inverse
+        - border/brand
+        - border/brand_inverse
       - scope: brand_secondary
         source_family: jfbb/bluebird
         targets:
-          - surface/brand_secondary/*
-          - surface/brand_secondary/*_inverse
-          - on_surface/brand_secondary/*
-          - on_surface/brand_secondary/*_inverse
-          - foreground/brand_secondary
-          - foreground/brand_secondary_inverse
-          - border/brand_secondary
-          - border/brand_secondary_inverse
+        - surface/brand_secondary/*
+        - surface/brand_secondary/*_inverse
+        - on_surface/brand_secondary/*
+        - on_surface/brand_secondary/*_inverse
+        - foreground/brand_secondary
+        - foreground/brand_secondary_inverse
+        - border/brand_secondary
+        - border/brand_secondary_inverse
       - scope: asset_logo
         source_value: JFBB
         targets:
-          - assets/logo
-    inherited_from_base:
+        - assets/logo
+      inherited_from_base:
       - surface/positive/*
       - surface/positive/*_inverse
       - on_surface/positive/*
@@ -105,15 +101,14 @@ semantic_overrides:
       - border/warning_inverse
       - border/critical
       - border/critical_inverse
-    notes:
-      - '`on_surface/*` tokens in the live semantic color extension are contrast-derived from `universal/black` or `universal/white` and are not hue-tinted.'
+      notes:
+      - "`on_surface/*` tokens in the live semantic theme extension are contrast-derived from `universal/black` or `universal/white` and are not hue-tinted."
       - Snow Day drives the light neutral surface system, while Last Chair supplies the readable dark neutral roles so the brand keeps the supplied icy-background and navy-type pairing.
       - The reviewed expressive semantic lanes use Early Sunrise as `brand/*` and Bluebird as `brand_secondary/*`.
       - Frost and Night Ski remain governed global-only extra families after the first semantic pass.
-      - "`assets/logo` is overridden to the string `JFBB` in the semantic color extension."
-  typography:
-    status: active
-    override_scopes:
+      - "`assets/logo` is overridden to the string `JFBB` in the semantic theme extension."
+    typography:
+      override_scopes:
       - semantic_token: family/heading
         alias_of: jfbb/family/primary
       - semantic_token: family/body
@@ -124,16 +119,15 @@ semantic_overrides:
         alias_of: universal/weight/normal
       - semantic_token: weight/body/strong
         alias_of: universal/weight/bold
-    inherited_from_base:
+      inherited_from_base:
       - family/heading_safe
       - family/body_safe
       - family/action
       - family/action_safe
       - weight/action/*
-      - size/*
-    notes:
+      notes:
       - JFBB uses one raw family, Vista Sans NAR OTCE, across headline, subheadline, and body roles, with weight carrying the hierarchy.
       - "`Book` stages on `universal/weight/normal` because the shared raw ladder has no separate book primitive."
-      - "The source body-leading example is internally inconsistent (`100px difference` / `24px / 124px`), so live size semantics remain inherited."
+      - 'The source body-leading example is internally inconsistent (`100px difference` / `24px / 124px`), so typography size continues to bind the published shared `Global: Typography` ladder.'
 notes:
-  - JFBB is live in the Foundations file with six raw color families, one raw typography family, a semantic color logo-name override, and JFBB semantic color and typography extensions.
+- JFBB is live in the Foundations file with six raw color families, one raw typography family, a semantic theme logo-name override, and JFBB semantic theme extension.

@@ -14,15 +14,10 @@ figma:
     typography_id: ""
     dimensions_id: ""
   semantic_extensions:
-    color:
+    theme:
       collection_name: ""
       collection_id: ""
-      parent_collection: "Semantic: Color"
-      parent_collection_id: ""
-    typography:
-      collection_name: ""
-      collection_id: ""
-      parent_collection: "Semantic: Typography"
+      parent_collection: "Semantic: Theme"
       parent_collection_id: ""
 artifacts:
   color:
@@ -34,55 +29,55 @@ artifacts:
     preview_artifact: ""
     decision_artifacts: []
 semantic_overrides:
-  color:
+  theme:
     status: pending
-    override_scopes:
-      - scope: neutral
-        source_family: ""
-        targets:
-          - surface/neutral/*
-          - surface/neutral/*_inverse
-          - foreground/default
-          - foreground/default_inverse
-          - foreground/subtle
-          - foreground/subtle_inverse
-          - border/default
-          - border/default_inverse
-          - border/subtle
-          - border/subtle_inverse
-      - scope: brand
-        source_family: ""
-        targets:
-          - surface/brand/*
-          - surface/brand/*_inverse
-          - on_surface/brand/*
-          - on_surface/brand/*_inverse
-          - foreground/brand
-          - foreground/brand_inverse
-          - border/brand
-          - border/brand_inverse
-      - scope: brand_secondary
-        source_family: ""
-        targets:
-          - surface/brand_secondary/*
-          - surface/brand_secondary/*_inverse
-          - on_surface/brand_secondary/*
-          - on_surface/brand_secondary/*_inverse
-          - foreground/brand_secondary
-          - foreground/brand_secondary_inverse
-          - border/brand_secondary
-          - border/brand_secondary_inverse
-      - scope: asset_logo
-        source_value: ""
-        targets:
-          - assets/logo
-    inherited_from_base: []
-    notes:
-      - '`on_surface/*` tokens in live semantic color extensions are contrast-derived from `universal/black` or `universal/white` and are not hue-tinted.'
-  typography:
-    status: pending
-    override_scopes: []
-    inherited_from_base: []
-    notes: []
+    color:
+      override_scopes:
+        - scope: neutral
+          source_family: ""
+          targets:
+            - surface/neutral/*
+            - surface/neutral/*_inverse
+            - foreground/default
+            - foreground/default_inverse
+            - foreground/subtle
+            - foreground/subtle_inverse
+            - border/default
+            - border/default_inverse
+            - border/subtle
+            - border/subtle_inverse
+        - scope: brand
+          source_family: ""
+          targets:
+            - surface/brand/*
+            - surface/brand/*_inverse
+            - on_surface/brand/*
+            - on_surface/brand/*_inverse
+            - foreground/brand
+            - foreground/brand_inverse
+            - border/brand
+            - border/brand_inverse
+        - scope: brand_secondary
+          source_family: ""
+          targets:
+            - surface/brand_secondary/*
+            - surface/brand_secondary/*_inverse
+            - on_surface/brand_secondary/*
+            - on_surface/brand_secondary/*_inverse
+            - foreground/brand_secondary
+            - foreground/brand_secondary_inverse
+            - border/brand_secondary
+            - border/brand_secondary_inverse
+        - scope: asset_logo
+          source_value: ""
+          targets:
+            - assets/logo
+      inherited_from_base: []
+      notes:
+        - '`on_surface/*` tokens in live semantic theme extensions are contrast-derived from `universal/black` or `universal/white` and are not hue-tinted.'
+    typography:
+      override_scopes: []
+      inherited_from_base: []
+      notes: []
 notes:
   - ""

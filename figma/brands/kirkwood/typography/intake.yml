@@ -117,12 +117,12 @@ primitive_recommendations:
       - token_name: kirkwood/family/utility
         source_family_name: Trade Gothic Condensed No. 18
         source_style_reference: limited-space emphasis system
-        rationale: Preserved as a raw utility family until the semantic typography schema gains a dedicated fourth family slot.
+        rationale: Preserved as a raw utility family until the semantic theme typography schema gains a dedicated fourth family slot.
         fallback_token: universal/family/web_safe
         fallback_note: The source does not define a digital fallback stack.
   hold_for_review:
     - item: semantic slot for Trade Gothic Condensed No. 18
-      reason: The current semantic typography schema exposes only heading, body, and action family lanes.
+      reason: The current semantic theme typography schema exposes only heading, body, and action family lanes.
 
 semantic_recommendations:
   family_aliases:

@@ -98,7 +98,7 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
 ## Review Notes
 
 - The first Crested Butte typography pass uses one family token because the source differentiates roles by weight, case, and layout behavior rather than by introducing a second family.
-- `Semibold` is now written as the shared raw token `universal/weight/semibold` and is used by the Crested Butte semantic typography extension.
+- `Semibold` is now written as the shared raw token `universal/weight/semibold` and is used by the Crested Butte semantic theme typography overrides.
 - Numeric sizes are not provided in the source, so all size mappings remain provisional review defaults.
 
 ## Review Readiness

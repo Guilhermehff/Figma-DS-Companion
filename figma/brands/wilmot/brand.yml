@@ -1,14 +1,14 @@
 version: 1
-updated: 2026-03-23
+updated: '2026-03-26'
 brand_id: wilmot
 display_name: Wilmot
 status: active
 owners:
-  - design_system_governance
+- design_system_governance
 supported_channels:
-  - web
-  - email
-  - ads
+- web
+- email
+- ads
 figma:
   design_system_file_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Foundations?node-id=1-3
   global_collections:
@@ -16,16 +16,11 @@ figma:
     typography_id: VariableCollectionId:23:3
     dimensions_id: VariableCollectionId:23:4
   semantic_extensions:
-    color:
+    theme:
       collection_name: Wilmot
       collection_id: VariableCollectionId:221:1786
-      parent_collection: "Semantic: Color"
+      parent_collection: 'Semantic: Theme'
       parent_collection_id: VariableCollectionId:41:135
-    typography:
-      collection_name: Wilmot
-      collection_id: VariableCollectionId:221:1787
-      parent_collection: "Semantic: Typography"
-      parent_collection_id: VariableCollectionId:38:114
 artifacts:
   color:
     intake_artifact: figma/brands/wilmot/color/intake.yml
@@ -36,49 +31,50 @@ artifacts:
     preview_artifact: figma/brands/wilmot/typography/preview.md
     decision_artifacts: []
 semantic_overrides:
-  color:
+  theme:
     status: active
-    override_scopes:
+    color:
+      override_scopes:
       - scope: neutral
         source_family: wilmot/wilmot_grey
         targets:
-          - surface/neutral/*
-          - surface/neutral/*_inverse
-          - foreground/default
-          - foreground/default_inverse
-          - foreground/subtle
-          - foreground/subtle_inverse
-          - border/default
-          - border/default_inverse
-          - border/subtle
-          - border/subtle_inverse
+        - surface/neutral/*
+        - surface/neutral/*_inverse
+        - foreground/default
+        - foreground/default_inverse
+        - foreground/subtle
+        - foreground/subtle_inverse
+        - border/default
+        - border/default_inverse
+        - border/subtle
+        - border/subtle_inverse
       - scope: brand
         source_family: wilmot/wilmot_red
         targets:
-          - surface/brand/*
-          - surface/brand/*_inverse
-          - on_surface/brand/*
-          - on_surface/brand/*_inverse
-          - foreground/brand
-          - foreground/brand_inverse
-          - border/brand
-          - border/brand_inverse
+        - surface/brand/*
+        - surface/brand/*_inverse
+        - on_surface/brand/*
+        - on_surface/brand/*_inverse
+        - foreground/brand
+        - foreground/brand_inverse
+        - border/brand
+        - border/brand_inverse
       - scope: brand_secondary
         source_family: wilmot/wilmot_rose
         targets:
-          - surface/brand_secondary/*
-          - surface/brand_secondary/*_inverse
-          - on_surface/brand_secondary/*
-          - on_surface/brand_secondary/*_inverse
-          - foreground/brand_secondary
-          - foreground/brand_secondary_inverse
-          - border/brand_secondary
-          - border/brand_secondary_inverse
+        - surface/brand_secondary/*
+        - surface/brand_secondary/*_inverse
+        - on_surface/brand_secondary/*
+        - on_surface/brand_secondary/*_inverse
+        - foreground/brand_secondary
+        - foreground/brand_secondary_inverse
+        - border/brand_secondary
+        - border/brand_secondary_inverse
       - scope: asset_logo
         source_value: Wilmot
         targets:
-          - assets/logo
-    inherited_from_base:
+        - assets/logo
+      inherited_from_base:
       - surface/positive/*
       - surface/positive/*_inverse
       - on_surface/positive/*
@@ -103,14 +99,13 @@ semantic_overrides:
       - border/warning_inverse
       - border/critical
       - border/critical_inverse
-    notes:
-      - '`on_surface/*` tokens in the live semantic color extension are contrast-derived from `universal/black` or `universal/white` and are not hue-tinted.'
-      - 'Wilmot is live in the Foundations file with `wilmot_grey` as the structural lane, `wilmot_red` as the primary expressive lane, and `wilmot_rose` as the supporting expressive lane.'
-      - 'User-corrected naming pass. The live color and typography extension collection names, the semantic logo string, and the raw global namespace were renamed from `Wilmot Mountain` to `Wilmot`.'
-      - "`assets/logo` resolves to the string `Wilmot` in the semantic color extension."
-  typography:
-    status: active
-    override_scopes:
+      notes:
+      - "`on_surface/*` tokens in the live semantic theme extension are contrast-derived from `universal/black` or `universal/white` and are not hue-tinted."
+      - Wilmot is live in the Foundations file with `wilmot_grey` as the structural lane, `wilmot_red` as the primary expressive lane, and `wilmot_rose` as the supporting expressive lane.
+      - User-corrected naming pass. The live color and typography extension collection names, the semantic logo string, and the raw global namespace were renamed from `Wilmot Mountain` to `Wilmot`.
+      - "`assets/logo` resolves to the string `Wilmot` in the semantic theme extension."
+    typography:
+      override_scopes:
       - semantic_token: family/heading
         alias_of: wilmot/family/display
       - semantic_token: family/body
@@ -127,12 +122,11 @@ semantic_overrides:
         alias_of: universal/weight/bold
       - semantic_token: weight/action/base
         alias_of: universal/weight/bold
-    inherited_from_base:
+      inherited_from_base:
       - family/heading_safe
       - family/body_safe
       - family/action_safe
-      - size/*
-    notes:
-      - 'Wilmot is live as a Museo-led semantic system, with `Museo Slab` on heading and action work, `Museo Sans` on the reading lane, and `Prompt` preserved as the raw utility family for the digital-only source treatments.'
+      notes:
+      - Wilmot is live as a Museo-led semantic system, with `Museo Slab` on heading and action work, `Museo Sans` on the reading lane, and `Prompt` preserved as the raw utility family for the digital-only source treatments.
 notes:
-  - Wilmot is live in the Foundations file with three raw color families, three raw typography family primitives, a semantic color logo-name override, and Wilmot semantic color and typography extensions.
+- Wilmot is live in the Foundations file with three raw color families, three raw typography family primitives, a semantic theme logo-name override, and Wilmot semantic theme extension.

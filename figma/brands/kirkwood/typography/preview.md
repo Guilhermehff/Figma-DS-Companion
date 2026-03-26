@@ -85,7 +85,7 @@ Review state: retrospective review artifact documenting the pre-review write exc
 ## Hold For Review
 
 - Item: `semantic slot for Trade Gothic Condensed No. 18`
-  Reason: Current semantic typography schema exposes only heading, body, and action families.
+  Reason: Current semantic theme typography schema exposes only heading, body, and action families.
 
 ## Semantic Mapping
 

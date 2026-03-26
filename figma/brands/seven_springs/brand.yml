@@ -1,14 +1,14 @@
 version: 1
-updated: 2026-03-23
+updated: '2026-03-26'
 brand_id: seven_springs
 display_name: Seven Springs
 status: active
 owners:
-  - design_system_governance
+- design_system_governance
 supported_channels:
-  - web
-  - email
-  - ads
+- web
+- email
+- ads
 figma:
   design_system_file_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Foundations?node-id=1-3
   global_collections:
@@ -16,71 +16,67 @@ figma:
     typography_id: VariableCollectionId:23:3
     dimensions_id: VariableCollectionId:23:4
   semantic_extensions:
-    color:
+    theme:
       collection_name: Seven Springs
       collection_id: VariableCollectionId:209:870
-      parent_collection: "Semantic: Color"
+      parent_collection: 'Semantic: Theme'
       parent_collection_id: VariableCollectionId:41:135
-    typography:
-      collection_name: Seven Springs
-      collection_id: VariableCollectionId:209:911
-      parent_collection: "Semantic: Typography"
-      parent_collection_id: VariableCollectionId:38:114
 artifacts:
   color:
     intake_artifact: figma/brands/seven_springs/color/intake.yml
     preview_artifact: figma/brands/seven_springs/color/preview.md
     decision_artifacts:
-      - figma/decisions/2026-03-19-seven-springs-foundations-written-to-figma.md
+    - figma/decisions/2026-03-19-seven-springs-foundations-written-to-figma.md
   typography:
     intake_artifact: figma/brands/seven_springs/typography/intake.yml
     preview_artifact: figma/brands/seven_springs/typography/preview.md
     decision_artifacts:
-      - figma/decisions/2026-03-19-seven-springs-foundations-written-to-figma.md
+    - figma/decisions/2026-03-19-seven-springs-foundations-written-to-figma.md
 semantic_overrides:
-  color:
+  theme:
     status: active
-    override_scopes:
+    color:
+      override_scopes:
       - scope: neutral
         source_family: seven_springs/springs_neutral
         targets:
-          - surface/neutral/*
-          - surface/neutral/*_inverse
-          - foreground/default
-          - foreground/default_inverse
-          - foreground/subtle
-          - foreground/subtle_inverse
-          - border/default
-          - border/default_inverse
-          - border/subtle
-          - border/subtle_inverse
+        - surface/neutral/*
+        - surface/neutral/*_inverse
+        - foreground/default
+        - foreground/default_inverse
+        - foreground/subtle
+        - foreground/subtle_inverse
+        - border/default
+        - border/default_inverse
+        - border/subtle
+        - border/subtle_inverse
       - scope: brand
         source_family: seven_springs/springs_green
         targets:
-          - surface/brand/*
-          - surface/brand/*_inverse
-          - on_surface/brand/*
-          - on_surface/brand/*_inverse
-          - foreground/brand
-          - foreground/brand_inverse
-          - border/brand
-          - border/brand_inverse
+        - surface/brand/*
+        - surface/brand/*_inverse
+        - on_surface/brand/*
+        - on_surface/brand/*_inverse
+        - foreground/brand
+        - foreground/brand_inverse
+        - border/brand
+        - border/brand_inverse
       - scope: brand_secondary
         source_family: seven_springs/tupelo
         targets:
-          - surface/brand_secondary/*
-          - surface/brand_secondary/*_inverse
-          - on_surface/brand_secondary/*
-          - on_surface/brand_secondary/*_inverse
-          - foreground/brand_secondary
-          - foreground/brand_secondary_inverse
-          - border/brand_secondary
-          - border/brand_secondary_inverse
+        - surface/brand_secondary/*
+        - surface/brand_secondary/*_inverse
+        - on_surface/brand_secondary/*
+        - on_surface/brand_secondary/*_inverse
+        - foreground/brand_secondary
+        - foreground/brand_secondary_inverse
+        - border/brand_secondary
+        - border/brand_secondary_inverse
       - scope: asset_logo
         source_value: Seven Springs
         targets:
-          - assets/logo
-    inherited_from_base:
+        - assets/logo
+      inherited_from_base:
       - surface/positive/*
       - surface/positive/*_inverse
       - on_surface/positive/*
@@ -105,16 +101,15 @@ semantic_overrides:
       - border/warning_inverse
       - border/critical
       - border/critical_inverse
-    notes:
-      - '`on_surface/*` tokens in the live semantic color extension are contrast-derived from `universal/black` or `universal/white` and are not hue-tinted.'
+      notes:
+      - "`on_surface/*` tokens in the live semantic theme extension are contrast-derived from `universal/black` or `universal/white` and are not hue-tinted."
       - "`springs_green` drives the primary expressive semantic lane, while `tupelo` drives the secondary expressive semantic lane."
       - "`springs_neutral` absorbs Mashed Potatoes and Grandma's Axe into one branded neutral lane for surfaces and readable foregrounds."
       - The Seven Springs Terrain Park colors remain out of the resort-brand semantic write path because the source explicitly separates them from the resort brand colors.
-      - "User-approved exception. The live write uses the explicit `Mini Golf Green` HEX field `#89EBAD` despite the conflicting RGB line in the source image."
-      - "`assets/logo` should resolve to the string `Seven Springs` when the live semantic color extension is written."
-  typography:
-    status: active
-    override_scopes:
+      - User-approved exception. The live write uses the explicit `Mini Golf Green` HEX field `#89EBAD` despite the conflicting RGB line in the source image.
+      - "`assets/logo` should resolve to the string `Seven Springs` when the live semantic theme extension is written."
+    typography:
+      override_scopes:
       - semantic_token: family/heading
         alias_of: seven_springs/family/primary
       - semantic_token: family/body
@@ -129,15 +124,14 @@ semantic_overrides:
         alias_of: universal/weight/medium
       - semantic_token: weight/action/base
         alias_of: universal/weight/black
-    inherited_from_base:
+      inherited_from_base:
       - family/heading_safe
       - family/body_safe
       - family/action_safe
       - weight/body/strong
-      - size/*
-    notes:
-      - "Seven Springs uses one family, `Hoss Sharp`, across headline, subhead, body, and CTA roles, with weight and layout behavior carrying the hierarchy."
+      notes:
+      - Seven Springs uses one family, `Hoss Sharp`, across headline, subhead, body, and CTA roles, with weight and layout behavior carrying the hierarchy.
       - "`weight/heading/strong = bold` stages the Hoss Sharp Bold subhead treatment through the existing semantic ladder."
       - "`Heavy` stages on `universal/weight/black` because the shared raw typography ladder has no dedicated heavy primitive."
 notes:
-  - Seven Springs is live in the Foundations file with three raw color families, one raw typography family primitive, a semantic color logo-name override, and Seven Springs semantic color and typography extensions.
+- Seven Springs is live in the Foundations file with three raw color families, one raw typography family primitive, a semantic theme logo-name override, and Seven Springs semantic theme extension.

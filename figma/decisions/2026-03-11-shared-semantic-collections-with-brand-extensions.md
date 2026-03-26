@@ -1,7 +1,8 @@
 # Shared Semantic Collections With Brand Extensions
 
 Date: 2026-03-11
-Status: accepted
+Status: superseded in part
+Superseded in part by: `2026-03-26-semantic-theme-and-published-global-typography.md`
 Historical naming note: References to `semantic_typography` describe the pre-rename display name. The current collection is `Semantic: Typography`.
 
 ## Context

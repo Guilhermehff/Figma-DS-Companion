@@ -41,7 +41,7 @@ When a local export is explicitly requested, store the dated snapshot under `fig
 ## Inventory Impact
 
 - Global color writes belong in `_Global: Color`.
-- Shared semantic color ladders belong in `Semantic: Color`.
+- Shared semantic theme color ladders belong in `Semantic: Theme`.
 - Brand semantic overrides live in Figma. Create dated exports under `figma/exports/` only when an audit or manual snapshot is explicitly requested.
 - Treat exports under `figma/exports/` as dated reference snapshots, not as live governance state.
 

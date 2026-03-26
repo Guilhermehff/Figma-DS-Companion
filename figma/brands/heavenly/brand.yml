@@ -1,14 +1,14 @@
 version: 1
-updated: 2026-03-23
+updated: '2026-03-26'
 brand_id: heavenly
 display_name: Heavenly
 status: active
 owners:
-  - design_system_governance
+- design_system_governance
 supported_channels:
-  - web
-  - email
-  - ads
+- web
+- email
+- ads
 figma:
   design_system_file_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Foundations?node-id=1-3
   global_collections:
@@ -16,61 +16,57 @@ figma:
     typography_id: VariableCollectionId:23:3
     dimensions_id: VariableCollectionId:23:4
   semantic_extensions:
-    color:
+    theme:
       collection_name: Heavenly
       collection_id: VariableCollectionId:79:1034
-      parent_collection: "Semantic: Color"
+      parent_collection: 'Semantic: Theme'
       parent_collection_id: VariableCollectionId:41:135
-    typography:
-      collection_name: Heavenly
-      collection_id: VariableCollectionId:53:577
-      parent_collection: "Semantic: Typography"
-      parent_collection_id: VariableCollectionId:38:114
 artifacts:
   color:
     intake_artifact: figma/brands/heavenly/color/intake.yml
     preview_artifact: figma/brands/heavenly/color/preview.md
     decision_artifacts:
-      - figma/decisions/2026-03-11-heavenly-staged-foundations-from-source-images.md
-      - figma/decisions/2026-03-11-heavenly-foundations-written-to-figma.md
-      - figma/decisions/2026-03-13-proposed-semantic-role-channel-color-model.md
+    - figma/decisions/2026-03-11-heavenly-staged-foundations-from-source-images.md
+    - figma/decisions/2026-03-11-heavenly-foundations-written-to-figma.md
+    - figma/decisions/2026-03-13-proposed-semantic-role-channel-color-model.md
   typography:
     intake_artifact: figma/brands/heavenly/typography/intake.yml
     preview_artifact: figma/brands/heavenly/typography/preview.md
     decision_artifacts:
-      - figma/decisions/2026-03-11-heavenly-staged-foundations-from-source-images.md
-      - figma/decisions/2026-03-11-heavenly-foundations-written-to-figma.md
+    - figma/decisions/2026-03-11-heavenly-staged-foundations-from-source-images.md
+    - figma/decisions/2026-03-11-heavenly-foundations-written-to-figma.md
 semantic_overrides:
-  color:
+  theme:
     status: active
-    override_scopes:
+    color:
+      override_scopes:
       - scope: brand
         source_family: heavenly/snow_flower_red
         targets:
-          - surface/brand/*
-          - surface/brand/*_inverse
-          - on_surface/brand/*
-          - on_surface/brand/*_inverse
-          - foreground/brand
-          - foreground/brand_inverse
-          - border/brand
-          - border/brand_inverse
+        - surface/brand/*
+        - surface/brand/*_inverse
+        - on_surface/brand/*
+        - on_surface/brand/*_inverse
+        - foreground/brand
+        - foreground/brand_inverse
+        - border/brand
+        - border/brand_inverse
       - scope: brand_secondary
         source_family: heavenly/deep_water_blue
         targets:
-          - surface/brand_secondary/*
-          - surface/brand_secondary/*_inverse
-          - on_surface/brand_secondary/*
-          - on_surface/brand_secondary/*_inverse
-          - foreground/brand_secondary
-          - foreground/brand_secondary_inverse
-          - border/brand_secondary
-          - border/brand_secondary_inverse
+        - surface/brand_secondary/*
+        - surface/brand_secondary/*_inverse
+        - on_surface/brand_secondary/*
+        - on_surface/brand_secondary/*_inverse
+        - foreground/brand_secondary
+        - foreground/brand_secondary_inverse
+        - border/brand_secondary
+        - border/brand_secondary_inverse
       - scope: asset_logo
         source_value: Heavenly
         targets:
-          - assets/logo
-    inherited_from_base:
+        - assets/logo
+      inherited_from_base:
       - surface/neutral/*
       - surface/neutral/*_inverse
       - foreground/default
@@ -105,15 +101,14 @@ semantic_overrides:
       - border/warning_inverse
       - border/critical
       - border/critical_inverse
-    notes:
-      - '`on_surface/*` tokens in the live semantic color extension are contrast-derived from `universal/black` or `universal/white` and are not hue-tinted.'
+      notes:
+      - "`on_surface/*` tokens in the live semantic theme extension are contrast-derived from `universal/black` or `universal/white` and are not hue-tinted."
       - Exact white and black remain inherited through the shared neutral and status role recipes.
       - The role-based migration keeps `snow_flower_red` and `deep_water_blue` as the only expressive semantic lanes.
-      - "`assets/logo` is overridden to the string `Heavenly` in the semantic color extension."
+      - "`assets/logo` is overridden to the string `Heavenly` in the semantic theme extension."
       - "`shore_blue` remains a governed global family but is no longer promoted into semantic."
-  typography:
-    status: active
-    override_scopes:
+    typography:
+      override_scopes:
       - semantic_token: family/heading
         alias_of: heavenly/family/primary
       - semantic_token: family/body
@@ -126,16 +121,15 @@ semantic_overrides:
         alias_of: universal/weight/normal
       - semantic_token: weight/body/strong
         alias_of: universal/weight/medium
-    inherited_from_base:
+      inherited_from_base:
       - family/heading_safe
       - family/body_safe
       - family/action
       - family/action_safe
       - weight/action/*
-      - size/*
-    notes:
+      notes:
       - Heavenly stages on a two-family system: Din Condensed for titles and headlines, and Brandon Grotesque for subheads and body copy.
       - CTA typography remains intentionally inherited because the supplied image specifies CTA tracking but does not explicitly name a CTA family or weight.
-      - The shared semantic typography base now also includes `weight/heading/strong`, `weight/body/strong`, and `size/body/lg` so the Heavenly extension can override against governed base variables rather than a parallel schema.
+      - The shared semantic theme base now also includes `weight/heading/strong`, `weight/body/strong`, and `size/body/lg` so the Heavenly extension can override against governed base variables rather than a parallel schema.
 notes:
-  - Heavenly is live in the Foundations file with global color ladders, two global typography families, the shared raw light weight, a semantic color logo-name override, and semantic color and typography extensions.
+- Heavenly is live in the Foundations file with global color ladders, two global typography families, the shared raw light weight, a semantic theme logo-name override, and semantic theme extension.

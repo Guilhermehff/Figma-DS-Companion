@@ -182,5 +182,5 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
 
 - Subject: `Whistler Blackcomb supporting copy`
   Channels: `web, email, ads`
-  Rule: Keep subheads on Proxima Nova Bold, body on Proxima Nova Regular, and button copy on Proxima Nova Bold while staying inside the existing one-family semantic typography model.
+  Rule: Keep subheads on Proxima Nova Bold, body on Proxima Nova Regular, and button copy on Proxima Nova Bold while staying inside the existing one-family semantic theme typography model.
   Source basis: Whistler Blackcomb hierarchy guidance image.

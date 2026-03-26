@@ -75,7 +75,7 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
 ## Approved Mapping
 
 - `weight/heading/strong` -> `universal/weight/bold`
-- Reason: The live write stages the Bold subhead treatment through the stronger heading slot because the current semantic typography schema has no dedicated subhead role.
+- Reason: The live write stages the Bold subhead treatment through the stronger heading slot because the current semantic theme typography schema has no dedicated subhead role.
 
 ## Semantic Mapping
 
@@ -150,4 +150,4 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
 - Subject: `Seven Springs subhead staging`
   Channels: `web, email, ads`
   Rule: Keep the Bold subhead treatment staged through `weight/heading/strong`.
-  Source basis: User approval in chat plus the current semantic typography schema with no dedicated subhead role.
+  Source basis: User approval in chat plus the current semantic theme typography schema with no dedicated subhead role.

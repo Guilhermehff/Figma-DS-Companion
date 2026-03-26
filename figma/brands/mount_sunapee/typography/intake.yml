@@ -99,7 +99,7 @@ primitive_recommendations:
       - token_name: mount_sunapee/family/utility
         source_family_name: Neutraface Text Bold Italic
         source_style_reference: Bold Italic subheader system
-        rationale: Approved live write. Preserve the distinct H3 subheader face as a raw utility family until the semantic typography schema gains a dedicated subhead lane.
+        rationale: Approved live write. Preserve the distinct H3 subheader face as a raw utility family until the semantic theme typography schema gains a dedicated subhead lane.
         fallback_token: universal/family/web_safe
         fallback_note: The source does not define a fallback stack.
     weights: []
@@ -146,7 +146,7 @@ semantic_recommendations:
         - web
         - email
         - ads
-      notes: Approved live write. Graphik Regular stages the H2 secondary-header recipe through the stronger body emphasis slot because the current semantic typography schema has no dedicated secondary-heading weight lane.
+      notes: Approved live write. Graphik Regular stages the H2 secondary-header recipe through the stronger body emphasis slot because the current semantic theme typography schema has no dedicated secondary-heading weight lane.
   size_aliases: []
 
 role_recipes:

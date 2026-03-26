@@ -70,7 +70,8 @@ Global tokens are raw values.
 Rules:
 
 - Each global token category lives in its **own dedicated collection**.
-- Global collection names must use the `_Global: *` pattern so they are not published.
+- Global collection names default to the `_Global: *` pattern.
+- `Global: Typography` and `Global: Dimensions` are approved published exceptions.
 - Every `_Global: *` collection uses an initial mode named `values`.
 - Variable names inside a collection must not repeat the collection category.
 - Brand separation at the Global level is achieved through **groups** inside that shared collection.
@@ -92,14 +93,16 @@ Example ladder for color:
 Rules:
 
 - Semantic tokens alias Global tokens.
-- Each semantic token category lives in its **own dedicated collection**.
+- The semantic layer lives in one shared published collection named `Semantic: Theme`.
 - **Extended collections happen at the Semantic level** to support brand differences while keeping one semantic schema.
+- `Semantic: Theme` carries semantic color roles, brand assets, and semantic typography family and weight aliases.
+- Typography size stays out of the semantic layer and is published directly from `Global: Typography`.
 - Semantic tokens should be structured so they can be mapped into channel meaning cleanly.
 
 Naming note:
 
 - Figma variable names use slash-delimited paths, not dot-delimited names.
-- In `_Global: Color`, `_Global: Typography`, and `_Global: Dimensions`, the collection already defines the category, so variable names start at the child path (for example `universal/slate/50`, `universal/size/100`, `space/4`).
+- In `_Global: Color`, `Global: Typography`, and `Global: Dimensions`, the collection already defines the category, so variable names start at the child path (for example `universal/slate/50`, `universal/size/100`, `space/4`).
 
 ### Level 3: Channel
 
@@ -111,6 +114,18 @@ Rules:
 - Channel tokens alias Semantic tokens.
 - Channel specific constraints are allowed and expected (e.g., Email limitations).
 - Channel typography is typically handled as **styles** in the channel library.
+- Channel text styles bind `fontFamily` and `fontWeight` from `Semantic: Theme`.
+- Channel text styles bind `fontSize` directly from `Global: Typography`.
+
+### Exception: Typography
+
+Typography sizes are published directly from `Global: Typography`.
+
+Rules:
+
+- `Global: Typography` is an approved published global exception.
+- Only the shared raw size ladder is publish-visible from `Global: Typography`.
+- Raw typography family and weight primitives remain hidden from publishing even though the collection is published.
 
 ### Exception: Dimensions
 
@@ -141,6 +156,15 @@ When MCP is available and the task references a Figma file, selection, or node:
 4. Write operations
    - Use native figma-console write tools when available.
    - Do not switch to capture based generation paths unless explicitly requested.
+
+5. Grid containers and documentation tables
+   - Treat Figma `GRID` parents as anchored grid systems, not as CSS-like free-flow layouts.
+   - Before duplicating or filling grid content, inspect the existing child pattern through MCP so the source row, header cells, variants, and widths are explicit.
+   - Do not rely on child `x` and `y` values to place duplicated grid items. Grid children keep explicit anchor state.
+   - When cloning items inside a `GRID` parent, place every clone with the native grid placement API, `setGridChildPosition(row, col)`, so each child receives the intended row and column anchor.
+   - When a grid child carries long text, resize the affected cell instances and then resize the parent frame to the real content bounds. Do not assume the grid parent will grow correctly on its own.
+   - Verify the result with both a screenshot and a direct check of grid child anchors before considering the write complete.
+   - Do not replace a confirmed `GRID` layout with horizontal or vertical auto layout as a workaround unless the user explicitly approves that structural change.
 
 ## Confirmed Semantic Extension Write Route
 

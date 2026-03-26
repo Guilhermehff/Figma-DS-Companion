@@ -1,14 +1,14 @@
 version: 1
-updated: 2026-03-23
+updated: '2026-03-26'
 brand_id: stevens_pass
 display_name: Stevens Pass
 status: active
 owners:
-  - design_system_governance
+- design_system_governance
 supported_channels:
-  - web
-  - email
-  - ads
+- web
+- email
+- ads
 figma:
   design_system_file_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Foundations?node-id=1-3
   global_collections:
@@ -16,58 +16,54 @@ figma:
     typography_id: VariableCollectionId:23:3
     dimensions_id: VariableCollectionId:23:4
   semantic_extensions:
-    color:
+    theme:
       collection_name: Stevens Pass
       collection_id: VariableCollectionId:188:127
-      parent_collection: "Semantic: Color"
+      parent_collection: 'Semantic: Theme'
       parent_collection_id: VariableCollectionId:41:135
-    typography:
-      collection_name: Stevens Pass
-      collection_id: VariableCollectionId:188:128
-      parent_collection: "Semantic: Typography"
-      parent_collection_id: VariableCollectionId:38:114
 artifacts:
   color:
     intake_artifact: figma/brands/stevens_pass/color/intake.yml
     preview_artifact: figma/brands/stevens_pass/color/preview.md
     decision_artifacts:
-      - figma/decisions/2026-03-18-stevens-pass-foundations-written-to-figma.md
+    - figma/decisions/2026-03-18-stevens-pass-foundations-written-to-figma.md
   typography:
     intake_artifact: figma/brands/stevens_pass/typography/intake.yml
     preview_artifact: figma/brands/stevens_pass/typography/preview.md
     decision_artifacts:
-      - figma/decisions/2026-03-18-stevens-pass-foundations-written-to-figma.md
+    - figma/decisions/2026-03-18-stevens-pass-foundations-written-to-figma.md
 semantic_overrides:
-  color:
+  theme:
     status: active
-    override_scopes:
+    color:
+      override_scopes:
       - scope: brand
         source_family: stevens_pass/stevens_blue
         targets:
-          - surface/brand/*
-          - surface/brand/*_inverse
-          - on_surface/brand/*
-          - on_surface/brand/*_inverse
-          - foreground/brand
-          - foreground/brand_inverse
-          - border/brand
-          - border/brand_inverse
+        - surface/brand/*
+        - surface/brand/*_inverse
+        - on_surface/brand/*
+        - on_surface/brand/*_inverse
+        - foreground/brand
+        - foreground/brand_inverse
+        - border/brand
+        - border/brand_inverse
       - scope: brand_secondary
         source_family: stevens_pass/secondary_blue
         targets:
-          - surface/brand_secondary/*
-          - surface/brand_secondary/*_inverse
-          - on_surface/brand_secondary/*
-          - on_surface/brand_secondary/*_inverse
-          - foreground/brand_secondary
-          - foreground/brand_secondary_inverse
-          - border/brand_secondary
-          - border/brand_secondary_inverse
+        - surface/brand_secondary/*
+        - surface/brand_secondary/*_inverse
+        - on_surface/brand_secondary/*
+        - on_surface/brand_secondary/*_inverse
+        - foreground/brand_secondary
+        - foreground/brand_secondary_inverse
+        - border/brand_secondary
+        - border/brand_secondary_inverse
       - scope: asset_logo
         source_value: Stevens Pass
         targets:
-          - assets/logo
-    inherited_from_base:
+        - assets/logo
+      inherited_from_base:
       - surface/neutral/*
       - surface/neutral/*_inverse
       - foreground/default
@@ -102,15 +98,14 @@ semantic_overrides:
       - border/warning_inverse
       - border/critical
       - border/critical_inverse
-    notes:
-      - '`on_surface/*` tokens in the live semantic color extension are contrast-derived from `universal/black` or `universal/white` and are not hue-tinted.'
+      notes:
+      - "`on_surface/*` tokens in the live semantic theme extension are contrast-derived from `universal/black` or `universal/white` and are not hue-tinted."
       - Exact black and white remain inherited through the shared neutral role recipes because the supplied palette matches `universal/black` and `universal/white`.
       - "`stevens_blue` drives the primary expressive semantic lane, while `secondary_blue` drives the secondary expressive lane."
       - "`mossy_green` remains a governed global-only family for special-case use after the first semantic pass."
-      - "`assets/logo` is overridden to the string `Stevens Pass` in the semantic color extension."
-  typography:
-    status: active
-    override_scopes:
+      - "`assets/logo` is overridden to the string `Stevens Pass` in the semantic theme extension."
+    typography:
+      override_scopes:
       - semantic_token: family/heading
         alias_of: stevens_pass/family/primary
       - semantic_token: family/body
@@ -125,15 +120,14 @@ semantic_overrides:
         alias_of: universal/weight/medium
       - semantic_token: weight/action/base
         alias_of: universal/weight/medium
-    inherited_from_base:
+      inherited_from_base:
       - family/heading_safe
       - family/body_safe
       - family/action_safe
       - weight/heading/strong
-      - size/*
-    notes:
+      notes:
       - Stevens Pass stages on one raw family, `Gibson`, across headline, subhead, body, and CTA roles, with weight carrying the hierarchy.
-      - "User-approved exception: `weight/body/base` stages on Light, `weight/body/strong` stages on Medium, and `weight/action/base` stages on Medium even though the source labels subheads as Semi Bold and CTA as Regular."
+      - 'User-approved exception: `weight/body/base` stages on Light, `weight/body/strong` stages on Medium, and `weight/action/base` stages on Medium even though the source labels subheads as Semi Bold and CTA as Regular.'
       - The source body variants and italics remain documented in the intake and preview artifacts rather than becoming separate semantic lanes.
 notes:
-  - Stevens Pass is live in the Foundations file with three raw color families, one raw typography family primitive, a semantic color logo-name override, and Stevens Pass semantic color and typography extensions.
+- Stevens Pass is live in the Foundations file with three raw color families, one raw typography family primitive, a semantic theme logo-name override, and Stevens Pass semantic theme extension.

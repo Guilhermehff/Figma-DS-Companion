@@ -1,14 +1,14 @@
 version: 1
-updated: 2026-03-23
+updated: '2026-03-26'
 brand_id: keystone
 display_name: Keystone
 status: active
 owners:
-  - design_system_governance
+- design_system_governance
 supported_channels:
-  - web
-  - email
-  - ads
+- web
+- email
+- ads
 figma:
   design_system_file_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Foundations?node-id=1-3
   global_collections:
@@ -16,74 +16,70 @@ figma:
     typography_id: VariableCollectionId:23:3
     dimensions_id: VariableCollectionId:23:4
   semantic_extensions:
-    color:
+    theme:
       collection_name: Keystone
       collection_id: VariableCollectionId:79:1085
-      parent_collection: "Semantic: Color"
+      parent_collection: 'Semantic: Theme'
       parent_collection_id: VariableCollectionId:41:135
-    typography:
-      collection_name: Keystone
-      collection_id: VariableCollectionId:56:753
-      parent_collection: "Semantic: Typography"
-      parent_collection_id: VariableCollectionId:38:114
 artifacts:
   color:
     intake_artifact: figma/brands/keystone/color/intake.yml
     preview_artifact: figma/brands/keystone/color/preview.md
     decision_artifacts:
-      - figma/decisions/2026-03-12-keystone-staged-foundations-from-source-images.md
-      - figma/decisions/2026-03-12-keystone-foundations-written-to-figma.md
-      - figma/decisions/2026-03-13-proposed-semantic-role-channel-color-model.md
+    - figma/decisions/2026-03-12-keystone-staged-foundations-from-source-images.md
+    - figma/decisions/2026-03-12-keystone-foundations-written-to-figma.md
+    - figma/decisions/2026-03-13-proposed-semantic-role-channel-color-model.md
   typography:
     intake_artifact: figma/brands/keystone/typography/intake.yml
     preview_artifact: figma/brands/keystone/typography/preview.md
     decision_artifacts:
-      - figma/decisions/2026-03-12-keystone-staged-foundations-from-source-images.md
-      - figma/decisions/2026-03-12-keystone-foundations-written-to-figma.md
+    - figma/decisions/2026-03-12-keystone-staged-foundations-from-source-images.md
+    - figma/decisions/2026-03-12-keystone-foundations-written-to-figma.md
 semantic_overrides:
-  color:
+  theme:
     status: active
-    override_scopes:
+    color:
+      override_scopes:
       - scope: neutral
         source_family: keystone/cool_grey
         targets:
-          - surface/neutral/*
-          - surface/neutral/*_inverse
-          - foreground/default
-          - foreground/default_inverse
-          - foreground/subtle
-          - foreground/subtle_inverse
-          - border/default
-          - border/default_inverse
-          - border/subtle
-          - border/subtle_inverse
+        - surface/neutral/*
+        - surface/neutral/*_inverse
+        - foreground/default
+        - foreground/default_inverse
+        - foreground/subtle
+        - foreground/subtle_inverse
+        - border/default
+        - border/default_inverse
+        - border/subtle
+        - border/subtle_inverse
       - scope: brand
         source_family: keystone/valencia
         targets:
-          - surface/brand/*
-          - surface/brand/*_inverse
-          - on_surface/brand/*
-          - on_surface/brand/*_inverse
-          - foreground/brand
-          - foreground/brand_inverse
-          - border/brand
-          - border/brand_inverse
+        - surface/brand/*
+        - surface/brand/*_inverse
+        - on_surface/brand/*
+        - on_surface/brand/*_inverse
+        - foreground/brand
+        - foreground/brand_inverse
+        - border/brand
+        - border/brand_inverse
       - scope: brand_secondary
         source_family: keystone/curious_blue
         targets:
-          - surface/brand_secondary/*
-          - surface/brand_secondary/*_inverse
-          - on_surface/brand_secondary/*
-          - on_surface/brand_secondary/*_inverse
-          - foreground/brand_secondary
-          - foreground/brand_secondary_inverse
-          - border/brand_secondary
-          - border/brand_secondary_inverse
+        - surface/brand_secondary/*
+        - surface/brand_secondary/*_inverse
+        - on_surface/brand_secondary/*
+        - on_surface/brand_secondary/*_inverse
+        - foreground/brand_secondary
+        - foreground/brand_secondary_inverse
+        - border/brand_secondary
+        - border/brand_secondary_inverse
       - scope: asset_logo
         source_value: Keystone
         targets:
-          - assets/logo
-    inherited_from_base:
+        - assets/logo
+      inherited_from_base:
       - surface/positive/*
       - surface/positive/*_inverse
       - on_surface/positive/*
@@ -108,14 +104,13 @@ semantic_overrides:
       - border/warning_inverse
       - border/critical
       - border/critical_inverse
-    notes:
-      - '`on_surface/*` tokens in the live semantic color extension are contrast-derived from `universal/black` or `universal/white` and are not hue-tinted.'
+      notes:
+      - "`on_surface/*` tokens in the live semantic theme extension are contrast-derived from `universal/black` or `universal/white` and are not hue-tinted."
       - Cool Grey continues to map to the neutral role set only.
       - The reviewed role-based migration uses `valencia` and `curious_blue` as the only expressive semantic lanes.
-      - "`assets/logo` is overridden to the string `Keystone` in the semantic color extension."
-  typography:
-    status: active
-    override_scopes:
+      - "`assets/logo` is overridden to the string `Keystone` in the semantic theme extension."
+    typography:
+      override_scopes:
       - semantic_token: family/heading
         alias_of: keystone/family/primary
       - semantic_token: family/body
@@ -130,7 +125,7 @@ semantic_overrides:
         alias_of: universal/weight/bold
       - semantic_token: size/action/base
         alias_of: universal/size/500
-    inherited_from_base:
+      inherited_from_base:
       - family/heading_safe
       - family/body_safe
       - family/action_safe
@@ -138,9 +133,9 @@ semantic_overrides:
       - weight/body/strong
       - size/heading/*
       - size/body/*
-    notes:
+      notes:
       - CTA is approved to use Futura Bold, so the semantic action family now aliases the Keystone primary family.
-      - No new raw size step was introduced in this pass; the explicit 48px headline recipe remains documented for a future ladder decision.
+      - 'No new raw size step was introduced in this pass; typography size continues to bind the published shared `Global: Typography` ladder while the explicit 48px headline recipe remains documented for a future ladder decision.'
 notes:
-  - Keystone is live in the Foundations file with three raw color families, two raw typography family primitives, a semantic color logo-name override, and semantic color and typography extensions.
-  - The live write intentionally defers any shared size-ladder expansion beyond the current governed steps.
+- Keystone is live in the Foundations file with three raw color families, two raw typography family primitives, a semantic theme logo-name override, and semantic theme extension.
+- The live write intentionally defers any shared size-ladder expansion beyond the current governed steps.

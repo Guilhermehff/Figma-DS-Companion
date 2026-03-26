@@ -27,7 +27,7 @@ baseVariable.setValueForMode(
 );
 ```
 
-8. If `assets/logo` exists in the base `Semantic: Color` collection, override it to the brand display name string on the extension mode. Do not leave the inherited base value `Agnostic`.
+8. If `assets/logo` exists in the base `Semantic: Theme` collection, override it to the brand display name string on the extension mode. Do not leave the inherited base value `Agnostic`.
 9. Verify the extension through:
    - `extensionCollection.variableOverrides`
    - `await baseVariable.valuesByModeForCollectionAsync(extensionCollection)`
@@ -48,7 +48,7 @@ baseVariable.setValueForMode(
 - `valuesByModeForCollectionAsync()` expects the collection object, not a collection ID string.
 - `figma_get_variables` can temporarily return stale cached data after a write, so plugin-runtime verification through `figma_execute` is the reliable source immediately after mutation.
 - `extend(\"Brand\")` can create a duplicate brand extension if the write flow is retried mid-session, so duplicate checks must run before repo sync.
-- `assets/logo`, when present in the base semantic color collection, should be written as a direct string override such as `Mount Snow`, not as a variable alias.
+- `assets/logo`, when present in the base semantic theme collection, should be written as a direct string override such as `Mount Snow`, not as a variable alias.
 
 ## Minimal Verification Checklist
 

@@ -92,14 +92,14 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
 
 - `family/heading` -> `hunter/family/primary`
 - `family/body` -> `hunter/family/primary`
-- `family/action` -> inherited from the base semantic typography collection in the live pass
+- `family/action` -> inherited from the base semantic theme mapping in the live pass
 - `family/heading_safe` -> `universal/family/web_safe`
 - `family/body_safe` -> `universal/family/web_safe`
-- `family/action_safe` -> inherited from the base semantic typography collection in the live pass
+- `family/action_safe` -> inherited from the base semantic theme mapping in the live pass
 - `weight/heading/base` -> `universal/weight/bold`
 - `weight/body/base` -> `universal/weight/normal`
 - `weight/body/strong` -> `universal/weight/semibold`
-- `size/...` -> inherited from the current semantic typography ladder
+- `size/...` -> published directly from `Global: Typography`
 - Inherited or deferred notes: action remains inherited because the source does not define a CTA recipe
 
 ## Role Recipes

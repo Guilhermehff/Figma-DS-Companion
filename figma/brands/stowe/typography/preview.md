@@ -108,7 +108,7 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
 - `weight/body/base` -> `universal/weight/normal`
 - `weight/body/strong` -> `universal/weight/bold`
 - `weight/action/base` -> `universal/weight/normal`
-- `size/...` -> inherited from the current semantic typography ladder
+- `size/...` -> published directly from `Global: Typography`
 - Inherited or deferred notes: no governed numeric size changes are proposed in the first pass
 
 ## Role Recipes
@@ -162,7 +162,7 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
 - Stowe stages as a two-family system with Athena in the display lane and Raleway across the reading hierarchy.
 - The live write treats the contradictory headline prose word `bold` as a source copy mistake and follows the explicit Athena Regular label.
 - The live write maps action to the same family and weight as heading.
-- `weight/body/strong` now stages the explicit Raleway Bold subhead treatment through the current semantic typography ladder.
+- `weight/body/strong` now stages the explicit Raleway Bold subhead treatment through the current semantic theme typography ladder.
 
 ## Review Readiness
 

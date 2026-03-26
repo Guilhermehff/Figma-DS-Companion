@@ -1,14 +1,14 @@
 version: 1
-updated: 2026-03-23
+updated: '2026-03-26'
 brand_id: crested_butte
 display_name: Crested Butte
 status: active
 owners:
-  - design_system_governance
+- design_system_governance
 supported_channels:
-  - web
-  - email
-  - ads
+- web
+- email
+- ads
 figma:
   design_system_file_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Foundations?node-id=1-3
   global_collections:
@@ -16,76 +16,72 @@ figma:
     typography_id: VariableCollectionId:23:3
     dimensions_id: VariableCollectionId:23:4
   semantic_extensions:
-    color:
+    theme:
       collection_name: Crested Butte
       collection_id: VariableCollectionId:79:970
-      parent_collection: "Semantic: Color"
+      parent_collection: 'Semantic: Theme'
       parent_collection_id: VariableCollectionId:41:135
-    typography:
-      collection_name: Crested Butte
-      collection_id: VariableCollectionId:46:394
-      parent_collection: "Semantic: Typography"
-      parent_collection_id: VariableCollectionId:38:114
 artifacts:
   color:
     intake_artifact: figma/brands/crested_butte/color/intake.yml
     preview_artifact: figma/brands/crested_butte/color/preview.md
     decision_artifacts:
-      - figma/decisions/2026-03-11-brand-manifest-and-generated-registry-governance.md
-      - figma/decisions/2026-03-11-crested-butte-staged-foundations-from-source-images.md
-      - figma/decisions/2026-03-11-crested-butte-foundations-written-to-figma.md
-      - figma/decisions/2026-03-13-proposed-semantic-role-channel-color-model.md
+    - figma/decisions/2026-03-11-brand-manifest-and-generated-registry-governance.md
+    - figma/decisions/2026-03-11-crested-butte-staged-foundations-from-source-images.md
+    - figma/decisions/2026-03-11-crested-butte-foundations-written-to-figma.md
+    - figma/decisions/2026-03-13-proposed-semantic-role-channel-color-model.md
   typography:
     intake_artifact: figma/brands/crested_butte/typography/intake.yml
     preview_artifact: figma/brands/crested_butte/typography/preview.md
     decision_artifacts:
-      - figma/decisions/2026-03-11-role-scoped-semantic-typography-ladders.md
-      - figma/decisions/2026-03-11-crested-butte-staged-foundations-from-source-images.md
-      - figma/decisions/2026-03-11-crested-butte-foundations-written-to-figma.md
+    - figma/decisions/2026-03-11-role-scoped-semantic-typography-ladders.md
+    - figma/decisions/2026-03-11-crested-butte-staged-foundations-from-source-images.md
+    - figma/decisions/2026-03-11-crested-butte-foundations-written-to-figma.md
 semantic_overrides:
-  color:
+  theme:
     status: active
-    override_scopes:
+    color:
+      override_scopes:
       - scope: neutral
         source_family: crested_butte/beyond_black
         targets:
-          - surface/neutral/*
-          - surface/neutral/*_inverse
-          - foreground/default
-          - foreground/default_inverse
-          - foreground/subtle
-          - foreground/subtle_inverse
-          - border/default
-          - border/default_inverse
-          - border/subtle
-          - border/subtle_inverse
+        - surface/neutral/*
+        - surface/neutral/*_inverse
+        - foreground/default
+        - foreground/default_inverse
+        - foreground/subtle
+        - foreground/subtle_inverse
+        - border/default
+        - border/default_inverse
+        - border/subtle
+        - border/subtle_inverse
       - scope: brand
         source_family: crested_butte/wild_red
         targets:
-          - surface/brand/*
-          - surface/brand/*_inverse
-          - on_surface/brand/*
-          - on_surface/brand/*_inverse
-          - foreground/brand
-          - foreground/brand_inverse
-          - border/brand
-          - border/brand_inverse
+        - surface/brand/*
+        - surface/brand/*_inverse
+        - on_surface/brand/*
+        - on_surface/brand/*_inverse
+        - foreground/brand
+        - foreground/brand_inverse
+        - border/brand
+        - border/brand_inverse
       - scope: brand_secondary
         source_family: crested_butte/wild_red
         targets:
-          - surface/brand_secondary/*
-          - surface/brand_secondary/*_inverse
-          - on_surface/brand_secondary/*
-          - on_surface/brand_secondary/*_inverse
-          - foreground/brand_secondary
-          - foreground/brand_secondary_inverse
-          - border/brand_secondary
-          - border/brand_secondary_inverse
+        - surface/brand_secondary/*
+        - surface/brand_secondary/*_inverse
+        - on_surface/brand_secondary/*
+        - on_surface/brand_secondary/*_inverse
+        - foreground/brand_secondary
+        - foreground/brand_secondary_inverse
+        - border/brand_secondary
+        - border/brand_secondary_inverse
       - scope: asset_logo
         source_value: Crested Butte
         targets:
-          - assets/logo
-    inherited_from_base:
+        - assets/logo
+      inherited_from_base:
       - surface/positive/*
       - surface/positive/*_inverse
       - on_surface/positive/*
@@ -110,14 +106,13 @@ semantic_overrides:
       - border/warning_inverse
       - border/critical
       - border/critical_inverse
-    notes:
-      - '`on_surface/*` tokens in the live semantic color extension are contrast-derived from `universal/black` or `universal/white` and are not hue-tinted.'
+      notes:
+      - "`on_surface/*` tokens in the live semantic theme extension are contrast-derived from `universal/black` or `universal/white` and are not hue-tinted."
       - Wild Red now feeds both expressive role sets in the role-based migration.
       - Beyond Black drives the neutral role set, and no third expressive semantic lane survives this migration.
-      - "`assets/logo` is overridden to the string `Crested Butte` in the semantic color extension."
-  typography:
-    status: active
-    override_scopes:
+      - "`assets/logo` is overridden to the string `Crested Butte` in the semantic theme extension."
+    typography:
+      override_scopes:
       - semantic_token: family/heading
         alias_of: crested_butte/family/primary
       - semantic_token: family/body
@@ -130,13 +125,12 @@ semantic_overrides:
         alias_of: universal/weight/normal
       - semantic_token: weight/action/base
         alias_of: universal/weight/semibold
-    inherited_from_base:
+      inherited_from_base:
       - family/heading_safe
       - family/body_safe
       - family/action_safe
-      - size/*
-    notes:
+      notes:
       - The supplied typography source uses Gibson across all reviewed roles, so a single brand family primitive is sufficient.
-      - "`universal/weight/semibold` is now written in `_Global: Typography` and used by the Crested Butte semantic typography extension."
+      - "`universal/weight/semibold` is now written in `_Global: Typography` and used by the Crested Butte semantic theme typography override set."
 notes:
-  - Crested Butte is live in the Foundations file with global color ladders, a global typography family, the shared semibold raw weight, a semantic color logo-name override, and semantic color and typography extensions.
+- Crested Butte is live in the Foundations file with global color ladders, a global typography family, the shared semibold raw weight, a semantic theme logo-name override, and semantic theme extension.

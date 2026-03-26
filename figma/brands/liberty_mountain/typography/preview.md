@@ -67,7 +67,7 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
 ## Review Notes
 
 - Brown is the live family across the semantic hierarchy because the source explicitly defines it as the primary Liberty Mountain font for print and web.
-- Sentinel Book is preserved as a governed raw family only; the current shared semantic typography ladder has no alternate serif slot.
+- Sentinel Book is preserved as a governed raw family only; the current shared semantic theme typography ladder has no alternate serif slot.
 - The live write overrides `weight/heading/strong` and `weight/action/base` away from the shared black default so Liberty Mountain does not inherit an unsupported heavy treatment.
 
 ## Review Readiness

@@ -1,14 +1,14 @@
 version: 1
-updated: 2026-03-23
+updated: '2026-03-26'
 brand_id: whistler_blackcomb
 display_name: Whistler Blackcomb
 status: active
 owners:
-  - design_system_governance
+- design_system_governance
 supported_channels:
-  - web
-  - email
-  - ads
+- web
+- email
+- ads
 figma:
   design_system_file_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Foundations?node-id=1-3
   global_collections:
@@ -16,16 +16,11 @@ figma:
     typography_id: VariableCollectionId:23:3
     dimensions_id: VariableCollectionId:23:4
   semantic_extensions:
-    color:
+    theme:
       collection_name: Whistler Blackcomb
       collection_id: VariableCollectionId:189:173
-      parent_collection: "Semantic: Color"
+      parent_collection: 'Semantic: Theme'
       parent_collection_id: VariableCollectionId:41:135
-    typography:
-      collection_name: Whistler Blackcomb
-      collection_id: VariableCollectionId:189:174
-      parent_collection: "Semantic: Typography"
-      parent_collection_id: VariableCollectionId:38:114
 artifacts:
   color:
     intake_artifact: figma/brands/whistler_blackcomb/color/intake.yml
@@ -36,36 +31,37 @@ artifacts:
     preview_artifact: figma/brands/whistler_blackcomb/typography/preview.md
     decision_artifacts: []
 semantic_overrides:
-  color:
+  theme:
     status: active
-    override_scopes:
+    color:
+      override_scopes:
       - scope: brand
         source_family: whistler_blackcomb/red
         targets:
-          - surface/brand/*
-          - surface/brand/*_inverse
-          - on_surface/brand/*
-          - on_surface/brand/*_inverse
-          - foreground/brand
-          - foreground/brand_inverse
-          - border/brand
-          - border/brand_inverse
+        - surface/brand/*
+        - surface/brand/*_inverse
+        - on_surface/brand/*
+        - on_surface/brand/*_inverse
+        - foreground/brand
+        - foreground/brand_inverse
+        - border/brand
+        - border/brand_inverse
       - scope: brand_secondary
         source_family: whistler_blackcomb/red
         targets:
-          - surface/brand_secondary/*
-          - surface/brand_secondary/*_inverse
-          - on_surface/brand_secondary/*
-          - on_surface/brand_secondary/*_inverse
-          - foreground/brand_secondary
-          - foreground/brand_secondary_inverse
-          - border/brand_secondary
-          - border/brand_secondary_inverse
+        - surface/brand_secondary/*
+        - surface/brand_secondary/*_inverse
+        - on_surface/brand_secondary/*
+        - on_surface/brand_secondary/*_inverse
+        - foreground/brand_secondary
+        - foreground/brand_secondary_inverse
+        - border/brand_secondary
+        - border/brand_secondary_inverse
       - scope: asset_logo
         source_value: Whistler Blackcomb
         targets:
-          - assets/logo
-    inherited_from_base:
+        - assets/logo
+      inherited_from_base:
       - surface/neutral/*
       - surface/neutral/*_inverse
       - foreground/default
@@ -100,15 +96,14 @@ semantic_overrides:
       - border/warning_inverse
       - border/critical
       - border/critical_inverse
-    notes:
-      - '`on_surface/*` tokens in the live semantic color extension are contrast-derived from `universal/black` or `universal/white` and are not hue-tinted.'
+      notes:
+      - "`on_surface/*` tokens in the live semantic theme extension are contrast-derived from `universal/black` or `universal/white` and are not hue-tinted."
       - Exact black and white remain inherited through the shared neutral role recipes because the supplied palette matches `universal/black` and `universal/white`.
       - The official palette supplies one expressive hue, so `whistler_blackcomb/red` now drives both expressive semantic lanes in the current live schema.
-      - "`assets/logo` is overridden to the string `Whistler Blackcomb` in the semantic color extension."
+      - "`assets/logo` is overridden to the string `Whistler Blackcomb` in the semantic theme extension."
       - The source guidance to balance red, black, and white evenly is preserved as a composition rule in the intake and preview artifacts rather than as duplicate raw exact tokens.
-  typography:
-    status: active
-    override_scopes:
+    typography:
+      override_scopes:
       - semantic_token: family/heading
         alias_of: whistler_blackcomb/family/primary
       - semantic_token: family/body
@@ -123,15 +118,14 @@ semantic_overrides:
         alias_of: universal/weight/bold
       - semantic_token: weight/action/base
         alias_of: universal/weight/bold
-    inherited_from_base:
+      inherited_from_base:
       - family/heading_safe
       - family/body_safe
       - family/action_safe
       - weight/heading/strong
-      - size/*
-    notes:
+      notes:
       - Whistler Blackcomb stages on one raw family, `Proxima Nova`, across headline, eyebrow, subhead, body, and button work, with weight carrying the hierarchy.
-      - Eyebrow remains a documented role recipe under the heading lane because the current semantic typography schema has no separate eyebrow token.
+      - Eyebrow remains a documented role recipe under the heading lane because the current semantic theme typography schema has no separate eyebrow token.
       - Live size semantics remain inherited because the supplied hierarchy defines tracking and leading behavior but not governed token sizes.
 notes:
-  - Whistler Blackcomb is live in the Foundations file with one raw color family, one raw typography family primitive, a semantic color logo-name override, and Whistler Blackcomb semantic color and typography extensions.
+- Whistler Blackcomb is live in the Foundations file with one raw color family, one raw typography family primitive, a semantic theme logo-name override, and Whistler Blackcomb semantic theme extension.
