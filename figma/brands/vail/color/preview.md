@@ -48,6 +48,21 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
   Proposed token: `universal/black`
   Notes: Exact match.
 
+## Color Proportion Guidance
+
+### Digital Interface
+
+- Intent: `White` carries layout and readability. `Vail Digital Blue` and `Vail Navy` do the brand work. `Vail Yellow` stays limited to emphasis and calls to action.
+- `Vail White`: `50%`
+  DS mapping: `universal/white`
+- `Vail Digital Blue`: `20%`
+  DS mapping: `vail/digital_blue/600`
+- `Vail Navy`: `20%`
+  DS mapping: `vail/navy/800`
+- `Vail Yellow`: `10%`
+  DS mapping: `vail/yellow/300`
+- Notes: This is approved documentation guidance for digital color composition. It does not alter the governed token ramps or semantic override model.
+
 ## Proposed Families
 
 ### Family: digital_blue
@@ -157,6 +172,7 @@ Hex values:
 - The preview confirms that the darkest `900` and `950` steps across all three families remain visually aligned enough to support white foreground use.
 - `Vail Gray` is treated as a universal neutral use, not a new brand family.
 - The approved preview is now reflected in Figma through global color primitives and the live Vail semantic color extension.
+- Digital composition guidance is now documented as `50/20/20/10` across `White`, `Digital Blue`, `Navy`, and `Yellow`.
 
 ## Review Readiness
 

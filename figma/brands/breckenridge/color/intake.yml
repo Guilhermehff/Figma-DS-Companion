@@ -198,6 +198,33 @@ family_scales:
         value: "#171611"
         source_anchor: false
 
+color_proportion_guidance:
+  status: active
+  source_basis: Approximate ratios inferred from the relative bar widths in the user-provided Breckenridge guide image. The source does not publish exact percentages.
+  contexts:
+    - name: brand_touchpoints
+      intent: Navy is the dominant brand field, red is the secondary expressive lane, white provides open space, and dark_gray remains a restrained supporting neutral.
+      proportions:
+        - source_color: Breckenridge Navy
+          token: breckenridge/navy/800
+          percentage: 35
+          rationale: Longest bar in the source image and the primary brand color.
+        - source_color: Breckenridge Red
+          token: breckenridge/red/600
+          percentage: 30
+          rationale: Second-longest bar in the source image and the key secondary expressive color.
+        - source_color: Breckenridge White
+          token: universal/white
+          percentage: 20
+          rationale: Third bar in the source image and the primary open-space carrier.
+        - source_color: Breckenridge Dark Gray
+          token: breckenridge/dark_gray/800
+          percentage: 15
+          rationale: Shortest bar in the source image and a supporting neutral rather than a leading brand lane.
+      notes:
+        - These percentages are documentation guidance inferred from the source artwork, not exact measured source values.
+        - This guidance informs composition and emphasis, not the governed token ramp values.
+
 validation:
   perceptual_consistency_notes:
     - Navy and dark_gray both anchor at 800 because the provided source values sit in the dark-brand range while still leaving room for 900 and 950 white-contrast steps.

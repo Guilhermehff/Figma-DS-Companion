@@ -216,6 +216,30 @@ family_scales:
         value: "#161615"
         source_anchor: false
 
+color_proportion_guidance:
+  status: active
+  notes:
+    - Color proportion guidance is documentation guidance for composition and emphasis. It does not change token values or semantic override behavior.
+    - This record currently captures the approved digital-color guidance only. Primary brand color proportions are not being governed here.
+  contexts:
+    - context: digital_interface
+      scope: digital_colors_only
+      source_basis: User-approved documentation guidance added on 2026-03-26 after the Vail color documentation draft in Foundations.
+      intent: White carries layout and readability. Digital Blue and Navy carry brand emphasis. Yellow stays limited to emphasis and calls to action.
+      proportions:
+        - source_name: Vail White
+          value: "50%"
+          ds_mapping: universal/white
+        - source_name: Vail Digital Blue
+          value: "20%"
+          ds_mapping: vail/digital_blue/600
+        - source_name: Vail Navy
+          value: "20%"
+          ds_mapping: vail/navy/800
+        - source_name: Vail Yellow
+          value: "10%"
+          ds_mapping: vail/yellow/300
+
 validation:
   perceptual_consistency_notes:
     - The three Vail families land on different source anchor steps because the official source colors occupy different lightness zones in OKLCH.

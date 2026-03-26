@@ -30,6 +30,21 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
   Proposed token: `universal/white`
   Notes: Exact match.
 
+## Color Proportion Guidance
+
+### Brand Touchpoints
+
+- Intent: `Breckenridge Navy` leads the brand field, `Breckenridge Red` acts as the secondary expressive lane, `Breckenridge White` provides open space, and `Breckenridge Dark Gray` stays restrained as a supporting neutral.
+- `Breckenridge Navy`: `35%`
+  DS mapping: `breckenridge/navy/800`
+- `Breckenridge Red`: `30%`
+  DS mapping: `breckenridge/red/600`
+- `Breckenridge White`: `20%`
+  DS mapping: `universal/white`
+- `Breckenridge Dark Gray`: `15%`
+  DS mapping: `breckenridge/dark_gray/800`
+- Notes: These values are approximated from the relative source bar widths in the provided guide image. The source does not publish exact percentages, so this is inferred documentation guidance rather than a measured ratio table.
+
 ## Proposed Families
 
 ### Family: navy
@@ -141,6 +156,7 @@ Hex values:
 - `Breckenridge Dark Gray` should feed semantic `neutral/*` rather than a third expressive semantic lane.
 - `Breckenridge Navy` remains the primary expressive lane; no third expressive semantic lane is promoted.
 - `Breckenridge Red` remains a brand family, not a shared semantic feedback token, because the source presents it as part of the brand palette rather than a state color.
+- Brand composition guidance is documented as an inferred `35/30/20/15` split across `Navy`, `Red`, `White`, and `Dark Gray`.
 
 ## Recommended Semantic Mapping
 
