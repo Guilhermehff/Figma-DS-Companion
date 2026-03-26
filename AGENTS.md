@@ -244,7 +244,10 @@ Decision log requirements:
 - Prefer YAML for structured inventories that will be updated repeatedly.
 - Prefer Markdown for audits, decisions, and narrative documentation.
 - Keep Figma provenance in canonical artifacts such as `figma/brands/<brand>/brand.yml`, intake YAML, and node-specific specs or audits.
-- When creating or updating documentation in Figma, use the variables and text styles from `Documentation Library` by default. Do not create ad hoc documentation styling in other files unless the user explicitly requests an exception.
+- When creating or updating documentation in Figma, use the variables and text styles from `Documentation Library` by default.
+- Do not create ad hoc documentation styling in other files unless the user explicitly requests an exception.
+- Do not import, create, or leave behind local `Docs/*` styles, variables, or duplicate documentation artifacts in non-documentation files unless the user explicitly approves that file-level import.
+- If using `Documentation Library` assets in another file would require creating a local duplicate instead of a remote reference or variable binding, stop and ask for confirmation before writing.
 - Preview Markdown may omit repeated Figma file links or node IDs when that provenance is already captured in the linked canonical artifact.
 - Create local component inventories or specs only when the user explicitly requests component governance artifacts.
 - Avoid duplicating process guidance across `AGENTS.md`, `docs/`, and `figma/docs/`. If the same rule appears in multiple places, consolidate toward one canonical location and simplify the rest.
