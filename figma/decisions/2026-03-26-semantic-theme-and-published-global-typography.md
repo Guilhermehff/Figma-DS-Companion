@@ -12,6 +12,7 @@
   - `2026-03-11-shared-semantic-collections-with-brand-extensions.md`
   - `2026-03-11-role-scoped-semantic-typography-ladders.md`
 - Superseded by:
+  - `2026-03-27-no-mirrored-typography-primitives-for-unestablished-brands.md`
 
 ## Context
 

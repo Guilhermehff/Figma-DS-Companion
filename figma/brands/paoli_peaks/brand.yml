@@ -1,5 +1,5 @@
 version: 1
-updated: '2026-03-26'
+updated: '2026-03-27'
 brand_id: paoli_peaks
 display_name: Paoli Peaks
 status: active
@@ -102,19 +102,12 @@ semantic_overrides:
       - "`peaks_peak` remains a governed raw-only family in the first pass."
       - The documented gradient remains outside the current solid-color variable model.
     typography:
-      override_scopes:
-      - semantic_token: family/heading
-        alias_of: paoli_peaks/family/primary
-      - semantic_token: family/body
-        alias_of: paoli_peaks/family/primary
-      - semantic_token: family/action
-        alias_of: paoli_peaks/family/primary
+      override_scopes: []
       inherited_from_base:
-      - family/heading_safe
-      - family/body_safe
-      - family/action_safe
+      - family/*
       - weight/*
       notes:
-      - Paoli Peaks adds a governed raw family token with the same string value as `universal/family/primary`.
+      - No brand-specific typography guidance is established for Paoli Peaks, so the semantic theme extension inherits the shared universal typography base without overrides.
+      - Typography size continues to bind directly from published `Global: Typography`.
 notes:
-- Paoli Peaks is live in the Foundations file with three raw color families, one mirrored raw typography family primitive, and Paoli Peaks semantic theme extension.
+- Paoli Peaks is live in the Foundations file with three raw color families, no brand-specific raw typography families, and Paoli Peaks semantic theme extension.

@@ -2,6 +2,8 @@
 
 Review state: pending preview review. Verify live write state in `figma/brands/<brand>/brand.yml` and Figma.
 
+If the brand has no established typography guidance, collapse the preview to `Current Decision`, `Documentation State`, and `Review Readiness` only. In that case, do not document mirrored raw brand typography tokens, semantic family overrides, or role recipes.
+
 ## Original Source Roles
 
 - Source role:

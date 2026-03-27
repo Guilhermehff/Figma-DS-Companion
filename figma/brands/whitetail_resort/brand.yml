@@ -1,5 +1,5 @@
 version: 1
-updated: '2026-03-26'
+updated: '2026-03-27'
 brand_id: whitetail_resort
 display_name: Whitetail Resort
 status: active
@@ -101,19 +101,12 @@ semantic_overrides:
       - Exact black and white remain inherited through the shared neutral role recipes.
       - "`two_top_green` drives both expressive semantic lanes because the source provides one non-neutral hue."
     typography:
-      override_scopes:
-      - semantic_token: family/heading
-        alias_of: whitetail_resort/family/primary
-      - semantic_token: family/body
-        alias_of: whitetail_resort/family/primary
-      - semantic_token: family/action
-        alias_of: whitetail_resort/family/primary
+      override_scopes: []
       inherited_from_base:
-      - family/heading_safe
-      - family/body_safe
-      - family/action_safe
+      - family/*
       - weight/*
       notes:
-      - Whitetail Resort adds a governed raw family token with the same string value as `universal/family/primary`.
+      - No brand-specific typography guidance is established for Whitetail Resort, so the semantic theme extension inherits the shared universal typography base without overrides.
+      - Typography size continues to bind directly from published `Global: Typography`.
 notes:
-- Whitetail Resort is live in the Foundations file with one raw color family, one mirrored raw typography family primitive, and Whitetail Resort semantic theme extension.
+- Whitetail Resort is live in the Foundations file with one raw color family, no brand-specific raw typography families, and Whitetail Resort semantic theme extension.

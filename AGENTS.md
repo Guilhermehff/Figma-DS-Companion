@@ -77,6 +77,7 @@ Rules:
 - Brand separation at the Global level is achieved through **groups** inside that shared collection.
 - The first group is **universal**.
 - Additional groups are **brand specific** and should use the `brand_id` values governed in `figma/brands/registry.yml`.
+- Do not create brand-specific typography families or weights that only mirror the universal baseline when a brand has no established typography guidance.
 - Global tokens do not carry UI meaning.
 
 ### Level 2: Semantic
@@ -97,6 +98,7 @@ Rules:
 - **Extended collections happen at the Semantic level** to support brand differences while keeping one semantic schema.
 - `Semantic: Theme` carries semantic color roles, brand assets, and semantic typography family and weight aliases.
 - Typography size stays out of the semantic layer and is published directly from `Global: Typography`.
+- Brands without established typography guidance must inherit semantic typography family and weight aliases from the shared base without extension overrides.
 - Semantic tokens should be structured so they can be mapped into channel meaning cleanly.
 
 Naming note:
@@ -126,6 +128,7 @@ Rules:
 - `Global: Typography` is an approved published global exception.
 - Only the shared raw size ladder is publish-visible from `Global: Typography`.
 - Raw typography family and weight primitives remain hidden from publishing even though the collection is published.
+- Brands without established typography guidance must not receive mirrored raw family or weight primitives in `Global: Typography`.
 
 ### Exception: Dimensions
 

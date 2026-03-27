@@ -2,13 +2,21 @@
 
 Review state: approved preview artifact. Verify live write state in `figma/brands/wildcat_mountain/brand.yml` and Figma.
 
-## Live Semantic Mapping
+## Current Decision
 
-- `family/heading` -> `wildcat_mountain/family/primary`
-- `family/body` -> `wildcat_mountain/family/primary`
-- `family/action` -> `wildcat_mountain/family/primary`
-- `weight/*` and `size/*` -> inherit current semantic base
+- No brand-specific typography guidance is established for Wildcat Mountain.
+- Do not create raw Wildcat Mountain typography tokens that mirror universal values.
+- The `Semantic: Theme` extension for Wildcat Mountain inherits typography family and weight aliases from the shared universal base without overrides.
+- Typography size continues to bind from published `Global: Typography`.
 
-## Review Notes
+## Documentation State
 
-- Wildcat Mountain uses a mirrored universal-family token because no brand-specific font guidance was supplied.
+- The Foundations typography documentation for Wildcat Mountain should use the warning-only state.
+- Do not show token cards, family grids, or derived role recipes until brand-specific typography guidance exists.
+
+## Review Readiness
+
+- Subject: `Wildcat Mountain inherits universal typography`
+  Channels: `web, email, ads`
+  Rule: Keep the brand on the shared universal typography baseline until brand-specific typography guidance is established.
+  Source basis: User instruction in chat.

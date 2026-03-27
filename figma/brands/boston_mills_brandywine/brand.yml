@@ -1,5 +1,5 @@
 version: 1
-updated: '2026-03-26'
+updated: '2026-03-27'
 brand_id: boston_mills_brandywine
 display_name: Boston Mills / Brandywine
 status: active
@@ -102,19 +102,12 @@ semantic_overrides:
       - Because `universal/black` does not provide a numeric family ladder, the inverse expressive tokens use the governed `universal/slate` fallback ladder in the live semantic extension.
       - No brand-specific raw color family was added in the first pass.
     typography:
-      override_scopes:
-      - semantic_token: family/heading
-        alias_of: boston_mills_brandywine/family/primary
-      - semantic_token: family/body
-        alias_of: boston_mills_brandywine/family/primary
-      - semantic_token: family/action
-        alias_of: boston_mills_brandywine/family/primary
+      override_scopes: []
       inherited_from_base:
-      - family/heading_safe
-      - family/body_safe
-      - family/action_safe
+      - family/*
       - weight/*
       notes:
-      - Boston Mills / Brandywine adds a governed raw family token with the same string value as `universal/family/primary`.
+      - No brand-specific typography guidance is established for Boston Mills / Brandywine, so the semantic theme extension inherits the shared universal typography base without overrides.
+      - Typography size continues to bind directly from published `Global: Typography`.
 notes:
-- Boston Mills / Brandywine is live in the Foundations file with no raw color families, one mirrored raw typography family primitive, and Boston Mills / Brandywine semantic theme extension.
+- Boston Mills / Brandywine is live in the Foundations file with no raw color families, no brand-specific raw typography families, and Boston Mills / Brandywine semantic theme extension.

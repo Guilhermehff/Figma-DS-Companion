@@ -1,5 +1,5 @@
 version: 1
-updated: '2026-03-26'
+updated: '2026-03-27'
 brand_id: roundtop_mountain
 display_name: Roundtop Mountain
 status: active
@@ -101,19 +101,12 @@ semantic_overrides:
       - "`green` drives the primary expressive lane and `blue` drives the secondary expressive lane."
       - "`yellow`, `orange`, `red`, and `cyan` remain governed raw-only families in the first pass."
     typography:
-      override_scopes:
-      - semantic_token: family/heading
-        alias_of: roundtop_mountain/family/primary
-      - semantic_token: family/body
-        alias_of: roundtop_mountain/family/primary
-      - semantic_token: family/action
-        alias_of: roundtop_mountain/family/primary
+      override_scopes: []
       inherited_from_base:
-      - family/heading_safe
-      - family/body_safe
-      - family/action_safe
+      - family/*
       - weight/*
       notes:
-      - Roundtop Mountain adds a governed raw family token with the same string value as `universal/family/primary`.
+      - No brand-specific typography guidance is established for Roundtop Mountain, so the semantic theme extension inherits the shared universal typography base without overrides.
+      - Typography size continues to bind directly from published `Global: Typography`.
 notes:
-- Roundtop Mountain is live in the Foundations file with six raw color families, one mirrored raw typography family primitive, and Roundtop Mountain semantic theme extension.
+- Roundtop Mountain is live in the Foundations file with six raw color families, no brand-specific raw typography families, and Roundtop Mountain semantic theme extension.

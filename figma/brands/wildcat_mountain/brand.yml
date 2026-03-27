@@ -1,5 +1,5 @@
 version: 1
-updated: '2026-03-26'
+updated: '2026-03-27'
 brand_id: wildcat_mountain
 display_name: Wildcat Mountain
 status: active
@@ -102,19 +102,12 @@ semantic_overrides:
       - "`wildcat_green` drives the primary expressive lane and `wildcat_teal` drives the secondary expressive lane."
       - "`wildcat_tan` and `wedding_blue` are governed raw-only families in the first pass."
     typography:
-      override_scopes:
-      - semantic_token: family/heading
-        alias_of: wildcat_mountain/family/primary
-      - semantic_token: family/body
-        alias_of: wildcat_mountain/family/primary
-      - semantic_token: family/action
-        alias_of: wildcat_mountain/family/primary
+      override_scopes: []
       inherited_from_base:
-      - family/heading_safe
-      - family/body_safe
-      - family/action_safe
+      - family/*
       - weight/*
       notes:
-      - Wildcat Mountain adds a governed raw family token with the same string value as `universal/family/primary`.
+      - No brand-specific typography guidance is established for Wildcat Mountain, so the semantic theme extension inherits the shared universal typography base without overrides.
+      - Typography size continues to bind directly from published `Global: Typography`.
 notes:
-- Wildcat Mountain is live in the Foundations file with four raw color families, one mirrored raw typography family primitive, and Wildcat Mountain semantic theme extension.
+- Wildcat Mountain is live in the Foundations file with four raw color families, no brand-specific raw typography families, and Wildcat Mountain semantic theme extension.

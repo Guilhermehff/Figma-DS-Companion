@@ -1,5 +1,5 @@
 version: 1
-updated: '2026-03-26'
+updated: '2026-03-27'
 brand_id: snow_creek
 display_name: Snow Creek
 status: active
@@ -101,19 +101,12 @@ semantic_overrides:
       - "`creek_blue` drives the primary expressive lane and `tagline_gold` drives the secondary expressive lane."
       - "`snow_white` remains a governed raw-only family in the first pass."
     typography:
-      override_scopes:
-      - semantic_token: family/heading
-        alias_of: snow_creek/family/primary
-      - semantic_token: family/body
-        alias_of: snow_creek/family/primary
-      - semantic_token: family/action
-        alias_of: snow_creek/family/primary
+      override_scopes: []
       inherited_from_base:
-      - family/heading_safe
-      - family/body_safe
-      - family/action_safe
+      - family/*
       - weight/*
       notes:
-      - Snow Creek adds a governed raw family token with the same string value as `universal/family/primary`.
+      - No brand-specific typography guidance is established for Snow Creek, so the semantic theme extension inherits the shared universal typography base without overrides.
+      - Typography size continues to bind directly from published `Global: Typography`.
 notes:
-- Snow Creek is live in the Foundations file with three raw color families, one mirrored raw typography family primitive, and Snow Creek semantic theme extension.
+- Snow Creek is live in the Foundations file with three raw color families, no brand-specific raw typography families, and Snow Creek semantic theme extension.

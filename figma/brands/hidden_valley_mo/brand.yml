@@ -1,5 +1,5 @@
 version: 1
-updated: '2026-03-26'
+updated: '2026-03-27'
 brand_id: hidden_valley_mo
 display_name: Hidden Valley MO
 status: active
@@ -102,21 +102,12 @@ semantic_overrides:
       - "`hv_blue` drives the primary expressive semantic lane, while `tagline_grey` drives the secondary expressive lane."
       - "`assets/logo` is overridden to the string `Hidden Valley MO` in the semantic theme extension."
     typography:
-      override_scopes:
-      - semantic_token: family/heading
-        alias_of: hidden_valley_mo/family/primary
-      - semantic_token: family/body
-        alias_of: hidden_valley_mo/family/primary
-      - semantic_token: family/action
-        alias_of: hidden_valley_mo/family/primary
+      override_scopes: []
       inherited_from_base:
-      - family/heading_safe
-      - family/body_safe
-      - family/action_safe
+      - family/*
       - weight/*
       notes:
-      - Hidden Valley MO adds a governed raw family token, `hidden_valley_mo/family/primary`, with the same string value as `universal/family/primary`.
-      - The source does not define a brand-specific typography system, and the user explicitly instructed the brand to use the universal baseline.
-      - Weight, safe-family, and size semantics remain inherited from the live base collection because the requested values are unchanged from universal.
+      - No brand-specific typography guidance is established for Hidden Valley MO, so the semantic theme extension inherits the shared universal typography base without overrides.
+      - Typography size continues to bind directly from published `Global: Typography`.
 notes:
-- Hidden Valley MO is live in the Foundations file with two raw color families, one mirrored raw typography family primitive, a semantic theme logo-name override, and Hidden Valley MO semantic theme extension.
+- Hidden Valley MO is live in the Foundations file with two raw color families, no brand-specific raw typography families, a semantic theme logo-name override, and Hidden Valley MO semantic theme extension.
