@@ -224,6 +224,29 @@ family_scales:
         value: "#161617"
         source_anchor: false
 
+color_proportion_guidance:
+  status: active
+  source_basis: Approximate ratios inferred from the Park City ratio diagram plus the accompanying text that Bright Red should be treated as an accent rather than a dominant field. The source does not publish exact percentages.
+  contexts:
+    - name: brand_touchpoints
+      intent: Pale Red and Park City Red carry most of the brand field. Bright Red stays accent-sized even when it is fully saturated. Cool Gray, Park City Gray, and White remain supporting neutrals outside the ratio bar.
+      proportions:
+        - source_color: Pale Red
+          token: park_city/park_city_gray/200
+          percentage: 50
+          rationale: Largest field in the proportion graphic and the soft neutral wash behind the expressive red bars.
+        - source_color: Park City Red
+          token: park_city/park_city_red/700
+          percentage: 30
+          rationale: Dominant horizontal brand bar in the ratio graphic and the main expressive lane.
+        - source_color: Bright Red
+          token: park_city/bright_red/600
+          percentage: 20
+          rationale: Narrowest field in the ratio graphic and explicitly called out as more of an accent color.
+      notes:
+        - These percentages are approximate documentation guidance inferred from the displayed ratio diagram rather than exact published values.
+        - The source text explicitly says Bright Red should be treated more like an accent color, like arrow trios.
+
 validation:
   perceptual_consistency_notes:
     - Park City Red lands at `700` because the supplied swatch is already a dark, high-contrast brand red rather than a mid-tone accent.

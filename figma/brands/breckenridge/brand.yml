@@ -113,11 +113,11 @@ semantic_overrides:
     typography:
       override_scopes:
       - semantic_token: family/heading
-        alias_of: breckenridge/family/primary
+        alias_of: breckenridge/family/01
       - semantic_token: family/body
-        alias_of: breckenridge/family/secondary
+        alias_of: breckenridge/family/02
       - semantic_token: family/action
-        alias_of: breckenridge/family/primary
+        alias_of: breckenridge/family/01
       - semantic_token: weight/heading/base
         alias_of: universal/weight/bold
       - semantic_token: weight/body/base

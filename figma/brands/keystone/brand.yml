@@ -112,11 +112,11 @@ semantic_overrides:
     typography:
       override_scopes:
       - semantic_token: family/heading
-        alias_of: keystone/family/primary
+        alias_of: keystone/family/01
       - semantic_token: family/body
-        alias_of: keystone/family/secondary
+        alias_of: keystone/family/02
       - semantic_token: family/action
-        alias_of: keystone/family/primary
+        alias_of: keystone/family/01
       - semantic_token: weight/heading/base
         alias_of: universal/weight/bold
       - semantic_token: weight/body/base

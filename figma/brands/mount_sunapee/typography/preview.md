@@ -77,24 +77,24 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
   Notes: Covers Graphik Light in the body lane.
 
 - Proposed primitive:
-  Token name: `mount_sunapee/family/primary`
+  Token name: `mount_sunapee/family/01`
   Source item: `Graphik`
-  Fallback token: `universal/family/web_safe`
+  Fallback token: `universal/family/fallback`
   Notes: Graphik is the repeated Mount Sunapee typography system across H1, H2, and body.
 
 - Proposed primitive:
-  Token name: `mount_sunapee/family/utility`
+  Token name: `mount_sunapee/family/02`
   Source item: `Neutraface Text Bold Italic`
-  Fallback token: `universal/family/web_safe`
+  Fallback token: `universal/family/fallback`
   Notes: Preserve the H3 subheader face as a raw utility family until the semantic theme typography schema gains a dedicated subhead lane.
 
 ## Semantic Mapping
 
-- `family/heading` -> `mount_sunapee/family/primary`
-- `family/body` -> `mount_sunapee/family/primary`
+- `family/heading` -> `mount_sunapee/family/01`
+- `family/body` -> `mount_sunapee/family/01`
 - `family/action` -> inherited from the base semantic theme mapping in the first pass
-- `family/heading_safe` -> `universal/family/web_safe`
-- `family/body_safe` -> `universal/family/web_safe`
+- `family/heading_safe` -> `universal/family/fallback`
+- `family/body_safe` -> `universal/family/fallback`
 - `family/action_safe` -> inherited from the base semantic theme mapping in the first pass
 - `weight/heading/base` -> `universal/weight/bold`
 - `weight/body/base` -> `universal/weight/light`
@@ -110,7 +110,7 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
   We lift people up.
 </div>
 
-- Proposed family token: `mount_sunapee/family/primary`
+- Proposed family token: `mount_sunapee/family/01`
 - Proposed weight token: `universal/weight/bold`
 - Proposed size token: `inherited current heading ladder`
 - Notes: H1 remains on Graphik Bold.
@@ -121,7 +121,7 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
   We elevate spirits by creating fun, invigorating mountain experiences for everyone.
 </div>
 
-- Proposed family token: `mount_sunapee/family/primary`
+- Proposed family token: `mount_sunapee/family/01`
 - Proposed weight token: `universal/weight/normal`
 - Proposed size token: `inherited current heading and body ladders`
 - Notes: Approved live write. H2 stages through the Graphik family with the shared normal weight.
@@ -132,7 +132,7 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
   Memories and stories of which are the reason families continue to leave their homes, flock to the mountains, and enjoy the awe-inspiring outdoors to be uplifted again and again.
 </div>
 
-- Proposed family token: `mount_sunapee/family/primary`
+- Proposed family token: `mount_sunapee/family/01`
 - Proposed weight token: `universal/weight/light`
 - Proposed size token: `inherited current body ladder`
 - Notes: Body copy remains on Graphik Light.
@@ -143,7 +143,7 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
   Activities
 </div>
 
-- Proposed family token: `mount_sunapee/family/utility`
+- Proposed family token: `mount_sunapee/family/02`
 - Proposed weight token: `universal/weight/bold`
 - Proposed size token: `inherited current heading ladder`
 - Notes: Raw-only utility recipe. It remains outside the live semantic extension until a subhead family lane exists.

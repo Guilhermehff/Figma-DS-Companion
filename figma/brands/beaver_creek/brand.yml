@@ -110,11 +110,11 @@ semantic_overrides:
     typography:
       override_scopes:
       - semantic_token: family/heading
-        alias_of: beaver_creek/family/primary
+        alias_of: beaver_creek/family/01
       - semantic_token: family/body
-        alias_of: beaver_creek/family/secondary
+        alias_of: beaver_creek/family/02
       - semantic_token: family/action
-        alias_of: beaver_creek/family/action
+        alias_of: beaver_creek/family/03
       - semantic_token: weight/heading/base
         alias_of: universal/weight/thin
       - semantic_token: weight/body/base

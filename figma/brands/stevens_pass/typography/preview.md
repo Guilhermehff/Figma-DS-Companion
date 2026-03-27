@@ -35,9 +35,9 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
 ## Primitive Recommendations
 
 - Proposed primitive:
-  Token name: `stevens_pass/family/primary`
+  Token name: `stevens_pass/family/01`
   Source item: `Gibson`
-  Fallback token: `universal/family/web_safe`
+  Fallback token: `universal/family/fallback`
   Notes: One-family Stevens Pass system across headline, subhead, CTA, and body roles.
 
 - Reuse:
@@ -72,9 +72,9 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
 
 ## Proposed Semantic Mapping
 
-- `family/heading` -> `stevens_pass/family/primary`
-- `family/body` -> `stevens_pass/family/primary`
-- `family/action` -> `stevens_pass/family/primary`
+- `family/heading` -> `stevens_pass/family/01`
+- `family/body` -> `stevens_pass/family/01`
+- `family/action` -> `stevens_pass/family/01`
 - `weight/heading/base` -> `universal/weight/bold`
 - `weight/body/base` -> `universal/weight/light`
 - `weight/body/strong` -> `universal/weight/medium`

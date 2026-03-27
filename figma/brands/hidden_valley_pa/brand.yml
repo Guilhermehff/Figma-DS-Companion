@@ -108,11 +108,11 @@ semantic_overrides:
     typography:
       override_scopes:
       - semantic_token: family/heading
-        alias_of: hidden_valley_pa/family/primary
+        alias_of: hidden_valley_pa/family/01
       - semantic_token: family/body
-        alias_of: hidden_valley_pa/family/primary
+        alias_of: hidden_valley_pa/family/01
       - semantic_token: family/action
-        alias_of: hidden_valley_pa/family/primary
+        alias_of: hidden_valley_pa/family/01
       - semantic_token: weight/heading/base
         alias_of: universal/weight/black
       - semantic_token: weight/heading/strong
@@ -129,6 +129,6 @@ semantic_overrides:
       - family/action_safe
       notes:
       - Hidden Valley PA is live as a Roboto-led semantic system, with `Mrs Eaves XL Regular` preserved as the raw display family used for logo and design applications.
-      - The first semantic pass keeps heading, body, and action on `hidden_valley_pa/family/primary` because the current shared typography ladder does not have a dedicated ornamental display role.
+      - The first semantic pass keeps heading, body, and action on `hidden_valley_pa/family/01` because the current shared typography ladder does not have a dedicated ornamental display role.
 notes:
 - Hidden Valley PA is live in the Foundations file with four raw color families, two raw typography family primitives, a semantic theme logo-name override, and Hidden Valley PA semantic theme extension.

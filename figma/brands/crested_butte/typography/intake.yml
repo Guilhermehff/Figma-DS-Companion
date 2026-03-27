@@ -72,12 +72,12 @@ primitive_recommendations:
         reason: Keeps body on the shared raw ladder until a numeric specification is approved.
   proposed_primitives:
     families:
-      - token_name: crested_butte/family/primary
+      - token_name: crested_butte/family/01
         source_family_name: Gibson
         source_style_reference: Gibson Semibold and Gibson Regular across headline, sub-headline, and body
         rationale: A single brand family spans the reviewed Crested Butte typography system.
-        fallback_token: universal/family/web_safe
-        fallback_note: Source artifact does not specify a fallback stack, so the review defaults to the global web-safe family.
+        fallback_token: universal/family/fallback
+        fallback_note: Source artifact does not specify a fallback stack, so the review defaults to the global fallback family.
     weights:
       - token_name: universal/weight/semibold
         source_weight_label: Semibold
@@ -88,27 +88,27 @@ primitive_recommendations:
 semantic_recommendations:
   family_aliases:
     - semantic_token: family/heading
-      global_token: crested_butte/family/primary
+      global_token: crested_butte/family/01
       safe_semantic_token: family/heading_safe
-      safe_global_token: universal/family/web_safe
+      safe_global_token: universal/family/fallback
       intended_channels:
         - web
         - email
         - ads
       notes: Crested Butte keeps Gibson as the brand family for expressive headline work and falls back to the safe alias when delivery constraints require it.
     - semantic_token: family/body
-      global_token: crested_butte/family/primary
+      global_token: crested_butte/family/01
       safe_semantic_token: family/body_safe
-      safe_global_token: universal/family/web_safe
+      safe_global_token: universal/family/fallback
       intended_channels:
         - web
         - email
         - ads
       notes: Body copy stays on the same family because the source explicitly defines Gibson Regular as the default body face.
     - semantic_token: family/action
-      global_token: crested_butte/family/primary
+      global_token: crested_butte/family/01
       safe_semantic_token: family/action_safe
-      safe_global_token: universal/family/web_safe
+      safe_global_token: universal/family/fallback
       intended_channels:
         - web
         - email
@@ -162,8 +162,8 @@ semantic_recommendations:
 role_recipes:
   - role_name: headline
     source_role: Headline | Gibson Semibold
-    proposed_family_token: crested_butte/family/primary
-    fallback_token: universal/family/web_safe
+    proposed_family_token: crested_butte/family/01
+    fallback_token: universal/family/fallback
     proposed_weight_token: universal/weight/semibold
     proposed_size_token: universal/size/800
     size_assumption_status: assumed
@@ -176,8 +176,8 @@ role_recipes:
     notes: Left aligned. Use varied indentation per line and keep the lockup to four lines or fewer.
   - role_name: subhead
     source_role: Sub-headline | Gibson Semibold
-    proposed_family_token: crested_butte/family/primary
-    fallback_token: universal/family/web_safe
+    proposed_family_token: crested_butte/family/01
+    fallback_token: universal/family/fallback
     proposed_weight_token: universal/weight/semibold
     proposed_size_token: universal/size/500
     size_assumption_status: assumed
@@ -190,8 +190,8 @@ role_recipes:
     notes: Intended as a single-line supporting headline and limited to black or white application.
   - role_name: body
     source_role: Body | Gibson Regular
-    proposed_family_token: crested_butte/family/primary
-    fallback_token: universal/family/web_safe
+    proposed_family_token: crested_butte/family/01
+    fallback_token: universal/family/fallback
     proposed_weight_token: universal/weight/normal
     proposed_size_token: universal/size/300
     size_assumption_status: assumed

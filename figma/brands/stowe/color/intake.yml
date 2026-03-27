@@ -1,6 +1,6 @@
 date: 2026-03-19
 brand: stowe
-source_reference: User-provided image in chat showing the Stowe primary color palette
+source_reference: User-provided images in chat showing the Stowe primary color palette and recommended color-usage ratios
 source_type: image
 figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Foundations?node-id=1-3
 status: active
@@ -158,6 +158,33 @@ family_scales:
       - name: stowe/stowe_blue/950
         value: "#12181c"
         source_anchor: false
+
+color_proportion_guidance:
+  status: active
+  source_basis: Approximate ratios inferred from the relative field widths in the user-provided Stowe guide image. The source says the page shows the recommended ratios for color usage across touchpoints but does not publish exact percentages.
+  contexts:
+    - name: brand_touchpoints
+      intent: Powder White is the dominant canvas. Stowe Red is the primary expressive lane. Ice Blue and Winter Blue share the supporting structural blue-gray system, with Ice Blue carrying more area than Winter Blue.
+      proportions:
+        - source_color: Powder White
+          token: universal/white
+          percentage: 50
+          rationale: Largest field in the composition and the main whitespace carrier.
+        - source_color: Stowe Red
+          token: stowe/stowe_red/600
+          percentage: 20
+          rationale: Largest non-white block and the clearest brand-identifying color.
+        - source_color: Ice Blue
+          token: stowe/stowe_blue/500
+          percentage: 18
+          rationale: Wider of the two blue-gray support blocks in the recommended ratio strip.
+        - source_color: Winter Blue
+          token: stowe/stowe_blue/800
+          percentage: 12
+          rationale: Narrowest support block and the darkest contrast lane in the source strip.
+      notes:
+        - These percentages are approximate documentation guidance inferred from the displayed ratio fields rather than exact published source values.
+        - Ice Blue and Winter Blue are governed inside one raw family even though the usage page shows them as separate visual shares.
 
 validation:
   perceptual_consistency_notes:

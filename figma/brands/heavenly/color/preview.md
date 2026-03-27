@@ -39,6 +39,22 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
   Proposed token: `universal/black`
   Notes: Exact match.
 
+## Color Proportion Guidance
+
+### Brand Touchpoints
+
+- Intent: `Fresh Powder White`, `Mountain Shadow Black`, and `Snow Flower Red` define the primary Heavenly palette. `Deep Water Blue` and `Shore Blue` are secondary supporting colors inspired by Lake Tahoe.
+- Dominant palette:
+  `Fresh Powder White` -> `universal/white`
+  `Mountain Shadow Black` -> `universal/black`
+  `Snow Flower Red` -> `heavenly/snow_flower_red/600`
+- Supporting palette:
+  `Deep Water Blue` -> `heavenly/deep_water_blue/700`
+  `Shore Blue` -> `heavenly/shore_blue/300`
+- Notes:
+  The source says `Mountain Shadow Black` should be used for text and only very sparingly as a high-contrast logo color or minimal separating block.
+  The source frames the blues as supporting lake-derived colors rather than primary brand fields.
+
 ## Proposed Families
 
 ### Family: snow_flower_red

@@ -38,6 +38,30 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
 
 - `Carinthia Rail` reuses `universal/black`.
 
+## Color Proportion Guidance
+
+### Mount Snow Brand Work
+
+- Intent: The primary Mount Snow palette must always be present. Secondary colors can support it but may never appear without the primary palette.
+- Dominant palette:
+  `Bluebird Express` -> `mount_snow/bluebird_express/600`
+  `Whipped Cream` -> `mount_snow/whipped_cream/100`
+  `Heart Red` -> `mount_snow/heart_red/500`
+- Supporting palette:
+  `Somerset Blue` -> `mount_snow/somerset_blue/500`
+  `Rosy Cheeks` -> `mount_snow/rosy_cheeks/400`
+  `Carinthia Rail` -> `universal/black`
+- Notes: The usage page explicitly says secondary colors should never appear within work without the presence of the primary palette.
+
+### Carinthia-Specific Work
+
+- Intent: Carinthia-specific work uses a restricted three-color subset rather than the full Mount Snow palette.
+- Dominant palette:
+  `Carinthia Rail` -> `universal/black`
+  `Whipped Cream` -> `mount_snow/whipped_cream/100`
+  `Heart Red` -> `mount_snow/heart_red/500`
+- Notes: The usage page explicitly says Carinthia work should use only `Carinthia Rail`, `Whipped Cream`, and `Heart Red`.
+
 ## Proposed Families
 
 ### Family: bluebird_express

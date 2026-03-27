@@ -111,9 +111,9 @@ semantic_overrides:
     typography:
       override_scopes:
       - semantic_token: family/heading
-        alias_of: mount_sunapee/family/primary
+        alias_of: mount_sunapee/family/01
       - semantic_token: family/body
-        alias_of: mount_sunapee/family/primary
+        alias_of: mount_sunapee/family/01
       - semantic_token: weight/heading/base
         alias_of: universal/weight/bold
       - semantic_token: weight/body/base
@@ -127,8 +127,8 @@ semantic_overrides:
       - family/action_safe
       - weight/action/*
       notes:
-      - Mount Sunapee is live as a Graphik-led typography system with `family/heading` and `family/body` both mapped to `mount_sunapee/family/primary`.
-      - User-approved live write. `Neutraface Text Bold Italic` is preserved as the raw `mount_sunapee/family/utility` primitive because the current semantic theme typography schema has no dedicated subhead family lane.
+      - Mount Sunapee is live as a Graphik-led typography system with `family/heading` and `family/body` both mapped to `mount_sunapee/family/01`.
+      - User-approved live write. `Neutraface Text Bold Italic` is preserved as the raw `mount_sunapee/family/02` primitive because the current semantic theme typography schema has no dedicated subhead family lane.
       - "`weight/heading/base = universal/weight/bold`, `weight/body/base = universal/weight/light`, and `weight/body/strong = universal/weight/normal` stage the explicit H1, H2, and body hierarchy through the current semantic theme typography ladder."
       - The source does not define a CTA or action recipe, so the action lane remains inherited in the live semantic extension.
 notes:

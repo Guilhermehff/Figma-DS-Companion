@@ -111,9 +111,9 @@ semantic_overrides:
     typography:
       override_scopes:
       - semantic_token: family/heading
-        alias_of: northstar/family/primary
+        alias_of: northstar/family/01
       - semantic_token: family/body
-        alias_of: northstar/family/primary
+        alias_of: northstar/family/01
       - semantic_token: weight/heading/base
         alias_of: universal/weight/medium
       - semantic_token: weight/body/base

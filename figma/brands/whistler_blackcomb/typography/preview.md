@@ -72,9 +72,9 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
 ## Primitive Recommendations
 
 - Proposed primitive:
-  Token name: `whistler_blackcomb/family/primary`
+  Token name: `whistler_blackcomb/family/01`
   Source item: `Proxima Nova`
-  Fallback token: `universal/family/web_safe`
+  Fallback token: `universal/family/fallback`
   Notes: One-family Whistler Blackcomb system across headline, eyebrow, subhead, body, and button roles.
 
 - Reuse:
@@ -97,12 +97,12 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
 
 ## Semantic Mapping
 
-- `family/heading` -> `whistler_blackcomb/family/primary`
-- `family/body` -> `whistler_blackcomb/family/primary`
-- `family/action` -> `whistler_blackcomb/family/primary`
-- `family/heading_safe` -> inherit `universal/family/web_safe`
-- `family/body_safe` -> inherit `universal/family/web_safe`
-- `family/action_safe` -> inherit `universal/family/web_safe`
+- `family/heading` -> `whistler_blackcomb/family/01`
+- `family/body` -> `whistler_blackcomb/family/01`
+- `family/action` -> `whistler_blackcomb/family/01`
+- `family/heading_safe` -> inherit `universal/family/fallback`
+- `family/body_safe` -> inherit `universal/family/fallback`
+- `family/action_safe` -> inherit `universal/family/fallback`
 - `weight/heading/base` -> `universal/weight/black`
 - `weight/body/base` -> `universal/weight/normal`
 - `weight/body/strong` -> `universal/weight/bold`
@@ -118,7 +118,7 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
   HEADLINES
 </div>
 
-- Proposed family token: `whistler_blackcomb/family/primary`
+- Proposed family token: `whistler_blackcomb/family/01`
 - Proposed weight token: `universal/weight/black`
 - Proposed size token: `inherited current heading ladder`
 - Notes: Core display headline treatment with 15 tracking and 90 percent leading.
@@ -129,7 +129,7 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
   EYEBROW
 </div>
 
-- Proposed family token: `whistler_blackcomb/family/primary`
+- Proposed family token: `whistler_blackcomb/family/01`
 - Proposed weight token: `universal/weight/black`
 - Proposed size token: `inherited current heading ladder`
 - Notes: Eyebrow stays in the heading family and weight, with smaller size behavior defined downstream.
@@ -140,7 +140,7 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
   Subheads
 </div>
 
-- Proposed family token: `whistler_blackcomb/family/primary`
+- Proposed family token: `whistler_blackcomb/family/01`
 - Proposed weight token: `universal/weight/bold`
 - Proposed size token: `inherited current heading ladder`
 - Notes: Supporting headline lane mapped through the stronger body weight semantic.
@@ -151,7 +151,7 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
   Body
 </div>
 
-- Proposed family token: `whistler_blackcomb/family/primary`
+- Proposed family token: `whistler_blackcomb/family/01`
 - Proposed weight token: `universal/weight/normal`
 - Proposed size token: `inherited current body ladder`
 - Notes: Reading-copy treatment with 140 percent leading.
@@ -162,7 +162,7 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
   Button
 </div>
 
-- Proposed family token: `whistler_blackcomb/family/primary`
+- Proposed family token: `whistler_blackcomb/family/01`
 - Proposed weight token: `universal/weight/bold`
 - Proposed size token: `inherited current action ladder`
 - Notes: Action copy maps directly to the existing bold action lane.

@@ -29,6 +29,70 @@ universal_reuse:
     - family: two_top_green
       provided_value: "#233d34"
       anchor_step: 800
+scale_spec:
+  working_space: OKLCH
+  steps:
+    - 50
+    - 100
+    - 200
+    - 300
+    - 400
+    - 500
+    - 600
+    - 700
+    - 800
+    - 900
+    - 950
+  contrast_targets:
+    white:
+      "800": "4.5:1 preferred"
+      "900": "7:1 required"
+      "950": "7:1 required"
+    black:
+      "50": "7:1 required"
+      "100": "7:1 required"
+      "200": "4.5:1 required"
+
+family_scales:
+  - family: two_top_green
+    source_name: Two Top Green
+    source_value: "#233d34"
+    source_anchor: 800_source
+    tokens:
+      - name: whitetail_resort/two_top_green/50
+        value: "#d9dedc"
+        source_anchor: false
+      - name: whitetail_resort/two_top_green/100
+        value: "#c4cbc9"
+        source_anchor: false
+      - name: whitetail_resort/two_top_green/200
+        value: "#b0b9b6"
+        source_anchor: false
+      - name: whitetail_resort/two_top_green/300
+        value: "#9aa6a2"
+        source_anchor: false
+      - name: whitetail_resort/two_top_green/400
+        value: "#85938e"
+        source_anchor: false
+      - name: whitetail_resort/two_top_green/500
+        value: "#6e7f79"
+        source_anchor: false
+      - name: whitetail_resort/two_top_green/600
+        value: "#576b64"
+        source_anchor: false
+      - name: whitetail_resort/two_top_green/700
+        value: "#3f564e"
+        source_anchor: false
+      - name: whitetail_resort/two_top_green/800
+        value: "#233d34"
+        source_anchor: true
+      - name: whitetail_resort/two_top_green/900
+        value: "#121f1a"
+        source_anchor: false
+      - name: whitetail_resort/two_top_green/950
+        value: "#030504"
+        source_anchor: false
+
 semantic_recommendations:
   role_sets:
     - scope: neutral

@@ -87,11 +87,11 @@ primitive_recommendations:
     sizes: []
   proposed_primitives:
     families:
-      - token_name: whistler_blackcomb/family/primary
+      - token_name: whistler_blackcomb/family/01
         source_family_name: Proxima Nova
         source_style_reference: Black, Bold, and Regular hierarchy
         rationale: Whistler Blackcomb uses one type family across headline, eyebrow, subhead, body, and button roles, with weight and recipe behavior carrying the distinction.
-        fallback_token: universal/family/web_safe
+        fallback_token: universal/family/fallback
         fallback_note: The source does not define a fallback stack.
     weights: []
   hold_for_review: []
@@ -99,27 +99,27 @@ primitive_recommendations:
 semantic_recommendations:
   family_aliases:
     - semantic_token: family/heading
-      global_token: whistler_blackcomb/family/primary
+      global_token: whistler_blackcomb/family/01
       safe_semantic_token: family/heading_safe
-      safe_global_token: universal/family/web_safe
+      safe_global_token: universal/family/fallback
       intended_channels:
         - web
         - email
         - ads
       notes: Headline and eyebrow work stay on Proxima Nova.
     - semantic_token: family/body
-      global_token: whistler_blackcomb/family/primary
+      global_token: whistler_blackcomb/family/01
       safe_semantic_token: family/body_safe
-      safe_global_token: universal/family/web_safe
+      safe_global_token: universal/family/fallback
       intended_channels:
         - web
         - email
         - ads
       notes: Body and subhead copy stay on the same family, with weight carrying the distinction.
     - semantic_token: family/action
-      global_token: whistler_blackcomb/family/primary
+      global_token: whistler_blackcomb/family/01
       safe_semantic_token: family/action_safe
-      safe_global_token: universal/family/web_safe
+      safe_global_token: universal/family/fallback
       intended_channels:
         - web
         - email
@@ -159,8 +159,8 @@ semantic_recommendations:
 role_recipes:
   - role_name: headline
     source_role: Headline | Proxima Nova Black
-    proposed_family_token: whistler_blackcomb/family/primary
-    fallback_token: universal/family/web_safe
+    proposed_family_token: whistler_blackcomb/family/01
+    fallback_token: universal/family/fallback
     proposed_weight_token: universal/weight/black
     proposed_size_token: inherited current heading ladder
     size_assumption_status: deferred_no_new_size
@@ -173,8 +173,8 @@ role_recipes:
     notes: Core display headline treatment.
   - role_name: eyebrow
     source_role: Eyebrow | Proxima Nova Black
-    proposed_family_token: whistler_blackcomb/family/primary
-    fallback_token: universal/family/web_safe
+    proposed_family_token: whistler_blackcomb/family/01
+    fallback_token: universal/family/fallback
     proposed_weight_token: universal/weight/black
     proposed_size_token: inherited current heading ladder
     size_assumption_status: deferred_no_new_size
@@ -187,8 +187,8 @@ role_recipes:
     notes: Eyebrow remains a role recipe under the heading family and weight rather than becoming a new semantic lane.
   - role_name: subhead
     source_role: Subhead | Proxima Nova Bold
-    proposed_family_token: whistler_blackcomb/family/primary
-    fallback_token: universal/family/web_safe
+    proposed_family_token: whistler_blackcomb/family/01
+    fallback_token: universal/family/fallback
     proposed_weight_token: universal/weight/bold
     proposed_size_token: inherited current heading ladder
     size_assumption_status: deferred_no_new_size
@@ -201,8 +201,8 @@ role_recipes:
     notes: Subheads stage through the stronger body weight lane in the current semantic theme typography schema.
   - role_name: body
     source_role: Body | Proxima Nova Regular
-    proposed_family_token: whistler_blackcomb/family/primary
-    fallback_token: universal/family/web_safe
+    proposed_family_token: whistler_blackcomb/family/01
+    fallback_token: universal/family/fallback
     proposed_weight_token: universal/weight/normal
     proposed_size_token: inherited current body ladder
     size_assumption_status: deferred_no_new_size
@@ -215,8 +215,8 @@ role_recipes:
     notes: Reading-copy treatment.
   - role_name: action
     source_role: Button | Proxima Nova Bold
-    proposed_family_token: whistler_blackcomb/family/primary
-    fallback_token: universal/family/web_safe
+    proposed_family_token: whistler_blackcomb/family/01
+    fallback_token: universal/family/fallback
     proposed_weight_token: universal/weight/bold
     proposed_size_token: inherited current action ladder
     size_assumption_status: deferred_no_new_size

@@ -15,6 +15,17 @@ Review state: pending preview review. Verify live write state in `figma/brands/<
   Proposed token:
   Notes:
 
+## Color Proportion Guidance
+
+### <Context>
+
+- Intent:
+- `<Color>`: `NN%`
+  DS mapping:
+- Dominant palette:
+- Supporting palette:
+- Notes: When the source provides only qualitative hierarchy and not exact percentages, document the dominance and accent rules explicitly instead of inventing numeric ratios.
+
 ## Proposed Families
 
 ### Family: 

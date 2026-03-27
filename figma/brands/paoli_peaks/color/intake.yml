@@ -37,6 +37,146 @@ universal_reuse:
     - family: peaks_valley
       provided_value: "#8fd16a"
       anchor_step: 500
+scale_spec:
+  working_space: OKLCH
+  steps:
+    - 50
+    - 100
+    - 200
+    - 300
+    - 400
+    - 500
+    - 600
+    - 700
+    - 800
+    - 900
+    - 950
+  contrast_targets:
+    white:
+      "800": "4.5:1 preferred"
+      "900": "7:1 required"
+      "950": "7:1 required"
+    black:
+      "50": "7:1 required"
+      "100": "7:1 required"
+      "200": "4.5:1 required"
+
+family_scales:
+  - family: paoli_blue
+    source_name: Paoli Blue
+    source_value: "#192957"
+    source_anchor: 800_source
+    tokens:
+      - name: paoli_peaks/paoli_blue/50
+        value: "#f3f6fb"
+        source_anchor: false
+      - name: paoli_peaks/paoli_blue/100
+        value: "#e3eaf4"
+        source_anchor: false
+      - name: paoli_peaks/paoli_blue/200
+        value: "#c7d3e6"
+        source_anchor: false
+      - name: paoli_peaks/paoli_blue/300
+        value: "#a4b6cf"
+        source_anchor: false
+      - name: paoli_peaks/paoli_blue/400
+        value: "#7f97b5"
+        source_anchor: false
+      - name: paoli_peaks/paoli_blue/500
+        value: "#617a9c"
+        source_anchor: false
+      - name: paoli_peaks/paoli_blue/600
+        value: "#4a6283"
+        source_anchor: false
+      - name: paoli_peaks/paoli_blue/700
+        value: "#334a6a"
+        source_anchor: false
+      - name: paoli_peaks/paoli_blue/800
+        value: "#192957"
+        source_anchor: true
+      - name: paoli_peaks/paoli_blue/900
+        value: "#14224a"
+        source_anchor: false
+      - name: paoli_peaks/paoli_blue/950
+        value: "#0e1a3a"
+        source_anchor: false
+  - family: peaks_peak
+    source_name: Peak's Peak
+    source_value: "#d8dfe1"
+    source_anchor: 200_source
+    tokens:
+      - name: paoli_peaks/peaks_peak/50
+        value: "#f1f3f4"
+        source_anchor: false
+      - name: paoli_peaks/peaks_peak/100
+        value: "#e5eaeb"
+        source_anchor: false
+      - name: paoli_peaks/peaks_peak/200
+        value: "#d8dfe1"
+        source_anchor: true
+      - name: paoli_peaks/peaks_peak/300
+        value: "#b9bfc1"
+        source_anchor: false
+      - name: paoli_peaks/peaks_peak/400
+        value: "#9fa4a6"
+        source_anchor: false
+      - name: paoli_peaks/peaks_peak/500
+        value: "#868a8b"
+        source_anchor: false
+      - name: paoli_peaks/peaks_peak/600
+        value: "#6e7172"
+        source_anchor: false
+      - name: paoli_peaks/peaks_peak/700
+        value: "#565959"
+        source_anchor: false
+      - name: paoli_peaks/peaks_peak/800
+        value: "#3f4141"
+        source_anchor: false
+      - name: paoli_peaks/peaks_peak/900
+        value: "#282929"
+        source_anchor: false
+      - name: paoli_peaks/peaks_peak/950
+        value: "#111212"
+        source_anchor: false
+  - family: peaks_valley
+    source_name: Peak's Valley
+    source_value: "#8fd16a"
+    source_anchor: 500_source
+    tokens:
+      - name: paoli_peaks/peaks_valley/50
+        value: "#e6f5de"
+        source_anchor: false
+      - name: paoli_peaks/peaks_valley/100
+        value: "#d7eec9"
+        source_anchor: false
+      - name: paoli_peaks/peaks_valley/200
+        value: "#c6e8b3"
+        source_anchor: false
+      - name: paoli_peaks/peaks_valley/300
+        value: "#b5e19d"
+        source_anchor: false
+      - name: paoli_peaks/peaks_valley/400
+        value: "#a4d985"
+        source_anchor: false
+      - name: paoli_peaks/peaks_valley/500
+        value: "#8fd16a"
+        source_anchor: true
+      - name: paoli_peaks/peaks_valley/600
+        value: "#70a453"
+        source_anchor: false
+      - name: paoli_peaks/peaks_valley/700
+        value: "#557d3f"
+        source_anchor: false
+      - name: paoli_peaks/peaks_valley/800
+        value: "#3c582c"
+        source_anchor: false
+      - name: paoli_peaks/peaks_valley/900
+        value: "#23341a"
+        source_anchor: false
+      - name: paoli_peaks/peaks_valley/950
+        value: "#0b1108"
+        source_anchor: false
+
 semantic_recommendations:
   role_sets:
     - scope: neutral

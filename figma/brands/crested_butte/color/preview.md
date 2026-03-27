@@ -25,6 +25,19 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
   Proposed token: `universal/white`
   Notes: Exact match.
 
+## Color Proportion Guidance
+
+### Brand Touchpoints
+
+- Intent: `Powder White` slightly leads. `Wild Red` holds nearly equal weight as the main expressive lane. `Beyond Black` remains a smaller but still substantial grounding neutral.
+- `Crested Butte Powder White`: `40%`
+  DS mapping: `universal/white`
+- `Crested Butte Wild Red`: `35%`
+  DS mapping: `crested_butte/wild_red/700`
+- `Crested Butte Beyond Black`: `25%`
+  DS mapping: `crested_butte/beyond_black/950`
+- Notes: These values are approximate documentation guidance inferred from the displayed block widths in the supplied palette strip. The source does not publish exact percentages in text.
+
 ## Proposed Families
 
 ### Family: wild_red

@@ -112,9 +112,9 @@ semantic_overrides:
     typography:
       override_scopes:
       - semantic_token: family/heading
-        alias_of: hunter/family/primary
+        alias_of: hunter/family/01
       - semantic_token: family/body
-        alias_of: hunter/family/primary
+        alias_of: hunter/family/01
       - semantic_token: weight/heading/base
         alias_of: universal/weight/bold
       - semantic_token: weight/body/base
@@ -128,7 +128,7 @@ semantic_overrides:
       - family/action_safe
       - weight/action/*
       notes:
-      - Hunter is live as a one-family typography system with `family/heading` and `family/body` both mapped to `hunter/family/primary`.
+      - Hunter is live as a one-family typography system with `family/heading` and `family/body` both mapped to `hunter/family/01`.
       - "`weight/heading/base = universal/weight/bold`, `weight/body/base = universal/weight/normal`, and `weight/body/strong = universal/weight/semibold` stage the explicit headline, subheadline, and body hierarchy through the current semantic theme typography ladder."
       - Galano Grotesque Light remains documented as a raw contrasting-body option rather than a separate semantic lane.
       - The source does not define a CTA or action recipe, so the action lane remains inherited in the live semantic extension.

@@ -68,17 +68,17 @@ primitive_recommendations:
     sizes: []
   proposed_primitives:
     families:
-      - token_name: hidden_valley_pa/family/primary
+      - token_name: hidden_valley_pa/family/01
         source_family_name: Roboto
         source_style_reference: Black and Regular across the functional hierarchy
         rationale: Roboto carries the live semantic hierarchy.
-        fallback_token: universal/family/web_safe
+        fallback_token: universal/family/fallback
         fallback_note: Safe-family behavior remains inherited.
-      - token_name: hidden_valley_pa/family/display
+      - token_name: hidden_valley_pa/family/02
         source_family_name: Mrs Eaves XL Regular
         source_style_reference: logo and design applications
         rationale: Preserved as the raw display family.
-        fallback_token: universal/family/web_safe
+        fallback_token: universal/family/fallback
         fallback_note: Safe-family behavior remains inherited.
     weights: []
   hold_for_review: []
@@ -86,25 +86,25 @@ primitive_recommendations:
 semantic_recommendations:
   family_aliases:
     - semantic_token: family/heading
-      global_token: hidden_valley_pa/family/primary
+      global_token: hidden_valley_pa/family/01
       safe_semantic_token: family/heading_safe
-      safe_global_token: universal/family/web_safe
+      safe_global_token: universal/family/fallback
       intended_channels:
         - web
         - email
         - ads
     - semantic_token: family/body
-      global_token: hidden_valley_pa/family/primary
+      global_token: hidden_valley_pa/family/01
       safe_semantic_token: family/body_safe
-      safe_global_token: universal/family/web_safe
+      safe_global_token: universal/family/fallback
       intended_channels:
         - web
         - email
         - ads
     - semantic_token: family/action
-      global_token: hidden_valley_pa/family/primary
+      global_token: hidden_valley_pa/family/01
       safe_semantic_token: family/action_safe
-      safe_global_token: universal/family/web_safe
+      safe_global_token: universal/family/fallback
       intended_channels:
         - web
         - email
@@ -125,17 +125,17 @@ semantic_recommendations:
 role_recipes:
   - role_name: heading
     source_role: Roboto Black
-    proposed_family_token: hidden_valley_pa/family/primary
+    proposed_family_token: hidden_valley_pa/family/01
     proposed_weight_token: universal/weight/black
     proposed_size_token: inherited current heading ladder
   - role_name: body
     source_role: Roboto Regular
-    proposed_family_token: hidden_valley_pa/family/primary
+    proposed_family_token: hidden_valley_pa/family/01
     proposed_weight_token: universal/weight/normal
     proposed_size_token: inherited current body ladder
   - role_name: action
     source_role: Roboto Black
-    proposed_family_token: hidden_valley_pa/family/primary
+    proposed_family_token: hidden_valley_pa/family/01
     proposed_weight_token: universal/weight/black
     proposed_size_token: inherited current action ladder
 

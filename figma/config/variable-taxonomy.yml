@@ -1,5 +1,5 @@
-version: 9
-updated: 2026-03-26
+version: 10
+updated: 2026-03-27
 owner: vail_resorts
 scope:
   purpose: Token naming and structure rules for the Vail Resorts Design System
@@ -47,14 +47,14 @@ token_levels:
       format: "<group>/<token>"
       notes:
         - group is universal or a brand_id defined in figma/brands/registry.yml
-        - token is a scale key or a descriptive primitive key
+        - token is a scale key or a neutral primitive slot key
         - use underscore for decimal scale keys in Figma (for example 0_5, 1_5)
       examples:
         - universal/slate/50
         - vail/digital_blue/600
-        - universal/family/primary
-        - universal/family/web_safe
-        - northstar/family/primary
+        - universal/family/01
+        - universal/family/fallback
+        - northstar/family/01
         - space/4
 
   semantic:
@@ -75,9 +75,9 @@ token_levels:
       - "universal/green/700 -> surface/positive/strong -> background/status/positive"
       - "universal/slate/900 -> foreground/default -> text/body/default"
       - "vail/digital_blue/800 -> surface/brand/default -> background/action/default"
-      - "vail/family/display -> family/heading -> typography/heading/display"
-      - "vail/family/primary -> family/body -> typography/body/default"
-      - "universal/family/web_safe -> family/body_safe -> typography/body/email"
+      - "vail/family/01 -> family/heading -> typography/heading/display"
+      - "vail/family/02 -> family/body -> typography/body/default"
+      - "universal/family/fallback -> family/body_safe -> typography/body/email"
       - "universal/weight/black -> weight/heading/strong -> typography/heading/display"
     naming:
       format: "<semantic_role_path>"
@@ -415,7 +415,7 @@ brand_typography_foundations:
     - "Review every source family against existing `Global: Typography` primitives before proposing a new brand family token."
     - Reuse universal weight primitives by default; raw weights should remain universal unless a truly distinct numeric value is required later.
     - If the source omits raw sizes, provisionally map each role to the existing universal size ladder and mark the mapping as assumed until design validation confirms it.
-    - If the source omits fallback or web-safe families, default the family fallback reference to universal/family/web_safe.
+    - If the source omits fallback families, default the family fallback reference to universal/family/fallback.
     - Recommend semantic theme family aliases using family/heading, family/body, and family/action plus the safe counterparts family/heading_safe, family/body_safe, and family/action_safe.
     - Recommend role-scoped semantic theme weight aliases using emphasis keys such as subtle, base, and strong.
     - Keep typography sizes on the shared global size ladder and bind them directly from `Global: Typography` in channel text styles.
@@ -426,20 +426,20 @@ brand_typography_foundations:
     family_naming:
       format: "<brand>/family/<slot>"
       preferred_slots:
-        - primary
-        - secondary
-        - display
-        - accent
-        - web_safe
+        - 01
+        - 02
+        - 03
+        - 04
+        - fallback
       notes:
         - family slots must be structural and reusable across roles.
-        - if a family is used mainly for headlines, prefer display over headline because headline is a style role, not a raw primitive.
+        - use neutral numeric slots in the live brand-local family order rather than encoding usage or emphasis in the primitive name.
         - if one family serves multiple roles, keep one family token and map multiple role recipes to it.
-        - universal/family/web_safe is the single raw safe-family placeholder used by semantic safe aliases when email or other constrained channels cannot rely on brand fonts.
+        - fallback is the single approved named technical family slot for constrained channels and safe semantic aliases.
       examples:
-        - vail/family/display
-        - vail/family/primary
-        - breckenridge/family/secondary
+        - vail/family/01
+        - vail/family/02
+        - breckenridge/family/02
     weight_naming:
       format: "<group>/weight/<weight_key>"
       notes:
@@ -469,7 +469,7 @@ brand_typography_foundations:
       - family/action_safe
     notes:
       - safe aliases are semantic substitutes for channels such as email that need safe-family behavior.
-      - until a more specific safe raw family is approved, safe aliases should point to universal/family/web_safe.
+      - until a more specific safe raw family is approved, safe aliases should point to universal/family/fallback.
       - safe aliases should normally remain on the universal safe family in both the base collection and brand extensions unless a constrained-channel brand exception is explicitly approved.
   theme_weight_aliases:
     collection_strategy:

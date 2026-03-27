@@ -68,6 +68,26 @@ family_scales:
         value: ""
         source_anchor: false
 
+color_proportion_guidance:
+  status: pending
+  source_basis: ""
+  contexts:
+    - name: ""
+      intent: ""
+      proportions:
+        - source_color: ""
+          token: ""
+          percentage: 0
+          rationale: ""
+      dominant_palette:
+        - source_color: ""
+          token: ""
+      supporting_palette:
+        - source_color: ""
+          token: ""
+      notes:
+        - ""
+
 validation:
   perceptual_consistency_notes:
     - ""

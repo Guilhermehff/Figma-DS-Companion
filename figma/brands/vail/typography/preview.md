@@ -78,16 +78,16 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
   Notes: Recommended reuse of the existing universal raw medium weight token.
 
 - Proposed primitive:
-  Token name: `vail/family/primary`
+  Token name: `vail/family/02`
   Source item: `Avenir`
-  Fallback token: `universal/family/web_safe`
-  Notes: Shared text family for eyebrow, subhead, body, and cta. Because no fallback stack is provided, the review defaults to the universal web-safe family.
+  Fallback token: `universal/family/fallback`
+  Notes: Shared text family for eyebrow, subhead, body, and cta. Because no fallback stack is provided, the review defaults to the universal fallback family.
 
 - Proposed primitive:
-  Token name: `vail/family/display`
+  Token name: `vail/family/01`
   Source item: `Termina`
-  Fallback token: `universal/family/web_safe`
-  Notes: Distinct display family for headline treatment. Because no fallback stack is provided, the review defaults to the universal web-safe family.
+  Fallback token: `universal/family/fallback`
+  Notes: Distinct display family for headline treatment. Because no fallback stack is provided, the review defaults to the universal fallback family.
 
 - Reuse:
   Source item: `Black`
@@ -133,23 +133,23 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
 ## Semantic Mapping
 
 - Semantic token: `family/heading`
-  Global token: `vail/family/display`
+  Global token: `vail/family/01`
   Safe semantic token: `family/heading_safe`
-  Safe global token: `universal/family/web_safe`
+  Safe global token: `universal/family/fallback`
   Intended channels: `web, email, ads`
   Notes: Web and ad executions should use the brand display family. Email should use the safe alias when Termina delivery is not reliable.
 
 - Semantic token: `family/body`
-  Global token: `vail/family/primary`
+  Global token: `vail/family/02`
   Safe semantic token: `family/body_safe`
-  Safe global token: `universal/family/web_safe`
+  Safe global token: `universal/family/fallback`
   Intended channels: `web, email, ads`
   Notes: Primary reading family across channels, with the safe alias reserved for constrained rendering environments.
 
 - Semantic token: `family/action`
-  Global token: `vail/family/primary`
+  Global token: `vail/family/02`
   Safe semantic token: `family/action_safe`
-  Safe global token: `universal/family/web_safe`
+  Safe global token: `universal/family/fallback`
   Intended channels: `web, email, ads`
   Notes: Action-oriented copy stays on the primary family, with a safe counterpart for email-safe use.
 
@@ -157,9 +157,9 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
 
 ### Role: eyebrow
 
-Proposed family token: `vail/family/primary`
+Proposed family token: `vail/family/02`
 
-Fallback token: `universal/family/web_safe`
+Fallback token: `universal/family/fallback`
 
 Proposed weight token: `universal/weight/black`
 
@@ -184,9 +184,9 @@ Recipe notes:
 
 ### Role: headline
 
-Proposed family token: `vail/family/display`
+Proposed family token: `vail/family/01`
 
-Fallback token: `universal/family/web_safe`
+Fallback token: `universal/family/fallback`
 
 Proposed weight token: `universal/weight/black`
 
@@ -211,9 +211,9 @@ Recipe notes:
 
 ### Role: subhead
 
-Proposed family token: `vail/family/primary`
+Proposed family token: `vail/family/02`
 
-Fallback token: `universal/family/web_safe`
+Fallback token: `universal/family/fallback`
 
 Proposed weight token: `universal/weight/black`
 
@@ -238,9 +238,9 @@ Recipe notes:
 
 ### Role: body
 
-Proposed family token: `vail/family/primary`
+Proposed family token: `vail/family/02`
 
-Fallback token: `universal/family/web_safe`
+Fallback token: `universal/family/fallback`
 
 Proposed weight token: `universal/weight/medium`
 
@@ -265,9 +265,9 @@ Recipe notes:
 
 ### Role: cta
 
-Proposed family token: `vail/family/primary`
+Proposed family token: `vail/family/02`
 
-Fallback token: `universal/family/web_safe`
+Fallback token: `universal/family/fallback`
 
 Proposed weight token: `universal/weight/black`
 
@@ -293,7 +293,7 @@ Recipe notes:
 ## Review Notes
 
 - This preview is for governance review only. The rendered font in Markdown depends on local font availability and is not a guaranteed visual match.
-- Missing fallback stacks default to `universal/family/web_safe`.
+- Missing fallback stacks default to `universal/family/fallback`.
 - Missing numeric sizes are mapped provisionally to the universal size ladder and should be revisited after design experimentation.
 - Global family naming is now approved as `primary`, `display`, and `web_safe`.
 - The shared family and weight baseline now lives in `Semantic: Theme`, while Vail-specific family overrides live in the Vail theme extension.

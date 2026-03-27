@@ -59,21 +59,21 @@ Review state: approved preview artifact aligned to the Beaver Creek source guida
 ## Primitive Recommendations
 
 - Proposed primitive:
-  Token name: `beaver_creek/family/primary`
+  Token name: `beaver_creek/family/01`
   Source item: `IvyPresto Display`
-  Fallback token: `universal/family/web_safe`
+  Fallback token: `universal/family/fallback`
   Notes: Primary display family.
 
 - Proposed primitive:
-  Token name: `beaver_creek/family/secondary`
+  Token name: `beaver_creek/family/02`
   Source item: `Vinila`
-  Fallback token: `universal/family/web_safe`
+  Fallback token: `universal/family/fallback`
   Notes: Reading family.
 
 - Proposed primitive:
-  Token name: `beaver_creek/family/action`
+  Token name: `beaver_creek/family/03`
   Source item: `Vinila Condensed`
-  Fallback token: `universal/family/web_safe`
+  Fallback token: `universal/family/fallback`
   Notes: Condensed family for CTA and subheadline work.
 
 - Proposed primitive:
@@ -100,9 +100,9 @@ Review state: approved preview artifact aligned to the Beaver Creek source guida
 
 ## Semantic Mapping
 
-- `family/heading` -> `beaver_creek/family/primary`
-- `family/body` -> `beaver_creek/family/secondary`
-- `family/action` -> `beaver_creek/family/action`
+- `family/heading` -> `beaver_creek/family/01`
+- `family/body` -> `beaver_creek/family/02`
+- `family/action` -> `beaver_creek/family/03`
 - `weight/heading/base` -> `universal/weight/thin`
 - `weight/body/base` -> `universal/weight/light`
 - `weight/action/base` -> `universal/weight/bold`
@@ -116,7 +116,7 @@ Review state: approved preview artifact aligned to the Beaver Creek source guida
   Headlines
 </div>
 
-- Proposed family token: `beaver_creek/family/primary`
+- Proposed family token: `beaver_creek/family/01`
 - Proposed weight token: `universal/weight/thin`
 - Proposed size token: `universal/size/700`
 - Notes: Beaver Creek display lane with high tracking and optical kerning.
@@ -127,7 +127,7 @@ Review state: approved preview artifact aligned to the Beaver Creek source guida
   CTA / Subheadlines
 </div>
 
-- Proposed family token: `beaver_creek/family/action`
+- Proposed family token: `beaver_creek/family/03`
 - Proposed weight token: `universal/weight/bold`
 - Proposed size token: `universal/size/400`
 - Notes: Shared supporting and action lane.
@@ -138,7 +138,7 @@ Review state: approved preview artifact aligned to the Beaver Creek source guida
   All body copy should be in Light.
 </div>
 
-- Proposed family token: `beaver_creek/family/secondary`
+- Proposed family token: `beaver_creek/family/02`
 - Proposed weight token: `universal/weight/light`
 - Proposed size token: `universal/size/200`
 - Notes: Reading lane with the loosest leading ratio in the system.
@@ -149,7 +149,7 @@ Review state: approved preview artifact aligned to the Beaver Creek source guida
   BeaverCreek.com
 </div>
 
-- Proposed family token: `beaver_creek/family/action`
+- Proposed family token: `beaver_creek/family/03`
 - Proposed weight token: `universal/weight/light`
 - Proposed size token: `universal/size/100`
 - Notes: Raw-only utility recipe for non-clickable media.

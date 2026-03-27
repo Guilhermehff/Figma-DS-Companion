@@ -45,7 +45,7 @@ primitive_recommendations:
         source_family_name: ""
         source_style_reference: ""
         rationale: ""
-        fallback_token: universal/family/web_safe
+        fallback_token: universal/family/fallback
         fallback_note: ""
     weights:
       - token_name: ""
@@ -61,7 +61,7 @@ semantic_recommendations:
     - semantic_token: family/heading
       global_token: ""
       safe_semantic_token: family/heading_safe
-      safe_global_token: universal/family/web_safe
+      safe_global_token: universal/family/fallback
       intended_channels:
         - web
         - email
@@ -88,7 +88,7 @@ role_recipes:
   - role_name: ""
     source_role: ""
     proposed_family_token: ""
-    fallback_token: universal/family/web_safe
+    fallback_token: universal/family/fallback
     proposed_weight_token: ""
     proposed_size_token: ""
     size_assumption_status: ""

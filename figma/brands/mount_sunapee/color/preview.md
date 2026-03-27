@@ -33,6 +33,25 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
 
 - None in the approved live mapping.
 
+## Color Proportion Guidance
+
+### Brand Touchpoints
+
+- Intent: White space leads. `Lake Sunapee` and `Cold Wax` carry the main brand presence. `Golden Hour`, `Snow Gun`, and `Verde Slate` remain accent-level support and should not dominate on their own.
+- `White Space`: `45%`
+  DS mapping: `universal/white`
+- `Lake Sunapee`: `25%`
+  DS mapping: `mount_sunapee/sunapee_neutral/800`
+- `Cold Wax`: `15%`
+  DS mapping: `mount_sunapee/cold_wax/500`
+- `Golden Hour`: `8%`
+  DS mapping: `mount_sunapee/golden_hour/300`
+- `Snow Gun`: `4%`
+  DS mapping: `mount_sunapee/sunapee_neutral/100`
+- `Verde Slate`: `3%`
+  DS mapping: `mount_sunapee/sunapee_neutral/400`
+- Notes: These values are approximate documentation guidance derived from the stacked source graphic plus the accompanying text. The source also says secondary colors should be used only as accents and should never dominate a design.
+
 ## Approved Families
 
 ### Family: sunapee_neutral

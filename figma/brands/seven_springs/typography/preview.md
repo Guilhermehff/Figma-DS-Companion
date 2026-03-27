@@ -43,9 +43,9 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
 ## Primitive Recommendations
 
 - Proposed primitive:
-  Token name: `seven_springs/family/primary`
+  Token name: `seven_springs/family/01`
   Source item: `Hoss Sharp`
-  Fallback token: `universal/family/web_safe`
+  Fallback token: `universal/family/fallback`
   Notes: One-family Seven Springs system across headline, subhead, body, and CTA roles.
 
 - Reuse:
@@ -79,9 +79,9 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
 
 ## Semantic Mapping
 
-- `family/heading` -> `seven_springs/family/primary`
-- `family/body` -> `seven_springs/family/primary`
-- `family/action` -> `seven_springs/family/primary`
+- `family/heading` -> `seven_springs/family/01`
+- `family/body` -> `seven_springs/family/01`
+- `family/action` -> `seven_springs/family/01`
 - `weight/heading/base` -> `universal/weight/black`
 - `weight/heading/strong` -> `universal/weight/bold`
 - `weight/body/base` -> `universal/weight/medium`
@@ -96,7 +96,7 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
   THESE SLOPES WON'T SKI THEMSELVES
 </div>
 
-- Proposed family token: `seven_springs/family/primary`
+- Proposed family token: `seven_springs/family/01`
 - Proposed weight token: `universal/weight/black`
 - Proposed size token: `inherited current heading ladder`
 - Notes: Left justified unless the layout calls for centering, with optical kerning.
@@ -107,7 +107,7 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
   HEADLINES
 </div>
 
-- Proposed family token: `seven_springs/family/primary`
+- Proposed family token: `seven_springs/family/01`
 - Proposed weight token: `universal/weight/bold`
 - Proposed size token: `inherited current heading ladder`
 - Notes: Proposed first pass routes the Bold subhead recipe through `weight/heading/strong`.
@@ -118,7 +118,7 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 </div>
 
-- Proposed family token: `seven_springs/family/primary`
+- Proposed family token: `seven_springs/family/01`
 - Proposed weight token: `universal/weight/medium`
 - Proposed size token: `inherited current body ladder`
 - Notes: Reading copy stays on Hoss Sharp Medium.
@@ -129,7 +129,7 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
   BOOK YOUR WINTER VACATION
 </div>
 
-- Proposed family token: `seven_springs/family/primary`
+- Proposed family token: `seven_springs/family/01`
 - Proposed weight token: `universal/weight/black`
 - Proposed size token: `inherited current action ladder`
 - Notes: Hoss Sharp Heavy stages on the strongest current raw weight.

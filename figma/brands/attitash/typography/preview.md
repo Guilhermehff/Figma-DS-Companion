@@ -11,11 +11,11 @@ Review state: written in Figma. Verify live state in `figma/brands/attitash/bran
 
 ## Live Semantic Mapping
 
-- `family/heading`, `family/body`, `family/action` -> `attitash/family/primary`
+- `family/heading`, `family/body`, `family/action` -> `attitash/family/01`
 - `weight/heading/base`, `weight/heading/strong`, `weight/action/base` -> `universal/weight/bold`
 - `weight/body/base` -> `universal/weight/light`
 - `weight/body/strong` -> `universal/weight/medium`
 
 ## Notes
 
-- `Coordinates` is preserved as `attitash/family/alternate` and remains raw-only in the first pass.
+- `Coordinates` is preserved as `attitash/family/02` and remains raw-only in the first pass.

@@ -106,11 +106,11 @@ semantic_overrides:
     typography:
       override_scopes:
       - semantic_token: family/heading
-        alias_of: mt_brighton/family/display
+        alias_of: mt_brighton/family/01
       - semantic_token: family/body
-        alias_of: mt_brighton/family/primary
+        alias_of: mt_brighton/family/02
       - semantic_token: family/action
-        alias_of: mt_brighton/family/display
+        alias_of: mt_brighton/family/01
       - semantic_token: weight/heading/base
         alias_of: universal/weight/black
       - semantic_token: weight/heading/strong

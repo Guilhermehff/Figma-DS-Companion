@@ -1,6 +1,6 @@
 date: 2026-03-12
 brand: kirkwood
-source_reference: User-provided image in chat showing the Kirkwood color palette
+source_reference: User-provided image in chat showing the Kirkwood color palette and design-distribution guidance
 source_type: image
 figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Foundations?node-id=1-3
 status: active
@@ -264,6 +264,34 @@ family_scales:
       - name: kirkwood/cool_gray/950
         value: "#000000"
         source_anchor: true
+
+color_proportion_guidance:
+  status: active
+  source_basis: The supplied Kirkwood visual-guidelines page states that black, white, and gray should dominate the design when blue tones are already present through outdoor photography, and that orange should be used as the highlight. The adjacent pie chart describes content distribution rather than a direct color percentage table.
+  contexts:
+    - name: outdoor_photography_compositions
+      intent: Foundational neutrals dominate. Orange 021 C stays as the main highlight color. The blue accents should usually arrive through photography or smaller supporting moments rather than as the leading solid field.
+      dominant_palette:
+        - source_color: White
+          token: universal/white
+        - source_color: Cool Grey 1
+          token: kirkwood/cool_gray/300
+        - source_color: Cool Grey 9
+          token: kirkwood/cool_gray/700
+        - source_color: Black C
+          token: universal/black
+      supporting_palette:
+        - source_color: Orange 021 C
+          token: kirkwood/orange_021_c/500
+        - source_color: 648 C
+          token: kirkwood/blue_648_c/800
+        - source_color: 633 C
+          token: kirkwood/teal_633_c/600
+        - source_color: 642 C
+          token: kirkwood/cool_gray/100
+      notes:
+        - The source explicitly says orange is used as the highlight.
+        - The source explicitly says the palette blues often occur naturally in outdoor photography.
 
 validation:
   perceptual_consistency_notes:

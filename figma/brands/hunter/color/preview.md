@@ -38,6 +38,23 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
 
 - None in the approved live mapping.
 
+## Color Proportion Guidance
+
+### Campaign Work
+
+- Intent: `Mountain Blue`, `Sunrise Orange`, and `Flurry White` form the core Hunter palette for primary branding pieces, backgrounds, and type. `Snow Blue`, `Forest Green`, and `City Grey` remain accent colors that highlight or complement the primary palette.
+- Dominant palette:
+  `Mountain Blue` -> `hunter/mountain_blue/900`
+  `Sunrise Orange` -> `hunter/sunrise_orange/500`
+  `Flurry White` -> `hunter/hunter_neutral/50`
+- Supporting palette:
+  `Snow Blue` -> `hunter/mountain_blue/100`
+  `Forest Green` -> `hunter/forest_green/700`
+  `City Grey` -> `hunter/hunter_neutral/500`
+- Notes:
+  The source says the primary colors are used for primary branding pieces, backgrounds, type, and other foundational brand moments.
+  The source says the secondary colors should be used as accents to highlight or complement the primary colors in a campaign.
+
 ## Approved Families
 
 ### Family: hunter_neutral

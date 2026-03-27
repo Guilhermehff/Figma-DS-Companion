@@ -1,6 +1,6 @@
 date: 2026-03-17
 brand: beaver_creek
-source_reference: User-provided image in chat showing the Beaver Creek color palette
+source_reference: User-provided image in chat showing the Beaver Creek color palette and usage guidance
 source_type: image
 figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Foundations?node-id=1-3
 status: active
@@ -119,6 +119,30 @@ family_scales:
       - name: beaver_creek/silver/950
         value: "#0a2030"
         source_anchor: true
+
+color_proportion_guidance:
+  status: active
+  source_basis: User-provided Beaver Creek palette guidance describes hierarchy in prose but does not publish numeric percentages.
+  contexts:
+    - name: brand_touchpoints
+      intent: Primary Silver and White lead the composition to create an understated luxury mood. Medium and Light Silver support that system, while black remains a restrained dark anchor.
+      dominant_palette:
+        - source_color: Beaver Creek Primary Silver
+          token: beaver_creek/silver/700
+        - source_color: Beaver Creek White
+          token: universal/white
+      supporting_palette:
+        - source_color: Beaver Creek Medium Silver
+          token: beaver_creek/silver/500
+        - source_color: Beaver Creek Light Silver
+          token: beaver_creek/silver/300
+        - source_color: Beaver Creek Light Silver 25% Tint
+          token: beaver_creek/silver/100
+        - source_color: Beaver Creek Black
+          token: beaver_creek/silver/950
+      notes:
+        - The source describes the palette as minimal, led by three silver tones and supported by a rich black.
+        - The source explicitly says Primary Silver and White should lead in execution.
 
 validation:
   perceptual_consistency_notes:

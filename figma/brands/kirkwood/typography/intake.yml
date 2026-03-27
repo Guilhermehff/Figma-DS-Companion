@@ -64,7 +64,7 @@ primitive_recommendations:
   reuse_existing:
     families:
       - source_family_name: Avenir Next
-        existing_token: breckenridge/family/secondary
+        existing_token: breckenridge/family/02
         reason: The global typography warehouse already contains the same family string, but Kirkwood still receives its own raw token for brand-local governance.
     weights:
       - source_weight_label: Bold
@@ -96,29 +96,29 @@ primitive_recommendations:
         reason: Stages the action-support lane on the shared reading size for the first pass.
   proposed_primitives:
     families:
-      - token_name: kirkwood/family/primary
+      - token_name: kirkwood/family/01
         source_family_name: Trade Gothic Bold Condensed No. 20
         source_style_reference: headline system
         rationale: Primary condensed headline family for the Kirkwood brand expression.
-        fallback_token: universal/family/web_safe
+        fallback_token: universal/family/fallback
         fallback_note: The source does not define a digital fallback stack.
-      - token_name: kirkwood/family/secondary
+      - token_name: kirkwood/family/02
         source_family_name: Avenir Next
         source_style_reference: body system
         rationale: Reading family for sentence-case body copy.
-        fallback_token: universal/family/web_safe
+        fallback_token: universal/family/fallback
         fallback_note: The source does not define a digital fallback stack.
-      - token_name: kirkwood/family/action
+      - token_name: kirkwood/family/03
         source_family_name: Futura Bold
         source_style_reference: title and small type system
         rationale: Futura Bold is the closest stable semantic fit for action-style short emphasis because it supports both all caps and title case.
-        fallback_token: universal/family/web_safe
+        fallback_token: universal/family/fallback
         fallback_note: The source does not define a digital fallback stack.
-      - token_name: kirkwood/family/utility
+      - token_name: kirkwood/family/04
         source_family_name: Trade Gothic Condensed No. 18
         source_style_reference: limited-space emphasis system
         rationale: Preserved as a raw utility family until the semantic theme typography schema gains a dedicated fourth family slot.
-        fallback_token: universal/family/web_safe
+        fallback_token: universal/family/fallback
         fallback_note: The source does not define a digital fallback stack.
   hold_for_review:
     - item: semantic slot for Trade Gothic Condensed No. 18
@@ -127,27 +127,27 @@ primitive_recommendations:
 semantic_recommendations:
   family_aliases:
     - semantic_token: family/heading
-      global_token: kirkwood/family/primary
+      global_token: kirkwood/family/01
       safe_semantic_token: family/heading_safe
-      safe_global_token: universal/family/web_safe
+      safe_global_token: universal/family/fallback
       intended_channels:
         - web
         - email
         - ads
       notes: Kirkwood display headlines use Trade Gothic Bold Condensed No. 20.
     - semantic_token: family/body
-      global_token: kirkwood/family/secondary
+      global_token: kirkwood/family/02
       safe_semantic_token: family/body_safe
-      safe_global_token: universal/family/web_safe
+      safe_global_token: universal/family/fallback
       intended_channels:
         - web
         - email
         - ads
       notes: Avenir Next remains the sentence-case reading family.
     - semantic_token: family/action
-      global_token: kirkwood/family/action
+      global_token: kirkwood/family/03
       safe_semantic_token: family/action_safe
-      safe_global_token: universal/family/web_safe
+      safe_global_token: universal/family/fallback
       intended_channels:
         - web
         - email
@@ -180,8 +180,8 @@ semantic_recommendations:
 role_recipes:
   - role_name: title_or_small_type
     source_role: Title / Small Type | Futura Bold
-    proposed_family_token: kirkwood/family/action
-    fallback_token: universal/family/web_safe
+    proposed_family_token: kirkwood/family/03
+    fallback_token: universal/family/fallback
     proposed_weight_token: universal/weight/bold
     proposed_size_token: universal/size/400
     size_assumption_status: assumed
@@ -194,8 +194,8 @@ role_recipes:
     notes: Best-fit semantic staging for the short title lane.
   - role_name: headline
     source_role: Headline | Trade Gothic Bold Condensed No. 20
-    proposed_family_token: kirkwood/family/primary
-    fallback_token: universal/family/web_safe
+    proposed_family_token: kirkwood/family/01
+    fallback_token: universal/family/fallback
     proposed_weight_token: universal/weight/bold
     proposed_size_token: universal/size/800
     size_assumption_status: assumed
@@ -208,8 +208,8 @@ role_recipes:
     notes: Primary condensed display treatment.
   - role_name: body
     source_role: Body | Avenir Next Regular
-    proposed_family_token: kirkwood/family/secondary
-    fallback_token: universal/family/web_safe
+    proposed_family_token: kirkwood/family/02
+    fallback_token: universal/family/fallback
     proposed_weight_token: universal/weight/normal
     proposed_size_token: universal/size/300
     size_assumption_status: explicit
@@ -222,8 +222,8 @@ role_recipes:
     notes: Reading copy remains on the shared base body step.
   - role_name: limited_space_emphasis
     source_role: Limited Space | Trade Gothic Condensed No. 18
-    proposed_family_token: kirkwood/family/utility
-    fallback_token: universal/family/web_safe
+    proposed_family_token: kirkwood/family/04
+    fallback_token: universal/family/fallback
     proposed_weight_token: universal/weight/normal
     proposed_size_token: universal/size/300
     size_assumption_status: assumed

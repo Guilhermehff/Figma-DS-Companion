@@ -107,11 +107,11 @@ semantic_overrides:
     typography:
       override_scopes:
       - semantic_token: family/heading
-        alias_of: laurel_mountain/family/primary
+        alias_of: laurel_mountain/family/01
       - semantic_token: family/body
-        alias_of: laurel_mountain/family/primary
+        alias_of: laurel_mountain/family/01
       - semantic_token: family/action
-        alias_of: laurel_mountain/family/primary
+        alias_of: laurel_mountain/family/01
       - semantic_token: weight/heading/base
         alias_of: universal/weight/black
       - semantic_token: weight/heading/strong

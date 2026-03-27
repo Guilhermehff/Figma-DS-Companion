@@ -38,6 +38,23 @@ Review state: approved preview artifact after explicit approval to let the Beave
 
 - `Beaver Creek White` reuses `universal/white`.
 
+## Color Proportion Guidance
+
+### Brand Touchpoints
+
+- Intent: `Primary Silver` and `White` lead the composition to create an understated luxury mood. `Medium Silver` and `Light Silver` support that system, while `Black` remains a restrained dark anchor.
+- Dominant palette:
+  `Beaver Creek Primary Silver` -> `beaver_creek/silver/700`
+  `Beaver Creek White` -> `universal/white`
+- Supporting palette:
+  `Beaver Creek Medium Silver` -> `beaver_creek/silver/500`
+  `Beaver Creek Light Silver` -> `beaver_creek/silver/300`
+  `Beaver Creek Light Silver 25% Tint` -> `beaver_creek/silver/100`
+  `Beaver Creek Black` -> `beaver_creek/silver/950`
+- Notes:
+  The source describes the palette as minimal, led by three silver tones and supported by a rich black.
+  The source explicitly says `Primary Silver` and `White` should lead in execution.
+
 ## Proposed Family
 
 ### Family: silver

@@ -107,11 +107,11 @@ semantic_overrides:
     typography:
       override_scopes:
       - semantic_token: family/heading
-        alias_of: stevens_pass/family/primary
+        alias_of: stevens_pass/family/01
       - semantic_token: family/body
-        alias_of: stevens_pass/family/primary
+        alias_of: stevens_pass/family/01
       - semantic_token: family/action
-        alias_of: stevens_pass/family/primary
+        alias_of: stevens_pass/family/01
       - semantic_token: weight/heading/base
         alias_of: universal/weight/bold
       - semantic_token: weight/body/base

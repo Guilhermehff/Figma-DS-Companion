@@ -71,17 +71,17 @@ primitive_recommendations:
     sizes: []
   proposed_primitives:
     families:
-      - token_name: attitash/family/primary
+      - token_name: attitash/family/01
         source_family_name: Buenos Aires
         source_style_reference: Bold and Light across heading, body, and CTA
         rationale: Buenos Aires carries the live semantic hierarchy.
-        fallback_token: universal/family/web_safe
+        fallback_token: universal/family/fallback
         fallback_note: Safe-family behavior remains inherited.
-      - token_name: attitash/family/alternate
+      - token_name: attitash/family/02
         source_family_name: Coordinates
         source_style_reference: Medium subhead treatment
         rationale: Coordinates is preserved as a raw alternate family.
-        fallback_token: universal/family/web_safe
+        fallback_token: universal/family/fallback
         fallback_note: Safe-family behavior remains inherited.
     weights: []
   hold_for_review: []
@@ -89,25 +89,25 @@ primitive_recommendations:
 semantic_recommendations:
   family_aliases:
     - semantic_token: family/heading
-      global_token: attitash/family/primary
+      global_token: attitash/family/01
       safe_semantic_token: family/heading_safe
-      safe_global_token: universal/family/web_safe
+      safe_global_token: universal/family/fallback
       intended_channels:
         - web
         - email
         - ads
     - semantic_token: family/body
-      global_token: attitash/family/primary
+      global_token: attitash/family/01
       safe_semantic_token: family/body_safe
-      safe_global_token: universal/family/web_safe
+      safe_global_token: universal/family/fallback
       intended_channels:
         - web
         - email
         - ads
     - semantic_token: family/action
-      global_token: attitash/family/primary
+      global_token: attitash/family/01
       safe_semantic_token: family/action_safe
-      safe_global_token: universal/family/web_safe
+      safe_global_token: universal/family/fallback
       intended_channels:
         - web
         - email
@@ -128,22 +128,22 @@ semantic_recommendations:
 role_recipes:
   - role_name: headline
     source_role: Buenos Aires Bold
-    proposed_family_token: attitash/family/primary
+    proposed_family_token: attitash/family/01
     proposed_weight_token: universal/weight/bold
     proposed_size_token: inherited current heading ladder
   - role_name: body
     source_role: Buenos Aires Light
-    proposed_family_token: attitash/family/primary
+    proposed_family_token: attitash/family/01
     proposed_weight_token: universal/weight/light
     proposed_size_token: inherited current body ladder
   - role_name: action
     source_role: Buenos Aires Bold
-    proposed_family_token: attitash/family/primary
+    proposed_family_token: attitash/family/01
     proposed_weight_token: universal/weight/bold
     proposed_size_token: inherited current action ladder
   - role_name: subhead
     source_role: Coordinates Medium
-    proposed_family_token: attitash/family/alternate
+    proposed_family_token: attitash/family/02
     proposed_weight_token: universal/weight/medium
     proposed_size_token: raw_only
 

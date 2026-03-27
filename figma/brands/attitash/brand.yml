@@ -107,11 +107,11 @@ semantic_overrides:
     typography:
       override_scopes:
       - semantic_token: family/heading
-        alias_of: attitash/family/primary
+        alias_of: attitash/family/01
       - semantic_token: family/body
-        alias_of: attitash/family/primary
+        alias_of: attitash/family/01
       - semantic_token: family/action
-        alias_of: attitash/family/primary
+        alias_of: attitash/family/01
       - semantic_token: weight/heading/base
         alias_of: universal/weight/bold
       - semantic_token: weight/heading/strong
@@ -128,6 +128,6 @@ semantic_overrides:
       - family/action_safe
       notes:
       - Attitash is live as a Buenos Aires-led semantic system, with `Coordinates` preserved as the raw alternate family for subhead-style work that does not yet have its own semantic lane.
-      - The first semantic pass keeps heading, body, and action on `attitash/family/primary` because the current shared typography schema has no dedicated alternate subhead family slot.
+      - The first semantic pass keeps heading, body, and action on `attitash/family/01` because the current shared typography schema has no dedicated alternate subhead family slot.
 notes:
 - Attitash is live in the Foundations file with six raw color families, two raw typography family primitives, a semantic theme logo-name override, and Attitash semantic theme extension.

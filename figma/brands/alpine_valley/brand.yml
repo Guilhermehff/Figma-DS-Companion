@@ -109,11 +109,11 @@ semantic_overrides:
     typography:
       override_scopes:
       - semantic_token: family/heading
-        alias_of: alpine_valley/family/primary
+        alias_of: alpine_valley/family/01
       - semantic_token: family/body
-        alias_of: alpine_valley/family/primary
+        alias_of: alpine_valley/family/01
       - semantic_token: family/action
-        alias_of: alpine_valley/family/primary
+        alias_of: alpine_valley/family/01
       - semantic_token: weight/body/base
         alias_of: universal/weight/normal
       - semantic_token: weight/body/strong

@@ -114,11 +114,11 @@ semantic_overrides:
     typography:
       override_scopes:
       - semantic_token: family/heading
-        alias_of: crested_butte/family/primary
+        alias_of: crested_butte/family/01
       - semantic_token: family/body
-        alias_of: crested_butte/family/primary
+        alias_of: crested_butte/family/01
       - semantic_token: family/action
-        alias_of: crested_butte/family/primary
+        alias_of: crested_butte/family/01
       - semantic_token: weight/heading/base
         alias_of: universal/weight/semibold
       - semantic_token: weight/body/base

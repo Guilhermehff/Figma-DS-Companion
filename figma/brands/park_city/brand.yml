@@ -110,11 +110,11 @@ semantic_overrides:
     typography:
       override_scopes:
       - semantic_token: family/heading
-        alias_of: park_city/family/primary
+        alias_of: park_city/family/01
       - semantic_token: family/body
-        alias_of: park_city/family/primary
+        alias_of: park_city/family/01
       - semantic_token: family/action
-        alias_of: park_city/family/primary
+        alias_of: park_city/family/01
       - semantic_token: weight/heading/base
         alias_of: universal/weight/bold
       - semantic_token: weight/body/base
@@ -129,7 +129,7 @@ semantic_overrides:
       - weight/body/strong
       notes:
       - Park City uses `Futura Std` across headline, body, and CTA work, with Bold and Light carrying the hierarchy.
-      - "`park_city/family/utility` preserves `Trade Gothic LT Std Bold Condensed No. 20` as a raw primitive because the current semantic theme typography schema has no dedicated subhead family lane."
+      - "`park_city/family/02` preserves `Trade Gothic LT Std Bold Condensed No. 20` as a raw primitive because the current semantic theme typography schema has no dedicated subhead family lane."
       - 'Typography size now binds directly from published `Global: Typography`; the supplied hierarchy guidance defines case, tracking, and leading behavior but not new governed numeric size tokens.'
 notes:
 - Park City is live in the Foundations file with three raw color families, two raw typography family primitives, a semantic theme logo-name override, and Park City semantic theme extension.

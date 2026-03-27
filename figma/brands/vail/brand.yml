@@ -110,11 +110,11 @@ semantic_overrides:
     typography:
       override_scopes:
       - semantic_token: family/heading
-        alias_of: vail/family/display
+        alias_of: vail/family/01
       - semantic_token: family/body
-        alias_of: vail/family/primary
+        alias_of: vail/family/02
       - semantic_token: family/action
-        alias_of: vail/family/primary
+        alias_of: vail/family/02
       inherited_from_base:
       - family/heading_safe
       - family/body_safe

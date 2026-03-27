@@ -83,18 +83,18 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
   Notes: Covers Galano Grotesque Light in the contrasting-body lane.
 
 - Proposed primitive:
-  Token name: `hunter/family/primary`
+  Token name: `hunter/family/01`
   Source item: `Galano Grotesque`
-  Fallback token: `universal/family/web_safe`
+  Fallback token: `universal/family/fallback`
   Notes: Hunter uses one Galano Grotesque family across headline, subheadline, body, and contrasting body roles.
 
 ## Semantic Mapping
 
-- `family/heading` -> `hunter/family/primary`
-- `family/body` -> `hunter/family/primary`
+- `family/heading` -> `hunter/family/01`
+- `family/body` -> `hunter/family/01`
 - `family/action` -> inherited from the base semantic theme mapping in the live pass
-- `family/heading_safe` -> `universal/family/web_safe`
-- `family/body_safe` -> `universal/family/web_safe`
+- `family/heading_safe` -> `universal/family/fallback`
+- `family/body_safe` -> `universal/family/fallback`
 - `family/action_safe` -> inherited from the base semantic theme mapping in the live pass
 - `weight/heading/base` -> `universal/weight/bold`
 - `weight/body/base` -> `universal/weight/normal`
@@ -110,7 +110,7 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
   You can't get these views in SOHO.
 </div>
 
-- Proposed family token: `hunter/family/primary`
+- Proposed family token: `hunter/family/01`
 - Proposed weight token: `universal/weight/bold`
 - Proposed size token: `inherited current heading ladder`
 - Notes: H1 remains on Galano Grotesque Bold.
@@ -121,7 +121,7 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
   Experience Hunter Mountain in the Catskills.
 </div>
 
-- Proposed family token: `hunter/family/primary`
+- Proposed family token: `hunter/family/01`
 - Proposed weight token: `universal/weight/semibold`
 - Proposed size token: `inherited current heading and body ladders`
 - Notes: Approved live write. H2 stages through the shared Galano Grotesque family with the semibold weight.
@@ -132,7 +132,7 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
   Nam velliqui beatur alit la volorpo rionsedi consecus ent quam sumquiam, occatur?
 </div>
 
-- Proposed family token: `hunter/family/primary`
+- Proposed family token: `hunter/family/01`
 - Proposed weight token: `universal/weight/normal`
 - Proposed size token: `inherited current body ladder`
 - Notes: Body copy remains on Galano Grotesque Regular.
@@ -143,7 +143,7 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
   This font should be used sparingly due to legibility.
 </div>
 
-- Proposed family token: `hunter/family/primary`
+- Proposed family token: `hunter/family/01`
 - Proposed weight token: `universal/weight/light`
 - Proposed size token: `inherited current body ladder`
 - Notes: Contrasting type remains a documented raw option rather than a separate semantic lane in the first pass.

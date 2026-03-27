@@ -25,20 +25,20 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
 
 ## Primitive Recommendations
 
-- Proposed raw primary family: `liberty_mountain/family/primary` -> `Brown`
-- Proposed raw alternate family: `liberty_mountain/family/alternate` -> `Sentinel Book`
+- Proposed raw primary family: `liberty_mountain/family/01` -> `Brown`
+- Proposed raw alternate family: `liberty_mountain/family/02` -> `Sentinel Book`
 - Shared weights:
   - `Regular` -> `universal/weight/normal`
   - `Light` -> `universal/weight/light`
 
 ## Semantic Mapping
 
-- `family/heading` -> `liberty_mountain/family/primary`
-- `family/body` -> `liberty_mountain/family/primary`
-- `family/action` -> `liberty_mountain/family/primary`
-- `family/heading_safe` -> inherited `universal/family/web_safe`
-- `family/body_safe` -> inherited `universal/family/web_safe`
-- `family/action_safe` -> inherited `universal/family/web_safe`
+- `family/heading` -> `liberty_mountain/family/01`
+- `family/body` -> `liberty_mountain/family/01`
+- `family/action` -> `liberty_mountain/family/01`
+- `family/heading_safe` -> inherited `universal/family/fallback`
+- `family/body_safe` -> inherited `universal/family/fallback`
+- `family/action_safe` -> inherited `universal/family/fallback`
 - `weight/heading/base` -> `universal/weight/normal`
 - `weight/heading/strong` -> `universal/weight/normal`
 - `weight/body/base` -> `universal/weight/light`
@@ -50,17 +50,17 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
 
 - Heading
   Sample copy: `Duis non, commodo luctus!`
-  Proposed family token: `liberty_mountain/family/primary`
+  Proposed family token: `liberty_mountain/family/01`
   Proposed weight token: `universal/weight/normal`
   Notes: Brown Light remains documented as a raw alternate headline treatment rather than a separate semantic slot.
 - Subheadline
   Sample copy: `Donec ullamcorper nulla non metus auctor fringilla.`
-  Proposed family token: `liberty_mountain/family/primary`
+  Proposed family token: `liberty_mountain/family/01`
   Proposed weight token: `universal/weight/light`
   Notes: Sentinel Book remains raw-only in the first pass.
 - Body
   Sample copy: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.`
-  Proposed family token: `liberty_mountain/family/primary`
+  Proposed family token: `liberty_mountain/family/01`
   Proposed weight token: `universal/weight/light`
   Notes: Sentinel Book remains raw-only in the first pass.
 

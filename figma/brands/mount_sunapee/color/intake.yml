@@ -208,6 +208,41 @@ family_scales:
         value: "#251403"
         source_anchor: false
 
+color_proportion_guidance:
+  status: active
+  source_basis: The user-provided Mount Sunapee color-usage page gives a stacked distribution graphic and explicit text saying white space should lead, primary brand colors should follow, and secondary colors should remain accent-only. Exact percentages are not published.
+  contexts:
+    - name: brand_touchpoints
+      intent: White space leads. Lake Sunapee and Cold Wax carry the main brand presence. Golden Hour, Snow Gun, and Verde Slate remain accent-level support and should not dominate on their own.
+      proportions:
+        - source_color: White Space
+          token: universal/white
+          percentage: 45
+          rationale: Largest field in the distribution graphic and explicitly called out as the leading emphasis.
+        - source_color: Lake Sunapee
+          token: mount_sunapee/sunapee_neutral/800
+          percentage: 25
+          rationale: Strongest non-white structural block in the distribution graphic.
+        - source_color: Cold Wax
+          token: mount_sunapee/cold_wax/500
+          percentage: 15
+          rationale: Most prominent saturated primary brand color after the structural white and dark field.
+        - source_color: Golden Hour
+          token: mount_sunapee/golden_hour/300
+          percentage: 8
+          rationale: Warm accent strip in the guidance graphic.
+        - source_color: Snow Gun
+          token: mount_sunapee/sunapee_neutral/100
+          percentage: 4
+          rationale: Light secondary accent strip in the source graphic.
+        - source_color: Verde Slate
+          token: mount_sunapee/sunapee_neutral/400
+          percentage: 3
+          rationale: Smallest muted support strip in the source graphic.
+      notes:
+        - These percentages are approximate documentation guidance derived from the stacked source graphic plus the accompanying text.
+        - The source also says secondary colors should be used only as accents and should never dominate a design.
+
 validation:
   perceptual_consistency_notes:
     - Snow Gun, Verde Slate, and Lake Sunapee align well as a single low-chroma structural family from light canvas-adjacent surfaces through muted mid-tone borders to the dark readable default foreground.

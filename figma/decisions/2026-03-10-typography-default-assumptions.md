@@ -2,6 +2,7 @@
 
 Date: 2026-03-10
 Status: accepted
+Superseded by: figma/decisions/2026-03-27-neutral-global-typography-family-slots.md (for fallback token naming)
 
 ## Context
 

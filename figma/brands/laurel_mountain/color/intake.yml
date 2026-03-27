@@ -56,6 +56,146 @@ universal_reuse:
       rationale: Supporting expressive brand lane.
   hold_for_review: []
 
+scale_spec:
+  working_space: OKLCH
+  steps:
+    - 50
+    - 100
+    - 200
+    - 300
+    - 400
+    - 500
+    - 600
+    - 700
+    - 800
+    - 900
+    - 950
+  contrast_targets:
+    white:
+      "800": "4.5:1 preferred"
+      "900": "7:1 required"
+      "950": "7:1 required"
+    black:
+      "50": "7:1 required"
+      "100": "7:1 required"
+      "200": "4.5:1 required"
+
+family_scales:
+  - family: red
+    source_name: Red
+    source_value: "#cf463c"
+    source_anchor: 500_source
+    tokens:
+      - name: laurel_mountain/red/50
+        value: "#fdf3f2"
+        source_anchor: false
+      - name: laurel_mountain/red/100
+        value: "#f9e1de"
+        source_anchor: false
+      - name: laurel_mountain/red/200
+        value: "#f3c2bd"
+        source_anchor: false
+      - name: laurel_mountain/red/300
+        value: "#e99a93"
+        source_anchor: false
+      - name: laurel_mountain/red/400
+        value: "#de6f66"
+        source_anchor: false
+      - name: laurel_mountain/red/500
+        value: "#cf463c"
+        source_anchor: true
+      - name: laurel_mountain/red/600
+        value: "#b7372e"
+        source_anchor: false
+      - name: laurel_mountain/red/700
+        value: "#922c25"
+        source_anchor: false
+      - name: laurel_mountain/red/800
+        value: "#6e211c"
+        source_anchor: false
+      - name: laurel_mountain/red/900
+        value: "#4a1613"
+        source_anchor: false
+      - name: laurel_mountain/red/950
+        value: "#2b0c0a"
+        source_anchor: false
+  - family: dark_blue
+    source_name: Dark Blue
+    source_value: "#363745"
+    source_anchor: 600_source
+    tokens:
+      - name: laurel_mountain/dark_blue/50
+        value: "#f4f6fa"
+        source_anchor: false
+      - name: laurel_mountain/dark_blue/100
+        value: "#e6e9f0"
+        source_anchor: false
+      - name: laurel_mountain/dark_blue/200
+        value: "#c9ceda"
+        source_anchor: false
+      - name: laurel_mountain/dark_blue/300
+        value: "#a6adbf"
+        source_anchor: false
+      - name: laurel_mountain/dark_blue/400
+        value: "#7f879f"
+        source_anchor: false
+      - name: laurel_mountain/dark_blue/500
+        value: "#5c647f"
+        source_anchor: false
+      - name: laurel_mountain/dark_blue/600
+        value: "#363745"
+        source_anchor: true
+      - name: laurel_mountain/dark_blue/700
+        value: "#2a2b36"
+        source_anchor: false
+      - name: laurel_mountain/dark_blue/800
+        value: "#1e1f28"
+        source_anchor: false
+      - name: laurel_mountain/dark_blue/900
+        value: "#14151c"
+        source_anchor: false
+      - name: laurel_mountain/dark_blue/950
+        value: "#0b0c11"
+        source_anchor: false
+  - family: light_blue
+    source_name: Light Blue
+    source_value: "#52799c"
+    source_anchor: 600_source
+    tokens:
+      - name: laurel_mountain/light_blue/50
+        value: "#f3f7fb"
+        source_anchor: false
+      - name: laurel_mountain/light_blue/100
+        value: "#e3ecf3"
+        source_anchor: false
+      - name: laurel_mountain/light_blue/200
+        value: "#c7d7e3"
+        source_anchor: false
+      - name: laurel_mountain/light_blue/300
+        value: "#a4bbd0"
+        source_anchor: false
+      - name: laurel_mountain/light_blue/400
+        value: "#7fa0bd"
+        source_anchor: false
+      - name: laurel_mountain/light_blue/500
+        value: "#6387a7"
+        source_anchor: false
+      - name: laurel_mountain/light_blue/600
+        value: "#52799c"
+        source_anchor: true
+      - name: laurel_mountain/light_blue/700
+        value: "#3e5f7a"
+        source_anchor: false
+      - name: laurel_mountain/light_blue/800
+        value: "#2c4458"
+        source_anchor: false
+      - name: laurel_mountain/light_blue/900
+        value: "#1c2c3a"
+        source_anchor: false
+      - name: laurel_mountain/light_blue/950
+        value: "#101a22"
+        source_anchor: false
+
 semantic_recommendations:
   role_sets:
     - scope: neutral

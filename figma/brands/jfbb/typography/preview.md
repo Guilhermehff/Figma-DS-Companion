@@ -46,9 +46,9 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
 ## Primitive Recommendations
 
 - Proposed primitive:
-  Token name: `jfbb/family/primary`
+  Token name: `jfbb/family/01`
   Source item: `Vista Sans NAR OTCE`
-  Fallback token: `universal/family/web_safe`
+  Fallback token: `universal/family/fallback`
   Notes: Shared family for the full JFBB hierarchy.
 
 - Reuse:
@@ -76,8 +76,8 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
 
 ## Semantic Mapping
 
-- `family/heading` -> `jfbb/family/primary`
-- `family/body` -> `jfbb/family/primary`
+- `family/heading` -> `jfbb/family/01`
+- `family/body` -> `jfbb/family/01`
 - `weight/heading/base` -> `universal/weight/black`
 - `weight/body/base` -> `universal/weight/normal`
 - `weight/body/strong` -> `universal/weight/bold`
@@ -91,7 +91,7 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
   THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG
 </div>
 
-- Proposed family token: `jfbb/family/primary`
+- Proposed family token: `jfbb/family/01`
 - Proposed weight token: `universal/weight/black`
 - Proposed size token: `universal/size/700`
 - Notes: Strong all-caps headline lane.
@@ -102,7 +102,7 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
   THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG.
 </div>
 
-- Proposed family token: `jfbb/family/primary`
+- Proposed family token: `jfbb/family/01`
 - Proposed weight token: `universal/weight/bold`
 - Proposed size token: `universal/size/500`
 - Notes: Supportive all-caps headline lane.
@@ -113,7 +113,7 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
   The quick brown fox jumps over the lazy dog.
 </div>
 
-- Proposed family token: `jfbb/family/primary`
+- Proposed family token: `jfbb/family/01`
 - Proposed weight token: `universal/weight/normal`
 - Proposed size token: `universal/size/200`
 - Notes: The source body-leading example is internally inconsistent, so the live extension keeps shared size semantics.

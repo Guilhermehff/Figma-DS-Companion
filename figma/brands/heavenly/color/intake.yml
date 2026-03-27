@@ -1,6 +1,6 @@
 date: 2026-03-11
 brand: heavenly
-source_reference: User-provided image in chat showing the Heavenly color palette
+source_reference: User-provided image in chat showing the Heavenly color palette and usage guidance
 source_type: image
 figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Foundations?node-id=1-3
 status: active
@@ -204,6 +204,28 @@ family_scales:
       - name: heavenly/shore_blue/950
         value: "#001824"
         source_anchor: false
+
+color_proportion_guidance:
+  status: active
+  source_basis: User-provided Heavenly palette guidance defines primary and secondary color behavior in prose but does not publish numeric percentages.
+  contexts:
+    - name: brand_touchpoints
+      intent: Fresh Powder White, Mountain Shadow Black, and Snow Flower Red define the primary Heavenly palette. Deep Water Blue and Shore Blue are secondary supporting colors inspired by Lake Tahoe.
+      dominant_palette:
+        - source_color: Fresh Powder White
+          token: universal/white
+        - source_color: Mountain Shadow Black
+          token: universal/black
+        - source_color: Snow Flower Red
+          token: heavenly/snow_flower_red/600
+      supporting_palette:
+        - source_color: Deep Water Blue
+          token: heavenly/deep_water_blue/700
+        - source_color: Shore Blue
+          token: heavenly/shore_blue/300
+      notes:
+        - The source says Mountain Shadow Black should be used for text and only very sparingly as a high-contrast logo color or minimal separating block.
+        - The source frames the blues as supporting lake-derived colors rather than primary brand fields.
 
 validation:
   perceptual_consistency_notes:

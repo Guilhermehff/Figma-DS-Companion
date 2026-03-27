@@ -90,17 +90,17 @@ primitive_recommendations:
         reason: Live semantic size aliases can remain inherited in the first pass.
   proposed_primitives:
     families:
-      - token_name: stowe/family/display
+      - token_name: stowe/family/01
         source_family_name: Athena
         source_style_reference: Athena Regular headline system
         rationale: Stowe uses Athena only in the display headline lane, so it should stage as a dedicated display family primitive.
-        fallback_token: universal/family/web_safe
+        fallback_token: universal/family/fallback
         fallback_note: The source does not define a fallback stack.
-      - token_name: stowe/family/primary
+      - token_name: stowe/family/02
         source_family_name: Raleway
         source_style_reference: Raleway Bold, Regular, and Light across subhead, body, and contrasting body roles
         rationale: Raleway carries the reading and supporting hierarchy, so one primary family primitive is enough for the first pass.
-        fallback_token: universal/family/web_safe
+        fallback_token: universal/family/fallback
         fallback_note: The source does not define a fallback stack.
     weights: []
   hold_for_review: []
@@ -108,27 +108,27 @@ primitive_recommendations:
 semantic_recommendations:
   family_aliases:
     - semantic_token: family/heading
-      global_token: stowe/family/display
+      global_token: stowe/family/01
       safe_semantic_token: family/heading_safe
-      safe_global_token: universal/family/web_safe
+      safe_global_token: universal/family/fallback
       intended_channels:
         - web
         - email
         - ads
       notes: Athena is the proposed display family for Stowe headlines.
     - semantic_token: family/body
-      global_token: stowe/family/primary
+      global_token: stowe/family/02
       safe_semantic_token: family/body_safe
-      safe_global_token: universal/family/web_safe
+      safe_global_token: universal/family/fallback
       intended_channels:
         - web
         - email
         - ads
       notes: Raleway is the proposed body and supporting-copy family.
     - semantic_token: family/action
-      global_token: stowe/family/display
+      global_token: stowe/family/01
       safe_semantic_token: family/action_safe
-      safe_global_token: universal/family/web_safe
+      safe_global_token: universal/family/fallback
       intended_channels:
         - web
         - email
@@ -168,8 +168,8 @@ semantic_recommendations:
 role_recipes:
   - role_name: headline
     source_role: Headline | Athena Regular
-    proposed_family_token: stowe/family/display
-    fallback_token: universal/family/web_safe
+    proposed_family_token: stowe/family/01
+    fallback_token: universal/family/fallback
     proposed_weight_token: universal/weight/normal
     proposed_size_token: inherited current heading ladder
     size_assumption_status: deferred_no_new_size
@@ -182,8 +182,8 @@ role_recipes:
     notes: User-approved live write. The heading baseline follows the explicit Athena Regular label.
   - role_name: subhead
     source_role: Subhead | Raleway Bold
-    proposed_family_token: stowe/family/primary
-    fallback_token: universal/family/web_safe
+    proposed_family_token: stowe/family/02
+    fallback_token: universal/family/fallback
     proposed_weight_token: universal/weight/bold
     proposed_size_token: inherited current heading and body ladders
     size_assumption_status: deferred_no_new_size
@@ -196,8 +196,8 @@ role_recipes:
     notes: Subheads stay on Raleway Bold and remain left justified unless a layout calls for centering.
   - role_name: body
     source_role: Body | Raleway Regular
-    proposed_family_token: stowe/family/primary
-    fallback_token: universal/family/web_safe
+    proposed_family_token: stowe/family/02
+    fallback_token: universal/family/fallback
     proposed_weight_token: universal/weight/normal
     proposed_size_token: inherited current body ladder
     size_assumption_status: deferred_no_new_size
@@ -210,8 +210,8 @@ role_recipes:
     notes: Body copy explicitly uses Raleway Regular.
   - role_name: body_contrasting
     source_role: Body and Contrasting Type | Raleway Light
-    proposed_family_token: stowe/family/primary
-    fallback_token: universal/family/web_safe
+    proposed_family_token: stowe/family/02
+    fallback_token: universal/family/fallback
     proposed_weight_token: universal/weight/light
     proposed_size_token: inherited current body ladder
     size_assumption_status: deferred_no_new_size

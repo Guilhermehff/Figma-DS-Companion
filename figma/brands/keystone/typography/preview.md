@@ -72,15 +72,15 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
 ## Primitive Recommendations
 
 - Proposed primitive:
-  Token name: `keystone/family/primary`
+  Token name: `keystone/family/01`
   Source item: `Futura`
-  Fallback token: `universal/family/web_safe`
+  Fallback token: `universal/family/fallback`
   Notes: Primary Keystone display and emphasis family.
 
 - Proposed primitive:
-  Token name: `keystone/family/secondary`
+  Token name: `keystone/family/02`
   Source item: `Avenir`
-  Fallback token: `universal/family/web_safe`
+  Fallback token: `universal/family/fallback`
   Notes: Secondary Keystone reading family.
 
 - Reuse:
@@ -108,9 +108,9 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
 
 ## Semantic Mapping
 
-- `family/heading` -> `keystone/family/primary`
-- `family/body` -> `keystone/family/secondary`
-- `family/action` -> `keystone/family/primary`
+- `family/heading` -> `keystone/family/01`
+- `family/body` -> `keystone/family/02`
+- `family/action` -> `keystone/family/01`
 - `weight/heading/base` -> `universal/weight/bold`
 - `weight/body/base` -> `universal/weight/medium`
 - `weight/action/base` -> `universal/weight/bold`
@@ -125,7 +125,7 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
   Headline
 </div>
 
-- Proposed family token: `keystone/family/primary`
+- Proposed family token: `keystone/family/01`
 - Proposed weight token: `universal/weight/bold`
 - Proposed size token: `deferred`
 - Notes: The explicit source recipe remains documented, but this live write did not add a new raw size token.
@@ -136,7 +136,7 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
   Sub Headline
 </div>
 
-- Proposed family token: `keystone/family/secondary`
+- Proposed family token: `keystone/family/02`
 - Proposed weight token: `universal/weight/medium`
 - Proposed size token: `deferred`
 - Notes: The explicit source size remains documented, but no new size override was introduced in this pass.
@@ -147,7 +147,7 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
   Body Copy
 </div>
 
-- Proposed family token: `keystone/family/secondary`
+- Proposed family token: `keystone/family/02`
 - Proposed weight token: `universal/weight/medium`
 - Proposed size token: `universal/size/300`
 - Notes: Fully represented by the current shared body size step.
@@ -158,7 +158,7 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
   Emphasized body copy
 </div>
 
-- Proposed family token: `keystone/family/primary`
+- Proposed family token: `keystone/family/01`
 - Proposed weight token: `universal/weight/bold`
 - Proposed size token: `universal/size/300`
 - Notes: Small-size emphasis lane using the display family.
@@ -169,7 +169,7 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
   CTA
 </div>
 
-- Proposed family token: `keystone/family/primary`
+- Proposed family token: `keystone/family/01`
 - Proposed weight token: `universal/weight/bold`
 - Proposed size token: `universal/size/500`
 - Notes: Final approved CTA mapping for the live Keystone write.

@@ -28,6 +28,21 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
 
 - `Powder White` reuses `universal/white`.
 
+## Color Proportion Guidance
+
+### Brand Touchpoints
+
+- Intent: `Powder White` is the dominant canvas. `Stowe Red` is the primary expressive lane. `Ice Blue` and `Winter Blue` share the supporting structural blue-gray system, with `Ice Blue` carrying more area than `Winter Blue`.
+- `Powder White`: `50%`
+  DS mapping: `universal/white`
+- `Stowe Red`: `20%`
+  DS mapping: `stowe/stowe_red/600`
+- `Ice Blue`: `18%`
+  DS mapping: `stowe/stowe_blue/500`
+- `Winter Blue`: `12%`
+  DS mapping: `stowe/stowe_blue/800`
+- Notes: These values are approximate documentation guidance inferred from the displayed ratio fields in the supplied guide image. The source says these are the recommended ratios across touchpoints but does not publish exact percentages.
+
 ## Proposed Families
 
 ### Family: stowe_red

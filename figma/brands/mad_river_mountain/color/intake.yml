@@ -30,6 +30,108 @@ universal_reuse:
     - family: mountain_green
       provided_value: "#8fd16a"
       anchor_step: 500
+scale_spec:
+  working_space: OKLCH
+  steps:
+    - 50
+    - 100
+    - 200
+    - 300
+    - 400
+    - 500
+    - 600
+    - 700
+    - 800
+    - 900
+    - 950
+  contrast_targets:
+    white:
+      "800": "4.5:1 preferred"
+      "900": "7:1 required"
+      "950": "7:1 required"
+    black:
+      "50": "7:1 required"
+      "100": "7:1 required"
+      "200": "4.5:1 required"
+
+family_scales:
+  - family: river_blue
+    source_name: River Blue
+    source_value: "#4097db"
+    source_anchor: 500_source
+    tokens:
+      - name: mad_river_mountain/river_blue/50
+        value: "#d5e8f7"
+        source_anchor: false
+      - name: mad_river_mountain/river_blue/100
+        value: "#bad9f2"
+        source_anchor: false
+      - name: mad_river_mountain/river_blue/200
+        value: "#9ecaed"
+        source_anchor: false
+      - name: mad_river_mountain/river_blue/300
+        value: "#81bbe7"
+        source_anchor: false
+      - name: mad_river_mountain/river_blue/400
+        value: "#63aae2"
+        source_anchor: false
+      - name: mad_river_mountain/river_blue/500
+        value: "#4097db"
+        source_anchor: true
+      - name: mad_river_mountain/river_blue/600
+        value: "#3276ac"
+        source_anchor: false
+      - name: mad_river_mountain/river_blue/700
+        value: "#265a83"
+        source_anchor: false
+      - name: mad_river_mountain/river_blue/800
+        value: "#1b3f5c"
+        source_anchor: false
+      - name: mad_river_mountain/river_blue/900
+        value: "#15324a"
+        source_anchor: false
+      - name: mad_river_mountain/river_blue/950
+        value: "#102536"
+        source_anchor: false
+  - family: mountain_green
+    source_name: Mountain Green
+    source_value: "#8fd16a"
+    source_anchor: 500_source
+    tokens:
+      - name: mad_river_mountain/mountain_green/50
+        value: "#e6f5de"
+        source_anchor: false
+      - name: mad_river_mountain/mountain_green/100
+        value: "#d7eec9"
+        source_anchor: false
+      - name: mad_river_mountain/mountain_green/200
+        value: "#c6e8b3"
+        source_anchor: false
+      - name: mad_river_mountain/mountain_green/300
+        value: "#b5e19d"
+        source_anchor: false
+      - name: mad_river_mountain/mountain_green/400
+        value: "#a4d985"
+        source_anchor: false
+      - name: mad_river_mountain/mountain_green/500
+        value: "#8fd16a"
+        source_anchor: true
+      - name: mad_river_mountain/mountain_green/600
+        value: "#70a453"
+        source_anchor: false
+      - name: mad_river_mountain/mountain_green/700
+        value: "#557d3f"
+        source_anchor: false
+      - name: mad_river_mountain/mountain_green/800
+        value: "#3c582c"
+        source_anchor: false
+      - name: mad_river_mountain/mountain_green/900
+        value: "#2e4522"
+        source_anchor: false
+      - name: mad_river_mountain/mountain_green/950
+        value: "#23341a"
+        source_anchor: false
+
 semantic_recommendations:
   role_sets:
     - scope: neutral

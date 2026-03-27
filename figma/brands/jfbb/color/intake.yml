@@ -1,6 +1,6 @@
 date: 2026-03-17
 brand: jfbb
-source_reference: User-provided image in chat showing the JFBB / Jack Frost Big Boulder color palette
+source_reference: User-provided image in chat showing the JFBB / Jack Frost Big Boulder color palette and usage guidance
 source_type: image
 figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Foundations?node-id=1-3
 status: active
@@ -335,6 +335,31 @@ family_scales:
       - name: jfbb/night_ski/950
         value: "#030d1f"
         source_anchor: true
+
+color_proportion_guidance:
+  status: active
+  source_basis: User-provided JFBB usage page defines primary and secondary palette behavior in prose but does not publish numeric percentages.
+  contexts:
+    - name: brand_touchpoints
+      intent: Snow Day, Last Chair, and Early Sunrise should carry most brand work. Frost, Bluebird, and Night Ski are accent-only support colors.
+      dominant_palette:
+        - source_color: Snow Day
+          token: jfbb/snow_day/50
+        - source_color: Last Chair
+          token: jfbb/last_chair/950
+        - source_color: Early Sunrise
+          token: jfbb/early_sunrise/400
+      supporting_palette:
+        - source_color: Frost
+          token: jfbb/frost/400
+        - source_color: Bluebird
+          token: jfbb/bluebird/600
+        - source_color: Night Ski
+          token: jfbb/night_ski/950
+      notes:
+        - The source says the primary palette should remain the default unless it becomes illegible.
+        - Secondary colors are reserved for smaller moments such as CTAs and the crown or snowflake element of the logo.
+        - Secondary colors should be used in moderation rather than as dominant campaign fields.
 
 validation:
   perceptual_consistency_notes:

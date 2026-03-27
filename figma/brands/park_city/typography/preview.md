@@ -59,15 +59,15 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
 ## Primitive Recommendations
 
 - Proposed primitive:
-  Token name: `park_city/family/primary`
+  Token name: `park_city/family/01`
   Source item: `Futura Std`
-  Fallback token: `universal/family/web_safe`
+  Fallback token: `universal/family/fallback`
   Notes: Shared Park City family across headline, body, and CTA roles.
 
 - Proposed primitive:
-  Token name: `park_city/family/utility`
+  Token name: `park_city/family/02`
   Source item: `Trade Gothic LT Std Bold Condensed No. 20`
-  Fallback token: `universal/family/web_safe`
+  Fallback token: `universal/family/fallback`
   Notes: Raw utility family for the distinct Park City subhead treatment.
 
 - Reuse:
@@ -89,14 +89,14 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
 
 ## Semantic Mapping
 
-- `family/heading` -> `park_city/family/primary`
-- `family/body` -> `park_city/family/primary`
-- `family/action` -> `park_city/family/primary`
+- `family/heading` -> `park_city/family/01`
+- `family/body` -> `park_city/family/01`
+- `family/action` -> `park_city/family/01`
 - `weight/heading/base` -> `universal/weight/bold`
 - `weight/body/base` -> `universal/weight/light`
 - `weight/action/base` -> `universal/weight/bold`
 - `size/*` remain inherited in the live extension
-- `park_city/family/utility` remains raw-only for the condensed subhead recipe
+- `park_city/family/02` remains raw-only for the condensed subhead recipe
 
 ## Role Recipes
 
@@ -106,7 +106,7 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
   THIS IS YOUR HEADLINE.
 </div>
 
-- Proposed family token: `park_city/family/primary`
+- Proposed family token: `park_city/family/01`
 - Proposed weight token: `universal/weight/bold`
 - Proposed size token: `inherited current heading ladder`
 - Notes: Park City display lane on Futura Std Bold.
@@ -117,7 +117,7 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
   THIS IS YOUR SUBHEAD.
 </div>
 
-- Proposed family token: `park_city/family/utility`
+- Proposed family token: `park_city/family/02`
 - Proposed weight token: `universal/weight/bold`
 - Proposed size token: `inherited current heading ladder`
 - Notes: Raw-only condensed utility recipe pending a future semantic subhead lane.
@@ -128,7 +128,7 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
   This is your body copy.
 </div>
 
-- Proposed family token: `park_city/family/primary`
+- Proposed family token: `park_city/family/01`
 - Proposed weight token: `universal/weight/light`
 - Proposed size token: `inherited current body ladder`
 - Notes: Reading-copy lane stays on Futura Std Light.
@@ -139,7 +139,7 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
   PLAN YOUR VISIT
 </div>
 
-- Proposed family token: `park_city/family/primary`
+- Proposed family token: `park_city/family/01`
 - Proposed weight token: `universal/weight/bold`
 - Proposed size token: `inherited current action ladder`
 - Notes: CTA stays on Futura Std Bold rather than the condensed subhead face.

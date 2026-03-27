@@ -109,45 +109,45 @@ primitive_recommendations:
         reason: Keeps CTA on the shared universal ladder until later experimentation justifies a different raw size.
   proposed_primitives:
     families:
-      - token_name: vail/family/primary
+      - token_name: vail/family/02
         source_family_name: Avenir
         source_style_reference: Avenir Black and Avenir Medium across eyebrow, subhead, body, and cta
         rationale: Shared text family across most Vail typography roles.
-        fallback_token: universal/family/web_safe
-        fallback_note: Source artifact does not specify a fallback stack, so the review defaults to the global web-safe family.
-      - token_name: vail/family/display
+        fallback_token: universal/family/fallback
+        fallback_note: Source artifact does not specify a fallback stack, so the review defaults to the global fallback family.
+      - token_name: vail/family/01
         source_family_name: Termina
         source_style_reference: Termina Black for headline
         rationale: Distinct display family reserved for headline treatment.
-        fallback_token: universal/family/web_safe
-        fallback_note: Source artifact does not specify a fallback stack, so the review defaults to the global web-safe family.
+        fallback_token: universal/family/fallback
+        fallback_note: Source artifact does not specify a fallback stack, so the review defaults to the global fallback family.
     weights: []
   hold_for_review: []
 
 semantic_recommendations:
   family_aliases:
     - semantic_token: family/heading
-      global_token: vail/family/display
+      global_token: vail/family/01
       safe_semantic_token: family/heading_safe
-      safe_global_token: universal/family/web_safe
+      safe_global_token: universal/family/fallback
       intended_channels:
         - web
         - email
         - ads
       notes: Use the brand display family in web and ad executions. Use the safe alias for email or any constrained placement that cannot reliably deliver Termina.
     - semantic_token: family/body
-      global_token: vail/family/primary
+      global_token: vail/family/02
       safe_semantic_token: family/body_safe
-      safe_global_token: universal/family/web_safe
+      safe_global_token: universal/family/fallback
       intended_channels:
         - web
         - email
         - ads
       notes: Primary reading family across channels. Use the safe alias where brand-font delivery is constrained.
     - semantic_token: family/action
-      global_token: vail/family/primary
+      global_token: vail/family/02
       safe_semantic_token: family/action_safe
-      safe_global_token: universal/family/web_safe
+      safe_global_token: universal/family/fallback
       intended_channels:
         - web
         - email
@@ -157,8 +157,8 @@ semantic_recommendations:
 role_recipes:
   - role_name: eyebrow
     source_role: Eyebrow | Avenir Black
-    proposed_family_token: vail/family/primary
-    fallback_token: universal/family/web_safe
+    proposed_family_token: vail/family/02
+    fallback_token: universal/family/fallback
     proposed_weight_token: universal/weight/black
     proposed_size_token: universal/size/400
     size_assumption_status: assumed
@@ -171,8 +171,8 @@ role_recipes:
     notes: Use as a section title or header and to break up headline hierarchy. Stroke width should be as thick as the text.
   - role_name: headline
     source_role: Headline | Termina Black
-    proposed_family_token: vail/family/display
-    fallback_token: universal/family/web_safe
+    proposed_family_token: vail/family/01
+    fallback_token: universal/family/fallback
     proposed_weight_token: universal/weight/black
     proposed_size_token: universal/size/800
     size_assumption_status: assumed
@@ -185,8 +185,8 @@ role_recipes:
     notes: Primary display treatment.
   - role_name: subhead
     source_role: Subhead | Avenir Black
-    proposed_family_token: vail/family/primary
-    fallback_token: universal/family/web_safe
+    proposed_family_token: vail/family/02
+    fallback_token: universal/family/fallback
     proposed_weight_token: universal/weight/black
     proposed_size_token: universal/size/400
     size_assumption_status: assumed
@@ -199,8 +199,8 @@ role_recipes:
     notes: Intended as secondary supporting headline copy.
   - role_name: body
     source_role: Body Copy | Avenir Medium
-    proposed_family_token: vail/family/primary
-    fallback_token: universal/family/web_safe
+    proposed_family_token: vail/family/02
+    fallback_token: universal/family/fallback
     proposed_weight_token: universal/weight/medium
     proposed_size_token: universal/size/300
     size_assumption_status: assumed
@@ -213,8 +213,8 @@ role_recipes:
     notes: Avoid widows and orphans when setting copy.
   - role_name: cta
     source_role: CTA | Avenir Black
-    proposed_family_token: vail/family/primary
-    fallback_token: universal/family/web_safe
+    proposed_family_token: vail/family/02
+    fallback_token: universal/family/fallback
     proposed_weight_token: universal/weight/black
     proposed_size_token: universal/size/300
     size_assumption_status: assumed
@@ -232,7 +232,7 @@ validation:
     - Avenir serves as the shared text family while Termina is reserved for headline treatment.
   governance_notes:
     - Missing raw sizes are mapped provisionally to the universal size ladder and should be revisited only after design experimentation produces a better shared baseline.
-    - Missing fallback stacks default to universal/family/web_safe unless a brand guide later specifies a different approved fallback.
+    - Missing fallback stacks default to universal/family/fallback unless a brand guide later specifies a different approved fallback.
     - Black weights should reuse universal/weight/black at the global raw layer unless a later numeric exception is approved.
 
 review_readiness:

@@ -89,18 +89,18 @@ primitive_recommendations:
         reason: Preserves the brand relationship without inventing a new raw size.
   proposed_primitives:
     families:
-      - token_name: breckenridge/family/primary
+      - token_name: breckenridge/family/01
         source_family_name: Poppins
         source_style_reference: Poppins Bold across headline, subhead, and cta
         rationale: Shared Breckenridge brand family across the display and action roles.
-        fallback_token: universal/family/web_safe
-        fallback_note: Source artifact does not specify a fallback stack, so the review defaults to the global web-safe family.
-      - token_name: breckenridge/family/secondary
+        fallback_token: universal/family/fallback
+        fallback_note: Source artifact does not specify a fallback stack, so the review defaults to the global fallback family.
+      - token_name: breckenridge/family/02
         source_family_name: Avenir Next
         source_style_reference: Avenir Next body copy
         rationale: Secondary reading family used for body copy.
-        fallback_token: universal/family/web_safe
-        fallback_note: Source artifact does not specify a fallback stack, so the review defaults to the global web-safe family.
+        fallback_token: universal/family/fallback
+        fallback_note: Source artifact does not specify a fallback stack, so the review defaults to the global fallback family.
     weights:
       - token_name: universal/weight/bold
         source_weight_label: Bold
@@ -111,27 +111,27 @@ primitive_recommendations:
 semantic_recommendations:
   family_aliases:
     - semantic_token: family/heading
-      global_token: breckenridge/family/primary
+      global_token: breckenridge/family/01
       safe_semantic_token: family/heading_safe
-      safe_global_token: universal/family/web_safe
+      safe_global_token: universal/family/fallback
       intended_channels:
         - web
         - email
         - ads
       notes: Breckenridge headings should use Poppins where the brand family can be delivered and the safe alias where it cannot.
     - semantic_token: family/body
-      global_token: breckenridge/family/secondary
+      global_token: breckenridge/family/02
       safe_semantic_token: family/body_safe
-      safe_global_token: universal/family/web_safe
+      safe_global_token: universal/family/fallback
       intended_channels:
         - web
         - email
         - ads
       notes: Body copy should stay on Avenir Next in brand-capable channels and move to the safe alias in constrained channels.
     - semantic_token: family/action
-      global_token: breckenridge/family/primary
+      global_token: breckenridge/family/01
       safe_semantic_token: family/action_safe
-      safe_global_token: universal/family/web_safe
+      safe_global_token: universal/family/fallback
       intended_channels:
         - web
         - email
@@ -192,8 +192,8 @@ semantic_recommendations:
 role_recipes:
   - role_name: headline
     source_role: H1 Headline | Poppins Bold
-    proposed_family_token: breckenridge/family/primary
-    fallback_token: universal/family/web_safe
+    proposed_family_token: breckenridge/family/01
+    fallback_token: universal/family/fallback
     proposed_weight_token: universal/weight/bold
     proposed_size_token: universal/size/800
     size_assumption_status: assumed
@@ -206,8 +206,8 @@ role_recipes:
     notes: Proposed family mapping is ready for review and uses the shared raw bold weight in the global typography ladder.
   - role_name: subhead
     source_role: H1 Subhead | Poppins Bold
-    proposed_family_token: breckenridge/family/primary
-    fallback_token: universal/family/web_safe
+    proposed_family_token: breckenridge/family/01
+    fallback_token: universal/family/fallback
     proposed_weight_token: universal/weight/bold
     proposed_size_token: universal/size/600
     size_assumption_status: assumed
@@ -220,8 +220,8 @@ role_recipes:
     notes: Uses the same family as the headline with a smaller assumed size and negative tracking.
   - role_name: body
     source_role: Body Copy | Avenir Next
-    proposed_family_token: breckenridge/family/secondary
-    fallback_token: universal/family/web_safe
+    proposed_family_token: breckenridge/family/02
+    fallback_token: universal/family/fallback
     proposed_weight_token: universal/weight/normal
     proposed_size_token: universal/size/300
     size_assumption_status: assumed
@@ -234,8 +234,8 @@ role_recipes:
     notes: Body weight remains a provisional normal-weight assumption until the source provides a stricter raw mapping.
   - role_name: cta
     source_role: CTA | Poppins Bold
-    proposed_family_token: breckenridge/family/primary
-    fallback_token: universal/family/web_safe
+    proposed_family_token: breckenridge/family/01
+    fallback_token: universal/family/fallback
     proposed_weight_token: universal/weight/bold
     proposed_size_token: universal/size/300
     size_assumption_status: assumed

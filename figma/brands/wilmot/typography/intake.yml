@@ -79,23 +79,23 @@ primitive_recommendations:
     sizes: []
   proposed_primitives:
     families:
-      - token_name: wilmot/family/display
+      - token_name: wilmot/family/01
         source_family_name: Museo Slab
         source_style_reference: 700 headline and CTA
         rationale: Display and CTA family.
-        fallback_token: universal/family/web_safe
+        fallback_token: universal/family/fallback
         fallback_note: Safe-family behavior remains inherited.
-      - token_name: wilmot/family/primary
+      - token_name: wilmot/family/02
         source_family_name: Museo Sans
         source_style_reference: 700 subhead and 500 body
         rationale: Reading and supporting family.
-        fallback_token: universal/family/web_safe
+        fallback_token: universal/family/fallback
         fallback_note: Safe-family behavior remains inherited.
-      - token_name: wilmot/family/utility
+      - token_name: wilmot/family/03
         source_family_name: Prompt
         source_style_reference: digital-only headline, body, and CTA family
         rationale: Preserved as a raw utility family.
-        fallback_token: universal/family/web_safe
+        fallback_token: universal/family/fallback
         fallback_note: Safe-family behavior remains inherited.
     weights: []
   hold_for_review: []
@@ -103,25 +103,25 @@ primitive_recommendations:
 semantic_recommendations:
   family_aliases:
     - semantic_token: family/heading
-      global_token: wilmot/family/display
+      global_token: wilmot/family/01
       safe_semantic_token: family/heading_safe
-      safe_global_token: universal/family/web_safe
+      safe_global_token: universal/family/fallback
       intended_channels:
         - web
         - email
         - ads
     - semantic_token: family/body
-      global_token: wilmot/family/primary
+      global_token: wilmot/family/02
       safe_semantic_token: family/body_safe
-      safe_global_token: universal/family/web_safe
+      safe_global_token: universal/family/fallback
       intended_channels:
         - web
         - email
         - ads
     - semantic_token: family/action
-      global_token: wilmot/family/display
+      global_token: wilmot/family/01
       safe_semantic_token: family/action_safe
-      safe_global_token: universal/family/web_safe
+      safe_global_token: universal/family/fallback
       intended_channels:
         - web
         - email
@@ -142,17 +142,17 @@ semantic_recommendations:
 role_recipes:
   - role_name: heading
     source_role: Museo Slab 700
-    proposed_family_token: wilmot/family/display
+    proposed_family_token: wilmot/family/01
     proposed_weight_token: universal/weight/bold
     proposed_size_token: inherited current heading ladder
   - role_name: body
     source_role: Museo Sans 500
-    proposed_family_token: wilmot/family/primary
+    proposed_family_token: wilmot/family/02
     proposed_weight_token: universal/weight/medium
     proposed_size_token: inherited current body ladder
   - role_name: action
     source_role: Museo Slab 700
-    proposed_family_token: wilmot/family/display
+    proposed_family_token: wilmot/family/01
     proposed_weight_token: universal/weight/bold
     proposed_size_token: inherited current action ladder
 
@@ -160,7 +160,7 @@ validation:
   extraction_notes:
     - The source uses Museo Slab for headline and CTA work, Museo Sans for subhead and body work, and Prompt only for the digital system.
   governance_notes:
-    - 'Prompt is preserved as `wilmot/family/utility` and remains raw-only in the first pass.'
+    - 'Prompt is preserved as `wilmot/family/03` and remains raw-only in the first pass.'
     - 'User-corrected naming pass. The governed brand name is `Wilmot`, not `Wilmot Mountain`.'
 
 review_readiness:

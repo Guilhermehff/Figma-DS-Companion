@@ -10,10 +10,10 @@ Review state: written in Figma. Verify live state in `figma/brands/laurel_mounta
 
 ## Live Semantic Mapping
 
-- `family/heading`, `family/body`, `family/action` -> `laurel_mountain/family/primary`
+- `family/heading`, `family/body`, `family/action` -> `laurel_mountain/family/01`
 - `weight/heading/base`, `weight/heading/strong`, `weight/body/strong`, `weight/action/base` -> `universal/weight/black`
 - `weight/body/base` -> `universal/weight/normal`
 
 ## Notes
 
-- `Niagara` is preserved as `laurel_mountain/family/display` and remains raw-only in the first pass.
+- `Niagara` is preserved as `laurel_mountain/family/02` and remains raw-only in the first pass.

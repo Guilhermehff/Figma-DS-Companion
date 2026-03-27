@@ -95,17 +95,17 @@ primitive_recommendations:
         reason: Keeps body on the shared raw ladder until a later comp or guide specifies a numeric size.
   proposed_primitives:
     families:
-      - token_name: heavenly/family/primary
+      - token_name: heavenly/family/01
         source_family_name: Din Condensed
         source_style_reference: Din Condensed Bold and Din Condensed Light across title and headline roles
         rationale: A single condensed display family drives Heavenly titles and headlines, with weight carrying the distinction.
-        fallback_token: universal/family/web_safe
+        fallback_token: universal/family/fallback
         fallback_note: The source names the family but does not provide a governed fallback stack.
-      - token_name: heavenly/family/secondary
+      - token_name: heavenly/family/02
         source_family_name: Brandon Grotesque
         source_style_reference: Brandon Grotesque Medium and Brandon Grotesque Regular across subhead and body roles
         rationale: A separate text family supports subhead and body copy.
-        fallback_token: universal/family/web_safe
+        fallback_token: universal/family/fallback
         fallback_note: The source names the family but does not provide a governed fallback stack.
     weights:
       - token_name: universal/weight/light
@@ -121,18 +121,18 @@ primitive_recommendations:
 semantic_recommendations:
   family_aliases:
     - semantic_token: family/heading
-      global_token: heavenly/family/primary
+      global_token: heavenly/family/01
       safe_semantic_token: family/heading_safe
-      safe_global_token: universal/family/web_safe
+      safe_global_token: universal/family/fallback
       intended_channels:
         - web
         - email
         - ads
       notes: Heavenly titles and headlines share the Din Condensed family in brand-capable channels, with the safe alias reserved for constrained delivery.
     - semantic_token: family/body
-      global_token: heavenly/family/secondary
+      global_token: heavenly/family/02
       safe_semantic_token: family/body_safe
-      safe_global_token: universal/family/web_safe
+      safe_global_token: universal/family/fallback
       intended_channels:
         - web
         - email
@@ -200,8 +200,8 @@ semantic_recommendations:
 role_recipes:
   - role_name: title
     source_role: Title | Din Condensed Bold
-    proposed_family_token: heavenly/family/primary
-    fallback_token: universal/family/web_safe
+    proposed_family_token: heavenly/family/01
+    fallback_token: universal/family/fallback
     proposed_weight_token: universal/weight/bold
     proposed_size_token: universal/size/400
     size_assumption_status: assumed
@@ -214,8 +214,8 @@ role_recipes:
     notes: Intended for titles and emphasized short copy lines.
   - role_name: headline
     source_role: Headline | Din Condensed Light
-    proposed_family_token: heavenly/family/primary
-    fallback_token: universal/family/web_safe
+    proposed_family_token: heavenly/family/01
+    fallback_token: universal/family/fallback
     proposed_weight_token: universal/weight/light
     proposed_size_token: universal/size/800
     size_assumption_status: assumed
@@ -228,8 +228,8 @@ role_recipes:
     notes: Default Heavenly display treatment. Use Bold only for source-approved emphasis cases such as manifestos or social headlines.
   - role_name: subhead
     source_role: Subhead | Brandon Grotesque Medium
-    proposed_family_token: heavenly/family/secondary
-    fallback_token: universal/family/web_safe
+    proposed_family_token: heavenly/family/02
+    fallback_token: universal/family/fallback
     proposed_weight_token: universal/weight/medium
     proposed_size_token: universal/size/500
     size_assumption_status: assumed
@@ -242,8 +242,8 @@ role_recipes:
     notes: Use Brandon Grotesque Medium in all caps for all subheads.
   - role_name: body
     source_role: Body | Brandon Grotesque Regular
-    proposed_family_token: heavenly/family/secondary
-    fallback_token: universal/family/web_safe
+    proposed_family_token: heavenly/family/02
+    fallback_token: universal/family/fallback
     proposed_weight_token: universal/weight/normal
     proposed_size_token: universal/size/300
     size_assumption_status: assumed

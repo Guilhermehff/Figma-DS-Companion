@@ -46,9 +46,9 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
 ## Primitive Recommendations
 
 - Proposed primitive:
-  Token name: `alpine_valley/family/primary`
+  Token name: `alpine_valley/family/01`
   Source item: `Prompt`
-  Fallback token: `universal/family/web_safe`
+  Fallback token: `universal/family/fallback`
   Notes: One-family Alpine Valley digital campaign system across H1, H2, and body copy.
 
 - Reuse:
@@ -65,14 +65,14 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
 
 ## Live Semantic Mapping
 
-- `family/heading` -> `alpine_valley/family/primary`
-- `family/body` -> `alpine_valley/family/primary`
-- `family/action` -> `alpine_valley/family/primary`
+- `family/heading` -> `alpine_valley/family/01`
+- `family/body` -> `alpine_valley/family/01`
+- `family/action` -> `alpine_valley/family/01`
 - `weight/heading/base` -> `universal/weight/bold`
 - `weight/body/base` -> `universal/weight/normal`
 - `weight/body/strong` -> `universal/weight/bold`
 - `weight/action/base` -> `universal/weight/bold`
-- `family/*_safe` -> inherit `universal/family/web_safe`
+- `family/*_safe` -> inherit `universal/family/fallback`
 - `size/*` -> inherit current semantic base
 
 ## Review Notes

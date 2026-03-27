@@ -110,9 +110,9 @@ semantic_overrides:
     typography:
       override_scopes:
       - semantic_token: family/heading
-        alias_of: mount_snow/family/primary
+        alias_of: mount_snow/family/01
       - semantic_token: family/body
-        alias_of: mount_snow/family/secondary
+        alias_of: mount_snow/family/02
       - semantic_token: weight/heading/base
         alias_of: universal/weight/black
       - semantic_token: weight/body/base

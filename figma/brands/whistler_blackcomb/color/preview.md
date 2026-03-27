@@ -24,6 +24,19 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
 - `Black` reuses `universal/black`.
 - `White` reuses `universal/white`.
 
+## Color Proportion Guidance
+
+### Brand Touchpoints
+
+- Intent: Red, black, and white should be held in balance so no single one of the three becomes the only field color in a design.
+- `Red`: `33%`
+  DS mapping: `whistler_blackcomb/red/600`
+- `Black`: `33%`
+  DS mapping: `universal/black`
+- `White`: `33%`
+  DS mapping: `universal/white`
+- Notes: Treat these as equal thirds rather than as audited integer totals. The source also states that no design should resolve to all red, all black, or all white.
+
 ## Proposed Families
 
 ### Family: red

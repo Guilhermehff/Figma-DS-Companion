@@ -93,11 +93,11 @@ primitive_recommendations:
         reason: Live semantic size aliases can remain inherited in the first pass.
   proposed_primitives:
     families:
-      - token_name: seven_springs/family/primary
+      - token_name: seven_springs/family/01
         source_family_name: Hoss Sharp
         source_style_reference: Black headline, Bold subhead, Medium body, and Heavy CTA system
         rationale: Seven Springs uses one type family across headline, subhead, body, and CTA roles, with weight and layout behavior carrying the hierarchy.
-        fallback_token: universal/family/web_safe
+        fallback_token: universal/family/fallback
         fallback_note: The source does not define a fallback stack.
     weights: []
   hold_for_review: []
@@ -105,27 +105,27 @@ primitive_recommendations:
 semantic_recommendations:
   family_aliases:
     - semantic_token: family/heading
-      global_token: seven_springs/family/primary
+      global_token: seven_springs/family/01
       safe_semantic_token: family/heading_safe
-      safe_global_token: universal/family/web_safe
+      safe_global_token: universal/family/fallback
       intended_channels:
         - web
         - email
         - ads
       notes: Headline and subhead work stay on Hoss Sharp.
     - semantic_token: family/body
-      global_token: seven_springs/family/primary
+      global_token: seven_springs/family/01
       safe_semantic_token: family/body_safe
-      safe_global_token: universal/family/web_safe
+      safe_global_token: universal/family/fallback
       intended_channels:
         - web
         - email
         - ads
       notes: Body copy stays on Hoss Sharp with Medium carrying the reading tone.
     - semantic_token: family/action
-      global_token: seven_springs/family/primary
+      global_token: seven_springs/family/01
       safe_semantic_token: family/action_safe
-      safe_global_token: universal/family/web_safe
+      safe_global_token: universal/family/fallback
       intended_channels:
         - web
         - email
@@ -165,8 +165,8 @@ semantic_recommendations:
 role_recipes:
   - role_name: headline
     source_role: Headline | Hoss Sharp Black
-    proposed_family_token: seven_springs/family/primary
-    fallback_token: universal/family/web_safe
+    proposed_family_token: seven_springs/family/01
+    fallback_token: universal/family/fallback
     proposed_weight_token: universal/weight/black
     proposed_size_token: inherited current heading ladder
     size_assumption_status: deferred_no_new_size
@@ -179,8 +179,8 @@ role_recipes:
     notes: Left justified unless the layout calls for centering, with optical kerning.
   - role_name: subhead
     source_role: Subhead | Hoss Sharp Bold
-    proposed_family_token: seven_springs/family/primary
-    fallback_token: universal/family/web_safe
+    proposed_family_token: seven_springs/family/01
+    fallback_token: universal/family/fallback
     proposed_weight_token: universal/weight/bold
     proposed_size_token: inherited current heading ladder
     size_assumption_status: deferred_no_new_size
@@ -193,8 +193,8 @@ role_recipes:
     notes: The live mapping routes the subhead recipe through `weight/heading/strong` because the semantic theme typography model has no dedicated subhead slot.
   - role_name: body
     source_role: Body Copy | Hoss Sharp Medium
-    proposed_family_token: seven_springs/family/primary
-    fallback_token: universal/family/web_safe
+    proposed_family_token: seven_springs/family/01
+    fallback_token: universal/family/fallback
     proposed_weight_token: universal/weight/medium
     proposed_size_token: inherited current body ladder
     size_assumption_status: deferred_no_new_size
@@ -207,8 +207,8 @@ role_recipes:
     notes: Reading copy remains on Hoss Sharp with Medium carrying the default body tone.
   - role_name: cta
     source_role: CTA | Hoss Sharp Heavy
-    proposed_family_token: seven_springs/family/primary
-    fallback_token: universal/family/web_safe
+    proposed_family_token: seven_springs/family/01
+    fallback_token: universal/family/fallback
     proposed_weight_token: universal/weight/black
     proposed_size_token: inherited current action ladder
     size_assumption_status: deferred_no_new_size

@@ -40,6 +40,146 @@ universal_reuse:
       rationale: Structural neutral lane.
   hold_for_review: []
 
+scale_spec:
+  working_space: OKLCH
+  steps:
+    - 50
+    - 100
+    - 200
+    - 300
+    - 400
+    - 500
+    - 600
+    - 700
+    - 800
+    - 900
+    - 950
+  contrast_targets:
+    white:
+      "800": "4.5:1 preferred"
+      "900": "7:1 required"
+      "950": "7:1 required"
+    black:
+      "50": "7:1 required"
+      "100": "7:1 required"
+      "200": "4.5:1 required"
+
+family_scales:
+  - family: wilmot_red
+    source_name: PMS 201C
+    source_value: "#a42036"
+    source_anchor: 500_source
+    tokens:
+      - name: wilmot/wilmot_red/50
+        value: "#7f6565"
+        source_anchor: false
+      - name: wilmot/wilmot_red/100
+        value: "#885b5c"
+        source_anchor: false
+      - name: wilmot/wilmot_red/200
+        value: "#905053"
+        source_anchor: false
+      - name: wilmot/wilmot_red/300
+        value: "#984449"
+        source_anchor: false
+      - name: wilmot/wilmot_red/400
+        value: "#9e3540"
+        source_anchor: false
+      - name: wilmot/wilmot_red/500
+        value: "#a42036"
+        source_anchor: true
+      - name: wilmot/wilmot_red/600
+        value: "#89001f"
+        source_anchor: false
+      - name: wilmot/wilmot_red/700
+        value: "#6d0008"
+        source_anchor: false
+      - name: wilmot/wilmot_red/800
+        value: "#520000"
+        source_anchor: false
+      - name: wilmot/wilmot_red/900
+        value: "#370000"
+        source_anchor: false
+      - name: wilmot/wilmot_red/950
+        value: "#1b0000"
+        source_anchor: false
+  - family: wilmot_rose
+    source_name: PMS 704U
+    source_value: "#a5565f"
+    source_anchor: 500_source
+    tokens:
+      - name: wilmot/wilmot_rose/50
+        value: "#8f7e7f"
+        source_anchor: false
+      - name: wilmot/wilmot_rose/100
+        value: "#957779"
+        source_anchor: false
+      - name: wilmot/wilmot_rose/200
+        value: "#996f72"
+        source_anchor: false
+      - name: wilmot/wilmot_rose/300
+        value: "#9e676c"
+        source_anchor: false
+      - name: wilmot/wilmot_rose/400
+        value: "#a25f65"
+        source_anchor: false
+      - name: wilmot/wilmot_rose/500
+        value: "#a5565f"
+        source_anchor: true
+      - name: wilmot/wilmot_rose/600
+        value: "#863944"
+        source_anchor: false
+      - name: wilmot/wilmot_rose/700
+        value: "#681c2a"
+        source_anchor: false
+      - name: wilmot/wilmot_rose/800
+        value: "#4a0012"
+        source_anchor: false
+      - name: wilmot/wilmot_rose/900
+        value: "#2d0001"
+        source_anchor: false
+      - name: wilmot/wilmot_rose/950
+        value: "#0f0000"
+        source_anchor: false
+  - family: wilmot_grey
+    source_name: Grey
+    source_value: "#58595b"
+    source_anchor: 500_source
+    tokens:
+      - name: wilmot/wilmot_grey/50
+        value: "#6a6a6a"
+        source_anchor: false
+      - name: wilmot/wilmot_grey/100
+        value: "#666667"
+        source_anchor: false
+      - name: wilmot/wilmot_grey/200
+        value: "#636364"
+        source_anchor: false
+      - name: wilmot/wilmot_grey/300
+        value: "#5f6061"
+        source_anchor: false
+      - name: wilmot/wilmot_grey/400
+        value: "#5b5c5e"
+        source_anchor: false
+      - name: wilmot/wilmot_grey/500
+        value: "#58595b"
+        source_anchor: true
+      - name: wilmot/wilmot_grey/600
+        value: "#424346"
+        source_anchor: false
+      - name: wilmot/wilmot_grey/700
+        value: "#2c2e33"
+        source_anchor: false
+      - name: wilmot/wilmot_grey/800
+        value: "#181b20"
+        source_anchor: false
+      - name: wilmot/wilmot_grey/900
+        value: "#07090f"
+        source_anchor: false
+      - name: wilmot/wilmot_grey/950
+        value: "#000102"
+        source_anchor: false
+
 semantic_recommendations:
   role_sets:
     - scope: neutral

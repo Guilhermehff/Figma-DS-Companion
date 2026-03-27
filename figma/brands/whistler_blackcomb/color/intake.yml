@@ -1,6 +1,6 @@
 date: 2026-03-18
 brand: whistler_blackcomb
-source_reference: User-provided image in chat showing the Whistler Blackcomb color palette
+source_reference: User-provided image in chat showing the Whistler Blackcomb color palette and proportion guidance
 source_type: image
 figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Foundations?node-id=1-3
 status: active
@@ -108,6 +108,29 @@ family_scales:
       - name: whistler_blackcomb/red/950
         value: "#300000"
         source_anchor: false
+
+color_proportion_guidance:
+  status: active
+  source_basis: The official Whistler Blackcomb guide explicitly calls for an even ratio of red, black, and white. The source does not break that rule into exact integer percentages beyond equal thirds.
+  contexts:
+    - name: brand_touchpoints
+      intent: Red, black, and white should be held in balance so no single one of the three becomes the only field color in a design.
+      proportions:
+        - source_color: Red
+          token: whistler_blackcomb/red/600
+          percentage: 33
+          rationale: The source calls for an even share across the three brand colors.
+        - source_color: Black
+          token: universal/black
+          percentage: 33
+          rationale: The source calls for an even share across the three brand colors.
+        - source_color: White
+          token: universal/white
+          percentage: 33
+          rationale: The source calls for an even share across the three brand colors.
+      notes:
+        - Treat these as equal thirds rather than as audited integer totals.
+        - The source also states that no design should resolve to all red, all black, or all white.
 
 validation:
   perceptual_consistency_notes:

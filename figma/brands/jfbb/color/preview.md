@@ -38,6 +38,24 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
 
 - No exact JFBB source swatch reuses an existing universal color primitive in this pass.
 
+## Color Proportion Guidance
+
+### Brand Touchpoints
+
+- Intent: `Snow Day`, `Last Chair`, and `Early Sunrise` should carry most brand work. `Frost`, `Bluebird`, and `Night Ski` are accent-only support colors.
+- Dominant palette:
+  `Snow Day` -> `jfbb/snow_day/50`
+  `Last Chair` -> `jfbb/last_chair/950`
+  `Early Sunrise` -> `jfbb/early_sunrise/400`
+- Supporting palette:
+  `Frost` -> `jfbb/frost/400`
+  `Bluebird` -> `jfbb/bluebird/600`
+  `Night Ski` -> `jfbb/night_ski/950`
+- Notes:
+  The source says the primary palette should remain the default unless it becomes illegible.
+  Secondary colors are reserved for smaller moments such as CTAs and the crown or snowflake element of the logo.
+  Secondary colors should be used in moderation rather than as dominant campaign fields.
+
 ## Proposed Families
 
 ### Family: early_sunrise

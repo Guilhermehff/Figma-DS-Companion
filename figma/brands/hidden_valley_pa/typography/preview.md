@@ -10,10 +10,10 @@ Review state: written in Figma. Verify live state in `figma/brands/hidden_valley
 
 ## Live Semantic Mapping
 
-- `family/heading`, `family/body`, `family/action` -> `hidden_valley_pa/family/primary`
+- `family/heading`, `family/body`, `family/action` -> `hidden_valley_pa/family/01`
 - `weight/heading/base`, `weight/heading/strong`, `weight/body/strong`, `weight/action/base` -> `universal/weight/black`
 - `weight/body/base` -> `universal/weight/normal`
 
 ## Notes
 
-- `Mrs Eaves XL Regular` is preserved as `hidden_valley_pa/family/display` and remains raw-only in the first pass.
+- `Mrs Eaves XL Regular` is preserved as `hidden_valley_pa/family/02` and remains raw-only in the first pass.

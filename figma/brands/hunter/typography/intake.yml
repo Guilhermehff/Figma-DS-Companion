@@ -93,11 +93,11 @@ primitive_recommendations:
         reason: Live semantic size aliases can remain inherited in the first pass.
   proposed_primitives:
     families:
-      - token_name: hunter/family/primary
+      - token_name: hunter/family/01
         source_family_name: Galano Grotesque
         source_style_reference: Bold, Semibold, Regular, and Light across headline, subheadline, body, and contrasting body roles
         rationale: Hunter uses one Galano Grotesque family across the full hierarchy, with weight carrying the structure.
-        fallback_token: universal/family/web_safe
+        fallback_token: universal/family/fallback
         fallback_note: The source does not define a fallback stack.
     weights: []
   hold_for_review: []
@@ -105,18 +105,18 @@ primitive_recommendations:
 semantic_recommendations:
   family_aliases:
     - semantic_token: family/heading
-      global_token: hunter/family/primary
+      global_token: hunter/family/01
       safe_semantic_token: family/heading_safe
-      safe_global_token: universal/family/web_safe
+      safe_global_token: universal/family/fallback
       intended_channels:
         - web
         - email
         - ads
       notes: Galano Grotesque is the repeated Hunter headline family.
     - semantic_token: family/body
-      global_token: hunter/family/primary
+      global_token: hunter/family/01
       safe_semantic_token: family/body_safe
-      safe_global_token: universal/family/web_safe
+      safe_global_token: universal/family/fallback
       intended_channels:
         - web
         - email
@@ -149,8 +149,8 @@ semantic_recommendations:
 role_recipes:
   - role_name: headline
     source_role: Headlines | Galano Grotesque Bold
-    proposed_family_token: hunter/family/primary
-    fallback_token: universal/family/web_safe
+    proposed_family_token: hunter/family/01
+    fallback_token: universal/family/fallback
     proposed_weight_token: universal/weight/bold
     proposed_size_token: inherited current heading ladder
     size_assumption_status: deferred_no_new_size
@@ -163,8 +163,8 @@ role_recipes:
     notes: H1 remains on Galano Grotesque Bold.
   - role_name: subheadline
     source_role: Sub-headlines | Galano Grotesque Semibold
-    proposed_family_token: hunter/family/primary
-    fallback_token: universal/family/web_safe
+    proposed_family_token: hunter/family/01
+    fallback_token: universal/family/fallback
     proposed_weight_token: universal/weight/semibold
     proposed_size_token: inherited current heading and body ladders
     size_assumption_status: deferred_no_new_size
@@ -177,8 +177,8 @@ role_recipes:
     notes: Approved live write. H2 stages through the shared Galano Grotesque family with the semibold weight.
   - role_name: body
     source_role: Body Copy | Galano Grotesque Regular
-    proposed_family_token: hunter/family/primary
-    fallback_token: universal/family/web_safe
+    proposed_family_token: hunter/family/01
+    fallback_token: universal/family/fallback
     proposed_weight_token: universal/weight/normal
     proposed_size_token: inherited current body ladder
     size_assumption_status: deferred_no_new_size
@@ -191,8 +191,8 @@ role_recipes:
     notes: Body copy remains on Galano Grotesque Regular.
   - role_name: body_contrasting
     source_role: Contrasting Body | Galano Grotesque Light
-    proposed_family_token: hunter/family/primary
-    fallback_token: universal/family/web_safe
+    proposed_family_token: hunter/family/01
+    fallback_token: universal/family/fallback
     proposed_weight_token: universal/weight/light
     proposed_size_token: inherited current body ladder
     size_assumption_status: deferred_no_new_size

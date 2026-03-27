@@ -10,11 +10,11 @@ Review state: written in Figma. Verify live state in `figma/brands/mt_brighton/b
 
 ## Live Semantic Mapping
 
-- `family/heading`, `family/action` -> `mt_brighton/family/display`
-- `family/body` -> `mt_brighton/family/primary`
+- `family/heading`, `family/action` -> `mt_brighton/family/01`
+- `family/body` -> `mt_brighton/family/02`
 - `weight/heading/base`, `weight/heading/strong`, `weight/action/base` -> `universal/weight/black`
 - `weight/body/base`, `weight/body/strong` -> `universal/weight/bold`
 
 ## Notes
 
-- `Prompt` is preserved as `mt_brighton/family/utility` and remains raw-only in the first pass.
+- `Prompt` is preserved as `mt_brighton/family/03` and remains raw-only in the first pass.

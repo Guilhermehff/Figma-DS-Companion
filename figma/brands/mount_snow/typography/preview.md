@@ -46,15 +46,15 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
 ## Primitive Recommendations
 
 - Proposed primitive:
-  Token name: `mount_snow/family/primary`
+  Token name: `mount_snow/family/01`
   Source item: `Vastago Grotesk`
-  Fallback token: `universal/family/web_safe`
+  Fallback token: `universal/family/fallback`
   Notes: Primary display family.
 
 - Proposed primitive:
-  Token name: `mount_snow/family/secondary`
+  Token name: `mount_snow/family/02`
   Source item: `Area Extended`
-  Fallback token: `universal/family/web_safe`
+  Fallback token: `universal/family/fallback`
   Notes: Shared family for Mount Snow subheadline and body copy.
 
 - Reuse:
@@ -82,8 +82,8 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
 
 ## Semantic Mapping
 
-- `family/heading` -> `mount_snow/family/primary`
-- `family/body` -> `mount_snow/family/secondary`
+- `family/heading` -> `mount_snow/family/01`
+- `family/body` -> `mount_snow/family/02`
 - `weight/heading/base` -> `universal/weight/black`
 - `weight/body/base` -> `universal/weight/medium`
 - `weight/body/strong` -> `universal/weight/black`
@@ -97,7 +97,7 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
   the quick brown fox jumps over the lazy dog
 </div>
 
-- Proposed family token: `mount_snow/family/primary`
+- Proposed family token: `mount_snow/family/01`
 - Proposed weight token: `universal/weight/black`
 - Proposed size token: `universal/size/700`
 - Notes: Strong lowercase headline lane.
@@ -108,7 +108,7 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
   The quick brown fox jumps over the lazy dog.
 </div>
 
-- Proposed family token: `mount_snow/family/secondary`
+- Proposed family token: `mount_snow/family/02`
 - Proposed weight token: `universal/weight/black`
 - Proposed size token: `universal/size/500`
 - Notes: Supportive headline lane using the same family as body.
@@ -119,7 +119,7 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
   The quick brown fox jumps over the lazy dog.
 </div>
 
-- Proposed family token: `mount_snow/family/secondary`
+- Proposed family token: `mount_snow/family/02`
 - Proposed weight token: `universal/weight/medium`
 - Proposed size token: `universal/size/200`
 - Notes: Reading-copy lane on the shared secondary family.

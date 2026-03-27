@@ -31,6 +31,146 @@ universal_reuse:
     - family: snow_white
       provided_value: "#f5f5f0"
       anchor_step: 100
+scale_spec:
+  working_space: OKLCH
+  steps:
+    - 50
+    - 100
+    - 200
+    - 300
+    - 400
+    - 500
+    - 600
+    - 700
+    - 800
+    - 900
+    - 950
+  contrast_targets:
+    white:
+      "800": "4.5:1 preferred"
+      "900": "7:1 required"
+      "950": "7:1 required"
+    black:
+      "50": "7:1 required"
+      "100": "7:1 required"
+      "200": "4.5:1 required"
+
+family_scales:
+  - family: creek_blue
+    source_name: Creek Blue
+    source_value: "#00303e"
+    source_anchor: 900_source
+    tokens:
+      - name: snow_creek/creek_blue/50
+        value: "#d5dddf"
+        source_anchor: false
+      - name: snow_creek/creek_blue/100
+        value: "#c0cccf"
+        source_anchor: false
+      - name: snow_creek/creek_blue/200
+        value: "#aababf"
+        source_anchor: false
+      - name: snow_creek/creek_blue/300
+        value: "#94a8ae"
+        source_anchor: false
+      - name: snow_creek/creek_blue/400
+        value: "#7e969d"
+        source_anchor: false
+      - name: snow_creek/creek_blue/500
+        value: "#67838c"
+        source_anchor: false
+      - name: snow_creek/creek_blue/600
+        value: "#4f707a"
+        source_anchor: false
+      - name: snow_creek/creek_blue/700
+        value: "#375d68"
+        source_anchor: false
+      - name: snow_creek/creek_blue/800
+        value: "#1e4854"
+        source_anchor: false
+      - name: snow_creek/creek_blue/900
+        value: "#00303e"
+        source_anchor: true
+      - name: snow_creek/creek_blue/950
+        value: "#000405"
+        source_anchor: false
+  - family: tagline_gold
+    source_name: Tagline Gold
+    source_value: "#dbae27"
+    source_anchor: 300_source
+    tokens:
+      - name: snow_creek/tagline_gold/50
+        value: "#f5e8c0"
+        source_anchor: false
+      - name: snow_creek/tagline_gold/100
+        value: "#edd691"
+        source_anchor: false
+      - name: snow_creek/tagline_gold/200
+        value: "#e5c360"
+        source_anchor: false
+      - name: snow_creek/tagline_gold/300
+        value: "#dbae27"
+        source_anchor: true
+      - name: snow_creek/tagline_gold/400
+        value: "#b89221"
+        source_anchor: false
+      - name: snow_creek/tagline_gold/500
+        value: "#9a7a1b"
+        source_anchor: false
+      - name: snow_creek/tagline_gold/600
+        value: "#7d6316"
+        source_anchor: false
+      - name: snow_creek/tagline_gold/700
+        value: "#614d11"
+        source_anchor: false
+      - name: snow_creek/tagline_gold/800
+        value: "#46380c"
+        source_anchor: false
+      - name: snow_creek/tagline_gold/900
+        value: "#2c2308"
+        source_anchor: false
+      - name: snow_creek/tagline_gold/950
+        value: "#120e03"
+        source_anchor: false
+  - family: snow_white
+    source_name: Snow White
+    source_value: "#f5f5f0"
+    source_anchor: 100_source
+    tokens:
+      - name: snow_creek/snow_white/50
+        value: "#fafaf7"
+        source_anchor: false
+      - name: snow_creek/snow_white/100
+        value: "#f5f5f0"
+        source_anchor: true
+      - name: snow_creek/snow_white/200
+        value: "#d6d6d1"
+        source_anchor: false
+      - name: snow_creek/snow_white/300
+        value: "#bbbbb7"
+        source_anchor: false
+      - name: snow_creek/snow_white/400
+        value: "#a1a19e"
+        source_anchor: false
+      - name: snow_creek/snow_white/500
+        value: "#888886"
+        source_anchor: false
+      - name: snow_creek/snow_white/600
+        value: "#70706e"
+        source_anchor: false
+      - name: snow_creek/snow_white/700
+        value: "#595957"
+        source_anchor: false
+      - name: snow_creek/snow_white/800
+        value: "#414140"
+        source_anchor: false
+      - name: snow_creek/snow_white/900
+        value: "#2a2a29"
+        source_anchor: false
+      - name: snow_creek/snow_white/950
+        value: "#141413"
+        source_anchor: false
+
 semantic_recommendations:
   role_sets:
     - scope: neutral

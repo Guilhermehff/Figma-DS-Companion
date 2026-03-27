@@ -15,12 +15,12 @@ brands:
   fonts:
   - family_name: Avenir
     token_names:
-    - vail/family/primary
+    - vail/family/02
     source_style_references:
     - Avenir Black and Avenir Medium across eyebrow, subhead, body, and cta
   - family_name: Termina
     token_names:
-    - vail/family/display
+    - vail/family/01
     source_style_references:
     - Termina Black for headline
 - brand_id: breckenridge
@@ -30,12 +30,12 @@ brands:
   fonts:
   - family_name: Poppins
     token_names:
-    - breckenridge/family/primary
+    - breckenridge/family/01
     source_style_references:
     - Poppins Bold across headline, subhead, and cta
   - family_name: Avenir Next
     token_names:
-    - breckenridge/family/secondary
+    - breckenridge/family/02
     source_style_references:
     - Avenir Next body copy
 - brand_id: crested_butte
@@ -45,7 +45,7 @@ brands:
   fonts:
   - family_name: Gibson
     token_names:
-    - crested_butte/family/primary
+    - crested_butte/family/01
     source_style_references:
     - Gibson Semibold and Gibson Regular across headline, sub-headline, and body
 - brand_id: northstar
@@ -55,7 +55,7 @@ brands:
   fonts:
   - family_name: New Order
     token_names:
-    - northstar/family/primary
+    - northstar/family/01
     source_style_references:
     - New Order Medium and New Order Regular across headline, sub-headline, and body
 - brand_id: heavenly
@@ -65,12 +65,12 @@ brands:
   fonts:
   - family_name: Din Condensed
     token_names:
-    - heavenly/family/primary
+    - heavenly/family/01
     source_style_references:
     - Din Condensed Bold and Din Condensed Light across title and headline roles
   - family_name: Brandon Grotesque
     token_names:
-    - heavenly/family/secondary
+    - heavenly/family/02
     source_style_references:
     - Brandon Grotesque Medium and Brandon Grotesque Regular across subhead and body
       roles
@@ -81,22 +81,22 @@ brands:
   fonts:
   - family_name: Trade Gothic Bold Condensed No. 20
     token_names:
-    - kirkwood/family/primary
+    - kirkwood/family/01
     source_style_references:
     - headline system
   - family_name: Avenir Next
     token_names:
-    - kirkwood/family/secondary
+    - kirkwood/family/02
     source_style_references:
     - body system
   - family_name: Futura Bold
     token_names:
-    - kirkwood/family/action
+    - kirkwood/family/03
     source_style_references:
     - title and small type system
   - family_name: Trade Gothic Condensed No. 18
     token_names:
-    - kirkwood/family/utility
+    - kirkwood/family/04
     source_style_references:
     - limited-space emphasis system
 - brand_id: keystone
@@ -106,12 +106,12 @@ brands:
   fonts:
   - family_name: Futura
     token_names:
-    - keystone/family/primary
+    - keystone/family/01
     source_style_references:
     - Futura Bold across headline, emphasized body copy, and CTA
   - family_name: Avenir
     token_names:
-    - keystone/family/secondary
+    - keystone/family/02
     source_style_references:
     - Avenir Medium across subheadline and body copy
 - brand_id: beaver_creek
@@ -121,17 +121,17 @@ brands:
   fonts:
   - family_name: IvyPresto Display
     token_names:
-    - beaver_creek/family/primary
+    - beaver_creek/family/01
     source_style_references:
     - Thin headline system
   - family_name: Vinila
     token_names:
-    - beaver_creek/family/secondary
+    - beaver_creek/family/02
     source_style_references:
     - Light body system
   - family_name: Vinila Condensed
     token_names:
-    - beaver_creek/family/action
+    - beaver_creek/family/03
     source_style_references:
     - Bold CTA and subheadline system
 - brand_id: mount_snow
@@ -141,12 +141,12 @@ brands:
   fonts:
   - family_name: Vastago Grotesk
     token_names:
-    - mount_snow/family/primary
+    - mount_snow/family/01
     source_style_references:
     - Heavy headline system
   - family_name: Area Extended
     token_names:
-    - mount_snow/family/secondary
+    - mount_snow/family/02
     source_style_references:
     - Extra Bold subheadline and Medium body system
 - brand_id: jfbb
@@ -156,7 +156,7 @@ brands:
   fonts:
   - family_name: Vista Sans NAR OTCE
     token_names:
-    - jfbb/family/primary
+    - jfbb/family/01
     source_style_references:
     - Black, Bold, and Book hierarchy system
 - brand_id: park_city
@@ -166,12 +166,12 @@ brands:
   fonts:
   - family_name: Futura Std
     token_names:
-    - park_city/family/primary
+    - park_city/family/01
     source_style_references:
     - Bold headline and CTA system plus Light body system
   - family_name: Trade Gothic LT Std Bold Condensed No. 20
     token_names:
-    - park_city/family/utility
+    - park_city/family/02
     source_style_references:
     - subhead system
 - brand_id: stevens_pass
@@ -181,7 +181,7 @@ brands:
   fonts:
   - family_name: Gibson
     token_names:
-    - stevens_pass/family/primary
+    - stevens_pass/family/01
     source_style_references:
     - Bold, Semi Bold, Medium, Regular, Light, and italic variants
 - brand_id: whistler_blackcomb
@@ -191,7 +191,7 @@ brands:
   fonts:
   - family_name: Proxima Nova
     token_names:
-    - whistler_blackcomb/family/primary
+    - whistler_blackcomb/family/01
     source_style_references:
     - Black, Bold, and Regular hierarchy
 - brand_id: afton_alps
@@ -208,7 +208,7 @@ brands:
   fonts:
   - family_name: Prompt
     token_names:
-    - alpine_valley/family/primary
+    - alpine_valley/family/01
     source_style_references:
     - Regular, Bold, Extra Bold, and italic variants shown in the campaign guide
 - brand_id: crotched
@@ -281,7 +281,7 @@ brands:
   fonts:
   - family_name: Hoss Sharp
     token_names:
-    - seven_springs/family/primary
+    - seven_springs/family/01
     source_style_references:
     - Black headline, Bold subhead, Medium body, and Heavy CTA system
 - brand_id: stowe
@@ -291,12 +291,12 @@ brands:
   fonts:
   - family_name: Athena
     token_names:
-    - stowe/family/display
+    - stowe/family/01
     source_style_references:
     - Athena Regular headline system
   - family_name: Raleway
     token_names:
-    - stowe/family/primary
+    - stowe/family/02
     source_style_references:
     - Raleway Bold, Regular, and Light across subhead, body, and contrasting body
       roles
@@ -307,12 +307,12 @@ brands:
   fonts:
   - family_name: Graphik
     token_names:
-    - mount_sunapee/family/primary
+    - mount_sunapee/family/01
     source_style_references:
     - Bold, Regular, and Light across H1, H2, and body copy
   - family_name: Neutraface Text Bold Italic
     token_names:
-    - mount_sunapee/family/utility
+    - mount_sunapee/family/02
     source_style_references:
     - Bold Italic subheader system
 - brand_id: hunter
@@ -322,7 +322,7 @@ brands:
   fonts:
   - family_name: Galano Grotesque
     token_names:
-    - hunter/family/primary
+    - hunter/family/01
     source_style_references:
     - Bold, Semibold, Regular, and Light across headline, subheadline, body, and contrasting
       body roles
@@ -333,12 +333,12 @@ brands:
   fonts:
   - family_name: Brown
     token_names:
-    - liberty_mountain/family/primary
+    - liberty_mountain/family/01
     source_style_references:
     - Brown Regular / Brown Light
   - family_name: Sentinel Book
     token_names:
-    - liberty_mountain/family/alternate
+    - liberty_mountain/family/02
     source_style_references:
     - Sentinel Book
 - brand_id: attitash
@@ -348,12 +348,12 @@ brands:
   fonts:
   - family_name: Buenos Aires
     token_names:
-    - attitash/family/primary
+    - attitash/family/01
     source_style_references:
     - Bold and Light across heading, body, and CTA
   - family_name: Coordinates
     token_names:
-    - attitash/family/alternate
+    - attitash/family/02
     source_style_references:
     - Medium subhead treatment
 - brand_id: hidden_valley_pa
@@ -363,12 +363,12 @@ brands:
   fonts:
   - family_name: Roboto
     token_names:
-    - hidden_valley_pa/family/primary
+    - hidden_valley_pa/family/01
     source_style_references:
     - Black and Regular across the functional hierarchy
   - family_name: Mrs Eaves XL Regular
     token_names:
-    - hidden_valley_pa/family/display
+    - hidden_valley_pa/family/02
     source_style_references:
     - logo and design applications
 - brand_id: laurel_mountain
@@ -378,12 +378,12 @@ brands:
   fonts:
   - family_name: Roboto
     token_names:
-    - laurel_mountain/family/primary
+    - laurel_mountain/family/01
     source_style_references:
     - Digital headline alt, subhead, CTA, and body
   - family_name: Niagara
     token_names:
-    - laurel_mountain/family/display
+    - laurel_mountain/family/02
     source_style_references:
     - Logo and design headline treatment
 - brand_id: mt_brighton
@@ -393,17 +393,17 @@ brands:
   fonts:
   - family_name: Museo Slab
     token_names:
-    - mt_brighton/family/display
+    - mt_brighton/family/01
     source_style_references:
     - 900 headline and CTA
   - family_name: Museo Sans
     token_names:
-    - mt_brighton/family/primary
+    - mt_brighton/family/02
     source_style_references:
     - 700 subhead family
   - family_name: Prompt
     token_names:
-    - mt_brighton/family/utility
+    - mt_brighton/family/03
     source_style_references:
     - digital fallback when Museo fonts are unavailable
 - brand_id: wilmot
@@ -413,16 +413,16 @@ brands:
   fonts:
   - family_name: Museo Slab
     token_names:
-    - wilmot/family/display
+    - wilmot/family/01
     source_style_references:
     - 700 headline and CTA
   - family_name: Museo Sans
     token_names:
-    - wilmot/family/primary
+    - wilmot/family/02
     source_style_references:
     - 700 subhead and 500 body
   - family_name: Prompt
     token_names:
-    - wilmot/family/utility
+    - wilmot/family/03
     source_style_references:
     - digital-only headline, body, and CTA family

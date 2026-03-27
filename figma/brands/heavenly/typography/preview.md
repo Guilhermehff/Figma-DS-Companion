@@ -59,15 +59,15 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
 ## Primitive Recommendations
 
 - Proposed primitive:
-  Token name: `heavenly/family/primary`
+  Token name: `heavenly/family/01`
   Source item: `Din Condensed`
-  Fallback token: `universal/family/web_safe`
+  Fallback token: `universal/family/fallback`
   Notes: One condensed display family spans Heavenly titles and headlines.
 
 - Proposed primitive:
-  Token name: `heavenly/family/secondary`
+  Token name: `heavenly/family/02`
   Source item: `Brandon Grotesque`
-  Fallback token: `universal/family/web_safe`
+  Fallback token: `universal/family/fallback`
   Notes: Secondary family spans the supportive and reading-copy roles.
 
 - Proposed primitive:
@@ -103,8 +103,8 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
 
 ## Semantic Mapping
 
-- `family/heading` -> `heavenly/family/primary`
-- `family/body` -> `heavenly/family/secondary`
+- `family/heading` -> `heavenly/family/01`
+- `family/body` -> `heavenly/family/02`
 - `weight/heading/base` -> `universal/weight/light`
 - `weight/heading/strong` -> `universal/weight/bold`
 - `weight/body/base` -> `universal/weight/normal`
@@ -119,7 +119,7 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
   SKI HEAVENLY
 </div>
 
-- Proposed family token: `heavenly/family/primary`
+- Proposed family token: `heavenly/family/01`
 - Proposed weight token: `universal/weight/bold`
 - Proposed size token: `universal/size/400`
 - Notes: Compact uppercase title treatment.
@@ -130,7 +130,7 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
   IT'S A MOUNTAIN, AND A BEACH
 </div>
 
-- Proposed family token: `heavenly/family/primary`
+- Proposed family token: `heavenly/family/01`
 - Proposed weight token: `universal/weight/light`
 - Proposed size token: `universal/size/800`
 - Notes: Default all-caps display headline. Bold remains reserved for specific emphasized cases.
@@ -141,7 +141,7 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
   YOUR PHONE WON'T DO IT JUSTICE
 </div>
 
-- Proposed family token: `heavenly/family/secondary`
+- Proposed family token: `heavenly/family/02`
 - Proposed weight token: `universal/weight/medium`
 - Proposed size token: `universal/size/500`
 - Notes: All-caps support line using the secondary family.
@@ -152,7 +152,7 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
   Nam velliqui beatur alit la volorpo rionsedi consecus ent quam sumquiam, occatur?
 </div>
 
-- Proposed family token: `heavenly/family/secondary`
+- Proposed family token: `heavenly/family/02`
 - Proposed weight token: `universal/weight/normal`
 - Proposed size token: `universal/size/300`
 - Notes: Sentence-case body copy.

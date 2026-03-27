@@ -40,6 +40,184 @@ universal_reuse:
     - family: wedding_blue
       provided_value: "#53c0c4"
       anchor_step: 400
+scale_spec:
+  working_space: OKLCH
+  steps:
+    - 50
+    - 100
+    - 200
+    - 300
+    - 400
+    - 500
+    - 600
+    - 700
+    - 800
+    - 900
+    - 950
+  contrast_targets:
+    white:
+      "800": "4.5:1 preferred"
+      "900": "7:1 required"
+      "950": "7:1 required"
+    black:
+      "50": "7:1 required"
+      "100": "7:1 required"
+      "200": "4.5:1 required"
+
+family_scales:
+  - family: wildcat_green
+    source_name: Wildcat Green
+    source_value: "#007067"
+    source_anchor: 800_source
+    tokens:
+      - name: wildcat_mountain/wildcat_green/50
+        value: "#d3e6e5"
+        source_anchor: false
+      - name: wildcat_mountain/wildcat_green/100
+        value: "#bbd9d7"
+        source_anchor: false
+      - name: wildcat_mountain/wildcat_green/200
+        value: "#a3cbc8"
+        source_anchor: false
+      - name: wildcat_mountain/wildcat_green/300
+        value: "#8abeb9"
+        source_anchor: false
+      - name: wildcat_mountain/wildcat_green/400
+        value: "#71afaa"
+        source_anchor: false
+      - name: wildcat_mountain/wildcat_green/500
+        value: "#57a19b"
+        source_anchor: false
+      - name: wildcat_mountain/wildcat_green/600
+        value: "#3d928b"
+        source_anchor: false
+      - name: wildcat_mountain/wildcat_green/700
+        value: "#20827a"
+        source_anchor: false
+      - name: wildcat_mountain/wildcat_green/800
+        value: "#007067"
+        source_anchor: true
+      - name: wildcat_mountain/wildcat_green/900
+        value: "#003934"
+        source_anchor: false
+      - name: wildcat_mountain/wildcat_green/950
+        value: "#000908"
+        source_anchor: false
+  - family: wildcat_tan
+    source_name: Wildcat Tan
+    source_value: "#e8e1be"
+    source_anchor: 200_source
+    tokens:
+      - name: wildcat_mountain/wildcat_tan/50
+        value: "#f7f4e8"
+        source_anchor: false
+      - name: wildcat_mountain/wildcat_tan/100
+        value: "#f0ebd4"
+        source_anchor: false
+      - name: wildcat_mountain/wildcat_tan/200
+        value: "#e8e1be"
+        source_anchor: true
+      - name: wildcat_mountain/wildcat_tan/300
+        value: "#c7c1a3"
+        source_anchor: false
+      - name: wildcat_mountain/wildcat_tan/400
+        value: "#aba68c"
+        source_anchor: false
+      - name: wildcat_mountain/wildcat_tan/500
+        value: "#908b76"
+        source_anchor: false
+      - name: wildcat_mountain/wildcat_tan/600
+        value: "#767260"
+        source_anchor: false
+      - name: wildcat_mountain/wildcat_tan/700
+        value: "#5c594b"
+        source_anchor: false
+      - name: wildcat_mountain/wildcat_tan/800
+        value: "#434137"
+        source_anchor: false
+      - name: wildcat_mountain/wildcat_tan/900
+        value: "#2b2923"
+        source_anchor: false
+      - name: wildcat_mountain/wildcat_tan/950
+        value: "#13120f"
+        source_anchor: false
+  - family: wildcat_teal
+    source_name: Wildcat Teal
+    source_value: "#008a7e"
+    source_anchor: 700_source
+    tokens:
+      - name: wildcat_mountain/wildcat_teal/50
+        value: "#d0e9e7"
+        source_anchor: false
+      - name: wildcat_mountain/wildcat_teal/100
+        value: "#b5ddda"
+        source_anchor: false
+      - name: wildcat_mountain/wildcat_teal/200
+        value: "#9ad1cc"
+        source_anchor: false
+      - name: wildcat_mountain/wildcat_teal/300
+        value: "#7ec4be"
+        source_anchor: false
+      - name: wildcat_mountain/wildcat_teal/400
+        value: "#61b7af"
+        source_anchor: false
+      - name: wildcat_mountain/wildcat_teal/500
+        value: "#43a9a0"
+        source_anchor: false
+      - name: wildcat_mountain/wildcat_teal/600
+        value: "#249b90"
+        source_anchor: false
+      - name: wildcat_mountain/wildcat_teal/700
+        value: "#008a7e"
+        source_anchor: true
+      - name: wildcat_mountain/wildcat_teal/800
+        value: "#005b53"
+        source_anchor: false
+      - name: wildcat_mountain/wildcat_teal/900
+        value: "#00322e"
+        source_anchor: false
+      - name: wildcat_mountain/wildcat_teal/950
+        value: "#000b0a"
+        source_anchor: false
+  - family: wedding_blue
+    source_name: Wedding Blue
+    source_value: "#53c0c4"
+    source_anchor: 400_source
+    tokens:
+      - name: wildcat_mountain/wedding_blue/50
+        value: "#d4eff0"
+        source_anchor: false
+      - name: wildcat_mountain/wedding_blue/100
+        value: "#b7e5e6"
+        source_anchor: false
+      - name: wildcat_mountain/wedding_blue/200
+        value: "#98d9dc"
+        source_anchor: false
+      - name: wildcat_mountain/wedding_blue/300
+        value: "#78ced1"
+        source_anchor: false
+      - name: wildcat_mountain/wedding_blue/400
+        value: "#53c0c4"
+        source_anchor: true
+      - name: wildcat_mountain/wedding_blue/500
+        value: "#449da0"
+        source_anchor: false
+      - name: wildcat_mountain/wedding_blue/600
+        value: "#377e81"
+        source_anchor: false
+      - name: wildcat_mountain/wedding_blue/700
+        value: "#2a6163"
+        source_anchor: false
+      - name: wildcat_mountain/wedding_blue/800
+        value: "#1e4547"
+        source_anchor: false
+      - name: wildcat_mountain/wedding_blue/900
+        value: "#122a2b"
+        source_anchor: false
+      - name: wildcat_mountain/wedding_blue/950
+        value: "#070f10"
+        source_anchor: false
+
 semantic_recommendations:
   role_sets:
     - scope: neutral

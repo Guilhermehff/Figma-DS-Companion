@@ -78,6 +78,8 @@ Rules:
 - The first group is **universal**.
 - Additional groups are **brand specific** and should use the `brand_id` values governed in `figma/brands/registry.yml`.
 - Do not create brand-specific typography families or weights that only mirror the universal baseline when a brand has no established typography guidance.
+- Raw typography family primitives in `Global: Typography` must use neutral numeric slots such as `01`, `02`, `03`, and `04`.
+- `fallback` is the only approved named typography family primitive exception at the Global level.
 - Global tokens do not carry UI meaning.
 
 ### Level 2: Semantic

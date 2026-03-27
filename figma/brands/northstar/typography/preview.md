@@ -46,9 +46,9 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
 ## Primitive Recommendations
 
 - Proposed primitive:
-  Token name: `northstar/family/primary`
+  Token name: `northstar/family/01`
   Source item: `New Order`
-  Fallback token: `universal/family/web_safe`
+  Fallback token: `universal/family/fallback`
   Notes: One brand family covers all reviewed Northstar typography roles.
 
 - Reuse:
@@ -73,8 +73,8 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
 
 ## Semantic Mapping
 
-- `family/heading` -> `northstar/family/primary`
-- `family/body` -> `northstar/family/primary`
+- `family/heading` -> `northstar/family/01`
+- `family/body` -> `northstar/family/01`
 - `weight/heading/base` -> `universal/weight/medium`
 - `weight/body/base` -> `universal/weight/normal`
 - `family/action`, `weight/action/*`, and safe aliases remain inherited until a delivery-specific Northstar rule exists
@@ -87,7 +87,7 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
   Headlines will be in New Order Medium in sentence case.
 </div>
 
-- Proposed family token: `northstar/family/primary`
+- Proposed family token: `northstar/family/01`
 - Proposed weight token: `universal/weight/medium`
 - Proposed size token: `universal/size/800`
 - Notes: Left justified, sentence case, 0px tracking, punctuation retained.
@@ -98,7 +98,7 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
   Sub-Headlines will be in New Order Regular in sentence case.
 </div>
 
-- Proposed family token: `northstar/family/primary`
+- Proposed family token: `northstar/family/01`
 - Proposed weight token: `universal/weight/normal`
 - Proposed size token: `universal/size/500`
 - Notes: Left justified, sentence case, leading equal to the font size.
@@ -109,7 +109,7 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
   Body Copy will be in New Order Regular in sentence case.
 </div>
 
-- Proposed family token: `northstar/family/primary`
+- Proposed family token: `northstar/family/01`
 - Proposed weight token: `universal/weight/normal`
 - Proposed size token: `universal/size/300`
 - Notes: Left justified, sentence case, with 1.8x leading.

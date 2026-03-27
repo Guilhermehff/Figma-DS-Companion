@@ -14,8 +14,8 @@ source_roles: []
 primitive_recommendations:
   reuse_existing:
     families:
-      - source_family_name: universal/family/primary
-        existing_token: universal/family/primary
+      - source_family_name: universal/family/01
+        existing_token: universal/family/01
         reason: No brand-specific typography guidance is established, so the brand inherits the shared universal primary family directly.
     weights:
       - source_weight_label: inherited

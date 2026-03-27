@@ -59,27 +59,27 @@ Review state: retrospective review artifact documenting the pre-review write exc
 ## Primitive Recommendations
 
 - Proposed primitive:
-  Token name: `kirkwood/family/primary`
+  Token name: `kirkwood/family/01`
   Source item: `Trade Gothic Bold Condensed No. 20`
-  Fallback token: `universal/family/web_safe`
+  Fallback token: `universal/family/fallback`
   Notes: Primary headline family.
 
 - Proposed primitive:
-  Token name: `kirkwood/family/secondary`
+  Token name: `kirkwood/family/02`
   Source item: `Avenir Next`
-  Fallback token: `universal/family/web_safe`
+  Fallback token: `universal/family/fallback`
   Notes: Reading family.
 
 - Proposed primitive:
-  Token name: `kirkwood/family/action`
+  Token name: `kirkwood/family/03`
   Source item: `Futura Bold`
-  Fallback token: `universal/family/web_safe`
+  Fallback token: `universal/family/fallback`
   Notes: Best semantic fit for short emphatic copy.
 
 - Proposed primitive:
-  Token name: `kirkwood/family/utility`
+  Token name: `kirkwood/family/04`
   Source item: `Trade Gothic Condensed No. 18`
-  Fallback token: `universal/family/web_safe`
+  Fallback token: `universal/family/fallback`
   Notes: Raw-only utility family retained outside the current semantic family lanes.
 
 ## Hold For Review
@@ -89,13 +89,13 @@ Review state: retrospective review artifact documenting the pre-review write exc
 
 ## Semantic Mapping
 
-- `family/heading` -> `kirkwood/family/primary`
-- `family/body` -> `kirkwood/family/secondary`
-- `family/action` -> `kirkwood/family/action`
+- `family/heading` -> `kirkwood/family/01`
+- `family/body` -> `kirkwood/family/02`
+- `family/action` -> `kirkwood/family/03`
 - `weight/heading/base` -> `universal/weight/bold`
 - `weight/body/base` -> `universal/weight/normal`
 - `weight/action/base` -> `universal/weight/bold`
-- `kirkwood/family/utility` remains raw-only
+- `kirkwood/family/04` remains raw-only
 
 ## Role Recipes
 
@@ -105,7 +105,7 @@ Review state: retrospective review artifact documenting the pre-review write exc
   FUTURA BOLD
 </div>
 
-- Proposed family token: `kirkwood/family/action`
+- Proposed family token: `kirkwood/family/03`
 - Proposed weight token: `universal/weight/bold`
 - Proposed size token: `universal/size/400`
 - Notes: Best-fit semantic staging for compact title and small type use.
@@ -116,7 +116,7 @@ Review state: retrospective review artifact documenting the pre-review write exc
   ABCDEFGHIJKLMNOP QRSTUVWXYZ
 </div>
 
-- Proposed family token: `kirkwood/family/primary`
+- Proposed family token: `kirkwood/family/01`
 - Proposed weight token: `universal/weight/bold`
 - Proposed size token: `universal/size/800`
 - Notes: Condensed display lane for stacked all-caps headlines.
@@ -127,7 +127,7 @@ Review state: retrospective review artifact documenting the pre-review write exc
   Avenir Next Regular
 </div>
 
-- Proposed family token: `kirkwood/family/secondary`
+- Proposed family token: `kirkwood/family/02`
 - Proposed weight token: `universal/weight/normal`
 - Proposed size token: `universal/size/300`
 - Notes: Sentence-case reading lane aligned to the 16 pt cap from the source.
@@ -138,7 +138,7 @@ Review state: retrospective review artifact documenting the pre-review write exc
   Trade Gothic Condensed No. 18
 </div>
 
-- Proposed family token: `kirkwood/family/utility`
+- Proposed family token: `kirkwood/family/04`
 - Proposed weight token: `universal/weight/normal`
 - Proposed size token: `universal/size/300`
 - Notes: Raw-only utility lane for limited-space emphasis.

@@ -60,6 +60,184 @@ universal_reuse:
       rationale: Structural neutral lane written live in Figma.
   hold_for_review: []
 
+scale_spec:
+  working_space: OKLCH
+  steps:
+    - 50
+    - 100
+    - 200
+    - 300
+    - 400
+    - 500
+    - 600
+    - 700
+    - 800
+    - 900
+    - 950
+  contrast_targets:
+    white:
+      "800": "4.5:1 preferred"
+      "900": "7:1 required"
+      "950": "7:1 required"
+    black:
+      "50": "7:1 required"
+      "100": "7:1 required"
+      "200": "4.5:1 required"
+
+family_scales:
+  - family: laurel_blue
+    source_name: Laurel Blue
+    source_value: "#00447c"
+    source_anchor: 500_source
+    tokens:
+      - name: hidden_valley_pa/laurel_blue/50
+        value: "#f2f7ff"
+        source_anchor: false
+      - name: hidden_valley_pa/laurel_blue/100
+        value: "#e1eeff"
+        source_anchor: false
+      - name: hidden_valley_pa/laurel_blue/200
+        value: "#c2dbff"
+        source_anchor: false
+      - name: hidden_valley_pa/laurel_blue/300
+        value: "#8fbdf5"
+        source_anchor: false
+      - name: hidden_valley_pa/laurel_blue/400
+        value: "#4f93d6"
+        source_anchor: false
+      - name: hidden_valley_pa/laurel_blue/500
+        value: "#00447c"
+        source_anchor: true
+      - name: hidden_valley_pa/laurel_blue/600
+        value: "#003a6b"
+        source_anchor: false
+      - name: hidden_valley_pa/laurel_blue/700
+        value: "#003059"
+        source_anchor: false
+      - name: hidden_valley_pa/laurel_blue/800
+        value: "#002648"
+        source_anchor: false
+      - name: hidden_valley_pa/laurel_blue/900
+        value: "#00213f"
+        source_anchor: false
+      - name: hidden_valley_pa/laurel_blue/950
+        value: "#001c36"
+        source_anchor: false
+  - family: dark_beige
+    source_name: Dark Beige
+    source_value: "#8a724e"
+    source_anchor: 500_source
+    tokens:
+      - name: hidden_valley_pa/dark_beige/50
+        value: "#fbf8f2"
+        source_anchor: false
+      - name: hidden_valley_pa/dark_beige/100
+        value: "#f2ece1"
+        source_anchor: false
+      - name: hidden_valley_pa/dark_beige/200
+        value: "#e3d7c4"
+        source_anchor: false
+      - name: hidden_valley_pa/dark_beige/300
+        value: "#cdba9c"
+        source_anchor: false
+      - name: hidden_valley_pa/dark_beige/400
+        value: "#b39b75"
+        source_anchor: false
+      - name: hidden_valley_pa/dark_beige/500
+        value: "#8a724e"
+        source_anchor: true
+      - name: hidden_valley_pa/dark_beige/600
+        value: "#6c5531"
+        source_anchor: false
+      - name: hidden_valley_pa/dark_beige/700
+        value: "#503914"
+        source_anchor: false
+      - name: hidden_valley_pa/dark_beige/800
+        value: "#352000"
+        source_anchor: false
+      - name: hidden_valley_pa/dark_beige/900
+        value: "#1c0800"
+        source_anchor: false
+      - name: hidden_valley_pa/dark_beige/950
+        value: "#050000"
+        source_anchor: false
+  - family: light_beige
+    source_name: Light Beige
+    source_value: "#e3d4b8"
+    source_anchor: 200_source
+    tokens:
+      - name: hidden_valley_pa/light_beige/50
+        value: "#ece9e3"
+        source_anchor: false
+      - name: hidden_valley_pa/light_beige/100
+        value: "#e8dfce"
+        source_anchor: false
+      - name: hidden_valley_pa/light_beige/200
+        value: "#e3d4b8"
+        source_anchor: true
+      - name: hidden_valley_pa/light_beige/300
+        value: "#c2b398"
+        source_anchor: false
+      - name: hidden_valley_pa/light_beige/400
+        value: "#a29479"
+        source_anchor: false
+      - name: hidden_valley_pa/light_beige/500
+        value: "#83755b"
+        source_anchor: false
+      - name: hidden_valley_pa/light_beige/600
+        value: "#66583f"
+        source_anchor: false
+      - name: hidden_valley_pa/light_beige/700
+        value: "#4a3d23"
+        source_anchor: false
+      - name: hidden_valley_pa/light_beige/800
+        value: "#2f2309"
+        source_anchor: false
+      - name: hidden_valley_pa/light_beige/900
+        value: "#170b00"
+        source_anchor: false
+      - name: hidden_valley_pa/light_beige/950
+        value: "#030000"
+        source_anchor: false
+  - family: hidden_valley_pa_neutral
+    source_name: Dark Beige + Light Beige + White
+    source_value: composite_family
+    source_anchor: 50_source / 100_source / 400_source
+    tokens:
+      - name: hidden_valley_pa/hidden_valley_pa_neutral/50
+        value: "#ffffff"
+        source_anchor: true
+      - name: hidden_valley_pa/hidden_valley_pa_neutral/100
+        value: "#e3d4b8"
+        source_anchor: true
+      - name: hidden_valley_pa/hidden_valley_pa_neutral/200
+        value: "#c4b293"
+        source_anchor: false
+      - name: hidden_valley_pa/hidden_valley_pa_neutral/300
+        value: "#a79270"
+        source_anchor: false
+      - name: hidden_valley_pa/hidden_valley_pa_neutral/400
+        value: "#8a724e"
+        source_anchor: true
+      - name: hidden_valley_pa/hidden_valley_pa_neutral/500
+        value: "#715a36"
+        source_anchor: false
+      - name: hidden_valley_pa/hidden_valley_pa_neutral/600
+        value: "#59421e"
+        source_anchor: false
+      - name: hidden_valley_pa/hidden_valley_pa_neutral/700
+        value: "#422c04"
+        source_anchor: false
+      - name: hidden_valley_pa/hidden_valley_pa_neutral/800
+        value: "#2c1700"
+        source_anchor: false
+      - name: hidden_valley_pa/hidden_valley_pa_neutral/900
+        value: "#180500"
+        source_anchor: false
+      - name: hidden_valley_pa/hidden_valley_pa_neutral/950
+        value: "#050000"
+        source_anchor: false
+
 semantic_recommendations:
   role_sets:
     - scope: neutral

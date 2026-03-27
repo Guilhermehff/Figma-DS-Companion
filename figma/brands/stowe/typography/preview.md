@@ -77,15 +77,15 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
   Notes: Covers the contrasting Raleway Light role.
 
 - Proposed primitive:
-  Token name: `stowe/family/display`
+  Token name: `stowe/family/01`
   Source item: `Athena`
-  Fallback token: `universal/family/web_safe`
+  Fallback token: `universal/family/fallback`
   Notes: Athena is isolated to the headline display lane in the first-pass staging.
 
 - Proposed primitive:
-  Token name: `stowe/family/primary`
+  Token name: `stowe/family/02`
   Source item: `Raleway`
-  Fallback token: `universal/family/web_safe`
+  Fallback token: `universal/family/fallback`
   Notes: Raleway carries subhead, body, and contrasting body roles in the first-pass staging.
 
 ## Approved Exceptions
@@ -98,12 +98,12 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
 
 ## Semantic Mapping
 
-- `family/heading` -> `stowe/family/display`
-- `family/body` -> `stowe/family/primary`
-- `family/action` -> `stowe/family/display`
-- `family/heading_safe` -> `universal/family/web_safe`
-- `family/body_safe` -> `universal/family/web_safe`
-- `family/action_safe` -> `universal/family/web_safe`
+- `family/heading` -> `stowe/family/01`
+- `family/body` -> `stowe/family/02`
+- `family/action` -> `stowe/family/01`
+- `family/heading_safe` -> `universal/family/fallback`
+- `family/body_safe` -> `universal/family/fallback`
+- `family/action_safe` -> `universal/family/fallback`
 - `weight/heading/base` -> `universal/weight/normal`
 - `weight/body/base` -> `universal/weight/normal`
 - `weight/body/strong` -> `universal/weight/bold`
@@ -119,7 +119,7 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
   STEP INTO THE ALLURE
 </div>
 
-- Proposed family token: `stowe/family/display`
+- Proposed family token: `stowe/family/01`
 - Proposed weight token: `universal/weight/normal`
 - Proposed size token: `inherited current heading ladder`
 - Notes: User-approved live write. The heading baseline follows the explicit Athena Regular label.
@@ -130,7 +130,7 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
   Experience The Luxury of Stowe In The Heart of Vermont.
 </div>
 
-- Proposed family token: `stowe/family/primary`
+- Proposed family token: `stowe/family/02`
 - Proposed weight token: `universal/weight/bold`
 - Proposed size token: `inherited current heading and body ladders`
 - Notes: Raleway Bold is explicit in the source.
@@ -141,7 +141,7 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
   Nam velliqui beatur alit la volorpo rionsedi consecus ent quam sumquiam, occatur?
 </div>
 
-- Proposed family token: `stowe/family/primary`
+- Proposed family token: `stowe/family/02`
 - Proposed weight token: `universal/weight/normal`
 - Proposed size token: `inherited current body ladder`
 - Notes: Raleway Regular is explicit in the source.
@@ -152,7 +152,7 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
   This font should be used sparingly due to legibility and only when large enough to be read.
 </div>
 
-- Proposed family token: `stowe/family/primary`
+- Proposed family token: `stowe/family/02`
 - Proposed weight token: `universal/weight/light`
 - Proposed size token: `inherited current body ladder`
 - Notes: Contrasting type remains documented as a raw option rather than a separate semantic lane.

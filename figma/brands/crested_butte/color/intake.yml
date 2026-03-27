@@ -1,6 +1,6 @@
 date: 2026-03-11
 brand: crested_butte
-source_reference: User-provided image in chat showing the Crested Butte color palette
+source_reference: User-provided image in chat showing the Crested Butte color palette and proportion guidance
 source_type: image
 figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Foundations?node-id=1-3
 status: active
@@ -148,6 +148,28 @@ family_scales:
       - name: crested_butte/beyond_black/950
         value: "#1a1a1a"
         source_anchor: true
+
+color_proportion_guidance:
+  status: active
+  source_basis: Approximate ratios inferred from the relative widths of the three swatches in the supplied Crested Butte palette strip. The source does not publish exact percentages in text.
+  contexts:
+    - name: brand_touchpoints
+      intent: Powder White slightly leads. Wild Red holds nearly equal weight as the main expressive lane. Beyond Black remains a smaller but still substantial grounding neutral.
+      proportions:
+        - source_color: Crested Butte Powder White
+          token: universal/white
+          percentage: 40
+          rationale: Widest field in the source strip and the leading open-space carrier.
+        - source_color: Crested Butte Wild Red
+          token: crested_butte/wild_red/700
+          percentage: 35
+          rationale: Near-equal central field and the main expressive brand color.
+        - source_color: Crested Butte Beyond Black
+          token: crested_butte/beyond_black/950
+          percentage: 25
+          rationale: Narrowest field in the strip and the grounding dark neutral.
+      notes:
+        - These percentages are approximate documentation guidance inferred from the displayed block widths rather than exact published source values.
 
 validation:
   perceptual_consistency_notes:

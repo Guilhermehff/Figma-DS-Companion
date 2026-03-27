@@ -43,15 +43,15 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
 ## Primitive Recommendations
 
 - Proposed primitive:
-  Token name: `breckenridge/family/primary`
+  Token name: `breckenridge/family/01`
   Source item: `Poppins`
-  Fallback token: `universal/family/web_safe`
+  Fallback token: `universal/family/fallback`
   Notes: Shared brand family across headline, subhead, and CTA.
 
 - Proposed primitive:
-  Token name: `breckenridge/family/secondary`
+  Token name: `breckenridge/family/02`
   Source item: `Avenir Next`
-  Fallback token: `universal/family/web_safe`
+  Fallback token: `universal/family/fallback`
   Notes: Secondary reading family for body copy.
 
 - Reuse:
@@ -67,13 +67,13 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
 
 ## Semantic Mapping
 
-- `family/heading` -> `breckenridge/family/primary`
-- `family/body` -> `breckenridge/family/secondary`
-- `family/action` -> `breckenridge/family/primary`
+- `family/heading` -> `breckenridge/family/01`
+- `family/body` -> `breckenridge/family/02`
+- `family/action` -> `breckenridge/family/01`
 - `weight/heading/base` -> `universal/weight/bold`
 - `weight/body/base` -> `universal/weight/normal`
 - `weight/action/base` -> `universal/weight/bold`
-- Safe aliases remain on `universal/family/web_safe`
+- Safe aliases remain on `universal/family/fallback`
 
 ## Role Recipes
 
@@ -83,7 +83,7 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
   LOREM IPSUM DOLOR SIT.
 </div>
 
-- Proposed family token: `breckenridge/family/primary`
+- Proposed family token: `breckenridge/family/01`
 - Proposed weight token: `universal/weight/bold`
 - Proposed size token: `universal/size/800`
 - Notes: Weight token now exists as a shared raw typography token.
@@ -94,7 +94,7 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
   Lorem ipsum dolor sit sed elit dolore magna aliqua.
 </div>
 
-- Proposed family token: `breckenridge/family/primary`
+- Proposed family token: `breckenridge/family/01`
 - Proposed weight token: `universal/weight/bold`
 - Proposed size token: `universal/size/600`
 - Notes: Negative tracking comes directly from the source and should be preserved in downstream review.
@@ -105,7 +105,7 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
   Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
 </div>
 
-- Proposed family token: `breckenridge/family/secondary`
+- Proposed family token: `breckenridge/family/02`
 - Proposed weight token: `universal/weight/normal`
 - Proposed size token: `universal/size/300`
 - Notes: Body weight remains an assumption because the source provides only the family name.
@@ -116,7 +116,7 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
   Learn more
 </div>
 
-- Proposed family token: `breckenridge/family/primary`
+- Proposed family token: `breckenridge/family/01`
 - Proposed weight token: `universal/weight/bold`
 - Proposed size token: `universal/size/300`
 - Notes: CTA uses the shared raw bold weight and is now covered by the live Breckenridge semantic theme typography overrides.

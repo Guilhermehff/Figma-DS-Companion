@@ -54,6 +54,25 @@ Review state: retrospective review artifact documenting the pre-review write exc
   Proposed token: `universal/black`
   Notes: Exact match, preserved inside the brand neutral ladder as the darkest anchor.
 
+## Color Proportion Guidance
+
+### Outdoor Photography Compositions
+
+- Intent: Foundational neutrals dominate. `Orange 021 C` stays as the main highlight color. The blue accents should usually arrive through photography or smaller supporting moments rather than as the leading solid field.
+- Dominant palette:
+  `White` -> `universal/white`
+  `Cool Grey 1` -> `kirkwood/cool_gray/300`
+  `Cool Grey 9` -> `kirkwood/cool_gray/700`
+  `Black C` -> `universal/black`
+- Supporting palette:
+  `Orange 021 C` -> `kirkwood/orange_021_c/500`
+  `648 C` -> `kirkwood/blue_648_c/800`
+  `633 C` -> `kirkwood/teal_633_c/600`
+  `642 C` -> `kirkwood/cool_gray/100`
+- Notes:
+  The source explicitly says orange is used as the highlight.
+  The source explicitly says the palette blues often occur naturally in outdoor photography.
+
 ## Proposed Families
 
 ### Family: orange_021_c

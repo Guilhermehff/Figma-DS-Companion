@@ -34,9 +34,9 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
 ## Primitive Recommendations
 
 - Proposed primitive:
-  Token name: `crested_butte/family/primary`
+  Token name: `crested_butte/family/01`
   Source item: `Gibson`
-  Fallback token: `universal/family/web_safe`
+  Fallback token: `universal/family/fallback`
   Notes: A single family covers headline, sub-headline, and body.
 
 - Reuse:
@@ -52,13 +52,13 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
 
 ## Semantic Mapping
 
-- `family/heading` -> `crested_butte/family/primary`
-- `family/body` -> `crested_butte/family/primary`
-- `family/action` -> `crested_butte/family/primary`
+- `family/heading` -> `crested_butte/family/01`
+- `family/body` -> `crested_butte/family/01`
+- `family/action` -> `crested_butte/family/01`
 - `weight/heading/base` -> `universal/weight/semibold`
 - `weight/body/base` -> `universal/weight/normal`
 - `weight/action/base` -> `universal/weight/semibold`
-- Safe aliases remain on `universal/family/web_safe`
+- Safe aliases remain on `universal/family/fallback`
 
 ## Role Recipes
 
@@ -68,7 +68,7 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
   gibson<br/>semibold
 </div>
 
-- Proposed family token: `crested_butte/family/primary`
+- Proposed family token: `crested_butte/family/01`
 - Proposed weight token: `universal/weight/semibold`
 - Proposed size token: `universal/size/800`
 - Notes: Preserve the lowercase lockup, 86% leading, and intentional line indentation in downstream layout work.
@@ -79,7 +79,7 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
   GIBSON SEMIBOLD
 </div>
 
-- Proposed family token: `crested_butte/family/primary`
+- Proposed family token: `crested_butte/family/01`
 - Proposed weight token: `universal/weight/semibold`
 - Proposed size token: `universal/size/500`
 - Notes: Keep the sub-headline to one line and limit it to black or white application.
@@ -90,7 +90,7 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
   Gibson Regular is our default body copy font, and should primarily be used in black on white backgrounds in layout.
 </div>
 
-- Proposed family token: `crested_butte/family/primary`
+- Proposed family token: `crested_butte/family/01`
 - Proposed weight token: `universal/weight/normal`
 - Proposed size token: `universal/size/300`
 - Notes: Body guidance is explicit about dark-on-light and light-on-dark use, so that behavior should carry downstream.
