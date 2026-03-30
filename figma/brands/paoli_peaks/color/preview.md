@@ -77,17 +77,17 @@ Source anchor: `200_source`
 Source anchor: `500_source`
 
 <div>
-  <span title="50 #e6f5de" style="display:inline-block;width:32px;height:32px;background:#e6f5de;border:1px solid #d1d5db;"></span>
-  <span title="100 #d7eec9" style="display:inline-block;width:32px;height:32px;background:#d7eec9;border:1px solid #d1d5db;"></span>
-  <span title="200 #c6e8b3" style="display:inline-block;width:32px;height:32px;background:#c6e8b3;border:1px solid #d1d5db;"></span>
-  <span title="300 #b5e19d" style="display:inline-block;width:32px;height:32px;background:#b5e19d;border:1px solid #d1d5db;"></span>
-  <span title="400 #a4d985" style="display:inline-block;width:32px;height:32px;background:#a4d985;border:1px solid #d1d5db;"></span>
-  <span title="500 #8fd16a" style="display:inline-block;width:32px;height:32px;background:#8fd16a;border:1px solid #d1d5db;"></span>
-  <span title="600 #70a453" style="display:inline-block;width:32px;height:32px;background:#70a453;border:1px solid #d1d5db;"></span>
-  <span title="700 #557d3f" style="display:inline-block;width:32px;height:32px;background:#557d3f;border:1px solid #d1d5db;"></span>
-  <span title="800 #3c582c" style="display:inline-block;width:32px;height:32px;background:#3c582c;border:1px solid #d1d5db;"></span>
-  <span title="900 #23341a" style="display:inline-block;width:32px;height:32px;background:#23341a;border:1px solid #d1d5db;"></span>
-  <span title="950 #0b1108" style="display:inline-block;width:32px;height:32px;background:#0b1108;border:1px solid #d1d5db;"></span>
+  <span title="50 #f2f8fb" style="display:inline-block;width:32px;height:32px;background:#f2f8fb;border:1px solid #d1d5db;"></span>
+  <span title="100 #e2f0f5" style="display:inline-block;width:32px;height:32px;background:#e2f0f5;border:1px solid #d1d5db;"></span>
+  <span title="200 #c5e1ea" style="display:inline-block;width:32px;height:32px;background:#c5e1ea;border:1px solid #d1d5db;"></span>
+  <span title="300 #9fd0dd" style="display:inline-block;width:32px;height:32px;background:#9fd0dd;border:1px solid #d1d5db;"></span>
+  <span title="400 #6ea8bd" style="display:inline-block;width:32px;height:32px;background:#6ea8bd;border:1px solid #d1d5db;"></span>
+  <span title="500 #4f8fa6" style="display:inline-block;width:32px;height:32px;background:#4f8fa6;border:1px solid #d1d5db;"></span>
+  <span title="600 #3c7489" style="display:inline-block;width:32px;height:32px;background:#3c7489;border:1px solid #d1d5db;"></span>
+  <span title="700 #2c596a" style="display:inline-block;width:32px;height:32px;background:#2c596a;border:1px solid #d1d5db;"></span>
+  <span title="800 #1f404c" style="display:inline-block;width:32px;height:32px;background:#1f404c;border:1px solid #d1d5db;"></span>
+  <span title="900 #183544" style="display:inline-block;width:32px;height:32px;background:#183544;border:1px solid #d1d5db;"></span>
+  <span title="950 #142a33" style="display:inline-block;width:32px;height:32px;background:#142a33;border:1px solid #d1d5db;"></span>
 </div>
 
 ## Review Notes

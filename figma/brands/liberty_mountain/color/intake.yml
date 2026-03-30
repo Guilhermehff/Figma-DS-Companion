@@ -8,277 +8,745 @@ preview:
   required_before_write: true
   artifact: figma/brands/liberty_mountain/color/preview.md
   status: written_in_figma
-
 source_swatches:
-  - source_name: Twilight
-    provided_value: "#3f5364"
-    source_usage_scope: source palette swatch
-    channel_restrictions: not specified in source
-    notes: Source image lists Pantone 7546C, RGB 66 83 99, and CMYK 58 32 18 54.
-  - source_name: Summit
-    provided_value: "#748693"
-    source_usage_scope: source palette swatch
-    channel_restrictions: not specified in source
-    notes: Source image lists Pantone 7544C, RGB 118 134 146, and CMYK 35 14 11 34.
-  - source_name: Tundra
-    provided_value: "#748693"
-    source_usage_scope: source palette swatch
-    channel_restrictions: not specified in source
-    notes: Source image lists Pantone 7545C but repeats the Summit RGB and HEX values; the intake preserves the source text as supplied.
-  - source_name: Shale
-    provided_value: "#51879f"
-    source_usage_scope: source palette swatch
-    channel_restrictions: not specified in source
-    notes: Source image lists Pantone 7697C, RGB 78 134 159, and CMYK 72 37 27 2.
-  - source_name: Stone
-    provided_value: "#4e5758"
-    source_usage_scope: source palette swatch
-    channel_restrictions: not specified in source
-    notes: Source image lists Pantone 445C, RGB 80 87 89, and CMYK 52 23 30 74.
-  - source_name: Sand
-    provided_value: "#b8b09b"
-    source_usage_scope: source palette swatch
-    channel_restrictions: not specified in source
-    notes: Source image lists Pantone Warm Grey 3C, RGB 184 176 155, and CMYK 29 26 39 0.
-  - source_name: Mineral
-    provided_value: "#d7d2cb"
-    source_usage_scope: source palette swatch
-    channel_restrictions: not specified in source
-    notes: Source image lists Pantone Warm Grey 1C, RGB 215 210 203, and CMYK 3 13 16 7.
-  - source_name: Limestone
-    provided_value: "#ebe7e3"
-    source_usage_scope: source palette swatch
-    channel_restrictions: not specified in source
-    notes: Source image lists Pantone Warm Grey 1 at 50 percent, RGB 236 232 228, and CMYK 6 7 8 0.
-  - source_name: Sunrise
-    provided_value: "#ff5a34"
-    source_usage_scope: source palette swatch approved as the primary expressive lane
-    channel_restrictions: not specified in source
-    notes: Source image lists Pantone 171C, RGB 255 92 57, and CMYK 0 61 72 0.
-  - source_name: Sunset
-    provided_value: "#e18431"
-    source_usage_scope: source palette swatch
-    channel_restrictions: not specified in source
-    notes: Source image lists Pantone 144C, RGB 237 131 48, and CMYK 0 51 100 0.
-  - source_name: Flora
-    provided_value: "#6a1f45"
-    source_usage_scope: source palette swatch
-    channel_restrictions: not specified in source
-    notes: Source image lists Pantone 229C, RGB 103 33 69, and CMYK 26 100 19 61.
-  - source_name: Spring
-    provided_value: "#b8bf09"
-    source_usage_scope: source palette swatch approved as the supporting expressive lane
-    channel_restrictions: not specified in source
-    notes: Source image lists Pantone 583C, RGB 183 191 22, and CMYK 26 1 100 10.
-  - source_name: Copper
-    provided_value: "#9d5f15"
-    source_usage_scope: source palette swatch
-    channel_restrictions: not specified in source
-    notes: Source image lists Pantone 876C metallic, RGB 156 95 21, and CMYK 30 63 100 19.
-
+- source_name: Twilight
+  provided_value: "#3f5364"
+  source_usage_scope: source palette swatch
+  channel_restrictions: not specified in source
+  notes: Source image lists Pantone 7546C, RGB 66 83 99, and CMYK 58 32 18 54.
+- source_name: Summit
+  provided_value: "#748693"
+  source_usage_scope: source palette swatch
+  channel_restrictions: not specified in source
+  notes: Source image lists Pantone 7544C, RGB 118 134 146, and CMYK 35 14 11 34.
+- source_name: Tundra
+  provided_value: "#748693"
+  source_usage_scope: source palette swatch
+  channel_restrictions: not specified in source
+  notes: Source image lists Pantone 7545C but repeats the Summit RGB and HEX values; the intake preserves the source text as supplied.
+- source_name: Shale
+  provided_value: "#51879f"
+  source_usage_scope: source palette swatch
+  channel_restrictions: not specified in source
+  notes: Source image lists Pantone 7697C, RGB 78 134 159, and CMYK 72 37 27 2.
+- source_name: Stone
+  provided_value: "#4e5758"
+  source_usage_scope: source palette swatch
+  channel_restrictions: not specified in source
+  notes: Source image lists Pantone 445C, RGB 80 87 89, and CMYK 52 23 30 74.
+- source_name: Sand
+  provided_value: "#b8b09b"
+  source_usage_scope: source palette swatch
+  channel_restrictions: not specified in source
+  notes: Source image lists Pantone Warm Grey 3C, RGB 184 176 155, and CMYK 29 26 39 0.
+- source_name: Mineral
+  provided_value: "#d7d2cb"
+  source_usage_scope: source palette swatch
+  channel_restrictions: not specified in source
+  notes: Source image lists Pantone Warm Grey 1C, RGB 215 210 203, and CMYK 3 13 16 7.
+- source_name: Limestone
+  provided_value: "#ebe7e3"
+  source_usage_scope: source palette swatch
+  channel_restrictions: not specified in source
+  notes: Source image lists Pantone Warm Grey 1 at 50 percent, RGB 236 232 228, and CMYK 6 7 8 0.
+- source_name: Sunrise
+  provided_value: "#ff5a34"
+  source_usage_scope: source palette swatch approved as the primary expressive lane
+  channel_restrictions: not specified in source
+  notes: Source image lists Pantone 171C, RGB 255 92 57, and CMYK 0 61 72 0.
+- source_name: Sunset
+  provided_value: "#e18431"
+  source_usage_scope: source palette swatch
+  channel_restrictions: not specified in source
+  notes: Source image lists Pantone 144C, RGB 237 131 48, and CMYK 0 51 100 0.
+- source_name: Flora
+  provided_value: "#6a1f45"
+  source_usage_scope: source palette swatch
+  channel_restrictions: not specified in source
+  notes: Source image lists Pantone 229C, RGB 103 33 69, and CMYK 26 100 19 61.
+- source_name: Spring
+  provided_value: "#b8bf09"
+  source_usage_scope: source palette swatch approved as the supporting expressive lane
+  channel_restrictions: not specified in source
+  notes: Source image lists Pantone 583C, RGB 183 191 22, and CMYK 26 1 100 10.
+- source_name: Copper
+  provided_value: "#9d5f15"
+  source_usage_scope: source palette swatch
+  channel_restrictions: not specified in source
+  notes: Source image lists Pantone 876C metallic, RGB 156 95 21, and CMYK 30 63 100 19.
 universal_reuse:
   reuse_universal: []
   new_brand_families:
-    - family: liberty_neutral
-      source_name: Limestone, Mineral, and Sand
-      provided_value: "#ebe7e3 / #d7d2cb / #b8b09b"
-      rationale: User-approved live write. These three warm neutrals are intentionally combined into one branded structural neutral ramp.
-      anchor_step: 100
-      anchor_label: 100_source
-    - family: sunrise
-      source_name: Sunrise
-      provided_value: "#ff5a34"
-      rationale: User-approved live write. Sunrise drives the primary expressive semantic lane.
-      anchor_step: 500
-      anchor_label: 500_source
-    - family: spring
-      source_name: Spring
-      provided_value: "#b8bf09"
-      rationale: User-approved live write. Spring drives the supporting expressive semantic lane.
-      anchor_step: 500
-      anchor_label: 500_source
+  - family: liberty_neutral
+    source_name: Limestone, Mineral, and Sand
+    provided_value: "#ebe7e3 / #d7d2cb / #b8b09b"
+    rationale: User-approved live write. These three warm neutrals are intentionally combined into one branded structural neutral ramp.
+    anchor_step: 100
+    anchor_label: 100_source
+  - family: sunrise
+    source_name: Sunrise
+    provided_value: "#ff5a34"
+    rationale: User-approved live write. Sunrise drives the primary expressive semantic lane.
+    anchor_step: 500
+    anchor_label: 500_source
+  - family: spring
+    source_name: Spring
+    provided_value: "#b8bf09"
+    rationale: User-approved live write. Spring drives the supporting expressive semantic lane.
+    anchor_step: 500
+    anchor_label: 500_source
   hold_for_review: []
-
 scale_spec:
   working_space: OKLCH
   steps:
-    - 50
-    - 100
-    - 200
-    - 300
-    - 400
-    - 500
-    - 600
-    - 700
-    - 800
-    - 900
-    - 950
+  - 50
+  - 100
+  - 200
+  - 300
+  - 400
+  - 500
+  - 600
+  - 700
+  - 800
+  - 900
+  - 950
   contrast_targets:
     white:
-      "800": "4.5:1 preferred"
-      "900": "7:1 required"
-      "950": "7:1 required"
+      '800': 4.5:1 preferred
+      '900': 7:1 required
+      '950': 7:1 required
     black:
-      "50": "7:1 required"
-      "100": "7:1 required"
-      "200": "4.5:1 required"
-
+      '50': 7:1 required
+      '100': 7:1 required
+      '200': 4.5:1 required
 family_scales:
-  - family: liberty_neutral
-    source_name: Limestone, Mineral, and Sand
-    source_value: "#ebe7e3 / #d7d2cb / #b8b09b"
-    source_anchor: 100_source / 200_source / 400_source
-    notes:
-      - Limestone anchors the light end of the structural neutral lane.
-      - Mineral supplies the middle light neutral bridge.
-      - Sand supplies the darker warm neutral bridge before derived deeper tones continue the ladder.
-  - family: sunrise
-    source_name: Sunrise
-    source_value: "#ff5a34"
-    source_anchor: 500_source
-  - family: spring
-    source_name: Spring
-    source_value: "#b8bf09"
-    source_anchor: 500_source
-  - family: twilight
-    source_name: Twilight
-    source_value: "#3f5364"
-    source_anchor: 500_source
-  - family: summit
-    source_name: Summit
-    source_value: "#748693"
-    source_anchor: 500_source
-  - family: tundra
-    source_name: Tundra
-    source_value: "#748693"
-    source_anchor: 500_source
-  - family: shale
-    source_name: Shale
-    source_value: "#51879f"
-    source_anchor: 500_source
-  - family: stone
-    source_name: Stone
-    source_value: "#4e5758"
-    source_anchor: 500_source
-  - family: sand
-    source_name: Sand
-    source_value: "#b8b09b"
-    source_anchor: 500_source
-  - family: mineral
-    source_name: Mineral
-    source_value: "#d7d2cb"
-    source_anchor: 500_source
-  - family: limestone
-    source_name: Limestone
-    source_value: "#ebe7e3"
-    source_anchor: 500_source
-  - family: sunset
-    source_name: Sunset
-    source_value: "#e18431"
-    source_anchor: 500_source
-  - family: flora
-    source_name: Flora
-    source_value: "#6a1f45"
-    source_anchor: 500_source
-  - family: copper
-    source_name: Copper
-    source_value: "#9d5f15"
-    source_anchor: 500_source
-
+- family: liberty_neutral
+  source_name: Limestone, Mineral, and Sand
+  source_value: "#ebe7e3 / #d7d2cb / #b8b09b"
+  source_anchor: 100_source / 200_source / 400_source
+  notes:
+  - Limestone anchors the light end of the structural neutral lane.
+  - Mineral supplies the middle light neutral bridge.
+  - Sand supplies the darker warm neutral bridge before derived deeper tones continue the ladder.
+  tokens:
+  - name: liberty_mountain/liberty_neutral/50
+    value: "#f0efed"
+    source_anchor: false
+  - name: liberty_mountain/liberty_neutral/100
+    value: "#ebe7e3"
+    source_anchor: true
+  - name: liberty_mountain/liberty_neutral/200
+    value: "#d7d2cb"
+    source_anchor: true
+  - name: liberty_mountain/liberty_neutral/300
+    value: "#c8c1b3"
+    source_anchor: false
+  - name: liberty_mountain/liberty_neutral/400
+    value: "#b8b09b"
+    source_anchor: true
+  - name: liberty_mountain/liberty_neutral/500
+    value: "#968e79"
+    source_anchor: false
+  - name: liberty_mountain/liberty_neutral/600
+    value: "#716955"
+    source_anchor: false
+  - name: liberty_mountain/liberty_neutral/700
+    value: "#463f2c"
+    source_anchor: false
+  - name: liberty_mountain/liberty_neutral/800
+    value: "#27200d"
+    source_anchor: false
+  - name: liberty_mountain/liberty_neutral/900
+    value: "#0d0700"
+    source_anchor: false
+  - name: liberty_mountain/liberty_neutral/950
+    value: "#020100"
+    source_anchor: false
+- family: sunrise
+  source_name: Sunrise
+  source_value: "#ff5a34"
+  source_anchor: 500_source
+  tokens:
+  - name: liberty_mountain/sunrise/50
+    value: "#ffeee5"
+    source_anchor: false
+  - name: liberty_mountain/sunrise/100
+    value: "#ffd5c7"
+    source_anchor: false
+  - name: liberty_mountain/sunrise/200
+    value: "#ffbaa5"
+    source_anchor: false
+  - name: liberty_mountain/sunrise/300
+    value: "#ff9d83"
+    source_anchor: false
+  - name: liberty_mountain/sunrise/400
+    value: "#ff7959"
+    source_anchor: false
+  - name: liberty_mountain/sunrise/500
+    value: "#ff5a34"
+    source_anchor: true
+  - name: liberty_mountain/sunrise/600
+    value: "#c81500"
+    source_anchor: false
+  - name: liberty_mountain/sunrise/700
+    value: "#920000"
+    source_anchor: false
+  - name: liberty_mountain/sunrise/800
+    value: "#620000"
+    source_anchor: false
+  - name: liberty_mountain/sunrise/900
+    value: "#3e0000"
+    source_anchor: false
+  - name: liberty_mountain/sunrise/950
+    value: "#220000"
+    source_anchor: false
+- family: spring
+  source_name: Spring
+  source_value: "#b8bf09"
+  source_anchor: 500_source
+  tokens:
+  - name: liberty_mountain/spring/50
+    value: "#f7fae0"
+    source_anchor: false
+  - name: liberty_mountain/spring/100
+    value: "#ebefc3"
+    source_anchor: false
+  - name: liberty_mountain/spring/200
+    value: "#dee4a2"
+    source_anchor: false
+  - name: liberty_mountain/spring/300
+    value: "#d1d87f"
+    source_anchor: false
+  - name: liberty_mountain/spring/400
+    value: "#c3ca4e"
+    source_anchor: false
+  - name: liberty_mountain/spring/500
+    value: "#b8bf09"
+    source_anchor: true
+  - name: liberty_mountain/spring/600
+    value: "#828700"
+    source_anchor: false
+  - name: liberty_mountain/spring/700
+    value: "#6a6f00"
+    source_anchor: false
+  - name: liberty_mountain/spring/800
+    value: "#545800"
+    source_anchor: false
+  - name: liberty_mountain/spring/900
+    value: "#3f4200"
+    source_anchor: false
+  - name: liberty_mountain/spring/950
+    value: "#2b2d00"
+    source_anchor: false
+- family: twilight
+  source_name: Twilight
+  source_value: "#3f5364"
+  source_anchor: 500_source
+  tokens:
+  - name: liberty_mountain/twilight/50
+    value: "#f3f7fc"
+    source_anchor: false
+  - name: liberty_mountain/twilight/100
+    value: "#d0d8df"
+    source_anchor: false
+  - name: liberty_mountain/twilight/200
+    value: "#aab5bf"
+    source_anchor: false
+  - name: liberty_mountain/twilight/300
+    value: "#8694a1"
+    source_anchor: false
+  - name: liberty_mountain/twilight/400
+    value: "#5d6e7e"
+    source_anchor: false
+  - name: liberty_mountain/twilight/500
+    value: "#3f5364"
+    source_anchor: true
+  - name: liberty_mountain/twilight/600
+    value: "#263a4a"
+    source_anchor: false
+  - name: liberty_mountain/twilight/700
+    value: "#0f2332"
+    source_anchor: false
+  - name: liberty_mountain/twilight/800
+    value: "#000f1e"
+    source_anchor: false
+  - name: liberty_mountain/twilight/900
+    value: "#000410"
+    source_anchor: false
+  - name: liberty_mountain/twilight/950
+    value: "#000007"
+    source_anchor: false
+- family: summit
+  source_name: Summit
+  source_value: "#748693"
+  source_anchor: 500_source
+  tokens:
+  - name: liberty_mountain/summit/50
+    value: "#f3f7fa"
+    source_anchor: false
+  - name: liberty_mountain/summit/100
+    value: "#dbe2e7"
+    source_anchor: false
+  - name: liberty_mountain/summit/200
+    value: "#c1cbd2"
+    source_anchor: false
+  - name: liberty_mountain/summit/300
+    value: "#a8b4bd"
+    source_anchor: false
+  - name: liberty_mountain/summit/400
+    value: "#8a99a5"
+    source_anchor: false
+  - name: liberty_mountain/summit/500
+    value: "#748693"
+    source_anchor: true
+  - name: liberty_mountain/summit/600
+    value: "#4d5e6b"
+    source_anchor: false
+  - name: liberty_mountain/summit/700
+    value: "#283945"
+    source_anchor: false
+  - name: liberty_mountain/summit/800
+    value: "#0b1b26"
+    source_anchor: false
+  - name: liberty_mountain/summit/900
+    value: "#000811"
+    source_anchor: false
+  - name: liberty_mountain/summit/950
+    value: "#000104"
+    source_anchor: false
+- family: tundra
+  source_name: Tundra
+  source_value: "#748693"
+  source_anchor: 500_source
+  tokens:
+  - name: liberty_mountain/tundra/50
+    value: "#f3f7fa"
+    source_anchor: false
+  - name: liberty_mountain/tundra/100
+    value: "#dbe2e7"
+    source_anchor: false
+  - name: liberty_mountain/tundra/200
+    value: "#c1cbd2"
+    source_anchor: false
+  - name: liberty_mountain/tundra/300
+    value: "#a8b4bd"
+    source_anchor: false
+  - name: liberty_mountain/tundra/400
+    value: "#8a99a5"
+    source_anchor: false
+  - name: liberty_mountain/tundra/500
+    value: "#748693"
+    source_anchor: true
+  - name: liberty_mountain/tundra/600
+    value: "#4d5e6b"
+    source_anchor: false
+  - name: liberty_mountain/tundra/700
+    value: "#283945"
+    source_anchor: false
+  - name: liberty_mountain/tundra/800
+    value: "#0b1b26"
+    source_anchor: false
+  - name: liberty_mountain/tundra/900
+    value: "#000811"
+    source_anchor: false
+  - name: liberty_mountain/tundra/950
+    value: "#000104"
+    source_anchor: false
+- family: shale
+  source_name: Shale
+  source_value: "#51879f"
+  source_anchor: 500_source
+  tokens:
+  - name: liberty_mountain/shale/50
+    value: "#eef9fe"
+    source_anchor: false
+  - name: liberty_mountain/shale/100
+    value: "#d1e4ed"
+    source_anchor: false
+  - name: liberty_mountain/shale/200
+    value: "#b1ccd9"
+    source_anchor: false
+  - name: liberty_mountain/shale/300
+    value: "#92b6c6"
+    source_anchor: false
+  - name: liberty_mountain/shale/400
+    value: "#6d9bb0"
+    source_anchor: false
+  - name: liberty_mountain/shale/500
+    value: "#51879f"
+    source_anchor: true
+  - name: liberty_mountain/shale/600
+    value: "#286077"
+    source_anchor: false
+  - name: liberty_mountain/shale/700
+    value: "#003b51"
+    source_anchor: false
+  - name: liberty_mountain/shale/800
+    value: "#001d32"
+    source_anchor: false
+  - name: liberty_mountain/shale/900
+    value: "#00081c"
+    source_anchor: false
+  - name: liberty_mountain/shale/950
+    value: "#00000d"
+    source_anchor: false
+- family: stone
+  source_name: Stone
+  source_value: "#4e5758"
+  source_anchor: 500_source
+  tokens:
+  - name: liberty_mountain/stone/50
+    value: "#f5f7f7"
+    source_anchor: false
+  - name: liberty_mountain/stone/100
+    value: "#d5d8d9"
+    source_anchor: false
+  - name: liberty_mountain/stone/200
+    value: "#b2b7b7"
+    source_anchor: false
+  - name: liberty_mountain/stone/300
+    value: "#909797"
+    source_anchor: false
+  - name: liberty_mountain/stone/400
+    value: "#697272"
+    source_anchor: false
+  - name: liberty_mountain/stone/500
+    value: "#4e5758"
+    source_anchor: true
+  - name: liberty_mountain/stone/600
+    value: "#333d3e"
+    source_anchor: false
+  - name: liberty_mountain/stone/700
+    value: "#1a2526"
+    source_anchor: false
+  - name: liberty_mountain/stone/800
+    value: "#061113"
+    source_anchor: false
+  - name: liberty_mountain/stone/900
+    value: "#000506"
+    source_anchor: false
+  - name: liberty_mountain/stone/950
+    value: "#000102"
+    source_anchor: false
+- family: sand
+  source_name: Sand
+  source_value: "#b8b09b"
+  source_anchor: 500_source
+  tokens:
+  - name: liberty_mountain/sand/50
+    value: "#f8f7f2"
+    source_anchor: false
+  - name: liberty_mountain/sand/100
+    value: "#eceae2"
+    source_anchor: false
+  - name: liberty_mountain/sand/200
+    value: "#dfdbd0"
+    source_anchor: false
+  - name: liberty_mountain/sand/300
+    value: "#d3cdbf"
+    source_anchor: false
+  - name: liberty_mountain/sand/400
+    value: "#c3bcaa"
+    source_anchor: false
+  - name: liberty_mountain/sand/500
+    value: "#b8b09b"
+    source_anchor: true
+  - name: liberty_mountain/sand/600
+    value: "#837b67"
+    source_anchor: false
+  - name: liberty_mountain/sand/700
+    value: "#514a36"
+    source_anchor: false
+  - name: liberty_mountain/sand/800
+    value: "#292210"
+    source_anchor: false
+  - name: liberty_mountain/sand/900
+    value: "#0f0900"
+    source_anchor: false
+  - name: liberty_mountain/sand/950
+    value: "#020000"
+    source_anchor: false
+- family: mineral
+  source_name: Mineral
+  source_value: "#d7d2cb"
+  source_anchor: 500_source
+  tokens:
+  - name: liberty_mountain/mineral/50
+    value: "#f8f6f5"
+    source_anchor: false
+  - name: liberty_mountain/mineral/100
+    value: "#f2f0ed"
+    source_anchor: false
+  - name: liberty_mountain/mineral/200
+    value: "#ebe9e5"
+    source_anchor: false
+  - name: liberty_mountain/mineral/300
+    value: "#e5e1dc"
+    source_anchor: false
+  - name: liberty_mountain/mineral/400
+    value: "#ddd8d2"
+    source_anchor: false
+  - name: liberty_mountain/mineral/500
+    value: "#d7d2cb"
+    source_anchor: true
+  - name: liberty_mountain/mineral/600
+    value: "#98938b"
+    source_anchor: false
+  - name: liberty_mountain/mineral/700
+    value: "#5e584f"
+    source_anchor: false
+  - name: liberty_mountain/mineral/800
+    value: "#2f2921"
+    source_anchor: false
+  - name: liberty_mountain/mineral/900
+    value: "#110b04"
+    source_anchor: false
+  - name: liberty_mountain/mineral/950
+    value: "#020000"
+    source_anchor: false
+- family: limestone
+  source_name: Limestone
+  source_value: "#ebe7e3"
+  source_anchor: 500_source
+  tokens:
+  - name: liberty_mountain/limestone/50
+    value: "#f7f6f6"
+    source_anchor: false
+  - name: liberty_mountain/limestone/100
+    value: "#f5f4f2"
+    source_anchor: false
+  - name: liberty_mountain/limestone/200
+    value: "#f3f1ef"
+    source_anchor: false
+  - name: liberty_mountain/limestone/300
+    value: "#f0edeb"
+    source_anchor: false
+  - name: liberty_mountain/limestone/400
+    value: "#edeae6"
+    source_anchor: false
+  - name: liberty_mountain/limestone/500
+    value: "#ebe7e3"
+    source_anchor: true
+  - name: liberty_mountain/limestone/600
+    value: "#a7a19c"
+    source_anchor: false
+  - name: liberty_mountain/limestone/700
+    value: "#67615a"
+    source_anchor: false
+  - name: liberty_mountain/limestone/800
+    value: "#342d26"
+    source_anchor: false
+  - name: liberty_mountain/limestone/900
+    value: "#140d06"
+    source_anchor: false
+  - name: liberty_mountain/limestone/950
+    value: "#020000"
+    source_anchor: false
+- family: sunset
+  source_name: Sunset
+  source_value: "#e18431"
+  source_anchor: 500_source
+  tokens:
+  - name: liberty_mountain/sunset/50
+    value: "#fff2e4"
+    source_anchor: false
+  - name: liberty_mountain/sunset/100
+    value: "#ffdfc6"
+    source_anchor: false
+  - name: liberty_mountain/sunset/200
+    value: "#fbc9a5"
+    source_anchor: false
+  - name: liberty_mountain/sunset/300
+    value: "#f3b383"
+    source_anchor: false
+  - name: liberty_mountain/sunset/400
+    value: "#e99858"
+    source_anchor: false
+  - name: liberty_mountain/sunset/500
+    value: "#e18431"
+    source_anchor: true
+  - name: liberty_mountain/sunset/600
+    value: "#ac5200"
+    source_anchor: false
+  - name: liberty_mountain/sunset/700
+    value: "#791f00"
+    source_anchor: false
+  - name: liberty_mountain/sunset/800
+    value: "#4d0000"
+    source_anchor: false
+  - name: liberty_mountain/sunset/900
+    value: "#2d0000"
+    source_anchor: false
+  - name: liberty_mountain/sunset/950
+    value: "#140000"
+    source_anchor: false
+- family: flora
+  source_name: Flora
+  source_value: "#6a1f45"
+  source_anchor: 500_source
+  tokens:
+  - name: liberty_mountain/flora/50
+    value: "#fff1f8"
+    source_anchor: false
+  - name: liberty_mountain/flora/100
+    value: "#e9c9d5"
+    source_anchor: false
+  - name: liberty_mountain/flora/200
+    value: "#ca9eb0"
+    source_anchor: false
+  - name: liberty_mountain/flora/300
+    value: "#ac748b"
+    source_anchor: false
+  - name: liberty_mountain/flora/400
+    value: "#864462"
+    source_anchor: false
+  - name: liberty_mountain/flora/500
+    value: "#6a1f45"
+    source_anchor: true
+  - name: liberty_mountain/flora/600
+    value: "#530331"
+    source_anchor: false
+  - name: liberty_mountain/flora/700
+    value: "#3c001e"
+    source_anchor: false
+  - name: liberty_mountain/flora/800
+    value: "#28000f"
+    source_anchor: false
+  - name: liberty_mountain/flora/900
+    value: "#190005"
+    source_anchor: false
+  - name: liberty_mountain/flora/950
+    value: "#0e0002"
+    source_anchor: false
+- family: copper
+  source_name: Copper
+  source_value: "#9d5f15"
+  source_anchor: 500_source
+  tokens:
+  - name: liberty_mountain/copper/50
+    value: "#fff4e7"
+    source_anchor: false
+  - name: liberty_mountain/copper/100
+    value: "#f0d8c3"
+    source_anchor: false
+  - name: liberty_mountain/copper/200
+    value: "#dcba9b"
+    source_anchor: false
+  - name: liberty_mountain/copper/300
+    value: "#c89c73"
+    source_anchor: false
+  - name: liberty_mountain/copper/400
+    value: "#b07943"
+    source_anchor: false
+  - name: liberty_mountain/copper/500
+    value: "#9d5f15"
+    source_anchor: true
+  - name: liberty_mountain/copper/600
+    value: "#783c00"
+    source_anchor: false
+  - name: liberty_mountain/copper/700
+    value: "#541900"
+    source_anchor: false
+  - name: liberty_mountain/copper/800
+    value: "#350000"
+    source_anchor: false
+  - name: liberty_mountain/copper/900
+    value: "#1f0000"
+    source_anchor: false
+  - name: liberty_mountain/copper/950
+    value: "#0e0000"
+    source_anchor: false
 validation:
   perceptual_consistency_notes:
-    - The live write preserves all source swatches as raw brand families and adds one composite `liberty_neutral` family so the semantic neutral ladder can remain coherent.
-    - The source text duplicates Summit and Tundra numeric values, so both raw families intentionally preserve the same supplied hex until a corrected source is provided.
+  - The live write preserves all source swatches as raw brand families and adds one composite `liberty_neutral` family so the semantic neutral ladder can remain coherent.
+  - The source text duplicates Summit and Tundra numeric values, so both raw families intentionally preserve the same supplied hex until a corrected source is provided.
   contrast_checks:
-    - token: liberty_mountain/sunrise/800
-      foreground: universal/white
-      ratio: generated_for_write
-      result: pass
-    - token: liberty_mountain/spring/800
-      foreground: universal/white
-      ratio: generated_for_write
-      result: pass
-    - token: liberty_mountain/liberty_neutral/100
-      foreground: universal/black
-      ratio: generated_for_write
-      result: pass
-
+  - token: liberty_mountain/sunrise/800
+    foreground: universal/white
+    ratio: generated_for_write
+    result: pass
+  - token: liberty_mountain/spring/800
+    foreground: universal/white
+    ratio: generated_for_write
+    result: pass
+  - token: liberty_mountain/liberty_neutral/100
+    foreground: universal/black
+    ratio: generated_for_write
+    result: pass
 semantic_recommendations:
   role_sets:
-    - scope: neutral
-      source_family: liberty_mountain/liberty_neutral
-      rationale: User-approved live write. The neutral lane should behave as one warm structural ramp rather than three disconnected raw swatches.
-      targets:
-        - surface/neutral/*
-        - on_surface/neutral/*
-        - foreground/default
-        - foreground/subtle
-        - border/default
-        - border/subtle
-    - scope: brand
-      source_family: liberty_mountain/sunrise
-      rationale: User-approved live write. Sunrise is the primary expressive lane.
-      targets:
-        - surface/brand/*
-        - on_surface/brand/*
-        - foreground/brand
-        - border/brand
-    - scope: brand_secondary
-      source_family: liberty_mountain/spring
-      rationale: User-approved live write. Spring is the supporting expressive lane.
-      targets:
-        - surface/brand_secondary/*
-        - on_surface/brand_secondary/*
-        - foreground/brand_secondary
-        - border/brand_secondary
+  - scope: neutral
+    source_family: liberty_mountain/liberty_neutral
+    rationale: User-approved live write. The neutral lane should behave as one warm structural ramp rather than three disconnected raw swatches.
+    targets:
+    - surface/neutral/*
+    - on_surface/neutral/*
+    - foreground/default
+    - foreground/subtle
+    - border/default
+    - border/subtle
+  - scope: brand
+    source_family: liberty_mountain/sunrise
+    rationale: User-approved live write. Sunrise is the primary expressive lane.
+    targets:
+    - surface/brand/*
+    - on_surface/brand/*
+    - foreground/brand
+    - border/brand
+  - scope: brand_secondary
+    source_family: liberty_mountain/spring
+    rationale: User-approved live write. Spring is the supporting expressive lane.
+    targets:
+    - surface/brand_secondary/*
+    - on_surface/brand_secondary/*
+    - foreground/brand_secondary
+    - border/brand_secondary
   global_only_families:
-    - family: liberty_mountain/twilight
-      rationale: Preserved as a raw source family only in the first pass.
-    - family: liberty_mountain/summit
-      rationale: Preserved as a raw source family only in the first pass.
-    - family: liberty_mountain/tundra
-      rationale: Preserved as a raw source family only in the first pass.
-    - family: liberty_mountain/shale
-      rationale: Preserved as a raw source family only in the first pass.
-    - family: liberty_mountain/stone
-      rationale: Preserved as a raw source family only in the first pass.
-    - family: liberty_mountain/sand
-      rationale: Preserved as a raw source family only in the first pass even though it also informs the composite neutral family.
-    - family: liberty_mountain/mineral
-      rationale: Preserved as a raw source family only in the first pass even though it also informs the composite neutral family.
-    - family: liberty_mountain/limestone
-      rationale: Preserved as a raw source family only in the first pass even though it also informs the composite neutral family.
-    - family: liberty_mountain/sunset
-      rationale: Preserved as a raw source family only in the first pass.
-    - family: liberty_mountain/flora
-      rationale: Preserved as a raw source family only in the first pass.
-    - family: liberty_mountain/copper
-      rationale: Preserved as a raw source family only in the first pass.
+  - family: liberty_mountain/twilight
+    rationale: Preserved as a raw source family only in the first pass.
+  - family: liberty_mountain/summit
+    rationale: Preserved as a raw source family only in the first pass.
+  - family: liberty_mountain/tundra
+    rationale: Preserved as a raw source family only in the first pass.
+  - family: liberty_mountain/shale
+    rationale: Preserved as a raw source family only in the first pass.
+  - family: liberty_mountain/stone
+    rationale: Preserved as a raw source family only in the first pass.
+  - family: liberty_mountain/sand
+    rationale: Preserved as a raw source family only in the first pass even though it also informs the composite neutral family.
+  - family: liberty_mountain/mineral
+    rationale: Preserved as a raw source family only in the first pass even though it also informs the composite neutral family.
+  - family: liberty_mountain/limestone
+    rationale: Preserved as a raw source family only in the first pass even though it also informs the composite neutral family.
+  - family: liberty_mountain/sunset
+    rationale: Preserved as a raw source family only in the first pass.
+  - family: liberty_mountain/flora
+    rationale: Preserved as a raw source family only in the first pass.
+  - family: liberty_mountain/copper
+    rationale: Preserved as a raw source family only in the first pass.
   role_exceptions:
-    - target: assets/logo
-      source_token: Liberty Mountain
-      rationale: The live semantic color extension should resolve the logo-name string to the brand display name.
-
+  - target: assets/logo
+    source_token: Liberty Mountain
+    rationale: The live semantic color extension should resolve the logo-name string to the brand display name.
 review_readiness:
   intended_review_channels:
+  - web
+  - email
+  - ads
+  review_rules:
+  - subject: Liberty Mountain expressive lane order
+    channels:
     - web
     - email
     - ads
-  review_rules:
-    - subject: Liberty Mountain expressive lane order
-      channels:
-        - web
-        - email
-        - ads
-      rule: Sunrise must stage as the primary expressive semantic lane and Spring must stage as the secondary expressive semantic lane.
-      source_basis: User instruction in chat
-    - subject: Liberty Mountain neutral composition
-      channels:
-        - web
-        - email
-        - ads
-      rule: Limestone, Mineral, and Sand should behave as one structural neutral ramp in the semantic layer.
-      source_basis: User instruction in chat
-
+    rule: Sunrise must stage as the primary expressive semantic lane and Spring must stage as the secondary expressive semantic lane.
+    source_basis: User instruction in chat
+  - subject: Liberty Mountain neutral composition
+    channels:
+    - web
+    - email
+    - ads
+    rule: Limestone, Mineral, and Sand should behave as one structural neutral ramp in the semantic layer.
+    source_basis: User instruction in chat
 open_questions:
-  - The source page does not provide a CTA-specific color rule, so the live write keeps action color meaning in the shared channel layer rather than inventing a new semantic slot.
+- The source page does not provide a CTA-specific color rule, so the live write keeps action color meaning in the shared channel layer rather than inventing a new semantic slot.

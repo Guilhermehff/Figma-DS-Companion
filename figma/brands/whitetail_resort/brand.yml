@@ -1,5 +1,5 @@
 version: 1
-updated: '2026-03-27'
+updated: '2026-03-30'
 brand_id: whitetail_resort
 display_name: Whitetail Resort
 status: active
@@ -109,4 +109,4 @@ semantic_overrides:
       - No brand-specific typography guidance is established for Whitetail Resort, so the semantic theme extension inherits the shared universal typography base without overrides.
       - Typography size continues to bind directly from published `Global: Typography`.
 notes:
-- Whitetail Resort is live in the Foundations file with one raw color family, no brand-specific raw typography families, and Whitetail Resort semantic theme extension.
+- Whitetail Resort is live in the Foundations file with two raw color families (`two_top_green` plus a raw-only `neutral` support ramp), no brand-specific raw typography families, and Whitetail Resort semantic theme extension.

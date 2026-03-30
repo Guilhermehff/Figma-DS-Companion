@@ -9,107 +9,147 @@ preview:
   artifact: figma/brands/whitetail_resort/color/preview.md
   status: written_in_figma
 source_swatches:
-  - source_name: Two Top Green
-    provided_value: "#233d34"
-  - source_name: Black
-    provided_value: "#000000"
-  - source_name: White
-    provided_value: "#ffffff"
+- source_name: Two Top Green
+  provided_value: "#233d34"
+- source_name: Black
+  provided_value: "#000000"
+- source_name: White
+  provided_value: "#ffffff"
 universal_reuse:
   reuse_universal:
-    - source_name: Black
-      provided_value: "#000000"
-      existing_token: universal/black
-      rationale: Exact match.
-    - source_name: White
-      provided_value: "#ffffff"
-      existing_token: universal/white
-      rationale: Exact match.
+  - source_name: Black
+    provided_value: "#000000"
+    existing_token: universal/black
+    rationale: Exact match.
+  - source_name: White
+    provided_value: "#ffffff"
+    existing_token: universal/white
+    rationale: Exact match.
   new_brand_families:
-    - family: two_top_green
-      provided_value: "#233d34"
-      anchor_step: 800
+  - family: two_top_green
+    provided_value: "#233d34"
+    anchor_step: 800
+    anchor_label: 800_source
 scale_spec:
   working_space: OKLCH
   steps:
-    - 50
-    - 100
-    - 200
-    - 300
-    - 400
-    - 500
-    - 600
-    - 700
-    - 800
-    - 900
-    - 950
+  - 50
+  - 100
+  - 200
+  - 300
+  - 400
+  - 500
+  - 600
+  - 700
+  - 800
+  - 900
+  - 950
   contrast_targets:
     white:
-      "800": "4.5:1 preferred"
-      "900": "7:1 required"
-      "950": "7:1 required"
+      '800': 4.5:1 preferred
+      '900': 7:1 required
+      '950': 7:1 required
     black:
-      "50": "7:1 required"
-      "100": "7:1 required"
-      "200": "4.5:1 required"
-
+      '50': 7:1 required
+      '100': 7:1 required
+      '200': 4.5:1 required
 family_scales:
-  - family: two_top_green
-    source_name: Two Top Green
-    source_value: "#233d34"
-    source_anchor: 800_source
-    tokens:
-      - name: whitetail_resort/two_top_green/50
-        value: "#d9dedc"
-        source_anchor: false
-      - name: whitetail_resort/two_top_green/100
-        value: "#c4cbc9"
-        source_anchor: false
-      - name: whitetail_resort/two_top_green/200
-        value: "#b0b9b6"
-        source_anchor: false
-      - name: whitetail_resort/two_top_green/300
-        value: "#9aa6a2"
-        source_anchor: false
-      - name: whitetail_resort/two_top_green/400
-        value: "#85938e"
-        source_anchor: false
-      - name: whitetail_resort/two_top_green/500
-        value: "#6e7f79"
-        source_anchor: false
-      - name: whitetail_resort/two_top_green/600
-        value: "#576b64"
-        source_anchor: false
-      - name: whitetail_resort/two_top_green/700
-        value: "#3f564e"
-        source_anchor: false
-      - name: whitetail_resort/two_top_green/800
-        value: "#233d34"
-        source_anchor: true
-      - name: whitetail_resort/two_top_green/900
-        value: "#121f1a"
-        source_anchor: false
-      - name: whitetail_resort/two_top_green/950
-        value: "#030504"
-        source_anchor: false
-
+- family: two_top_green
+  source_name: Two Top Green
+  source_value: "#233d34"
+  source_anchor: 800_source
+  tokens:
+  - name: whitetail_resort/two_top_green/50
+    value: "#f2f8f6"
+    source_anchor: false
+  - name: whitetail_resort/two_top_green/100
+    value: "#e3f1ec"
+    source_anchor: false
+  - name: whitetail_resort/two_top_green/200
+    value: "#cbe4db"
+    source_anchor: false
+  - name: whitetail_resort/two_top_green/300
+    value: "#a9d2c4"
+    source_anchor: false
+  - name: whitetail_resort/two_top_green/400
+    value: "#82bba8"
+    source_anchor: false
+  - name: whitetail_resort/two_top_green/500
+    value: "#5fa28d"
+    source_anchor: false
+  - name: whitetail_resort/two_top_green/600
+    value: "#3f7f6c"
+    source_anchor: false
+  - name: whitetail_resort/two_top_green/700
+    value: "#397260"
+    source_anchor: false
+  - name: whitetail_resort/two_top_green/800
+    value: "#233d34"
+    source_anchor: true
+  - name: whitetail_resort/two_top_green/900
+    value: "#1c322b"
+    source_anchor: false
+  - name: whitetail_resort/two_top_green/950
+    value: "#11211c"
+    source_anchor: false
+- family: neutral
+  source_name: Neutral
+  source_value: "#7c7d83"
+  source_anchor: 500_source
+  notes:
+  - Live Figma review introduced a raw-only neutral support ramp that remains separate from the inherited semantic neutral lane.
+  tokens:
+  - name: whitetail_resort/neutral/50
+    value: "#ffffff"
+    source_anchor: false
+  - name: whitetail_resort/neutral/100
+    value: "#f4f4f5"
+    source_anchor: false
+  - name: whitetail_resort/neutral/200
+    value: "#e6e6e8"
+    source_anchor: false
+  - name: whitetail_resort/neutral/300
+    value: "#cfcfd2"
+    source_anchor: false
+  - name: whitetail_resort/neutral/400
+    value: "#a9aaaf"
+    source_anchor: false
+  - name: whitetail_resort/neutral/500
+    value: "#7c7d83"
+    source_anchor: true
+  - name: whitetail_resort/neutral/600
+    value: "#55565c"
+    source_anchor: false
+  - name: whitetail_resort/neutral/700
+    value: "#333333"
+    source_anchor: false
+  - name: whitetail_resort/neutral/800
+    value: "#2b2a2b"
+    source_anchor: false
+  - name: whitetail_resort/neutral/900
+    value: "#231f20"
+    source_anchor: false
+  - name: whitetail_resort/neutral/950
+    value: "#1a1718"
+    source_anchor: false
 semantic_recommendations:
   role_sets:
-    - scope: neutral
-      source_family: inherited_base
-      rationale: Exact black and white remain inherited.
-    - scope: brand
-      source_family: whitetail_resort/two_top_green
-      rationale: One non-neutral brand hue drives the first expressive lane.
-    - scope: brand_secondary
-      source_family: whitetail_resort/two_top_green
-      rationale: One non-neutral brand hue drives the second expressive lane as well.
-  global_only_families: []
+  - scope: neutral
+    source_family: inherited_base
+    rationale: Exact black and white remain inherited.
+  - scope: brand
+    source_family: whitetail_resort/two_top_green
+    rationale: One non-neutral brand hue drives the first expressive lane.
+  - scope: brand_secondary
+    source_family: whitetail_resort/two_top_green
+    rationale: One non-neutral brand hue drives the second expressive lane as well.
+  global_only_families:
+  - whitetail_resort/neutral
   role_exceptions:
-    - target: assets/logo
-      source_token: Whitetail Resort
+  - target: assets/logo
+    source_token: Whitetail Resort
 review_readiness:
   review_rules:
-    - subject: Whitetail Resort single-family expressive mapping
-      rule: Use `two_top_green` for both expressive semantic lanes.
+  - subject: Whitetail Resort single-family expressive mapping
+    rule: Use `two_top_green` for both expressive semantic lanes.
 open_questions: []

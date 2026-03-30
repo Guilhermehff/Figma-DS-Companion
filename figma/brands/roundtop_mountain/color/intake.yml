@@ -9,324 +9,328 @@ preview:
   artifact: figma/brands/roundtop_mountain/color/preview.md
   status: written_in_figma
 source_swatches:
-  - source_name: Green
-    provided_value: "#75c045"
-  - source_name: Blue
-    provided_value: "#007fad"
-  - source_name: Yellow
-    provided_value: "#f6c542"
-  - source_name: Orange
-    provided_value: "#faa552"
-  - source_name: Red
-    provided_value: "#e25c5c"
-  - source_name: Cyan
-    provided_value: "#93cfd2"
+- source_name: Green
+  provided_value: "#75c045"
+- source_name: Blue
+  provided_value: "#007fad"
+- source_name: Yellow
+  provided_value: "#f6c542"
+- source_name: Orange
+  provided_value: "#faa552"
+- source_name: Red
+  provided_value: "#e25c5c"
+- source_name: Cyan
+  provided_value: "#93cfd2"
 universal_reuse:
   reuse_universal:
-    - source_name: Black logo variation
-      provided_value: "#000000"
-      existing_token: universal/black
-      rationale: Exact black remains inherited through the shared neutral baseline.
-    - source_name: White logo variation
-      provided_value: "#ffffff"
-      existing_token: universal/white
-      rationale: Exact white remains inherited through the shared neutral baseline.
+  - source_name: Black logo variation
+    provided_value: "#000000"
+    existing_token: universal/black
+    rationale: Exact black remains inherited through the shared neutral baseline.
+  - source_name: White logo variation
+    provided_value: "#ffffff"
+    existing_token: universal/white
+    rationale: Exact white remains inherited through the shared neutral baseline.
   new_brand_families:
-    - family: green
-      provided_value: "#75c045"
-      anchor_step: 500
-    - family: blue
-      provided_value: "#007fad"
-      anchor_step: 600
-    - family: yellow
-      provided_value: "#f6c542"
-      anchor_step: 300
-    - family: orange
-      provided_value: "#faa552"
-      anchor_step: 300
-    - family: red
-      provided_value: "#e25c5c"
-      anchor_step: 400
-    - family: cyan
-      provided_value: "#93cfd2"
-      anchor_step: 300
+  - family: green
+    provided_value: "#75c045"
+    anchor_step: 500
+    anchor_label: 500_source
+  - family: blue
+    provided_value: "#007fad"
+    anchor_step: 600
+    anchor_label: 600_source
+  - family: yellow
+    provided_value: "#f6c542"
+    anchor_step: 300
+    anchor_label: 300_source
+  - family: orange
+    provided_value: "#faa552"
+    anchor_step: 300
+    anchor_label: 300_source
+  - family: red
+    provided_value: "#e25c5c"
+    anchor_step: 400
+    anchor_label: 400_source
+  - family: cyan
+    provided_value: "#93cfd2"
+    anchor_step: 300
+    anchor_label: 300_source
 scale_spec:
   working_space: OKLCH
   steps:
-    - 50
-    - 100
-    - 200
-    - 300
-    - 400
-    - 500
-    - 600
-    - 700
-    - 800
-    - 900
-    - 950
+  - 50
+  - 100
+  - 200
+  - 300
+  - 400
+  - 500
+  - 600
+  - 700
+  - 800
+  - 900
+  - 950
   contrast_targets:
     white:
-      "800": "4.5:1 preferred"
-      "900": "7:1 required"
-      "950": "7:1 required"
+      '800': 4.5:1 preferred
+      '900': 7:1 required
+      '950': 7:1 required
     black:
-      "50": "7:1 required"
-      "100": "7:1 required"
-      "200": "4.5:1 required"
-
+      '50': 7:1 required
+      '100': 7:1 required
+      '200': 4.5:1 required
 family_scales:
-  - family: green
-    source_name: Green
-    source_value: "#75c045"
-    source_anchor: 500_source
-    tokens:
-      - name: roundtop_mountain/green/50
-        value: "#e1f1d6"
-        source_anchor: false
-      - name: roundtop_mountain/green/100
-        value: "#cde8bc"
-        source_anchor: false
-      - name: roundtop_mountain/green/200
-        value: "#b9dfa1"
-        source_anchor: false
-      - name: roundtop_mountain/green/300
-        value: "#a4d685"
-        source_anchor: false
-      - name: roundtop_mountain/green/400
-        value: "#8ecc67"
-        source_anchor: false
-      - name: roundtop_mountain/green/500
-        value: "#75c045"
-        source_anchor: true
-      - name: roundtop_mountain/green/600
-        value: "#5c9736"
-        source_anchor: false
-      - name: roundtop_mountain/green/700
-        value: "#467329"
-        source_anchor: false
-      - name: roundtop_mountain/green/800
-        value: "#31501d"
-        source_anchor: false
-      - name: roundtop_mountain/green/900
-        value: "#1d2f11"
-        source_anchor: false
-      - name: roundtop_mountain/green/950
-        value: "#090f06"
-        source_anchor: false
-  - family: blue
-    source_name: Blue
-    source_value: "#007fad"
-    source_anchor: 600_source
-    tokens:
-      - name: roundtop_mountain/blue/50
-        value: "#cce6ef"
-        source_anchor: false
-      - name: roundtop_mountain/blue/100
-        value: "#add6e5"
-        source_anchor: false
-      - name: roundtop_mountain/blue/200
-        value: "#8ec6db"
-        source_anchor: false
-      - name: roundtop_mountain/blue/300
-        value: "#6db6d0"
-        source_anchor: false
-      - name: roundtop_mountain/blue/400
-        value: "#4ca5c5"
-        source_anchor: false
-      - name: roundtop_mountain/blue/500
-        value: "#2993ba"
-        source_anchor: false
-      - name: roundtop_mountain/blue/600
-        value: "#007fad"
-        source_anchor: true
-      - name: roundtop_mountain/blue/700
-        value: "#005d7f"
-        source_anchor: false
-      - name: roundtop_mountain/blue/800
-        value: "#004058"
-        source_anchor: false
-      - name: roundtop_mountain/blue/900
-        value: "#002532"
-        source_anchor: false
-      - name: roundtop_mountain/blue/950
-        value: "#000a0e"
-        source_anchor: false
-  - family: yellow
-    source_name: Yellow
-    source_value: "#f6c542"
-    source_anchor: 300_source
-    tokens:
-      - name: roundtop_mountain/yellow/50
-        value: "#fceec8"
-        source_anchor: false
-      - name: roundtop_mountain/yellow/100
-        value: "#fae29f"
-        source_anchor: false
-      - name: roundtop_mountain/yellow/200
-        value: "#f8d474"
-        source_anchor: false
-      - name: roundtop_mountain/yellow/300
-        value: "#f6c542"
-        source_anchor: true
-      - name: roundtop_mountain/yellow/400
-        value: "#cfa637"
-        source_anchor: false
-      - name: roundtop_mountain/yellow/500
-        value: "#ad8a2e"
-        source_anchor: false
-      - name: roundtop_mountain/yellow/600
-        value: "#8c7026"
-        source_anchor: false
-      - name: roundtop_mountain/yellow/700
-        value: "#6d571d"
-        source_anchor: false
-      - name: roundtop_mountain/yellow/800
-        value: "#4f3f15"
-        source_anchor: false
-      - name: roundtop_mountain/yellow/900
-        value: "#31270d"
-        source_anchor: false
-      - name: roundtop_mountain/yellow/950
-        value: "#141005"
-        source_anchor: false
-  - family: orange
-    source_name: Orange
-    source_value: "#faa552"
-    source_anchor: 300_source
-    tokens:
-      - name: roundtop_mountain/orange/50
-        value: "#fee5cd"
-        source_anchor: false
-      - name: roundtop_mountain/orange/100
-        value: "#fcd1a7"
-        source_anchor: false
-      - name: roundtop_mountain/orange/200
-        value: "#fbbd80"
-        source_anchor: false
-      - name: roundtop_mountain/orange/300
-        value: "#faa552"
-        source_anchor: true
-      - name: roundtop_mountain/orange/400
-        value: "#d28b45"
-        source_anchor: false
-      - name: roundtop_mountain/orange/500
-        value: "#b0743a"
-        source_anchor: false
-      - name: roundtop_mountain/orange/600
-        value: "#8f5e2f"
-        source_anchor: false
-      - name: roundtop_mountain/orange/700
-        value: "#6f4924"
-        source_anchor: false
-      - name: roundtop_mountain/orange/800
-        value: "#50351a"
-        source_anchor: false
-      - name: roundtop_mountain/orange/900
-        value: "#322110"
-        source_anchor: false
-      - name: roundtop_mountain/orange/950
-        value: "#140d07"
-        source_anchor: false
-  - family: red
-    source_name: Red
-    source_value: "#e25c5c"
-    source_anchor: 400_source
-    tokens:
-      - name: roundtop_mountain/red/50
-        value: "#f8d7d7"
-        source_anchor: false
-      - name: roundtop_mountain/red/100
-        value: "#f3bbbb"
-        source_anchor: false
-      - name: roundtop_mountain/red/200
-        value: "#ee9e9e"
-        source_anchor: false
-      - name: roundtop_mountain/red/300
-        value: "#e87f7f"
-        source_anchor: false
-      - name: roundtop_mountain/red/400
-        value: "#e25c5c"
-        source_anchor: true
-      - name: roundtop_mountain/red/500
-        value: "#b94b4b"
-        source_anchor: false
-      - name: roundtop_mountain/red/600
-        value: "#953d3d"
-        source_anchor: false
-      - name: roundtop_mountain/red/700
-        value: "#732f2f"
-        source_anchor: false
-      - name: roundtop_mountain/red/800
-        value: "#522121"
-        source_anchor: false
-      - name: roundtop_mountain/red/900
-        value: "#321414"
-        source_anchor: false
-      - name: roundtop_mountain/red/950
-        value: "#120707"
-        source_anchor: false
-  - family: cyan
-    source_name: Cyan
-    source_value: "#93cfd2"
-    source_anchor: 300_source
-    tokens:
-      - name: roundtop_mountain/cyan/50
-        value: "#e0f1f2"
-        source_anchor: false
-      - name: roundtop_mountain/cyan/100
-        value: "#c8e7e8"
-        source_anchor: false
-      - name: roundtop_mountain/cyan/200
-        value: "#b0dcde"
-        source_anchor: false
-      - name: roundtop_mountain/cyan/300
-        value: "#93cfd2"
-        source_anchor: true
-      - name: roundtop_mountain/cyan/400
-        value: "#7caeb0"
-        source_anchor: false
-      - name: roundtop_mountain/cyan/500
-        value: "#679193"
-        source_anchor: false
-      - name: roundtop_mountain/cyan/600
-        value: "#547678"
-        source_anchor: false
-      - name: roundtop_mountain/cyan/700
-        value: "#415c5d"
-        source_anchor: false
-      - name: roundtop_mountain/cyan/800
-        value: "#2f4243"
-        source_anchor: false
-      - name: roundtop_mountain/cyan/900
-        value: "#1d292a"
-        source_anchor: false
-      - name: roundtop_mountain/cyan/950
-        value: "#0c1111"
-        source_anchor: false
-
+- family: green
+  source_name: Green
+  source_value: "#75c045"
+  source_anchor: 500_source
+  tokens:
+  - name: roundtop_mountain/green/50
+    value: "#e1f1d6"
+    source_anchor: false
+  - name: roundtop_mountain/green/100
+    value: "#cde8bc"
+    source_anchor: false
+  - name: roundtop_mountain/green/200
+    value: "#b9dfa1"
+    source_anchor: false
+  - name: roundtop_mountain/green/300
+    value: "#a4d685"
+    source_anchor: false
+  - name: roundtop_mountain/green/400
+    value: "#8ecc67"
+    source_anchor: false
+  - name: roundtop_mountain/green/500
+    value: "#75c045"
+    source_anchor: true
+  - name: roundtop_mountain/green/600
+    value: "#5c9736"
+    source_anchor: false
+  - name: roundtop_mountain/green/700
+    value: "#467329"
+    source_anchor: false
+  - name: roundtop_mountain/green/800
+    value: "#31501d"
+    source_anchor: false
+  - name: roundtop_mountain/green/900
+    value: "#254018"
+    source_anchor: false
+  - name: roundtop_mountain/green/950
+    value: "#1d2f11"
+    source_anchor: false
+- family: blue
+  source_name: Blue
+  source_value: "#007fad"
+  source_anchor: 600_source
+  tokens:
+  - name: roundtop_mountain/blue/50
+    value: "#cce6ef"
+    source_anchor: false
+  - name: roundtop_mountain/blue/100
+    value: "#add6e5"
+    source_anchor: false
+  - name: roundtop_mountain/blue/200
+    value: "#8ec6db"
+    source_anchor: false
+  - name: roundtop_mountain/blue/300
+    value: "#6db6d0"
+    source_anchor: false
+  - name: roundtop_mountain/blue/400
+    value: "#4ca5c5"
+    source_anchor: false
+  - name: roundtop_mountain/blue/500
+    value: "#2993ba"
+    source_anchor: false
+  - name: roundtop_mountain/blue/600
+    value: "#007fad"
+    source_anchor: true
+  - name: roundtop_mountain/blue/700
+    value: "#005d7f"
+    source_anchor: false
+  - name: roundtop_mountain/blue/800
+    value: "#004058"
+    source_anchor: false
+  - name: roundtop_mountain/blue/900
+    value: "#003246"
+    source_anchor: false
+  - name: roundtop_mountain/blue/950
+    value: "#002532"
+    source_anchor: false
+- family: yellow
+  source_name: Yellow
+  source_value: "#f6c542"
+  source_anchor: 300_source
+  tokens:
+  - name: roundtop_mountain/yellow/50
+    value: "#fceec8"
+    source_anchor: false
+  - name: roundtop_mountain/yellow/100
+    value: "#fae29f"
+    source_anchor: false
+  - name: roundtop_mountain/yellow/200
+    value: "#f8d474"
+    source_anchor: false
+  - name: roundtop_mountain/yellow/300
+    value: "#f6c542"
+    source_anchor: true
+  - name: roundtop_mountain/yellow/400
+    value: "#cfa637"
+    source_anchor: false
+  - name: roundtop_mountain/yellow/500
+    value: "#ad8a2e"
+    source_anchor: false
+  - name: roundtop_mountain/yellow/600
+    value: "#8c7026"
+    source_anchor: false
+  - name: roundtop_mountain/yellow/700
+    value: "#6d571d"
+    source_anchor: false
+  - name: roundtop_mountain/yellow/800
+    value: "#4f3f15"
+    source_anchor: false
+  - name: roundtop_mountain/yellow/900
+    value: "#403311"
+    source_anchor: false
+  - name: roundtop_mountain/yellow/950
+    value: "#31270d"
+    source_anchor: false
+- family: orange
+  source_name: Orange
+  source_value: "#faa552"
+  source_anchor: 300_source
+  tokens:
+  - name: roundtop_mountain/orange/50
+    value: "#fee5cd"
+    source_anchor: false
+  - name: roundtop_mountain/orange/100
+    value: "#fcd1a7"
+    source_anchor: false
+  - name: roundtop_mountain/orange/200
+    value: "#fbbd80"
+    source_anchor: false
+  - name: roundtop_mountain/orange/300
+    value: "#faa552"
+    source_anchor: true
+  - name: roundtop_mountain/orange/400
+    value: "#d28b45"
+    source_anchor: false
+  - name: roundtop_mountain/orange/500
+    value: "#b0743a"
+    source_anchor: false
+  - name: roundtop_mountain/orange/600
+    value: "#8f5e2f"
+    source_anchor: false
+  - name: roundtop_mountain/orange/700
+    value: "#6f4924"
+    source_anchor: false
+  - name: roundtop_mountain/orange/800
+    value: "#50351a"
+    source_anchor: false
+  - name: roundtop_mountain/orange/900
+    value: "#402a14"
+    source_anchor: false
+  - name: roundtop_mountain/orange/950
+    value: "#322110"
+    source_anchor: false
+- family: red
+  source_name: Red
+  source_value: "#e25c5c"
+  source_anchor: 400_source
+  tokens:
+  - name: roundtop_mountain/red/50
+    value: "#f8d7d7"
+    source_anchor: false
+  - name: roundtop_mountain/red/100
+    value: "#f3bbbb"
+    source_anchor: false
+  - name: roundtop_mountain/red/200
+    value: "#ee9e9e"
+    source_anchor: false
+  - name: roundtop_mountain/red/300
+    value: "#e87f7f"
+    source_anchor: false
+  - name: roundtop_mountain/red/400
+    value: "#e25c5c"
+    source_anchor: true
+  - name: roundtop_mountain/red/500
+    value: "#b94b4b"
+    source_anchor: false
+  - name: roundtop_mountain/red/600
+    value: "#953d3d"
+    source_anchor: false
+  - name: roundtop_mountain/red/700
+    value: "#732f2f"
+    source_anchor: false
+  - name: roundtop_mountain/red/800
+    value: "#522121"
+    source_anchor: false
+  - name: roundtop_mountain/red/900
+    value: "#401a1a"
+    source_anchor: false
+  - name: roundtop_mountain/red/950
+    value: "#321414"
+    source_anchor: false
+- family: cyan
+  source_name: Cyan
+  source_value: "#93cfd2"
+  source_anchor: 300_source
+  tokens:
+  - name: roundtop_mountain/cyan/50
+    value: "#e0f1f2"
+    source_anchor: false
+  - name: roundtop_mountain/cyan/100
+    value: "#c8e7e8"
+    source_anchor: false
+  - name: roundtop_mountain/cyan/200
+    value: "#b0dcde"
+    source_anchor: false
+  - name: roundtop_mountain/cyan/300
+    value: "#93cfd2"
+    source_anchor: true
+  - name: roundtop_mountain/cyan/400
+    value: "#7caeb0"
+    source_anchor: false
+  - name: roundtop_mountain/cyan/500
+    value: "#679193"
+    source_anchor: false
+  - name: roundtop_mountain/cyan/600
+    value: "#547678"
+    source_anchor: false
+  - name: roundtop_mountain/cyan/700
+    value: "#415c5d"
+    source_anchor: false
+  - name: roundtop_mountain/cyan/800
+    value: "#2f4243"
+    source_anchor: false
+  - name: roundtop_mountain/cyan/900
+    value: "#243536"
+    source_anchor: false
+  - name: roundtop_mountain/cyan/950
+    value: "#1d292a"
+    source_anchor: false
 semantic_recommendations:
   role_sets:
-    - scope: neutral
-      source_family: inherited_base
-      rationale: Exact black and white remain inherited from the shared neutral baseline.
-    - scope: brand
-      source_family: roundtop_mountain/green
-      rationale: Green is the first primary color and drives the primary expressive lane.
-    - scope: brand_secondary
-      source_family: roundtop_mountain/blue
-      rationale: Blue is the second primary color and drives the secondary expressive lane.
+  - scope: neutral
+    source_family: inherited_base
+    rationale: Exact black and white remain inherited from the shared neutral baseline.
+  - scope: brand
+    source_family: roundtop_mountain/green
+    rationale: Green is the first primary color and drives the primary expressive lane.
+  - scope: brand_secondary
+    source_family: roundtop_mountain/blue
+    rationale: Blue is the second primary color and drives the secondary expressive lane.
   global_only_families:
-    - roundtop_mountain/yellow
-    - roundtop_mountain/orange
-    - roundtop_mountain/red
-    - roundtop_mountain/cyan
+  - roundtop_mountain/yellow
+  - roundtop_mountain/orange
+  - roundtop_mountain/red
+  - roundtop_mountain/cyan
   role_exceptions:
-    - target: assets/logo
-      source_token: Roundtop Mountain
+  - target: assets/logo
+    source_token: Roundtop Mountain
 review_readiness:
   review_rules:
-    - subject: Roundtop Mountain expressive mapping
-      rule: Use `green` for `brand/*` and `blue` for `brand_secondary/*`.
-    - subject: Roundtop Mountain extra palette families
-      rule: Keep `yellow`, `orange`, `red`, and `cyan` as governed raw-only families in the first pass.
+  - subject: Roundtop Mountain expressive mapping
+    rule: Use `green` for `brand/*` and `blue` for `brand_secondary/*`.
+  - subject: Roundtop Mountain extra palette families
+    rule: Keep `yellow`, `orange`, `red`, and `cyan` as governed raw-only families in the first pass.
 open_questions: []

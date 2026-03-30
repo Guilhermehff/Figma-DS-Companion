@@ -43,49 +43,43 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
 
 ### Family: springs_green
 
-Source anchors: `300_source = Mini Golf Green`, `600_source = Springs Green`
-
-Swatch strip:
+Source anchor: `300_source / 600_source`
 
 <div>
-  <span title="50 #edfff3" style="display:inline-block;width:32px;height:32px;background:#edfff3;border:1px solid #d1d5db;"></span>
-  <span title="100 #dbfce5" style="display:inline-block;width:32px;height:32px;background:#dbfce5;border:1px solid #d1d5db;"></span>
-  <span title="200 #b4f4c9" style="display:inline-block;width:32px;height:32px;background:#b4f4c9;border:1px solid #d1d5db;"></span>
+  <span title="50 #f0fff6" style="display:inline-block;width:32px;height:32px;background:#f0fff6;border:1px solid #d1d5db;"></span>
+  <span title="100 #d9fbea" style="display:inline-block;width:32px;height:32px;background:#d9fbea;border:1px solid #d1d5db;"></span>
+  <span title="200 #b8f4d4" style="display:inline-block;width:32px;height:32px;background:#b8f4d4;border:1px solid #d1d5db;"></span>
   <span title="300 #89ebad" style="display:inline-block;width:32px;height:32px;background:#89ebad;border:1px solid #d1d5db;"></span>
-  <span title="400 #65cb8f" style="display:inline-block;width:32px;height:32px;background:#65cb8f;border:1px solid #d1d5db;"></span>
-  <span title="500 #3fab71" style="display:inline-block;width:32px;height:32px;background:#3fab71;border:1px solid #d1d5db;"></span>
+  <span title="400 #5fd89a" style="display:inline-block;width:32px;height:32px;background:#5fd89a;border:1px solid #d1d5db;"></span>
+  <span title="500 #34b87b" style="display:inline-block;width:32px;height:32px;background:#34b87b;border:1px solid #d1d5db;"></span>
   <span title="600 #008d55" style="display:inline-block;width:32px;height:32px;background:#008d55;border:1px solid #d1d5db;"></span>
-  <span title="700 #006b3e" style="display:inline-block;width:32px;height:32px;background:#006b3e;border:1px solid #d1d5db;"></span>
-  <span title="800 #004a28" style="display:inline-block;width:32px;height:32px;background:#004a28;border:1px solid #d1d5db;"></span>
-  <span title="900 #002c13" style="display:inline-block;width:32px;height:32px;background:#002c13;border:1px solid #d1d5db;"></span>
-  <span title="950 #001e0a" style="display:inline-block;width:32px;height:32px;background:#001e0a;border:1px solid #d1d5db;"></span>
+  <span title="700 #00724a" style="display:inline-block;width:32px;height:32px;background:#00724a;border:1px solid #d1d5db;"></span>
+  <span title="800 #005c3c" style="display:inline-block;width:32px;height:32px;background:#005c3c;border:1px solid #d1d5db;"></span>
+  <span title="900 #00452e" style="display:inline-block;width:32px;height:32px;background:#00452e;border:1px solid #d1d5db;"></span>
+  <span title="950 #003021" style="display:inline-block;width:32px;height:32px;background:#003021;border:1px solid #d1d5db;"></span>
 </div>
 
 ### Family: tupelo
 
-Source anchor: `900_source`
-
-Swatch strip:
+Source anchor: `950_source`
 
 <div>
-  <span title="50 #f6fcf8" style="display:inline-block;width:32px;height:32px;background:#f6fcf8;border:1px solid #d1d5db;"></span>
-  <span title="100 #e6eeea" style="display:inline-block;width:32px;height:32px;background:#e6eeea;border:1px solid #d1d5db;"></span>
-  <span title="200 #c7d4cd" style="display:inline-block;width:32px;height:32px;background:#c7d4cd;border:1px solid #d1d5db;"></span>
-  <span title="300 #a9bab1" style="display:inline-block;width:32px;height:32px;background:#a9bab1;border:1px solid #d1d5db;"></span>
-  <span title="400 #8ca195" style="display:inline-block;width:32px;height:32px;background:#8ca195;border:1px solid #d1d5db;"></span>
-  <span title="500 #70887b" style="display:inline-block;width:32px;height:32px;background:#70887b;border:1px solid #d1d5db;"></span>
-  <span title="600 #547161" style="display:inline-block;width:32px;height:32px;background:#547161;border:1px solid #d1d5db;"></span>
-  <span title="700 #395949" style="display:inline-block;width:32px;height:32px;background:#395949;border:1px solid #d1d5db;"></span>
-  <span title="800 #1e4332" style="display:inline-block;width:32px;height:32px;background:#1e4332;border:1px solid #d1d5db;"></span>
-  <span title="900 #002e1c" style="display:inline-block;width:32px;height:32px;background:#002e1c;border:1px solid #d1d5db;"></span>
-  <span title="950 #021c10" style="display:inline-block;width:32px;height:32px;background:#021c10;border:1px solid #d1d5db;"></span>
+  <span title="50 #f1fbf6" style="display:inline-block;width:32px;height:32px;background:#f1fbf6;border:1px solid #d1d5db;"></span>
+  <span title="100 #dcf4ea" style="display:inline-block;width:32px;height:32px;background:#dcf4ea;border:1px solid #d1d5db;"></span>
+  <span title="200 #bee8d6" style="display:inline-block;width:32px;height:32px;background:#bee8d6;border:1px solid #d1d5db;"></span>
+  <span title="300 #93d7bc" style="display:inline-block;width:32px;height:32px;background:#93d7bc;border:1px solid #d1d5db;"></span>
+  <span title="400 #5fc29d" style="display:inline-block;width:32px;height:32px;background:#5fc29d;border:1px solid #d1d5db;"></span>
+  <span title="500 #2fa87f" style="display:inline-block;width:32px;height:32px;background:#2fa87f;border:1px solid #d1d5db;"></span>
+  <span title="600 #1e8a68" style="display:inline-block;width:32px;height:32px;background:#1e8a68;border:1px solid #d1d5db;"></span>
+  <span title="700 #166f54" style="display:inline-block;width:32px;height:32px;background:#166f54;border:1px solid #d1d5db;"></span>
+  <span title="800 #0f5742" style="display:inline-block;width:32px;height:32px;background:#0f5742;border:1px solid #d1d5db;"></span>
+  <span title="900 #083f2f" style="display:inline-block;width:32px;height:32px;background:#083f2f;border:1px solid #d1d5db;"></span>
+  <span title="950 #002e1c" style="display:inline-block;width:32px;height:32px;background:#002e1c;border:1px solid #d1d5db;"></span>
 </div>
 
 ### Family: springs_neutral
 
-Source anchors: `50_source = Mashed Potatoes`, `950_source = Grandma's Axe`
-
-Swatch strip:
+Source anchor: `50_source / 950_source`
 
 <div>
   <span title="50 #f6fff7" style="display:inline-block;width:32px;height:32px;background:#f6fff7;border:1px solid #d1d5db;"></span>

@@ -29,38 +29,38 @@ Review state: written in figma. Verify live write state in `figma/brands/wilmot/
 
 ### Family: wilmot_red
 
-Source anchor: `500_source`
+Source anchor: `600_source`
 
 <div>
-  <span title="50 #7f6565" style="display:inline-block;width:32px;height:32px;background:#7f6565;border:1px solid #d1d5db;"></span>
-  <span title="100 #885b5c" style="display:inline-block;width:32px;height:32px;background:#885b5c;border:1px solid #d1d5db;"></span>
-  <span title="200 #905053" style="display:inline-block;width:32px;height:32px;background:#905053;border:1px solid #d1d5db;"></span>
-  <span title="300 #984449" style="display:inline-block;width:32px;height:32px;background:#984449;border:1px solid #d1d5db;"></span>
-  <span title="400 #9e3540" style="display:inline-block;width:32px;height:32px;background:#9e3540;border:1px solid #d1d5db;"></span>
-  <span title="500 #a42036" style="display:inline-block;width:32px;height:32px;background:#a42036;border:1px solid #d1d5db;"></span>
-  <span title="600 #89001f" style="display:inline-block;width:32px;height:32px;background:#89001f;border:1px solid #d1d5db;"></span>
-  <span title="700 #6d0008" style="display:inline-block;width:32px;height:32px;background:#6d0008;border:1px solid #d1d5db;"></span>
-  <span title="800 #520000" style="display:inline-block;width:32px;height:32px;background:#520000;border:1px solid #d1d5db;"></span>
-  <span title="900 #370000" style="display:inline-block;width:32px;height:32px;background:#370000;border:1px solid #d1d5db;"></span>
-  <span title="950 #1b0000" style="display:inline-block;width:32px;height:32px;background:#1b0000;border:1px solid #d1d5db;"></span>
+  <span title="50 #fbedee" style="display:inline-block;width:32px;height:32px;background:#fbedee;border:1px solid #d1d5db;"></span>
+  <span title="100 #f5d7d9" style="display:inline-block;width:32px;height:32px;background:#f5d7d9;border:1px solid #d1d5db;"></span>
+  <span title="200 #efb1b5" style="display:inline-block;width:32px;height:32px;background:#efb1b5;border:1px solid #d1d5db;"></span>
+  <span title="300 #e48389" style="display:inline-block;width:32px;height:32px;background:#e48389;border:1px solid #d1d5db;"></span>
+  <span title="400 #d95c63" style="display:inline-block;width:32px;height:32px;background:#d95c63;border:1px solid #d1d5db;"></span>
+  <span title="500 #c73f4a" style="display:inline-block;width:32px;height:32px;background:#c73f4a;border:1px solid #d1d5db;"></span>
+  <span title="600 #a42036" style="display:inline-block;width:32px;height:32px;background:#a42036;border:1px solid #d1d5db;"></span>
+  <span title="700 #851a2c" style="display:inline-block;width:32px;height:32px;background:#851a2c;border:1px solid #d1d5db;"></span>
+  <span title="800 #671423" style="display:inline-block;width:32px;height:32px;background:#671423;border:1px solid #d1d5db;"></span>
+  <span title="900 #4a0e1a" style="display:inline-block;width:32px;height:32px;background:#4a0e1a;border:1px solid #d1d5db;"></span>
+  <span title="950 #320912" style="display:inline-block;width:32px;height:32px;background:#320912;border:1px solid #d1d5db;"></span>
 </div>
 
 ### Family: wilmot_rose
 
-Source anchor: `500_source`
+Source anchor: `600_source`
 
 <div>
-  <span title="50 #8f7e7f" style="display:inline-block;width:32px;height:32px;background:#8f7e7f;border:1px solid #d1d5db;"></span>
-  <span title="100 #957779" style="display:inline-block;width:32px;height:32px;background:#957779;border:1px solid #d1d5db;"></span>
-  <span title="200 #996f72" style="display:inline-block;width:32px;height:32px;background:#996f72;border:1px solid #d1d5db;"></span>
-  <span title="300 #9e676c" style="display:inline-block;width:32px;height:32px;background:#9e676c;border:1px solid #d1d5db;"></span>
-  <span title="400 #a25f65" style="display:inline-block;width:32px;height:32px;background:#a25f65;border:1px solid #d1d5db;"></span>
-  <span title="500 #a5565f" style="display:inline-block;width:32px;height:32px;background:#a5565f;border:1px solid #d1d5db;"></span>
-  <span title="600 #863944" style="display:inline-block;width:32px;height:32px;background:#863944;border:1px solid #d1d5db;"></span>
-  <span title="700 #681c2a" style="display:inline-block;width:32px;height:32px;background:#681c2a;border:1px solid #d1d5db;"></span>
-  <span title="800 #4a0012" style="display:inline-block;width:32px;height:32px;background:#4a0012;border:1px solid #d1d5db;"></span>
-  <span title="900 #2d0001" style="display:inline-block;width:32px;height:32px;background:#2d0001;border:1px solid #d1d5db;"></span>
-  <span title="950 #0f0000" style="display:inline-block;width:32px;height:32px;background:#0f0000;border:1px solid #d1d5db;"></span>
+  <span title="50 #fbeff0" style="display:inline-block;width:32px;height:32px;background:#fbeff0;border:1px solid #d1d5db;"></span>
+  <span title="100 #f4d9db" style="display:inline-block;width:32px;height:32px;background:#f4d9db;border:1px solid #d1d5db;"></span>
+  <span title="200 #e9b4b8" style="display:inline-block;width:32px;height:32px;background:#e9b4b8;border:1px solid #d1d5db;"></span>
+  <span title="300 #d98a90" style="display:inline-block;width:32px;height:32px;background:#d98a90;border:1px solid #d1d5db;"></span>
+  <span title="400 #c96770" style="display:inline-block;width:32px;height:32px;background:#c96770;border:1px solid #d1d5db;"></span>
+  <span title="500 #b24e58" style="display:inline-block;width:32px;height:32px;background:#b24e58;border:1px solid #d1d5db;"></span>
+  <span title="600 #a5565f" style="display:inline-block;width:32px;height:32px;background:#a5565f;border:1px solid #d1d5db;"></span>
+  <span title="700 #87434b" style="display:inline-block;width:32px;height:32px;background:#87434b;border:1px solid #d1d5db;"></span>
+  <span title="800 #693238" style="display:inline-block;width:32px;height:32px;background:#693238;border:1px solid #d1d5db;"></span>
+  <span title="900 #4c2429" style="display:inline-block;width:32px;height:32px;background:#4c2429;border:1px solid #d1d5db;"></span>
+  <span title="950 #34181c" style="display:inline-block;width:32px;height:32px;background:#34181c;border:1px solid #d1d5db;"></span>
 </div>
 
 ### Family: wilmot_grey
@@ -68,17 +68,17 @@ Source anchor: `500_source`
 Source anchor: `500_source`
 
 <div>
-  <span title="50 #6a6a6a" style="display:inline-block;width:32px;height:32px;background:#6a6a6a;border:1px solid #d1d5db;"></span>
-  <span title="100 #666667" style="display:inline-block;width:32px;height:32px;background:#666667;border:1px solid #d1d5db;"></span>
-  <span title="200 #636364" style="display:inline-block;width:32px;height:32px;background:#636364;border:1px solid #d1d5db;"></span>
-  <span title="300 #5f6061" style="display:inline-block;width:32px;height:32px;background:#5f6061;border:1px solid #d1d5db;"></span>
-  <span title="400 #5b5c5e" style="display:inline-block;width:32px;height:32px;background:#5b5c5e;border:1px solid #d1d5db;"></span>
+  <span title="50 #f5f6f7" style="display:inline-block;width:32px;height:32px;background:#f5f6f7;border:1px solid #d1d5db;"></span>
+  <span title="100 #e6e8ea" style="display:inline-block;width:32px;height:32px;background:#e6e8ea;border:1px solid #d1d5db;"></span>
+  <span title="200 #c9cdd2" style="display:inline-block;width:32px;height:32px;background:#c9cdd2;border:1px solid #d1d5db;"></span>
+  <span title="300 #a9adb4" style="display:inline-block;width:32px;height:32px;background:#a9adb4;border:1px solid #d1d5db;"></span>
+  <span title="400 #838891" style="display:inline-block;width:32px;height:32px;background:#838891;border:1px solid #d1d5db;"></span>
   <span title="500 #58595b" style="display:inline-block;width:32px;height:32px;background:#58595b;border:1px solid #d1d5db;"></span>
-  <span title="600 #424346" style="display:inline-block;width:32px;height:32px;background:#424346;border:1px solid #d1d5db;"></span>
-  <span title="700 #2c2e33" style="display:inline-block;width:32px;height:32px;background:#2c2e33;border:1px solid #d1d5db;"></span>
-  <span title="800 #181b20" style="display:inline-block;width:32px;height:32px;background:#181b20;border:1px solid #d1d5db;"></span>
-  <span title="900 #07090f" style="display:inline-block;width:32px;height:32px;background:#07090f;border:1px solid #d1d5db;"></span>
-  <span title="950 #000102" style="display:inline-block;width:32px;height:32px;background:#000102;border:1px solid #d1d5db;"></span>
+  <span title="600 #45464a" style="display:inline-block;width:32px;height:32px;background:#45464a;border:1px solid #d1d5db;"></span>
+  <span title="700 #323336" style="display:inline-block;width:32px;height:32px;background:#323336;border:1px solid #d1d5db;"></span>
+  <span title="800 #242528" style="display:inline-block;width:32px;height:32px;background:#242528;border:1px solid #d1d5db;"></span>
+  <span title="900 #18191c" style="display:inline-block;width:32px;height:32px;background:#18191c;border:1px solid #d1d5db;"></span>
+  <span title="950 #101114" style="display:inline-block;width:32px;height:32px;background:#101114;border:1px solid #d1d5db;"></span>
 </div>
 
 ## Review Notes

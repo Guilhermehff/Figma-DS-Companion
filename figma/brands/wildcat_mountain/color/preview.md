@@ -50,8 +50,8 @@ Source anchor: `800_source`
   <span title="600 #3d928b" style="display:inline-block;width:32px;height:32px;background:#3d928b;border:1px solid #d1d5db;"></span>
   <span title="700 #20827a" style="display:inline-block;width:32px;height:32px;background:#20827a;border:1px solid #d1d5db;"></span>
   <span title="800 #007067" style="display:inline-block;width:32px;height:32px;background:#007067;border:1px solid #d1d5db;"></span>
-  <span title="900 #003934" style="display:inline-block;width:32px;height:32px;background:#003934;border:1px solid #d1d5db;"></span>
-  <span title="950 #000908" style="display:inline-block;width:32px;height:32px;background:#000908;border:1px solid #d1d5db;"></span>
+  <span title="900 #005e56" style="display:inline-block;width:32px;height:32px;background:#005e56;border:1px solid #d1d5db;"></span>
+  <span title="950 #003934" style="display:inline-block;width:32px;height:32px;background:#003934;border:1px solid #d1d5db;"></span>
 </div>
 
 ### Family: wildcat_tan
@@ -68,8 +68,8 @@ Source anchor: `200_source`
   <span title="600 #767260" style="display:inline-block;width:32px;height:32px;background:#767260;border:1px solid #d1d5db;"></span>
   <span title="700 #5c594b" style="display:inline-block;width:32px;height:32px;background:#5c594b;border:1px solid #d1d5db;"></span>
   <span title="800 #434137" style="display:inline-block;width:32px;height:32px;background:#434137;border:1px solid #d1d5db;"></span>
-  <span title="900 #2b2923" style="display:inline-block;width:32px;height:32px;background:#2b2923;border:1px solid #d1d5db;"></span>
-  <span title="950 #13120f" style="display:inline-block;width:32px;height:32px;background:#13120f;border:1px solid #d1d5db;"></span>
+  <span title="900 #36342c" style="display:inline-block;width:32px;height:32px;background:#36342c;border:1px solid #d1d5db;"></span>
+  <span title="950 #2b2923" style="display:inline-block;width:32px;height:32px;background:#2b2923;border:1px solid #d1d5db;"></span>
 </div>
 
 ### Family: wildcat_teal
@@ -86,8 +86,8 @@ Source anchor: `700_source`
   <span title="600 #249b90" style="display:inline-block;width:32px;height:32px;background:#249b90;border:1px solid #d1d5db;"></span>
   <span title="700 #008a7e" style="display:inline-block;width:32px;height:32px;background:#008a7e;border:1px solid #d1d5db;"></span>
   <span title="800 #005b53" style="display:inline-block;width:32px;height:32px;background:#005b53;border:1px solid #d1d5db;"></span>
-  <span title="900 #00322e" style="display:inline-block;width:32px;height:32px;background:#00322e;border:1px solid #d1d5db;"></span>
-  <span title="950 #000b0a" style="display:inline-block;width:32px;height:32px;background:#000b0a;border:1px solid #d1d5db;"></span>
+  <span title="900 #004842" style="display:inline-block;width:32px;height:32px;background:#004842;border:1px solid #d1d5db;"></span>
+  <span title="950 #00322e" style="display:inline-block;width:32px;height:32px;background:#00322e;border:1px solid #d1d5db;"></span>
 </div>
 
 ### Family: wedding_blue
@@ -104,8 +104,8 @@ Source anchor: `400_source`
   <span title="600 #377e81" style="display:inline-block;width:32px;height:32px;background:#377e81;border:1px solid #d1d5db;"></span>
   <span title="700 #2a6163" style="display:inline-block;width:32px;height:32px;background:#2a6163;border:1px solid #d1d5db;"></span>
   <span title="800 #1e4547" style="display:inline-block;width:32px;height:32px;background:#1e4547;border:1px solid #d1d5db;"></span>
-  <span title="900 #122a2b" style="display:inline-block;width:32px;height:32px;background:#122a2b;border:1px solid #d1d5db;"></span>
-  <span title="950 #070f10" style="display:inline-block;width:32px;height:32px;background:#070f10;border:1px solid #d1d5db;"></span>
+  <span title="900 #173739" style="display:inline-block;width:32px;height:32px;background:#173739;border:1px solid #d1d5db;"></span>
+  <span title="950 #122a2b" style="display:inline-block;width:32px;height:32px;background:#122a2b;border:1px solid #d1d5db;"></span>
 </div>
 
 ## Review Notes
