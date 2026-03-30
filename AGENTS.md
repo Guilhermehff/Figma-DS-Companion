@@ -253,6 +253,8 @@ Decision log requirements:
 - figma/config/variable-taxonomy.yml is the governing taxonomy and must match this AGENTS.md.
 - figma/brands/registry.yml is the governed source of truth for which brands currently exist in repo governance.
 - figma/brands/<brand>/brand.yml is the canonical per-brand metadata record.
+- figma/docs/email-specs.md is the canonical repository reference for email component parameters and technical constraints.
+- figma/docs/email-skill.md is supporting repository guidance for email design best practices and should be followed alongside `figma/docs/email-specs.md` when the user asks for email component work.
 - The Figma file `Documentation Library` (`https://www.figma.com/design/x06pdECSS2rS2mHRvtt297/Docs%20Library`, file key `x06pdECSS2rS2mHRvtt297`) is the canonical source for documentation-only variables and text styles.
 - figma/exports/index.yml is the optional manifest for dated manual exports and snapshot references.
 - Exports under figma/exports may be out of date relative to live Figma and must use `YYYY-MM-DD-` filename prefixes.
@@ -279,6 +281,7 @@ Decision log requirements:
 - Do not create ad hoc documentation styling in other files unless the user explicitly requests an exception.
 - Do not import, create, or leave behind local `Docs/*` styles, variables, or duplicate documentation artifacts in non-documentation files unless the user explicitly approves that file-level import.
 - If using `Documentation Library` assets in another file would require creating a local duplicate instead of a remote reference or variable binding, stop and ask for confirmation before writing.
+- When creating, reviewing, or refining email components, follow `figma/docs/email-specs.md` first for concrete constraints and `figma/docs/email-skill.md` for broader design guidance.
 - Preview Markdown may omit repeated Figma file links or node IDs when that provenance is already captured in the linked canonical artifact.
 - Create local component inventories or specs only when the user explicitly requests component governance artifacts.
 - Avoid duplicating process guidance across `AGENTS.md`, `docs/`, and `figma/docs/`. If the same rule appears in multiple places, consolidate toward one canonical location and simplify the rest.

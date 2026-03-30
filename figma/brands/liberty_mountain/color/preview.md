@@ -15,9 +15,9 @@ Review state: written in figma. Verify live write state in `figma/brands/liberty
   Notes: Source image lists Pantone 7544C, RGB 118 134 146, and CMYK 35 14 11 34.
 
 - Source color: `Tundra`
-  Provided value: `#748693`
+  Provided value: `#3a4959`
   Usage scope: `source palette swatch`
-  Notes: Source image lists Pantone 7545C but repeats the Summit RGB and HEX values; the intake preserves the source text as supplied.
+  Notes: User corrected the source in chat on 2026-03-30. Tundra is `#3A4959`; the earlier documentation image incorrectly repeated the Summit value.
 
 - Source color: `Shale`
   Provided value: `#51879f`
@@ -77,7 +77,7 @@ Review state: written in figma. Verify live write state in `figma/brands/liberty
 
 ## Proposed Families
 
-### Family: liberty_neutral
+### Family: warm_neutral
 
 Source anchor: `100_source / 200_source / 400_source`
 
@@ -93,6 +93,24 @@ Source anchor: `100_source / 200_source / 400_source`
   <span title="800 #27200d" style="display:inline-block;width:32px;height:32px;background:#27200d;border:1px solid #d1d5db;"></span>
   <span title="900 #0d0700" style="display:inline-block;width:32px;height:32px;background:#0d0700;border:1px solid #d1d5db;"></span>
   <span title="950 #020100" style="display:inline-block;width:32px;height:32px;background:#020100;border:1px solid #d1d5db;"></span>
+</div>
+
+### Family: cool_neutral
+
+Source anchor: `400_source / 500_source / 600_source`
+
+<div>
+  <span title="50 #f3f7fa" style="display:inline-block;width:32px;height:32px;background:#f3f7fa;border:1px solid #d1d5db;"></span>
+  <span title="100 #dbe2e7" style="display:inline-block;width:32px;height:32px;background:#dbe2e7;border:1px solid #d1d5db;"></span>
+  <span title="200 #c1cbd2" style="display:inline-block;width:32px;height:32px;background:#c1cbd2;border:1px solid #d1d5db;"></span>
+  <span title="300 #8a99a5" style="display:inline-block;width:32px;height:32px;background:#8a99a5;border:1px solid #d1d5db;"></span>
+  <span title="400 #748693" style="display:inline-block;width:32px;height:32px;background:#748693;border:1px solid #d1d5db;"></span>
+  <span title="500 #3f5364" style="display:inline-block;width:32px;height:32px;background:#3f5364;border:1px solid #d1d5db;"></span>
+  <span title="600 #3a4959" style="display:inline-block;width:32px;height:32px;background:#3a4959;border:1px solid #d1d5db;"></span>
+  <span title="700 #263a4a" style="display:inline-block;width:32px;height:32px;background:#263a4a;border:1px solid #d1d5db;"></span>
+  <span title="800 #0f2332" style="display:inline-block;width:32px;height:32px;background:#0f2332;border:1px solid #d1d5db;"></span>
+  <span title="900 #000f1e" style="display:inline-block;width:32px;height:32px;background:#000f1e;border:1px solid #d1d5db;"></span>
+  <span title="950 #000007" style="display:inline-block;width:32px;height:32px;background:#000007;border:1px solid #d1d5db;"></span>
 </div>
 
 ### Family: sunrise
@@ -131,60 +149,6 @@ Source anchor: `500_source`
   <span title="950 #2b2d00" style="display:inline-block;width:32px;height:32px;background:#2b2d00;border:1px solid #d1d5db;"></span>
 </div>
 
-### Family: twilight
-
-Source anchor: `500_source`
-
-<div>
-  <span title="50 #f3f7fc" style="display:inline-block;width:32px;height:32px;background:#f3f7fc;border:1px solid #d1d5db;"></span>
-  <span title="100 #d0d8df" style="display:inline-block;width:32px;height:32px;background:#d0d8df;border:1px solid #d1d5db;"></span>
-  <span title="200 #aab5bf" style="display:inline-block;width:32px;height:32px;background:#aab5bf;border:1px solid #d1d5db;"></span>
-  <span title="300 #8694a1" style="display:inline-block;width:32px;height:32px;background:#8694a1;border:1px solid #d1d5db;"></span>
-  <span title="400 #5d6e7e" style="display:inline-block;width:32px;height:32px;background:#5d6e7e;border:1px solid #d1d5db;"></span>
-  <span title="500 #3f5364" style="display:inline-block;width:32px;height:32px;background:#3f5364;border:1px solid #d1d5db;"></span>
-  <span title="600 #263a4a" style="display:inline-block;width:32px;height:32px;background:#263a4a;border:1px solid #d1d5db;"></span>
-  <span title="700 #0f2332" style="display:inline-block;width:32px;height:32px;background:#0f2332;border:1px solid #d1d5db;"></span>
-  <span title="800 #000f1e" style="display:inline-block;width:32px;height:32px;background:#000f1e;border:1px solid #d1d5db;"></span>
-  <span title="900 #000410" style="display:inline-block;width:32px;height:32px;background:#000410;border:1px solid #d1d5db;"></span>
-  <span title="950 #000007" style="display:inline-block;width:32px;height:32px;background:#000007;border:1px solid #d1d5db;"></span>
-</div>
-
-### Family: summit
-
-Source anchor: `500_source`
-
-<div>
-  <span title="50 #f3f7fa" style="display:inline-block;width:32px;height:32px;background:#f3f7fa;border:1px solid #d1d5db;"></span>
-  <span title="100 #dbe2e7" style="display:inline-block;width:32px;height:32px;background:#dbe2e7;border:1px solid #d1d5db;"></span>
-  <span title="200 #c1cbd2" style="display:inline-block;width:32px;height:32px;background:#c1cbd2;border:1px solid #d1d5db;"></span>
-  <span title="300 #a8b4bd" style="display:inline-block;width:32px;height:32px;background:#a8b4bd;border:1px solid #d1d5db;"></span>
-  <span title="400 #8a99a5" style="display:inline-block;width:32px;height:32px;background:#8a99a5;border:1px solid #d1d5db;"></span>
-  <span title="500 #748693" style="display:inline-block;width:32px;height:32px;background:#748693;border:1px solid #d1d5db;"></span>
-  <span title="600 #4d5e6b" style="display:inline-block;width:32px;height:32px;background:#4d5e6b;border:1px solid #d1d5db;"></span>
-  <span title="700 #283945" style="display:inline-block;width:32px;height:32px;background:#283945;border:1px solid #d1d5db;"></span>
-  <span title="800 #0b1b26" style="display:inline-block;width:32px;height:32px;background:#0b1b26;border:1px solid #d1d5db;"></span>
-  <span title="900 #000811" style="display:inline-block;width:32px;height:32px;background:#000811;border:1px solid #d1d5db;"></span>
-  <span title="950 #000104" style="display:inline-block;width:32px;height:32px;background:#000104;border:1px solid #d1d5db;"></span>
-</div>
-
-### Family: tundra
-
-Source anchor: `500_source`
-
-<div>
-  <span title="50 #f3f7fa" style="display:inline-block;width:32px;height:32px;background:#f3f7fa;border:1px solid #d1d5db;"></span>
-  <span title="100 #dbe2e7" style="display:inline-block;width:32px;height:32px;background:#dbe2e7;border:1px solid #d1d5db;"></span>
-  <span title="200 #c1cbd2" style="display:inline-block;width:32px;height:32px;background:#c1cbd2;border:1px solid #d1d5db;"></span>
-  <span title="300 #a8b4bd" style="display:inline-block;width:32px;height:32px;background:#a8b4bd;border:1px solid #d1d5db;"></span>
-  <span title="400 #8a99a5" style="display:inline-block;width:32px;height:32px;background:#8a99a5;border:1px solid #d1d5db;"></span>
-  <span title="500 #748693" style="display:inline-block;width:32px;height:32px;background:#748693;border:1px solid #d1d5db;"></span>
-  <span title="600 #4d5e6b" style="display:inline-block;width:32px;height:32px;background:#4d5e6b;border:1px solid #d1d5db;"></span>
-  <span title="700 #283945" style="display:inline-block;width:32px;height:32px;background:#283945;border:1px solid #d1d5db;"></span>
-  <span title="800 #0b1b26" style="display:inline-block;width:32px;height:32px;background:#0b1b26;border:1px solid #d1d5db;"></span>
-  <span title="900 #000811" style="display:inline-block;width:32px;height:32px;background:#000811;border:1px solid #d1d5db;"></span>
-  <span title="950 #000104" style="display:inline-block;width:32px;height:32px;background:#000104;border:1px solid #d1d5db;"></span>
-</div>
-
 ### Family: shale
 
 Source anchor: `500_source`
@@ -219,60 +183,6 @@ Source anchor: `500_source`
   <span title="800 #061113" style="display:inline-block;width:32px;height:32px;background:#061113;border:1px solid #d1d5db;"></span>
   <span title="900 #000506" style="display:inline-block;width:32px;height:32px;background:#000506;border:1px solid #d1d5db;"></span>
   <span title="950 #000102" style="display:inline-block;width:32px;height:32px;background:#000102;border:1px solid #d1d5db;"></span>
-</div>
-
-### Family: sand
-
-Source anchor: `500_source`
-
-<div>
-  <span title="50 #f8f7f2" style="display:inline-block;width:32px;height:32px;background:#f8f7f2;border:1px solid #d1d5db;"></span>
-  <span title="100 #eceae2" style="display:inline-block;width:32px;height:32px;background:#eceae2;border:1px solid #d1d5db;"></span>
-  <span title="200 #dfdbd0" style="display:inline-block;width:32px;height:32px;background:#dfdbd0;border:1px solid #d1d5db;"></span>
-  <span title="300 #d3cdbf" style="display:inline-block;width:32px;height:32px;background:#d3cdbf;border:1px solid #d1d5db;"></span>
-  <span title="400 #c3bcaa" style="display:inline-block;width:32px;height:32px;background:#c3bcaa;border:1px solid #d1d5db;"></span>
-  <span title="500 #b8b09b" style="display:inline-block;width:32px;height:32px;background:#b8b09b;border:1px solid #d1d5db;"></span>
-  <span title="600 #837b67" style="display:inline-block;width:32px;height:32px;background:#837b67;border:1px solid #d1d5db;"></span>
-  <span title="700 #514a36" style="display:inline-block;width:32px;height:32px;background:#514a36;border:1px solid #d1d5db;"></span>
-  <span title="800 #292210" style="display:inline-block;width:32px;height:32px;background:#292210;border:1px solid #d1d5db;"></span>
-  <span title="900 #0f0900" style="display:inline-block;width:32px;height:32px;background:#0f0900;border:1px solid #d1d5db;"></span>
-  <span title="950 #020000" style="display:inline-block;width:32px;height:32px;background:#020000;border:1px solid #d1d5db;"></span>
-</div>
-
-### Family: mineral
-
-Source anchor: `500_source`
-
-<div>
-  <span title="50 #f8f6f5" style="display:inline-block;width:32px;height:32px;background:#f8f6f5;border:1px solid #d1d5db;"></span>
-  <span title="100 #f2f0ed" style="display:inline-block;width:32px;height:32px;background:#f2f0ed;border:1px solid #d1d5db;"></span>
-  <span title="200 #ebe9e5" style="display:inline-block;width:32px;height:32px;background:#ebe9e5;border:1px solid #d1d5db;"></span>
-  <span title="300 #e5e1dc" style="display:inline-block;width:32px;height:32px;background:#e5e1dc;border:1px solid #d1d5db;"></span>
-  <span title="400 #ddd8d2" style="display:inline-block;width:32px;height:32px;background:#ddd8d2;border:1px solid #d1d5db;"></span>
-  <span title="500 #d7d2cb" style="display:inline-block;width:32px;height:32px;background:#d7d2cb;border:1px solid #d1d5db;"></span>
-  <span title="600 #98938b" style="display:inline-block;width:32px;height:32px;background:#98938b;border:1px solid #d1d5db;"></span>
-  <span title="700 #5e584f" style="display:inline-block;width:32px;height:32px;background:#5e584f;border:1px solid #d1d5db;"></span>
-  <span title="800 #2f2921" style="display:inline-block;width:32px;height:32px;background:#2f2921;border:1px solid #d1d5db;"></span>
-  <span title="900 #110b04" style="display:inline-block;width:32px;height:32px;background:#110b04;border:1px solid #d1d5db;"></span>
-  <span title="950 #020000" style="display:inline-block;width:32px;height:32px;background:#020000;border:1px solid #d1d5db;"></span>
-</div>
-
-### Family: limestone
-
-Source anchor: `500_source`
-
-<div>
-  <span title="50 #f7f6f6" style="display:inline-block;width:32px;height:32px;background:#f7f6f6;border:1px solid #d1d5db;"></span>
-  <span title="100 #f5f4f2" style="display:inline-block;width:32px;height:32px;background:#f5f4f2;border:1px solid #d1d5db;"></span>
-  <span title="200 #f3f1ef" style="display:inline-block;width:32px;height:32px;background:#f3f1ef;border:1px solid #d1d5db;"></span>
-  <span title="300 #f0edeb" style="display:inline-block;width:32px;height:32px;background:#f0edeb;border:1px solid #d1d5db;"></span>
-  <span title="400 #edeae6" style="display:inline-block;width:32px;height:32px;background:#edeae6;border:1px solid #d1d5db;"></span>
-  <span title="500 #ebe7e3" style="display:inline-block;width:32px;height:32px;background:#ebe7e3;border:1px solid #d1d5db;"></span>
-  <span title="600 #a7a19c" style="display:inline-block;width:32px;height:32px;background:#a7a19c;border:1px solid #d1d5db;"></span>
-  <span title="700 #67615a" style="display:inline-block;width:32px;height:32px;background:#67615a;border:1px solid #d1d5db;"></span>
-  <span title="800 #342d26" style="display:inline-block;width:32px;height:32px;background:#342d26;border:1px solid #d1d5db;"></span>
-  <span title="900 #140d06" style="display:inline-block;width:32px;height:32px;background:#140d06;border:1px solid #d1d5db;"></span>
-  <span title="950 #020000" style="display:inline-block;width:32px;height:32px;background:#020000;border:1px solid #d1d5db;"></span>
 </div>
 
 ### Family: sunset
@@ -332,15 +242,17 @@ Source anchor: `500_source`
 ## Review Notes
 
 - Ramp values in this preview are backfilled from the live `_Global: Color` collection in `Foundations` and treated as canonical.
+- Original palette swatches stay documented in Figma as alias callouts into `warm_neutral` and `cool_neutral` rather than as duplicate standalone ramp families.
 - Sunrise must stage as the primary expressive semantic lane and Spring must stage as the secondary expressive semantic lane.
 - Limestone, Mineral, and Sand should behave as one structural neutral ramp in the semantic layer.
+- Summit, Twilight, and corrected Tundra should stay documented as original swatches but consolidate into the raw-only `cool_neutral` ramp.
 
 ## Live Semantic Mapping
 
-- `surface/neutral/*`, `on_surface/neutral/*`, `foreground/default`, `foreground/subtle`, `border/default`, `border/subtle` -> `liberty_mountain/liberty_neutral`
+- `surface/neutral/*`, `on_surface/neutral/*`, `foreground/default`, `foreground/subtle`, `border/default`, `border/subtle` -> `liberty_mountain/warm_neutral`
 - `surface/brand/*`, `on_surface/brand/*`, `foreground/brand`, `border/brand` -> `liberty_mountain/sunrise`
 - `surface/brand_secondary/*`, `on_surface/brand_secondary/*`, `foreground/brand_secondary`, `border/brand_secondary` -> `liberty_mountain/spring`
-- Global-only extra families: `liberty_mountain/twilight`, `liberty_mountain/summit`, `liberty_mountain/tundra`, `liberty_mountain/shale`, `liberty_mountain/stone`, `liberty_mountain/sand`, `liberty_mountain/mineral`, `liberty_mountain/limestone`, `liberty_mountain/sunset`, `liberty_mountain/flora`, `liberty_mountain/copper`
+- Global-only extra families: `liberty_mountain/cool_neutral`, `liberty_mountain/shale`, `liberty_mountain/stone`, `liberty_mountain/sunset`, `liberty_mountain/flora`, `liberty_mountain/copper`
 - `assets/logo` -> `Liberty Mountain`
 
 ## Review Readiness
@@ -352,5 +264,5 @@ Source anchor: `500_source`
 
 - Subject: `Liberty Mountain neutral composition`
   Channels: `web, email, ads`
-  Rule: Limestone, Mineral, and Sand should behave as one structural neutral ramp in the semantic layer.
+  Rule: Limestone, Mineral, and Sand should behave as one structural neutral ramp in the semantic layer, while Summit, Twilight, and corrected Tundra stay documented as original swatches but consolidate into the raw-only `cool_neutral` ramp.
   Source basis: User instruction in chat

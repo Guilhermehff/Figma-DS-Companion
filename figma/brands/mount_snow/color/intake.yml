@@ -297,39 +297,11 @@ family_scales:
         source_anchor: false
 
 color_proportion_guidance:
-  status: active
-  source_basis: User-provided Mount Snow design-system pages define palette hierarchy and an explicit Carinthia exception, but do not publish numeric percentages.
-  contexts:
-    - name: mount_snow_brand_work
-      intent: The primary Mount Snow palette must always be present. Secondary colors can support it but may never appear without the primary palette.
-      dominant_palette:
-        - source_color: Bluebird Express
-          token: mount_snow/bluebird_express/600
-        - source_color: Whipped Cream
-          token: mount_snow/whipped_cream/100
-        - source_color: Heart Red
-          token: mount_snow/heart_red/500
-      supporting_palette:
-        - source_color: Somerset Blue
-          token: mount_snow/somerset_blue/500
-        - source_color: Rosy Cheeks
-          token: mount_snow/rosy_cheeks/400
-        - source_color: Carinthia Rail
-          token: universal/black
-      notes:
-        - The source explicitly says secondary colors should never appear within work without the presence of the primary palette.
-    - name: carinthia_specific_work
-      intent: Carinthia-specific work uses a restricted three-color subset rather than the full Mount Snow palette.
-      dominant_palette:
-        - source_color: Carinthia Rail
-          token: universal/black
-        - source_color: Whipped Cream
-          token: mount_snow/whipped_cream/100
-        - source_color: Heart Red
-          token: mount_snow/heart_red/500
-      supporting_palette: []
-      notes:
-        - The usage page explicitly says Carinthia work should use only `Carinthia Rail`, `Whipped Cream`, and `Heart Red`.
+  status: not_provided
+  source_basis: User-provided Mount Snow design-system pages define palette hierarchy and a Carinthia-specific subset, but do not publish governed numeric color percentages.
+  contexts: []
+  notes:
+    - Keep the palette hierarchy and Carinthia subset as source context only; they are not governed repo percentage guidance.
 
 validation:
   perceptual_consistency_notes:
