@@ -1,8 +1,8 @@
-date: 2026-03-27
+date: 2026-03-30
 brand: crotched
-source_reference: "User instruction in chat to keep the universal typography baseline until brand-specific font guidance is established; do not create mirrored brand typography tokens."
-source_type: chat_instruction
-figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Foundations?node-id=1-3
+source_reference: Vail Resorts Guidelines - Google Sheets.pdf
+source_type: pdf
+figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Foundations?node-id=277-998
 status: active
 preview:
   required_before_write: true
@@ -16,15 +16,15 @@ primitive_recommendations:
     families:
       - source_family_name: universal/family/01
         existing_token: universal/family/01
-        reason: No brand-specific typography guidance is established, so the brand inherits the shared universal primary family directly.
+        reason: The PDF does not list Crotched font guidance, so the brand remains on the shared universal family baseline.
     weights:
       - source_weight_label: inherited
         existing_token: universal/weight/*
-        reason: Typography weights inherit the shared universal baseline.
+        reason: Weight remains inherited because the PDF does not provide brand-specific typography guidance.
     sizes:
       - source_size_label: inherited
         existing_token: universal/size/*
-        reason: Typography sizes inherit the shared universal baseline through published `Global: Typography`.
+        reason: "Typography size continues to publish from the shared Global: Typography ladder."
   proposed_primitives:
     families: []
     weights: []
@@ -39,10 +39,10 @@ role_recipes: []
 
 validation:
   extraction_notes:
-    - No brand-specific typography guidance was supplied for this brand.
+    - The PDF does not list brand font guidance for Crotched.
   governance_notes:
+    - Keep Crotched on the shared universal typography baseline until governed source guidance is supplied.
     - Do not create brand-level raw typography tokens that mirror universal values.
-    - The brand semantic theme extension must inherit typography family and weight aliases from the shared universal base without overrides.
 
 review_readiness:
   intended_review_channels:
@@ -50,12 +50,12 @@ review_readiness:
     - email
     - ads
   review_rules:
-    - subject: Crotched inherits universal typography
+    - subject: Crotched typography hold
       channels:
         - web
         - email
         - ads
-      rule: Keep the brand on the shared universal typography baseline until brand-specific typography guidance is established.
-      source_basis: User instruction in chat.
+      rule: Keep the brand on the universal typography baseline until governed PDF guidance exists.
+      source_basis: Vail Resorts Guidelines - Google Sheets PDF.
 
 open_questions: []

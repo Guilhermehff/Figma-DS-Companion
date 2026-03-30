@@ -1,5 +1,5 @@
 version: 1
-updated: '2026-03-27'
+updated: '2026-03-30'
 brand_id: crotched
 display_name: Crotched
 status: active
@@ -107,7 +107,7 @@ semantic_overrides:
       - family/*
       - weight/*
       notes:
-      - No brand-specific typography guidance is established for Crotched, so the semantic theme extension inherits the shared universal typography base without overrides.
-      - Typography size continues to bind directly from published `Global: Typography`.
+      - The Vail Resorts Guidelines PDF does not list brand font guidance for Crotched, so the semantic theme extension continues to inherit the shared universal typography base without overrides.
+      - "Typography size continues to bind directly from published `Global: Typography`."
 notes:
 - Crotched is live in the Foundations file with two raw color families, no brand-specific raw typography families, a semantic theme logo-name override, and Crotched semantic theme extension.

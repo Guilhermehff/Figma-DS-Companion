@@ -1,22 +1,18 @@
 # Paoli Peaks Typography Preview
 
-Review state: approved preview artifact. Verify live write state in `figma/brands/paoli_peaks/brand.yml` and Figma.
+Review state: written in Figma. Verify live state in `figma/brands/paoli_peaks/brand.yml`.
 
-## Current Decision
+## Source Roles
 
-- No brand-specific typography guidance is established for Paoli Peaks.
-- Do not create raw Paoli Peaks typography tokens that mirror universal values.
-- The `Semantic: Theme` extension for Paoli Peaks inherits typography family and weight aliases from the shared universal base without overrides.
-- Typography size continues to bind from published `Global: Typography`.
+- `Headline` -> `Rockwell Nova Extra Bold`
+- `Subheadline` -> `Rockwell Nova`
 
-## Documentation State
+## Live Semantic Mapping
 
-- The Foundations typography documentation for Paoli Peaks should use the warning-only state.
-- Do not show token cards, family grids, or derived role recipes until brand-specific typography guidance exists.
+- `family/heading`, `family/body`, `family/action` -> `paoli_peaks/family/01`
+- `weight/heading/base`, `weight/heading/strong`, `weight/action/base` -> `universal/weight/black`
+- `weight/body/base`, `weight/body/strong` -> `universal/weight/normal`
 
-## Review Readiness
+## Notes
 
-- Subject: `Paoli Peaks inherits universal typography`
-  Channels: `web, email, ads`
-  Rule: Keep the brand on the shared universal typography baseline until brand-specific typography guidance is established.
-  Source basis: User instruction in chat.
+- The PDF does not define a body or CTA lane, so body remains normal and action follows the headline family in the first governed pass.

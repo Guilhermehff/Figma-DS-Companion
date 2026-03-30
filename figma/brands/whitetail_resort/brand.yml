@@ -101,12 +101,29 @@ semantic_overrides:
       - Exact black and white remain inherited through the shared neutral role recipes.
       - "`two_top_green` drives both expressive semantic lanes because the source provides one non-neutral hue."
     typography:
-      override_scopes: []
+      override_scopes:
+      - semantic_token: family/heading
+        alias_of: whitetail_resort/family/01
+      - semantic_token: family/body
+        alias_of: whitetail_resort/family/01
+      - semantic_token: family/action
+        alias_of: whitetail_resort/family/01
+      - semantic_token: weight/heading/base
+        alias_of: universal/weight/normal
+      - semantic_token: weight/heading/strong
+        alias_of: universal/weight/normal
+      - semantic_token: weight/body/base
+        alias_of: universal/weight/normal
+      - semantic_token: weight/body/strong
+        alias_of: universal/weight/normal
+      - semantic_token: weight/action/base
+        alias_of: universal/weight/normal
       inherited_from_base:
-      - family/*
-      - weight/*
+      - family/heading_safe
+      - family/body_safe
+      - family/action_safe
       notes:
-      - No brand-specific typography guidance is established for Whitetail Resort, so the semantic theme extension inherits the shared universal typography base without overrides.
-      - Typography size continues to bind directly from published `Global: Typography`.
+      - Whitetail Resort is live as a one-family typography system with `Andes` across heading, body, and action work.
+      - "Typography size continues to bind directly from published `Global: Typography`."
 notes:
-- Whitetail Resort is live in the Foundations file with two raw color families (`two_top_green` plus a raw-only `neutral` support ramp), no brand-specific raw typography families, and Whitetail Resort semantic theme extension.
+- Whitetail Resort is live in the Foundations file with two raw color families (`two_top_green` plus a raw-only `neutral` support ramp), one raw typography family primitive, and Whitetail Resort semantic theme extension.

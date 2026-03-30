@@ -1,5 +1,5 @@
 version: 1
-updated: '2026-03-27'
+updated: '2026-03-30'
 brand_id: snow_creek
 display_name: Snow Creek
 status: active
@@ -101,12 +101,29 @@ semantic_overrides:
       - "`creek_blue` drives the primary expressive lane and `tagline_gold` drives the secondary expressive lane."
       - "`snow_white` remains a governed raw-only family in the first pass."
     typography:
-      override_scopes: []
+      override_scopes:
+      - semantic_token: family/heading
+        alias_of: snow_creek/family/01
+      - semantic_token: family/body
+        alias_of: snow_creek/family/01
+      - semantic_token: family/action
+        alias_of: snow_creek/family/01
+      - semantic_token: weight/heading/base
+        alias_of: universal/weight/normal
+      - semantic_token: weight/heading/strong
+        alias_of: universal/weight/normal
+      - semantic_token: weight/body/base
+        alias_of: universal/weight/normal
+      - semantic_token: weight/body/strong
+        alias_of: universal/weight/normal
+      - semantic_token: weight/action/base
+        alias_of: universal/weight/normal
       inherited_from_base:
-      - family/*
-      - weight/*
+      - family/heading_safe
+      - family/body_safe
+      - family/action_safe
       notes:
-      - No brand-specific typography guidance is established for Snow Creek, so the semantic theme extension inherits the shared universal typography base without overrides.
-      - Typography size continues to bind directly from published `Global: Typography`.
+      - Snow Creek is live as a one-family typography system with `Prompt` across heading, body, and action work.
+      - "Typography size continues to bind directly from published `Global: Typography`."
 notes:
-- Snow Creek is live in the Foundations file with three raw color families, no brand-specific raw typography families, and Snow Creek semantic theme extension.
+- Snow Creek is live in the Foundations file with three raw color families, one raw typography family primitive, and Snow Creek semantic theme extension.

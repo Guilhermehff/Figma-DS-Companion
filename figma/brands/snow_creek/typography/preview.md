@@ -1,22 +1,16 @@
 # Snow Creek Typography Preview
 
-Review state: approved preview artifact. Verify live write state in `figma/brands/snow_creek/brand.yml` and Figma.
+Review state: written in Figma. Verify live state in `figma/brands/snow_creek/brand.yml`.
 
-## Current Decision
+## Source Roles
 
-- No brand-specific typography guidance is established for Snow Creek.
-- Do not create raw Snow Creek typography tokens that mirror universal values.
-- The `Semantic: Theme` extension for Snow Creek inherits typography family and weight aliases from the shared universal base without overrides.
-- Typography size continues to bind from published `Global: Typography`.
+- `Headline`, `Subheadline`, `Body` -> `Prompt`
 
-## Documentation State
+## Live Semantic Mapping
 
-- The Foundations typography documentation for Snow Creek should use the warning-only state.
-- Do not show token cards, family grids, or derived role recipes until brand-specific typography guidance exists.
+- `family/heading`, `family/body`, `family/action` -> `snow_creek/family/01`
+- `weight/heading/base`, `weight/heading/strong`, `weight/body/base`, `weight/body/strong`, `weight/action/base` -> `universal/weight/normal`
 
-## Review Readiness
+## Notes
 
-- Subject: `Snow Creek inherits universal typography`
-  Channels: `web, email, ads`
-  Rule: Keep the brand on the shared universal typography baseline until brand-specific typography guidance is established.
-  Source basis: User instruction in chat.
+- The PDF does not define a separate CTA lane, so action follows the shared Prompt family in the first governed pass.

@@ -1,5 +1,5 @@
 version: 1
-updated: '2026-03-27'
+updated: '2026-03-30'
 brand_id: paoli_peaks
 display_name: Paoli Peaks
 status: active
@@ -102,12 +102,30 @@ semantic_overrides:
       - "`peaks_peak` remains a governed raw-only family in the first pass."
       - The documented gradient remains outside the current solid-color variable model.
     typography:
-      override_scopes: []
+      override_scopes:
+      - semantic_token: family/heading
+        alias_to: paoli_peaks/family/01
+      - semantic_token: family/body
+        alias_to: paoli_peaks/family/01
+      - semantic_token: family/action
+        alias_to: paoli_peaks/family/01
+      - semantic_token: weight/heading/base
+        alias_to: universal/weight/black
+      - semantic_token: weight/heading/strong
+        alias_to: universal/weight/black
+      - semantic_token: weight/body/base
+        alias_to: universal/weight/normal
+      - semantic_token: weight/body/strong
+        alias_to: universal/weight/normal
+      - semantic_token: weight/action/base
+        alias_to: universal/weight/black
       inherited_from_base:
-      - family/*
-      - weight/*
+      - family/heading_safe
+      - family/body_safe
+      - family/action_safe
       notes:
-      - No brand-specific typography guidance is established for Paoli Peaks, so the semantic theme extension inherits the shared universal typography base without overrides.
-      - Typography size continues to bind directly from published `Global: Typography`.
+      - Paoli Peaks is live as a one-family typography system with `Rockwell Nova` across heading, body, and action work.
+      - The PDF does not define a body or CTA lane, so body stays on the shared normal weight and action follows the headline family in the first pass.
+      - "Typography size continues to bind directly from published `Global: Typography`."
 notes:
-- Paoli Peaks is live in the Foundations file with three raw color families, no brand-specific raw typography families, and Paoli Peaks semantic theme extension.
+- Paoli Peaks is live in the Foundations file with three raw color families, one raw typography family primitive, and Paoli Peaks semantic theme extension.

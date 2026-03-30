@@ -1,22 +1,20 @@
 # Afton Alps Typography Preview
 
-Review state: approved preview artifact. Verify live write state in `figma/brands/afton_alps/brand.yml` and Figma.
+Review state: written in Figma. Verify live state in `figma/brands/afton_alps/brand.yml`.
 
-## Current Decision
+## Source Roles
 
-- No brand-specific typography guidance is established for Afton Alps.
-- Do not create raw Afton Alps typography tokens that mirror universal values.
-- The `Semantic: Theme` extension for Afton Alps inherits typography family and weight aliases from the shared universal base without overrides.
-- Typography size continues to bind from published `Global: Typography`.
+- `Headline` -> `Dela Gothic One Regular`
+- `Subheadline`, `Body` -> `Chivo Bold` / `Chivo Regular`
 
-## Documentation State
+## Live Semantic Mapping
 
-- The Foundations typography documentation for Afton Alps should use the warning-only state.
-- Do not show token cards, family grids, or derived role recipes until brand-specific typography guidance exists.
+- `family/heading`, `family/action` -> `afton_alps/family/01`
+- `family/body` -> `afton_alps/family/02`
+- `weight/heading/base`, `weight/heading/strong`, `weight/action/base` -> `universal/weight/normal`
+- `weight/body/base` -> `universal/weight/normal`
+- `weight/body/strong` -> `universal/weight/bold`
 
-## Review Readiness
+## Notes
 
-- Subject: `Afton Alps inherits universal typography`
-  Channels: `web, email, ads`
-  Rule: Keep the brand on the shared universal typography baseline until brand-specific typography guidance is established.
-  Source basis: User instruction in chat.
+- The PDF does not define a separate CTA lane, so action follows the headline family in the first governed pass.

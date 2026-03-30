@@ -1,48 +1,144 @@
-date: 2026-03-27
+date: 2026-03-30
 brand: hidden_valley_mo
-source_reference: "User instruction in chat to keep the universal typography baseline until brand-specific font guidance is established; do not create mirrored brand typography tokens."
-source_type: chat_instruction
-figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Foundations?node-id=1-3
+source_reference: Vail Resorts Guidelines - Google Sheets.pdf
+source_type: pdf
+figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Foundations?node-id=277-998
 status: active
 preview:
   required_before_write: true
   artifact: figma/brands/hidden_valley_mo/typography/preview.md
   status: written_in_figma
 
-source_roles: []
+source_roles:
+  - source_role: headline
+    source_family_name: Altero
+    source_style_name: Regular
+    source_weight_label: Regular
+    source_usage_scope: headline
+    text_case: uppercase
+    tracking: not specified in source
+    leading: not specified in source
+    size_rule: source names roles and weights but does not define governed numeric sizes
+    punctuation_rule: not specified in source
+    sample_copy: Hidden Valley MO
+  - source_role: subheadline
+    source_family_name: Altero
+    source_style_name: Outline
+    source_weight_label: Outline
+    source_usage_scope: supporting headline
+    text_case: uppercase
+    tracking: not specified in source
+    leading: not specified in source
+    size_rule: source names roles and styles but does not define governed numeric sizes
+    punctuation_rule: not specified in source
+    sample_copy: See the mountain
+  - source_role: body
+    source_family_name: Prompt
+    source_style_name: Regular
+    source_weight_label: Regular
+    source_usage_scope: body copy
+    text_case: source dependent
+    tracking: not specified in source
+    leading: not specified in source
+    size_rule: source names roles and weights but does not define governed numeric sizes
+    punctuation_rule: sentence punctuation allowed
+    sample_copy: Explore current conditions, passes, and lessons.
 
 primitive_recommendations:
   reuse_existing:
-    families:
-      - source_family_name: universal/family/01
-        existing_token: universal/family/01
-        reason: No brand-specific typography guidance is established, so the brand inherits the shared universal primary family directly.
-    weights:
-      - source_weight_label: inherited
-        existing_token: universal/weight/*
-        reason: Typography weights inherit the shared universal baseline.
-    sizes:
-      - source_size_label: inherited
-        existing_token: universal/size/*
-        reason: Typography sizes inherit the shared universal baseline through published `Global: Typography`.
-  proposed_primitives:
     families: []
+    weights:
+      - source_weight_label: Regular
+        existing_token: universal/weight/normal
+        reason: Direct match for Altero Regular and Prompt Regular.
+    sizes:
+      - source_size_reference: inherited
+        existing_token: universal/size/*
+        assumption_status: deferred_no_new_size
+        assumption_note: The PDF names families and styles but does not govern numeric sizes.
+        reason: "Typography size continues to publish from the shared Global: Typography ladder."
+  proposed_primitives:
+    families:
+      - token_name: hidden_valley_mo/family/01
+        source_family_name: Altero
+        source_style_reference: headline family
+        rationale: Display and action family.
+        fallback_token: universal/family/fallback
+        fallback_note: Safe-family behavior remains inherited from the semantic base.
+      - token_name: hidden_valley_mo/family/02
+        source_family_name: Prompt
+        source_style_reference: body family
+        rationale: Reading family.
+        fallback_token: universal/family/fallback
+        fallback_note: Safe-family behavior remains inherited from the semantic base.
     weights: []
-  hold_for_review: []
+  hold_for_review:
+    - source_item: Altero Outline
+      reason: The current semantic typography model has no dedicated outline or style slot, so the treatment remains documentation-only.
 
 semantic_recommendations:
-  family_aliases: []
-  weight_aliases: []
+  family_aliases:
+    - semantic_token: family/heading
+      global_token: hidden_valley_mo/family/01
+      safe_semantic_token: family/heading_safe
+      safe_global_token: universal/family/fallback
+      intended_channels:
+        - web
+        - email
+        - ads
+    - semantic_token: family/body
+      global_token: hidden_valley_mo/family/02
+      safe_semantic_token: family/body_safe
+      safe_global_token: universal/family/fallback
+      intended_channels:
+        - web
+        - email
+        - ads
+    - semantic_token: family/action
+      global_token: hidden_valley_mo/family/01
+      safe_semantic_token: family/action_safe
+      safe_global_token: universal/family/fallback
+      intended_channels:
+        - web
+        - email
+        - ads
+  weight_aliases:
+    - semantic_token: weight/heading/base
+      global_token: universal/weight/normal
+    - semantic_token: weight/heading/strong
+      global_token: universal/weight/normal
+    - semantic_token: weight/body/base
+      global_token: universal/weight/normal
+    - semantic_token: weight/body/strong
+      global_token: universal/weight/normal
+    - semantic_token: weight/action/base
+      global_token: universal/weight/normal
   size_aliases: []
 
-role_recipes: []
+role_recipes:
+  - role_name: heading
+    source_role: Altero Regular
+    proposed_family_token: hidden_valley_mo/family/01
+    proposed_weight_token: universal/weight/normal
+    proposed_size_token: inherited current heading ladder
+  - role_name: body
+    source_role: Prompt Regular
+    proposed_family_token: hidden_valley_mo/family/02
+    proposed_weight_token: universal/weight/normal
+    proposed_size_token: inherited current body ladder
+  - role_name: action
+    source_role: derived from the headline family because the PDF does not define a separate CTA lane
+    proposed_family_token: hidden_valley_mo/family/01
+    proposed_weight_token: universal/weight/normal
+    proposed_size_token: inherited current action ladder
 
 validation:
   extraction_notes:
-    - No brand-specific typography guidance was supplied for this brand.
+    - The PDF explicitly names Altero for headline, Altero Outline for subheadline, and Prompt Regular for body copy.
+    - Altero Outline remains documentation-only because the current semantic typography model does not expose a dedicated outline slot.
   governance_notes:
-    - Do not create brand-level raw typography tokens that mirror universal values.
-    - The brand semantic theme extension must inherit typography family and weight aliases from the shared universal base without overrides.
+    - Hidden Valley MO is live as a two-family typography system with Altero on heading and action work and Prompt on the reading lane.
+    - "Typography size continues to bind directly from published Global: Typography."
 
 review_readiness:
   intended_review_channels:
@@ -50,12 +146,12 @@ review_readiness:
     - email
     - ads
   review_rules:
-    - subject: Hidden Valley MO inherits universal typography
+    - subject: Hidden Valley MO family split
       channels:
         - web
         - email
         - ads
-      rule: Keep the brand on the shared universal typography baseline until brand-specific typography guidance is established.
-      source_basis: User instruction in chat.
+      rule: Keep Altero on heading and action work and Prompt on the reading lane while treating Altero Outline as documentation-only metadata.
+      source_basis: Vail Resorts Guidelines - Google Sheets PDF.
 
 open_questions: []

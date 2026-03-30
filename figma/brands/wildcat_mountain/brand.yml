@@ -1,5 +1,5 @@
 version: 1
-updated: '2026-03-27'
+updated: '2026-03-30'
 brand_id: wildcat_mountain
 display_name: Wildcat Mountain
 status: active
@@ -107,7 +107,7 @@ semantic_overrides:
       - family/*
       - weight/*
       notes:
-      - No brand-specific typography guidance is established for Wildcat Mountain, so the semantic theme extension inherits the shared universal typography base without overrides.
-      - Typography size continues to bind directly from published `Global: Typography`.
+      - The Vail Resorts Guidelines PDF does not list brand font guidance for Wildcat Mountain, so the semantic theme extension continues to inherit the shared universal typography base without overrides.
+      - "Typography size continues to bind directly from published `Global: Typography`."
 notes:
 - Wildcat Mountain is live in the Foundations file with four raw color families, no brand-specific raw typography families, and Wildcat Mountain semantic theme extension.

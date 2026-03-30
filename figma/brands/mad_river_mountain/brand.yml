@@ -1,5 +1,5 @@
 version: 1
-updated: '2026-03-27'
+updated: '2026-03-30'
 brand_id: mad_river_mountain
 display_name: Mad River Mountain
 status: active
@@ -100,12 +100,29 @@ semantic_overrides:
       - "`on_surface/*` tokens in the live semantic theme extension are contrast-derived from `universal/black` or `universal/white` and are not hue-tinted."
       - "`river_blue` drives the primary expressive lane and `mountain_green` drives the supporting expressive lane."
     typography:
-      override_scopes: []
+      override_scopes:
+      - semantic_token: family/heading
+        alias_to: mad_river_mountain/family/01
+      - semantic_token: family/body
+        alias_to: mad_river_mountain/family/01
+      - semantic_token: family/action
+        alias_to: mad_river_mountain/family/01
+      - semantic_token: weight/heading/base
+        alias_to: universal/weight/normal
+      - semantic_token: weight/heading/strong
+        alias_to: universal/weight/normal
+      - semantic_token: weight/body/base
+        alias_to: universal/weight/normal
+      - semantic_token: weight/body/strong
+        alias_to: universal/weight/normal
+      - semantic_token: weight/action/base
+        alias_to: universal/weight/normal
       inherited_from_base:
-      - family/*
-      - weight/*
+      - family/heading_safe
+      - family/body_safe
+      - family/action_safe
       notes:
-      - No brand-specific typography guidance is established for Mad River Mountain, so the semantic theme extension inherits the shared universal typography base without overrides.
-      - Typography size continues to bind directly from published `Global: Typography`.
+      - Mad River Mountain is live as a one-family typography system with `Prompt` across heading, body, and action work.
+      - "Typography size continues to bind directly from published `Global: Typography`."
 notes:
-- Mad River Mountain is live in the Foundations file with two raw color families, no brand-specific raw typography families, and Mad River Mountain semantic theme extension.
+- Mad River Mountain is live in the Foundations file with two raw color families, one raw typography family primitive, and Mad River Mountain semantic theme extension.

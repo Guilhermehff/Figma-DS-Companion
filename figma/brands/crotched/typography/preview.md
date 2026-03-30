@@ -1,22 +1,16 @@
 # Crotched Typography Preview
 
-Review state: approved preview artifact. Verify live write state in `figma/brands/crotched/brand.yml` and Figma.
+Review state: written in Figma. Verify live state in `figma/brands/crotched/brand.yml`.
 
-## Current Decision
+## Source Status
 
-- No brand-specific typography guidance is established for Crotched.
-- Do not create raw Crotched typography tokens that mirror universal values.
-- The `Semantic: Theme` extension for Crotched inherits typography family and weight aliases from the shared universal base without overrides.
-- Typography size continues to bind from published `Global: Typography`.
+- The Vail Resorts Guidelines PDF does not list brand font guidance for Crotched.
 
-## Documentation State
+## Live Semantic Mapping
 
-- The Foundations typography documentation for Crotched should use the warning-only state.
-- Do not show token cards, family grids, or derived role recipes until brand-specific typography guidance exists.
+- `family/*` -> inherited from the shared universal base
+- `weight/*` -> inherited from the shared universal base
 
-## Review Readiness
+## Notes
 
-- Subject: `Crotched inherits universal typography`
-  Channels: `web, email, ads`
-  Rule: Keep the brand on the shared universal typography baseline until brand-specific typography guidance is established.
-  Source basis: User instruction in chat.
+- Keep the brand on the universal typography baseline until governed PDF guidance exists.

@@ -1,22 +1,19 @@
 # Boston Mills / Brandywine Typography Preview
 
-Review state: approved preview artifact. Verify live write state in `figma/brands/boston_mills_brandywine/brand.yml` and Figma.
+Review state: written in Figma. Verify live state in `figma/brands/boston_mills_brandywine/brand.yml`.
 
-## Current Decision
+## Source Roles
 
-- No brand-specific typography guidance is established for Boston Mills / Brandywine.
-- Do not create raw Boston Mills / Brandywine typography tokens that mirror universal values.
-- The `Semantic: Theme` extension for Boston Mills / Brandywine inherits typography family and weight aliases from the shared universal base without overrides.
-- Typography size continues to bind from published `Global: Typography`.
+- `Headline` -> `Interstate Black`
+- `Subheadline` -> `Interstate H2`
+- `Body` -> `Interstate Medium`
 
-## Documentation State
+## Live Semantic Mapping
 
-- The Foundations typography documentation for Boston Mills / Brandywine should use the warning-only state.
-- Do not show token cards, family grids, or derived role recipes until brand-specific typography guidance exists.
+- `family/heading`, `family/body`, `family/action` -> `boston_mills_brandywine/family/01`
+- `weight/heading/base`, `weight/heading/strong`, `weight/action/base` -> `universal/weight/black`
+- `weight/body/base`, `weight/body/strong` -> `universal/weight/medium`
 
-## Review Readiness
+## Notes
 
-- Subject: `Boston Mills / Brandywine inherits universal typography`
-  Channels: `web, email, ads`
-  Rule: Keep the brand on the shared universal typography baseline until brand-specific typography guidance is established.
-  Source basis: User instruction in chat.
+- `Interstate H2` remains documentation-only because the current semantic typography model does not expose a dedicated H2 style slot.
