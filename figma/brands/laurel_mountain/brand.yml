@@ -1,5 +1,5 @@
 version: 1
-updated: '2026-03-26'
+updated: '2026-03-31'
 brand_id: laurel_mountain
 display_name: Laurel Mountain
 status: active
@@ -25,7 +25,10 @@ artifacts:
   color:
     intake_artifact: figma/brands/laurel_mountain/color/intake.yml
     preview_artifact: figma/brands/laurel_mountain/color/preview.md
-    decision_artifacts: []
+    decision_artifacts:
+    - figma/decisions/2026-03-31-laurel-mountain-blue-consolidation.md
+    - figma/decisions/2026-03-31-laurel-mountain-blue-ramp-redesign.md
+    - figma/decisions/2026-03-31-universal-100-900-color-ramp-normalization.md
   typography:
     intake_artifact: figma/brands/laurel_mountain/typography/intake.yml
     preview_artifact: figma/brands/laurel_mountain/typography/preview.md
@@ -36,7 +39,7 @@ semantic_overrides:
     color:
       override_scopes:
       - scope: neutral
-        source_family: laurel_mountain/dark_blue
+        source_family: laurel_mountain/blue
         targets:
         - surface/neutral/*
         - surface/neutral/*_inverse
@@ -60,7 +63,7 @@ semantic_overrides:
         - border/brand
         - border/brand_inverse
       - scope: brand_secondary
-        source_family: laurel_mountain/light_blue
+        source_family: laurel_mountain/blue
         targets:
         - surface/brand_secondary/*
         - surface/brand_secondary/*_inverse
@@ -101,8 +104,10 @@ semantic_overrides:
       - border/critical_inverse
       notes:
       - "`on_surface/*` tokens in the live semantic theme extension are contrast-derived from `universal/black` or `universal/white` and are not hue-tinted."
-      - Laurel Mountain is live in the Foundations file with `dark_blue` as the structural lane, `red` as the primary expressive lane, and `light_blue` as the supporting expressive lane.
-      - The first semantic pass treats the darker blue brand swatch as structural because it is the only source hue that can carry readable neutral text and border work without collapsing into shared black.
+      - Laurel Mountain is live in the Foundations file with `blue` as the unified structural and supporting lane and `red` as the primary expressive lane.
+      - The blue ladder was redesigned after the initial consolidation so the hue progression stays smoother across the scale.
+      - The reviewed `blue` family preserves the Light Blue source swatch at `blue/500` and the Dark Blue source swatch at `blue/900`.
+      - Neutral and `brand_secondary` now alias the same `blue` family with different semantic step mappings instead of maintaining split raw blue families.
       - "`assets/logo` resolves to the string `Laurel Mountain` in the semantic theme extension."
     typography:
       override_scopes:
@@ -130,4 +135,4 @@ semantic_overrides:
       - Laurel Mountain is live as a Roboto-led semantic system, with `Niagara` preserved as the raw display family used in the logotype and design-headline source guidance.
       - The semantic heading lane stays on Roboto in the first pass because the source explicitly marks Niagara as the logo and display treatment while also providing a digital Roboto headline alternative.
 notes:
-- Laurel Mountain is live in the Foundations file with three raw color families, two raw typography family primitives, a semantic theme logo-name override, and Laurel Mountain semantic theme extension.
+- Laurel Mountain is live in the Foundations file with two raw color families, two raw typography family primitives, a semantic theme logo-name override, and Laurel Mountain semantic theme extension.

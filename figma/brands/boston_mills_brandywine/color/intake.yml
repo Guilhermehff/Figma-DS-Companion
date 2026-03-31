@@ -1,4 +1,4 @@
-date: 2026-03-18
+date: '2026-03-31'
 brand: boston_mills_brandywine
 source_reference: User-provided image in chat showing the Boston Mills / Brandywine logo and color guidelines
 source_type: image
@@ -9,32 +9,32 @@ preview:
   artifact: figma/brands/boston_mills_brandywine/color/preview.md
   status: written_in_figma
 source_swatches:
-  - source_name: Black
-    provided_value: "#000000"
+- source_name: Black
+  provided_value: "#000000"
 universal_reuse:
   reuse_universal:
-    - source_name: Black
-      provided_value: "#000000"
-      existing_token: universal/black
-      rationale: Exact match.
+  - source_name: Black
+    provided_value: "#000000"
+    existing_token: universal/black
+    rationale: Exact match.
   new_brand_families: []
 semantic_recommendations:
   role_sets:
-    - scope: neutral
-      source_family: inherited_base
-      rationale: Exact black and white remain inherited from the shared neutral baseline.
-    - scope: brand
-      source_family: universal/black
-      rationale: The supplied brand palette is monochrome, so the expressive lane aliases the shared universal black primitive.
-    - scope: brand_secondary
-      source_family: universal/black
-      rationale: The supplied brand palette is monochrome, so the second expressive lane aliases the shared universal black primitive as well.
+  - scope: neutral
+    source_family: inherited_base
+    rationale: Exact black and white remain inherited from the shared neutral baseline.
+  - scope: brand
+    source_family: universal/black
+    rationale: The supplied brand palette is monochrome, so the expressive lane aliases the shared universal black primitive.
+  - scope: brand_secondary
+    source_family: universal/black
+    rationale: The supplied brand palette is monochrome, so the second expressive lane aliases the shared universal black primitive as well.
   global_only_families: []
   role_exceptions:
-    - target: assets/logo
-      source_token: Boston Mills / Brandywine
+  - target: assets/logo
+    source_token: Boston Mills / Brandywine
 review_readiness:
   review_rules:
-    - subject: Boston Mills / Brandywine monochrome mapping
-      rule: Use `universal/black` for both expressive semantic lanes because the source only supplies exact black.
+  - subject: Boston Mills / Brandywine monochrome mapping
+    rule: Use `universal/black` for both expressive semantic lanes because the source only supplies exact black.
 open_questions: []

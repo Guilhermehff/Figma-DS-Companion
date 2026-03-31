@@ -1,5 +1,5 @@
 version: 1
-updated: '2026-03-26'
+updated: '2026-03-31'
 brand_id: stevens_pass
 display_name: Stevens Pass
 status: active
@@ -27,6 +27,7 @@ artifacts:
     preview_artifact: figma/brands/stevens_pass/color/preview.md
     decision_artifacts:
     - figma/decisions/2026-03-18-stevens-pass-foundations-written-to-figma.md
+    - figma/decisions/2026-03-31-universal-100-900-color-ramp-normalization.md
   typography:
     intake_artifact: figma/brands/stevens_pass/typography/intake.yml
     preview_artifact: figma/brands/stevens_pass/typography/preview.md

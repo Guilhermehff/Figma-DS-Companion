@@ -1,4 +1,4 @@
-date: 2026-03-18
+date: '2026-03-31'
 brand: stevens_pass
 source_reference: User-provided image in chat showing the Stevens Pass color palette
 source_type: image
@@ -8,248 +8,216 @@ preview:
   required_before_write: true
   artifact: figma/brands/stevens_pass/color/preview.md
   status: written_in_figma
-
 source_swatches:
-  - source_name: Black
-    provided_value: "#000000"
-    source_usage_scope: primary palette
-    channel_restrictions: not specified in source
-    notes: Source image lists CMYK 0 0 0 100, RGB 0 0 0, and Spot Pantone Black.
-  - source_name: Stevens Blue
-    provided_value: "#0264a3"
-    source_usage_scope: primary palette
-    channel_restrictions: not specified in source
-    notes: Source image lists CMYK 93 62 9 1, RGB 2 100 163, and Spot 2384 C.
-  - source_name: Powder White
-    provided_value: "#ffffff"
-    source_usage_scope: primary palette
-    channel_restrictions: not specified in source
-    notes: Source image lists CMYK 0 0 0 0, RGB 255 255 255, and Spot Process White.
-  - source_name: Secondary Blue
-    provided_value: "#203f7c"
-    source_usage_scope: secondary palette
-    channel_restrictions: source notes it is not specifically needed for this campaign but may be used in special cases
-    notes: Source image lists CMYK 100 87 22 8, RGB 32 63 124, and Spot 7687 C.
-  - source_name: Mossy Green
-    provided_value: "#6b7830"
-    source_usage_scope: secondary palette
-    channel_restrictions: source notes it is not specifically needed for this campaign but may be used in special cases
-    notes: Source image lists CMYK 58 36 100 18, RGB 109 121 51, and Spot 5757 C.
-
+- source_name: Black
+  provided_value: "#000000"
+  source_usage_scope: primary palette
+  channel_restrictions: not specified in source
+  notes: Source image lists CMYK 0 0 0 100, RGB 0 0 0, and Spot Pantone Black.
+- source_name: Stevens Blue
+  provided_value: "#0264a3"
+  source_usage_scope: primary palette
+  channel_restrictions: not specified in source
+  notes: Source image lists CMYK 93 62 9 1, RGB 2 100 163, and Spot 2384 C.
+- source_name: Powder White
+  provided_value: "#ffffff"
+  source_usage_scope: primary palette
+  channel_restrictions: not specified in source
+  notes: Source image lists CMYK 0 0 0 0, RGB 255 255 255, and Spot Process White.
+- source_name: Secondary Blue
+  provided_value: "#203f7c"
+  source_usage_scope: secondary palette
+  channel_restrictions: source notes it is not specifically needed for this campaign but may be used in special cases
+  notes: Source image lists CMYK 100 87 22 8, RGB 32 63 124, and Spot 7687 C.
+- source_name: Mossy Green
+  provided_value: "#6b7830"
+  source_usage_scope: secondary palette
+  channel_restrictions: source notes it is not specifically needed for this campaign but may be used in special cases
+  notes: Source image lists CMYK 58 36 100 18, RGB 109 121 51, and Spot 5757 C.
 universal_reuse:
   reuse_universal:
-    - source_name: Black
-      provided_value: "#000000"
-      existing_token: universal/black
-      rationale: Exact match to the shared universal black primitive.
-    - source_name: Powder White
-      provided_value: "#ffffff"
-      existing_token: universal/white
-      rationale: Exact match to the shared universal white primitive.
+  - source_name: Black
+    provided_value: "#000000"
+    existing_token: universal/black
+    rationale: Exact match to the shared universal black primitive.
+  - source_name: Powder White
+    provided_value: "#ffffff"
+    existing_token: universal/white
+    rationale: Exact match to the shared universal white primitive.
   new_brand_families:
-    - family: stevens_blue
-      source_name: Stevens Blue
-      provided_value: "#0264a3"
-      rationale: Primary brand-signature blue and the clearest Stevens Pass expressive lane.
-      anchor_step: 700
-      anchor_label: 700_source
-    - family: secondary_blue
-      source_name: Secondary Blue
-      provided_value: "#203f7c"
-      rationale: Dark supporting blue that cleanly serves as the second expressive semantic lane without duplicating universal black.
-      anchor_step: 800
-      anchor_label: 800_source
-    - family: mossy_green
-      source_name: Mossy Green
-      provided_value: "#6b7830"
-      rationale: Distinct secondary accent preserved as a governed global-only family for special-case usage after the first semantic pass.
-      anchor_step: 600
-      anchor_label: 600_source
+  - family: stevens_blue
+    source_name: Stevens Blue
+    provided_value: "#0264a3"
+    rationale: Primary brand-signature blue and the clearest Stevens Pass expressive lane.
+    anchor_step: 700
+    anchor_label: 700_source
+  - family: secondary_blue
+    source_name: Secondary Blue
+    provided_value: "#203f7c"
+    rationale: Dark supporting blue that cleanly serves as the second expressive semantic lane without duplicating universal black.
+    anchor_step: 800
+    anchor_label: 800_source
+  - family: mossy_green
+    source_name: Mossy Green
+    provided_value: "#6b7830"
+    rationale: Distinct secondary accent preserved as a governed global-only family for special-case usage after the first semantic pass.
+    anchor_step: 600
+    anchor_label: 600_source
   hold_for_review: []
-
 scale_spec:
   working_space: OKLCH
   steps:
-    - 50
-    - 100
-    - 200
-    - 300
-    - 400
-    - 500
-    - 600
-    - 700
-    - 800
-    - 900
-    - 950
+  - 100
+  - 200
+  - 300
+  - 400
+  - 500
+  - 600
+  - 700
+  - 800
+  - 900
   contrast_targets:
     white:
-      "800": "4.5:1 preferred"
-      "900": "7:1 required"
-      "950": "7:1 required"
+      '800': 4.5:1 preferred
+      '900': 7:1 required
     black:
-      "50": "7:1 required"
-      "100": "7:1 required"
-      "200": "4.5:1 required"
-
+      '100': 7:1 required
+      '200': 7:1 required
+      '300': 4.5:1 required
 family_scales:
-  - family: stevens_blue
-    source_name: Stevens Blue
-    source_value: "#0264a3"
-    source_anchor: 700_source
-    tokens:
-      - name: stevens_pass/stevens_blue/50
-        value: "#f2fbff"
-        source_anchor: false
-      - name: stevens_pass/stevens_blue/100
-        value: "#def3ff"
-        source_anchor: false
-      - name: stevens_pass/stevens_blue/200
-        value: "#c7e5ff"
-        source_anchor: false
-      - name: stevens_pass/stevens_blue/300
-        value: "#a9d1f6"
-        source_anchor: false
-      - name: stevens_pass/stevens_blue/400
-        value: "#86b7e3"
-        source_anchor: false
-      - name: stevens_pass/stevens_blue/500
-        value: "#5d96c9"
-        source_anchor: false
-      - name: stevens_pass/stevens_blue/600
-        value: "#3378b1"
-        source_anchor: false
-      - name: stevens_pass/stevens_blue/700
-        value: "#0264a3"
-        source_anchor: true
-      - name: stevens_pass/stevens_blue/800
-        value: "#004274"
-        source_anchor: false
-      - name: stevens_pass/stevens_blue/900
-        value: "#002a51"
-        source_anchor: false
-      - name: stevens_pass/stevens_blue/950
-        value: "#001733"
-        source_anchor: false
-  - family: secondary_blue
-    source_name: Secondary Blue
-    source_value: "#203f7c"
-    source_anchor: 800_source
-    tokens:
-      - name: stevens_pass/secondary_blue/50
-        value: "#f5faff"
-        source_anchor: false
-      - name: stevens_pass/secondary_blue/100
-        value: "#e6f1ff"
-        source_anchor: false
-      - name: stevens_pass/secondary_blue/200
-        value: "#d3e2fd"
-        source_anchor: false
-      - name: stevens_pass/secondary_blue/300
-        value: "#bacdf0"
-        source_anchor: false
-      - name: stevens_pass/secondary_blue/400
-        value: "#9bb2db"
-        source_anchor: false
-      - name: stevens_pass/secondary_blue/500
-        value: "#7791c0"
-        source_anchor: false
-      - name: stevens_pass/secondary_blue/600
-        value: "#5773a7"
-        source_anchor: false
-      - name: stevens_pass/secondary_blue/700
-        value: "#39578f"
-        source_anchor: false
-      - name: stevens_pass/secondary_blue/800
-        value: "#203f7c"
-        source_anchor: true
-      - name: stevens_pass/secondary_blue/900
-        value: "#112651"
-        source_anchor: false
-      - name: stevens_pass/secondary_blue/950
-        value: "#061431"
-        source_anchor: false
-  - family: mossy_green
-    source_name: Mossy Green
-    source_value: "#6b7830"
-    source_anchor: 600_source
-    tokens:
-      - name: stevens_pass/mossy_green/50
-        value: "#f9fbf3"
-        source_anchor: false
-      - name: stevens_pass/mossy_green/100
-        value: "#eef3de"
-        source_anchor: false
-      - name: stevens_pass/mossy_green/200
-        value: "#dee6c5"
-        source_anchor: false
-      - name: stevens_pass/mossy_green/300
-        value: "#c8d2a8"
-        source_anchor: false
-      - name: stevens_pass/mossy_green/400
-        value: "#acb884"
-        source_anchor: false
-      - name: stevens_pass/mossy_green/500
-        value: "#8b985b"
-        source_anchor: false
-      - name: stevens_pass/mossy_green/600
-        value: "#6b7830"
-        source_anchor: true
-      - name: stevens_pass/mossy_green/700
-        value: "#545e21"
-        source_anchor: false
-      - name: stevens_pass/mossy_green/800
-        value: "#3c4511"
-        source_anchor: false
-      - name: stevens_pass/mossy_green/900
-        value: "#262d01"
-        source_anchor: false
-      - name: stevens_pass/mossy_green/950
-        value: "#141900"
-        source_anchor: false
-
+- family: stevens_blue
+  source_name: Stevens Blue
+  source_value: "#0264a3"
+  source_anchor: 700_source
+  tokens:
+  - name: stevens_pass/stevens_blue/100
+    value: "#f2fbff"
+    source_anchor: false
+  - name: stevens_pass/stevens_blue/200
+    value: "#def3ff"
+    source_anchor: false
+  - name: stevens_pass/stevens_blue/300
+    value: "#a9d1f6"
+    source_anchor: false
+  - name: stevens_pass/stevens_blue/400
+    value: "#86b7e3"
+    source_anchor: false
+  - name: stevens_pass/stevens_blue/500
+    value: "#5d96c9"
+    source_anchor: false
+  - name: stevens_pass/stevens_blue/600
+    value: "#3378b1"
+    source_anchor: false
+  - name: stevens_pass/stevens_blue/700
+    value: "#0264a3"
+    source_anchor: true
+  - name: stevens_pass/stevens_blue/800
+    value: "#004274"
+    source_anchor: false
+  - name: stevens_pass/stevens_blue/900
+    value: "#001733"
+    source_anchor: false
+- family: secondary_blue
+  source_name: Secondary Blue
+  source_value: "#203f7c"
+  source_anchor: 800_source
+  tokens:
+  - name: stevens_pass/secondary_blue/100
+    value: "#f5faff"
+    source_anchor: false
+  - name: stevens_pass/secondary_blue/200
+    value: "#e6f1ff"
+    source_anchor: false
+  - name: stevens_pass/secondary_blue/300
+    value: "#bacdf0"
+    source_anchor: false
+  - name: stevens_pass/secondary_blue/400
+    value: "#9bb2db"
+    source_anchor: false
+  - name: stevens_pass/secondary_blue/500
+    value: "#7791c0"
+    source_anchor: false
+  - name: stevens_pass/secondary_blue/600
+    value: "#5773a7"
+    source_anchor: false
+  - name: stevens_pass/secondary_blue/700
+    value: "#39578f"
+    source_anchor: false
+  - name: stevens_pass/secondary_blue/800
+    value: "#203f7c"
+    source_anchor: true
+  - name: stevens_pass/secondary_blue/900
+    value: "#061431"
+    source_anchor: false
+- family: mossy_green
+  source_name: Mossy Green
+  source_value: "#6b7830"
+  source_anchor: 600_source
+  tokens:
+  - name: stevens_pass/mossy_green/100
+    value: "#f9fbf3"
+    source_anchor: false
+  - name: stevens_pass/mossy_green/200
+    value: "#eef3de"
+    source_anchor: false
+  - name: stevens_pass/mossy_green/300
+    value: "#c8d2a8"
+    source_anchor: false
+  - name: stevens_pass/mossy_green/400
+    value: "#acb884"
+    source_anchor: false
+  - name: stevens_pass/mossy_green/500
+    value: "#8b985b"
+    source_anchor: false
+  - name: stevens_pass/mossy_green/600
+    value: "#6b7830"
+    source_anchor: true
+  - name: stevens_pass/mossy_green/700
+    value: "#545e21"
+    source_anchor: false
+  - name: stevens_pass/mossy_green/800
+    value: "#3c4511"
+    source_anchor: false
+  - name: stevens_pass/mossy_green/900
+    value: "#141900"
+    source_anchor: false
 validation:
   perceptual_consistency_notes:
-    - Stevens Blue lands at `700` because the supplied swatch is already a dark, high-contrast primary brand blue.
-    - Secondary Blue lands at `800` because the supplied swatch is materially darker than Stevens Blue and behaves as a strong secondary dark lane.
-    - Mossy Green lands at `600` because the supplied swatch reads as a mid-dark accent rather than a neutral.
-    - Exact black and white should remain shared through `universal/black` and `universal/white`.
+  - Stevens Blue lands at `700` because the supplied swatch is already a dark, high-contrast primary brand blue.
+  - Secondary Blue lands at `800` because the supplied swatch is materially darker than Stevens Blue and behaves as a strong secondary dark lane.
+  - Mossy Green lands at `600` because the supplied swatch reads as a mid-dark accent rather than a neutral.
+  - Exact black and white should remain shared through `universal/black` and `universal/white`.
   contrast_checks:
-    - token: stevens_pass/stevens_blue/700
-      foreground: white
-      ratio: "6.26:1"
-      result: pass
-    - token: stevens_pass/secondary_blue/800
-      foreground: white
-      ratio: "10.18:1"
-      result: pass
-    - token: stevens_pass/mossy_green/600
-      foreground: white
-      ratio: "4.82:1"
-      result: pass
-    - token: stevens_pass/stevens_blue/100
-      foreground: black
-      ratio: "18.39:1"
-      result: pass
-
+  - token: stevens_pass/stevens_blue/700
+    foreground: white
+    ratio: 6.26:1
+    result: pass
+  - token: stevens_pass/secondary_blue/800
+    foreground: white
+    ratio: 10.18:1
+    result: pass
+  - token: stevens_pass/mossy_green/600
+    foreground: white
+    ratio: 4.82:1
+    result: pass
 review_readiness:
   intended_review_channels:
+  - web
+  - email
+  - ads
+  review_rules:
+  - subject: Stevens Pass black and white
+    channels:
     - web
     - email
     - ads
-  review_rules:
-    - subject: Stevens Pass black and white
-      channels:
-        - web
-        - email
-        - ads
-      rule: Reuse universal black and universal white instead of creating duplicate Stevens Pass exact tokens.
-      source_basis: The supplied palette exactly matches the governed universal values.
-    - subject: Stevens Pass expressive lane order
-      channels:
-        - web
-        - email
-        - ads
-      rule: Use Stevens Blue as the primary expressive lane and Secondary Blue as the second expressive lane; keep Mossy Green governed global-only unless a later review promotes it.
-      source_basis: The source marks Stevens Blue as a primary swatch and the other two as secondary or special-case palette colors.
-
+    rule: Reuse universal black and universal white instead of creating duplicate Stevens Pass exact tokens.
+    source_basis: The supplied palette exactly matches the governed universal values.
+  - subject: Stevens Pass expressive lane order
+    channels:
+    - web
+    - email
+    - ads
+    rule: Use Stevens Blue as the primary expressive lane and Secondary Blue as the second expressive lane; keep Mossy Green governed global-only unless a later review promotes it.
+    source_basis: The source marks Stevens Blue as a primary swatch and the other two as secondary or special-case palette colors.
 open_questions: []

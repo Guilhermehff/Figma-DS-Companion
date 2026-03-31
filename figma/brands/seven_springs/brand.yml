@@ -1,5 +1,5 @@
 version: 1
-updated: '2026-03-26'
+updated: '2026-03-31'
 brand_id: seven_springs
 display_name: Seven Springs
 status: active
@@ -27,6 +27,8 @@ artifacts:
     preview_artifact: figma/brands/seven_springs/color/preview.md
     decision_artifacts:
     - figma/decisions/2026-03-19-seven-springs-foundations-written-to-figma.md
+    - figma/decisions/2026-03-31-seven-springs-wildin-yellow-global-promotion.md
+    - figma/decisions/2026-03-31-universal-100-900-color-ramp-normalization.md
   typography:
     intake_artifact: figma/brands/seven_springs/typography/intake.yml
     preview_artifact: figma/brands/seven_springs/typography/preview.md
@@ -105,7 +107,8 @@ semantic_overrides:
       - "`on_surface/*` tokens in the live semantic theme extension are contrast-derived from `universal/black` or `universal/white` and are not hue-tinted."
       - "`springs_green` drives the primary expressive semantic lane, while `tupelo` drives the secondary expressive semantic lane."
       - "`springs_neutral` absorbs Mashed Potatoes and Grandma's Axe into one branded neutral lane for surfaces and readable foregrounds."
-      - The Seven Springs Terrain Park colors remain out of the resort-brand semantic write path because the source explicitly separates them from the resort brand colors.
+      - 'User-approved exception. `wildin_yellow` is now a Seven Springs raw `_Global: Color` family, but it remains outside the resort-brand semantic write path.'
+      - "`Black Rails` remains deferred with the Terrain Park palette because the source explicitly separates it from the resort brand colors."
       - User-approved exception. The live write uses the explicit `Mini Golf Green` HEX field `#89EBAD` despite the conflicting RGB line in the source image.
       - "`assets/logo` should resolve to the string `Seven Springs` when the live semantic theme extension is written."
     typography:
@@ -134,4 +137,4 @@ semantic_overrides:
       - "`weight/heading/strong = bold` stages the Hoss Sharp Bold subhead treatment through the existing semantic ladder."
       - "`Heavy` stages on `universal/weight/black` because the shared raw typography ladder has no dedicated heavy primitive."
 notes:
-- Seven Springs is live in the Foundations file with three raw color families, one raw typography family primitive, a semantic theme logo-name override, and Seven Springs semantic theme extension.
+- Seven Springs is live in the Foundations file with four raw color families, including the global-only `wildin_yellow` family, one raw typography family primitive, a semantic theme logo-name override, and Seven Springs semantic theme extension.

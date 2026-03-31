@@ -1,5 +1,5 @@
 version: 1
-updated: '2026-03-26'
+updated: '2026-03-31'
 brand_id: park_city
 display_name: Park City
 status: active
@@ -27,6 +27,8 @@ artifacts:
     preview_artifact: figma/brands/park_city/color/preview.md
     decision_artifacts:
     - figma/decisions/2026-03-18-park-city-foundations-written-to-figma.md
+    - figma/decisions/2026-03-31-park-city-neutral-lane-correction.md
+    - figma/decisions/2026-03-31-universal-100-900-color-ramp-normalization.md
   typography:
     intake_artifact: figma/brands/park_city/typography/intake.yml
     preview_artifact: figma/brands/park_city/typography/preview.md
@@ -103,7 +105,8 @@ semantic_overrides:
       - border/critical_inverse
       notes:
       - "`on_surface/*` tokens in the live semantic theme extension are contrast-derived from `universal/black` or `universal/white` and are not hue-tinted."
-      - Park City stages `Pale Red`, `Cool Gray`, and `Park City Gray` into one absorbed neutral family, `park_city/park_city_gray`, so the tinted background wash and the darker readable neutrals remain on one governed ladder.
+      - Park City keeps `park_city_gray` as the semantic neutral family, but the live ladder is now a true gray scale anchored by `Cool Gray` at `park_city_gray/400` and `Park City Gray` at `park_city_gray/800`.
+      - "`pale_red` is preserved as a raw global-only family for branded wash usage and no longer drives semantic neutral surfaces."
       - "`park_city_red` drives the primary expressive semantic lane, while `bright_red` drives the secondary expressive lane."
       - "`assets/logo` is overridden to the string `Park City` in the semantic theme extension."
       - Exact white remains shared through `universal/white` rather than duplicated under the Park City group.
@@ -132,4 +135,4 @@ semantic_overrides:
       - "`park_city/family/02` preserves `Trade Gothic LT Std Bold Condensed No. 20` as a raw primitive because the current semantic theme typography schema has no dedicated subhead family lane."
       - 'Typography size now binds directly from published `Global: Typography`; the supplied hierarchy guidance defines case, tracking, and leading behavior but not new governed numeric size tokens.'
 notes:
-- Park City is live in the Foundations file with three raw color families, two raw typography family primitives, a semantic theme logo-name override, and Park City semantic theme extension.
+- Park City is live in the Foundations file with four raw color families, two raw typography family primitives, a semantic theme logo-name override, and Park City semantic theme extension.

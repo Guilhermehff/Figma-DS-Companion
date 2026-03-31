@@ -1,5 +1,5 @@
 version: 1
-updated: '2026-03-26'
+updated: '2026-03-31'
 brand_id: northstar
 display_name: Northstar
 status: active
@@ -28,6 +28,7 @@ artifacts:
     decision_artifacts:
     - figma/decisions/2026-03-11-northstar-foundations-written-to-figma.md
     - figma/decisions/2026-03-13-proposed-semantic-role-channel-color-model.md
+    - figma/decisions/2026-03-31-universal-100-900-color-ramp-normalization.md
   typography:
     intake_artifact: figma/brands/northstar/typography/intake.yml
     preview_artifact: figma/brands/northstar/typography/preview.md

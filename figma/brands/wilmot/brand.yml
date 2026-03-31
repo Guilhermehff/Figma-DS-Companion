@@ -1,5 +1,5 @@
 version: 1
-updated: '2026-03-26'
+updated: '2026-03-31'
 brand_id: wilmot
 display_name: Wilmot
 status: active
@@ -25,7 +25,8 @@ artifacts:
   color:
     intake_artifact: figma/brands/wilmot/color/intake.yml
     preview_artifact: figma/brands/wilmot/color/preview.md
-    decision_artifacts: []
+    decision_artifacts:
+    - figma/decisions/2026-03-31-universal-100-900-color-ramp-normalization.md
   typography:
     intake_artifact: figma/brands/wilmot/typography/intake.yml
     preview_artifact: figma/brands/wilmot/typography/preview.md

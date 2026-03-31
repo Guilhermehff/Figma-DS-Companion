@@ -1,5 +1,5 @@
 version: 1
-updated: '2026-03-26'
+updated: '2026-03-31'
 brand_id: crested_butte
 display_name: Crested Butte
 status: active
@@ -30,6 +30,7 @@ artifacts:
     - figma/decisions/2026-03-11-crested-butte-staged-foundations-from-source-images.md
     - figma/decisions/2026-03-11-crested-butte-foundations-written-to-figma.md
     - figma/decisions/2026-03-13-proposed-semantic-role-channel-color-model.md
+    - figma/decisions/2026-03-31-universal-100-900-color-ramp-normalization.md
   typography:
     intake_artifact: figma/brands/crested_butte/typography/intake.yml
     preview_artifact: figma/brands/crested_butte/typography/preview.md

@@ -1,4 +1,4 @@
-date: 2026-03-18
+date: '2026-03-31'
 brand: mad_river_mountain
 source_reference: User-provided image in chat showing the Mad River Mountain logo and color guidelines
 source_type: image
@@ -9,146 +9,129 @@ preview:
   artifact: figma/brands/mad_river_mountain/color/preview.md
   status: written_in_figma
 source_swatches:
-  - source_name: River Blue
-    provided_value: "#4097db"
-  - source_name: Mountain Green
-    provided_value: "#8fd16a"
+- source_name: River Blue
+  provided_value: "#4097db"
+- source_name: Mountain Green
+  provided_value: "#8fd16a"
 universal_reuse:
   reuse_universal:
-    - source_name: Black logo variation
-      provided_value: "#000000"
-      existing_token: universal/black
-      rationale: Exact black remains inherited through the shared neutral baseline.
-    - source_name: White logo variation
-      provided_value: "#ffffff"
-      existing_token: universal/white
-      rationale: Exact white remains inherited through the shared neutral baseline.
+  - source_name: Black logo variation
+    provided_value: "#000000"
+    existing_token: universal/black
+    rationale: Exact black remains inherited through the shared neutral baseline.
+  - source_name: White logo variation
+    provided_value: "#ffffff"
+    existing_token: universal/white
+    rationale: Exact white remains inherited through the shared neutral baseline.
   new_brand_families:
-    - family: river_blue
-      provided_value: "#4097db"
-      anchor_step: 500
-    - family: mountain_green
-      provided_value: "#8fd16a"
-      anchor_step: 500
+  - family: river_blue
+    provided_value: "#4097db"
+    anchor_step: 500
+  - family: mountain_green
+    provided_value: "#8fd16a"
+    anchor_step: 500
 scale_spec:
   working_space: OKLCH
   steps:
-    - 50
-    - 100
-    - 200
-    - 300
-    - 400
-    - 500
-    - 600
-    - 700
-    - 800
-    - 900
-    - 950
+  - 100
+  - 200
+  - 300
+  - 400
+  - 500
+  - 600
+  - 700
+  - 800
+  - 900
   contrast_targets:
     white:
-      "800": "4.5:1 preferred"
-      "900": "7:1 required"
-      "950": "7:1 required"
+      '800': 4.5:1 preferred
+      '900': 7:1 required
     black:
-      "50": "7:1 required"
-      "100": "7:1 required"
-      "200": "4.5:1 required"
-
+      '100': 7:1 required
+      '200': 7:1 required
+      '300': 4.5:1 required
 family_scales:
-  - family: river_blue
-    source_name: River Blue
-    source_value: "#4097db"
-    source_anchor: 500_source
-    tokens:
-      - name: mad_river_mountain/river_blue/50
-        value: "#d5e8f7"
-        source_anchor: false
-      - name: mad_river_mountain/river_blue/100
-        value: "#bad9f2"
-        source_anchor: false
-      - name: mad_river_mountain/river_blue/200
-        value: "#9ecaed"
-        source_anchor: false
-      - name: mad_river_mountain/river_blue/300
-        value: "#81bbe7"
-        source_anchor: false
-      - name: mad_river_mountain/river_blue/400
-        value: "#63aae2"
-        source_anchor: false
-      - name: mad_river_mountain/river_blue/500
-        value: "#4097db"
-        source_anchor: true
-      - name: mad_river_mountain/river_blue/600
-        value: "#3276ac"
-        source_anchor: false
-      - name: mad_river_mountain/river_blue/700
-        value: "#265a83"
-        source_anchor: false
-      - name: mad_river_mountain/river_blue/800
-        value: "#1b3f5c"
-        source_anchor: false
-      - name: mad_river_mountain/river_blue/900
-        value: "#15324a"
-        source_anchor: false
-      - name: mad_river_mountain/river_blue/950
-        value: "#102536"
-        source_anchor: false
-  - family: mountain_green
-    source_name: Mountain Green
-    source_value: "#8fd16a"
-    source_anchor: 500_source
-    tokens:
-      - name: mad_river_mountain/mountain_green/50
-        value: "#e6f5de"
-        source_anchor: false
-      - name: mad_river_mountain/mountain_green/100
-        value: "#d7eec9"
-        source_anchor: false
-      - name: mad_river_mountain/mountain_green/200
-        value: "#c6e8b3"
-        source_anchor: false
-      - name: mad_river_mountain/mountain_green/300
-        value: "#b5e19d"
-        source_anchor: false
-      - name: mad_river_mountain/mountain_green/400
-        value: "#a4d985"
-        source_anchor: false
-      - name: mad_river_mountain/mountain_green/500
-        value: "#8fd16a"
-        source_anchor: true
-      - name: mad_river_mountain/mountain_green/600
-        value: "#70a453"
-        source_anchor: false
-      - name: mad_river_mountain/mountain_green/700
-        value: "#557d3f"
-        source_anchor: false
-      - name: mad_river_mountain/mountain_green/800
-        value: "#3c582c"
-        source_anchor: false
-      - name: mad_river_mountain/mountain_green/900
-        value: "#2e4522"
-        source_anchor: false
-      - name: mad_river_mountain/mountain_green/950
-        value: "#23341a"
-        source_anchor: false
-
+- family: river_blue
+  source_name: River Blue
+  source_value: "#4097db"
+  source_anchor: 500_source
+  tokens:
+  - name: mad_river_mountain/river_blue/100
+    value: "#d5e8f7"
+    source_anchor: false
+  - name: mad_river_mountain/river_blue/200
+    value: "#bad9f2"
+    source_anchor: false
+  - name: mad_river_mountain/river_blue/300
+    value: "#81bbe7"
+    source_anchor: false
+  - name: mad_river_mountain/river_blue/400
+    value: "#63aae2"
+    source_anchor: false
+  - name: mad_river_mountain/river_blue/500
+    value: "#4097db"
+    source_anchor: true
+  - name: mad_river_mountain/river_blue/600
+    value: "#3276ac"
+    source_anchor: false
+  - name: mad_river_mountain/river_blue/700
+    value: "#265a83"
+    source_anchor: false
+  - name: mad_river_mountain/river_blue/800
+    value: "#1b3f5c"
+    source_anchor: false
+  - name: mad_river_mountain/river_blue/900
+    value: "#102536"
+    source_anchor: false
+- family: mountain_green
+  source_name: Mountain Green
+  source_value: "#8fd16a"
+  source_anchor: 500_source
+  tokens:
+  - name: mad_river_mountain/mountain_green/100
+    value: "#e6f5de"
+    source_anchor: false
+  - name: mad_river_mountain/mountain_green/200
+    value: "#d7eec9"
+    source_anchor: false
+  - name: mad_river_mountain/mountain_green/300
+    value: "#b5e19d"
+    source_anchor: false
+  - name: mad_river_mountain/mountain_green/400
+    value: "#a4d985"
+    source_anchor: false
+  - name: mad_river_mountain/mountain_green/500
+    value: "#8fd16a"
+    source_anchor: true
+  - name: mad_river_mountain/mountain_green/600
+    value: "#70a453"
+    source_anchor: false
+  - name: mad_river_mountain/mountain_green/700
+    value: "#557d3f"
+    source_anchor: false
+  - name: mad_river_mountain/mountain_green/800
+    value: "#3c582c"
+    source_anchor: false
+  - name: mad_river_mountain/mountain_green/900
+    value: "#23341a"
+    source_anchor: false
 semantic_recommendations:
   role_sets:
-    - scope: neutral
-      source_family: inherited_base
-      rationale: Exact black and white remain inherited from the shared neutral baseline.
-    - scope: brand
-      source_family: mad_river_mountain/river_blue
-      rationale: River Blue drives the primary expressive lane.
-    - scope: brand_secondary
-      source_family: mad_river_mountain/mountain_green
-      rationale: Mountain Green drives the supporting expressive lane.
+  - scope: neutral
+    source_family: inherited_base
+    rationale: Exact black and white remain inherited from the shared neutral baseline.
+  - scope: brand
+    source_family: mad_river_mountain/river_blue
+    rationale: River Blue drives the primary expressive lane.
+  - scope: brand_secondary
+    source_family: mad_river_mountain/mountain_green
+    rationale: Mountain Green drives the supporting expressive lane.
   global_only_families: []
   role_exceptions:
-    - target: assets/logo
-      source_token: Mad River Mountain
+  - target: assets/logo
+    source_token: Mad River Mountain
 review_readiness:
   review_rules:
-    - subject: Mad River Mountain expressive mapping
-      rule: Use `river_blue` for `brand/*` and `mountain_green` for `brand_secondary/*`.
+  - subject: Mad River Mountain expressive mapping
+    rule: Use `river_blue` for `brand/*` and `mountain_green` for `brand_secondary/*`.
 open_questions: []

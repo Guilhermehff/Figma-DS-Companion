@@ -1,5 +1,5 @@
 version: 1
-updated: '2026-03-30'
+updated: '2026-03-31'
 brand_id: crotched
 display_name: Crotched
 status: active
@@ -25,7 +25,8 @@ artifacts:
   color:
     intake_artifact: figma/brands/crotched/color/intake.yml
     preview_artifact: figma/brands/crotched/color/preview.md
-    decision_artifacts: []
+    decision_artifacts:
+    - figma/decisions/2026-03-31-universal-100-900-color-ramp-normalization.md
   typography:
     intake_artifact: figma/brands/crotched/typography/intake.yml
     preview_artifact: figma/brands/crotched/typography/preview.md
@@ -108,6 +109,6 @@ semantic_overrides:
       - weight/*
       notes:
       - The Vail Resorts Guidelines PDF does not list brand font guidance for Crotched, so the semantic theme extension continues to inherit the shared universal typography base without overrides.
-      - "Typography size continues to bind directly from published `Global: Typography`."
+      - 'Typography size continues to bind directly from published `Global: Typography`.'
 notes:
 - Crotched is live in the Foundations file with two raw color families, no brand-specific raw typography families, a semantic theme logo-name override, and Crotched semantic theme extension.

@@ -1,4 +1,4 @@
-date: 2026-03-11
+date: '2026-03-31'
 brand: breckenridge
 source_reference: User-provided image in chat showing the Breckenridge primary color palette
 source_type: image
@@ -8,265 +8,232 @@ preview:
   required_before_write: true
   artifact: figma/brands/breckenridge/color/preview.md
   status: written_in_figma
-
 source_swatches:
-  - source_name: Breckenridge Navy
-    provided_value: "#004c80"
-    source_usage_scope: primary_brand_palette
-    channel_restrictions: not specified in source
-    notes: Source image lists RGB 0 76 128 and CMYK 90 50 0 40.
-  - source_name: Breckenridge Red
-    provided_value: "#d71920"
-    source_usage_scope: primary_brand_palette
-    channel_restrictions: not specified in source
-    notes: Source image lists RGB 204 0 0 and CMYK 0 100 100 0, but the HEX shown in the source is #D71920.
-  - source_name: Breckenridge White
-    provided_value: "#ffffff"
-    source_usage_scope: primary_brand_palette
-    channel_restrictions: not specified in source
-    notes: Source image lists RGB 255 255 255 and CMYK 0 0 0 0.
-  - source_name: Breckenridge Dark Gray
-    provided_value: "#444339"
-    source_usage_scope: primary_brand_palette
-    channel_restrictions: not specified in source
-    notes: Source image lists RGB 68 67 57 and CMYK 16 14 31 82.
-
+- source_name: Breckenridge Navy
+  provided_value: "#004c80"
+  source_usage_scope: primary_brand_palette
+  channel_restrictions: not specified in source
+  notes: Source image lists RGB 0 76 128 and CMYK 90 50 0 40.
+- source_name: Breckenridge Red
+  provided_value: "#d71920"
+  source_usage_scope: primary_brand_palette
+  channel_restrictions: not specified in source
+  notes: Source image lists RGB 204 0 0 and CMYK 0 100 100 0, but the HEX shown in the source is
+- source_name: Breckenridge White
+  provided_value: "#ffffff"
+  source_usage_scope: primary_brand_palette
+  channel_restrictions: not specified in source
+  notes: Source image lists RGB 255 255 255 and CMYK 0 0 0 0.
+- source_name: Breckenridge Dark Gray
+  provided_value: "#444339"
+  source_usage_scope: primary_brand_palette
+  channel_restrictions: not specified in source
+  notes: Source image lists RGB 68 67 57 and CMYK 16 14 31 82.
 universal_reuse:
   reuse_universal:
-    - source_name: Breckenridge White
-      provided_value: "#ffffff"
-      existing_token: universal/white
-      reason: Exact match to the existing universal primitive.
+  - source_name: Breckenridge White
+    provided_value: "#ffffff"
+    existing_token: universal/white
+    reason: Exact match to the existing universal primitive.
   new_brand_families:
-    - family: navy
-      source_name: Breckenridge Navy
-      provided_value: "#004c80"
-      rationale: Primary brand blue used as the clearest Breckenridge brand anchor and materially distinct from the current universal palette.
-      anchor_step: 800
-      anchor_label: 800_source
-    - family: red
-      source_name: Breckenridge Red
-      provided_value: "#d71920"
-      rationale: Primary branded red that should stay separate from the shared universal feedback family because it carries brand identity rather than shared state meaning.
-      anchor_step: 600
-      anchor_label: 600_source
-    - family: dark_gray
-      source_name: Breckenridge Dark Gray
-      provided_value: "#444339"
-      rationale: Warm dark neutral included in the primary palette and distinct enough from the shared universal slate ladder to justify a brand family.
-      anchor_step: 800
-      anchor_label: 800_source
+  - family: navy
+    source_name: Breckenridge Navy
+    provided_value: "#004c80"
+    rationale: Primary brand blue used as the clearest Breckenridge brand anchor and materially distinct from the current universal palette.
+    anchor_step: 800
+    anchor_label: 800_source
+  - family: red
+    source_name: Breckenridge Red
+    provided_value: "#d71920"
+    rationale: Primary branded red that should stay separate from the shared universal feedback family because it carries brand identity rather than shared state meaning.
+    anchor_step: 600
+    anchor_label: 600_source
+  - family: dark_gray
+    source_name: Breckenridge Dark Gray
+    provided_value: "#444339"
+    rationale: Warm dark neutral included in the primary palette and distinct enough from the shared universal slate ladder to justify a brand family.
+    anchor_step: 800
+    anchor_label: 800_source
   hold_for_review: []
-
 scale_spec:
   working_space: OKLCH
   steps:
-    - 50
-    - 100
-    - 200
-    - 300
-    - 400
-    - 500
-    - 600
-    - 700
-    - 800
-    - 900
-    - 950
+  - 100
+  - 200
+  - 300
+  - 400
+  - 500
+  - 600
+  - 700
+  - 800
+  - 900
   contrast_targets:
     white:
-      "800": "4.5:1 preferred"
-      "900": "7:1 required"
-      "950": "7:1 required"
+      '800': 4.5:1 preferred
+      '900': 7:1 required
     black:
-      "50": "7:1 required"
-      "100": "7:1 required"
-      "200": "4.5:1 required"
-
+      '100': 7:1 required
+      '200': 7:1 required
+      '300': 4.5:1 required
 family_scales:
-  - family: navy
-    source_name: Breckenridge Navy
-    source_value: "#004c80"
-    source_anchor: 800_source
-    tokens:
-      - name: breckenridge/navy/50
-        value: "#f0fcff"
-        source_anchor: false
-      - name: breckenridge/navy/100
-        value: "#e2f2ff"
-        source_anchor: false
-      - name: breckenridge/navy/200
-        value: "#cee4fa"
-        source_anchor: false
-      - name: breckenridge/navy/300
-        value: "#b1d0ee"
-        source_anchor: false
-      - name: breckenridge/navy/400
-        value: "#8cb6de"
-        source_anchor: false
-      - name: breckenridge/navy/500
-        value: "#6396c4"
-        source_anchor: false
-      - name: breckenridge/navy/600
-        value: "#3c77ac"
-        source_anchor: false
-      - name: breckenridge/navy/700
-        value: "#195b91"
-        source_anchor: false
-      - name: breckenridge/navy/800
-        value: "#004c80"
-        source_anchor: true
-      - name: breckenridge/navy/900
-        value: "#002a50"
-        source_anchor: false
-      - name: breckenridge/navy/950
-        value: "#001730"
-        source_anchor: false
-  - family: red
-    source_name: Breckenridge Red
-    source_value: "#d71920"
-    source_anchor: 600_source
-    tokens:
-      - name: breckenridge/red/50
-        value: "#fff1ec"
-        source_anchor: false
-      - name: breckenridge/red/100
-        value: "#ffe1da"
-        source_anchor: false
-      - name: breckenridge/red/200
-        value: "#ffcac1"
-        source_anchor: false
-      - name: breckenridge/red/300
-        value: "#ffa699"
-        source_anchor: false
-      - name: breckenridge/red/400
-        value: "#ff786c"
-        source_anchor: false
-      - name: breckenridge/red/500
-        value: "#fa453f"
-        source_anchor: false
-      - name: breckenridge/red/600
-        value: "#d71920"
-        source_anchor: true
-      - name: breckenridge/red/700
-        value: "#ac0003"
-        source_anchor: false
-      - name: breckenridge/red/800
-        value: "#830000"
-        source_anchor: false
-      - name: breckenridge/red/900
-        value: "#590000"
-        source_anchor: false
-      - name: breckenridge/red/950
-        value: "#350000"
-        source_anchor: false
-  - family: dark_gray
-    source_name: Breckenridge Dark Gray
-    source_value: "#444339"
-    source_anchor: 800_source
-    tokens:
-      - name: breckenridge/dark_gray/50
-        value: "#fafaf7"
-        source_anchor: false
-      - name: breckenridge/dark_gray/100
-        value: "#f1f0ec"
-        source_anchor: false
-      - name: breckenridge/dark_gray/200
-        value: "#e2e2db"
-        source_anchor: false
-      - name: breckenridge/dark_gray/300
-        value: "#cdcdc4"
-        source_anchor: false
-      - name: breckenridge/dark_gray/400
-        value: "#b2b2a8"
-        source_anchor: false
-      - name: breckenridge/dark_gray/500
-        value: "#929186"
-        source_anchor: false
-      - name: breckenridge/dark_gray/600
-        value: "#757469"
-        source_anchor: false
-      - name: breckenridge/dark_gray/700
-        value: "#59594f"
-        source_anchor: false
-      - name: breckenridge/dark_gray/800
-        value: "#444339"
-        source_anchor: true
-      - name: breckenridge/dark_gray/900
-        value: "#2a2921"
-        source_anchor: false
-      - name: breckenridge/dark_gray/950
-        value: "#171611"
-        source_anchor: false
-
+- family: navy
+  source_name: Breckenridge Navy
+  source_value: "#004c80"
+  source_anchor: 800_source
+  tokens:
+  - name: breckenridge/navy/100
+    value: "#f0fcff"
+    source_anchor: false
+  - name: breckenridge/navy/200
+    value: "#e2f2ff"
+    source_anchor: false
+  - name: breckenridge/navy/300
+    value: "#b1d0ee"
+    source_anchor: false
+  - name: breckenridge/navy/400
+    value: "#8cb6de"
+    source_anchor: false
+  - name: breckenridge/navy/500
+    value: "#6396c4"
+    source_anchor: false
+  - name: breckenridge/navy/600
+    value: "#3c77ac"
+    source_anchor: false
+  - name: breckenridge/navy/700
+    value: "#195b91"
+    source_anchor: false
+  - name: breckenridge/navy/800
+    value: "#004c80"
+    source_anchor: true
+  - name: breckenridge/navy/900
+    value: "#001730"
+    source_anchor: false
+- family: red
+  source_name: Breckenridge Red
+  source_value: "#d71920"
+  source_anchor: 600_source
+  tokens:
+  - name: breckenridge/red/100
+    value: "#fff1ec"
+    source_anchor: false
+  - name: breckenridge/red/200
+    value: "#ffe1da"
+    source_anchor: false
+  - name: breckenridge/red/300
+    value: "#ffa699"
+    source_anchor: false
+  - name: breckenridge/red/400
+    value: "#ff786c"
+    source_anchor: false
+  - name: breckenridge/red/500
+    value: "#fa453f"
+    source_anchor: false
+  - name: breckenridge/red/600
+    value: "#d71920"
+    source_anchor: true
+  - name: breckenridge/red/700
+    value: "#ac0003"
+    source_anchor: false
+  - name: breckenridge/red/800
+    value: "#830000"
+    source_anchor: false
+  - name: breckenridge/red/900
+    value: "#350000"
+    source_anchor: false
+- family: dark_gray
+  source_name: Breckenridge Dark Gray
+  source_value: "#444339"
+  source_anchor: 800_source
+  tokens:
+  - name: breckenridge/dark_gray/100
+    value: "#fafaf7"
+    source_anchor: false
+  - name: breckenridge/dark_gray/200
+    value: "#f1f0ec"
+    source_anchor: false
+  - name: breckenridge/dark_gray/300
+    value: "#cdcdc4"
+    source_anchor: false
+  - name: breckenridge/dark_gray/400
+    value: "#b2b2a8"
+    source_anchor: false
+  - name: breckenridge/dark_gray/500
+    value: "#929186"
+    source_anchor: false
+  - name: breckenridge/dark_gray/600
+    value: "#757469"
+    source_anchor: false
+  - name: breckenridge/dark_gray/700
+    value: "#59594f"
+    source_anchor: false
+  - name: breckenridge/dark_gray/800
+    value: "#444339"
+    source_anchor: true
+  - name: breckenridge/dark_gray/900
+    value: "#171611"
+    source_anchor: false
 color_proportion_guidance:
   status: active
   source_basis: Approximate ratios inferred from the relative bar widths in the user-provided Breckenridge guide image. The source does not publish exact percentages.
   contexts:
-    - name: brand_touchpoints
-      intent: Navy is the dominant brand field, red is the secondary expressive lane, white provides open space, and dark_gray remains a restrained supporting neutral.
-      proportions:
-        - source_color: Breckenridge Navy
-          token: breckenridge/navy/800
-          percentage: 35
-          rationale: Longest bar in the source image and the primary brand color.
-        - source_color: Breckenridge Red
-          token: breckenridge/red/600
-          percentage: 30
-          rationale: Second-longest bar in the source image and the key secondary expressive color.
-        - source_color: Breckenridge White
-          token: universal/white
-          percentage: 20
-          rationale: Third bar in the source image and the primary open-space carrier.
-        - source_color: Breckenridge Dark Gray
-          token: breckenridge/dark_gray/800
-          percentage: 15
-          rationale: Shortest bar in the source image and a supporting neutral rather than a leading brand lane.
-      notes:
-        - These percentages are documentation guidance inferred from the source artwork, not exact measured source values.
-        - This guidance informs composition and emphasis, not the governed token ramp values.
-
+  - name: brand_touchpoints
+    intent: Navy is the dominant brand field, red is the secondary expressive lane, white provides open space, and dark_gray remains a restrained supporting neutral.
+    proportions:
+    - source_color: Breckenridge Navy
+      token: breckenridge/navy/800
+      percentage: 35
+      rationale: Longest bar in the source image and the primary brand color.
+    - source_color: Breckenridge Red
+      token: breckenridge/red/600
+      percentage: 30
+      rationale: Second-longest bar in the source image and the key secondary expressive color.
+    - source_color: Breckenridge White
+      token: universal/white
+      percentage: 20
+      rationale: Third bar in the source image and the primary open-space carrier.
+    - source_color: Breckenridge Dark Gray
+      token: breckenridge/dark_gray/800
+      percentage: 15
+      rationale: Shortest bar in the source image and a supporting neutral rather than a leading brand lane.
+    notes:
+    - These percentages are documentation guidance inferred from the source artwork, not exact measured source values.
+    - This guidance informs composition and emphasis, not the governed token ramp values.
 validation:
   perceptual_consistency_notes:
-    - Navy and dark_gray both anchor at 800 because the provided source values sit in the dark-brand range while still leaving room for 900 and 950 white-contrast steps.
-    - Red anchors at 600 because the provided source value behaves as a saturated mid-dark brand accent rather than an extreme dark tone.
-    - White is reused from the universal palette and is not duplicated under the Breckenridge brand group.
+  - Navy and dark_gray both anchor at 800 because the provided source values sit in the dark-brand range while still leaving room for 900 and 950 white-contrast steps.
+  - Red anchors at 600 because the provided source value behaves as a saturated mid-dark brand accent rather than an extreme dark tone.
+  - White is reused from the universal palette and is not duplicated under the Breckenridge brand group.
   contrast_checks:
-    - token: breckenridge/navy/700
-      foreground: white
-      ratio: "7.13:1"
-      result: pass
-    - token: breckenridge/red/600
-      foreground: white
-      ratio: "5.19:1"
-      result: pass
-    - token: breckenridge/dark_gray/700
-      foreground: white
-      ratio: "7.08:1"
-      result: pass
-    - token: breckenridge/navy/200
-      foreground: black
-      ratio: "16.10:1"
-      result: pass
-
+  - token: breckenridge/navy/700
+    foreground: white
+    ratio: 7.13:1
+    result: pass
+  - token: breckenridge/red/600
+    foreground: white
+    ratio: 5.19:1
+    result: pass
+  - token: breckenridge/dark_gray/700
+    foreground: white
+    ratio: 7.08:1
+    result: pass
 review_readiness:
   intended_review_channels:
+  - web
+  - email
+  - ads
+  review_rules:
+  - subject: Breckenridge White
+    channels:
     - web
     - email
     - ads
-  review_rules:
-    - subject: Breckenridge White
-      channels:
-        - web
-        - email
-        - ads
-      rule: Reuse universal/white instead of creating a duplicated brand white.
-      source_basis: Source lists white inside the primary palette and the provided HEX is an exact universal match.
-    - subject: Breckenridge Navy, Red, and Dark Gray
-      channels:
-        - web
-        - email
-        - ads
-      rule: Treat navy and red as the primary Breckenridge brand ladders, feed dark_gray into semantic neutral, and avoid using dark_gray as the tertiary brand ladder.
-      source_basis: Source image labels these colors as the primary Breckenridge palette used to keep brand work consistent across touchpoints.
-
+    rule: Reuse universal/white instead of creating a duplicated brand white.
+    source_basis: Source lists white inside the primary palette and the provided HEX is an exact universal match.
+  - subject: Breckenridge Navy, Red, and Dark Gray
+    channels:
+    - web
+    - email
+    - ads
+    rule: Treat navy and red as the primary Breckenridge brand ladders, feed dark_gray into semantic neutral, and avoid using dark_gray as the tertiary brand ladder.
+    source_basis: Source image labels these colors as the primary Breckenridge palette used to keep brand work consistent across touchpoints.
 open_questions: []

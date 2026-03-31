@@ -1,5 +1,5 @@
 version: 1
-updated: '2026-03-30'
+updated: '2026-03-31'
 brand_id: roundtop_mountain
 display_name: Roundtop Mountain
 status: active
@@ -25,7 +25,8 @@ artifacts:
   color:
     intake_artifact: figma/brands/roundtop_mountain/color/intake.yml
     preview_artifact: figma/brands/roundtop_mountain/color/preview.md
-    decision_artifacts: []
+    decision_artifacts:
+    - figma/decisions/2026-03-31-universal-100-900-color-ramp-normalization.md
   typography:
     intake_artifact: figma/brands/roundtop_mountain/typography/intake.yml
     preview_artifact: figma/brands/roundtop_mountain/typography/preview.md
@@ -125,6 +126,6 @@ semantic_overrides:
       notes:
       - Roundtop Mountain is live as a two-family typography system, with `Rhode` on heading and action work and `Antique Olive` on the reading lane.
       - The PDF does not define a separate CTA recipe, so `family/action` follows the Rhode headline family in the first pass.
-      - "Typography size continues to bind directly from published `Global: Typography`."
+      - 'Typography size continues to bind directly from published `Global: Typography`.'
 notes:
 - Roundtop Mountain is live in the Foundations file with six raw color families, two raw typography family primitives, and Roundtop Mountain semantic theme extension.

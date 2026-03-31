@@ -1,5 +1,5 @@
 version: 1
-updated: '2026-03-26'
+updated: '2026-03-31'
 brand_id: hidden_valley_pa
 display_name: Hidden Valley PA
 status: active
@@ -25,7 +25,10 @@ artifacts:
   color:
     intake_artifact: figma/brands/hidden_valley_pa/color/intake.yml
     preview_artifact: figma/brands/hidden_valley_pa/color/preview.md
-    decision_artifacts: []
+    decision_artifacts:
+    - figma/decisions/2026-03-31-hidden-valley-pa-beige-consolidation.md
+    - figma/decisions/2026-03-31-hidden-valley-pa-beige-ramp-redesign.md
+    - figma/decisions/2026-03-31-universal-100-900-color-ramp-normalization.md
   typography:
     intake_artifact: figma/brands/hidden_valley_pa/typography/intake.yml
     preview_artifact: figma/brands/hidden_valley_pa/typography/preview.md
@@ -36,7 +39,7 @@ semantic_overrides:
     color:
       override_scopes:
       - scope: neutral
-        source_family: hidden_valley_pa/hidden_valley_pa_neutral
+        source_family: hidden_valley_pa/beige
         targets:
         - surface/neutral/*
         - surface/neutral/*_inverse
@@ -60,7 +63,7 @@ semantic_overrides:
         - border/brand
         - border/brand_inverse
       - scope: brand_secondary
-        source_family: hidden_valley_pa/dark_beige
+        source_family: hidden_valley_pa/beige
         targets:
         - surface/brand_secondary/*
         - surface/brand_secondary/*_inverse
@@ -102,8 +105,10 @@ semantic_overrides:
       notes:
       - "`on_surface/*` tokens in the live semantic theme extension are contrast-derived from `universal/black` or `universal/white` and are not hue-tinted."
       - Hidden Valley PA is live in the Foundations file as a Pennsylvania-distinguished brand record separate from Hidden Valley MO.
-      - The first semantic pass uses the composite `hidden_valley_pa_neutral` family for structure, `laurel_blue` for the primary expressive lane, and `dark_beige` for the supporting expressive lane.
-      - "`light_beige` remains a governed raw global-only family in the first pass."
+      - The current semantic pass uses `beige` for both structural neutral and supporting brand-secondary roles, with `laurel_blue` on the primary expressive lane.
+      - The beige ladder was redesigned after consolidation so the source swatches stay exact inside a smoother single-ramp progression.
+      - "`beige/300` preserves the Light Beige source swatch and `beige/500` preserves the Dark Beige source swatch."
+      - "`beige/100` is a derived very light beige so white remains governed through universal reuse instead of the brand ramp."
       - "`assets/logo` resolves to the string `Hidden Valley PA` in the semantic theme extension."
     typography:
       override_scopes:
@@ -131,4 +136,4 @@ semantic_overrides:
       - Hidden Valley PA is live as a Roboto-led semantic system, with `Mrs Eaves XL Regular` preserved as the raw display family used for logo and design applications.
       - The first semantic pass keeps heading, body, and action on `hidden_valley_pa/family/01` because the current shared typography ladder does not have a dedicated ornamental display role.
 notes:
-- Hidden Valley PA is live in the Foundations file with four raw color families, two raw typography family primitives, a semantic theme logo-name override, and Hidden Valley PA semantic theme extension.
+- Hidden Valley PA is live in the Foundations file with two raw color families, two raw typography family primitives, a semantic theme logo-name override, and Hidden Valley PA semantic theme extension.

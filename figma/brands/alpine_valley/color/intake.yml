@@ -1,4 +1,4 @@
-date: 2026-03-18
+date: '2026-03-31'
 brand: alpine_valley
 source_reference: User-provided image in chat showing the Alpine Valley color palette
 source_type: image
@@ -8,179 +8,146 @@ preview:
   required_before_write: true
   artifact: figma/brands/alpine_valley/color/preview.md
   status: written_in_figma
-
 source_swatches:
-  - source_name: Valley Black
-    provided_value: "#000000"
-    source_usage_scope: primary palette
-    channel_restrictions: not specified in source
-    notes: Source image lists CMYK 0 0 0 100, RGB 0 0 0, and HEX #000000.
-  - source_name: Alpine
-    provided_value: "#b0c6ce"
-    source_usage_scope: secondary palette supporting brand campaign elements
-    channel_restrictions: not specified in source
-    notes: Source image lists CMYK 31 13 14 0, RGB 176 198 206, and HEX #B0C6CE.
-
+- source_name: Valley Black
+  provided_value: "#000000"
+  source_usage_scope: primary palette
+  channel_restrictions: not specified in source
+  notes: Source image lists CMYK 0 0 0 100, RGB 0 0 0, and HEX
+- source_name: Alpine
+  provided_value: "#b0c6ce"
+  source_usage_scope: secondary palette supporting brand campaign elements
+  channel_restrictions: not specified in source
+  notes: Source image lists CMYK 31 13 14 0, RGB 176 198 206, and HEX
 universal_reuse:
   reuse_universal:
-    - source_name: Valley Black
-      provided_value: "#000000"
-      existing_token: universal/black
-      rationale: Exact match to the shared universal black primitive, so no duplicate Alpine Valley black token should be created.
+  - source_name: Valley Black
+    provided_value: "#000000"
+    existing_token: universal/black
+    rationale: Exact match to the shared universal black primitive, so no duplicate Alpine Valley black token should be created.
   new_brand_families:
-    - family: alpine
-      source_name: Alpine
-      provided_value: "#b0c6ce"
-      rationale: The only non-neutral supplied Alpine Valley hue and the clearest candidate for a governed expressive brand family.
-      anchor_step: 300
-      anchor_label: 300_source
+  - family: alpine
+    source_name: Alpine
+    provided_value: "#b0c6ce"
+    rationale: The only non-neutral supplied Alpine Valley hue and the clearest candidate for a governed expressive brand family.
+    anchor_step: 300
+    anchor_label: 300_source
   hold_for_review: []
-
 scale_spec:
   working_space: OKLCH
   steps:
-    - 50
-    - 100
-    - 200
-    - 300
-    - 400
-    - 500
-    - 600
-    - 700
-    - 800
-    - 900
-    - 950
+  - 100
+  - 200
+  - 300
+  - 400
+  - 500
+  - 600
+  - 700
+  - 800
+  - 900
   contrast_targets:
     white:
-      "800": "4.5:1 preferred"
-      "900": "7:1 required"
-      "950": "7:1 required"
+      '800': 4.5:1 preferred
+      '900': 7:1 required
     black:
-      "50": "7:1 required"
-      "100": "7:1 required"
-      "200": "4.5:1 required"
-
+      '100': 7:1 required
+      '200': 7:1 required
+      '300': 4.5:1 required
 family_scales:
-  - family: alpine
-    source_name: Alpine
-    source_value: "#b0c6ce"
-    source_anchor: 300_source
-    tokens:
-      - name: alpine_valley/alpine/50
-        value: "#f7fbfc"
-        source_anchor: false
-      - name: alpine_valley/alpine/100
-        value: "#ecf1f3"
-        source_anchor: false
-      - name: alpine_valley/alpine/200
-        value: "#dae3e6"
-        source_anchor: false
-      - name: alpine_valley/alpine/300
-        value: "#b0c6ce"
-        source_anchor: true
-      - name: alpine_valley/alpine/400
-        value: "#a5b6bc"
-        source_anchor: false
-      - name: alpine_valley/alpine/500
-        value: "#89969b"
-        source_anchor: false
-      - name: alpine_valley/alpine/600
-        value: "#6e787c"
-        source_anchor: false
-      - name: alpine_valley/alpine/700
-        value: "#545c5f"
-        source_anchor: false
-      - name: alpine_valley/alpine/800
-        value: "#3c4245"
-        source_anchor: false
-      - name: alpine_valley/alpine/900
-        value: "#252a2b"
-        source_anchor: false
-      - name: alpine_valley/alpine/950
-        value: "#141718"
-        source_anchor: false
-
+- family: alpine
+  source_name: Alpine
+  source_value: "#b0c6ce"
+  source_anchor: 300_source
+  tokens:
+  - name: alpine_valley/alpine/100
+    value: "#f7fbfc"
+    source_anchor: false
+  - name: alpine_valley/alpine/200
+    value: "#ecf1f3"
+    source_anchor: false
+  - name: alpine_valley/alpine/300
+    value: "#b0c6ce"
+    source_anchor: true
+  - name: alpine_valley/alpine/400
+    value: "#a5b6bc"
+    source_anchor: false
+  - name: alpine_valley/alpine/500
+    value: "#89969b"
+    source_anchor: false
+  - name: alpine_valley/alpine/600
+    value: "#6e787c"
+    source_anchor: false
+  - name: alpine_valley/alpine/700
+    value: "#545c5f"
+    source_anchor: false
+  - name: alpine_valley/alpine/800
+    value: "#3c4245"
+    source_anchor: false
+  - name: alpine_valley/alpine/900
+    value: "#141718"
+    source_anchor: false
 validation:
   perceptual_consistency_notes:
-    - Alpine lands at `300` because the supplied swatch sits in the bright, pale blue lightness band.
-    - Exact black should remain shared through `universal/black` rather than duplicated under the Alpine Valley group.
-    - The generated `alpine` ladder darkens into a blue-gray family that can support readable dark expressive surfaces while keeping the source swatch intact as the light anchor.
+  - Alpine lands at `300` because the supplied swatch sits in the bright, pale blue lightness band.
+  - Exact black should remain shared through `universal/black` rather than duplicated under the Alpine Valley group.
+  - The generated `alpine` ladder darkens into a blue-gray family that can support readable dark expressive surfaces while keeping the source swatch intact as the light anchor.
   contrast_checks:
-    - token: alpine_valley/alpine/100
-      foreground: black
-      ratio: "18.44:1"
-      result: pass
-    - token: alpine_valley/alpine/200
-      foreground: black
-      ratio: "16.11:1"
-      result: pass
-    - token: alpine_valley/alpine/800
-      foreground: white
-      ratio: "10.21:1"
-      result: pass
-    - token: alpine_valley/alpine/900
-      foreground: white
-      ratio: "14.54:1"
-      result: pass
-    - token: alpine_valley/alpine/950
-      foreground: white
-      ratio: "18.02:1"
-      result: pass
-
+  - token: alpine_valley/alpine/800
+    foreground: white
+    ratio: 10.21:1
+    result: pass
 semantic_recommendations:
   role_sets:
-    - scope: neutral
-      source_family: inherited_base
-      rationale: Exact black is reused as the universal primitive and no Alpine Valley light neutral or white swatch was supplied, so the shared neutral role set remains inherited in the first pass.
-      targets:
-        - surface/neutral/*
-        - on_surface/neutral/*
-        - foreground/default
-        - foreground/subtle
-        - border/default
-        - border/subtle
-    - scope: brand
-      source_family: alpine_valley/alpine
-      rationale: Recommended first pass. `alpine/*` is the only non-neutral supplied family, so it is the most stable expressive lane under the current semantic model.
-      targets:
-        - surface/brand/*
-        - on_surface/brand/*
-        - foreground/brand
-        - border/brand
-    - scope: brand_secondary
-      source_family: alpine_valley/alpine
-      rationale: Recommended first pass. The source does not provide a second expressive hue, so the accepted semantic color model allows `brand_secondary/*` to reuse the same raw family as `brand/*`.
-      targets:
-        - surface/brand_secondary/*
-        - on_surface/brand_secondary/*
-        - foreground/brand_secondary
-        - border/brand_secondary
+  - scope: neutral
+    source_family: inherited_base
+    rationale: Exact black is reused as the universal primitive and no Alpine Valley light neutral or white swatch was supplied, so the shared neutral role set remains inherited in the first pass.
+    targets:
+    - surface/neutral/*
+    - on_surface/neutral/*
+    - foreground/default
+    - foreground/subtle
+    - border/default
+    - border/subtle
+  - scope: brand
+    source_family: alpine_valley/alpine
+    rationale: Recommended first pass. `alpine/*` is the only non-neutral supplied family, so it is the most stable expressive lane under the current semantic model.
+    targets:
+    - surface/brand/*
+    - on_surface/brand/*
+    - foreground/brand
+    - border/brand
+  - scope: brand_secondary
+    source_family: alpine_valley/alpine
+    rationale: Recommended first pass. The source does not provide a second expressive hue, so the accepted semantic color model allows `brand_secondary/*` to reuse the same raw family as `brand/*`.
+    targets:
+    - surface/brand_secondary/*
+    - on_surface/brand_secondary/*
+    - foreground/brand_secondary
+    - border/brand_secondary
   global_only_families: []
   role_exceptions:
-    - target: assets/logo
-      source_token: Alpine Valley
-      rationale: "The live `Semantic: Theme` schema includes `assets/logo`, and each brand extension overrides it to the brand display name string."
-
+  - target: assets/logo
+    source_token: Alpine Valley
+    rationale: 'The live `Semantic: Theme` schema includes `assets/logo`, and each brand extension overrides it to the brand display name string.'
 review_readiness:
   intended_review_channels:
+  - web
+  - email
+  - ads
+  review_rules:
+  - subject: Alpine Valley exact black reuse
+    channels:
     - web
     - email
     - ads
-  review_rules:
-    - subject: Alpine Valley exact black reuse
-      channels:
-        - web
-        - email
-        - ads
-      rule: Reuse `universal/black` for Valley Black rather than creating a duplicate raw token.
-      source_basis: Source image explicitly provides exact black as #000000.
-    - subject: Alpine Valley expressive semantic promotion
-      channels:
-        - web
-        - email
-        - ads
-      rule: Recommended first pass promotes `alpine/*` into both expressive semantic lanes because it is the only non-neutral supplied family.
-      source_basis: Source image provides exact black plus one supporting Alpine color.
-
+    rule: Reuse `universal/black` for Valley Black rather than creating a duplicate raw token.
+    source_basis: Source image explicitly provides exact black as
+  - subject: Alpine Valley expressive semantic promotion
+    channels:
+    - web
+    - email
+    - ads
+    rule: Recommended first pass promotes `alpine/*` into both expressive semantic lanes because it is the only non-neutral supplied family.
+    source_basis: Source image provides exact black plus one supporting Alpine color.
 open_questions:
-  - none
+- none

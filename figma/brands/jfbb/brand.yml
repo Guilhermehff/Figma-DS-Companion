@@ -1,5 +1,5 @@
 version: 1
-updated: '2026-03-26'
+updated: '2026-03-31'
 brand_id: jfbb
 display_name: JFBB
 status: active
@@ -27,6 +27,7 @@ artifacts:
     preview_artifact: figma/brands/jfbb/color/preview.md
     decision_artifacts:
     - figma/decisions/2026-03-17-jfbb-foundations-written-to-figma.md
+    - figma/decisions/2026-03-31-universal-100-900-color-ramp-normalization.md
   typography:
     intake_artifact: figma/brands/jfbb/typography/intake.yml
     preview_artifact: figma/brands/jfbb/typography/preview.md

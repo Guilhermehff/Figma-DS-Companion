@@ -1,4 +1,4 @@
-date: 2026-03-19
+date: '2026-03-31'
 brand: mount_sunapee
 source_reference: User-provided images in chat showing the Mount Sunapee color palette and color-usage guidance
 source_type: image
@@ -8,372 +8,282 @@ preview:
   required_before_write: true
   artifact: figma/brands/mount_sunapee/color/preview.md
   status: written_in_figma
-
 source_swatches:
-  - source_name: Lake Sunapee
-    provided_value: "#253542"
-    source_usage_scope: primary brand palette
-    channel_restrictions: not specified in source
-    notes: Source image shows PMS 5395 C, CMYK 84 68 52 49, and RGB 37 53 66.
-  - source_name: Golden Hour
-    provided_value: "#fdb933"
-    source_usage_scope: primary brand palette
-    channel_restrictions: not specified in source
-    notes: Source image shows PMS 143 C, CMYK 0 30 90 0, and RGB 253 185 51.
-  - source_name: Cold Wax
-    provided_value: "#14b3c1"
-    source_usage_scope: primary brand palette
-    channel_restrictions: not specified in source
-    notes: Source image shows PMS 7466 C, CMYK 73 5 25 0, and RGB 20 179 193.
-  - source_name: Snow Gun
-    provided_value: "#f2f0e5"
-    source_usage_scope: secondary brand palette
-    channel_restrictions: source says secondary colors should be used only as accents and never used alone
-    notes: Source image shows PMS Cool Gray 1 C, CMYK 4 3 9 0, and RGB 242 240 229.
-  - source_name: Verde Slate
-    provided_value: "#8ca7a7"
-    source_usage_scope: secondary brand palette
-    channel_restrictions: source says secondary colors should be used only as accents and never used alone
-    notes: Source image shows PMS 442 C, CMYK 48 25 32 0, and RGB 140 167 167.
-
+- source_name: Lake Sunapee
+  provided_value: "#253542"
+  source_usage_scope: primary brand palette
+  channel_restrictions: not specified in source
+  notes: Source image shows PMS 5395 C, CMYK 84 68 52 49, and RGB 37 53 66.
+- source_name: Golden Hour
+  provided_value: "#fdb933"
+  source_usage_scope: primary brand palette
+  channel_restrictions: not specified in source
+  notes: Source image shows PMS 143 C, CMYK 0 30 90 0, and RGB 253 185 51.
+- source_name: Cold Wax
+  provided_value: "#14b3c1"
+  source_usage_scope: primary brand palette
+  channel_restrictions: not specified in source
+  notes: Source image shows PMS 7466 C, CMYK 73 5 25 0, and RGB 20 179 193.
+- source_name: Snow Gun
+  provided_value: "#f2f0e5"
+  source_usage_scope: secondary brand palette
+  channel_restrictions: source says secondary colors should be used only as accents and never used alone
+  notes: Source image shows PMS Cool Gray 1 C, CMYK 4 3 9 0, and RGB 242 240 229.
+- source_name: Verde Slate
+  provided_value: "#8ca7a7"
+  source_usage_scope: secondary brand palette
+  channel_restrictions: source says secondary colors should be used only as accents and never used alone
+  notes: Source image shows PMS 442 C, CMYK 48 25 32 0, and RGB 140 167 167.
 universal_reuse:
   reuse_universal: []
   new_brand_families:
-    - family: sunapee_neutral
-      source_name: Snow Gun
-      provided_value: "#f2f0e5"
-      rationale: Approved live write. Snow Gun, Verde Slate, and Lake Sunapee behave most cleanly as one structural light-to-dark neutral family for canvas-adjacent surfaces, readable default foregrounds, and subdued borders.
-      anchor_step: 100
-      anchor_label: 100_source
-      source_anchors:
-        - source_name: Verde Slate
-          provided_value: "#8ca7a7"
-          anchor_step: 400
-          anchor_label: 400_source
-        - source_name: Lake Sunapee
-          provided_value: "#253542"
-          anchor_step: 800
-          anchor_label: 800_source
-    - family: cold_wax
-      source_name: Cold Wax
-      provided_value: "#14b3c1"
-      rationale: Approved live write. Cold Wax is the strongest cool accent after the structural neutral family is accounted for, so it is the cleanest candidate for the primary expressive semantic lane.
-      anchor_step: 500
-      anchor_label: 500_source
-    - family: golden_hour
-      source_name: Golden Hour
-      provided_value: "#fdb933"
-      rationale: Approved live write. Golden Hour remains the warm supporting accent and stages most cleanly as the second expressive semantic lane.
-      anchor_step: 300
-      anchor_label: 300_source
+  - family: sunapee_neutral
+    source_name: Snow Gun
+    provided_value: "#f2f0e5"
+    rationale: Approved live write. Snow Gun, Verde Slate, and Lake Sunapee behave most cleanly as one structural light-to-dark neutral family for canvas-adjacent surfaces, readable default foregrounds, and subdued borders.
+    anchor_step: 100
+    anchor_label: 100_source
+    source_anchors:
+    - source_name: Verde Slate
+      provided_value: "#8ca7a7"
+      anchor_step: 400
+      anchor_label: 400_source
+    - source_name: Lake Sunapee
+      provided_value: "#253542"
+      anchor_step: 800
+      anchor_label: 800_source
+  - family: cold_wax
+    source_name: Cold Wax
+    provided_value: "#14b3c1"
+    rationale: Approved live write. Cold Wax is the strongest cool accent after the structural neutral family is accounted for, so it is the cleanest candidate for the primary expressive semantic lane.
+    anchor_step: 500
+    anchor_label: 500_source
+  - family: golden_hour
+    source_name: Golden Hour
+    provided_value: "#fdb933"
+    rationale: Approved live write. Golden Hour remains the warm supporting accent and stages most cleanly as the second expressive semantic lane.
+    anchor_step: 300
+    anchor_label: 300_source
   hold_for_review: []
-
 scale_spec:
   working_space: OKLCH
   steps:
-    - 50
-    - 100
-    - 200
-    - 300
-    - 400
-    - 500
-    - 600
-    - 700
-    - 800
-    - 900
-    - 950
+  - 100
+  - 200
+  - 300
+  - 400
+  - 500
+  - 600
+  - 700
+  - 800
+  - 900
   contrast_targets:
     white:
-      "800": "4.5:1 preferred"
-      "900": "7:1 required"
-      "950": "7:1 required"
+      '800': 4.5:1 preferred
+      '900': 7:1 required
     black:
-      "50": "7:1 required"
-      "100": "7:1 required"
-      "200": "4.5:1 required"
-
+      '100': 7:1 required
+      '200': 7:1 required
+      '300': 4.5:1 required
 family_scales:
-  - family: sunapee_neutral
-    source_name: Snow Gun, Verde Slate, and Lake Sunapee
-    source_value: "#f2f0e5 / #8ca7a7 / #253542"
-    source_anchor: 100_source / 400_source / 800_source
-    tokens:
-      - name: mount_sunapee/sunapee_neutral/50
-        value: "#fbfaf6"
-        source_anchor: false
-      - name: mount_sunapee/sunapee_neutral/100
-        value: "#f2f0e5"
-        source_anchor: true
-      - name: mount_sunapee/sunapee_neutral/200
-        value: "#d0d8ca"
-        source_anchor: false
-      - name: mount_sunapee/sunapee_neutral/300
-        value: "#adc0b6"
-        source_anchor: false
-      - name: mount_sunapee/sunapee_neutral/400
-        value: "#8ca7a7"
-        source_anchor: true
-      - name: mount_sunapee/sunapee_neutral/500
-        value: "#6f898d"
-        source_anchor: false
-      - name: mount_sunapee/sunapee_neutral/600
-        value: "#546c74"
-        source_anchor: false
-      - name: mount_sunapee/sunapee_neutral/700
-        value: "#3b505b"
-        source_anchor: false
-      - name: mount_sunapee/sunapee_neutral/800
-        value: "#253542"
-        source_anchor: true
-      - name: mount_sunapee/sunapee_neutral/900
-        value: "#121e27"
-        source_anchor: false
-      - name: mount_sunapee/sunapee_neutral/950
-        value: "#0a131a"
-        source_anchor: false
-  - family: cold_wax
-    source_name: Cold Wax
-    source_value: "#14b3c1"
-    source_anchor: 500_source
-    tokens:
-      - name: mount_sunapee/cold_wax/50
-        value: "#eefcfd"
-        source_anchor: false
-      - name: mount_sunapee/cold_wax/100
-        value: "#dbf4f7"
-        source_anchor: false
-      - name: mount_sunapee/cold_wax/200
-        value: "#b5e4e9"
-        source_anchor: false
-      - name: mount_sunapee/cold_wax/300
-        value: "#8dd4dc"
-        source_anchor: false
-      - name: mount_sunapee/cold_wax/400
-        value: "#60c3ce"
-        source_anchor: false
-      - name: mount_sunapee/cold_wax/500
-        value: "#14b3c1"
-        source_anchor: true
-      - name: mount_sunapee/cold_wax/600
-        value: "#098d9c"
-        source_anchor: false
-      - name: mount_sunapee/cold_wax/700
-        value: "#026978"
-        source_anchor: false
-      - name: mount_sunapee/cold_wax/800
-        value: "#004754"
-        source_anchor: false
-      - name: mount_sunapee/cold_wax/900
-        value: "#002833"
-        source_anchor: false
-      - name: mount_sunapee/cold_wax/950
-        value: "#001a22"
-        source_anchor: false
-  - family: golden_hour
-    source_name: Golden Hour
-    source_value: "#fdb933"
-    source_anchor: 300_source
-    tokens:
-      - name: mount_sunapee/golden_hour/50
-        value: "#fefcf4"
-        source_anchor: false
-      - name: mount_sunapee/golden_hour/100
-        value: "#fcf0d4"
-        source_anchor: false
-      - name: mount_sunapee/golden_hour/200
-        value: "#fbd78f"
-        source_anchor: false
-      - name: mount_sunapee/golden_hour/300
-        value: "#fdb933"
-        source_anchor: true
-      - name: mount_sunapee/golden_hour/400
-        value: "#d99b2c"
-        source_anchor: false
-      - name: mount_sunapee/golden_hour/500
-        value: "#b67f25"
-        source_anchor: false
-      - name: mount_sunapee/golden_hour/600
-        value: "#94651d"
-        source_anchor: false
-      - name: mount_sunapee/golden_hour/700
-        value: "#724b15"
-        source_anchor: false
-      - name: mount_sunapee/golden_hour/800
-        value: "#52340d"
-        source_anchor: false
-      - name: mount_sunapee/golden_hour/900
-        value: "#331e06"
-        source_anchor: false
-      - name: mount_sunapee/golden_hour/950
-        value: "#251403"
-        source_anchor: false
-
+- family: sunapee_neutral
+  source_name: Snow Gun, Verde Slate, and Lake Sunapee
+  source_value: "#f2f0e5 / #8ca7a7 / #253542"
+  source_anchor: 100_source / 400_source / 800_source
+  tokens:
+  - name: mount_sunapee/sunapee_neutral/100
+    value: "#fbfaf6"
+    source_anchor: false
+  - name: mount_sunapee/sunapee_neutral/200
+    value: "#f2f0e5"
+    source_anchor: true
+  - name: mount_sunapee/sunapee_neutral/300
+    value: "#adc0b6"
+    source_anchor: false
+  - name: mount_sunapee/sunapee_neutral/400
+    value: "#8ca7a7"
+    source_anchor: true
+  - name: mount_sunapee/sunapee_neutral/500
+    value: "#6f898d"
+    source_anchor: false
+  - name: mount_sunapee/sunapee_neutral/600
+    value: "#546c74"
+    source_anchor: false
+  - name: mount_sunapee/sunapee_neutral/700
+    value: "#3b505b"
+    source_anchor: false
+  - name: mount_sunapee/sunapee_neutral/800
+    value: "#253542"
+    source_anchor: true
+  - name: mount_sunapee/sunapee_neutral/900
+    value: "#0a131a"
+    source_anchor: false
+- family: cold_wax
+  source_name: Cold Wax
+  source_value: "#14b3c1"
+  source_anchor: 500_source
+  tokens:
+  - name: mount_sunapee/cold_wax/100
+    value: "#eefcfd"
+    source_anchor: false
+  - name: mount_sunapee/cold_wax/200
+    value: "#dbf4f7"
+    source_anchor: false
+  - name: mount_sunapee/cold_wax/300
+    value: "#8dd4dc"
+    source_anchor: false
+  - name: mount_sunapee/cold_wax/400
+    value: "#60c3ce"
+    source_anchor: false
+  - name: mount_sunapee/cold_wax/500
+    value: "#14b3c1"
+    source_anchor: true
+  - name: mount_sunapee/cold_wax/600
+    value: "#098d9c"
+    source_anchor: false
+  - name: mount_sunapee/cold_wax/700
+    value: "#026978"
+    source_anchor: false
+  - name: mount_sunapee/cold_wax/800
+    value: "#004754"
+    source_anchor: false
+  - name: mount_sunapee/cold_wax/900
+    value: "#001a22"
+    source_anchor: false
+- family: golden_hour
+  source_name: Golden Hour
+  source_value: "#fdb933"
+  source_anchor: 300_source
+  tokens:
+  - name: mount_sunapee/golden_hour/100
+    value: "#fefcf4"
+    source_anchor: false
+  - name: mount_sunapee/golden_hour/200
+    value: "#fcf0d4"
+    source_anchor: false
+  - name: mount_sunapee/golden_hour/300
+    value: "#fdb933"
+    source_anchor: true
+  - name: mount_sunapee/golden_hour/400
+    value: "#d99b2c"
+    source_anchor: false
+  - name: mount_sunapee/golden_hour/500
+    value: "#b67f25"
+    source_anchor: false
+  - name: mount_sunapee/golden_hour/600
+    value: "#94651d"
+    source_anchor: false
+  - name: mount_sunapee/golden_hour/700
+    value: "#724b15"
+    source_anchor: false
+  - name: mount_sunapee/golden_hour/800
+    value: "#52340d"
+    source_anchor: false
+  - name: mount_sunapee/golden_hour/900
+    value: "#251403"
+    source_anchor: false
 color_proportion_guidance:
   status: active
   source_basis: The user-provided Mount Sunapee color-usage page gives a stacked distribution graphic and explicit text saying white space should lead, primary brand colors should follow, and secondary colors should remain accent-only. Exact percentages are not published.
   contexts:
-    - name: brand_touchpoints
-      intent: White space leads. Lake Sunapee and Cold Wax carry the main brand presence. Golden Hour, Snow Gun, and Verde Slate remain accent-level support and should not dominate on their own.
-      proportions:
-        - source_color: White Space
-          token: universal/white
-          percentage: 45
-          rationale: Largest field in the distribution graphic and explicitly called out as the leading emphasis.
-        - source_color: Lake Sunapee
-          token: mount_sunapee/sunapee_neutral/800
-          percentage: 25
-          rationale: Strongest non-white structural block in the distribution graphic.
-        - source_color: Cold Wax
-          token: mount_sunapee/cold_wax/500
-          percentage: 15
-          rationale: Most prominent saturated primary brand color after the structural white and dark field.
-        - source_color: Golden Hour
-          token: mount_sunapee/golden_hour/300
-          percentage: 8
-          rationale: Warm accent strip in the guidance graphic.
-        - source_color: Snow Gun
-          token: mount_sunapee/sunapee_neutral/100
-          percentage: 4
-          rationale: Light secondary accent strip in the source graphic.
-        - source_color: Verde Slate
-          token: mount_sunapee/sunapee_neutral/400
-          percentage: 3
-          rationale: Smallest muted support strip in the source graphic.
-      notes:
-        - These percentages are approximate documentation guidance derived from the stacked source graphic plus the accompanying text.
-        - The source also says secondary colors should be used only as accents and should never dominate a design.
-
+  - name: brand_touchpoints
+    intent: White space leads. Lake Sunapee and Cold Wax carry the main brand presence. Golden Hour, Snow Gun, and Verde Slate remain accent-level support and should not dominate on their own.
+    proportions:
+    - source_color: White Space
+      token: universal/white
+      percentage: 45
+      rationale: Largest field in the distribution graphic and explicitly called out as the leading emphasis.
+    - source_color: Lake Sunapee
+      token: mount_sunapee/sunapee_neutral/800
+      percentage: 25
+      rationale: Strongest non-white structural block in the distribution graphic.
+    - source_color: Cold Wax
+      token: mount_sunapee/cold_wax/500
+      percentage: 15
+      rationale: Most prominent saturated primary brand color after the structural white and dark field.
+    - source_color: Golden Hour
+      token: mount_sunapee/golden_hour/300
+      percentage: 8
+      rationale: Warm accent strip in the guidance graphic.
+    - source_color: Snow Gun
+      token: mount_sunapee/sunapee_neutral/200
+      percentage: 4
+      rationale: Light secondary accent strip in the source graphic.
+    - source_color: Verde Slate
+      token: mount_sunapee/sunapee_neutral/400
+      percentage: 3
+      rationale: Smallest muted support strip in the source graphic.
+    notes:
+    - These percentages are approximate documentation guidance derived from the stacked source graphic plus the accompanying text.
+    - The source also says secondary colors should be used only as accents and should never dominate a design.
 validation:
   perceptual_consistency_notes:
-    - Snow Gun, Verde Slate, and Lake Sunapee align well as a single low-chroma structural family from light canvas-adjacent surfaces through muted mid-tone borders to the dark readable default foreground.
-    - Cold Wax remains the cleanest cool expressive family once the structural neutral system is separated from the accent lanes.
-    - Golden Hour lands naturally as a bright warm accent and still yields dark enough deeper steps for semantic default and emphasis roles.
-    - User-approved live write. The semantic color extension keeps `surface/neutral/canvas` on the branded `sunapee_neutral/50` step rather than leaving canvas on shared white.
-    - User-approved live write. The brand lane stages on `cold_wax/700`, `800`, and `900`, and the supporting expressive lane stages on `golden_hour/600`, `700`, and `800` so white on-surface text remains readable.
+  - Snow Gun, Verde Slate, and Lake Sunapee align well as a single low-chroma structural family from light canvas-adjacent surfaces through muted mid-tone borders to the dark readable default foreground.
+  - Cold Wax remains the cleanest cool expressive family once the structural neutral system is separated from the accent lanes.
+  - Golden Hour lands naturally as a bright warm accent and still yields dark enough deeper steps for semantic default and emphasis roles.
+  - User-approved live write. The semantic color extension keeps `surface/neutral/canvas` on the branded `sunapee_neutral/200` step rather than leaving canvas on shared white.
+  - User-approved live write. The brand lane stages on `cold_wax/700`, `800`, and `900`, and the supporting expressive lane stages on `golden_hour/600`, `700`, and `800` so white on-surface text remains readable.
   contrast_checks:
-    - token: mount_sunapee/sunapee_neutral/800
-      foreground: white
-      ratio: "12.60:1"
-      result: pass
-    - token: mount_sunapee/sunapee_neutral/900
-      foreground: white
-      ratio: "16.93:1"
-      result: pass
-    - token: mount_sunapee/sunapee_neutral/950
-      foreground: white
-      ratio: "18.73:1"
-      result: pass
-    - token: mount_sunapee/sunapee_neutral/50
-      foreground: black
-      ratio: "20.11:1"
-      result: pass
-    - token: mount_sunapee/sunapee_neutral/100
-      foreground: black
-      ratio: "18.37:1"
-      result: pass
-    - token: mount_sunapee/sunapee_neutral/200
-      foreground: black
-      ratio: "14.36:1"
-      result: pass
-    - token: mount_sunapee/cold_wax/800
-      foreground: white
-      ratio: "10.35:1"
-      result: pass
-    - token: mount_sunapee/cold_wax/900
-      foreground: white
-      ratio: "15.54:1"
-      result: pass
-    - token: mount_sunapee/cold_wax/950
-      foreground: white
-      ratio: "17.94:1"
-      result: pass
-    - token: mount_sunapee/cold_wax/50
-      foreground: black
-      ratio: "19.98:1"
-      result: pass
-    - token: mount_sunapee/cold_wax/100
-      foreground: black
-      ratio: "18.30:1"
-      result: pass
-    - token: mount_sunapee/cold_wax/200
-      foreground: black
-      ratio: "15.24:1"
-      result: pass
-    - token: mount_sunapee/golden_hour/800
-      foreground: white
-      ratio: "11.32:1"
-      result: pass
-    - token: mount_sunapee/golden_hour/900
-      foreground: white
-      ratio: "15.80:1"
-      result: pass
-    - token: mount_sunapee/golden_hour/950
-      foreground: white
-      ratio: "17.80:1"
-      result: pass
-    - token: mount_sunapee/golden_hour/50
-      foreground: black
-      ratio: "20.44:1"
-      result: pass
-    - token: mount_sunapee/golden_hour/100
-      foreground: black
-      ratio: "18.55:1"
-      result: pass
-    - token: mount_sunapee/golden_hour/200
-      foreground: black
-      ratio: "15.22:1"
-      result: pass
-
+  - token: mount_sunapee/sunapee_neutral/800
+    foreground: white
+    ratio: 12.60:1
+    result: pass
+  - token: mount_sunapee/cold_wax/800
+    foreground: white
+    ratio: 10.35:1
+    result: pass
+  - token: mount_sunapee/golden_hour/800
+    foreground: white
+    ratio: 11.32:1
+    result: pass
 semantic_recommendations:
   role_sets:
-    - scope: neutral
-      source_family: mount_sunapee/sunapee_neutral
-      rationale: Approved live write. The usage guidance gives structural weight to white space, the dark Lake tone, and subdued supporting colors more than to a classic gray system, so one branded neutral family is the cleanest governed fit.
-      targets:
-        - surface/neutral/*
-        - on_surface/neutral/*
-        - foreground/default
-        - foreground/subtle
-        - border/default
-        - border/subtle
-    - scope: brand
-      source_family: mount_sunapee/cold_wax
-      rationale: Approved live write. Cold Wax is the strongest remaining cool accent once the neutral family is established, with semantic `default/strong/emphasis` staging on `700/800/900`.
-      targets:
-        - surface/brand/*
-        - on_surface/brand/*
-        - foreground/brand
-        - border/brand
-    - scope: brand_secondary
-      source_family: mount_sunapee/golden_hour
-      rationale: Approved live write. Golden Hour remains the warm supporting accent lane, with semantic `default/strong/emphasis` staging on `600/700/800`.
-      targets:
-        - surface/brand_secondary/*
-        - on_surface/brand_secondary/*
-        - foreground/brand_secondary
-        - border/brand_secondary
+  - scope: neutral
+    source_family: mount_sunapee/sunapee_neutral
+    rationale: Approved live write. The usage guidance gives structural weight to white space, the dark Lake tone, and subdued supporting colors more than to a classic gray system, so one branded neutral family is the cleanest governed fit.
+    targets:
+    - surface/neutral/*
+    - on_surface/neutral/*
+    - foreground/default
+    - foreground/subtle
+    - border/default
+    - border/subtle
+  - scope: brand
+    source_family: mount_sunapee/cold_wax
+    rationale: Approved live write. Cold Wax is the strongest remaining cool accent once the neutral family is established, with semantic `default/strong/emphasis` staging on `700/800/900`.
+    targets:
+    - surface/brand/*
+    - on_surface/brand/*
+    - foreground/brand
+    - border/brand
+  - scope: brand_secondary
+    source_family: mount_sunapee/golden_hour
+    rationale: Approved live write. Golden Hour remains the warm supporting accent lane, with semantic `default/strong/emphasis` staging on `600/700/800`.
+    targets:
+    - surface/brand_secondary/*
+    - on_surface/brand_secondary/*
+    - foreground/brand_secondary
+    - border/brand_secondary
   global_only_families: []
   role_exceptions: []
-
 review_readiness:
   intended_review_channels:
+  - web
+  - email
+  - ads
+  review_rules:
+  - subject: Mount Sunapee structural neutral system
+    channels:
     - web
     - email
     - ads
-  review_rules:
-    - subject: Mount Sunapee structural neutral system
-      channels:
-        - web
-        - email
-        - ads
-      rule: Keep Snow Gun, Verde Slate, and Lake Sunapee in one branded structural lane so the dominant page white, the muted support tones, and the dark readable foreground stay governed together.
-      source_basis: The color-usage page gives white and the dark Lake Sunapee tone the largest structural share and places the lower-chroma secondary colors in support roles.
-    - subject: Mount Sunapee expressive lane order
-      channels:
-        - web
-        - email
-        - ads
-      rule: Use Cold Wax as the primary expressive lane and Golden Hour as the supporting expressive lane in the first pass.
-      source_basis: After accounting for the structural neutral system, Cold Wax and Golden Hour remain the two distinct accent hues in the source palette.
-
+    rule: Keep Snow Gun, Verde Slate, and Lake Sunapee in one branded structural lane so the dominant page white, the muted support tones, and the dark readable foreground stay governed together.
+    source_basis: The color-usage page gives white and the dark Lake Sunapee tone the largest structural share and places the lower-chroma secondary colors in support roles.
+  - subject: Mount Sunapee expressive lane order
+    channels:
+    - web
+    - email
+    - ads
+    rule: Use Cold Wax as the primary expressive lane and Golden Hour as the supporting expressive lane in the first pass.
+    source_basis: After accounting for the structural neutral system, Cold Wax and Golden Hour remain the two distinct accent hues in the source palette.
 open_questions: []

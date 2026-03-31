@@ -1,5 +1,5 @@
 version: 1
-updated: '2026-03-30'
+updated: '2026-03-31'
 brand_id: boston_mills_brandywine
 display_name: Boston Mills / Brandywine
 status: active
@@ -25,7 +25,8 @@ artifacts:
   color:
     intake_artifact: figma/brands/boston_mills_brandywine/color/intake.yml
     preview_artifact: figma/brands/boston_mills_brandywine/color/preview.md
-    decision_artifacts: []
+    decision_artifacts:
+    - figma/decisions/2026-03-31-universal-100-900-color-ramp-normalization.md
   typography:
     intake_artifact: figma/brands/boston_mills_brandywine/typography/intake.yml
     preview_artifact: figma/brands/boston_mills_brandywine/typography/preview.md
@@ -126,6 +127,6 @@ semantic_overrides:
       notes:
       - Boston Mills / Brandywine is live as a one-family typography system with `Interstate` across heading, body, and action work.
       - The PDF's `Interstate H2` wording remains documentation-only because the current semantic typography model does not expose a dedicated H2 style slot.
-      - "Typography size continues to bind directly from published `Global: Typography`."
+      - 'Typography size continues to bind directly from published `Global: Typography`.'
 notes:
 - Boston Mills / Brandywine is live in the Foundations file with no raw color families, one raw typography family primitive, and Boston Mills / Brandywine semantic theme extension.

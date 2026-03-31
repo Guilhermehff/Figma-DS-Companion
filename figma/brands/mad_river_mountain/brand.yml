@@ -1,5 +1,5 @@
 version: 1
-updated: '2026-03-30'
+updated: '2026-03-31'
 brand_id: mad_river_mountain
 display_name: Mad River Mountain
 status: active
@@ -25,7 +25,8 @@ artifacts:
   color:
     intake_artifact: figma/brands/mad_river_mountain/color/intake.yml
     preview_artifact: figma/brands/mad_river_mountain/color/preview.md
-    decision_artifacts: []
+    decision_artifacts:
+    - figma/decisions/2026-03-31-universal-100-900-color-ramp-normalization.md
   typography:
     intake_artifact: figma/brands/mad_river_mountain/typography/intake.yml
     preview_artifact: figma/brands/mad_river_mountain/typography/preview.md
@@ -123,6 +124,6 @@ semantic_overrides:
       - family/action_safe
       notes:
       - Mad River Mountain is live as a one-family typography system with `Prompt` across heading, body, and action work.
-      - "Typography size continues to bind directly from published `Global: Typography`."
+      - 'Typography size continues to bind directly from published `Global: Typography`.'
 notes:
 - Mad River Mountain is live in the Foundations file with two raw color families, one raw typography family primitive, and Mad River Mountain semantic theme extension.

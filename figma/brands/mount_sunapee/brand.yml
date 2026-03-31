@@ -1,5 +1,5 @@
 version: 1
-updated: '2026-03-26'
+updated: '2026-03-31'
 brand_id: mount_sunapee
 display_name: Mount Sunapee
 status: active
@@ -27,6 +27,7 @@ artifacts:
     preview_artifact: figma/brands/mount_sunapee/color/preview.md
     decision_artifacts:
     - figma/decisions/2026-03-19-mount-sunapee-foundations-written-to-figma.md
+    - figma/decisions/2026-03-31-universal-100-900-color-ramp-normalization.md
   typography:
     intake_artifact: figma/brands/mount_sunapee/typography/intake.yml
     preview_artifact: figma/brands/mount_sunapee/typography/preview.md

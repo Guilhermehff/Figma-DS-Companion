@@ -1,5 +1,5 @@
 version: 1
-updated: '2026-03-26'
+updated: '2026-03-31'
 brand_id: keystone
 display_name: Keystone
 status: active
@@ -29,6 +29,7 @@ artifacts:
     - figma/decisions/2026-03-12-keystone-staged-foundations-from-source-images.md
     - figma/decisions/2026-03-12-keystone-foundations-written-to-figma.md
     - figma/decisions/2026-03-13-proposed-semantic-role-channel-color-model.md
+    - figma/decisions/2026-03-31-universal-100-900-color-ramp-normalization.md
   typography:
     intake_artifact: figma/brands/keystone/typography/intake.yml
     preview_artifact: figma/brands/keystone/typography/preview.md

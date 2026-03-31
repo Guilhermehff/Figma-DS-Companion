@@ -1,5 +1,5 @@
 version: 1
-updated: '2026-03-30'
+updated: '2026-03-31'
 brand_id: hidden_valley_mo
 display_name: Hidden Valley MO
 status: active
@@ -25,7 +25,8 @@ artifacts:
   color:
     intake_artifact: figma/brands/hidden_valley_mo/color/intake.yml
     preview_artifact: figma/brands/hidden_valley_mo/color/preview.md
-    decision_artifacts: []
+    decision_artifacts:
+    - figma/decisions/2026-03-31-universal-100-900-color-ramp-normalization.md
   typography:
     intake_artifact: figma/brands/hidden_valley_mo/typography/intake.yml
     preview_artifact: figma/brands/hidden_valley_mo/typography/preview.md
@@ -126,6 +127,6 @@ semantic_overrides:
       notes:
       - Hidden Valley MO is live as a two-family typography system, with `Altero` on heading and action work and `Prompt` on the reading lane.
       - The PDF's `Altero Outline` subheadline remains documentation-only because the current semantic typography model has no dedicated outline or style slot.
-      - "Typography size continues to bind directly from published `Global: Typography`."
+      - 'Typography size continues to bind directly from published `Global: Typography`.'
 notes:
 - Hidden Valley MO is live in the Foundations file with two raw color families, two raw typography family primitives, a semantic theme logo-name override, and Hidden Valley MO semantic theme extension.

@@ -8,7 +8,7 @@
 - Figma file (if applicable): https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Foundations?node-id=1-3
 - Stakeholders: Design System Governance, user approval in chat
 - Supersedes:
-- Superseded by:
+- Superseded by: figma/decisions/2026-03-31-park-city-neutral-lane-correction.md (color neutral interpretation only)
 
 ## Context
 

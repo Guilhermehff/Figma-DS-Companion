@@ -1,4 +1,4 @@
-date: 2026-03-19
+date: '2026-03-31'
 brand: mt_brighton
 source_reference: User-provided exported Mt. Brighton brand sheet image in chat
 source_type: image
@@ -8,228 +8,199 @@ preview:
   required_before_write: true
   artifact: figma/brands/mt_brighton/color/preview.md
   status: written_in_figma
-
 source_swatches:
-  - source_name: PMS 268C
-    provided_value: "#4f2683"
-    source_usage_scope: core brand color
-    notes: Source image lists RGB 78 38 131.
-  - source_name: PMS 2617U
-    provided_value: "#735488"
-    source_usage_scope: core brand color
-    notes: Source image lists RGB 115 84 136.
-  - source_name: Grey
-    provided_value: "#58595b"
-    source_usage_scope: core brand color
-    notes: Source image lists RGB 88 89 91.
-
+- source_name: PMS 268C
+  provided_value: "#4f2683"
+  source_usage_scope: core brand color
+  notes: Source image lists RGB 78 38 131.
+- source_name: PMS 2617U
+  provided_value: "#735488"
+  source_usage_scope: core brand color
+  notes: Source image lists RGB 115 84 136.
+- source_name: Grey
+  provided_value: "#58595b"
+  source_usage_scope: core brand color
+  notes: Source image lists RGB 88 89 91.
 universal_reuse:
   reuse_universal: []
   new_brand_families:
-    - family: brighton_purple
-      source_name: PMS 268C
-      provided_value: "#4f2683"
-      rationale: Primary expressive brand lane.
-    - family: brighton_purple_alt
-      source_name: PMS 2617U
-      provided_value: "#735488"
-      rationale: Supporting expressive brand lane.
-    - family: brighton_grey
-      source_name: Grey
-      provided_value: "#58595b"
-      rationale: Structural neutral lane.
+  - family: brighton_purple
+    source_name: PMS 268C
+    provided_value: "#4f2683"
+    rationale: Primary expressive brand lane.
+  - family: brighton_purple_alt
+    source_name: PMS 2617U
+    provided_value: "#735488"
+    rationale: Supporting expressive brand lane.
+  - family: brighton_grey
+    source_name: Grey
+    provided_value: "#58595b"
+    rationale: Structural neutral lane.
   hold_for_review: []
-
 scale_spec:
   working_space: OKLCH
   steps:
-    - 50
-    - 100
-    - 200
-    - 300
-    - 400
-    - 500
-    - 600
-    - 700
-    - 800
-    - 900
-    - 950
+  - 100
+  - 200
+  - 300
+  - 400
+  - 500
+  - 600
+  - 700
+  - 800
+  - 900
   contrast_targets:
     white:
-      "800": "4.5:1 preferred"
-      "900": "7:1 required"
-      "950": "7:1 required"
+      '800': 4.5:1 preferred
+      '900': 7:1 required
     black:
-      "50": "7:1 required"
-      "100": "7:1 required"
-      "200": "4.5:1 required"
-
+      '100': 7:1 required
+      '200': 7:1 required
+      '300': 4.5:1 required
 family_scales:
-  - family: brighton_purple
-    source_name: PMS 268C
-    source_value: "#4f2683"
-    source_anchor: 500_source
-    tokens:
-      - name: mt_brighton/brighton_purple/50
-        value: "#f5f1fa"
-        source_anchor: false
-      - name: mt_brighton/brighton_purple/100
-        value: "#e7ddf3"
-        source_anchor: false
-      - name: mt_brighton/brighton_purple/200
-        value: "#cfbde6"
-        source_anchor: false
-      - name: mt_brighton/brighton_purple/300
-        value: "#b095d3"
-        source_anchor: false
-      - name: mt_brighton/brighton_purple/400
-        value: "#8f6dbb"
-        source_anchor: false
-      - name: mt_brighton/brighton_purple/500
-        value: "#4f2683"
-        source_anchor: true
-      - name: mt_brighton/brighton_purple/600
-        value: "#41206d"
-        source_anchor: false
-      - name: mt_brighton/brighton_purple/700
-        value: "#321957"
-        source_anchor: false
-      - name: mt_brighton/brighton_purple/800
-        value: "#241241"
-        source_anchor: false
-      - name: mt_brighton/brighton_purple/900
-        value: "#180c2d"
-        source_anchor: false
-      - name: mt_brighton/brighton_purple/950
-        value: "#0e071b"
-        source_anchor: false
-  - family: brighton_purple_alt
-    source_name: PMS 2617U
-    source_value: "#735488"
-    source_anchor: 500_source
-    tokens:
-      - name: mt_brighton/brighton_purple_alt/50
-        value: "#f6f2fa"
-        source_anchor: false
-      - name: mt_brighton/brighton_purple_alt/100
-        value: "#e9e0f2"
-        source_anchor: false
-      - name: mt_brighton/brighton_purple_alt/200
-        value: "#d3c2e3"
-        source_anchor: false
-      - name: mt_brighton/brighton_purple_alt/300
-        value: "#b79fcc"
-        source_anchor: false
-      - name: mt_brighton/brighton_purple_alt/400
-        value: "#9a79b2"
-        source_anchor: false
-      - name: mt_brighton/brighton_purple_alt/500
-        value: "#735488"
-        source_anchor: true
-      - name: mt_brighton/brighton_purple_alt/600
-        value: "#5c4270"
-        source_anchor: false
-      - name: mt_brighton/brighton_purple_alt/700
-        value: "#453258"
-        source_anchor: false
-      - name: mt_brighton/brighton_purple_alt/800
-        value: "#312440"
-        source_anchor: false
-      - name: mt_brighton/brighton_purple_alt/900
-        value: "#21182c"
-        source_anchor: false
-      - name: mt_brighton/brighton_purple_alt/950
-        value: "#120c18"
-        source_anchor: false
-  - family: brighton_grey
-    source_name: Grey
-    source_value: "#58595b"
-    source_anchor: 500_source
-    tokens:
-      - name: mt_brighton/brighton_grey/50
-        value: "#f5f6f8"
-        source_anchor: false
-      - name: mt_brighton/brighton_grey/100
-        value: "#e7e8eb"
-        source_anchor: false
-      - name: mt_brighton/brighton_grey/200
-        value: "#cbcdd2"
-        source_anchor: false
-      - name: mt_brighton/brighton_grey/300
-        value: "#a9adb4"
-        source_anchor: false
-      - name: mt_brighton/brighton_grey/400
-        value: "#838891"
-        source_anchor: false
-      - name: mt_brighton/brighton_grey/500
-        value: "#58595b"
-        source_anchor: true
-      - name: mt_brighton/brighton_grey/600
-        value: "#45464a"
-        source_anchor: false
-      - name: mt_brighton/brighton_grey/700
-        value: "#313236"
-        source_anchor: false
-      - name: mt_brighton/brighton_grey/800
-        value: "#212226"
-        source_anchor: false
-      - name: mt_brighton/brighton_grey/900
-        value: "#15161a"
-        source_anchor: false
-      - name: mt_brighton/brighton_grey/950
-        value: "#0c0d10"
-        source_anchor: false
-
+- family: brighton_purple
+  source_name: PMS 268C
+  source_value: "#4f2683"
+  source_anchor: 500_source
+  tokens:
+  - name: mt_brighton/brighton_purple/100
+    value: "#f5f1fa"
+    source_anchor: false
+  - name: mt_brighton/brighton_purple/200
+    value: "#e7ddf3"
+    source_anchor: false
+  - name: mt_brighton/brighton_purple/300
+    value: "#b095d3"
+    source_anchor: false
+  - name: mt_brighton/brighton_purple/400
+    value: "#8f6dbb"
+    source_anchor: false
+  - name: mt_brighton/brighton_purple/500
+    value: "#4f2683"
+    source_anchor: true
+  - name: mt_brighton/brighton_purple/600
+    value: "#41206d"
+    source_anchor: false
+  - name: mt_brighton/brighton_purple/700
+    value: "#321957"
+    source_anchor: false
+  - name: mt_brighton/brighton_purple/800
+    value: "#241241"
+    source_anchor: false
+  - name: mt_brighton/brighton_purple/900
+    value: "#0e071b"
+    source_anchor: false
+- family: brighton_purple_alt
+  source_name: PMS 2617U
+  source_value: "#735488"
+  source_anchor: 500_source
+  tokens:
+  - name: mt_brighton/brighton_purple_alt/100
+    value: "#f6f2fa"
+    source_anchor: false
+  - name: mt_brighton/brighton_purple_alt/200
+    value: "#e9e0f2"
+    source_anchor: false
+  - name: mt_brighton/brighton_purple_alt/300
+    value: "#b79fcc"
+    source_anchor: false
+  - name: mt_brighton/brighton_purple_alt/400
+    value: "#9a79b2"
+    source_anchor: false
+  - name: mt_brighton/brighton_purple_alt/500
+    value: "#735488"
+    source_anchor: true
+  - name: mt_brighton/brighton_purple_alt/600
+    value: "#5c4270"
+    source_anchor: false
+  - name: mt_brighton/brighton_purple_alt/700
+    value: "#453258"
+    source_anchor: false
+  - name: mt_brighton/brighton_purple_alt/800
+    value: "#312440"
+    source_anchor: false
+  - name: mt_brighton/brighton_purple_alt/900
+    value: "#120c18"
+    source_anchor: false
+- family: brighton_grey
+  source_name: Grey
+  source_value: "#58595b"
+  source_anchor: 500_source
+  tokens:
+  - name: mt_brighton/brighton_grey/100
+    value: "#f5f6f8"
+    source_anchor: false
+  - name: mt_brighton/brighton_grey/200
+    value: "#e7e8eb"
+    source_anchor: false
+  - name: mt_brighton/brighton_grey/300
+    value: "#a9adb4"
+    source_anchor: false
+  - name: mt_brighton/brighton_grey/400
+    value: "#838891"
+    source_anchor: false
+  - name: mt_brighton/brighton_grey/500
+    value: "#58595b"
+    source_anchor: true
+  - name: mt_brighton/brighton_grey/600
+    value: "#45464a"
+    source_anchor: false
+  - name: mt_brighton/brighton_grey/700
+    value: "#313236"
+    source_anchor: false
+  - name: mt_brighton/brighton_grey/800
+    value: "#212226"
+    source_anchor: false
+  - name: mt_brighton/brighton_grey/900
+    value: "#0c0d10"
+    source_anchor: false
 semantic_recommendations:
   role_sets:
-    - scope: neutral
-      source_family: mt_brighton/brighton_grey
-      targets:
-        - surface/neutral/*
-        - on_surface/neutral/*
-        - foreground/default
-        - foreground/subtle
-        - border/default
-        - border/subtle
-    - scope: brand
-      source_family: mt_brighton/brighton_purple
-      targets:
-        - surface/brand/*
-        - on_surface/brand/*
-        - foreground/brand
-        - border/brand
-    - scope: brand_secondary
-      source_family: mt_brighton/brighton_purple_alt
-      targets:
-        - surface/brand_secondary/*
-        - on_surface/brand_secondary/*
-        - foreground/brand_secondary
-        - border/brand_secondary
+  - scope: neutral
+    source_family: mt_brighton/brighton_grey
+    targets:
+    - surface/neutral/*
+    - on_surface/neutral/*
+    - foreground/default
+    - foreground/subtle
+    - border/default
+    - border/subtle
+  - scope: brand
+    source_family: mt_brighton/brighton_purple
+    targets:
+    - surface/brand/*
+    - on_surface/brand/*
+    - foreground/brand
+    - border/brand
+  - scope: brand_secondary
+    source_family: mt_brighton/brighton_purple_alt
+    targets:
+    - surface/brand_secondary/*
+    - on_surface/brand_secondary/*
+    - foreground/brand_secondary
+    - border/brand_secondary
   global_only_families: []
   role_exceptions:
-    - target: assets/logo
-      source_token: Mt. Brighton
-      rationale: The semantic color extension stores the governed display label.
-
+  - target: assets/logo
+    source_token: Mt. Brighton
+    rationale: The semantic color extension stores the governed display label.
 live_figma_write:
   semantic_extension_id: VariableCollectionId:221:1701
   raw_color_families:
-    - mt_brighton/brighton_purple/*
-    - mt_brighton/brighton_purple_alt/*
-    - mt_brighton/brighton_grey/*
-
+  - mt_brighton/brighton_purple/*
+  - mt_brighton/brighton_purple_alt/*
+  - mt_brighton/brighton_grey/*
 review_readiness:
   intended_review_channels:
+  - web
+  - email
+  - ads
+  review_rules:
+  - subject: Mt. Brighton lane order
+    channels:
     - web
     - email
     - ads
-  review_rules:
-    - subject: Mt. Brighton lane order
-      channels:
-        - web
-        - email
-        - ads
-      rule: Keep the darker purple on the primary expressive lane and the lighter purple on the supporting lane.
-      source_basis: The logo sheet presents the darker purple as the dominant brand color.
-
+    rule: Keep the darker purple on the primary expressive lane and the lighter purple on the supporting lane.
+    source_basis: The logo sheet presents the darker purple as the dominant brand color.
 open_questions: []

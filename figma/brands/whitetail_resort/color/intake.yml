@@ -1,4 +1,4 @@
-date: 2026-03-18
+date: '2026-03-31'
 brand: whitetail_resort
 source_reference: User-provided image in chat showing the Whitetail Resort logo and color guidelines
 source_type: image
@@ -33,7 +33,6 @@ universal_reuse:
 scale_spec:
   working_space: OKLCH
   steps:
-  - 50
   - 100
   - 200
   - 300
@@ -43,30 +42,25 @@ scale_spec:
   - 700
   - 800
   - 900
-  - 950
   contrast_targets:
     white:
       '800': 4.5:1 preferred
       '900': 7:1 required
-      '950': 7:1 required
     black:
-      '50': 7:1 required
       '100': 7:1 required
-      '200': 4.5:1 required
+      '200': 7:1 required
+      '300': 4.5:1 required
 family_scales:
 - family: two_top_green
   source_name: Two Top Green
   source_value: "#233d34"
   source_anchor: 800_source
   tokens:
-  - name: whitetail_resort/two_top_green/50
+  - name: whitetail_resort/two_top_green/100
     value: "#f2f8f6"
     source_anchor: false
-  - name: whitetail_resort/two_top_green/100
-    value: "#e3f1ec"
-    source_anchor: false
   - name: whitetail_resort/two_top_green/200
-    value: "#cbe4db"
+    value: "#e3f1ec"
     source_anchor: false
   - name: whitetail_resort/two_top_green/300
     value: "#a9d2c4"
@@ -87,9 +81,6 @@ family_scales:
     value: "#233d34"
     source_anchor: true
   - name: whitetail_resort/two_top_green/900
-    value: "#1c322b"
-    source_anchor: false
-  - name: whitetail_resort/two_top_green/950
     value: "#11211c"
     source_anchor: false
 - family: neutral
@@ -99,14 +90,11 @@ family_scales:
   notes:
   - Live Figma review introduced a raw-only neutral support ramp that remains separate from the inherited semantic neutral lane.
   tokens:
-  - name: whitetail_resort/neutral/50
+  - name: whitetail_resort/neutral/100
     value: "#ffffff"
     source_anchor: false
-  - name: whitetail_resort/neutral/100
-    value: "#f4f4f5"
-    source_anchor: false
   - name: whitetail_resort/neutral/200
-    value: "#e6e6e8"
+    value: "#f4f4f5"
     source_anchor: false
   - name: whitetail_resort/neutral/300
     value: "#cfcfd2"
@@ -127,9 +115,6 @@ family_scales:
     value: "#2b2a2b"
     source_anchor: false
   - name: whitetail_resort/neutral/900
-    value: "#231f20"
-    source_anchor: false
-  - name: whitetail_resort/neutral/950
     value: "#1a1718"
     source_anchor: false
 semantic_recommendations:

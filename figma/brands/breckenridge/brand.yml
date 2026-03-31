@@ -1,5 +1,5 @@
 version: 1
-updated: '2026-03-26'
+updated: '2026-03-31'
 brand_id: breckenridge
 display_name: Breckenridge
 status: active
@@ -29,6 +29,7 @@ artifacts:
     - figma/decisions/2026-03-11-brand-manifest-and-generated-registry-governance.md
     - figma/decisions/2026-03-11-initial-semantic-color-family-model.md
     - figma/decisions/2026-03-13-proposed-semantic-role-channel-color-model.md
+    - figma/decisions/2026-03-31-universal-100-900-color-ramp-normalization.md
   typography:
     intake_artifact: figma/brands/breckenridge/typography/intake.yml
     preview_artifact: figma/brands/breckenridge/typography/preview.md

@@ -1,5 +1,5 @@
 version: 1
-updated: '2026-03-27'
+updated: '2026-03-31'
 brand_id: kirkwood
 display_name: Kirkwood
 status: active
@@ -28,6 +28,7 @@ artifacts:
     decision_artifacts:
     - figma/decisions/2026-03-12-kirkwood-foundations-written-to-figma.md
     - figma/decisions/2026-03-13-proposed-semantic-role-channel-color-model.md
+    - figma/decisions/2026-03-31-universal-100-900-color-ramp-normalization.md
   typography:
     intake_artifact: figma/brands/kirkwood/typography/intake.yml
     preview_artifact: figma/brands/kirkwood/typography/preview.md

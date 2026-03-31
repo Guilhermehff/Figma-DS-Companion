@@ -1,4 +1,4 @@
-date: 2026-03-19
+date: '2026-03-31'
 brand: attitash
 source_reference: User-provided exported Attitash brand sheet image in chat
 source_type: image
@@ -8,379 +8,219 @@ preview:
   required_before_write: true
   artifact: figma/brands/attitash/color/preview.md
   status: written_in_figma
-
 source_swatches:
-  - source_name: Attitash Blue
-    provided_value: "#2a51a3"
-    source_usage_scope: core brand color
-    notes: Source image lists PMS 2728C, RGB 42 81 163, and CMYK 93 78 0 0.
-  - source_name: Daybreak
-    provided_value: "#ffc629"
-    source_usage_scope: core brand color
-    notes: Source image lists PMS 1235C, RGB 255 198 41, and CMYK 0 23 91 0.
-  - source_name: Pure White
-    provided_value: "#ffffff"
-    source_usage_scope: accent sub-palette
-    notes: Exact shared white.
-  - source_name: Mogul Shadow
-    provided_value: "#c6c8c8"
-    source_usage_scope: accent sub-palette
-    notes: Source image lists PMS 420.
-  - source_name: Mogul Shadow 20%
-    provided_value: "#f2f2f2"
-    source_usage_scope: accent sub-palette
-    notes: Source image explicitly labels the tint as 20%.
-  - source_name: Sharp Edge Grey
-    provided_value: "#3d4347"
-    source_usage_scope: accent sub-palette
-    notes: Source image lists PMS 423C.
-
+- source_name: Attitash Blue
+  provided_value: "#2a51a3"
+  source_usage_scope: core brand color
+  notes: Source image lists PMS 2728C, RGB 42 81 163, and CMYK 93 78 0 0.
+- source_name: Daybreak
+  provided_value: "#ffc629"
+  source_usage_scope: core brand color
+  notes: Source image lists PMS 1235C, RGB 255 198 41, and CMYK 0 23 91 0.
+- source_name: Pure White
+  provided_value: "#ffffff"
+  source_usage_scope: accent sub-palette
+  notes: Exact shared white.
+- source_name: Mogul Shadow
+  provided_value: "#c6c8c8"
+  source_usage_scope: accent sub-palette
+  notes: Source image lists PMS 420.
+- source_name: Mogul Shadow 20%
+  provided_value: "#f2f2f2"
+  source_usage_scope: accent sub-palette
+  notes: Source image explicitly labels the tint as 20%.
+- source_name: Sharp Edge Grey
+  provided_value: "#3d4347"
+  source_usage_scope: accent sub-palette
+  notes: Source image lists PMS 423C.
 universal_reuse:
   reuse_universal:
-    - source_name: Pure White
-      provided_value: "#ffffff"
-      existing_token: universal/white
-      rationale: Exact shared white.
+  - source_name: Pure White
+    provided_value: "#ffffff"
+    existing_token: universal/white
+    rationale: Exact shared white.
   new_brand_families:
-    - family: attitash_blue
-      source_name: Attitash Blue
-      provided_value: "#2a51a3"
-      rationale: Primary expressive brand lane.
-    - family: daybreak
-      source_name: Daybreak
-      provided_value: "#ffc629"
-      rationale: Supporting expressive brand lane.
-    - family: attitash_neutral
-      source_name: Pure White + Mogul Shadow + Sharp Edge Grey
-      provided_value: composite_family
-      rationale: Structural neutral lane written live in Figma.
-    - family: mogul_shadow
-      source_name: Mogul Shadow
-      provided_value: "#c6c8c8"
-      rationale: Preserved as a raw global-only accent family.
-    - family: mogul_shadow_20
-      source_name: Mogul Shadow 20%
-      provided_value: "#f2f2f2"
-      rationale: Preserved as a raw global-only accent family.
-    - family: sharp_edge_grey
-      source_name: Sharp Edge Grey
-      provided_value: "#3d4347"
-      rationale: Preserved as a raw global-only accent family.
+  - family: attitash_blue
+    source_name: Attitash Blue
+    provided_value: "#2a51a3"
+    rationale: Primary expressive brand lane.
+  - family: daybreak
+    source_name: Daybreak
+    provided_value: "#ffc629"
+    rationale: Supporting expressive brand lane.
+  - family: attitash_neutral
+    source_name: Pure White + Mogul Shadow + Sharp Edge Grey
+    provided_value: composite_family
+    rationale: Structural neutral lane written live in Figma.
   hold_for_review: []
-
 scale_spec:
   working_space: OKLCH
   steps:
-    - 50
-    - 100
-    - 200
-    - 300
-    - 400
-    - 500
-    - 600
-    - 700
-    - 800
-    - 900
-    - 950
+  - 100
+  - 200
+  - 300
+  - 400
+  - 500
+  - 600
+  - 700
+  - 800
+  - 900
   contrast_targets:
     white:
-      "800": "4.5:1 preferred"
-      "900": "7:1 required"
-      "950": "7:1 required"
+      '800': 4.5:1 preferred
+      '900': 7:1 required
     black:
-      "50": "7:1 required"
-      "100": "7:1 required"
-      "200": "4.5:1 required"
-
+      '100': 7:1 required
+      '200': 7:1 required
+      '300': 4.5:1 required
 family_scales:
-  - family: attitash_blue
-    source_name: Attitash Blue
-    source_value: "#2a51a3"
-    source_anchor: 500_source
-    tokens:
-      - name: attitash/attitash_blue/50
-        value: "#f2f6ff"
-        source_anchor: false
-      - name: attitash/attitash_blue/100
-        value: "#e3ecff"
-        source_anchor: false
-      - name: attitash/attitash_blue/200
-        value: "#c7d8ff"
-        source_anchor: false
-      - name: attitash/attitash_blue/300
-        value: "#9fb8f5"
-        source_anchor: false
-      - name: attitash/attitash_blue/400
-        value: "#6f95d6"
-        source_anchor: false
-      - name: attitash/attitash_blue/500
-        value: "#2a51a3"
-        source_anchor: true
-      - name: attitash/attitash_blue/600
-        value: "#14398b"
-        source_anchor: false
-      - name: attitash/attitash_blue/700
-        value: "#012173"
-        source_anchor: false
-      - name: attitash/attitash_blue/800
-        value: "#00035c"
-        source_anchor: false
-      - name: attitash/attitash_blue/900
-        value: "#040045"
-        source_anchor: false
-      - name: attitash/attitash_blue/950
-        value: "#09002f"
-        source_anchor: false
-  - family: daybreak
-    source_name: Daybreak
-    source_value: "#ffc629"
-    source_anchor: 500_source
-    tokens:
-      - name: attitash/daybreak/50
-        value: "#ede2ca"
-        source_anchor: false
-      - name: attitash/daybreak/100
-        value: "#f1ddb2"
-        source_anchor: false
-      - name: attitash/daybreak/200
-        value: "#f4d899"
-        source_anchor: false
-      - name: attitash/daybreak/300
-        value: "#f8d27c"
-        source_anchor: false
-      - name: attitash/daybreak/400
-        value: "#fccc5b"
-        source_anchor: false
-      - name: attitash/daybreak/500
-        value: "#ffc629"
-        source_anchor: true
-      - name: attitash/daybreak/600
-        value: "#cb9300"
-        source_anchor: false
-      - name: attitash/daybreak/700
-        value: "#996200"
-        source_anchor: false
-      - name: attitash/daybreak/800
-        value: "#693200"
-        source_anchor: false
-      - name: attitash/daybreak/900
-        value: "#3b0100"
-        source_anchor: false
-      - name: attitash/daybreak/950
-        value: "#0a0200"
-        source_anchor: false
-  - family: attitash_neutral
-    source_name: Pure White + Mogul Shadow + Mogul Shadow 20% + Sharp Edge Grey
-    source_value: composite_family
-    source_anchor: 50_source / 100_source / 300_source / 800_source
-    tokens:
-      - name: attitash/attitash_neutral/50
-        value: "#ffffff"
-        source_anchor: true
-      - name: attitash/attitash_neutral/100
-        value: "#f2f2f2"
-        source_anchor: true
-      - name: attitash/attitash_neutral/200
-        value: "#dcdddc"
-        source_anchor: false
-      - name: attitash/attitash_neutral/300
-        value: "#c6c8c8"
-        source_anchor: true
-      - name: attitash/attitash_neutral/400
-        value: "#a8acac"
-        source_anchor: false
-      - name: attitash/attitash_neutral/500
-        value: "#8c9091"
-        source_anchor: false
-      - name: attitash/attitash_neutral/600
-        value: "#707577"
-        source_anchor: false
-      - name: attitash/attitash_neutral/700
-        value: "#565c5f"
-        source_anchor: false
-      - name: attitash/attitash_neutral/800
-        value: "#3d4347"
-        source_anchor: true
-      - name: attitash/attitash_neutral/900
-        value: "#151b20"
-        source_anchor: false
-      - name: attitash/attitash_neutral/950
-        value: "#000102"
-        source_anchor: false
-  - family: mogul_shadow
-    source_name: Mogul Shadow
-    source_value: "#c6c8c8"
-    source_anchor: 500_source
-    tokens:
-      - name: attitash/mogul_shadow/50
-        value: "#dbdbdb"
-        source_anchor: false
-      - name: attitash/mogul_shadow/100
-        value: "#d6d7d7"
-        source_anchor: false
-      - name: attitash/mogul_shadow/200
-        value: "#d2d3d3"
-        source_anchor: false
-      - name: attitash/mogul_shadow/300
-        value: "#ced0d0"
-        source_anchor: false
-      - name: attitash/mogul_shadow/400
-        value: "#cacccc"
-        source_anchor: false
-      - name: attitash/mogul_shadow/500
-        value: "#c6c8c8"
-        source_anchor: true
-      - name: attitash/mogul_shadow/600
-        value: "#949898"
-        source_anchor: false
-      - name: attitash/mogul_shadow/700
-        value: "#656b6b"
-        source_anchor: false
-      - name: attitash/mogul_shadow/800
-        value: "#3a4141"
-        source_anchor: false
-      - name: attitash/mogul_shadow/900
-        value: "#131b1b"
-        source_anchor: false
-      - name: attitash/mogul_shadow/950
-        value: "#000101"
-        source_anchor: false
-  - family: mogul_shadow_20
-    source_name: Mogul Shadow 20%
-    source_value: "#f2f2f2"
-    source_anchor: 100_source
-    tokens:
-      - name: attitash/mogul_shadow_20/50
-        value: "#fafafa"
-        source_anchor: false
-      - name: attitash/mogul_shadow_20/100
-        value: "#f2f2f2"
-        source_anchor: true
-      - name: attitash/mogul_shadow_20/200
-        value: "#d2d1d0"
-        source_anchor: false
-      - name: attitash/mogul_shadow_20/300
-        value: "#b2b1af"
-        source_anchor: false
-      - name: attitash/mogul_shadow_20/400
-        value: "#93928f"
-        source_anchor: false
-      - name: attitash/mogul_shadow_20/500
-        value: "#767470"
-        source_anchor: false
-      - name: attitash/mogul_shadow_20/600
-        value: "#5a5853"
-        source_anchor: false
-      - name: attitash/mogul_shadow_20/700
-        value: "#3f3d37"
-        source_anchor: false
-      - name: attitash/mogul_shadow_20/800
-        value: "#26241e"
-        source_anchor: false
-      - name: attitash/mogul_shadow_20/900
-        value: "#0f0d07"
-        source_anchor: false
-      - name: attitash/mogul_shadow_20/950
-        value: "#010100"
-        source_anchor: false
-  - family: sharp_edge_grey
-    source_name: Sharp Edge Grey
-    source_value: "#3d4347"
-    source_anchor: 500_source
-    tokens:
-      - name: attitash/sharp_edge_grey/50
-        value: "#515253"
-        source_anchor: false
-      - name: attitash/sharp_edge_grey/100
-        value: "#4d4f51"
-        source_anchor: false
-      - name: attitash/sharp_edge_grey/200
-        value: "#494c4e"
-        source_anchor: false
-      - name: attitash/sharp_edge_grey/300
-        value: "#45494c"
-        source_anchor: false
-      - name: attitash/sharp_edge_grey/400
-        value: "#414649"
-        source_anchor: false
-      - name: attitash/sharp_edge_grey/500
-        value: "#3d4347"
-        source_anchor: true
-      - name: attitash/sharp_edge_grey/600
-        value: "#2c3337"
-        source_anchor: false
-      - name: attitash/sharp_edge_grey/700
-        value: "#1c2327"
-        source_anchor: false
-      - name: attitash/sharp_edge_grey/800
-        value: "#0e1418"
-        source_anchor: false
-      - name: attitash/sharp_edge_grey/900
-        value: "#03070b"
-        source_anchor: false
-      - name: attitash/sharp_edge_grey/950
-        value: "#000102"
-        source_anchor: false
-
+- family: attitash_blue
+  source_name: Attitash Blue
+  source_value: "#2a51a3"
+  source_anchor: 500_source
+  tokens:
+  - name: attitash/attitash_blue/100
+    value: "#f2f6ff"
+    source_anchor: false
+  - name: attitash/attitash_blue/200
+    value: "#e3ecff"
+    source_anchor: false
+  - name: attitash/attitash_blue/300
+    value: "#9fb8f5"
+    source_anchor: false
+  - name: attitash/attitash_blue/400
+    value: "#6f95d6"
+    source_anchor: false
+  - name: attitash/attitash_blue/500
+    value: "#2a51a3"
+    source_anchor: true
+  - name: attitash/attitash_blue/600
+    value: "#14398b"
+    source_anchor: false
+  - name: attitash/attitash_blue/700
+    value: "#012173"
+    source_anchor: false
+  - name: attitash/attitash_blue/800
+    value: "#00035c"
+    source_anchor: false
+  - name: attitash/attitash_blue/900
+    value: "#09002f"
+    source_anchor: false
+- family: daybreak
+  source_name: Daybreak
+  source_value: "#ffc629"
+  source_anchor: 500_source
+  tokens:
+  - name: attitash/daybreak/100
+    value: "#ede2ca"
+    source_anchor: false
+  - name: attitash/daybreak/200
+    value: "#f1ddb2"
+    source_anchor: false
+  - name: attitash/daybreak/300
+    value: "#f8d27c"
+    source_anchor: false
+  - name: attitash/daybreak/400
+    value: "#fccc5b"
+    source_anchor: false
+  - name: attitash/daybreak/500
+    value: "#ffc629"
+    source_anchor: true
+  - name: attitash/daybreak/600
+    value: "#cb9300"
+    source_anchor: false
+  - name: attitash/daybreak/700
+    value: "#996200"
+    source_anchor: false
+  - name: attitash/daybreak/800
+    value: "#693200"
+    source_anchor: false
+  - name: attitash/daybreak/900
+    value: "#0a0200"
+    source_anchor: false
+- family: attitash_neutral
+  source_name: Pure White + Mogul Shadow + Mogul Shadow 20% + Sharp Edge Grey
+  source_value: composite_family
+  source_anchor: 100_source / 100_source / 300_source / 800_source
+  tokens:
+  - name: attitash/attitash_neutral/100
+    value: "#ffffff"
+    source_anchor: true
+  - name: attitash/attitash_neutral/200
+    value: "#f2f2f2"
+    source_anchor: true
+  - name: attitash/attitash_neutral/300
+    value: "#c6c8c8"
+    source_anchor: true
+  - name: attitash/attitash_neutral/400
+    value: "#a8acac"
+    source_anchor: false
+  - name: attitash/attitash_neutral/500
+    value: "#8c9091"
+    source_anchor: false
+  - name: attitash/attitash_neutral/600
+    value: "#707577"
+    source_anchor: false
+  - name: attitash/attitash_neutral/700
+    value: "#565c5f"
+    source_anchor: false
+  - name: attitash/attitash_neutral/800
+    value: "#3d4347"
+    source_anchor: true
+  - name: attitash/attitash_neutral/900
+    value: "#000102"
+    source_anchor: false
 semantic_recommendations:
   role_sets:
-    - scope: neutral
-      source_family: attitash/attitash_neutral
-      targets:
-        - surface/neutral/*
-        - on_surface/neutral/*
-        - foreground/default
-        - foreground/subtle
-        - border/default
-        - border/subtle
-    - scope: brand
-      source_family: attitash/attitash_blue
-      targets:
-        - surface/brand/*
-        - on_surface/brand/*
-        - foreground/brand
-        - border/brand
-    - scope: brand_secondary
-      source_family: attitash/daybreak
-      targets:
-        - surface/brand_secondary/*
-        - on_surface/brand_secondary/*
-        - foreground/brand_secondary
-        - border/brand_secondary
-  global_only_families:
-    - attitash/mogul_shadow/*
-    - attitash/mogul_shadow_20/*
-    - attitash/sharp_edge_grey/*
+  - scope: neutral
+    source_family: attitash/attitash_neutral
+    targets:
+    - surface/neutral/*
+    - on_surface/neutral/*
+    - foreground/default
+    - foreground/subtle
+    - border/default
+    - border/subtle
+  - scope: brand
+    source_family: attitash/attitash_blue
+    targets:
+    - surface/brand/*
+    - on_surface/brand/*
+    - foreground/brand
+    - border/brand
+  - scope: brand_secondary
+    source_family: attitash/daybreak
+    targets:
+    - surface/brand_secondary/*
+    - on_surface/brand_secondary/*
+    - foreground/brand_secondary
+    - border/brand_secondary
+  global_only_families: []
   role_exceptions:
-    - target: assets/logo
-      source_token: Attitash
-      rationale: The semantic color extension stores the governed display label.
-
+  - target: assets/logo
+    source_token: Attitash
+    rationale: The semantic color extension stores the governed display label.
 live_figma_write:
   semantic_extension_id: VariableCollectionId:221:1437
   raw_color_families:
-    - attitash/attitash_blue/*
-    - attitash/daybreak/*
-    - attitash/attitash_neutral/*
-    - attitash/mogul_shadow/*
-    - attitash/mogul_shadow_20/*
-    - attitash/sharp_edge_grey/*
+  - attitash/attitash_blue/*
+  - attitash/daybreak/*
+  - attitash/attitash_neutral/*
   notes:
-    - 'Live semantic mapping uses `attitash_blue` for the primary expressive lane and `daybreak` for the supporting expressive lane.'
-    - 'The accent sub-palette remains available as raw-only families in `_Global: Color`.'
-
+  - Live semantic mapping uses `attitash_blue` for the primary expressive lane and `daybreak` for the supporting expressive lane.
+  - "`attitash_neutral` preserves the `Mogul Shadow 20%`, `Mogul Shadow`, and `Sharp Edge Grey` source anchors directly."
+  - The duplicate raw-only grey ramps were removed because they introduced no additional governed values beyond `attitash_neutral`.
 review_readiness:
   intended_review_channels:
+  - web
+  - email
+  - ads
+  review_rules:
+  - subject: Attitash neutral consolidation
+    channels:
     - web
     - email
     - ads
-  review_rules:
-    - subject: Attitash accent-family preservation
-      channels:
-        - web
-        - email
-        - ads
-      rule: Keep the mogul and sharp-edge greys raw-only in the first semantic pass.
-      source_basis: Source sheet explicitly presents them as an accent sub-palette.
-
+    rule: Keep `attitash_neutral` as the single grey family because it already preserves the accent-sheet grey anchors.
+    source_basis: "`Mogul Shadow 20%`, `Mogul Shadow`, and `Sharp Edge Grey` all land exactly on existing `attitash_neutral` steps."
 open_questions: []

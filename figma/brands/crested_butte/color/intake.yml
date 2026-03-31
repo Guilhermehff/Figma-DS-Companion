@@ -1,4 +1,4 @@
-date: 2026-03-11
+date: '2026-03-31'
 brand: crested_butte
 source_reference: User-provided image in chat showing the Crested Butte color palette and proportion guidance
 source_type: image
@@ -8,243 +8,188 @@ preview:
   required_before_write: true
   artifact: figma/brands/crested_butte/color/preview.md
   status: written_in_figma
-
 source_swatches:
-  - source_name: Crested Butte Powder White
-    provided_value: "#ffffff"
-    source_usage_scope: primary_brand_palette
-    channel_restrictions: not specified in source
-    notes: Source image lists RGB 255 255 255 and CMYK 0 0 0 0.
-  - source_name: Crested Butte Wild Red
-    provided_value: "#a5192e"
-    source_usage_scope: primary_brand_palette
-    channel_restrictions: not specified in source
-    notes: Source image lists RGB 165 25 46 and CMYK 25 100 100 12.
-  - source_name: Crested Butte Beyond Black
-    provided_value: "#1a1a1a"
-    source_usage_scope: primary_brand_palette
-    channel_restrictions: not specified in source
-    notes: Source image lists RGB 26 26 26 and CMYK 73 67 65 79.
-
+- source_name: Crested Butte Powder White
+  provided_value: "#ffffff"
+  source_usage_scope: primary_brand_palette
+  channel_restrictions: not specified in source
+  notes: Source image lists RGB 255 255 255 and CMYK 0 0 0 0.
+- source_name: Crested Butte Wild Red
+  provided_value: "#a5192e"
+  source_usage_scope: primary_brand_palette
+  channel_restrictions: not specified in source
+  notes: Source image lists RGB 165 25 46 and CMYK 25 100 100 12.
+- source_name: Crested Butte Beyond Black
+  provided_value: "#1a1a1a"
+  source_usage_scope: primary_brand_palette
+  channel_restrictions: not specified in source
+  notes: Source image lists RGB 26 26 26 and CMYK 73 67 65 79.
 universal_reuse:
   reuse_universal:
-    - source_name: Crested Butte Powder White
-      provided_value: "#ffffff"
-      existing_token: universal/white
-      reason: Exact match to the existing universal primitive.
+  - source_name: Crested Butte Powder White
+    provided_value: "#ffffff"
+    existing_token: universal/white
+    reason: Exact match to the existing universal primitive.
   new_brand_families:
-    - family: wild_red
-      source_name: Crested Butte Wild Red
-      provided_value: "#a5192e"
-      rationale: Signature brand red that carries the core Crested Butte identity and should map into the primary brand semantic ladder.
-      anchor_step: 700
-      anchor_label: 700_source
-    - family: beyond_black
-      source_name: Crested Butte Beyond Black
-      provided_value: "#1a1a1a"
-      rationale: Brand-defining dark neutral used as part of the primary palette and distinct from pure black.
-      anchor_step: 950
-      anchor_label: 950_source
+  - family: wild_red
+    source_name: Crested Butte Wild Red
+    provided_value: "#a5192e"
+    rationale: Signature brand red that carries the core Crested Butte identity and should map into the primary brand semantic ladder.
+    anchor_step: 700
+    anchor_label: 700_source
+  - family: beyond_black
+    source_name: Crested Butte Beyond Black
+    provided_value: "#1a1a1a"
+    rationale: Brand-defining dark neutral used as part of the primary palette and distinct from pure black.
+    anchor_step: 950
+    anchor_label: 900_source
   hold_for_review: []
-
 scale_spec:
   working_space: OKLCH
   steps:
-    - 50
-    - 100
-    - 200
-    - 300
-    - 400
-    - 500
-    - 600
-    - 700
-    - 800
-    - 900
-    - 950
+  - 100
+  - 200
+  - 300
+  - 400
+  - 500
+  - 600
+  - 700
+  - 800
+  - 900
   contrast_targets:
     white:
-      "800": "4.5:1 preferred"
-      "900": "7:1 required"
-      "950": "7:1 required"
+      '800': 4.5:1 preferred
+      '900': 7:1 required
     black:
-      "50": "7:1 required"
-      "100": "7:1 required"
-      "200": "4.5:1 required"
-
+      '100': 7:1 required
+      '200': 7:1 required
+      '300': 4.5:1 required
 family_scales:
-  - family: wild_red
-    source_name: Crested Butte Wild Red
-    source_value: "#a5192e"
-    source_anchor: 700_source
-    tokens:
-      - name: crested_butte/wild_red/50
-        value: "#fff8f8"
-        source_anchor: false
-      - name: crested_butte/wild_red/100
-        value: "#ffebea"
-        source_anchor: false
-      - name: crested_butte/wild_red/200
-        value: "#fed6d5"
-        source_anchor: false
-      - name: crested_butte/wild_red/300
-        value: "#feb7b6"
-        source_anchor: false
-      - name: crested_butte/wild_red/400
-        value: "#f29292"
-        source_anchor: false
-      - name: crested_butte/wild_red/500
-        value: "#dc666a"
-        source_anchor: false
-      - name: crested_butte/wild_red/600
-        value: "#c04049"
-        source_anchor: false
-      - name: crested_butte/wild_red/700
-        value: "#a5192e"
-        source_anchor: true
-      - name: crested_butte/wild_red/800
-        value: "#7b041c"
-        source_anchor: false
-      - name: crested_butte/wild_red/900
-        value: "#520210"
-        source_anchor: false
-      - name: crested_butte/wild_red/950
-        value: "#310106"
-        source_anchor: false
-  - family: beyond_black
-    source_name: Crested Butte Beyond Black
-    source_value: "#1a1a1a"
-    source_anchor: 950_source
-    tokens:
-      - name: crested_butte/beyond_black/50
-        value: "#fafafa"
-        source_anchor: false
-      - name: crested_butte/beyond_black/100
-        value: "#f0f0f0"
-        source_anchor: false
-      - name: crested_butte/beyond_black/200
-        value: "#e1e1e1"
-        source_anchor: false
-      - name: crested_butte/beyond_black/300
-        value: "#cccccc"
-        source_anchor: false
-      - name: crested_butte/beyond_black/400
-        value: "#b1b1b1"
-        source_anchor: false
-      - name: crested_butte/beyond_black/500
-        value: "#909090"
-        source_anchor: false
-      - name: crested_butte/beyond_black/600
-        value: "#737373"
-        source_anchor: false
-      - name: crested_butte/beyond_black/700
-        value: "#585858"
-        source_anchor: false
-      - name: crested_butte/beyond_black/800
-        value: "#404040"
-        source_anchor: false
-      - name: crested_butte/beyond_black/900
-        value: "#292929"
-        source_anchor: false
-      - name: crested_butte/beyond_black/950
-        value: "#1a1a1a"
-        source_anchor: true
-
+- family: wild_red
+  source_name: Crested Butte Wild Red
+  source_value: "#a5192e"
+  source_anchor: 700_source
+  tokens:
+  - name: crested_butte/wild_red/100
+    value: "#fff8f8"
+    source_anchor: false
+  - name: crested_butte/wild_red/200
+    value: "#ffebea"
+    source_anchor: false
+  - name: crested_butte/wild_red/300
+    value: "#feb7b6"
+    source_anchor: false
+  - name: crested_butte/wild_red/400
+    value: "#f29292"
+    source_anchor: false
+  - name: crested_butte/wild_red/500
+    value: "#dc666a"
+    source_anchor: false
+  - name: crested_butte/wild_red/600
+    value: "#c04049"
+    source_anchor: false
+  - name: crested_butte/wild_red/700
+    value: "#a5192e"
+    source_anchor: true
+  - name: crested_butte/wild_red/800
+    value: "#7b041c"
+    source_anchor: false
+  - name: crested_butte/wild_red/900
+    value: "#310106"
+    source_anchor: false
+- family: beyond_black
+  source_name: Crested Butte Beyond Black
+  source_value: "#1a1a1a"
+  source_anchor: 900_source
+  tokens:
+  - name: crested_butte/beyond_black/100
+    value: "#fafafa"
+    source_anchor: false
+  - name: crested_butte/beyond_black/200
+    value: "#f0f0f0"
+    source_anchor: false
+  - name: crested_butte/beyond_black/300
+    value: "#cccccc"
+    source_anchor: false
+  - name: crested_butte/beyond_black/400
+    value: "#b1b1b1"
+    source_anchor: false
+  - name: crested_butte/beyond_black/500
+    value: "#909090"
+    source_anchor: false
+  - name: crested_butte/beyond_black/600
+    value: "#737373"
+    source_anchor: false
+  - name: crested_butte/beyond_black/700
+    value: "#585858"
+    source_anchor: false
+  - name: crested_butte/beyond_black/800
+    value: "#404040"
+    source_anchor: false
+  - name: crested_butte/beyond_black/900
+    value: "#1a1a1a"
+    source_anchor: true
 color_proportion_guidance:
   status: active
   source_basis: Approximate ratios inferred from the relative widths of the three swatches in the supplied Crested Butte palette strip. The source does not publish exact percentages in text.
   contexts:
-    - name: brand_touchpoints
-      intent: Powder White slightly leads. Wild Red holds nearly equal weight as the main expressive lane. Beyond Black remains a smaller but still substantial grounding neutral.
-      proportions:
-        - source_color: Crested Butte Powder White
-          token: universal/white
-          percentage: 40
-          rationale: Widest field in the source strip and the leading open-space carrier.
-        - source_color: Crested Butte Wild Red
-          token: crested_butte/wild_red/700
-          percentage: 35
-          rationale: Near-equal central field and the main expressive brand color.
-        - source_color: Crested Butte Beyond Black
-          token: crested_butte/beyond_black/950
-          percentage: 25
-          rationale: Narrowest field in the strip and the grounding dark neutral.
-      notes:
-        - These percentages are approximate documentation guidance inferred from the displayed block widths rather than exact published source values.
-
+  - name: brand_touchpoints
+    intent: Powder White slightly leads. Wild Red holds nearly equal weight as the main expressive lane. Beyond Black remains a smaller but still substantial grounding neutral.
+    proportions:
+    - source_color: Crested Butte Powder White
+      token: universal/white
+      percentage: 40
+      rationale: Widest field in the source strip and the leading open-space carrier.
+    - source_color: Crested Butte Wild Red
+      token: crested_butte/wild_red/700
+      percentage: 35
+      rationale: Near-equal central field and the main expressive brand color.
+    - source_color: Crested Butte Beyond Black
+      token: crested_butte/beyond_black/900
+      percentage: 25
+      rationale: Narrowest field in the strip and the grounding dark neutral.
+    notes:
+    - These percentages are approximate documentation guidance inferred from the displayed block widths rather than exact published source values.
 validation:
   perceptual_consistency_notes:
-    - Wild Red lands at `700` because the provided source swatch already sits in a dark, high-contrast brand zone rather than a mid-scale accent zone.
-    - Beyond Black lands at `950` because the official source is nearly the darkest usable brand neutral and should remain distinct from universal black while preserving white contrast.
-    - Exact white is reused from the universal palette and is not duplicated under the Crested Butte brand group.
-    - The approved role-based semantic extension maps `brand/*` and `brand_secondary/*` to the Wild Red ladder while `neutral/*` maps to Beyond Black.
+  - Wild Red lands at `700` because the provided source swatch already sits in a dark, high-contrast brand zone rather than a mid-scale accent zone.
+  - Beyond Black lands at `950` because the official source is nearly the darkest usable brand neutral and should remain distinct from universal black while preserving white contrast.
+  - Exact white is reused from the universal palette and is not duplicated under the Crested Butte brand group.
+  - The approved role-based semantic extension maps `brand/*` and `brand_secondary/*` to the Wild Red ladder while `neutral/*` maps to Beyond Black.
   contrast_checks:
-    - token: crested_butte/wild_red/100
-      foreground: black
-      ratio: "18.32:1"
-      result: pass
-    - token: crested_butte/wild_red/200
-      foreground: black
-      ratio: "15.79:1"
-      result: pass
-    - token: crested_butte/wild_red/800
-      foreground: white
-      ratio: "11.19:1"
-      result: pass
-    - token: crested_butte/wild_red/900
-      foreground: white
-      ratio: "15.27:1"
-      result: pass
-    - token: crested_butte/wild_red/950
-      foreground: white
-      ratio: "18.46:1"
-      result: pass
-    - token: crested_butte/beyond_black/100
-      foreground: black
-      ratio: "18.43:1"
-      result: pass
-    - token: crested_butte/beyond_black/200
-      foreground: black
-      ratio: "16.06:1"
-      result: pass
-    - token: crested_butte/beyond_black/800
-      foreground: white
-      ratio: "10.37:1"
-      result: pass
-    - token: crested_butte/beyond_black/900
-      foreground: white
-      ratio: "14.55:1"
-      result: pass
-    - token: crested_butte/beyond_black/950
-      foreground: white
-      ratio: "17.40:1"
-      result: pass
-
+  - token: crested_butte/wild_red/800
+    foreground: white
+    ratio: 11.19:1
+    result: pass
+  - token: crested_butte/beyond_black/800
+    foreground: white
+    ratio: 10.37:1
+    result: pass
 review_readiness:
   intended_review_channels:
+  - web
+  - email
+  - ads
+  review_rules:
+  - subject: Crested Butte Powder White
+    channels:
     - web
     - email
     - ads
-  review_rules:
-    - subject: Crested Butte Powder White
-      channels:
-        - web
-        - email
-        - ads
-      rule: Reuse `universal/white` instead of creating a duplicate brand white.
-      source_basis: The source swatch is an exact `#ffffff` match.
-    - subject: Crested Butte Wild Red
-      channels:
-        - web
-        - email
-        - ads
-      rule: Treat `wild_red/*` as the source for `brand/*` and `brand_secondary/*` while keeping any extra reuse global-only and separate from shared feedback semantics.
-      source_basis: The source presents Wild Red as part of the core brand palette, not as a state color.
-    - subject: Crested Butte Beyond Black
-      channels:
-        - web
-        - email
-        - ads
-      rule: Feed `beyond_black/*` into the semantic neutral ladder and use it for dark-on-light or light-on-dark brand surfaces.
-      source_basis: The source names Beyond Black as a primary palette color alongside Wild Red and Powder White.
-
+    rule: Reuse `universal/white` instead of creating a duplicate brand white.
+    source_basis: The source swatch is an exact `#ffffff` match.
+  - subject: Crested Butte Wild Red
+    channels:
+    - web
+    - email
+    - ads
+    rule: Treat `wild_red/*` as the source for `brand/*` and `brand_secondary/*` while keeping any extra reuse global-only and separate from shared feedback semantics.
+    source_basis: The source presents Wild Red as part of the core brand palette, not as a state color.
+  - subject: Crested Butte Beyond Black
+    channels:
+    - web
+    - email
+    - ads
+    rule: Feed `beyond_black/*` into the semantic neutral ladder and use it for dark-on-light or light-on-dark brand surfaces.
+    source_basis: The source names Beyond Black as a primary palette color alongside Wild Red and Powder White.
 open_questions: []

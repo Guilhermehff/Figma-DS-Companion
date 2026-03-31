@@ -1,4 +1,4 @@
-date: 2026-03-18
+date: '2026-03-31'
 brand: crotched
 source_reference: User-provided image in chat showing the Crotched Mountain logo and color guidelines
 source_type: image
@@ -8,244 +8,209 @@ preview:
   required_before_write: true
   artifact: figma/brands/crotched/color/preview.md
   status: written_in_figma
-
 source_swatches:
-  - source_name: Rocket Fuel
-    provided_value: "#b2db44"
-    source_usage_scope: primary color system plus sub-brand system
-    channel_restrictions: not specified in source
-    notes: Source image lists PMS 375C and 381U, CMYK 35 0 87 0, web RGB 178 219 68, and HEX #B2DB44.
-  - source_name: Snow Gun
-    provided_value: "#413c37"
-    source_usage_scope: primary color system plus sub-brand system
-    channel_restrictions: not specified in source
-    notes: Source image lists PMS 418C and 419U, CMYK 63 61 65 52, web RGB 65 60 55, and HEX #413C37.
-  - source_name: Black
-    provided_value: "#000000"
-    source_usage_scope: rich black when applicable
-    channel_restrictions: not specified in source
-    notes: Source image lists CMYK 0 0 0 100 and HEX #000000.
-  - source_name: White
-    provided_value: "#ffffff"
-    source_usage_scope: neutral support
-    channel_restrictions: not specified in source
-    notes: Source image lists CMYK 0 0 0 0 and HEX #FFFFFF.
-
+- source_name: Rocket Fuel
+  provided_value: "#b2db44"
+  source_usage_scope: primary color system plus sub-brand system
+  channel_restrictions: not specified in source
+  notes: Source image lists PMS 375C and 381U, CMYK 35 0 87 0, web RGB 178 219 68, and HEX
+- source_name: Snow Gun
+  provided_value: "#413c37"
+  source_usage_scope: primary color system plus sub-brand system
+  channel_restrictions: not specified in source
+  notes: Source image lists PMS 418C and 419U, CMYK 63 61 65 52, web RGB 65 60 55, and HEX
+- source_name: Black
+  provided_value: "#000000"
+  source_usage_scope: rich black when applicable
+  channel_restrictions: not specified in source
+  notes: Source image lists CMYK 0 0 0 100 and HEX
+- source_name: White
+  provided_value: "#ffffff"
+  source_usage_scope: neutral support
+  channel_restrictions: not specified in source
+  notes: Source image lists CMYK 0 0 0 0 and HEX
 universal_reuse:
   reuse_universal:
-    - source_name: Black
-      provided_value: "#000000"
-      existing_token: universal/black
-      rationale: Exact match to the shared universal black primitive, so no duplicate Crotched black token should be created.
-    - source_name: White
-      provided_value: "#ffffff"
-      existing_token: universal/white
-      rationale: Exact match to the shared universal white primitive, so no duplicate Crotched white token should be created.
+  - source_name: Black
+    provided_value: "#000000"
+    existing_token: universal/black
+    rationale: Exact match to the shared universal black primitive, so no duplicate Crotched black token should be created.
+  - source_name: White
+    provided_value: "#ffffff"
+    existing_token: universal/white
+    rationale: Exact match to the shared universal white primitive, so no duplicate Crotched white token should be created.
   new_brand_families:
-    - family: rocket_fuel
-      source_name: Rocket Fuel
-      provided_value: "#b2db44"
-      rationale: Bright signature lime that should anchor the primary expressive lane.
-      anchor_step: 400
-      anchor_label: 400_source
-    - family: snow_gun
-      source_name: Snow Gun
-      provided_value: "#413c37"
-      rationale: Dark supporting brand color that should drive the secondary expressive lane without collapsing into exact shared black.
-      anchor_step: 900
-      anchor_label: 900_source
+  - family: rocket_fuel
+    source_name: Rocket Fuel
+    provided_value: "#b2db44"
+    rationale: Bright signature lime that should anchor the primary expressive lane.
+    anchor_step: 400
+    anchor_label: 400_source
+  - family: snow_gun
+    source_name: Snow Gun
+    provided_value: "#413c37"
+    rationale: Dark supporting brand color that should drive the secondary expressive lane without collapsing into exact shared black.
+    anchor_step: 900
+    anchor_label: 900_source
   hold_for_review: []
-
 scale_spec:
   working_space: OKLCH
   steps:
-    - 50
-    - 100
-    - 200
-    - 300
-    - 400
-    - 500
-    - 600
-    - 700
-    - 800
-    - 900
-    - 950
+  - 100
+  - 200
+  - 300
+  - 400
+  - 500
+  - 600
+  - 700
+  - 800
+  - 900
   contrast_targets:
     white:
-      "800": "4.5:1 preferred"
-      "900": "7:1 required"
-      "950": "7:1 required"
+      '800': 4.5:1 preferred
+      '900': 7:1 required
     black:
-      "50": "7:1 required"
-      "100": "7:1 required"
-      "200": "4.5:1 required"
-
+      '100': 7:1 required
+      '200': 7:1 required
+      '300': 4.5:1 required
 family_scales:
-  - family: rocket_fuel
-    source_name: Rocket Fuel
-    source_value: "#b2db44"
-    source_anchor: 400_source
-    tokens:
-      - name: crotched/rocket_fuel/50
-        value: "#fbfdf4"
-        source_anchor: false
-      - name: crotched/rocket_fuel/100
-        value: "#f1f8df"
-        source_anchor: false
-      - name: crotched/rocket_fuel/200
-        value: "#deefb3"
-        source_anchor: false
-      - name: crotched/rocket_fuel/300
-        value: "#c8e777"
-        source_anchor: false
-      - name: crotched/rocket_fuel/400
-        value: "#b2db44"
-        source_anchor: true
-      - name: crotched/rocket_fuel/500
-        value: "#94be35"
-        source_anchor: false
-      - name: crotched/rocket_fuel/600
-        value: "#789f2b"
-        source_anchor: false
-      - name: crotched/rocket_fuel/700
-        value: "#5d7d22"
-        source_anchor: false
-      - name: crotched/rocket_fuel/800
-        value: "#445c1a"
-        source_anchor: false
-      - name: crotched/rocket_fuel/900
-        value: "#2e3e12"
-        source_anchor: false
-      - name: crotched/rocket_fuel/950
-        value: "#192108"
-        source_anchor: false
-  - family: snow_gun
-    source_name: Snow Gun
-    source_value: "#413c37"
-    source_anchor: 900_source
-    tokens:
-      - name: crotched/snow_gun/50
-        value: "#fbfaf9"
-        source_anchor: false
-      - name: crotched/snow_gun/100
-        value: "#f1efed"
-        source_anchor: false
-      - name: crotched/snow_gun/200
-        value: "#ddd7d2"
-        source_anchor: false
-      - name: crotched/snow_gun/300
-        value: "#c3bab3"
-        source_anchor: false
-      - name: crotched/snow_gun/400
-        value: "#a69a90"
-        source_anchor: false
-      - name: crotched/snow_gun/500
-        value: "#897c72"
-        source_anchor: false
-      - name: crotched/snow_gun/600
-        value: "#71655d"
-        source_anchor: false
-      - name: crotched/snow_gun/700
-        value: "#5b524c"
-        source_anchor: false
-      - name: crotched/snow_gun/800
-        value: "#4c443f"
-        source_anchor: false
-      - name: crotched/snow_gun/900
-        value: "#413c37"
-        source_anchor: true
-      - name: crotched/snow_gun/950
-        value: "#25221f"
-        source_anchor: false
-
+- family: rocket_fuel
+  source_name: Rocket Fuel
+  source_value: "#b2db44"
+  source_anchor: 400_source
+  tokens:
+  - name: crotched/rocket_fuel/100
+    value: "#fbfdf4"
+    source_anchor: false
+  - name: crotched/rocket_fuel/200
+    value: "#f1f8df"
+    source_anchor: false
+  - name: crotched/rocket_fuel/300
+    value: "#c8e777"
+    source_anchor: false
+  - name: crotched/rocket_fuel/400
+    value: "#b2db44"
+    source_anchor: true
+  - name: crotched/rocket_fuel/500
+    value: "#94be35"
+    source_anchor: false
+  - name: crotched/rocket_fuel/600
+    value: "#789f2b"
+    source_anchor: false
+  - name: crotched/rocket_fuel/700
+    value: "#5d7d22"
+    source_anchor: false
+  - name: crotched/rocket_fuel/800
+    value: "#445c1a"
+    source_anchor: false
+  - name: crotched/rocket_fuel/900
+    value: "#192108"
+    source_anchor: false
+- family: snow_gun
+  source_name: Snow Gun
+  source_value: "#413c37"
+  source_anchor: 900_source
+  tokens:
+  - name: crotched/snow_gun/100
+    value: "#fbfaf9"
+    source_anchor: false
+  - name: crotched/snow_gun/200
+    value: "#f1efed"
+    source_anchor: false
+  - name: crotched/snow_gun/300
+    value: "#c3bab3"
+    source_anchor: false
+  - name: crotched/snow_gun/400
+    value: "#a69a90"
+    source_anchor: false
+  - name: crotched/snow_gun/500
+    value: "#897c72"
+    source_anchor: false
+  - name: crotched/snow_gun/600
+    value: "#71655d"
+    source_anchor: false
+  - name: crotched/snow_gun/700
+    value: "#5b524c"
+    source_anchor: false
+  - name: crotched/snow_gun/800
+    value: "#4c443f"
+    source_anchor: false
+  - name: crotched/snow_gun/900
+    value: "#413c37"
+    source_anchor: true
 validation:
   perceptual_consistency_notes:
-    - Exact black and white remain shared through the universal neutral primitives, so Crotched only adds the two branded expressive families supplied by the source.
-    - "`rocket_fuel` stays bright at the source step and darkens quickly enough to support accessible branded surfaces."
-    - "`snow_gun` remains a deep brown-charcoal family distinct from exact black while preserving the supplied source swatch as the stronger secondary step."
+  - Exact black and white remain shared through the universal neutral primitives, so Crotched only adds the two branded expressive families supplied by the source.
+  - "`rocket_fuel` stays bright at the source step and darkens quickly enough to support accessible branded surfaces."
+  - "`snow_gun` remains a deep brown-charcoal family distinct from exact black while preserving the supplied source swatch as the stronger secondary step."
   contrast_checks:
-    - token: crotched/rocket_fuel/700
-      foreground: white
-      ratio: "4.75:1"
-      result: pass
-    - token: crotched/rocket_fuel/800
-      foreground: white
-      ratio: "7.52:1"
-      result: pass
-    - token: crotched/rocket_fuel/900
-      foreground: white
-      ratio: "11.58:1"
-      result: pass
-    - token: crotched/snow_gun/800
-      foreground: white
-      ratio: "9.52:1"
-      result: pass
-    - token: crotched/snow_gun/900
-      foreground: white
-      ratio: "10.90:1"
-      result: pass
-    - token: crotched/rocket_fuel/100
-      foreground: black
-      ratio: "19.23:1"
-      result: pass
-    - token: crotched/snow_gun/100
-      foreground: black
-      ratio: "18.31:1"
-      result: pass
-
+  - token: crotched/rocket_fuel/700
+    foreground: white
+    ratio: 4.75:1
+    result: pass
+  - token: crotched/rocket_fuel/800
+    foreground: white
+    ratio: 7.52:1
+    result: pass
+  - token: crotched/snow_gun/800
+    foreground: white
+    ratio: 9.52:1
+    result: pass
+  - token: crotched/snow_gun/900
+    foreground: white
+    ratio: 10.90:1
+    result: pass
 semantic_recommendations:
   role_sets:
-    - scope: neutral
-      source_family: inherited_base
-      rationale: Exact black and white are already governed by the shared universal primitives, so the first pass keeps the neutral role set inherited.
-      targets:
-        - surface/neutral/*
-        - on_surface/neutral/*
-        - foreground/default
-        - foreground/subtle
-        - border/default
-        - border/subtle
-    - scope: brand
-      source_family: crotched/rocket_fuel
-      rationale: Rocket Fuel is the signature bright brand color and should drive the primary expressive semantic lane.
-      targets:
-        - surface/brand/*
-        - on_surface/brand/*
-        - foreground/brand
-        - border/brand
-    - scope: brand_secondary
-      source_family: crotched/snow_gun
-      rationale: Snow Gun is the dark supporting brand color and should drive the secondary expressive lane.
-      targets:
-        - surface/brand_secondary/*
-        - on_surface/brand_secondary/*
-        - foreground/brand_secondary
-        - border/brand_secondary
+  - scope: neutral
+    source_family: inherited_base
+    rationale: Exact black and white are already governed by the shared universal primitives, so the first pass keeps the neutral role set inherited.
+    targets:
+    - surface/neutral/*
+    - on_surface/neutral/*
+    - foreground/default
+    - foreground/subtle
+    - border/default
+    - border/subtle
+  - scope: brand
+    source_family: crotched/rocket_fuel
+    rationale: Rocket Fuel is the signature bright brand color and should drive the primary expressive semantic lane.
+    targets:
+    - surface/brand/*
+    - on_surface/brand/*
+    - foreground/brand
+    - border/brand
+  - scope: brand_secondary
+    source_family: crotched/snow_gun
+    rationale: Snow Gun is the dark supporting brand color and should drive the secondary expressive lane.
+    targets:
+    - surface/brand_secondary/*
+    - on_surface/brand_secondary/*
+    - foreground/brand_secondary
+    - border/brand_secondary
   global_only_families: []
   role_exceptions:
-    - target: assets/logo
-      source_token: Crotched
-      rationale: The live semantic color schema stores the governed brand display label in `assets/logo`; the source image shows longer logo lockups, but the user requested the brand be added as Crotched.
-
+  - target: assets/logo
+    source_token: Crotched
+    rationale: The live semantic color schema stores the governed brand display label in `assets/logo`; the source image shows longer logo lockups, but the user requested the brand be added as Crotched.
 review_readiness:
   intended_review_channels:
+  - web
+  - email
+  - ads
+  review_rules:
+  - subject: Crotched expressive lane order
+    channels:
     - web
     - email
     - ads
-  review_rules:
-    - subject: Crotched expressive lane order
-      channels:
-        - web
-        - email
-        - ads
-      rule: Use `rocket_fuel` as the primary expressive lane and `snow_gun` as the secondary expressive lane.
-      source_basis: Source image names the supplied branded colors and distinguishes them from exact black and white.
-    - subject: Crotched neutral reuse
-      channels:
-        - web
-        - email
-        - ads
-      rule: Reuse `universal/black` and `universal/white` rather than duplicating exact neutral primitives.
-      source_basis: Source image provides exact black and white values that match the shared universal tokens.
-
+    rule: Use `rocket_fuel` as the primary expressive lane and `snow_gun` as the secondary expressive lane.
+    source_basis: Source image names the supplied branded colors and distinguishes them from exact black and white.
+  - subject: Crotched neutral reuse
+    channels:
+    - web
+    - email
+    - ads
+    rule: Reuse `universal/black` and `universal/white` rather than duplicating exact neutral primitives.
+    source_basis: Source image provides exact black and white values that match the shared universal tokens.
 open_questions: []

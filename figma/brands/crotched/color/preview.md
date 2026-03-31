@@ -1,33 +1,42 @@
 # Crotched Color Preview
 
-Review state: approved preview artifact. Verify live write state in `figma/brands/crotched/brand.yml` and Figma.
+Review state: written in figma. Verify live write state in `figma/brands/crotched/brand.yml` and Figma.
 
 ## Original Source Swatches
 
 - Source color: `Rocket Fuel`
   Provided value: `#b2db44`
   Usage scope: `primary color system plus sub-brand system`
-  Notes: Source image lists PMS `375C` and `381U`, RGB `178 219 68`, and HEX `#B2DB44`.
+  Channel restrictions: `not specified in source`
+  Notes: Source image lists PMS 375C and 381U, CMYK 35 0 87 0, web RGB 178 219 68, and HEX
 
 - Source color: `Snow Gun`
   Provided value: `#413c37`
   Usage scope: `primary color system plus sub-brand system`
-  Notes: Source image lists PMS `418C` and `419U`, RGB `65 60 55`, and HEX `#413C37`.
+  Channel restrictions: `not specified in source`
+  Notes: Source image lists PMS 418C and 419U, CMYK 63 61 65 52, web RGB 65 60 55, and HEX
 
 - Source color: `Black`
   Provided value: `#000000`
   Usage scope: `rich black when applicable`
-  Notes: Exact match to `universal/black`.
+  Channel restrictions: `not specified in source`
+  Notes: Source image lists CMYK 0 0 0 100 and HEX
 
 - Source color: `White`
   Provided value: `#ffffff`
   Usage scope: `neutral support`
-  Notes: Exact match to `universal/white`.
+  Channel restrictions: `not specified in source`
+  Notes: Source image lists CMYK 0 0 0 0 and HEX
 
 ## Universal Reuse
 
-- `Black` reuses `universal/black`.
-- `White` reuses `universal/white`.
+- Source color: `Black`
+  Proposed token: `universal/black`
+  Notes: Exact match to the shared universal black primitive, so no duplicate Crotched black token should be created.
+
+- Source color: `White`
+  Proposed token: `universal/white`
+  Notes: Exact match to the shared universal white primitive, so no duplicate Crotched white token should be created.
 
 ## Proposed Families
 
@@ -36,17 +45,15 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
 Source anchor: `400_source`
 
 <div>
-  <span title="50 #fbfdf4" style="display:inline-block;width:32px;height:32px;background:#fbfdf4;border:1px solid #d1d5db;"></span>
-  <span title="100 #f1f8df" style="display:inline-block;width:32px;height:32px;background:#f1f8df;border:1px solid #d1d5db;"></span>
-  <span title="200 #deefb3" style="display:inline-block;width:32px;height:32px;background:#deefb3;border:1px solid #d1d5db;"></span>
+  <span title="100 #fbfdf4" style="display:inline-block;width:32px;height:32px;background:#fbfdf4;border:1px solid #d1d5db;"></span>
+  <span title="200 #f1f8df" style="display:inline-block;width:32px;height:32px;background:#f1f8df;border:1px solid #d1d5db;"></span>
   <span title="300 #c8e777" style="display:inline-block;width:32px;height:32px;background:#c8e777;border:1px solid #d1d5db;"></span>
   <span title="400 #b2db44" style="display:inline-block;width:32px;height:32px;background:#b2db44;border:1px solid #d1d5db;"></span>
   <span title="500 #94be35" style="display:inline-block;width:32px;height:32px;background:#94be35;border:1px solid #d1d5db;"></span>
   <span title="600 #789f2b" style="display:inline-block;width:32px;height:32px;background:#789f2b;border:1px solid #d1d5db;"></span>
   <span title="700 #5d7d22" style="display:inline-block;width:32px;height:32px;background:#5d7d22;border:1px solid #d1d5db;"></span>
   <span title="800 #445c1a" style="display:inline-block;width:32px;height:32px;background:#445c1a;border:1px solid #d1d5db;"></span>
-  <span title="900 #2e3e12" style="display:inline-block;width:32px;height:32px;background:#2e3e12;border:1px solid #d1d5db;"></span>
-  <span title="950 #192108" style="display:inline-block;width:32px;height:32px;background:#192108;border:1px solid #d1d5db;"></span>
+  <span title="900 #192108" style="display:inline-block;width:32px;height:32px;background:#192108;border:1px solid #d1d5db;"></span>
 </div>
 
 ### Family: snow_gun
@@ -54,9 +61,8 @@ Source anchor: `400_source`
 Source anchor: `900_source`
 
 <div>
-  <span title="50 #fbfaf9" style="display:inline-block;width:32px;height:32px;background:#fbfaf9;border:1px solid #d1d5db;"></span>
-  <span title="100 #f1efed" style="display:inline-block;width:32px;height:32px;background:#f1efed;border:1px solid #d1d5db;"></span>
-  <span title="200 #ddd7d2" style="display:inline-block;width:32px;height:32px;background:#ddd7d2;border:1px solid #d1d5db;"></span>
+  <span title="100 #fbfaf9" style="display:inline-block;width:32px;height:32px;background:#fbfaf9;border:1px solid #d1d5db;"></span>
+  <span title="200 #f1efed" style="display:inline-block;width:32px;height:32px;background:#f1efed;border:1px solid #d1d5db;"></span>
   <span title="300 #c3bab3" style="display:inline-block;width:32px;height:32px;background:#c3bab3;border:1px solid #d1d5db;"></span>
   <span title="400 #a69a90" style="display:inline-block;width:32px;height:32px;background:#a69a90;border:1px solid #d1d5db;"></span>
   <span title="500 #897c72" style="display:inline-block;width:32px;height:32px;background:#897c72;border:1px solid #d1d5db;"></span>
@@ -64,20 +70,24 @@ Source anchor: `900_source`
   <span title="700 #5b524c" style="display:inline-block;width:32px;height:32px;background:#5b524c;border:1px solid #d1d5db;"></span>
   <span title="800 #4c443f" style="display:inline-block;width:32px;height:32px;background:#4c443f;border:1px solid #d1d5db;"></span>
   <span title="900 #413c37" style="display:inline-block;width:32px;height:32px;background:#413c37;border:1px solid #d1d5db;"></span>
-  <span title="950 #25221f" style="display:inline-block;width:32px;height:32px;background:#25221f;border:1px solid #d1d5db;"></span>
 </div>
 
 ## Review Notes
 
-- Crotched supplies two branded expressive colors plus exact black and white neutrals that already exist in the shared universal set.
-- The live first pass keeps neutral roles inherited from base, uses `rocket_fuel/*` for the primary expressive lane, and uses `snow_gun/*` for the secondary expressive lane.
+- Exact black and white remain shared through the universal neutral primitives, so Crotched only adds the two branded expressive families supplied by the source.
+- `rocket_fuel` stays bright at the source step and darkens quickly enough to support accessible branded surfaces.
+- `snow_gun` remains a deep brown-charcoal family distinct from exact black while preserving the supplied source swatch as the stronger secondary step.
 
 ## Live Semantic Mapping
 
-- `surface/neutral/*`, `on_surface/neutral/*`, `foreground/default`, `foreground/subtle`, `border/default`, `border/subtle` -> inherit shared base
-- `surface/brand/*`, `on_surface/brand/*`, `foreground/brand`, `border/brand` -> `crotched/rocket_fuel/*`
-- `surface/brand_secondary/*`, `on_surface/brand_secondary/*`, `foreground/brand_secondary`, `border/brand_secondary` -> `crotched/snow_gun/*`
+- `surface/neutral/*`, `on_surface/neutral/*`, `foreground/default`, `foreground/subtle`, `border/default`, `border/subtle` -> `inherited_base`
+  Exact black and white are already governed by the shared universal primitives, so the first pass keeps the neutral role set inherited.
+- `surface/brand/*`, `on_surface/brand/*`, `foreground/brand`, `border/brand` -> `crotched/rocket_fuel`
+  Rocket Fuel is the signature bright brand color and should drive the primary expressive semantic lane.
+- `surface/brand_secondary/*`, `on_surface/brand_secondary/*`, `foreground/brand_secondary`, `border/brand_secondary` -> `crotched/snow_gun`
+  Snow Gun is the dark supporting brand color and should drive the secondary expressive lane.
 - `assets/logo` -> `Crotched`
+  The live semantic color schema stores the governed brand display label in `assets/logo`; the source image shows longer logo lockups, but the user requested the brand be added as Crotched.
 
 ## Review Readiness
 

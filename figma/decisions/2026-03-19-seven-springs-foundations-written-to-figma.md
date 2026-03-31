@@ -8,7 +8,7 @@
 - Figma file (if applicable): https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Foundations?node-id=1-3
 - Stakeholders: Design System Governance, user approval in chat
 - Supersedes:
-- Superseded by:
+- Superseded by: figma/decisions/2026-03-31-seven-springs-wildin-yellow-global-promotion.md (terrain-park yellow exception only)
 
 ## Context
 

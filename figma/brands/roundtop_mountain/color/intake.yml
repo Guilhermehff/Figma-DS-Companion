@@ -1,4 +1,4 @@
-date: 2026-03-18
+date: '2026-03-31'
 brand: roundtop_mountain
 source_reference: User-provided image in chat showing the Roundtop Mountain logo and color guidelines
 source_type: image
@@ -59,7 +59,6 @@ universal_reuse:
 scale_spec:
   working_space: OKLCH
   steps:
-  - 50
   - 100
   - 200
   - 300
@@ -69,30 +68,25 @@ scale_spec:
   - 700
   - 800
   - 900
-  - 950
   contrast_targets:
     white:
       '800': 4.5:1 preferred
       '900': 7:1 required
-      '950': 7:1 required
     black:
-      '50': 7:1 required
       '100': 7:1 required
-      '200': 4.5:1 required
+      '200': 7:1 required
+      '300': 4.5:1 required
 family_scales:
 - family: green
   source_name: Green
   source_value: "#75c045"
   source_anchor: 500_source
   tokens:
-  - name: roundtop_mountain/green/50
+  - name: roundtop_mountain/green/100
     value: "#e1f1d6"
     source_anchor: false
-  - name: roundtop_mountain/green/100
-    value: "#cde8bc"
-    source_anchor: false
   - name: roundtop_mountain/green/200
-    value: "#b9dfa1"
+    value: "#cde8bc"
     source_anchor: false
   - name: roundtop_mountain/green/300
     value: "#a4d685"
@@ -113,9 +107,6 @@ family_scales:
     value: "#31501d"
     source_anchor: false
   - name: roundtop_mountain/green/900
-    value: "#254018"
-    source_anchor: false
-  - name: roundtop_mountain/green/950
     value: "#1d2f11"
     source_anchor: false
 - family: blue
@@ -123,14 +114,11 @@ family_scales:
   source_value: "#007fad"
   source_anchor: 600_source
   tokens:
-  - name: roundtop_mountain/blue/50
+  - name: roundtop_mountain/blue/100
     value: "#cce6ef"
     source_anchor: false
-  - name: roundtop_mountain/blue/100
-    value: "#add6e5"
-    source_anchor: false
   - name: roundtop_mountain/blue/200
-    value: "#8ec6db"
+    value: "#add6e5"
     source_anchor: false
   - name: roundtop_mountain/blue/300
     value: "#6db6d0"
@@ -151,9 +139,6 @@ family_scales:
     value: "#004058"
     source_anchor: false
   - name: roundtop_mountain/blue/900
-    value: "#003246"
-    source_anchor: false
-  - name: roundtop_mountain/blue/950
     value: "#002532"
     source_anchor: false
 - family: yellow
@@ -161,14 +146,11 @@ family_scales:
   source_value: "#f6c542"
   source_anchor: 300_source
   tokens:
-  - name: roundtop_mountain/yellow/50
+  - name: roundtop_mountain/yellow/100
     value: "#fceec8"
     source_anchor: false
-  - name: roundtop_mountain/yellow/100
-    value: "#fae29f"
-    source_anchor: false
   - name: roundtop_mountain/yellow/200
-    value: "#f8d474"
+    value: "#fae29f"
     source_anchor: false
   - name: roundtop_mountain/yellow/300
     value: "#f6c542"
@@ -189,9 +171,6 @@ family_scales:
     value: "#4f3f15"
     source_anchor: false
   - name: roundtop_mountain/yellow/900
-    value: "#403311"
-    source_anchor: false
-  - name: roundtop_mountain/yellow/950
     value: "#31270d"
     source_anchor: false
 - family: orange
@@ -199,14 +178,11 @@ family_scales:
   source_value: "#faa552"
   source_anchor: 300_source
   tokens:
-  - name: roundtop_mountain/orange/50
+  - name: roundtop_mountain/orange/100
     value: "#fee5cd"
     source_anchor: false
-  - name: roundtop_mountain/orange/100
-    value: "#fcd1a7"
-    source_anchor: false
   - name: roundtop_mountain/orange/200
-    value: "#fbbd80"
+    value: "#fcd1a7"
     source_anchor: false
   - name: roundtop_mountain/orange/300
     value: "#faa552"
@@ -227,9 +203,6 @@ family_scales:
     value: "#50351a"
     source_anchor: false
   - name: roundtop_mountain/orange/900
-    value: "#402a14"
-    source_anchor: false
-  - name: roundtop_mountain/orange/950
     value: "#322110"
     source_anchor: false
 - family: red
@@ -237,14 +210,11 @@ family_scales:
   source_value: "#e25c5c"
   source_anchor: 400_source
   tokens:
-  - name: roundtop_mountain/red/50
+  - name: roundtop_mountain/red/100
     value: "#f8d7d7"
     source_anchor: false
-  - name: roundtop_mountain/red/100
-    value: "#f3bbbb"
-    source_anchor: false
   - name: roundtop_mountain/red/200
-    value: "#ee9e9e"
+    value: "#f3bbbb"
     source_anchor: false
   - name: roundtop_mountain/red/300
     value: "#e87f7f"
@@ -265,9 +235,6 @@ family_scales:
     value: "#522121"
     source_anchor: false
   - name: roundtop_mountain/red/900
-    value: "#401a1a"
-    source_anchor: false
-  - name: roundtop_mountain/red/950
     value: "#321414"
     source_anchor: false
 - family: cyan
@@ -275,14 +242,11 @@ family_scales:
   source_value: "#93cfd2"
   source_anchor: 300_source
   tokens:
-  - name: roundtop_mountain/cyan/50
+  - name: roundtop_mountain/cyan/100
     value: "#e0f1f2"
     source_anchor: false
-  - name: roundtop_mountain/cyan/100
-    value: "#c8e7e8"
-    source_anchor: false
   - name: roundtop_mountain/cyan/200
-    value: "#b0dcde"
+    value: "#c8e7e8"
     source_anchor: false
   - name: roundtop_mountain/cyan/300
     value: "#93cfd2"
@@ -303,9 +267,6 @@ family_scales:
     value: "#2f4243"
     source_anchor: false
   - name: roundtop_mountain/cyan/900
-    value: "#243536"
-    source_anchor: false
-  - name: roundtop_mountain/cyan/950
     value: "#1d292a"
     source_anchor: false
 semantic_recommendations:

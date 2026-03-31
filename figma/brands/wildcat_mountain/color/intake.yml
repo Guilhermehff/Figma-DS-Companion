@@ -1,4 +1,4 @@
-date: 2026-03-18
+date: '2026-03-31'
 brand: wildcat_mountain
 source_reference: User-provided image in chat showing the Wildcat Mountain logo and color guidelines
 source_type: image
@@ -35,7 +35,7 @@ universal_reuse:
   - family: wildcat_tan
     provided_value: "#e8e1be"
     anchor_step: 200
-    anchor_label: 200_source
+    anchor_label: 300_source
   - family: wildcat_teal
     provided_value: "#008a7e"
     anchor_step: 700
@@ -47,7 +47,6 @@ universal_reuse:
 scale_spec:
   working_space: OKLCH
   steps:
-  - 50
   - 100
   - 200
   - 300
@@ -57,30 +56,25 @@ scale_spec:
   - 700
   - 800
   - 900
-  - 950
   contrast_targets:
     white:
       '800': 4.5:1 preferred
       '900': 7:1 required
-      '950': 7:1 required
     black:
-      '50': 7:1 required
       '100': 7:1 required
-      '200': 4.5:1 required
+      '200': 7:1 required
+      '300': 4.5:1 required
 family_scales:
 - family: wildcat_green
   source_name: Wildcat Green
   source_value: "#007067"
   source_anchor: 800_source
   tokens:
-  - name: wildcat_mountain/wildcat_green/50
+  - name: wildcat_mountain/wildcat_green/100
     value: "#d3e6e5"
     source_anchor: false
-  - name: wildcat_mountain/wildcat_green/100
-    value: "#bbd9d7"
-    source_anchor: false
   - name: wildcat_mountain/wildcat_green/200
-    value: "#a3cbc8"
+    value: "#bbd9d7"
     source_anchor: false
   - name: wildcat_mountain/wildcat_green/300
     value: "#8abeb9"
@@ -101,28 +95,22 @@ family_scales:
     value: "#007067"
     source_anchor: true
   - name: wildcat_mountain/wildcat_green/900
-    value: "#005e56"
-    source_anchor: false
-  - name: wildcat_mountain/wildcat_green/950
     value: "#003934"
     source_anchor: false
 - family: wildcat_tan
   source_name: Wildcat Tan
   source_value: "#e8e1be"
-  source_anchor: 200_source
+  source_anchor: 300_source
   tokens:
-  - name: wildcat_mountain/wildcat_tan/50
+  - name: wildcat_mountain/wildcat_tan/100
     value: "#f7f4e8"
     source_anchor: false
-  - name: wildcat_mountain/wildcat_tan/100
+  - name: wildcat_mountain/wildcat_tan/200
     value: "#f0ebd4"
     source_anchor: false
-  - name: wildcat_mountain/wildcat_tan/200
+  - name: wildcat_mountain/wildcat_tan/300
     value: "#e8e1be"
     source_anchor: true
-  - name: wildcat_mountain/wildcat_tan/300
-    value: "#c7c1a3"
-    source_anchor: false
   - name: wildcat_mountain/wildcat_tan/400
     value: "#aba68c"
     source_anchor: false
@@ -139,9 +127,6 @@ family_scales:
     value: "#434137"
     source_anchor: false
   - name: wildcat_mountain/wildcat_tan/900
-    value: "#36342c"
-    source_anchor: false
-  - name: wildcat_mountain/wildcat_tan/950
     value: "#2b2923"
     source_anchor: false
 - family: wildcat_teal
@@ -149,14 +134,11 @@ family_scales:
   source_value: "#008a7e"
   source_anchor: 700_source
   tokens:
-  - name: wildcat_mountain/wildcat_teal/50
+  - name: wildcat_mountain/wildcat_teal/100
     value: "#d0e9e7"
     source_anchor: false
-  - name: wildcat_mountain/wildcat_teal/100
-    value: "#b5ddda"
-    source_anchor: false
   - name: wildcat_mountain/wildcat_teal/200
-    value: "#9ad1cc"
+    value: "#b5ddda"
     source_anchor: false
   - name: wildcat_mountain/wildcat_teal/300
     value: "#7ec4be"
@@ -177,9 +159,6 @@ family_scales:
     value: "#005b53"
     source_anchor: false
   - name: wildcat_mountain/wildcat_teal/900
-    value: "#004842"
-    source_anchor: false
-  - name: wildcat_mountain/wildcat_teal/950
     value: "#00322e"
     source_anchor: false
 - family: wedding_blue
@@ -187,14 +166,11 @@ family_scales:
   source_value: "#53c0c4"
   source_anchor: 400_source
   tokens:
-  - name: wildcat_mountain/wedding_blue/50
+  - name: wildcat_mountain/wedding_blue/100
     value: "#d4eff0"
     source_anchor: false
-  - name: wildcat_mountain/wedding_blue/100
-    value: "#b7e5e6"
-    source_anchor: false
   - name: wildcat_mountain/wedding_blue/200
-    value: "#98d9dc"
+    value: "#b7e5e6"
     source_anchor: false
   - name: wildcat_mountain/wedding_blue/300
     value: "#78ced1"
@@ -215,9 +191,6 @@ family_scales:
     value: "#1e4547"
     source_anchor: false
   - name: wildcat_mountain/wedding_blue/900
-    value: "#173739"
-    source_anchor: false
-  - name: wildcat_mountain/wedding_blue/950
     value: "#122a2b"
     source_anchor: false
 semantic_recommendations:

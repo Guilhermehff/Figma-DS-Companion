@@ -1,5 +1,5 @@
 version: 1
-updated: '2026-03-30'
+updated: '2026-03-31'
 brand_id: whitetail_resort
 display_name: Whitetail Resort
 status: active
@@ -25,7 +25,8 @@ artifacts:
   color:
     intake_artifact: figma/brands/whitetail_resort/color/intake.yml
     preview_artifact: figma/brands/whitetail_resort/color/preview.md
-    decision_artifacts: []
+    decision_artifacts:
+    - figma/decisions/2026-03-31-universal-100-900-color-ramp-normalization.md
   typography:
     intake_artifact: figma/brands/whitetail_resort/typography/intake.yml
     preview_artifact: figma/brands/whitetail_resort/typography/preview.md
@@ -124,6 +125,6 @@ semantic_overrides:
       - family/action_safe
       notes:
       - Whitetail Resort is live as a one-family typography system with `Andes` across heading, body, and action work.
-      - "Typography size continues to bind directly from published `Global: Typography`."
+      - 'Typography size continues to bind directly from published `Global: Typography`.'
 notes:
 - Whitetail Resort is live in the Foundations file with two raw color families (`two_top_green` plus a raw-only `neutral` support ramp), one raw typography family primitive, and Whitetail Resort semantic theme extension.

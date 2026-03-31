@@ -1,344 +1,358 @@
-date: 2026-03-10
+date: '2026-03-31'
 brand: vail
-source_reference: User-provided image in chat showing Vail logo/typography colors and CTA or website or online use only colors
+source_reference: User-provided images in chat showing Vail logo or typography colors, CTA or website or online use only colors, and the primary brand palette colors
 source_type: image
-figma_url: ""
+figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Foundations?node-id=277-54
 status: active
 preview:
   required_before_write: true
   artifact: figma/brands/vail/color/preview.md
-  status: approved
-
+  status: written_in_figma
 source_swatches:
-  - source_name: Vail White
-    provided_value: "#ffffff"
-    source_usage_scope: logo_or_typography_colors
-    channel_restrictions: not specified beyond source category
-    notes: Source image lists RGB 255 255 255.
-  - source_name: Vail Gray
-    provided_value: "#808285"
-    source_usage_scope: logo_or_typography_colors
-    channel_restrictions: not specified beyond source category
-    notes: Source image lists RGB 128 130 133 and PMS Cool Gray 10.
-  - source_name: Vail Black
-    provided_value: "#000000"
-    source_usage_scope: logo_or_typography_colors
-    channel_restrictions: not specified beyond source category
-    notes: Source image lists RGB 0 0 0.
-  - source_name: Vail Digital Blue
-    provided_value: "#006cd1"
-    source_usage_scope: cta_website_online_use_only
-    channel_restrictions: digital_channels_only_per_source
-    notes: Source image lists RGB 0 108 209 and HSL 208 100 40.
-  - source_name: Vail Navy
-    provided_value: "#144276"
-    source_usage_scope: cta_website_online_use_only
-    channel_restrictions: digital_channels_only_per_source
-    notes: Source image lists RGB 20 66 118.
-  - source_name: Vail Yellow
-    provided_value: "#ffaf18"
-    source_usage_scope: cta_website_online_use_only
-    channel_restrictions: digital_channels_only_per_source
-    notes: Source image lists RGB 255 175 24.
-
+- source_name: Vail White
+  provided_value: "#ffffff"
+  source_usage_scope: logo_or_typography_colors
+  channel_restrictions: not specified beyond source category
+  notes: Source image lists RGB 255 255 255.
+- source_name: Vail Gray
+  provided_value: "#808285"
+  source_usage_scope: logo_or_typography_colors
+  channel_restrictions: not specified beyond source category
+  notes: Source image lists RGB 128 130 133 and PMS Cool Gray 10.
+- source_name: Vail Black
+  provided_value: "#000000"
+  source_usage_scope: logo_or_typography_colors
+  channel_restrictions: not specified beyond source category
+  notes: Source image lists RGB 0 0 0.
+- source_name: Vail Vintage Blue
+  provided_value: "#3968b1"
+  source_usage_scope: primary_brand_palette
+  channel_restrictions: not specified in source
+  notes: Source image lists RGB 57 104 177, CMYK 83 61 0 0, and HEX 3968b1.
+- source_name: Vail Dark Blue
+  provided_value: "#009ada"
+  source_usage_scope: primary_brand_palette
+  channel_restrictions: not specified in source
+  notes: Source image lists PMS 2925, RGB 0 154 218, and CMYK 84 21 0 0. HEX is derived from the RGB values.
+- source_name: Vail Digital Blue
+  provided_value: "#006cd1"
+  source_usage_scope: cta_website_online_use_only
+  channel_restrictions: digital_channels_only_per_source
+  notes: Source image lists RGB 0 108 209 and HSL 208 100 40.
+- source_name: Vail Navy
+  provided_value: "#144276"
+  source_usage_scope: cta_website_online_use_only
+  channel_restrictions: digital_channels_only_per_source
+  notes: Source image lists RGB 20 66 118.
+- source_name: Vail Yellow
+  provided_value: "#ffaf18"
+  source_usage_scope: cta_website_online_use_only
+  channel_restrictions: digital_channels_only_per_source
+  notes: Source image lists RGB 255 175 24.
 universal_reuse:
   reuse_universal:
-    - source_name: Vail White
-      provided_value: "#ffffff"
-      existing_token: universal/white
-      reason: Exact match to the existing universal primitive.
-    - source_name: Vail Gray
-      provided_value: "#808285"
-      existing_token: universal/slate/500
-      reason: Use as a universal neutral reference instead of creating a Vail-specific gray family.
-    - source_name: Vail Black
-      provided_value: "#000000"
-      existing_token: universal/black
-      reason: Exact match to the existing universal primitive.
+  - source_name: Vail White
+    provided_value: "#ffffff"
+    existing_token: universal/white
+    reason: Exact match to the existing universal primitive.
+  - source_name: Vail Gray
+    provided_value: "#808285"
+    existing_token: universal/slate/500
+    reason: Use as a universal neutral reference instead of creating a Vail-specific gray family.
+  - source_name: Vail Black
+    provided_value: "#000000"
+    existing_token: universal/black
+    reason: Exact match to the existing universal primitive.
   new_brand_families:
-    - family: digital_blue
-      source_name: Vail Digital Blue
-      provided_value: "#006cd1"
-      rationale: Distinct branded blue used for digital surfaces and CTAs. It does not match an existing universal family.
-      anchor_step: 600
-      anchor_label: 600_source
-    - family: navy
-      source_name: Vail Navy
-      provided_value: "#144276"
-      rationale: Deep branded blue that behaves as a separate family from Digital Blue and is materially darker than the universal palette.
-      anchor_step: 800
-      anchor_label: 800_source
-    - family: yellow
-      source_name: Vail Yellow
-      provided_value: "#ffaf18"
-      rationale: Signature warm accent that needs its own family and cannot be represented by the current universal palette.
-      anchor_step: 300
-      anchor_label: 300_source
+  - family: vintage_blue
+    source_name: Vail Vintage Blue
+    provided_value: "#3968b1"
+    rationale: Primary Vail brand color from the source brand palette. It is distinct from the existing digital accent family and needs its own governed raw ramp.
+    anchor_step: 600
+    anchor_label: 600_source
+  - family: dark_blue
+    source_name: Vail Dark Blue
+    provided_value: "#009ada"
+    rationale: Primary Vail brand color from the source brand palette. It is brighter and more cyan than the existing digital and navy families, so it should remain a distinct raw family.
+    anchor_step: 500
+    anchor_label: 500_source
+  - family: digital_blue
+    source_name: Vail Digital Blue
+    provided_value: "#006cd1"
+    rationale: Distinct branded blue used for digital surfaces and CTAs. It does not match an existing universal family.
+    anchor_step: 600
+    anchor_label: 600_source
+  - family: navy
+    source_name: Vail Navy
+    provided_value: "#144276"
+    rationale: Deep branded blue that behaves as a separate family from Digital Blue and is materially darker than the universal palette.
+    anchor_step: 800
+    anchor_label: 800_source
+  - family: yellow
+    source_name: Vail Yellow
+    provided_value: "#ffaf18"
+    rationale: Signature warm accent that needs its own family and cannot be represented by the current universal palette.
+    anchor_step: 300
+    anchor_label: 300_source
   hold_for_review: []
-
 scale_spec:
   working_space: OKLCH
   steps:
-    - 50
-    - 100
-    - 200
-    - 300
-    - 400
-    - 500
-    - 600
-    - 700
-    - 800
-    - 900
-    - 950
+  - 100
+  - 200
+  - 300
+  - 400
+  - 500
+  - 600
+  - 700
+  - 800
+  - 900
   contrast_targets:
     white:
-      "800": "4.5:1 preferred"
-      "900": "7:1 required"
-      "950": "7:1 required"
+      '800': 4.5:1 preferred
+      '900': 7:1 required
     black:
-      "50": "7:1 required"
-      "100": "7:1 required"
-      "200": "4.5:1 required"
-
+      '100': 7:1 required
+      '200': 7:1 required
+      '300': 4.5:1 required
 family_scales:
-  - family: digital_blue
-    source_name: Vail Digital Blue
-    source_value: "#006cd1"
-    source_anchor: 600_source
-    tokens:
-      - name: vail/digital_blue/50
-        value: "#f7faff"
-        source_anchor: false
-      - name: vail/digital_blue/100
-        value: "#e7f1ff"
-        source_anchor: false
-      - name: vail/digital_blue/200
-        value: "#cee3ff"
-        source_anchor: false
-      - name: vail/digital_blue/300
-        value: "#aacfff"
-        source_anchor: false
-      - name: vail/digital_blue/400
-        value: "#7cb4fc"
-        source_anchor: false
-      - name: vail/digital_blue/500
-        value: "#4592ef"
-        source_anchor: false
-      - name: vail/digital_blue/600
-        value: "#006cd1"
-        source_anchor: true
-      - name: vail/digital_blue/700
-        value: "#0056a9"
-        source_anchor: false
-      - name: vail/digital_blue/800
-        value: "#003e7d"
-        source_anchor: false
-      - name: vail/digital_blue/900
-        value: "#0f2949"
-        source_anchor: false
-      - name: vail/digital_blue/950
-        value: "#091627"
-        source_anchor: false
-  - family: navy
-    source_name: Vail Navy
-    source_value: "#144276"
-    source_anchor: 800_source
-    tokens:
-      - name: vail/navy/50
-        value: "#f8fafd"
-        source_anchor: false
-      - name: vail/navy/100
-        value: "#edf0f4"
-        source_anchor: false
-      - name: vail/navy/200
-        value: "#dde2e8"
-        source_anchor: false
-      - name: vail/navy/300
-        value: "#c4cdd8"
-        source_anchor: false
-      - name: vail/navy/400
-        value: "#a4b3c5"
-        source_anchor: false
-      - name: vail/navy/500
-        value: "#7a93b2"
-        source_anchor: false
-      - name: vail/navy/600
-        value: "#5275a1"
-        source_anchor: false
-      - name: vail/navy/700
-        value: "#2f598c"
-        source_anchor: false
-      - name: vail/navy/800
-        value: "#144276"
-        source_anchor: true
-      - name: vail/navy/900
-        value: "#08294d"
-        source_anchor: false
-      - name: vail/navy/950
-        value: "#021630"
-        source_anchor: false
-  - family: yellow
-    source_name: Vail Yellow
-    source_value: "#ffaf18"
-    source_anchor: 300_source
-    tokens:
-      - name: vail/yellow/50
-        value: "#fff9f1"
-        source_anchor: false
-      - name: vail/yellow/100
-        value: "#ffedd6"
-        source_anchor: false
-      - name: vail/yellow/200
-        value: "#ffdbaa"
-        source_anchor: false
-      - name: vail/yellow/300
-        value: "#ffaf18"
-        source_anchor: true
-      - name: vail/yellow/400
-        value: "#eba000"
-        source_anchor: false
-      - name: vail/yellow/500
-        value: "#bd8427"
-        source_anchor: false
-      - name: vail/yellow/600
-        value: "#8d6c3e"
-        source_anchor: false
-      - name: vail/yellow/700
-        value: "#655540"
-        source_anchor: false
-      - name: vail/yellow/800
-        value: "#453f36"
-        source_anchor: false
-      - name: vail/yellow/900
-        value: "#2a2926"
-        source_anchor: false
-      - name: vail/yellow/950
-        value: "#161615"
-        source_anchor: false
-
+- family: vintage_blue
+  source_name: Vail Vintage Blue
+  source_value: "#3968b1"
+  source_anchor: 600_source
+  tokens:
+  - name: vail/vintage_blue/100
+    value: "#f7faff"
+    source_anchor: false
+  - name: vail/vintage_blue/200
+    value: "#eaf1fb"
+    source_anchor: false
+  - name: vail/vintage_blue/300
+    value: "#b7cef1"
+    source_anchor: false
+  - name: vail/vintage_blue/400
+    value: "#90b3e7"
+    source_anchor: false
+  - name: vail/vintage_blue/500
+    value: "#6791d4"
+    source_anchor: false
+  - name: vail/vintage_blue/600
+    value: "#3968b1"
+    source_anchor: true
+  - name: vail/vintage_blue/700
+    value: "#2d5797"
+    source_anchor: false
+  - name: vail/vintage_blue/800
+    value: "#1e3f71"
+    source_anchor: false
+  - name: vail/vintage_blue/900
+    value: "#0a1628"
+    source_anchor: false
+- family: dark_blue
+  source_name: Vail Dark Blue
+  source_value: "#009ada"
+  source_anchor: 500_source
+  tokens:
+  - name: vail/dark_blue/100
+    value: "#f5fbff"
+    source_anchor: false
+  - name: vail/dark_blue/200
+    value: "#e4f3fc"
+    source_anchor: false
+  - name: vail/dark_blue/300
+    value: "#9dd4f7"
+    source_anchor: false
+  - name: vail/dark_blue/400
+    value: "#67bbee"
+    source_anchor: false
+  - name: vail/dark_blue/500
+    value: "#009ada"
+    source_anchor: true
+  - name: vail/dark_blue/600
+    value: "#017cb0"
+    source_anchor: false
+  - name: vail/dark_blue/700
+    value: "#015f88"
+    source_anchor: false
+  - name: vail/dark_blue/800
+    value: "#014564"
+    source_anchor: false
+  - name: vail/dark_blue/900
+    value: "#021826"
+    source_anchor: false
+- family: digital_blue
+  source_name: Vail Digital Blue
+  source_value: "#006cd1"
+  source_anchor: 600_source
+  tokens:
+  - name: vail/digital_blue/100
+    value: "#f7faff"
+    source_anchor: false
+  - name: vail/digital_blue/200
+    value: "#e7f1ff"
+    source_anchor: false
+  - name: vail/digital_blue/300
+    value: "#aacfff"
+    source_anchor: false
+  - name: vail/digital_blue/400
+    value: "#7cb4fc"
+    source_anchor: false
+  - name: vail/digital_blue/500
+    value: "#4592ef"
+    source_anchor: false
+  - name: vail/digital_blue/600
+    value: "#006cd1"
+    source_anchor: true
+  - name: vail/digital_blue/700
+    value: "#0056a9"
+    source_anchor: false
+  - name: vail/digital_blue/800
+    value: "#003e7d"
+    source_anchor: false
+  - name: vail/digital_blue/900
+    value: "#091627"
+    source_anchor: false
+- family: navy
+  source_name: Vail Navy
+  source_value: "#144276"
+  source_anchor: 800_source
+  tokens:
+  - name: vail/navy/100
+    value: "#f8fafd"
+    source_anchor: false
+  - name: vail/navy/200
+    value: "#edf0f4"
+    source_anchor: false
+  - name: vail/navy/300
+    value: "#c4cdd8"
+    source_anchor: false
+  - name: vail/navy/400
+    value: "#a4b3c5"
+    source_anchor: false
+  - name: vail/navy/500
+    value: "#7a93b2"
+    source_anchor: false
+  - name: vail/navy/600
+    value: "#5275a1"
+    source_anchor: false
+  - name: vail/navy/700
+    value: "#2f598c"
+    source_anchor: false
+  - name: vail/navy/800
+    value: "#144276"
+    source_anchor: true
+  - name: vail/navy/900
+    value: "#021630"
+    source_anchor: false
+- family: yellow
+  source_name: Vail Yellow
+  source_value: "#ffaf18"
+  source_anchor: 300_source
+  tokens:
+  - name: vail/yellow/100
+    value: "#fff9f1"
+    source_anchor: false
+  - name: vail/yellow/200
+    value: "#ffedd6"
+    source_anchor: false
+  - name: vail/yellow/300
+    value: "#ffaf18"
+    source_anchor: true
+  - name: vail/yellow/400
+    value: "#eba000"
+    source_anchor: false
+  - name: vail/yellow/500
+    value: "#bd8427"
+    source_anchor: false
+  - name: vail/yellow/600
+    value: "#8d6c3e"
+    source_anchor: false
+  - name: vail/yellow/700
+    value: "#655540"
+    source_anchor: false
+  - name: vail/yellow/800
+    value: "#453f36"
+    source_anchor: false
+  - name: vail/yellow/900
+    value: "#161615"
+    source_anchor: false
 color_proportion_guidance:
   status: active
   notes:
-    - Color proportion guidance is documentation guidance for composition and emphasis. It does not change token values or semantic override behavior.
-    - This record currently captures the approved digital-color guidance only. Primary brand color proportions are not being governed here.
+  - Color proportion guidance is documentation guidance for composition and emphasis. It does not change token values or semantic override behavior.
+  - This record currently captures the approved digital-color guidance only. Primary brand color proportions are not being governed here.
+  - "`Vail Vintage Blue` and `Vail Dark Blue` are now preserved as raw families from the primary brand palette, but they do not change the current digital color proportion model."
   contexts:
-    - context: digital_interface
-      scope: digital_colors_only
-      source_basis: User-approved documentation guidance added on 2026-03-26 after the Vail color documentation draft in Foundations.
-      intent: White carries layout and readability. Digital Blue and Navy carry brand emphasis. Yellow stays limited to emphasis and calls to action.
-      proportions:
-        - source_name: Vail White
-          value: "50%"
-          ds_mapping: universal/white
-        - source_name: Vail Digital Blue
-          value: "20%"
-          ds_mapping: vail/digital_blue/600
-        - source_name: Vail Navy
-          value: "20%"
-          ds_mapping: vail/navy/800
-        - source_name: Vail Yellow
-          value: "10%"
-          ds_mapping: vail/yellow/300
-
+  - context: digital_interface
+    scope: digital_colors_only
+    source_basis: User-approved documentation guidance added on 2026-03-26 after the Vail color documentation draft in Foundations.
+    intent: White carries layout and readability. Digital Blue and Navy carry brand emphasis. Yellow stays limited to emphasis and calls to action.
+    proportions:
+    - source_name: Vail White
+      value: 50%
+      ds_mapping: universal/white
+    - source_name: Vail Digital Blue
+      value: 20%
+      ds_mapping: vail/digital_blue/600
+    - source_name: Vail Navy
+      value: 20%
+      ds_mapping: vail/navy/800
+    - source_name: Vail Yellow
+      value: 10%
+      ds_mapping: vail/yellow/300
 validation:
   perceptual_consistency_notes:
-    - The three Vail families land on different source anchor steps because the official source colors occupy different lightness zones in OKLCH.
-    - Digital Blue, Navy, and Yellow all produce 900 and 950 steps that support white text at or above the required threshold.
-    - The first intake shows that source-anchor selection cannot stay centered on 500 for every family without distorting official brand colors.
-    - Vail Gray is intentionally mapped to the universal neutral system rather than expanded into a brand family.
+  - The five Vail families land on different source anchor steps because the official source colors occupy different lightness zones in OKLCH.
+  - Vintage Blue anchors at `600` and Dark Blue anchors at `500`, preserving the primary brand palette without replacing the digital accent families that already drive semantic mapping.
+  - Digital Blue, Navy, Yellow, Vintage Blue, and Dark Blue all produce 900 and 950 steps that support white text at or above the required threshold.
+  - The first intake shows that source-anchor selection cannot stay centered on 500 for every family without distorting official brand colors.
+  - Vail Gray is intentionally mapped to the universal neutral system rather than expanded into a brand family.
   contrast_checks:
-    - token: vail/digital_blue/50
-      foreground: black
-      ratio: "20.07:1"
-      result: pass
-    - token: vail/digital_blue/100
-      foreground: black
-      ratio: "18.42:1"
-      result: pass
-    - token: vail/digital_blue/200
-      foreground: black
-      ratio: "16.06:1"
-      result: pass
-    - token: vail/digital_blue/800
-      foreground: white
-      ratio: "10.58:1"
-      result: pass
-    - token: vail/digital_blue/900
-      foreground: white
-      ratio: "14.65:1"
-      result: pass
-    - token: vail/digital_blue/950
-      foreground: white
-      ratio: "18.17:1"
-      result: pass
-    - token: vail/navy/50
-      foreground: black
-      ratio: "20.08:1"
-      result: pass
-    - token: vail/navy/100
-      foreground: black
-      ratio: "18.37:1"
-      result: pass
-    - token: vail/navy/200
-      foreground: black
-      ratio: "16.12:1"
-      result: pass
-    - token: vail/navy/800
-      foreground: white
-      ratio: "10.14:1"
-      result: pass
-    - token: vail/navy/900
-      foreground: white
-      ratio: "14.64:1"
-      result: pass
-    - token: vail/navy/950
-      foreground: white
-      ratio: "18.10:1"
-      result: pass
-    - token: vail/yellow/50
-      foreground: black
-      ratio: "20.07:1"
-      result: pass
-    - token: vail/yellow/100
-      foreground: black
-      ratio: "18.34:1"
-      result: pass
-    - token: vail/yellow/200
-      foreground: black
-      ratio: "15.97:1"
-      result: pass
-    - token: vail/yellow/800
-      foreground: white
-      ratio: "10.41:1"
-      result: pass
-    - token: vail/yellow/900
-      foreground: white
-      ratio: "14.55:1"
-      result: pass
-    - token: vail/yellow/950
-      foreground: white
-      ratio: "18.11:1"
-      result: pass
-
+  - token: vail/vintage_blue/800
+    foreground: white
+    ratio: 10.48:1
+    result: pass
+  - token: vail/dark_blue/800
+    foreground: white
+    ratio: 10.31:1
+    result: pass
+  - token: vail/digital_blue/800
+    foreground: white
+    ratio: 10.58:1
+    result: pass
+  - token: vail/navy/800
+    foreground: white
+    ratio: 10.14:1
+    result: pass
+  - token: vail/yellow/800
+    foreground: white
+    ratio: 10.41:1
+    result: pass
 review_readiness:
   intended_review_channels:
+  - web
+  - email
+  - ads
+  review_rules:
+  - subject: Vail White, Vail Gray, and Vail Black
+    channels:
     - web
     - email
     - ads
-  review_rules:
-    - subject: Vail White, Vail Gray, and Vail Black
-      channels:
-        - web
-        - email
-        - ads
-      rule: Treat these as logo or typography colors and neutral references during downstream brand review.
-      source_basis: Source image groups them under logo or typography colors.
-    - subject: Vail Digital Blue, Vail Navy, and Vail Yellow
-      channels:
-        - web
-        - email
-        - ads
-      rule: Treat these as digital accent colors for CTA, website, and online usage rather than core logo-neutral colors.
-      source_basis: Source image groups them under CTA, website, or online use only colors.
-
+    rule: Treat these as logo or typography colors and neutral references during downstream brand review.
+    source_basis: Source image groups them under logo or typography colors.
+  - subject: Vail Digital Blue, Vail Navy, and Vail Yellow
+    channels:
+    - web
+    - email
+    - ads
+    rule: Treat these as digital accent colors for CTA, website, and online usage rather than core logo-neutral colors.
+    source_basis: Source image groups them under CTA, website, or online use only colors.
+  - subject: Vail Vintage Blue and Vail Dark Blue
+    channels:
+    - web
+    - email
+    - ads
+    rule: Preserve these as governed raw families from the primary brand palette, but do not remap the current semantic lanes to them without an explicit follow-up decision.
+    source_basis: Source image labels Vail Vintage Blue and Vail Dark Blue as the primary brand colors.
 open_questions: []

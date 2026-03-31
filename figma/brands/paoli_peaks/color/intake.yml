@@ -1,4 +1,4 @@
-date: 2026-03-18
+date: '2026-03-31'
 brand: paoli_peaks
 source_reference: User-provided image in chat showing the Paoli Peaks logo and color guidelines
 source_type: image
@@ -35,7 +35,7 @@ universal_reuse:
   - family: peaks_peak
     provided_value: "#d8dfe1"
     anchor_step: 200
-    anchor_label: 200_source
+    anchor_label: 300_source
   - family: peaks_valley
     provided_value: "#4f8fa6"
     anchor_step: 500
@@ -43,7 +43,6 @@ universal_reuse:
 scale_spec:
   working_space: OKLCH
   steps:
-  - 50
   - 100
   - 200
   - 300
@@ -53,30 +52,25 @@ scale_spec:
   - 700
   - 800
   - 900
-  - 950
   contrast_targets:
     white:
       '800': 4.5:1 preferred
       '900': 7:1 required
-      '950': 7:1 required
     black:
-      '50': 7:1 required
       '100': 7:1 required
-      '200': 4.5:1 required
+      '200': 7:1 required
+      '300': 4.5:1 required
 family_scales:
 - family: paoli_blue
   source_name: Paoli Blue
   source_value: "#192957"
   source_anchor: 800_source
   tokens:
-  - name: paoli_peaks/paoli_blue/50
+  - name: paoli_peaks/paoli_blue/100
     value: "#f3f6fb"
     source_anchor: false
-  - name: paoli_peaks/paoli_blue/100
-    value: "#e3eaf4"
-    source_anchor: false
   - name: paoli_peaks/paoli_blue/200
-    value: "#c7d3e6"
+    value: "#e3eaf4"
     source_anchor: false
   - name: paoli_peaks/paoli_blue/300
     value: "#a4b6cf"
@@ -97,28 +91,22 @@ family_scales:
     value: "#192957"
     source_anchor: true
   - name: paoli_peaks/paoli_blue/900
-    value: "#14224a"
-    source_anchor: false
-  - name: paoli_peaks/paoli_blue/950
     value: "#0e1a3a"
     source_anchor: false
 - family: peaks_peak
   source_name: Peak's Peak
   source_value: "#d8dfe1"
-  source_anchor: 200_source
+  source_anchor: 300_source
   tokens:
-  - name: paoli_peaks/peaks_peak/50
+  - name: paoli_peaks/peaks_peak/100
     value: "#f1f3f4"
     source_anchor: false
-  - name: paoli_peaks/peaks_peak/100
+  - name: paoli_peaks/peaks_peak/200
     value: "#e5eaeb"
     source_anchor: false
-  - name: paoli_peaks/peaks_peak/200
+  - name: paoli_peaks/peaks_peak/300
     value: "#d8dfe1"
     source_anchor: true
-  - name: paoli_peaks/peaks_peak/300
-    value: "#b9bfc1"
-    source_anchor: false
   - name: paoli_peaks/peaks_peak/400
     value: "#9fa4a6"
     source_anchor: false
@@ -135,9 +123,6 @@ family_scales:
     value: "#3f4141"
     source_anchor: false
   - name: paoli_peaks/peaks_peak/900
-    value: "#282929"
-    source_anchor: false
-  - name: paoli_peaks/peaks_peak/950
     value: "#111212"
     source_anchor: false
 - family: peaks_valley
@@ -145,14 +130,11 @@ family_scales:
   source_value: "#4f8fa6"
   source_anchor: 500_source
   tokens:
-  - name: paoli_peaks/peaks_valley/50
+  - name: paoli_peaks/peaks_valley/100
     value: "#f2f8fb"
     source_anchor: false
-  - name: paoli_peaks/peaks_valley/100
-    value: "#e2f0f5"
-    source_anchor: false
   - name: paoli_peaks/peaks_valley/200
-    value: "#c5e1ea"
+    value: "#e2f0f5"
     source_anchor: false
   - name: paoli_peaks/peaks_valley/300
     value: "#9fd0dd"
@@ -173,9 +155,6 @@ family_scales:
     value: "#1f404c"
     source_anchor: false
   - name: paoli_peaks/peaks_valley/900
-    value: "#183544"
-    source_anchor: false
-  - name: paoli_peaks/peaks_valley/950
     value: "#142a33"
     source_anchor: false
 semantic_recommendations:

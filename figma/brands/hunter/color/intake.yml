@@ -1,4 +1,4 @@
-date: 2026-03-19
+date: '2026-03-31'
 brand: hunter
 source_reference: User-provided images in chat showing the Hunter color palette and usage guidance
 source_type: image
@@ -47,7 +47,7 @@ universal_reuse:
     provided_value: "#faf9f3"
     rationale: Approved live write. Flurry White and City Grey stage as one branded structural neutral family for warm canvas, quiet neutral support, and derived dark readable foregrounds.
     anchor_step: 50
-    anchor_label: 50_source
+    anchor_label: 100_source
     source_anchors:
     - source_name: City Grey
       provided_value: "#808080"
@@ -63,7 +63,7 @@ universal_reuse:
     - source_name: Mountain Blue
       provided_value: "#222233"
       anchor_step: 950
-      anchor_label: 950_source
+      anchor_label: 900_source
   - family: sunrise_orange
     source_name: Sunrise Orange
     provided_value: "#ea3410"
@@ -80,7 +80,6 @@ universal_reuse:
 scale_spec:
   working_space: OKLCH
   steps:
-  - 50
   - 100
   - 200
   - 300
@@ -90,30 +89,25 @@ scale_spec:
   - 700
   - 800
   - 900
-  - 950
   contrast_targets:
     white:
       '800': 4.5:1 preferred
       '900': 7:1 required
-      '950': 7:1 required
     black:
-      '50': 7:1 required
       '100': 7:1 required
-      '200': 4.5:1 required
+      '200': 7:1 required
+      '300': 4.5:1 required
 family_scales:
 - family: hunter_neutral
   source_name: Flurry White and City Grey
   source_value: "#faf9f3 / #808080"
-  source_anchor: 50_source / 500_source
+  source_anchor: 100_source / 500_source
   tokens:
-  - name: hunter/hunter_neutral/50
+  - name: hunter/hunter_neutral/100
     value: "#faf9f3"
     source_anchor: true
-  - name: hunter/hunter_neutral/100
-    value: "#f0efea"
-    source_anchor: false
   - name: hunter/hunter_neutral/200
-    value: "#deddd9"
+    value: "#f0efea"
     source_anchor: false
   - name: hunter/hunter_neutral/300
     value: "#c7c7c4"
@@ -134,25 +128,19 @@ family_scales:
     value: "#3d3e41"
     source_anchor: false
   - name: hunter/hunter_neutral/900
-    value: "#26282b"
-    source_anchor: false
-  - name: hunter/hunter_neutral/950
     value: "#15171b"
     source_anchor: false
 - family: mountain_blue
   source_name: Snow Blue and Mountain Blue
   source_value: "#e7f1ff / #222233"
-  source_anchor: 100_source / 950_source
+  source_anchor: 100_source / 900_source
   tokens:
-  - name: hunter/mountain_blue/50
+  - name: hunter/mountain_blue/100
     value: "#f2fcff"
     source_anchor: false
-  - name: hunter/mountain_blue/100
+  - name: hunter/mountain_blue/200
     value: "#e7f1ff"
     source_anchor: true
-  - name: hunter/mountain_blue/200
-    value: "#d5deee"
-    source_anchor: false
   - name: hunter/mountain_blue/300
     value: "#bfc7d7"
     source_anchor: false
@@ -172,9 +160,6 @@ family_scales:
     value: "#3b3d4e"
     source_anchor: false
   - name: hunter/mountain_blue/900
-    value: "#2f3142"
-    source_anchor: false
-  - name: hunter/mountain_blue/950
     value: "#222233"
     source_anchor: true
 - family: sunrise_orange
@@ -182,14 +167,11 @@ family_scales:
   source_value: "#ea3410"
   source_anchor: 500_source
   tokens:
-  - name: hunter/sunrise_orange/50
+  - name: hunter/sunrise_orange/100
     value: "#ffece0"
     source_anchor: false
-  - name: hunter/sunrise_orange/100
-    value: "#ffddcf"
-    source_anchor: false
   - name: hunter/sunrise_orange/200
-    value: "#ffc5b1"
+    value: "#ffddcf"
     source_anchor: false
   - name: hunter/sunrise_orange/300
     value: "#ffa58c"
@@ -210,9 +192,6 @@ family_scales:
     value: "#7b0800"
     source_anchor: false
   - name: hunter/sunrise_orange/900
-    value: "#560000"
-    source_anchor: false
-  - name: hunter/sunrise_orange/950
     value: "#3a0000"
     source_anchor: false
 - family: forest_green
@@ -220,14 +199,11 @@ family_scales:
   source_value: "#2b5d4c"
   source_anchor: 700_source
   tokens:
-  - name: hunter/forest_green/50
+  - name: hunter/forest_green/100
     value: "#f0fef8"
     source_anchor: false
-  - name: hunter/forest_green/100
-    value: "#e4f5ee"
-    source_anchor: false
   - name: hunter/forest_green/200
-    value: "#d1e8de"
+    value: "#e4f5ee"
     source_anchor: false
   - name: hunter/forest_green/300
     value: "#b7d4c8"
@@ -248,9 +224,6 @@ family_scales:
     value: "#22483b"
     source_anchor: false
   - name: hunter/forest_green/900
-    value: "#142f26"
-    source_anchor: false
-  - name: hunter/forest_green/950
     value: "#061a14"
     source_anchor: false
 color_proportion_guidance:
@@ -265,10 +238,10 @@ color_proportion_guidance:
     - source_color: Sunrise Orange
       token: hunter/sunrise_orange/500
     - source_color: Flurry White
-      token: hunter/hunter_neutral/50
+      token: hunter/hunter_neutral/200
     supporting_palette:
     - source_color: Snow Blue
-      token: hunter/mountain_blue/100
+      token: hunter/mountain_blue/200
     - source_color: Forest Green
       token: hunter/forest_green/700
     - source_color: City Grey
@@ -287,26 +260,6 @@ validation:
     foreground: white
     ratio: 10.69:1
     result: pass
-  - token: hunter/hunter_neutral/900
-    foreground: white
-    ratio: 14.78:1
-    result: pass
-  - token: hunter/hunter_neutral/950
-    foreground: white
-    ratio: 17.94:1
-    result: pass
-  - token: hunter/hunter_neutral/50
-    foreground: black
-    ratio: 19.91:1
-    result: pass
-  - token: hunter/hunter_neutral/100
-    foreground: black
-    ratio: 18.24:1
-    result: pass
-  - token: hunter/hunter_neutral/200
-    foreground: black
-    ratio: 15.45:1
-    result: pass
   - token: hunter/mountain_blue/600
     foreground: white
     ratio: 4.93:1
@@ -319,18 +272,6 @@ validation:
     foreground: white
     ratio: 10.70:1
     result: pass
-  - token: hunter/mountain_blue/50
-    foreground: black
-    ratio: 20.14:1
-    result: pass
-  - token: hunter/mountain_blue/100
-    foreground: black
-    ratio: 18.42:1
-    result: pass
-  - token: hunter/mountain_blue/200
-    foreground: black
-    ratio: 15.51:1
-    result: pass
   - token: hunter/sunrise_orange/600
     foreground: white
     ratio: 5.25:1
@@ -342,18 +283,6 @@ validation:
   - token: hunter/sunrise_orange/800
     foreground: white
     ratio: 11.19:1
-    result: pass
-  - token: hunter/sunrise_orange/50
-    foreground: black
-    ratio: 18.33:1
-    result: pass
-  - token: hunter/sunrise_orange/100
-    foreground: black
-    ratio: 16.50:1
-    result: pass
-  - token: hunter/sunrise_orange/200
-    foreground: black
-    ratio: 13.87:1
     result: pass
 semantic_recommendations:
   role_sets:

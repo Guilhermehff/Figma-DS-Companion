@@ -1,22 +1,24 @@
 # Afton Alps Color Preview
 
-Review state: approved preview artifact. Verify live write state in `figma/brands/afton_alps/brand.yml` and Figma.
+Review state: written in figma. Verify live write state in `figma/brands/afton_alps/brand.yml` and Figma.
 
 ## Original Source Swatches
 
 - Source color: `Blue`
   Provided value: `#112d5b`
   Usage scope: `primary brand palette`
+  Channel restrictions: `not specified in source`
   Notes: User approved Blue as the primary expressive lane in chat.
 
 - Source color: `Yellow`
   Provided value: `#ffaf20`
   Usage scope: `secondary brand palette`
+  Channel restrictions: `not specified in source`
   Notes: User approved Yellow as the secondary expressive lane in chat.
 
 ## Universal Reuse
 
-- No direct universal reuse. The supplied swatches are both branded expressive colors rather than exact universal primitives.
+- No exact Afton Alps source swatch reuses an existing universal color primitive in this pass.
 
 ## Proposed Families
 
@@ -24,12 +26,9 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
 
 Source anchor: `900_source`
 
-Swatch strip:
-
 <div>
-  <span title="50 #f8fafd" style="display:inline-block;width:32px;height:32px;background:#f8fafd;border:1px solid #d1d5db;"></span>
-  <span title="100 #eef1f5" style="display:inline-block;width:32px;height:32px;background:#eef1f5;border:1px solid #d1d5db;"></span>
-  <span title="200 #dde3eb" style="display:inline-block;width:32px;height:32px;background:#dde3eb;border:1px solid #d1d5db;"></span>
+  <span title="100 #f8fafd" style="display:inline-block;width:32px;height:32px;background:#f8fafd;border:1px solid #d1d5db;"></span>
+  <span title="200 #eef1f5" style="display:inline-block;width:32px;height:32px;background:#eef1f5;border:1px solid #d1d5db;"></span>
   <span title="300 #c4ceda" style="display:inline-block;width:32px;height:32px;background:#c4ceda;border:1px solid #d1d5db;"></span>
   <span title="400 #a5b4c8" style="display:inline-block;width:32px;height:32px;background:#a5b4c8;border:1px solid #d1d5db;"></span>
   <span title="500 #8097b2" style="display:inline-block;width:32px;height:32px;background:#8097b2;border:1px solid #d1d5db;"></span>
@@ -37,51 +36,50 @@ Swatch strip:
   <span title="700 #426185" style="display:inline-block;width:32px;height:32px;background:#426185;border:1px solid #d1d5db;"></span>
   <span title="800 #28466f" style="display:inline-block;width:32px;height:32px;background:#28466f;border:1px solid #d1d5db;"></span>
   <span title="900 #112d5b" style="display:inline-block;width:32px;height:32px;background:#112d5b;border:1px solid #d1d5db;"></span>
-  <span title="950 #071939" style="display:inline-block;width:32px;height:32px;background:#071939;border:1px solid #d1d5db;"></span>
 </div>
 
 ### Family: yellow
 
 Source anchor: `300_source`
 
-Swatch strip:
-
 <div>
-  <span title="50 #fff9f1" style="display:inline-block;width:32px;height:32px;background:#fff9f1;border:1px solid #d1d5db;"></span>
-  <span title="100 #ffedd6" style="display:inline-block;width:32px;height:32px;background:#ffedd6;border:1px solid #d1d5db;"></span>
-  <span title="200 #ffdbaa" style="display:inline-block;width:32px;height:32px;background:#ffdbaa;border:1px solid #d1d5db;"></span>
+  <span title="100 #fff9f1" style="display:inline-block;width:32px;height:32px;background:#fff9f1;border:1px solid #d1d5db;"></span>
+  <span title="200 #ffedd6" style="display:inline-block;width:32px;height:32px;background:#ffedd6;border:1px solid #d1d5db;"></span>
   <span title="300 #ffaf20" style="display:inline-block;width:32px;height:32px;background:#ffaf20;border:1px solid #d1d5db;"></span>
   <span title="400 #eca000" style="display:inline-block;width:32px;height:32px;background:#eca000;border:1px solid #d1d5db;"></span>
   <span title="500 #be8529" style="display:inline-block;width:32px;height:32px;background:#be8529;border:1px solid #d1d5db;"></span>
   <span title="600 #8e6d40" style="display:inline-block;width:32px;height:32px;background:#8e6d40;border:1px solid #d1d5db;"></span>
   <span title="700 #66563f" style="display:inline-block;width:32px;height:32px;background:#66563f;border:1px solid #d1d5db;"></span>
   <span title="800 #463f35" style="display:inline-block;width:32px;height:32px;background:#463f35;border:1px solid #d1d5db;"></span>
-  <span title="900 #2a2925" style="display:inline-block;width:32px;height:32px;background:#2a2925;border:1px solid #d1d5db;"></span>
-  <span title="950 #161614" style="display:inline-block;width:32px;height:32px;background:#161614;border:1px solid #d1d5db;"></span>
+  <span title="900 #161614" style="display:inline-block;width:32px;height:32px;background:#161614;border:1px solid #d1d5db;"></span>
 </div>
 
 ## Review Notes
 
-- Afton Alps supplies two expressive colors and no branded neutral, so the first semantic pass keeps neutral roles inherited from the shared base.
-- `blue` is dark enough to anchor the primary expressive lane, but the live default surface will use `blue/800` so the exact source `blue/900` remains available as the stronger branded step.
-- `yellow` is a bright accent, so its live secondary role set will use black on the lighter surfaces and reserve white only for the darker emphasis step.
+- Afton Alps Blue lands at `900` because the supplied swatch sits in the dark-navy lightness band and is materially darker than the existing `800` blue anchors used by other brands.
+- Afton Alps Yellow lands at `300` because the supplied swatch behaves as a bright accent rather than a midtone.
+- The first semantic pass inherits the shared neutral role set because no branded neutral swatch was supplied.
+- The primary blue semantic lane uses `blue/800` for default surfaces so the exact source `blue/900` can remain the stronger branded text and emphasis step.
 
-## Proposed Semantic Mapping
+## Live Semantic Mapping
 
-- `surface/neutral/*`, `on_surface/neutral/*`, `foreground/default`, `foreground/subtle`, `border/default`, `border/subtle` -> inherit shared base because no Afton Alps neutral swatch was supplied
-- `surface/brand/*`, `on_surface/brand/*`, `foreground/brand`, `border/brand` -> `afton_alps/blue/*`
-- `surface/brand_secondary/*`, `on_surface/brand_secondary/*`, `foreground/brand_secondary`, `border/brand_secondary` -> `afton_alps/yellow/*`
-- Global-only extra families: none
+- `surface/neutral/*`, `on_surface/neutral/*`, `foreground/default`, `foreground/subtle`, `border/default`, `border/subtle` -> `inherited_base`
+  No Afton Alps neutral swatches were supplied, so the shared neutral role set remains inherited from the semantic base collection.
+- `surface/brand/*`, `on_surface/brand/*`, `foreground/brand`, `border/brand` -> `afton_alps/blue`
+  Blue is the user-approved primary expressive lane and behaves as a dark brand family.
+- `surface/brand_secondary/*`, `on_surface/brand_secondary/*`, `foreground/brand_secondary`, `border/brand_secondary` -> `afton_alps/yellow`
+  Yellow is the user-approved secondary expressive lane and behaves as a bright accent family.
 - `assets/logo` -> `Afton Alps`
+  The live `Semantic: Theme` schema includes `assets/logo`, and each brand extension overrides it to the brand display name string.
 
 ## Review Readiness
 
-- Subject: `Afton Alps expressive lane order`
+- Subject: `Afton Alps lane order`
   Channels: `web, email, ads`
   Rule: Use `blue` as the primary expressive lane and `yellow` as the secondary expressive lane.
   Source basis: User-approved lane order in chat.
 
-- Subject: `Afton Alps bright secondary behavior`
+- Subject: `Afton Alps neutral inheritance`
   Channels: `web, email, ads`
-  Rule: Keep black foreground on the lighter yellow surfaces and reserve white for the darker yellow emphasis step.
-  Source basis: Contrast checks for the generated yellow ladder.
+  Rule: Keep neutral roles inherited from the shared base because no branded neutral swatch was supplied.
+  Source basis: Source image provides only blue and yellow.

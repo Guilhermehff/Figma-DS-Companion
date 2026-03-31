@@ -1,4 +1,4 @@
-date: 2026-03-19
+date: '2026-03-31'
 brand: wilmot
 source_reference: User-provided exported Wilmot brand sheet image in chat
 source_type: image
@@ -46,7 +46,6 @@ universal_reuse:
 scale_spec:
   working_space: OKLCH
   steps:
-  - 50
   - 100
   - 200
   - 300
@@ -56,30 +55,25 @@ scale_spec:
   - 700
   - 800
   - 900
-  - 950
   contrast_targets:
     white:
       '800': 4.5:1 preferred
       '900': 7:1 required
-      '950': 7:1 required
     black:
-      '50': 7:1 required
       '100': 7:1 required
-      '200': 4.5:1 required
+      '200': 7:1 required
+      '300': 4.5:1 required
 family_scales:
 - family: wilmot_red
   source_name: PMS 201C
   source_value: "#a42036"
   source_anchor: 600_source
   tokens:
-  - name: wilmot/wilmot_red/50
+  - name: wilmot/wilmot_red/100
     value: "#fbedee"
     source_anchor: false
-  - name: wilmot/wilmot_red/100
-    value: "#f5d7d9"
-    source_anchor: false
   - name: wilmot/wilmot_red/200
-    value: "#efb1b5"
+    value: "#f5d7d9"
     source_anchor: false
   - name: wilmot/wilmot_red/300
     value: "#e48389"
@@ -100,9 +94,6 @@ family_scales:
     value: "#671423"
     source_anchor: false
   - name: wilmot/wilmot_red/900
-    value: "#4a0e1a"
-    source_anchor: false
-  - name: wilmot/wilmot_red/950
     value: "#320912"
     source_anchor: false
 - family: wilmot_rose
@@ -110,14 +101,11 @@ family_scales:
   source_value: "#a5565f"
   source_anchor: 600_source
   tokens:
-  - name: wilmot/wilmot_rose/50
+  - name: wilmot/wilmot_rose/100
     value: "#fbeff0"
     source_anchor: false
-  - name: wilmot/wilmot_rose/100
-    value: "#f4d9db"
-    source_anchor: false
   - name: wilmot/wilmot_rose/200
-    value: "#e9b4b8"
+    value: "#f4d9db"
     source_anchor: false
   - name: wilmot/wilmot_rose/300
     value: "#d98a90"
@@ -138,9 +126,6 @@ family_scales:
     value: "#693238"
     source_anchor: false
   - name: wilmot/wilmot_rose/900
-    value: "#4c2429"
-    source_anchor: false
-  - name: wilmot/wilmot_rose/950
     value: "#34181c"
     source_anchor: false
 - family: wilmot_grey
@@ -148,14 +133,11 @@ family_scales:
   source_value: "#58595b"
   source_anchor: 500_source
   tokens:
-  - name: wilmot/wilmot_grey/50
+  - name: wilmot/wilmot_grey/100
     value: "#f5f6f7"
     source_anchor: false
-  - name: wilmot/wilmot_grey/100
-    value: "#e6e8ea"
-    source_anchor: false
   - name: wilmot/wilmot_grey/200
-    value: "#c9cdd2"
+    value: "#e6e8ea"
     source_anchor: false
   - name: wilmot/wilmot_grey/300
     value: "#a9adb4"
@@ -176,9 +158,6 @@ family_scales:
     value: "#242528"
     source_anchor: false
   - name: wilmot/wilmot_grey/900
-    value: "#18191c"
-    source_anchor: false
-  - name: wilmot/wilmot_grey/950
     value: "#101114"
     source_anchor: false
 semantic_recommendations:

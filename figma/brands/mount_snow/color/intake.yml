@@ -1,4 +1,4 @@
-date: 2026-03-17
+date: '2026-03-31'
 brand: mount_snow
 source_reference: User-provided images in chat showing the Mount Snow color palette and color-usage guidance
 source_type: image
@@ -8,355 +8,306 @@ preview:
   required_before_write: true
   artifact: figma/brands/mount_snow/color/preview.md
   status: written_in_figma
-
 source_swatches:
-  - source_name: Bluebird Express
-    provided_value: "#0068ff"
-    source_usage_scope: primary brand palette
-    channel_restrictions: not specified in source
-    notes: Source image lists RGB 0 104 255 and PMS 285 C.
-  - source_name: Somerset Blue
-    provided_value: "#0098ff"
-    source_usage_scope: secondary brand palette
-    channel_restrictions: not specified in source
-    notes: Source image lists RGB 0 152 255 and PMS 2925 C.
-  - source_name: Whipped Cream
-    provided_value: "#fbf7f3"
-    source_usage_scope: primary brand palette
-    channel_restrictions: not specified in source
-    notes: Source image lists RGB 251 247 243 and PMS Opaque White.
-  - source_name: Rosy Cheeks
-    provided_value: "#ff79df"
-    source_usage_scope: secondary brand palette
-    channel_restrictions: not specified in source
-    notes: Source image lists RGB 255 121 223 and PMS 237 C.
-  - source_name: Heart Red
-    provided_value: "#ff0000"
-    source_usage_scope: primary brand palette
-    channel_restrictions: not specified in source
-    notes: Source image lists RGB 255 0 0 and PMS 185 C.
-  - source_name: Carinthia Rail
-    provided_value: "#000000"
-    source_usage_scope: secondary brand palette
-    channel_restrictions: not specified in source
-    notes: Exact match to the shared universal black primitive.
-
+- source_name: Bluebird Express
+  provided_value: "#0068ff"
+  source_usage_scope: primary brand palette
+  channel_restrictions: not specified in source
+  notes: Source image lists RGB 0 104 255 and PMS 285 C.
+- source_name: Somerset Blue
+  provided_value: "#0098ff"
+  source_usage_scope: secondary brand palette
+  channel_restrictions: not specified in source
+  notes: Source image lists RGB 0 152 255 and PMS 2925 C.
+- source_name: Whipped Cream
+  provided_value: "#fbf7f3"
+  source_usage_scope: primary brand palette
+  channel_restrictions: not specified in source
+  notes: Source image lists RGB 251 247 243 and PMS Opaque White.
+- source_name: Rosy Cheeks
+  provided_value: "#ff79df"
+  source_usage_scope: secondary brand palette
+  channel_restrictions: not specified in source
+  notes: Source image lists RGB 255 121 223 and PMS 237 C.
+- source_name: Heart Red
+  provided_value: "#ff0000"
+  source_usage_scope: primary brand palette
+  channel_restrictions: not specified in source
+  notes: Source image lists RGB 255 0 0 and PMS 185 C.
+- source_name: Carinthia Rail
+  provided_value: "#000000"
+  source_usage_scope: secondary brand palette
+  channel_restrictions: not specified in source
+  notes: Exact match to the shared universal black primitive.
 universal_reuse:
   reuse_universal:
-    - source_name: Carinthia Rail
-      provided_value: "#000000"
-      existing_token: universal/black
-      rationale: Exact match to the shared universal black primitive, so no duplicate brand black token is created.
+  - source_name: Carinthia Rail
+    provided_value: "#000000"
+    existing_token: universal/black
+    rationale: Exact match to the shared universal black primitive, so no duplicate brand black token is created.
   new_brand_families:
-    - family: bluebird_express
-      source_name: Bluebird Express
-      provided_value: "#0068ff"
-      rationale: Strongest supplied blue and the clearest Mount Snow brand anchor.
-      anchor_step: 600
-      anchor_label: 600_source
-    - family: heart_red
-      source_name: Heart Red
-      provided_value: "#ff0000"
-      rationale: Distinct primary accent that remains separate from the shared critical-status family because it carries brand identity.
-      anchor_step: 500
-      anchor_label: 500_source
-    - family: whipped_cream
-      source_name: Whipped Cream
-      provided_value: "#fbf7f3"
-      rationale: Warm off-white brand neutral that should drive Mount Snow surface roles without duplicating exact universal white or black.
-      anchor_step: 100
-      anchor_label: 100_source
-    - family: somerset_blue
-      source_name: Somerset Blue
-      provided_value: "#0098ff"
-      rationale: Secondary blue accent that remains available as a global-only extra family after the first semantic pass.
-      anchor_step: 500
-      anchor_label: 500_source
-    - family: rosy_cheeks
-      source_name: Rosy Cheeks
-      provided_value: "#ff79df"
-      rationale: Distinct pink accent preserved as a governed global-only family for future channel use.
-      anchor_step: 400
-      anchor_label: 400_source
+  - family: bluebird_express
+    source_name: Bluebird Express
+    provided_value: "#0068ff"
+    rationale: Strongest supplied blue and the clearest Mount Snow brand anchor.
+    anchor_step: 600
+    anchor_label: 600_source
+  - family: heart_red
+    source_name: Heart Red
+    provided_value: "#ff0000"
+    rationale: Distinct primary accent that remains separate from the shared critical-status family because it carries brand identity.
+    anchor_step: 500
+    anchor_label: 500_source
+  - family: whipped_cream
+    source_name: Whipped Cream
+    provided_value: "#fbf7f3"
+    rationale: Warm off-white brand neutral that should drive Mount Snow surface roles without duplicating exact universal white or black.
+    anchor_step: 100
+    anchor_label: 100_source
+  - family: somerset_blue
+    source_name: Somerset Blue
+    provided_value: "#0098ff"
+    rationale: Secondary blue accent that remains available as a global-only extra family after the first semantic pass.
+    anchor_step: 500
+    anchor_label: 500_source
+  - family: rosy_cheeks
+    source_name: Rosy Cheeks
+    provided_value: "#ff79df"
+    rationale: Distinct pink accent preserved as a governed global-only family for future channel use.
+    anchor_step: 400
+    anchor_label: 400_source
   hold_for_review: []
-
 scale_spec:
   working_space: OKLCH
   steps:
-    - 50
-    - 100
-    - 200
-    - 300
-    - 400
-    - 500
-    - 600
-    - 700
-    - 800
-    - 900
-    - 950
+  - 100
+  - 200
+  - 300
+  - 400
+  - 500
+  - 600
+  - 700
+  - 800
+  - 900
   contrast_targets:
     white:
-      "700": "4.5:1 preferred"
-      "800": "7:1 required"
-      "900": "7:1 required"
+      '800': 4.5:1 preferred
+      '900': 7:1 required
     black:
-      "50": "7:1 required"
-      "100": "7:1 required"
-      "200": "4.5:1 required"
-
+      '100': 7:1 required
+      '200': 7:1 required
+      '300': 4.5:1 required
 family_scales:
-  - family: bluebird_express
-    source_name: Bluebird Express
-    source_value: "#0068ff"
-    source_anchor: 600_source
-    tokens:
-      - name: mount_snow/bluebird_express/50
-        value: "#edf6ff"
-        source_anchor: false
-      - name: mount_snow/bluebird_express/100
-        value: "#daeaff"
-        source_anchor: false
-      - name: mount_snow/bluebird_express/200
-        value: "#b3d3ff"
-        source_anchor: false
-      - name: mount_snow/bluebird_express/300
-        value: "#8dbaff"
-        source_anchor: false
-      - name: mount_snow/bluebird_express/400
-        value: "#66a1ff"
-        source_anchor: false
-      - name: mount_snow/bluebird_express/500
-        value: "#3d86ff"
-        source_anchor: false
-      - name: mount_snow/bluebird_express/600
-        value: "#0068ff"
-        source_anchor: true
-      - name: mount_snow/bluebird_express/700
-        value: "#004fbf"
-        source_anchor: false
-      - name: mount_snow/bluebird_express/800
-        value: "#003782"
-        source_anchor: false
-      - name: mount_snow/bluebird_express/900
-        value: "#00204b"
-        source_anchor: false
-      - name: mount_snow/bluebird_express/950
-        value: "#001531"
-        source_anchor: false
-  - family: heart_red
-    source_name: Heart Red
-    source_value: "#ff0000"
-    source_anchor: 500_source
-    tokens:
-      - name: mount_snow/heart_red/50
-        value: "#fff1ef"
-        source_anchor: false
-      - name: mount_snow/heart_red/100
-        value: "#ffded8"
-        source_anchor: false
-      - name: mount_snow/heart_red/200
-        value: "#ffb8ab"
-        source_anchor: false
-      - name: mount_snow/heart_red/300
-        value: "#ff8f7e"
-        source_anchor: false
-      - name: mount_snow/heart_red/400
-        value: "#ff604e"
-        source_anchor: false
-      - name: mount_snow/heart_red/500
-        value: "#ff0000"
-        source_anchor: true
-      - name: mount_snow/heart_red/600
-        value: "#cc0000"
-        source_anchor: false
-      - name: mount_snow/heart_red/700
-        value: "#9c0000"
-        source_anchor: false
-      - name: mount_snow/heart_red/800
-        value: "#6e0000"
-        source_anchor: false
-      - name: mount_snow/heart_red/900
-        value: "#440000"
-        source_anchor: false
-      - name: mount_snow/heart_red/950
-        value: "#300000"
-        source_anchor: false
-  - family: whipped_cream
-    source_name: Whipped Cream
-    source_value: "#fbf7f3"
-    source_anchor: 100_source
-    tokens:
-      - name: mount_snow/whipped_cream/50
-        value: "#fffdfa"
-        source_anchor: false
-      - name: mount_snow/whipped_cream/100
-        value: "#fbf7f3"
-        source_anchor: true
-      - name: mount_snow/whipped_cream/200
-        value: "#ddd9d5"
-        source_anchor: false
-      - name: mount_snow/whipped_cream/300
-        value: "#c0bbb8"
-        source_anchor: false
-      - name: mount_snow/whipped_cream/400
-        value: "#a39f9b"
-        source_anchor: false
-      - name: mount_snow/whipped_cream/500
-        value: "#888380"
-        source_anchor: false
-      - name: mount_snow/whipped_cream/600
-        value: "#6d6965"
-        source_anchor: false
-      - name: mount_snow/whipped_cream/700
-        value: "#544f4c"
-        source_anchor: false
-      - name: mount_snow/whipped_cream/800
-        value: "#3b3734"
-        source_anchor: false
-      - name: mount_snow/whipped_cream/900
-        value: "#25211d"
-        source_anchor: false
-      - name: mount_snow/whipped_cream/950
-        value: "#1a1613"
-        source_anchor: false
-  - family: somerset_blue
-    source_name: Somerset Blue
-    source_value: "#0098ff"
-    source_anchor: 500_source
-    tokens:
-      - name: mount_snow/somerset_blue/50
-        value: "#eef9ff"
-        source_anchor: false
-      - name: mount_snow/somerset_blue/100
-        value: "#d9efff"
-        source_anchor: false
-      - name: mount_snow/somerset_blue/200
-        value: "#b0daff"
-        source_anchor: false
-      - name: mount_snow/somerset_blue/300
-        value: "#85c5ff"
-        source_anchor: false
-      - name: mount_snow/somerset_blue/400
-        value: "#56afff"
-        source_anchor: false
-      - name: mount_snow/somerset_blue/500
-        value: "#0098ff"
-        source_anchor: true
-      - name: mount_snow/somerset_blue/600
-        value: "#0079cb"
-        source_anchor: false
-      - name: mount_snow/somerset_blue/700
-        value: "#005b99"
-        source_anchor: false
-      - name: mount_snow/somerset_blue/800
-        value: "#003f6b"
-        source_anchor: false
-      - name: mount_snow/somerset_blue/900
-        value: "#00253f"
-        source_anchor: false
-      - name: mount_snow/somerset_blue/950
-        value: "#00192b"
-        source_anchor: false
-  - family: rosy_cheeks
-    source_name: Rosy Cheeks
-    source_value: "#ff79df"
-    source_anchor: 400_source
-    tokens:
-      - name: mount_snow/rosy_cheeks/50
-        value: "#fff3fc"
-        source_anchor: false
-      - name: mount_snow/rosy_cheeks/100
-        value: "#ffe3f8"
-        source_anchor: false
-      - name: mount_snow/rosy_cheeks/200
-        value: "#ffc1f0"
-        source_anchor: false
-      - name: mount_snow/rosy_cheeks/300
-        value: "#ff9fe8"
-        source_anchor: false
-      - name: mount_snow/rosy_cheeks/400
-        value: "#ff79df"
-        source_anchor: true
-      - name: mount_snow/rosy_cheeks/500
-        value: "#d462b8"
-        source_anchor: false
-      - name: mount_snow/rosy_cheeks/600
-        value: "#ab4b93"
-        source_anchor: false
-      - name: mount_snow/rosy_cheeks/700
-        value: "#84366f"
-        source_anchor: false
-      - name: mount_snow/rosy_cheeks/800
-        value: "#5e214d"
-        source_anchor: false
-      - name: mount_snow/rosy_cheeks/900
-        value: "#3b0e2e"
-        source_anchor: false
-      - name: mount_snow/rosy_cheeks/950
-        value: "#2b061f"
-        source_anchor: false
-
+- family: bluebird_express
+  source_name: Bluebird Express
+  source_value: "#0068ff"
+  source_anchor: 600_source
+  tokens:
+  - name: mount_snow/bluebird_express/100
+    value: "#edf6ff"
+    source_anchor: false
+  - name: mount_snow/bluebird_express/200
+    value: "#daeaff"
+    source_anchor: false
+  - name: mount_snow/bluebird_express/300
+    value: "#8dbaff"
+    source_anchor: false
+  - name: mount_snow/bluebird_express/400
+    value: "#66a1ff"
+    source_anchor: false
+  - name: mount_snow/bluebird_express/500
+    value: "#3d86ff"
+    source_anchor: false
+  - name: mount_snow/bluebird_express/600
+    value: "#0068ff"
+    source_anchor: true
+  - name: mount_snow/bluebird_express/700
+    value: "#004fbf"
+    source_anchor: false
+  - name: mount_snow/bluebird_express/800
+    value: "#003782"
+    source_anchor: false
+  - name: mount_snow/bluebird_express/900
+    value: "#001531"
+    source_anchor: false
+- family: heart_red
+  source_name: Heart Red
+  source_value: "#ff0000"
+  source_anchor: 500_source
+  tokens:
+  - name: mount_snow/heart_red/100
+    value: "#fff1ef"
+    source_anchor: false
+  - name: mount_snow/heart_red/200
+    value: "#ffded8"
+    source_anchor: false
+  - name: mount_snow/heart_red/300
+    value: "#ff8f7e"
+    source_anchor: false
+  - name: mount_snow/heart_red/400
+    value: "#ff604e"
+    source_anchor: false
+  - name: mount_snow/heart_red/500
+    value: "#ff0000"
+    source_anchor: true
+  - name: mount_snow/heart_red/600
+    value: "#cc0000"
+    source_anchor: false
+  - name: mount_snow/heart_red/700
+    value: "#9c0000"
+    source_anchor: false
+  - name: mount_snow/heart_red/800
+    value: "#6e0000"
+    source_anchor: false
+  - name: mount_snow/heart_red/900
+    value: "#300000"
+    source_anchor: false
+- family: whipped_cream
+  source_name: Whipped Cream
+  source_value: "#fbf7f3"
+  source_anchor: 100_source
+  tokens:
+  - name: mount_snow/whipped_cream/100
+    value: "#fffdfa"
+    source_anchor: false
+  - name: mount_snow/whipped_cream/200
+    value: "#fbf7f3"
+    source_anchor: true
+  - name: mount_snow/whipped_cream/300
+    value: "#c0bbb8"
+    source_anchor: false
+  - name: mount_snow/whipped_cream/400
+    value: "#a39f9b"
+    source_anchor: false
+  - name: mount_snow/whipped_cream/500
+    value: "#888380"
+    source_anchor: false
+  - name: mount_snow/whipped_cream/600
+    value: "#6d6965"
+    source_anchor: false
+  - name: mount_snow/whipped_cream/700
+    value: "#544f4c"
+    source_anchor: false
+  - name: mount_snow/whipped_cream/800
+    value: "#3b3734"
+    source_anchor: false
+  - name: mount_snow/whipped_cream/900
+    value: "#1a1613"
+    source_anchor: false
+- family: somerset_blue
+  source_name: Somerset Blue
+  source_value: "#0098ff"
+  source_anchor: 500_source
+  tokens:
+  - name: mount_snow/somerset_blue/100
+    value: "#eef9ff"
+    source_anchor: false
+  - name: mount_snow/somerset_blue/200
+    value: "#d9efff"
+    source_anchor: false
+  - name: mount_snow/somerset_blue/300
+    value: "#85c5ff"
+    source_anchor: false
+  - name: mount_snow/somerset_blue/400
+    value: "#56afff"
+    source_anchor: false
+  - name: mount_snow/somerset_blue/500
+    value: "#0098ff"
+    source_anchor: true
+  - name: mount_snow/somerset_blue/600
+    value: "#0079cb"
+    source_anchor: false
+  - name: mount_snow/somerset_blue/700
+    value: "#005b99"
+    source_anchor: false
+  - name: mount_snow/somerset_blue/800
+    value: "#003f6b"
+    source_anchor: false
+  - name: mount_snow/somerset_blue/900
+    value: "#00192b"
+    source_anchor: false
+- family: rosy_cheeks
+  source_name: Rosy Cheeks
+  source_value: "#ff79df"
+  source_anchor: 400_source
+  tokens:
+  - name: mount_snow/rosy_cheeks/100
+    value: "#fff3fc"
+    source_anchor: false
+  - name: mount_snow/rosy_cheeks/200
+    value: "#ffe3f8"
+    source_anchor: false
+  - name: mount_snow/rosy_cheeks/300
+    value: "#ff9fe8"
+    source_anchor: false
+  - name: mount_snow/rosy_cheeks/400
+    value: "#ff79df"
+    source_anchor: true
+  - name: mount_snow/rosy_cheeks/500
+    value: "#d462b8"
+    source_anchor: false
+  - name: mount_snow/rosy_cheeks/600
+    value: "#ab4b93"
+    source_anchor: false
+  - name: mount_snow/rosy_cheeks/700
+    value: "#84366f"
+    source_anchor: false
+  - name: mount_snow/rosy_cheeks/800
+    value: "#5e214d"
+    source_anchor: false
+  - name: mount_snow/rosy_cheeks/900
+    value: "#2b061f"
+    source_anchor: false
 color_proportion_guidance:
   status: not_provided
   source_basis: User-provided Mount Snow design-system pages define palette hierarchy and a Carinthia-specific subset, but do not publish governed numeric color percentages.
   contexts: []
   notes:
-    - Keep the palette hierarchy and Carinthia subset as source context only; they are not governed repo percentage guidance.
-
+  - Keep the palette hierarchy and Carinthia subset as source context only; they are not governed repo percentage guidance.
 validation:
   perceptual_consistency_notes:
-    - Bluebird Express stages as the strongest Mount Snow blue and therefore drives the primary expressive semantic lane.
-    - Heart Red remains separate from the shared critical-status family and is promoted as the second expressive semantic lane because it is explicitly supplied as a primary brand color.
-    - Whipped Cream drives the Mount Snow neutral surface system, while exact black is reused from `universal/black` rather than duplicated under the brand group.
-    - Somerset Blue and Rosy Cheeks remain global-only extra families after the first semantic pass so the shared semantic color layer stays on the approved two-lane expressive model.
+  - Bluebird Express stages as the strongest Mount Snow blue and therefore drives the primary expressive semantic lane.
+  - Heart Red remains separate from the shared critical-status family and is promoted as the second expressive semantic lane because it is explicitly supplied as a primary brand color.
+  - Whipped Cream drives the Mount Snow neutral surface system, while exact black is reused from `universal/black` rather than duplicated under the brand group.
+  - Somerset Blue and Rosy Cheeks remain global-only extra families after the first semantic pass so the shared semantic color layer stays on the approved two-lane expressive model.
   contrast_checks:
-    - token: mount_snow/bluebird_express/700
-      foreground: white
-      ratio: "7.32:1"
-      result: pass
-    - token: mount_snow/heart_red/700
-      foreground: white
-      ratio: "8.70:1"
-      result: pass
-    - token: mount_snow/whipped_cream/100
-      foreground: black
-      ratio: "19.70:1"
-      result: pass
-    - token: mount_snow/whipped_cream/200
-      foreground: black
-      ratio: "14.96:1"
-      result: pass
-    - token: mount_snow/somerset_blue/700
-      foreground: white
-      ratio: "7.10:1"
-      result: pass
-
+  - token: mount_snow/bluebird_express/700
+    foreground: white
+    ratio: 7.32:1
+    result: pass
+  - token: mount_snow/heart_red/700
+    foreground: white
+    ratio: 8.70:1
+    result: pass
+  - token: mount_snow/somerset_blue/700
+    foreground: white
+    ratio: 7.10:1
+    result: pass
 review_readiness:
   intended_review_channels:
+  - web
+  - email
+  - ads
+  review_rules:
+  - subject: Mount Snow expressive lane order
+    channels:
     - web
     - email
     - ads
-  review_rules:
-    - subject: Mount Snow expressive lane order
-      channels:
-        - web
-        - email
-        - ads
-      rule: Use Bluebird Express as the primary expressive lane and Heart Red as the second expressive lane in the governed semantic system.
-      source_basis: Source image marks both as `PRIMARY` and they are the strongest supplied Mount Snow accents.
-    - subject: Mount Snow neutral system
-      channels:
-        - web
-        - email
-        - ads
-      rule: Use Whipped Cream for neutral surfaces and reuse `universal/black` where the source calls for exact black support.
-      source_basis: Source image explicitly supplies Whipped Cream as a primary color and Carinthia Rail as exact black.
-    - subject: Mount Snow secondary extras
-      channels:
-        - web
-        - email
-        - ads
-      rule: Keep Somerset Blue and Rosy Cheeks as governed global-only extra families until a future review requires additional semantic promotion.
-      source_basis: Source image marks both as `SECONDARY`, and the current semantic model only exposes two expressive lanes.
-
+    rule: Use Bluebird Express as the primary expressive lane and Heart Red as the second expressive lane in the governed semantic system.
+    source_basis: Source image marks both as `PRIMARY` and they are the strongest supplied Mount Snow accents.
+  - subject: Mount Snow neutral system
+    channels:
+    - web
+    - email
+    - ads
+    rule: Use Whipped Cream for neutral surfaces and reuse `universal/black` where the source calls for exact black support.
+    source_basis: Source image explicitly supplies Whipped Cream as a primary color and Carinthia Rail as exact black.
+  - subject: Mount Snow secondary extras
+    channels:
+    - web
+    - email
+    - ads
+    rule: Keep Somerset Blue and Rosy Cheeks as governed global-only extra families until a future review requires additional semantic promotion.
+    source_basis: Source image marks both as `SECONDARY`, and the current semantic model only exposes two expressive lanes.
 open_questions: []
