@@ -1,4 +1,4 @@
-version: 12
+version: 13
 updated: 2026-04-01
 owner: vail_resorts
 scope:
@@ -68,6 +68,7 @@ token_levels:
       - Brand-specific differences should be expressed only in the brand extension collection for `Semantic: Theme`.
       - A semantic extension should override only the tokens that materially differ from the shared universal baseline.
       - Brands without established typography guidance must inherit semantic typography family and weight aliases from the shared base without extension overrides.
+      - Semantic extensions must not store same-target overrides. If an extension resolves to the same alias target or the same literal value as the base semantic token, it must inherit from the base instead.
       - Semantic naming must stay channel-agnostic while supporting laddering into channel meaning.
       - Semantic typography at this layer includes family and weight only; typography size is published directly from `Global: Typography`.
     ladder_examples:
@@ -301,7 +302,7 @@ semantic_theme_color_aliases:
     base_collection: "Semantic: Theme"
     base_mode: Default
     brand_extension_format: "<Brand>"
-    brand_extension_rule: The base collection defines shared neutral, expressive, status, inverse, and asset role sets. Brand extensions override only the neutral, brand, and brand_secondary role groups that materially differ from the shared universal baseline, including their `_inverse` companions, plus `assets/logo` when that base token is present. A third brand family stays global-only until another accepted decision promotes it into semantic.
+    brand_extension_rule: The base collection defines shared neutral, expressive, status, inverse, and asset role sets. Brand extensions override only the neutral, brand, and brand_secondary role groups that materially differ from the shared universal baseline, including their `_inverse` companions, plus `assets/logo` when that base token is present. Do not persist an override when it resolves to the same alias target or the same literal value as the base semantic token. A third brand family stays global-only until another accepted decision promotes it into semantic.
   neutral_role_set:
     surfaces:
       - canvas

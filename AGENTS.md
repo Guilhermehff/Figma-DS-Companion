@@ -101,6 +101,7 @@ Rules:
 - `Semantic: Theme` carries semantic color roles, brand assets, and semantic typography family and weight aliases.
 - Typography size stays out of the semantic layer and is published directly from `Global: Typography`.
 - Brands without established typography guidance must inherit semantic typography family and weight aliases from the shared base without extension overrides.
+- Semantic extensions must not keep redundant overrides. If an extension resolves to the same alias target or the same literal value as the base semantic token, remove the override and inherit from the base instead.
 - Semantic tokens should be structured so they can be mapped into channel meaning cleanly.
 
 Naming note:
@@ -162,7 +163,12 @@ When MCP is available and the task references a Figma file, selection, or node:
    - Use native figma-console write tools when available.
    - Do not switch to capture based generation paths unless explicitly requested.
 
-5. Grid containers and documentation tables
+5. Layout construction
+   - Default to Figma auto layout for any new frame, section, table, documentation block, or other UI structure you build.
+   - Use existing spacing variables from the source the user references whenever spacing, padding, or gaps can be token-bound. This may be the design system, the Documentation Library, or another confirmed source file.
+   - If a requested structure cannot be built correctly with auto layout, stop and tell the user before using a non-auto-layout approach.
+
+6. Grid containers and documentation tables
    - Treat Figma `GRID` parents as anchored grid systems, not as CSS-like free-flow layouts.
    - Before duplicating or filling grid content, inspect the existing child pattern through MCP so the source row, header cells, variants, and widths are explicit.
    - Do not rely on child `x` and `y` values to place duplicated grid items. Grid children keep explicit anchor state.
@@ -194,11 +200,14 @@ When creating or updating a Semantic extension collection in the Design System f
    - Set overrides on the base semantic variables with:
      `baseVariable.setValueForMode(extensionModeId, figma.variables.createVariableAlias(sourceVariable))`
    - The override key is the base semantic variable ID, not a duplicate variable name inside a new collection.
+   - Before keeping an override, compare it to the base semantic value for the parent mode. If the extension would resolve to the same alias target or the same literal value as the base token, do not keep the override.
+   - Tokens must never override to themselves. Redundant same-target overrides must be removed so the extension inherits from the base.
 
 5. Verify through the extension collection object
    - Inspect `extensionCollection.variableOverrides` to confirm which base variables are overridden.
    - Use `await baseVariable.valuesByModeForCollectionAsync(extensionCollection)` to verify the extension-specific alias target.
    - Important: `valuesByModeForCollectionAsync()` expects the collection object, not the collection ID string.
+   - If a recorded override resolves to the same alias target or the same literal value as the base semantic token, remove it before ending the write.
    - Immediately query local variable collections for duplicate brand extension collections in the same semantic category.
    - If more than one extension collection exists for the same brand and parent category, stop and remove the stray duplicate before syncing repo state.
 

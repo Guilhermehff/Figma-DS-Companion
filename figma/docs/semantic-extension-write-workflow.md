@@ -27,12 +27,13 @@ baseVariable.setValueForMode(
 );
 ```
 
-8. If `assets/logo` exists in the base `Semantic: Theme` collection, override it to the brand display name string on the extension mode. Do not leave the inherited base value `Agnostic`.
-9. Verify the extension through:
+8. Before keeping an override, compare it to the base semantic value for the parent mode. If the extension resolves to the same alias target or the same literal value as the base token, remove the override and inherit from the base instead.
+9. If `assets/logo` exists in the base `Semantic: Theme` collection, override it to the brand display name string on the extension mode. Do not leave the inherited base value `Agnostic`.
+10. Verify the extension through:
    - `extensionCollection.variableOverrides`
    - `await baseVariable.valuesByModeForCollectionAsync(extensionCollection)`
    - `figma.variables.getLocalVariableCollectionsAsync()` to confirm there is only one extension collection for that brand in the target semantic category
-10. Update the brand manifest with the resulting collection IDs and any approved non-obvious override notes. Create local extension or registry exports only when explicitly requested.
+11. Update the brand manifest with the resulting collection IDs and any approved non-obvious override notes. Create local extension or registry exports only when explicitly requested.
 
 ## Why This Route
 
@@ -49,6 +50,8 @@ baseVariable.setValueForMode(
 - `figma_get_variables` can temporarily return stale cached data after a write, so plugin-runtime verification through `figma_execute` is the reliable source immediately after mutation.
 - `extend(\"Brand\")` can create a duplicate brand extension if the write flow is retried mid-session, so duplicate checks must run before repo sync.
 - `assets/logo`, when present in the base semantic theme collection, should be written as a direct string override such as `Mount Snow`, not as a variable alias.
+- `extensionCollection.removeOverridesForVariable(baseVariable)` removes a redundant same-target override cleanly when the extension should inherit from the base value.
+- Same-target overrides are invalid write state. Tokens must inherit from the base semantic value instead of overriding to the same alias or literal value.
 
 ## Minimal Verification Checklist
 
@@ -57,6 +60,7 @@ baseVariable.setValueForMode(
 - Extension mode ID is captured from `extensionCollection.modes[0].modeId`.
 - `variableOverrides` contains the expected base semantic variable IDs.
 - At least one representative base variable resolves to the expected brand raw token through `valuesByModeForCollectionAsync(extensionCollection)`.
+- No override entry remains when the extension value matches the base semantic value.
 - If `assets/logo` exists, it resolves to the brand display name string rather than `Agnostic`.
 - No duplicate extension collection exists for the same brand and semantic parent.
 - The brand manifest is updated if live collection IDs changed, and any optional local exports requested for the task are regenerated before ending the task.
