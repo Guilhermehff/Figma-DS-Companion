@@ -153,8 +153,9 @@ semantic_overrides:
       - User-approved live write by source interpretation. The source says Brown is the primary Liberty
         Mountain font for print and web materials, so the first semantic pass also routes the action family
         through Brown rather than inheriting the shared default family.
-      - '`Sentinel Book` is preserved as the raw primitive `liberty_mountain/family/02`, but it remains
-        raw-only because the current shared semantic theme typography schema has no alternate serif lane.'
+      - '`Sentinel` is preserved as the raw primitive `liberty_mountain/family/02`, with the source-specific
+        `Sentinel Book` style retained in the intake notes, but it remains raw-only because the current
+        shared semantic theme typography schema has no alternate serif lane.'
       - '`weight/heading/strong` and `weight/action/base` both override to `universal/weight/normal` so
         Liberty Mountain does not inherit the shared black default that the source never specifies.'
       - '`weight/body/base = universal/weight/light` and `weight/body/strong = universal/weight/normal`

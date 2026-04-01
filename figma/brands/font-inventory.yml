@@ -128,7 +128,7 @@ brands:
   typography_intake_artifact: figma/brands/kirkwood/typography/intake.yml
   fonts:
   - lane: brand
-    family_name: Trade Gothic Bold Condensed No. 20
+    family_name: Trade Gothic Condensed No. 20
     token_names:
     - kirkwood/family/01
     source_style_references:
@@ -140,7 +140,7 @@ brands:
     source_style_references:
     - body system
   - lane: brand
-    family_name: Futura Bold
+    family_name: Futura
     token_names:
     - kirkwood/family/03
     source_style_references:
@@ -152,7 +152,7 @@ brands:
     source_style_references:
     - limited-space emphasis system
   - lane: safe
-    family_name: Futura Bold
+    family_name: Futura
     token_names:
     - kirkwood/family_safe/01
     source_style_references:
@@ -262,7 +262,7 @@ brands:
     source_style_references:
     - Black, Bold, and Book hierarchy system
   - lane: safe
-    family_name: Futura Bold
+    family_name: Futura
     token_names:
     - jfbb/family_safe/01
     source_style_references:
@@ -285,7 +285,7 @@ brands:
     source_style_references:
     - Bold headline and CTA system plus Light body system
   - lane: brand
-    family_name: Trade Gothic LT Std Bold Condensed No. 20
+    family_name: Trade Gothic LT Std Condensed No. 20
     token_names:
     - park_city/family/02
     source_style_references:
@@ -297,7 +297,7 @@ brands:
     source_style_references:
     - eyebrow
   - lane: safe
-    family_name: Futura Bold
+    family_name: Futura
     token_names:
     - park_city/family_safe/02
     source_style_references:
@@ -672,7 +672,7 @@ brands:
     source_style_references:
     - Bold, Regular, and Light across H1, H2, and body copy
   - lane: brand
-    family_name: Neutraface Text Bold Italic
+    family_name: Neutraface Text
     token_names:
     - mount_sunapee/family/02
     source_style_references:
@@ -719,7 +719,7 @@ brands:
     source_style_references:
     - Brown Regular / Brown Light
   - lane: brand
-    family_name: Sentinel Book
+    family_name: Sentinel
     token_names:
     - liberty_mountain/family/02
     source_style_references:
@@ -777,7 +777,7 @@ brands:
     source_style_references:
     - Black and Regular across the functional hierarchy
   - lane: brand
-    family_name: Mrs Eaves XL Regular
+    family_name: Mrs Eaves XL
     token_names:
     - hidden_valley_pa/family/02
     source_style_references:

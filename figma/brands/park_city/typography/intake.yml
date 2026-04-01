@@ -22,10 +22,10 @@ source_roles:
   sample_copy: THIS IS YOUR HEADLINE.
   notes: The source says headlines are all caps with 0px tracking, leading equal to the point size, and
     should usually be center justified.
-  source_safe_family_name: Futura Bold
+  source_safe_family_name: Futura
   source_safe_reference_column: headline_font
 - source_role: subhead
-  source_family_name: Trade Gothic LT Std Bold Condensed No. 20
+  source_family_name: Trade Gothic LT Std Condensed No. 20
   source_style_name: Bold Condensed No. 20
   source_weight_label: Bold
   source_usage_scope: supporting_headline_copy
@@ -36,7 +36,7 @@ source_roles:
   punctuation_rule: not specified in source
   sample_copy: THIS IS YOUR SUBHEAD.
   notes: The source explicitly uses the condensed Trade Gothic face for subheads with 100px tracking.
-  source_safe_family_name: Futura Bold
+  source_safe_family_name: Futura
   source_safe_reference_column: headline_font
 - source_role: body
   source_family_name: Futura Std
@@ -105,7 +105,7 @@ primitive_recommendations:
       safe_family_note: Multiple approved role-level safe-family mappings apply to this brand family;
         use the semantic safe aliases and role recipes below.
     - token_name: park_city/family/02
-      source_family_name: Trade Gothic LT Std Bold Condensed No. 20
+      source_family_name: Trade Gothic LT Std Condensed No. 20
       source_style_reference: subhead system
       rationale: Preserve the condensed Park City subhead face as a raw utility family until the semantic
         theme typography schema gains a dedicated subhead lane.
@@ -117,7 +117,7 @@ primitive_recommendations:
       source_role_reference: eyebrow
       rationale: Approved web safe family from Vail Resorts Guidelines.pdf for the eyebrow lane.
     - token_name: park_city/family_safe/02
-      source_family_name: Futura Bold
+      source_family_name: Futura
       source_role_reference: headline
       rationale: Approved web safe family from Vail Resorts Guidelines.pdf for the headline lane.
     - token_name: park_city/family_safe/03
@@ -271,7 +271,7 @@ review_readiness:
     - web
     - email
     - ads
-    rule: Preserve Trade Gothic LT Std Bold Condensed No. 20 for subheads with 100px tracking and leading
+    rule: Preserve Trade Gothic LT Std Condensed No. 20 for subheads with 100px tracking and leading
       plus 2.
     source_basis: Park City typography guidance image.
   - subject: Park City body lane

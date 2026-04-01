@@ -6,7 +6,7 @@ Review state: written_in_figma preview artifact. Verify live write state in `fig
 
 - Source role: `headline`
   Family: `Futura Std`
-  Safe family: `Futura Bold`
+  Safe family: `Futura`
   Style: `Bold`
   Weight label: `Bold`
   Usage scope: `primary_display_headline`
@@ -19,8 +19,8 @@ Review state: written_in_figma preview artifact. Verify live write state in `fig
   Notes: The source says headlines are all caps with 0px tracking, leading equal to the point size, and should usually be center justified.
 
 - Source role: `subhead`
-  Family: `Trade Gothic LT Std Bold Condensed No. 20`
-  Safe family: `Futura Bold`
+  Family: `Trade Gothic LT Std Condensed No. 20`
+  Safe family: `Futura`
   Style: `Bold Condensed No. 20`
   Weight label: `Bold`
   Usage scope: `supporting_headline_copy`

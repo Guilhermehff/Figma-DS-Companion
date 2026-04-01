@@ -143,7 +143,7 @@ semantic_overrides:
       notes:
       - Mount Sunapee is live as a Graphik-led typography system with `family/heading` and `family/body`
         both mapped to `mount_sunapee/family/01`.
-      - User-approved live write. `Neutraface Text Bold Italic` is preserved as the raw `mount_sunapee/family/02`
+      - User-approved live write. `Neutraface Text` is preserved as the raw `mount_sunapee/family/02`
         primitive because the current semantic theme typography schema has no dedicated subhead family
         lane.
       - '`weight/heading/base = universal/weight/bold`, `weight/body/base = universal/weight/light`, and

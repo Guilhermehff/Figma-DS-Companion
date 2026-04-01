@@ -23,11 +23,11 @@ source_roles:
   sample_copy: Futura Bold
   notes: The source says to use Futura Bold in all caps as well as title case and to keep leading around
     120 percent of font height.
-  source_safe_family_name: Futura Bold
+  source_safe_family_name: Futura
   source_safe_reference_column: headline_font
 - source_role: headline
-  source_family_name: Trade Gothic Bold Condensed No. 20
-  source_style_name: Trade Gothic Bold Condensed No. 20
+  source_family_name: Trade Gothic Condensed No. 20
+  source_style_name: Bold Condensed No. 20
   source_weight_label: Bold
   source_usage_scope: primary_display_headline
   text_case: all_caps
@@ -38,7 +38,7 @@ source_roles:
   sample_copy: ABCDEFGHIJKLMNOP QRSTUVWXYZ
   notes: The source explicitly says headlines should use this family in all caps only and can be stacked
     to create a more square headline shape.
-  source_safe_family_name: Futura Bold
+  source_safe_family_name: Futura
   source_safe_reference_column: headline_font
 - source_role: body
   source_family_name: Avenir Next
@@ -68,7 +68,7 @@ source_roles:
   sample_copy: AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSs
   notes: The source says to use this family when space is limited or when only a few words need emphasis,
     with loose leading at 150 percent.
-  source_safe_family_name: Futura Bold
+  source_safe_family_name: Futura
   source_safe_reference_column: cta_font
 primitive_recommendations:
   reuse_existing:
@@ -108,7 +108,7 @@ primitive_recommendations:
   proposed_primitives:
     families:
     - token_name: kirkwood/family/01
-      source_family_name: Trade Gothic Bold Condensed No. 20
+      source_family_name: Trade Gothic Condensed No. 20
       source_style_reference: headline system
       rationale: Primary condensed headline family for the Kirkwood brand expression.
       safe_family_token: kirkwood/family_safe/01
@@ -120,9 +120,9 @@ primitive_recommendations:
       safe_family_token: kirkwood/family_safe/02
       safe_family_note: Approved safe-family companion from Vail Resorts Guidelines.pdf.
     - token_name: kirkwood/family/03
-      source_family_name: Futura Bold
+      source_family_name: Futura
       source_style_reference: title and small type system
-      rationale: Futura Bold is the closest stable semantic fit for action-style short emphasis because
+      rationale: Futura is the closest stable semantic fit for action-style short emphasis because
         it supports both all caps and title case.
       safe_family_token: ''
       safe_family_note: Use the role-level safe mappings below when a direct safe-family companion is
@@ -136,7 +136,7 @@ primitive_recommendations:
       safe_family_note: Approved safe-family companion from Vail Resorts Guidelines.pdf.
     safe_families:
     - token_name: kirkwood/family_safe/01
-      source_family_name: Futura Bold
+      source_family_name: Futura
       source_role_reference: eyebrow, headline, cta
       rationale: Approved web safe family from Vail Resorts Guidelines.pdf for the eyebrow, headline,
         cta lane.
@@ -158,7 +158,7 @@ semantic_recommendations:
     - web
     - email
     - ads
-    notes: Kirkwood display headlines use Trade Gothic Bold Condensed No. 20. Safe mapping is staged from
+    notes: Kirkwood display headlines use Trade Gothic Condensed No. 20. Safe mapping is staged from
       Vail Resorts Guidelines.pdf.
   - semantic_token: family/body
     global_token: kirkwood/family/02
@@ -178,7 +178,7 @@ semantic_recommendations:
     - web
     - email
     - ads
-    notes: Futura Bold stages as the semantic action lane because it supports short, emphatic copy in
+    notes: Futura stages as the semantic action lane because it supports short, emphatic copy in
       both all caps and title case. Safe mapping is staged from Vail Resorts Guidelines.pdf.
   weight_aliases:
   - semantic_token: weight/heading/base
@@ -201,7 +201,7 @@ semantic_recommendations:
     - web
     - email
     - ads
-    notes: Futura Bold preserves the short-emphasis lane without creating a brand-specific weight token.
+    notes: Futura preserves the short-emphasis lane without creating a brand-specific weight token.
   size_aliases: []
 role_recipes:
 - role_name: title_or_small_type

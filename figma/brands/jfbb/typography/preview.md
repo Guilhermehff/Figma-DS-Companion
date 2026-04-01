@@ -6,7 +6,7 @@ Review state: written_in_figma preview artifact. Verify live write state in `fig
 
 - Source role: `headline`
   Family: `Vista Sans NAR OTCE`
-  Safe family: `Futura Bold`
+  Safe family: `Futura`
   Style: `Black`
   Weight label: `Black`
   Usage scope: `primary_display_headline`
@@ -20,7 +20,7 @@ Review state: written_in_figma preview artifact. Verify live write state in `fig
 
 - Source role: `subheadline`
   Family: `Vista Sans NAR OTCE`
-  Safe family: `Futura Bold`
+  Safe family: `Futura`
   Style: `Bold`
   Weight label: `Bold`
   Usage scope: `supporting_headline_copy`

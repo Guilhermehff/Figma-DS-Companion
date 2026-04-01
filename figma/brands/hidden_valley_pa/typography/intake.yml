@@ -49,7 +49,7 @@ source_roles:
   source_safe_family_name: Open Sans
   source_safe_reference_column: body_font
 - source_role: display
-  source_family_name: Mrs Eaves XL Regular
+  source_family_name: Mrs Eaves XL
   source_style_name: Regular
   source_weight_label: Regular
   source_usage_scope: display_or_logo_applications
@@ -82,7 +82,7 @@ primitive_recommendations:
       safe_family_note: Multiple approved role-level safe-family mappings apply to this brand family;
         use the semantic safe aliases and role recipes below.
     - token_name: hidden_valley_pa/family/02
-      source_family_name: Mrs Eaves XL Regular
+      source_family_name: Mrs Eaves XL
       source_style_reference: logo and design applications
       rationale: Preserved as the raw display family.
       safe_family_token: hidden_valley_pa/family_safe/01
@@ -161,10 +161,10 @@ role_recipes:
   safe_family_token: hidden_valley_pa/family_safe/01
 validation:
   extraction_notes:
-  - The source defines Roboto for all functional typography roles and `Mrs Eaves XL Regular` for display
+  - The source defines Roboto for all functional typography roles and `Mrs Eaves XL` for display
     and logo work.
   governance_notes:
-  - The first semantic pass keeps `Mrs Eaves XL Regular` raw-only because the shared semantic ladder does
+  - The first semantic pass keeps `Mrs Eaves XL` raw-only because the shared semantic ladder does
     not have a dedicated ornamental display lane.
   - Brand-safe typography aliases now stage on `hidden_valley_pa/family_safe/*` from Vail Resorts Guidelines.pdf.
 review_readiness:
@@ -178,7 +178,7 @@ review_readiness:
     - web
     - email
     - ads
-    rule: Keep `Mrs Eaves XL Regular` raw-only until a broader display-family semantic slot is justified.
+    rule: Keep `Mrs Eaves XL` raw-only until a broader display-family semantic slot is justified.
     source_basis: Source sheet limits the family to display and design applications.
 open_questions: []
 safe_source_reference: Vail Resorts Guidelines.pdf

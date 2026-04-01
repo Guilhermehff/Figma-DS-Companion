@@ -68,7 +68,7 @@ source_roles:
   source_safe_family_name: Open Sans
   source_safe_reference_column: body_font
 - source_role: alternate
-  source_family_name: Sentinel Book
+  source_family_name: Sentinel
   source_style_name: Sentinel Book
   source_weight_label: Book
   source_usage_scope: Alternate sub headline and body copy
@@ -103,9 +103,10 @@ primitive_recommendations:
       safe_family_note: Multiple approved role-level safe-family mappings apply to this brand family;
         use the semantic safe aliases and role recipes below.
     - token_name: liberty_mountain/family/02
-      source_family_name: Sentinel Book
+      source_family_name: Sentinel
       source_style_reference: Sentinel Book
-      rationale: Sentinel Book is an explicit alternate reading and subhead family in the source.
+      rationale: Sentinel is the explicit alternate reading and subhead family in the source, with
+        the Book style called out specifically.
       safe_family_token: liberty_mountain/family_safe/02
       safe_family_note: Approved safe-family companion from Vail Resorts Guidelines.pdf.
     weights: []

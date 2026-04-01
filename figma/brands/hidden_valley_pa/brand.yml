@@ -143,7 +143,7 @@ semantic_overrides:
         alias_of: hidden_valley_pa/family_safe/01
       inherited_from_base: []
       notes:
-      - Hidden Valley PA is live as a Roboto-led semantic system, with `Mrs Eaves XL Regular` preserved
+      - Hidden Valley PA is live as a Roboto-led semantic system, with `Mrs Eaves XL` preserved
         as the raw display family used for logo and design applications.
       - The first semantic pass keeps heading, body, and action on `hidden_valley_pa/family/01` because
         the current shared typography ladder does not have a dedicated ornamental display role.

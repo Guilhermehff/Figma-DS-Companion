@@ -142,7 +142,7 @@ semantic_overrides:
       notes:
       - Park City uses `Futura Std` across headline, body, and CTA work, with Bold and Light carrying
         the hierarchy.
-      - '`park_city/family/02` preserves `Trade Gothic LT Std Bold Condensed No. 20` as a raw primitive
+      - '`park_city/family/02` preserves `Trade Gothic LT Std Condensed No. 20` as a raw primitive
         because the current semantic theme typography schema has no dedicated subhead family lane.'
       - 'Typography size now binds directly from published `Global: Typography`; the supplied hierarchy
         guidance defines case, tracking, and leading behavior but not new governed numeric size tokens.'

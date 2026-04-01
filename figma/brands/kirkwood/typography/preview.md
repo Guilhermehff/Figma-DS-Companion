@@ -6,7 +6,7 @@ Review state: written_in_figma preview artifact. Verify live write state in `fig
 
 - Source role: `title_or_small_type`
   Family: `Futura`
-  Safe family: `Futura Bold`
+  Safe family: `Futura`
   Style: `Futura Bold`
   Weight label: `Bold`
   Usage scope: `title lines and small type elements`
@@ -19,8 +19,8 @@ Review state: written_in_figma preview artifact. Verify live write state in `fig
   Notes: The source says to use Futura Bold in all caps as well as title case and to keep leading around 120 percent of font height.
 
 - Source role: `headline`
-  Family: `Trade Gothic Bold Condensed No. 20`
-  Safe family: `Futura Bold`
+  Family: `Trade Gothic Condensed No. 20`
+  Safe family: `Futura`
   Style: `Trade Gothic Bold Condensed No. 20`
   Weight label: `Bold`
   Usage scope: `primary_display_headline`
@@ -48,7 +48,7 @@ Review state: written_in_figma preview artifact. Verify live write state in `fig
 
 - Source role: `limited_space_emphasis`
   Family: `Trade Gothic Condensed No. 18`
-  Safe family: `Futura Bold`
+  Safe family: `Futura`
   Style: `Trade Gothic Condensed No. 18`
   Weight label: `Regular`
   Usage scope: `limited-space emphasis or short supporting phrases`

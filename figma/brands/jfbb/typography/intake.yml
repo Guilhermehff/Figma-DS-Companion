@@ -22,7 +22,7 @@ source_roles:
   punctuation_rule: not specified in source
   sample_copy: THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG
   notes: Use for headlines and bold impactful type.
-  source_safe_family_name: Futura Bold
+  source_safe_family_name: Futura
   source_safe_reference_column: headline_font
 - source_role: subheadline
   source_family_name: Vista Sans NAR OTCE
@@ -36,7 +36,7 @@ source_roles:
   punctuation_rule: punctuation allowed
   sample_copy: THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG.
   notes: The hierarchy sheet says subheads should lean into Bold.
-  source_safe_family_name: Futura Bold
+  source_safe_family_name: Futura
   source_safe_reference_column: headline_font
 - source_role: body
   source_family_name: Vista Sans NAR OTCE
@@ -97,7 +97,7 @@ primitive_recommendations:
     weights: []
     safe_families:
     - token_name: jfbb/family_safe/01
-      source_family_name: Futura Bold
+      source_family_name: Futura
       source_role_reference: eyebrow, headline, cta
       rationale: Approved web safe family from Vail Resorts Guidelines.pdf for the eyebrow, headline,
         cta lane.

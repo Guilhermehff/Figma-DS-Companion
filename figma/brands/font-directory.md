@@ -18,8 +18,7 @@ Updated: 2026-04-01
 | Coordinates | Brand | Attitash |
 | Dela Gothic One | Brand | Afton Alps |
 | Din Condensed | Brand | Heavenly |
-| Futura | Brand | Keystone |
-| Futura Bold | Brand | Kirkwood |
+| Futura | Brand | Keystone, Kirkwood |
 | Futura Std | Brand | Park City |
 | Galano Grotesque | Brand | Hunter |
 | Gibson | Brand | Crested Butte, Stevens Pass |
@@ -27,10 +26,10 @@ Updated: 2026-04-01
 | Hoss Sharp | Brand | Seven Springs |
 | Interstate | Brand | Boston Mills / Brandywine |
 | IvyPresto Display | Brand | Beaver Creek |
-| Mrs Eaves XL Regular | Brand | Hidden Valley PA |
+| Mrs Eaves XL | Brand | Hidden Valley PA |
 | Museo Sans | Brand | Mt. Brighton, Wilmot |
 | Museo Slab | Brand | Mt. Brighton, Wilmot |
-| Neutraface Text Bold Italic | Brand | Mount Sunapee |
+| Neutraface Text | Brand | Mount Sunapee |
 | New Order | Brand | Northstar |
 | Niagara | Brand | Laurel Mountain |
 | Poppins | Brand | Breckenridge |
@@ -40,11 +39,11 @@ Updated: 2026-04-01
 | Rhode | Brand | Roundtop Mountain |
 | Roboto | Brand | Hidden Valley PA, Laurel Mountain |
 | Rockwell Nova | Brand | Paoli Peaks |
-| Sentinel Book | Brand | Liberty Mountain |
+| Sentinel | Brand | Liberty Mountain |
 | Termina | Brand | Vail |
-| Trade Gothic Bold Condensed No. 20 | Brand | Kirkwood |
 | Trade Gothic Condensed No. 18 | Brand | Kirkwood |
-| Trade Gothic LT Std Bold Condensed No. 20 | Brand | Park City |
+| Trade Gothic Condensed No. 20 | Brand | Kirkwood |
+| Trade Gothic LT Std Condensed No. 20 | Brand | Park City |
 | Vastago Grotesk | Brand | Mount Snow |
 | Vinila | Brand | Beaver Creek |
 | Vinila Condensed | Brand | Beaver Creek |
@@ -52,7 +51,7 @@ Updated: 2026-04-01
 | Afacad Flux | Web Safe | Northstar |
 | Alfarn-2 | Web Safe | Crotched |
 | Canada-type-gibson | Web Safe | Attitash |
-| Futura Bold | Web Safe | JFBB, Kirkwood, Park City |
+| Futura | Web Safe | JFBB, Kirkwood, Park City |
 | Helvetica | Web Safe | Afton Alps |
 | Italiana | Web Safe | Stowe |
 | Josefin-sans | Web Safe | Park City |

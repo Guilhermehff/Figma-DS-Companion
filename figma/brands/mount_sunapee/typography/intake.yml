@@ -109,7 +109,7 @@ primitive_recommendations:
       safe_family_note: Multiple approved role-level safe-family mappings apply to this brand family;
         use the semantic safe aliases and role recipes below.
     - token_name: mount_sunapee/family/02
-      source_family_name: Neutraface Text Bold Italic
+      source_family_name: Neutraface Text
       source_style_reference: Bold Italic subheader system
       rationale: Approved live write. Preserve the distinct H3 subheader face as a raw utility family
         until the semantic theme typography schema gains a dedicated subhead lane.

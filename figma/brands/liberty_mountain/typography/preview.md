@@ -61,7 +61,7 @@ Review state: written_in_figma preview artifact. Verify live write state in `fig
   Notes: The source lists Sentinel Book as an alternate body family.
 
 - Source role: `alternate`
-  Family: `Sentinel Book`
+  Family: `Sentinel`
   Safe family: `Open Sans`
   Style: `Sentinel Book`
   Weight label: `Book`
@@ -72,7 +72,7 @@ Review state: written_in_figma preview artifact. Verify live write state in `fig
   Size rule: `follows the paired role`
   Punctuation: `not specified in source`
   Sample copy: `Nullam id dolor! Nibh ultricies ut id elit.`
-  Notes: Preserved as a raw alternate family because the current semantic theme typography schema has no dedicated alternate serif lane.
+  Notes: Preserved as a raw alternate family because the current semantic theme typography schema has no dedicated alternate serif lane. The source specifically calls out the Book style.
 
 ## Role Recipes
 
