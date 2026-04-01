@@ -1,5 +1,5 @@
 version: 1
-updated: '2026-03-31'
+updated: '2026-04-01'
 brand_id: jfbb
 display_name: JFBB
 status: active
@@ -33,6 +33,7 @@ artifacts:
     preview_artifact: figma/brands/jfbb/typography/preview.md
     decision_artifacts:
     - figma/decisions/2026-03-17-jfbb-foundations-written-to-figma.md
+    - figma/decisions/2026-04-01-safe-typography-lane-migration.md
 semantic_overrides:
   theme:
     status: active
@@ -103,11 +104,13 @@ semantic_overrides:
       - border/critical
       - border/critical_inverse
       notes:
-      - "`on_surface/*` tokens in the live semantic theme extension are contrast-derived from `universal/black` or `universal/white` and are not hue-tinted."
-      - Snow Day drives the light neutral surface system, while Last Chair supplies the readable dark neutral roles so the brand keeps the supplied icy-background and navy-type pairing.
+      - '`on_surface/*` tokens in the live semantic theme extension are contrast-derived from `universal/black`
+        or `universal/white` and are not hue-tinted.'
+      - Snow Day drives the light neutral surface system, while Last Chair supplies the readable dark
+        neutral roles so the brand keeps the supplied icy-background and navy-type pairing.
       - The reviewed expressive semantic lanes use Early Sunrise as `brand/*` and Bluebird as `brand_secondary/*`.
       - Frost and Night Ski remain governed global-only extra families after the first semantic pass.
-      - "`assets/logo` is overridden to the string `JFBB` in the semantic theme extension."
+      - '`assets/logo` is overridden to the string `JFBB` in the semantic theme extension.'
     typography:
       override_scopes:
       - semantic_token: family/heading
@@ -120,15 +123,23 @@ semantic_overrides:
         alias_of: universal/weight/normal
       - semantic_token: weight/body/strong
         alias_of: universal/weight/bold
+      - semantic_token: family/heading_safe
+        alias_of: jfbb/family_safe/01
+      - semantic_token: family/body_safe
+        alias_of: jfbb/family_safe/02
+      - semantic_token: family/action_safe
+        alias_of: jfbb/family_safe/01
       inherited_from_base:
-      - family/heading_safe
-      - family/body_safe
       - family/action
-      - family/action_safe
       - weight/action/*
       notes:
-      - JFBB uses one raw family, Vista Sans NAR OTCE, across headline, subheadline, and body roles, with weight carrying the hierarchy.
-      - "`Book` stages on `universal/weight/normal` because the shared raw ladder has no separate book primitive."
-      - 'The source body-leading example is internally inconsistent (`100px difference` / `24px / 124px`), so typography size continues to bind the published shared `Global: Typography` ladder.'
+      - JFBB uses one raw family, Vista Sans NAR OTCE, across headline, subheadline, and body roles, with
+        weight carrying the hierarchy.
+      - '`Book` stages on `universal/weight/normal` because the shared raw ladder has no separate book
+        primitive.'
+      - 'The source body-leading example is internally inconsistent (`100px difference` / `24px / 124px`),
+        so typography size continues to bind the published shared `Global: Typography` ladder.'
+      - Brand-safe typography aliases now stage on `jfbb/family_safe/*` from Vail Resorts Guidelines.pdf.
 notes:
-- JFBB is live in the Foundations file with six raw color families, one raw typography family, a semantic theme logo-name override, and JFBB semantic theme extension.
+- JFBB is live in the Foundations file with six raw color families, one raw typography family, a semantic
+  theme logo-name override, and JFBB semantic theme extension.

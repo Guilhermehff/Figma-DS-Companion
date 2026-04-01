@@ -1,19 +1,84 @@
 # Boston Mills / Brandywine Typography Preview
 
-Review state: written in Figma. Verify live state in `figma/brands/boston_mills_brandywine/brand.yml`.
+Review state: written_in_figma preview artifact. Verify live write state in `figma/brands/boston_mills_brandywine/brand.yml` and Figma.
 
-## Source Roles
+## Original Source Roles
 
-- `Headline` -> `Interstate Black`
-- `Subheadline` -> `Interstate H2`
-- `Body` -> `Interstate Medium`
+- Source role: `headline`
+  Family: `Interstate`
+  Safe family: `Prompt`
+  Style: `Black`
+  Weight label: `Black`
+  Usage scope: `headline_h1`
+  Case: `source dependent`
+  Tracking: `not specified in source`
+  Leading: `not specified in source`
+  Size rule: `source names roles and weights but does not define governed numeric sizes`
+  Punctuation: `not specified in source`
+  Sample copy: `Boston Mills / Brandywine`
 
-## Live Semantic Mapping
+- Source role: `subheadline`
+  Family: `Interstate`
+  Safe family: `Prompt`
+  Style: `H2`
+  Weight label: `H2 style`
+  Usage scope: `subheadline_h2`
+  Case: `source dependent`
+  Tracking: `not specified in source`
+  Leading: `not specified in source`
+  Size rule: `source names roles and styles but does not define governed numeric sizes`
+  Punctuation: `not specified in source`
+  Sample copy: `Plan your winter`
 
-- `family/heading`, `family/body`, `family/action` -> `boston_mills_brandywine/family/01`
-- `weight/heading/base`, `weight/heading/strong`, `weight/action/base` -> `universal/weight/black`
-- `weight/body/base`, `weight/body/strong` -> `universal/weight/medium`
+- Source role: `body`
+  Family: `Interstate`
+  Safe family: `Open Sans`
+  Style: `Medium`
+  Weight label: `Medium`
+  Usage scope: `body copy`
+  Case: `source dependent`
+  Tracking: `not specified in source`
+  Leading: `not specified in source`
+  Size rule: `source names roles and weights but does not define governed numeric sizes`
+  Punctuation: `sentence punctuation allowed`
+  Sample copy: `Check operations, lifts, and passes before you visit.`
 
-## Notes
+## Role Recipes
 
-- `Interstate H2` remains documentation-only because the current semantic typography model does not expose a dedicated H2 style slot.
+### Role: heading
+
+Proposed family token: `boston_mills_brandywine/family/01`
+
+Safe family token: `boston_mills_brandywine/family_safe/01`
+
+Proposed weight token: `universal/weight/black`
+
+Proposed size token: `inherited current heading ladder`
+
+Recipe notes:
+
+
+### Role: body
+
+Proposed family token: `boston_mills_brandywine/family/01`
+
+Safe family token: `boston_mills_brandywine/family_safe/02`
+
+Proposed weight token: `universal/weight/medium`
+
+Proposed size token: `inherited current body ladder`
+
+Recipe notes:
+
+
+### Role: action
+
+Proposed family token: `boston_mills_brandywine/family/01`
+
+Safe family token: `boston_mills_brandywine/family_safe/01`
+
+Proposed weight token: `universal/weight/black`
+
+Proposed size token: `inherited current action ladder`
+
+Recipe notes:

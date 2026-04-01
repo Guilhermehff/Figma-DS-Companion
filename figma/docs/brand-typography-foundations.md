@@ -8,7 +8,7 @@ This workflow governs how brand typography guidance becomes durable design-syste
 2. Separate raw primitives from usage-bearing role recipes.
 3. Reuse existing universal families, weights, and sizes before proposing new raw primitives.
 4. Keep raw family tokens structural, not role-based.
-5. Default missing fallback stacks to `universal/family/web_safe`.
+5. Default missing safe-family mappings to `universal/family_safe/01`.
 6. Default missing raw sizes to the governed universal size ladder and mark them as assumptions.
 7. Keep semantic theme family and weight aliases role-based and use safe family aliases only where constrained channels need them.
 8. Generate a preview artifact before any write is proposed or executed.

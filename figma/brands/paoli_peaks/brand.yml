@@ -1,5 +1,5 @@
 version: 1
-updated: '2026-03-31'
+updated: '2026-04-01'
 brand_id: paoli_peaks
 display_name: Paoli Peaks
 status: active
@@ -30,7 +30,8 @@ artifacts:
   typography:
     intake_artifact: figma/brands/paoli_peaks/typography/intake.yml
     preview_artifact: figma/brands/paoli_peaks/typography/preview.md
-    decision_artifacts: []
+    decision_artifacts:
+    - figma/decisions/2026-04-01-safe-typography-lane-migration.md
 semantic_overrides:
   theme:
     status: active
@@ -98,35 +99,44 @@ semantic_overrides:
       - border/critical
       - border/critical_inverse
       notes:
-      - "`on_surface/*` tokens in the live semantic theme extension are contrast-derived from `universal/black` or `universal/white` and are not hue-tinted."
-      - "`paoli_blue` drives the primary expressive lane and `peaks_valley` drives the supporting expressive lane."
-      - "`peaks_peak` remains a governed raw-only family in the first pass."
+      - '`on_surface/*` tokens in the live semantic theme extension are contrast-derived from `universal/black`
+        or `universal/white` and are not hue-tinted.'
+      - '`paoli_blue` drives the primary expressive lane and `peaks_valley` drives the supporting expressive
+        lane.'
+      - '`peaks_peak` remains a governed raw-only family in the first pass.'
       - The documented gradient remains outside the current solid-color variable model.
     typography:
       override_scopes:
       - semantic_token: family/heading
-        alias_to: paoli_peaks/family/01
+        alias_of: paoli_peaks/family/01
       - semantic_token: family/body
-        alias_to: paoli_peaks/family/01
+        alias_of: paoli_peaks/family/01
       - semantic_token: family/action
-        alias_to: paoli_peaks/family/01
+        alias_of: paoli_peaks/family/01
       - semantic_token: weight/heading/base
-        alias_to: universal/weight/black
+        alias_of: universal/weight/black
       - semantic_token: weight/heading/strong
-        alias_to: universal/weight/black
+        alias_of: universal/weight/black
       - semantic_token: weight/body/base
-        alias_to: universal/weight/normal
+        alias_of: universal/weight/normal
       - semantic_token: weight/body/strong
-        alias_to: universal/weight/normal
+        alias_of: universal/weight/normal
       - semantic_token: weight/action/base
-        alias_to: universal/weight/black
-      inherited_from_base:
-      - family/heading_safe
-      - family/body_safe
-      - family/action_safe
+        alias_of: universal/weight/black
+      - semantic_token: family/heading_safe
+        alias_of: paoli_peaks/family_safe/01
+      - semantic_token: family/body_safe
+        alias_of: paoli_peaks/family_safe/02
+      - semantic_token: family/action_safe
+        alias_of: paoli_peaks/family_safe/01
+      inherited_from_base: []
       notes:
-      - Paoli Peaks is live as a one-family typography system with `Rockwell Nova` across heading, body, and action work.
-      - The PDF does not define a body or CTA lane, so body stays on the shared normal weight and action follows the headline family in the first pass.
+      - Paoli Peaks is live as a one-family typography system with `Rockwell Nova` across heading, body,
+        and action work.
+      - The PDF does not define a body or CTA lane, so body stays on the shared normal weight and action
+        follows the headline family in the first pass.
       - 'Typography size continues to bind directly from published `Global: Typography`.'
+      - Brand-safe typography aliases now stage on `paoli_peaks/family_safe/*` from Vail Resorts Guidelines.pdf.
 notes:
-- Paoli Peaks is live in the Foundations file with three raw color families, one raw typography family primitive, and Paoli Peaks semantic theme extension.
+- Paoli Peaks is live in the Foundations file with three raw color families, one raw typography family
+  primitive, and Paoli Peaks semantic theme extension.

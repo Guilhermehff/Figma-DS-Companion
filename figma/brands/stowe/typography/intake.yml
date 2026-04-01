@@ -1,4 +1,4 @@
-date: 2026-03-19
+date: '2026-04-01'
 brand: stowe
 source_reference: User-provided image in chat showing the Stowe typography hierarchy guidance
 source_type: image
@@ -8,250 +8,285 @@ preview:
   required_before_write: true
   artifact: figma/brands/stowe/typography/preview.md
   status: written_in_figma
-
 source_roles:
-  - source_role: headline
-    source_family_name: Athena
-    source_style_name: Regular
-    source_weight_label: Regular
-    source_usage_scope: primary_display_headline
-    text_case: uppercase
-    tracking: 0px
-    leading: font_size_times_1
-    size_rule: source defines case, weight language, and relational leading but no governed numeric size
-    punctuation_rule: not specified in source
-    sample_copy: STEP INTO THE ALLURE
-    notes: The source explicitly labels the headline family as Athena Regular, and the user approved the live write to treat the supporting prose word `bold` as a copy mistake.
-  - source_role: subhead
-    source_family_name: Raleway
-    source_style_name: Bold
-    source_weight_label: Bold
-    source_usage_scope: supporting_headline_copy
-    text_case: title_case
-    tracking: 0px
-    leading: font_size_times_1_5
-    size_rule: source defines relational leading but no governed numeric size
-    punctuation_rule: not specified in source
-    sample_copy: Experience The Luxury of Stowe In The Heart of Vermont.
-    notes: The source explicitly labels subheads as Raleway Bold and says they remain left justified unless a layout calls for centering.
-  - source_role: body
-    source_family_name: Raleway
-    source_style_name: Regular
-    source_weight_label: Regular
-    source_usage_scope: reading_copy
-    text_case: sentence_case
-    tracking: 0px
-    leading: font_size_times_1_8
-    size_rule: source defines relational leading but no governed numeric size
-    punctuation_rule: not specified in source
-    sample_copy: Nam velliqui beatur alit la volorpo rionsedi consecus ent quam sumquiam, occatur?
-    notes: Body copy is explicitly labeled Raleway Regular and should be left justified unless a layout calls for centering.
-  - source_role: body_contrasting
-    source_family_name: Raleway
-    source_style_name: Light
-    source_weight_label: Light
-    source_usage_scope: contrast_body_or_supporting_copy
-    text_case: sentence_case
-    tracking: 0px
-    leading: font_size_times_1_8
-    size_rule: source defines relational leading but no governed numeric size
-    punctuation_rule: not specified in source
-    sample_copy: This font should be used sparingly due to legibility and only when large enough to be read.
-    notes: The source explicitly labels body and contrasting type as Raleway Light and says it should be used sparingly.
-
+- source_role: headline
+  source_family_name: Athena
+  source_style_name: Regular
+  source_weight_label: Regular
+  source_usage_scope: primary_display_headline
+  text_case: uppercase
+  tracking: 0px
+  leading: font_size_times_1
+  size_rule: source defines case, weight language, and relational leading but no governed numeric size
+  punctuation_rule: not specified in source
+  sample_copy: STEP INTO THE ALLURE
+  notes: The source explicitly labels the headline family as Athena Regular, and the user approved the
+    live write to treat the supporting prose word `bold` as a copy mistake.
+  source_safe_family_name: Italiana
+  source_safe_reference_column: headline_font
+- source_role: subhead
+  source_family_name: Raleway
+  source_style_name: Bold
+  source_weight_label: Bold
+  source_usage_scope: supporting_headline_copy
+  text_case: title_case
+  tracking: 0px
+  leading: font_size_times_1_5
+  size_rule: source defines relational leading but no governed numeric size
+  punctuation_rule: not specified in source
+  sample_copy: Experience The Luxury of Stowe In The Heart of Vermont.
+  notes: The source explicitly labels subheads as Raleway Bold and says they remain left justified unless
+    a layout calls for centering.
+  source_safe_family_name: Italiana
+  source_safe_reference_column: headline_font
+- source_role: body
+  source_family_name: Raleway
+  source_style_name: Regular
+  source_weight_label: Regular
+  source_usage_scope: reading_copy
+  text_case: sentence_case
+  tracking: 0px
+  leading: font_size_times_1_8
+  size_rule: source defines relational leading but no governed numeric size
+  punctuation_rule: not specified in source
+  sample_copy: Nam velliqui beatur alit la volorpo rionsedi consecus ent quam sumquiam, occatur?
+  notes: Body copy is explicitly labeled Raleway Regular and should be left justified unless a layout
+    calls for centering.
+  source_safe_family_name: Raleway
+  source_safe_reference_column: body_font
+- source_role: body_contrasting
+  source_family_name: Raleway
+  source_style_name: Light
+  source_weight_label: Light
+  source_usage_scope: contrast_body_or_supporting_copy
+  text_case: sentence_case
+  tracking: 0px
+  leading: font_size_times_1_8
+  size_rule: source defines relational leading but no governed numeric size
+  punctuation_rule: not specified in source
+  sample_copy: This font should be used sparingly due to legibility and only when large enough to be read.
+  notes: The source explicitly labels body and contrasting type as Raleway Light and says it should be
+    used sparingly.
+  source_safe_family_name: Raleway
+  source_safe_reference_column: body_font
 primitive_recommendations:
   reuse_existing:
     families: []
     weights:
-      - source_weight_label: Regular
-        existing_token: universal/weight/normal
-        reason: Direct match for Athena Regular and the default Raleway body baseline.
-      - source_weight_label: Bold
-        existing_token: universal/weight/bold
-        reason: Direct match for Raleway Bold in the subhead role.
-      - source_weight_label: Light
-        existing_token: universal/weight/light
-        reason: Direct match for the contrasting Raleway Light role.
+    - source_weight_label: Regular
+      existing_token: universal/weight/normal
+      reason: Direct match for Athena Regular and the default Raleway body baseline.
+    - source_weight_label: Bold
+      existing_token: universal/weight/bold
+      reason: Direct match for Raleway Bold in the subhead role.
+    - source_weight_label: Light
+      existing_token: universal/weight/light
+      reason: Direct match for the contrasting Raleway Light role.
     sizes:
-      - source_size_reference: headline default
-        existing_token: inherited current heading ladder
-        assumption_status: deferred_no_new_size
-        assumption_note: The source provides relational leading only and no governed numeric size.
-        reason: Live semantic size aliases can remain inherited in the first pass.
-      - source_size_reference: subhead default
-        existing_token: inherited current body and heading ladders
-        assumption_status: deferred_no_new_size
-        assumption_note: The source provides relational leading only and no governed numeric size.
-        reason: No new raw size values are justified yet.
-      - source_size_reference: body default
-        existing_token: inherited current body ladder
-        assumption_status: deferred_no_new_size
-        assumption_note: The source provides relational leading only and no governed numeric size.
-        reason: Live semantic size aliases can remain inherited in the first pass.
+    - source_size_reference: headline default
+      existing_token: inherited current heading ladder
+      assumption_status: deferred_no_new_size
+      assumption_note: The source provides relational leading only and no governed numeric size.
+      reason: Live semantic size aliases can remain inherited in the first pass.
+    - source_size_reference: subhead default
+      existing_token: inherited current body and heading ladders
+      assumption_status: deferred_no_new_size
+      assumption_note: The source provides relational leading only and no governed numeric size.
+      reason: No new raw size values are justified yet.
+    - source_size_reference: body default
+      existing_token: inherited current body ladder
+      assumption_status: deferred_no_new_size
+      assumption_note: The source provides relational leading only and no governed numeric size.
+      reason: Live semantic size aliases can remain inherited in the first pass.
   proposed_primitives:
     families:
-      - token_name: stowe/family/01
-        source_family_name: Athena
-        source_style_reference: Athena Regular headline system
-        rationale: Stowe uses Athena only in the display headline lane, so it should stage as a dedicated display family primitive.
-        fallback_token: universal/family/fallback
-        fallback_note: The source does not define a fallback stack.
-      - token_name: stowe/family/02
-        source_family_name: Raleway
-        source_style_reference: Raleway Bold, Regular, and Light across subhead, body, and contrasting body roles
-        rationale: Raleway carries the reading and supporting hierarchy, so one primary family primitive is enough for the first pass.
-        fallback_token: universal/family/fallback
-        fallback_note: The source does not define a fallback stack.
+    - token_name: stowe/family/01
+      source_family_name: Athena
+      source_style_reference: Athena Regular headline system
+      rationale: Stowe uses Athena only in the display headline lane, so it should stage as a dedicated
+        display family primitive.
+      safe_family_token: stowe/family_safe/02
+      safe_family_note: Approved safe-family companion from Vail Resorts Guidelines.pdf.
+    - token_name: stowe/family/02
+      source_family_name: Raleway
+      source_style_reference: Raleway Bold, Regular, and Light across subhead, body, and contrasting body
+        roles
+      rationale: Raleway carries the reading and supporting hierarchy, so one primary family primitive
+        is enough for the first pass.
+      safe_family_token: ''
+      safe_family_note: Multiple approved role-level safe-family mappings apply to this brand family;
+        use the semantic safe aliases and role recipes below.
     weights: []
+    safe_families:
+    - token_name: stowe/family_safe/01
+      source_family_name: Raleway
+      source_role_reference: eyebrow, body, cta
+      rationale: Approved web safe family from Vail Resorts Guidelines.pdf for the eyebrow, body, cta
+        lane.
+    - token_name: stowe/family_safe/02
+      source_family_name: Italiana
+      source_role_reference: headline
+      rationale: Approved web safe family from Vail Resorts Guidelines.pdf for the headline lane.
   hold_for_review: []
-
 semantic_recommendations:
   family_aliases:
-    - semantic_token: family/heading
-      global_token: stowe/family/01
-      safe_semantic_token: family/heading_safe
-      safe_global_token: universal/family/fallback
-      intended_channels:
-        - web
-        - email
-        - ads
-      notes: Athena is the proposed display family for Stowe headlines.
-    - semantic_token: family/body
-      global_token: stowe/family/02
-      safe_semantic_token: family/body_safe
-      safe_global_token: universal/family/fallback
-      intended_channels:
-        - web
-        - email
-        - ads
-      notes: Raleway is the proposed body and supporting-copy family.
-    - semantic_token: family/action
-      global_token: stowe/family/01
-      safe_semantic_token: family/action_safe
-      safe_global_token: universal/family/fallback
-      intended_channels:
-        - web
-        - email
-        - ads
-      notes: User-approved live write. Action follows the same family as heading.
-  weight_aliases:
-    - semantic_token: weight/heading/base
-      global_token: universal/weight/normal
-      intended_channels:
-        - web
-        - email
-        - ads
-      notes: User-approved live write. The semantic heading baseline follows the explicit `Athena Regular` label rather than the contradictory prose word `bold`.
-    - semantic_token: weight/body/base
-      global_token: universal/weight/normal
-      intended_channels:
-        - web
-        - email
-        - ads
-      notes: Body copy explicitly uses Raleway Regular.
-    - semantic_token: weight/body/strong
-      global_token: universal/weight/bold
-      intended_channels:
-        - web
-        - email
-        - ads
-      notes: User-approved live write. The stronger body emphasis lane stages the explicit Raleway Bold subhead treatment.
-    - semantic_token: weight/action/base
-      global_token: universal/weight/normal
-      intended_channels:
-        - web
-        - email
-        - ads
-      notes: User-approved live write. Action follows the same weight as heading.
-  size_aliases: []
-
-role_recipes:
-  - role_name: headline
-    source_role: Headline | Athena Regular
-    proposed_family_token: stowe/family/01
-    fallback_token: universal/family/fallback
-    proposed_weight_token: universal/weight/normal
-    proposed_size_token: inherited current heading ladder
-    size_assumption_status: deferred_no_new_size
-    text_case: uppercase
-    tracking: 0px
-    leading_rule: leading equals the point size
-    size_rule: no governed source size token
-    punctuation_rule: not specified in source
-    sample_copy: STEP INTO THE ALLURE
-    notes: User-approved live write. The heading baseline follows the explicit Athena Regular label.
-  - role_name: subhead
-    source_role: Subhead | Raleway Bold
-    proposed_family_token: stowe/family/02
-    fallback_token: universal/family/fallback
-    proposed_weight_token: universal/weight/bold
-    proposed_size_token: inherited current heading and body ladders
-    size_assumption_status: deferred_no_new_size
-    text_case: title_case
-    tracking: 0px
-    leading_rule: 1.5 times the font size
-    size_rule: no governed source size token
-    punctuation_rule: not specified in source
-    sample_copy: Experience The Luxury of Stowe In The Heart of Vermont.
-    notes: Subheads stay on Raleway Bold and remain left justified unless a layout calls for centering.
-  - role_name: body
-    source_role: Body | Raleway Regular
-    proposed_family_token: stowe/family/02
-    fallback_token: universal/family/fallback
-    proposed_weight_token: universal/weight/normal
-    proposed_size_token: inherited current body ladder
-    size_assumption_status: deferred_no_new_size
-    text_case: sentence_case
-    tracking: 0px
-    leading_rule: 1.8 times the font size
-    size_rule: no governed source size token
-    punctuation_rule: not specified in source
-    sample_copy: Nam velliqui beatur alit la volorpo rionsedi consecus ent quam sumquiam, occatur?
-    notes: Body copy explicitly uses Raleway Regular.
-  - role_name: body_contrasting
-    source_role: Body and Contrasting Type | Raleway Light
-    proposed_family_token: stowe/family/02
-    fallback_token: universal/family/fallback
-    proposed_weight_token: universal/weight/light
-    proposed_size_token: inherited current body ladder
-    size_assumption_status: deferred_no_new_size
-    text_case: sentence_case
-    tracking: 0px
-    leading_rule: 1.8 times the font size
-    size_rule: no governed source size token
-    punctuation_rule: not specified in source
-    sample_copy: This font should be used sparingly due to legibility and only when large enough to be read.
-    notes: Contrasting type remains a documented raw option rather than a separate semantic lane in the first pass.
-
-validation:
-  extraction_notes:
-    - The source explicitly names Athena Regular for headlines and Raleway Bold, Regular, and Light for the supporting hierarchy.
-    - The source provides case, tracking, kerning, and leading ratios but no governed numeric sizes and no CTA recipe.
-  governance_notes:
-    - Stowe stages cleanly as a two-family system with Athena in the display lane and Raleway across the reading hierarchy.
-    - User-approved exception. The live write treats the headline prose word `bold` as a source copy mistake and follows the explicit Athena Regular label.
-    - User-approved mapping. Action follows the same family and weight as heading.
-    - "`weight/body/strong` stages on `universal/weight/bold` so the explicit Raleway Bold subhead treatment remains available through the current semantic theme typography ladder."
-
-review_readiness:
-  intended_review_channels:
+  - semantic_token: family/heading
+    global_token: stowe/family/01
+    safe_semantic_token: family/heading_safe
+    safe_global_token: stowe/family_safe/02
+    intended_channels:
     - web
     - email
     - ads
+    notes: Athena is the proposed display family for Stowe headlines. Safe mapping is staged from Vail
+      Resorts Guidelines.pdf.
+  - semantic_token: family/body
+    global_token: stowe/family/02
+    safe_semantic_token: family/body_safe
+    safe_global_token: stowe/family_safe/01
+    intended_channels:
+    - web
+    - email
+    - ads
+    notes: Raleway is the proposed body and supporting-copy family. Safe mapping is staged from Vail Resorts
+      Guidelines.pdf.
+  - semantic_token: family/action
+    global_token: stowe/family/01
+    safe_semantic_token: family/action_safe
+    safe_global_token: stowe/family_safe/01
+    intended_channels:
+    - web
+    - email
+    - ads
+    notes: User-approved live write. Action follows the same family as heading. Safe mapping is staged
+      from Vail Resorts Guidelines.pdf.
+  weight_aliases:
+  - semantic_token: weight/heading/base
+    global_token: universal/weight/normal
+    intended_channels:
+    - web
+    - email
+    - ads
+    notes: User-approved live write. The semantic heading baseline follows the explicit `Athena Regular`
+      label rather than the contradictory prose word `bold`.
+  - semantic_token: weight/body/base
+    global_token: universal/weight/normal
+    intended_channels:
+    - web
+    - email
+    - ads
+    notes: Body copy explicitly uses Raleway Regular.
+  - semantic_token: weight/body/strong
+    global_token: universal/weight/bold
+    intended_channels:
+    - web
+    - email
+    - ads
+    notes: User-approved live write. The stronger body emphasis lane stages the explicit Raleway Bold
+      subhead treatment.
+  - semantic_token: weight/action/base
+    global_token: universal/weight/normal
+    intended_channels:
+    - web
+    - email
+    - ads
+    notes: User-approved live write. Action follows the same weight as heading.
+  size_aliases: []
+role_recipes:
+- role_name: headline
+  source_role: Headline | Athena Regular
+  proposed_family_token: stowe/family/01
+  proposed_weight_token: universal/weight/normal
+  proposed_size_token: inherited current heading ladder
+  size_assumption_status: deferred_no_new_size
+  text_case: uppercase
+  tracking: 0px
+  leading_rule: leading equals the point size
+  size_rule: no governed source size token
+  punctuation_rule: not specified in source
+  sample_copy: STEP INTO THE ALLURE
+  notes: User-approved live write. The heading baseline follows the explicit Athena Regular label.
+  safe_family_token: stowe/family_safe/02
+- role_name: subhead
+  source_role: Subhead | Raleway Bold
+  proposed_family_token: stowe/family/02
+  proposed_weight_token: universal/weight/bold
+  proposed_size_token: inherited current heading and body ladders
+  size_assumption_status: deferred_no_new_size
+  text_case: title_case
+  tracking: 0px
+  leading_rule: 1.5 times the font size
+  size_rule: no governed source size token
+  punctuation_rule: not specified in source
+  sample_copy: Experience The Luxury of Stowe In The Heart of Vermont.
+  notes: Subheads stay on Raleway Bold and remain left justified unless a layout calls for centering.
+  safe_family_token: stowe/family_safe/02
+- role_name: body
+  source_role: Body | Raleway Regular
+  proposed_family_token: stowe/family/02
+  proposed_weight_token: universal/weight/normal
+  proposed_size_token: inherited current body ladder
+  size_assumption_status: deferred_no_new_size
+  text_case: sentence_case
+  tracking: 0px
+  leading_rule: 1.8 times the font size
+  size_rule: no governed source size token
+  punctuation_rule: not specified in source
+  sample_copy: Nam velliqui beatur alit la volorpo rionsedi consecus ent quam sumquiam, occatur?
+  notes: Body copy explicitly uses Raleway Regular.
+  safe_family_token: stowe/family_safe/01
+- role_name: body_contrasting
+  source_role: Body and Contrasting Type | Raleway Light
+  proposed_family_token: stowe/family/02
+  proposed_weight_token: universal/weight/light
+  proposed_size_token: inherited current body ladder
+  size_assumption_status: deferred_no_new_size
+  text_case: sentence_case
+  tracking: 0px
+  leading_rule: 1.8 times the font size
+  size_rule: no governed source size token
+  punctuation_rule: not specified in source
+  sample_copy: This font should be used sparingly due to legibility and only when large enough to be read.
+  notes: Contrasting type remains a documented raw option rather than a separate semantic lane in the
+    first pass.
+  safe_family_token: stowe/family_safe/01
+validation:
+  extraction_notes:
+  - The source explicitly names Athena Regular for headlines and Raleway Bold, Regular, and Light for
+    the supporting hierarchy.
+  - The source provides case, tracking, kerning, and leading ratios but no governed numeric sizes and
+    no CTA recipe.
+  governance_notes:
+  - Stowe stages cleanly as a two-family system with Athena in the display lane and Raleway across the
+    reading hierarchy.
+  - User-approved exception. The live write treats the headline prose word `bold` as a source copy mistake
+    and follows the explicit Athena Regular label.
+  - User-approved mapping. Action follows the same family and weight as heading.
+  - '`weight/body/strong` stages on `universal/weight/bold` so the explicit Raleway Bold subhead treatment
+    remains available through the current semantic theme typography ladder.'
+  - Brand-safe typography aliases now stage on `stowe/family_safe/*` from Vail Resorts Guidelines.pdf.
+review_readiness:
+  intended_review_channels:
+  - web
+  - email
+  - ads
   review_rules:
-    - subject: Stowe display-family split
-      channels:
-        - web
-        - email
-        - ads
-      rule: Keep Athena isolated to the headline display lane and keep Raleway on subhead and reading work.
-      source_basis: The source explicitly names Athena only for headlines and Raleway for the supporting hierarchy.
-    - subject: Stowe headline weight contradiction
-      channels:
-        - web
-        - email
-        - ads
-      rule: Follow the explicit `Athena Regular` label and treat the contradictory prose word `bold` as a source copy mistake.
-      source_basis: User-approved live write decision in chat.
-
+  - subject: Stowe display-family split
+    channels:
+    - web
+    - email
+    - ads
+    rule: Keep Athena isolated to the headline display lane and keep Raleway on subhead and reading work.
+    source_basis: The source explicitly names Athena only for headlines and Raleway for the supporting
+      hierarchy.
+  - subject: Stowe headline weight contradiction
+    channels:
+    - web
+    - email
+    - ads
+    rule: Follow the explicit `Athena Regular` label and treat the contradictory prose word `bold` as
+      a source copy mistake.
+    source_basis: User-approved live write decision in chat.
 open_questions: []
+safe_source_reference: Vail Resorts Guidelines.pdf
+safe_source_type: pdf

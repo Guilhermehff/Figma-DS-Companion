@@ -1,4 +1,4 @@
-date: 2026-03-30
+date: '2026-04-01'
 brand: roundtop_mountain
 source_reference: Vail Resorts Guidelines - Google Sheets.pdf
 source_type: pdf
@@ -8,151 +8,172 @@ preview:
   required_before_write: true
   artifact: figma/brands/roundtop_mountain/typography/preview.md
   status: written_in_figma
-
 source_roles:
-  - source_role: headline
-    source_family_name: Rhode
-    source_style_name: Semibold Normal
-    source_weight_label: Semibold
-    source_usage_scope: headline
-    text_case: source dependent
-    tracking: not specified in source
-    leading: not specified in source
-    size_rule: source names roles and weights but does not define governed numeric sizes
-    punctuation_rule: not specified in source
-    sample_copy: Roundtop Mountain
-  - source_role: subheadline
-    source_family_name: Rhode
-    source_style_name: Semibold Normal
-    source_weight_label: Semibold
-    source_usage_scope: supporting headline
-    text_case: source dependent
-    tracking: not specified in source
-    leading: not specified in source
-    size_rule: source names roles and weights but does not define governed numeric sizes
-    punctuation_rule: not specified in source
-    sample_copy: Mountain updates
-  - source_role: body
-    source_family_name: Antique Olive
-    source_style_name: not specified
-    source_weight_label: Regular
-    source_usage_scope: body copy
-    text_case: source dependent
-    tracking: not specified in source
-    leading: not specified in source
-    size_rule: source names roles and weights but does not define governed numeric sizes
-    punctuation_rule: sentence punctuation allowed
-    sample_copy: Explore operations, tickets, and lessons before your visit.
-
+- source_role: headline
+  source_family_name: Rhode
+  source_style_name: Semibold Normal
+  source_weight_label: Semibold
+  source_usage_scope: headline
+  text_case: source dependent
+  tracking: not specified in source
+  leading: not specified in source
+  size_rule: source names roles and weights but does not define governed numeric sizes
+  punctuation_rule: not specified in source
+  sample_copy: Roundtop Mountain
+  source_safe_family_name: Prompt
+  source_safe_reference_column: headline_font
+- source_role: subheadline
+  source_family_name: Rhode
+  source_style_name: Semibold Normal
+  source_weight_label: Semibold
+  source_usage_scope: supporting headline
+  text_case: source dependent
+  tracking: not specified in source
+  leading: not specified in source
+  size_rule: source names roles and weights but does not define governed numeric sizes
+  punctuation_rule: not specified in source
+  sample_copy: Mountain updates
+  source_safe_family_name: Prompt
+  source_safe_reference_column: headline_font
+- source_role: body
+  source_family_name: Antique Olive
+  source_style_name: not specified
+  source_weight_label: Regular
+  source_usage_scope: body copy
+  text_case: source dependent
+  tracking: not specified in source
+  leading: not specified in source
+  size_rule: source names roles and weights but does not define governed numeric sizes
+  punctuation_rule: sentence punctuation allowed
+  sample_copy: Explore operations, tickets, and lessons before your visit.
+  source_safe_family_name: Open Sans
+  source_safe_reference_column: body_font
 primitive_recommendations:
   reuse_existing:
     families: []
     weights:
-      - source_weight_label: Semibold
-        existing_token: universal/weight/semibold
-        reason: Direct match for Rhode Semibold.
-      - source_weight_label: Regular
-        existing_token: universal/weight/normal
-        reason: Direct match for Antique Olive body copy.
+    - source_weight_label: Semibold
+      existing_token: universal/weight/semibold
+      reason: Direct match for Rhode Semibold.
+    - source_weight_label: Regular
+      existing_token: universal/weight/normal
+      reason: Direct match for Antique Olive body copy.
     sizes:
-      - source_size_reference: inherited
-        existing_token: universal/size/*
-        assumption_status: deferred_no_new_size
-        assumption_note: The PDF names roles and weights but does not govern numeric sizes.
-        reason: "Typography size continues to publish from the shared Global: Typography ladder."
+    - source_size_reference: inherited
+      existing_token: universal/size/*
+      assumption_status: deferred_no_new_size
+      assumption_note: The PDF names roles and weights but does not govern numeric sizes.
+      reason: 'Typography size continues to publish from the shared Global: Typography ladder.'
   proposed_primitives:
     families:
-      - token_name: roundtop_mountain/family/01
-        source_family_name: Rhode
-        source_style_reference: semibold headline family
-        rationale: Heading and action family.
-        fallback_token: universal/family/fallback
-        fallback_note: Safe-family behavior remains inherited from the semantic base.
-      - token_name: roundtop_mountain/family/02
-        source_family_name: Antique Olive
-        source_style_reference: body family
-        rationale: Reading family.
-        fallback_token: universal/family/fallback
-        fallback_note: Safe-family behavior remains inherited from the semantic base.
+    - token_name: roundtop_mountain/family/01
+      source_family_name: Rhode
+      source_style_reference: semibold headline family
+      rationale: Heading and action family.
+      safe_family_token: roundtop_mountain/family_safe/01
+      safe_family_note: Approved safe-family companion from Vail Resorts Guidelines.pdf.
+    - token_name: roundtop_mountain/family/02
+      source_family_name: Antique Olive
+      source_style_reference: body family
+      rationale: Reading family.
+      safe_family_token: roundtop_mountain/family_safe/02
+      safe_family_note: Approved safe-family companion from Vail Resorts Guidelines.pdf.
     weights: []
+    safe_families:
+    - token_name: roundtop_mountain/family_safe/01
+      source_family_name: Prompt
+      source_role_reference: eyebrow, headline, cta
+      rationale: Approved web safe family from Vail Resorts Guidelines.pdf for the eyebrow, headline,
+        cta lane.
+    - token_name: roundtop_mountain/family_safe/02
+      source_family_name: Open Sans
+      source_role_reference: body
+      rationale: Approved web safe family from Vail Resorts Guidelines.pdf for the body lane.
   hold_for_review: []
-
 semantic_recommendations:
   family_aliases:
-    - semantic_token: family/heading
-      global_token: roundtop_mountain/family/01
-      safe_semantic_token: family/heading_safe
-      safe_global_token: universal/family/fallback
-      intended_channels:
-        - web
-        - email
-        - ads
-    - semantic_token: family/body
-      global_token: roundtop_mountain/family/02
-      safe_semantic_token: family/body_safe
-      safe_global_token: universal/family/fallback
-      intended_channels:
-        - web
-        - email
-        - ads
-    - semantic_token: family/action
-      global_token: roundtop_mountain/family/01
-      safe_semantic_token: family/action_safe
-      safe_global_token: universal/family/fallback
-      intended_channels:
-        - web
-        - email
-        - ads
-  weight_aliases:
-    - semantic_token: weight/heading/base
-      global_token: universal/weight/semibold
-    - semantic_token: weight/heading/strong
-      global_token: universal/weight/semibold
-    - semantic_token: weight/body/base
-      global_token: universal/weight/normal
-    - semantic_token: weight/body/strong
-      global_token: universal/weight/normal
-    - semantic_token: weight/action/base
-      global_token: universal/weight/semibold
-  size_aliases: []
-
-role_recipes:
-  - role_name: heading
-    source_role: Rhode Semibold Normal
-    proposed_family_token: roundtop_mountain/family/01
-    proposed_weight_token: universal/weight/semibold
-    proposed_size_token: inherited current heading ladder
-  - role_name: body
-    source_role: Antique Olive
-    proposed_family_token: roundtop_mountain/family/02
-    proposed_weight_token: universal/weight/normal
-    proposed_size_token: inherited current body ladder
-  - role_name: action
-    source_role: derived from the Rhode headline family because the PDF does not define a separate CTA lane
-    proposed_family_token: roundtop_mountain/family/01
-    proposed_weight_token: universal/weight/semibold
-    proposed_size_token: inherited current action ladder
-
-validation:
-  extraction_notes:
-    - The PDF explicitly names Rhode Semibold Normal for headline and subheadline and Antique Olive for body copy.
-    - No separate CTA recipe is listed in the source, so action follows the Rhode headline family in the first governed pass.
-  governance_notes:
-    - Roundtop Mountain is live as a two-family typography system with Rhode on heading and action work and Antique Olive on the reading lane.
-    - "Typography size continues to bind directly from published Global: Typography."
-
-review_readiness:
-  intended_review_channels:
+  - semantic_token: family/heading
+    global_token: roundtop_mountain/family/01
+    safe_semantic_token: family/heading_safe
+    safe_global_token: roundtop_mountain/family_safe/01
+    intended_channels:
     - web
     - email
     - ads
+    notes: Safe mapping is staged from Vail Resorts Guidelines.pdf.
+  - semantic_token: family/body
+    global_token: roundtop_mountain/family/02
+    safe_semantic_token: family/body_safe
+    safe_global_token: roundtop_mountain/family_safe/02
+    intended_channels:
+    - web
+    - email
+    - ads
+    notes: Safe mapping is staged from Vail Resorts Guidelines.pdf.
+  - semantic_token: family/action
+    global_token: roundtop_mountain/family/01
+    safe_semantic_token: family/action_safe
+    safe_global_token: roundtop_mountain/family_safe/01
+    intended_channels:
+    - web
+    - email
+    - ads
+    notes: Safe mapping is staged from Vail Resorts Guidelines.pdf.
+  weight_aliases:
+  - semantic_token: weight/heading/base
+    global_token: universal/weight/semibold
+  - semantic_token: weight/heading/strong
+    global_token: universal/weight/semibold
+  - semantic_token: weight/body/base
+    global_token: universal/weight/normal
+  - semantic_token: weight/body/strong
+    global_token: universal/weight/normal
+  - semantic_token: weight/action/base
+    global_token: universal/weight/semibold
+  size_aliases: []
+role_recipes:
+- role_name: heading
+  source_role: Rhode Semibold Normal
+  proposed_family_token: roundtop_mountain/family/01
+  proposed_weight_token: universal/weight/semibold
+  proposed_size_token: inherited current heading ladder
+  safe_family_token: roundtop_mountain/family_safe/01
+- role_name: body
+  source_role: Antique Olive
+  proposed_family_token: roundtop_mountain/family/02
+  proposed_weight_token: universal/weight/normal
+  proposed_size_token: inherited current body ladder
+  safe_family_token: roundtop_mountain/family_safe/02
+- role_name: action
+  source_role: derived from the Rhode headline family because the PDF does not define a separate CTA lane
+  proposed_family_token: roundtop_mountain/family/01
+  proposed_weight_token: universal/weight/semibold
+  proposed_size_token: inherited current action ladder
+  safe_family_token: roundtop_mountain/family_safe/01
+validation:
+  extraction_notes:
+  - The PDF explicitly names Rhode Semibold Normal for headline and subheadline and Antique Olive for
+    body copy.
+  - No separate CTA recipe is listed in the source, so action follows the Rhode headline family in the
+    first governed pass.
+  governance_notes:
+  - Roundtop Mountain is live as a two-family typography system with Rhode on heading and action work
+    and Antique Olive on the reading lane.
+  - 'Typography size continues to bind directly from published Global: Typography.'
+  - Brand-safe typography aliases now stage on `roundtop_mountain/family_safe/*` from Vail Resorts Guidelines.pdf.
+review_readiness:
+  intended_review_channels:
+  - web
+  - email
+  - ads
   review_rules:
-    - subject: Roundtop family split
-      channels:
-        - web
-        - email
-        - ads
-      rule: Keep Rhode on heading and action work and Antique Olive on the reading lane.
-      source_basis: Vail Resorts Guidelines - Google Sheets PDF.
-
+  - subject: Roundtop family split
+    channels:
+    - web
+    - email
+    - ads
+    rule: Keep Rhode on heading and action work and Antique Olive on the reading lane.
+    source_basis: Vail Resorts Guidelines - Google Sheets PDF.
 open_questions: []
+safe_source_reference: Vail Resorts Guidelines.pdf
+safe_source_type: pdf

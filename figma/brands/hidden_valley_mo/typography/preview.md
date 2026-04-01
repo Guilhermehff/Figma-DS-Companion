@@ -1,19 +1,84 @@
 # Hidden Valley MO Typography Preview
 
-Review state: written in Figma. Verify live state in `figma/brands/hidden_valley_mo/brand.yml`.
+Review state: written_in_figma preview artifact. Verify live write state in `figma/brands/hidden_valley_mo/brand.yml` and Figma.
 
-## Source Roles
+## Original Source Roles
 
-- `Headline` -> `Altero Regular`
-- `Subheadline` -> `Altero Outline`
-- `Body` -> `Prompt Regular`
+- Source role: `headline`
+  Family: `Altero`
+  Safe family: `Prompt`
+  Style: `Regular`
+  Weight label: `Regular`
+  Usage scope: `headline`
+  Case: `uppercase`
+  Tracking: `not specified in source`
+  Leading: `not specified in source`
+  Size rule: `source names roles and weights but does not define governed numeric sizes`
+  Punctuation: `not specified in source`
+  Sample copy: `Hidden Valley MO`
 
-## Live Semantic Mapping
+- Source role: `subheadline`
+  Family: `Altero`
+  Safe family: `Prompt`
+  Style: `Outline`
+  Weight label: `Outline`
+  Usage scope: `supporting headline`
+  Case: `uppercase`
+  Tracking: `not specified in source`
+  Leading: `not specified in source`
+  Size rule: `source names roles and styles but does not define governed numeric sizes`
+  Punctuation: `not specified in source`
+  Sample copy: `See the mountain`
 
-- `family/heading`, `family/action` -> `hidden_valley_mo/family/01`
-- `family/body` -> `hidden_valley_mo/family/02`
-- `weight/heading/base`, `weight/heading/strong`, `weight/body/base`, `weight/body/strong`, `weight/action/base` -> `universal/weight/normal`
+- Source role: `body`
+  Family: `Prompt`
+  Safe family: `Open Sans`
+  Style: `Regular`
+  Weight label: `Regular`
+  Usage scope: `body copy`
+  Case: `source dependent`
+  Tracking: `not specified in source`
+  Leading: `not specified in source`
+  Size rule: `source names roles and weights but does not define governed numeric sizes`
+  Punctuation: `sentence punctuation allowed`
+  Sample copy: `Explore current conditions, passes, and lessons.`
 
-## Notes
+## Role Recipes
 
-- `Altero Outline` remains documentation-only because the current semantic typography model has no dedicated outline or style slot.
+### Role: heading
+
+Proposed family token: `hidden_valley_mo/family/01`
+
+Safe family token: `hidden_valley_mo/family_safe/01`
+
+Proposed weight token: `universal/weight/normal`
+
+Proposed size token: `inherited current heading ladder`
+
+Recipe notes:
+
+
+### Role: body
+
+Proposed family token: `hidden_valley_mo/family/02`
+
+Safe family token: `hidden_valley_mo/family_safe/02`
+
+Proposed weight token: `universal/weight/normal`
+
+Proposed size token: `inherited current body ladder`
+
+Recipe notes:
+
+
+### Role: action
+
+Proposed family token: `hidden_valley_mo/family/01`
+
+Safe family token: `hidden_valley_mo/family_safe/01`
+
+Proposed weight token: `universal/weight/normal`
+
+Proposed size token: `inherited current action ladder`
+
+Recipe notes:

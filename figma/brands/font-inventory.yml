@@ -1,428 +1,895 @@
 version: 1
-updated: '2026-03-27'
+updated: '2026-04-01'
 purpose: generated_brand_font_inventory
 generated_from:
   registry: figma/brands/registry.yml
   extraction_rule: Collect unique family names from each brand typography intake artifact,
-    preferring `primitive_recommendations.proposed_primitives.families`. When a
-    brand explicitly inherits the universal typography baseline without brand-specific
-    primitives, keep the brand entry and return an empty `fonts` list.
+    preferring `primitive_recommendations.proposed_primitives.families` and `primitive_recommendations.proposed_primitives.safe_families`.
 brands:
 - brand_id: vail
   display_name: Vail
   status: active
   typography_intake_artifact: figma/brands/vail/typography/intake.yml
   fonts:
-  - family_name: Avenir
+  - lane: brand
+    family_name: Avenir
     token_names:
     - vail/family/02
     source_style_references:
     - Avenir Black and Avenir Medium across eyebrow, subhead, body, and cta
-  - family_name: Termina
+  - lane: brand
+    family_name: Termina
     token_names:
     - vail/family/01
     source_style_references:
     - Termina Black for headline
+  - lane: safe
+    family_name: Open Sans
+    token_names:
+    - vail/family_safe/01
+    source_style_references:
+    - eyebrow, headline, body, cta
 - brand_id: breckenridge
   display_name: Breckenridge
   status: active
   typography_intake_artifact: figma/brands/breckenridge/typography/intake.yml
   fonts:
-  - family_name: Poppins
+  - lane: brand
+    family_name: Poppins
     token_names:
     - breckenridge/family/01
     source_style_references:
     - Poppins Bold across headline, subhead, and cta
-  - family_name: Avenir Next
+  - lane: brand
+    family_name: Avenir Next
     token_names:
     - breckenridge/family/02
     source_style_references:
     - Avenir Next body copy
+  - lane: safe
+    family_name: Poppins
+    token_names:
+    - breckenridge/family_safe/01
+    source_style_references:
+    - eyebrow, headline, body, cta
 - brand_id: crested_butte
   display_name: Crested Butte
   status: active
   typography_intake_artifact: figma/brands/crested_butte/typography/intake.yml
   fonts:
-  - family_name: Gibson
+  - lane: brand
+    family_name: Gibson
     token_names:
     - crested_butte/family/01
     source_style_references:
     - Gibson Semibold and Gibson Regular across headline, sub-headline, and body
+  - lane: safe
+    family_name: Montserrat
+    token_names:
+    - crested_butte/family_safe/01
+    source_style_references:
+    - eyebrow, headline, cta
+  - lane: safe
+    family_name: Open Sans
+    token_names:
+    - crested_butte/family_safe/02
+    source_style_references:
+    - body
 - brand_id: northstar
   display_name: Northstar
   status: active
   typography_intake_artifact: figma/brands/northstar/typography/intake.yml
   fonts:
-  - family_name: New Order
+  - lane: brand
+    family_name: New Order
     token_names:
     - northstar/family/01
     source_style_references:
     - New Order Medium and New Order Regular across headline, sub-headline, and body
+  - lane: safe
+    family_name: Afacad Flux
+    token_names:
+    - northstar/family_safe/01
+    source_style_references:
+    - eyebrow, headline, cta
+  - lane: safe
+    family_name: Open Sans
+    token_names:
+    - northstar/family_safe/02
+    source_style_references:
+    - body
 - brand_id: heavenly
   display_name: Heavenly
   status: active
   typography_intake_artifact: figma/brands/heavenly/typography/intake.yml
   fonts:
-  - family_name: Din Condensed
+  - lane: brand
+    family_name: Din Condensed
     token_names:
     - heavenly/family/01
     source_style_references:
     - Din Condensed Bold and Din Condensed Light across title and headline roles
-  - family_name: Brandon Grotesque
+  - lane: brand
+    family_name: Brandon Grotesque
     token_names:
     - heavenly/family/02
     source_style_references:
     - Brandon Grotesque Medium and Brandon Grotesque Regular across subhead and body
       roles
+  - lane: safe
+    family_name: Open Sans
+    token_names:
+    - heavenly/family_safe/01
+    source_style_references:
+    - eyebrow, headline, body, cta
 - brand_id: kirkwood
   display_name: Kirkwood
   status: active
   typography_intake_artifact: figma/brands/kirkwood/typography/intake.yml
   fonts:
-  - family_name: Trade Gothic Bold Condensed No. 20
+  - lane: brand
+    family_name: Trade Gothic Bold Condensed No. 20
     token_names:
     - kirkwood/family/01
     source_style_references:
     - headline system
-  - family_name: Avenir Next
+  - lane: brand
+    family_name: Avenir Next
     token_names:
     - kirkwood/family/02
     source_style_references:
     - body system
-  - family_name: Futura Bold
+  - lane: brand
+    family_name: Futura Bold
     token_names:
     - kirkwood/family/03
     source_style_references:
     - title and small type system
-  - family_name: Trade Gothic Condensed No. 18
+  - lane: brand
+    family_name: Trade Gothic Condensed No. 18
     token_names:
     - kirkwood/family/04
     source_style_references:
     - limited-space emphasis system
+  - lane: safe
+    family_name: Futura Bold
+    token_names:
+    - kirkwood/family_safe/01
+    source_style_references:
+    - eyebrow, headline, cta
+  - lane: safe
+    family_name: Open Sans
+    token_names:
+    - kirkwood/family_safe/02
+    source_style_references:
+    - body
 - brand_id: keystone
   display_name: Keystone
   status: active
   typography_intake_artifact: figma/brands/keystone/typography/intake.yml
   fonts:
-  - family_name: Futura
+  - lane: brand
+    family_name: Futura
     token_names:
     - keystone/family/01
     source_style_references:
     - Futura Bold across headline, emphasized body copy, and CTA
-  - family_name: Avenir
+  - lane: brand
+    family_name: Avenir
     token_names:
     - keystone/family/02
     source_style_references:
     - Avenir Medium across subheadline and body copy
+  - lane: safe
+    family_name: Open Sans
+    token_names:
+    - keystone/family_safe/01
+    source_style_references:
+    - eyebrow, headline, body, cta
 - brand_id: beaver_creek
   display_name: Beaver Creek
   status: active
   typography_intake_artifact: figma/brands/beaver_creek/typography/intake.yml
   fonts:
-  - family_name: IvyPresto Display
+  - lane: brand
+    family_name: IvyPresto Display
     token_names:
     - beaver_creek/family/01
     source_style_references:
     - Thin headline system
-  - family_name: Vinila
+  - lane: brand
+    family_name: Vinila
     token_names:
     - beaver_creek/family/02
     source_style_references:
     - Light body system
-  - family_name: Vinila Condensed
+  - lane: brand
+    family_name: Vinila Condensed
     token_names:
     - beaver_creek/family/03
     source_style_references:
     - Bold CTA and subheadline system
+  - lane: safe
+    family_name: Open Sans
+    token_names:
+    - beaver_creek/family_safe/01
+    source_style_references:
+    - eyebrow, body
+  - lane: safe
+    family_name: Playfair Display
+    token_names:
+    - beaver_creek/family_safe/02
+    source_style_references:
+    - headline, cta
 - brand_id: mount_snow
   display_name: Mount Snow
   status: active
   typography_intake_artifact: figma/brands/mount_snow/typography/intake.yml
   fonts:
-  - family_name: Vastago Grotesk
+  - lane: brand
+    family_name: Vastago Grotesk
     token_names:
     - mount_snow/family/01
     source_style_references:
     - Heavy headline system
-  - family_name: Area Extended
+  - lane: brand
+    family_name: Area Extended
     token_names:
     - mount_snow/family/02
     source_style_references:
     - Extra Bold subheadline and Medium body system
+  - lane: safe
+    family_name: Prompt
+    token_names:
+    - mount_snow/family_safe/01
+    source_style_references:
+    - eyebrow, headline, cta
+  - lane: safe
+    family_name: Poppins
+    token_names:
+    - mount_snow/family_safe/02
+    source_style_references:
+    - body
 - brand_id: jfbb
   display_name: JFBB
   status: active
   typography_intake_artifact: figma/brands/jfbb/typography/intake.yml
   fonts:
-  - family_name: Vista Sans NAR OTCE
+  - lane: brand
+    family_name: Vista Sans NAR OTCE
     token_names:
     - jfbb/family/01
     source_style_references:
     - Black, Bold, and Book hierarchy system
+  - lane: safe
+    family_name: Futura Bold
+    token_names:
+    - jfbb/family_safe/01
+    source_style_references:
+    - eyebrow, headline, cta
+  - lane: safe
+    family_name: Open Sans
+    token_names:
+    - jfbb/family_safe/02
+    source_style_references:
+    - body
 - brand_id: park_city
   display_name: Park City
   status: active
   typography_intake_artifact: figma/brands/park_city/typography/intake.yml
   fonts:
-  - family_name: Futura Std
+  - lane: brand
+    family_name: Futura Std
     token_names:
     - park_city/family/01
     source_style_references:
     - Bold headline and CTA system plus Light body system
-  - family_name: Trade Gothic LT Std Bold Condensed No. 20
+  - lane: brand
+    family_name: Trade Gothic LT Std Bold Condensed No. 20
     token_names:
     - park_city/family/02
     source_style_references:
     - subhead system
+  - lane: safe
+    family_name: Josefin-sans
+    token_names:
+    - park_city/family_safe/01
+    source_style_references:
+    - eyebrow
+  - lane: safe
+    family_name: Futura Bold
+    token_names:
+    - park_city/family_safe/02
+    source_style_references:
+    - headline
+  - lane: safe
+    family_name: Open Sans
+    token_names:
+    - park_city/family_safe/03
+    source_style_references:
+    - body, cta
 - brand_id: stevens_pass
   display_name: Stevens Pass
   status: active
   typography_intake_artifact: figma/brands/stevens_pass/typography/intake.yml
   fonts:
-  - family_name: Gibson
+  - lane: brand
+    family_name: Gibson
     token_names:
     - stevens_pass/family/01
     source_style_references:
     - Bold, Semi Bold, Medium, Regular, Light, and italic variants
+  - lane: safe
+    family_name: Montserrat
+    token_names:
+    - stevens_pass/family_safe/01
+    source_style_references:
+    - eyebrow, headline, cta
+  - lane: safe
+    family_name: Open Sans
+    token_names:
+    - stevens_pass/family_safe/02
+    source_style_references:
+    - body
 - brand_id: whistler_blackcomb
   display_name: Whistler Blackcomb
   status: active
   typography_intake_artifact: figma/brands/whistler_blackcomb/typography/intake.yml
   fonts:
-  - family_name: Proxima Nova
+  - lane: brand
+    family_name: Proxima Nova
     token_names:
     - whistler_blackcomb/family/01
     source_style_references:
     - Black, Bold, and Regular hierarchy
+  - lane: safe
+    family_name: Open Sans
+    token_names:
+    - whistler_blackcomb/family_safe/01
+    source_style_references:
+    - eyebrow, body, cta
+  - lane: safe
+    family_name: Montserrat
+    token_names:
+    - whistler_blackcomb/family_safe/02
+    source_style_references:
+    - headline
 - brand_id: afton_alps
   display_name: Afton Alps
   status: active
   typography_intake_artifact: figma/brands/afton_alps/typography/intake.yml
-  fonts: []
-  notes:
-  - No brand-specific typography guidance is established; the brand inherits the shared universal typography baseline and does not define raw brand family tokens.
+  fonts:
+  - lane: brand
+    family_name: Dela Gothic One
+    token_names:
+    - afton_alps/family/01
+    source_style_references:
+    - headline family
+  - lane: brand
+    family_name: Chivo
+    token_names:
+    - afton_alps/family/02
+    source_style_references:
+    - subheadline and body family
+  - lane: safe
+    family_name: Prompt
+    token_names:
+    - afton_alps/family_safe/01
+    source_style_references:
+    - eyebrow, headline, cta
+  - lane: safe
+    family_name: Helvetica
+    token_names:
+    - afton_alps/family_safe/02
+    source_style_references:
+    - body
 - brand_id: alpine_valley
   display_name: Alpine Valley
   status: active
   typography_intake_artifact: figma/brands/alpine_valley/typography/intake.yml
   fonts:
-  - family_name: Prompt
+  - lane: brand
+    family_name: Prompt
     token_names:
     - alpine_valley/family/01
     source_style_references:
     - Regular, Bold, Extra Bold, and italic variants shown in the campaign guide
+  - lane: safe
+    family_name: Prompt
+    token_names:
+    - alpine_valley/family_safe/01
+    source_style_references:
+    - eyebrow, headline, cta
+  - lane: safe
+    family_name: Open Sans
+    token_names:
+    - alpine_valley/family_safe/02
+    source_style_references:
+    - body
 - brand_id: crotched
   display_name: Crotched
   status: active
   typography_intake_artifact: figma/brands/crotched/typography/intake.yml
-  fonts: []
-  notes:
-  - No brand-specific typography guidance is established; the brand inherits the shared universal typography baseline and does not define raw brand family tokens.
+  fonts:
+  - lane: safe
+    family_name: Alfarn-2
+    token_names:
+    - crotched/family_safe/01
+    source_style_references:
+    - eyebrow, headline, cta
+  - lane: safe
+    family_name: Open Sans
+    token_names:
+    - crotched/family_safe/02
+    source_style_references:
+    - body
 - brand_id: hidden_valley_mo
   display_name: Hidden Valley MO
   status: active
   typography_intake_artifact: figma/brands/hidden_valley_mo/typography/intake.yml
-  fonts: []
-  notes:
-  - No brand-specific typography guidance is established; the brand inherits the shared universal typography baseline and does not define raw brand family tokens.
+  fonts:
+  - lane: brand
+    family_name: Altero
+    token_names:
+    - hidden_valley_mo/family/01
+    source_style_references:
+    - headline family
+  - lane: brand
+    family_name: Prompt
+    token_names:
+    - hidden_valley_mo/family/02
+    source_style_references:
+    - body family
+  - lane: safe
+    family_name: Prompt
+    token_names:
+    - hidden_valley_mo/family_safe/01
+    source_style_references:
+    - eyebrow, headline, cta
+  - lane: safe
+    family_name: Open Sans
+    token_names:
+    - hidden_valley_mo/family_safe/02
+    source_style_references:
+    - body
 - brand_id: wildcat_mountain
   display_name: Wildcat Mountain
   status: active
   typography_intake_artifact: figma/brands/wildcat_mountain/typography/intake.yml
-  fonts: []
-  notes:
-  - No brand-specific typography guidance is established; the brand inherits the shared universal typography baseline and does not define raw brand family tokens.
+  fonts:
+  - lane: safe
+    family_name: Prompt
+    token_names:
+    - wildcat_mountain/family_safe/01
+    source_style_references:
+    - eyebrow, headline, cta
+  - lane: safe
+    family_name: Open Sans
+    token_names:
+    - wildcat_mountain/family_safe/02
+    source_style_references:
+    - body
 - brand_id: whitetail_resort
   display_name: Whitetail Resort
   status: active
   typography_intake_artifact: figma/brands/whitetail_resort/typography/intake.yml
-  fonts: []
-  notes:
-  - No brand-specific typography guidance is established; the brand inherits the shared universal typography baseline and does not define raw brand family tokens.
+  fonts:
+  - lane: brand
+    family_name: Andes
+    token_names:
+    - whitetail_resort/family/01
+    source_style_references:
+    - shared family across headline, subheadline, and body
+  - lane: safe
+    family_name: Prompt
+    token_names:
+    - whitetail_resort/family_safe/01
+    source_style_references:
+    - eyebrow, headline, cta
+  - lane: safe
+    family_name: Open Sans
+    token_names:
+    - whitetail_resort/family_safe/02
+    source_style_references:
+    - body
 - brand_id: snow_creek
   display_name: Snow Creek
   status: active
   typography_intake_artifact: figma/brands/snow_creek/typography/intake.yml
-  fonts: []
-  notes:
-  - No brand-specific typography guidance is established; the brand inherits the shared universal typography baseline and does not define raw brand family tokens.
+  fonts:
+  - lane: brand
+    family_name: Prompt
+    token_names:
+    - snow_creek/family/01
+    source_style_references:
+    - shared family across headline, subheadline, and body
+  - lane: safe
+    family_name: Prompt
+    token_names:
+    - snow_creek/family_safe/01
+    source_style_references:
+    - eyebrow, headline, cta
+  - lane: safe
+    family_name: Open Sans
+    token_names:
+    - snow_creek/family_safe/02
+    source_style_references:
+    - body
 - brand_id: roundtop_mountain
   display_name: Roundtop Mountain
   status: active
   typography_intake_artifact: figma/brands/roundtop_mountain/typography/intake.yml
-  fonts: []
-  notes:
-  - No brand-specific typography guidance is established; the brand inherits the shared universal typography baseline and does not define raw brand family tokens.
+  fonts:
+  - lane: brand
+    family_name: Rhode
+    token_names:
+    - roundtop_mountain/family/01
+    source_style_references:
+    - semibold headline family
+  - lane: brand
+    family_name: Antique Olive
+    token_names:
+    - roundtop_mountain/family/02
+    source_style_references:
+    - body family
+  - lane: safe
+    family_name: Prompt
+    token_names:
+    - roundtop_mountain/family_safe/01
+    source_style_references:
+    - eyebrow, headline, cta
+  - lane: safe
+    family_name: Open Sans
+    token_names:
+    - roundtop_mountain/family_safe/02
+    source_style_references:
+    - body
 - brand_id: paoli_peaks
   display_name: Paoli Peaks
   status: active
   typography_intake_artifact: figma/brands/paoli_peaks/typography/intake.yml
-  fonts: []
-  notes:
-  - No brand-specific typography guidance is established; the brand inherits the shared universal typography baseline and does not define raw brand family tokens.
+  fonts:
+  - lane: brand
+    family_name: Rockwell Nova
+    token_names:
+    - paoli_peaks/family/01
+    source_style_references:
+    - headline and subheadline family
+  - lane: safe
+    family_name: Roboto Slab
+    token_names:
+    - paoli_peaks/family_safe/01
+    source_style_references:
+    - eyebrow, headline, cta
+  - lane: safe
+    family_name: Open Sans
+    token_names:
+    - paoli_peaks/family_safe/02
+    source_style_references:
+    - body
 - brand_id: mad_river_mountain
   display_name: Mad River Mountain
   status: active
   typography_intake_artifact: figma/brands/mad_river_mountain/typography/intake.yml
-  fonts: []
-  notes:
-  - No brand-specific typography guidance is established; the brand inherits the shared universal typography baseline and does not define raw brand family tokens.
+  fonts:
+  - lane: brand
+    family_name: Prompt
+    token_names:
+    - mad_river_mountain/family/01
+    source_style_references:
+    - shared family across headline, subheadline, and body
+  - lane: safe
+    family_name: Prompt
+    token_names:
+    - mad_river_mountain/family_safe/01
+    source_style_references:
+    - eyebrow, headline, cta
+  - lane: safe
+    family_name: Open Sans
+    token_names:
+    - mad_river_mountain/family_safe/02
+    source_style_references:
+    - body
 - brand_id: boston_mills_brandywine
   display_name: Boston Mills / Brandywine
   status: active
   typography_intake_artifact: figma/brands/boston_mills_brandywine/typography/intake.yml
-  fonts: []
-  notes:
-  - No brand-specific typography guidance is established; the brand inherits the shared universal typography baseline and does not define raw brand family tokens.
+  fonts:
+  - lane: brand
+    family_name: Interstate
+    token_names:
+    - boston_mills_brandywine/family/01
+    source_style_references:
+    - headline, subheadline, and body family
+  - lane: safe
+    family_name: Prompt
+    token_names:
+    - boston_mills_brandywine/family_safe/01
+    source_style_references:
+    - eyebrow, headline, cta
+  - lane: safe
+    family_name: Open Sans
+    token_names:
+    - boston_mills_brandywine/family_safe/02
+    source_style_references:
+    - body
 - brand_id: seven_springs
   display_name: Seven Springs
   status: active
   typography_intake_artifact: figma/brands/seven_springs/typography/intake.yml
   fonts:
-  - family_name: Hoss Sharp
+  - lane: brand
+    family_name: Hoss Sharp
     token_names:
     - seven_springs/family/01
     source_style_references:
     - Black headline, Bold subhead, Medium body, and Heavy CTA system
+  - lane: safe
+    family_name: Prompt
+    token_names:
+    - seven_springs/family_safe/01
+    source_style_references:
+    - eyebrow, headline, body, cta
 - brand_id: stowe
   display_name: Stowe
   status: active
   typography_intake_artifact: figma/brands/stowe/typography/intake.yml
   fonts:
-  - family_name: Athena
+  - lane: brand
+    family_name: Athena
     token_names:
     - stowe/family/01
     source_style_references:
     - Athena Regular headline system
-  - family_name: Raleway
+  - lane: brand
+    family_name: Raleway
     token_names:
     - stowe/family/02
     source_style_references:
     - Raleway Bold, Regular, and Light across subhead, body, and contrasting body
       roles
+  - lane: safe
+    family_name: Raleway
+    token_names:
+    - stowe/family_safe/01
+    source_style_references:
+    - eyebrow, body, cta
+  - lane: safe
+    family_name: Italiana
+    token_names:
+    - stowe/family_safe/02
+    source_style_references:
+    - headline
 - brand_id: mount_sunapee
   display_name: Mount Sunapee
   status: active
   typography_intake_artifact: figma/brands/mount_sunapee/typography/intake.yml
   fonts:
-  - family_name: Graphik
+  - lane: brand
+    family_name: Graphik
     token_names:
     - mount_sunapee/family/01
     source_style_references:
     - Bold, Regular, and Light across H1, H2, and body copy
-  - family_name: Neutraface Text Bold Italic
+  - lane: brand
+    family_name: Neutraface Text Bold Italic
     token_names:
     - mount_sunapee/family/02
     source_style_references:
     - Bold Italic subheader system
+  - lane: safe
+    family_name: Montserrat
+    token_names:
+    - mount_sunapee/family_safe/01
+    source_style_references:
+    - eyebrow, headline, cta
+  - lane: safe
+    family_name: Open Sans
+    token_names:
+    - mount_sunapee/family_safe/02
+    source_style_references:
+    - body
 - brand_id: hunter
   display_name: Hunter
   status: active
   typography_intake_artifact: figma/brands/hunter/typography/intake.yml
   fonts:
-  - family_name: Galano Grotesque
+  - lane: brand
+    family_name: Galano Grotesque
     token_names:
     - hunter/family/01
     source_style_references:
     - Bold, Semibold, Regular, and Light across headline, subheadline, body, and contrasting
       body roles
+  - lane: safe
+    family_name: Poppins
+    token_names:
+    - hunter/family_safe/01
+    source_style_references:
+    - eyebrow, headline, body, cta
 - brand_id: liberty_mountain
   display_name: Liberty Mountain
   status: active
   typography_intake_artifact: figma/brands/liberty_mountain/typography/intake.yml
   fonts:
-  - family_name: Brown
+  - lane: brand
+    family_name: Brown
     token_names:
     - liberty_mountain/family/01
     source_style_references:
     - Brown Regular / Brown Light
-  - family_name: Sentinel Book
+  - lane: brand
+    family_name: Sentinel Book
     token_names:
     - liberty_mountain/family/02
     source_style_references:
     - Sentinel Book
+  - lane: safe
+    family_name: Semplicitapro
+    token_names:
+    - liberty_mountain/family_safe/01
+    source_style_references:
+    - eyebrow, headline, cta
+  - lane: safe
+    family_name: Open Sans
+    token_names:
+    - liberty_mountain/family_safe/02
+    source_style_references:
+    - body
 - brand_id: attitash
   display_name: Attitash
   status: active
   typography_intake_artifact: figma/brands/attitash/typography/intake.yml
   fonts:
-  - family_name: Buenos Aires
+  - lane: brand
+    family_name: Buenos Aires
     token_names:
     - attitash/family/01
     source_style_references:
     - Bold and Light across heading, body, and CTA
-  - family_name: Coordinates
+  - lane: brand
+    family_name: Coordinates
     token_names:
     - attitash/family/02
     source_style_references:
     - Medium subhead treatment
+  - lane: safe
+    family_name: Canada-type-gibson
+    token_names:
+    - attitash/family_safe/01
+    source_style_references:
+    - eyebrow, headline, cta
+  - lane: safe
+    family_name: Open Sans
+    token_names:
+    - attitash/family_safe/02
+    source_style_references:
+    - body
 - brand_id: hidden_valley_pa
   display_name: Hidden Valley PA
   status: active
   typography_intake_artifact: figma/brands/hidden_valley_pa/typography/intake.yml
   fonts:
-  - family_name: Roboto
+  - lane: brand
+    family_name: Roboto
     token_names:
     - hidden_valley_pa/family/01
     source_style_references:
     - Black and Regular across the functional hierarchy
-  - family_name: Mrs Eaves XL Regular
+  - lane: brand
+    family_name: Mrs Eaves XL Regular
     token_names:
     - hidden_valley_pa/family/02
     source_style_references:
     - logo and design applications
+  - lane: safe
+    family_name: Roboto Slab
+    token_names:
+    - hidden_valley_pa/family_safe/01
+    source_style_references:
+    - eyebrow, headline, cta
+  - lane: safe
+    family_name: Open Sans
+    token_names:
+    - hidden_valley_pa/family_safe/02
+    source_style_references:
+    - body
 - brand_id: laurel_mountain
   display_name: Laurel Mountain
   status: active
   typography_intake_artifact: figma/brands/laurel_mountain/typography/intake.yml
   fonts:
-  - family_name: Roboto
+  - lane: brand
+    family_name: Roboto
     token_names:
     - laurel_mountain/family/01
     source_style_references:
     - Digital headline alt, subhead, CTA, and body
-  - family_name: Niagara
+  - lane: brand
+    family_name: Niagara
     token_names:
     - laurel_mountain/family/02
     source_style_references:
     - Logo and design headline treatment
+  - lane: safe
+    family_name: Roboto Slab
+    token_names:
+    - laurel_mountain/family_safe/01
+    source_style_references:
+    - eyebrow, headline, cta
+  - lane: safe
+    family_name: Open Sans
+    token_names:
+    - laurel_mountain/family_safe/02
+    source_style_references:
+    - body
 - brand_id: mt_brighton
   display_name: Mt. Brighton
   status: active
   typography_intake_artifact: figma/brands/mt_brighton/typography/intake.yml
   fonts:
-  - family_name: Museo Slab
+  - lane: brand
+    family_name: Museo Slab
     token_names:
     - mt_brighton/family/01
     source_style_references:
     - 900 headline and CTA
-  - family_name: Museo Sans
+  - lane: brand
+    family_name: Museo Sans
     token_names:
     - mt_brighton/family/02
     source_style_references:
     - 700 subhead family
-  - family_name: Prompt
+  - lane: brand
+    family_name: Prompt
     token_names:
     - mt_brighton/family/03
     source_style_references:
-    - digital fallback when Museo fonts are unavailable
+    - digital safe family when Museo fonts are unavailable
+  - lane: safe
+    family_name: Open Sans
+    token_names:
+    - mt_brighton/family_safe/01
+    source_style_references:
+    - eyebrow, body
+  - lane: safe
+    family_name: Roboto Slab
+    token_names:
+    - mt_brighton/family_safe/02
+    source_style_references:
+    - headline, cta
 - brand_id: wilmot
   display_name: Wilmot
   status: active
   typography_intake_artifact: figma/brands/wilmot/typography/intake.yml
   fonts:
-  - family_name: Museo Slab
+  - lane: brand
+    family_name: Museo Slab
     token_names:
     - wilmot/family/01
     source_style_references:
     - 700 headline and CTA
-  - family_name: Museo Sans
+  - lane: brand
+    family_name: Museo Sans
     token_names:
     - wilmot/family/02
     source_style_references:
     - 700 subhead and 500 body
-  - family_name: Prompt
+  - lane: brand
+    family_name: Prompt
     token_names:
     - wilmot/family/03
     source_style_references:
     - digital-only headline, body, and CTA family
+  - lane: safe
+    family_name: Prompt
+    token_names:
+    - wilmot/family_safe/01
+    source_style_references:
+    - eyebrow, headline, cta
+  - lane: safe
+    family_name: Open Sans
+    token_names:
+    - wilmot/family_safe/02
+    source_style_references:
+    - body

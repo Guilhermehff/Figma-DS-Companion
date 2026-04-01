@@ -1,4 +1,4 @@
-date: 2026-03-30
+date: '2026-04-01'
 brand: crotched
 source_reference: Vail Resorts Guidelines - Google Sheets.pdf
 source_type: pdf
@@ -8,54 +8,61 @@ preview:
   required_before_write: true
   artifact: figma/brands/crotched/typography/preview.md
   status: written_in_figma
-
 source_roles: []
-
 primitive_recommendations:
   reuse_existing:
     families:
-      - source_family_name: universal/family/01
-        existing_token: universal/family/01
-        reason: The PDF does not list Crotched font guidance, so the brand remains on the shared universal family baseline.
+    - source_family_name: universal/family/01
+      existing_token: universal/family/01
+      reason: The PDF does not list Crotched font guidance, so the brand remains on the shared universal
+        family baseline.
     weights:
-      - source_weight_label: inherited
-        existing_token: universal/weight/*
-        reason: Weight remains inherited because the PDF does not provide brand-specific typography guidance.
+    - source_weight_label: inherited
+      existing_token: universal/weight/*
+      reason: Weight remains inherited because the PDF does not provide brand-specific typography guidance.
     sizes:
-      - source_size_label: inherited
-        existing_token: universal/size/*
-        reason: "Typography size continues to publish from the shared Global: Typography ladder."
+    - source_size_label: inherited
+      existing_token: universal/size/*
+      reason: 'Typography size continues to publish from the shared Global: Typography ladder.'
   proposed_primitives:
     families: []
     weights: []
+    safe_families:
+    - token_name: crotched/family_safe/01
+      source_family_name: Alfarn-2
+      source_role_reference: eyebrow, headline, cta
+      rationale: Approved web safe family from Vail Resorts Guidelines.pdf for the eyebrow, headline,
+        cta lane.
+    - token_name: crotched/family_safe/02
+      source_family_name: Open Sans
+      source_role_reference: body
+      rationale: Approved web safe family from Vail Resorts Guidelines.pdf for the body lane.
   hold_for_review: []
-
 semantic_recommendations:
   family_aliases: []
   weight_aliases: []
   size_aliases: []
-
 role_recipes: []
-
 validation:
   extraction_notes:
-    - The PDF does not list brand font guidance for Crotched.
+  - The PDF does not list brand font guidance for Crotched.
   governance_notes:
-    - Keep Crotched on the shared universal typography baseline until governed source guidance is supplied.
-    - Do not create brand-level raw typography tokens that mirror universal values.
-
+  - Keep Crotched on the shared universal typography baseline until governed source guidance is supplied.
+  - Do not create brand-level raw typography tokens that mirror universal values.
+  - Brand-safe typography aliases now stage on `crotched/family_safe/*` from Vail Resorts Guidelines.pdf.
 review_readiness:
   intended_review_channels:
+  - web
+  - email
+  - ads
+  review_rules:
+  - subject: Crotched typography hold
+    channels:
     - web
     - email
     - ads
-  review_rules:
-    - subject: Crotched typography hold
-      channels:
-        - web
-        - email
-        - ads
-      rule: Keep the brand on the universal typography baseline until governed PDF guidance exists.
-      source_basis: Vail Resorts Guidelines - Google Sheets PDF.
-
+    rule: Keep the brand on the universal typography baseline until governed PDF guidance exists.
+    source_basis: Vail Resorts Guidelines - Google Sheets PDF.
 open_questions: []
+safe_source_reference: Vail Resorts Guidelines.pdf
+safe_source_type: pdf

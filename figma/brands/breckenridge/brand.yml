@@ -1,5 +1,5 @@
 version: 1
-updated: '2026-03-31'
+updated: '2026-04-01'
 brand_id: breckenridge
 display_name: Breckenridge
 status: active
@@ -36,6 +36,7 @@ artifacts:
     decision_artifacts:
     - figma/decisions/2026-03-11-brand-manifest-and-generated-registry-governance.md
     - figma/decisions/2026-03-11-role-scoped-semantic-typography-ladders.md
+    - figma/decisions/2026-04-01-safe-typography-lane-migration.md
 semantic_overrides:
   theme:
     status: active
@@ -106,11 +107,14 @@ semantic_overrides:
       - border/critical
       - border/critical_inverse
       notes:
-      - "`on_surface/*` tokens in the live semantic theme extension are contrast-derived from `universal/black` or `universal/white` and are not hue-tinted."
+      - '`on_surface/*` tokens in the live semantic theme extension are contrast-derived from `universal/black`
+        or `universal/white` and are not hue-tinted.'
       - White is reused from universal/white and does not require a brand-specific override.
-      - Dark Gray now drives the neutral role set, while navy and red remain the two expressive semantic lanes.
-      - "`assets/logo` is overridden to the string `Breckenridge` in the semantic theme extension."
-      - No third expressive semantic lane survives the role-based migration; any additional approved family remains global-only.
+      - Dark Gray now drives the neutral role set, while navy and red remain the two expressive semantic
+        lanes.
+      - '`assets/logo` is overridden to the string `Breckenridge` in the semantic theme extension.'
+      - No third expressive semantic lane survives the role-based migration; any additional approved family
+        remains global-only.
     typography:
       override_scopes:
       - semantic_token: family/heading
@@ -125,12 +129,18 @@ semantic_overrides:
         alias_of: universal/weight/normal
       - semantic_token: weight/action/base
         alias_of: universal/weight/bold
-      inherited_from_base:
-      - family/heading_safe
-      - family/body_safe
-      - family/action_safe
+      - semantic_token: family/heading_safe
+        alias_of: breckenridge/family_safe/01
+      - semantic_token: family/body_safe
+        alias_of: breckenridge/family_safe/01
+      - semantic_token: family/action_safe
+        alias_of: breckenridge/family_safe/01
+      inherited_from_base: []
       notes:
       - Shared raw typography support now includes universal/weight/bold in the global typography collection.
-      - The Breckenridge semantic theme typography override set is written and maps heading and action to bold while body remains on normal.
+      - The Breckenridge semantic theme typography override set is written and maps heading and action
+        to bold while body remains on normal.
+      - Brand-safe typography aliases now stage on `breckenridge/family_safe/*` from Vail Resorts Guidelines.pdf.
 notes:
-- Breckenridge is now live in the Foundations file with global color ladders, a semantic theme logo-name override, and semantic theme extension.
+- Breckenridge is now live in the Foundations file with global color ladders, a semantic theme logo-name
+  override, and semantic theme extension.

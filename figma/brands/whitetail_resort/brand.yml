@@ -1,5 +1,5 @@
 version: 1
-updated: '2026-03-31'
+updated: '2026-04-01'
 brand_id: whitetail_resort
 display_name: Whitetail Resort
 status: active
@@ -30,7 +30,8 @@ artifacts:
   typography:
     intake_artifact: figma/brands/whitetail_resort/typography/intake.yml
     preview_artifact: figma/brands/whitetail_resort/typography/preview.md
-    decision_artifacts: []
+    decision_artifacts:
+    - figma/decisions/2026-04-01-safe-typography-lane-migration.md
 semantic_overrides:
   theme:
     status: active
@@ -98,9 +99,11 @@ semantic_overrides:
       - border/critical
       - border/critical_inverse
       notes:
-      - "`on_surface/*` tokens in the live semantic theme extension are contrast-derived from `universal/black` or `universal/white` and are not hue-tinted."
+      - '`on_surface/*` tokens in the live semantic theme extension are contrast-derived from `universal/black`
+        or `universal/white` and are not hue-tinted.'
       - Exact black and white remain inherited through the shared neutral role recipes.
-      - "`two_top_green` drives both expressive semantic lanes because the source provides one non-neutral hue."
+      - '`two_top_green` drives both expressive semantic lanes because the source provides one non-neutral
+        hue.'
     typography:
       override_scopes:
       - semantic_token: family/heading
@@ -119,12 +122,20 @@ semantic_overrides:
         alias_of: universal/weight/normal
       - semantic_token: weight/action/base
         alias_of: universal/weight/normal
-      inherited_from_base:
-      - family/heading_safe
-      - family/body_safe
-      - family/action_safe
+      - semantic_token: family/heading_safe
+        alias_of: whitetail_resort/family_safe/01
+      - semantic_token: family/body_safe
+        alias_of: whitetail_resort/family_safe/02
+      - semantic_token: family/action_safe
+        alias_of: whitetail_resort/family_safe/01
+      inherited_from_base: []
       notes:
-      - Whitetail Resort is live as a one-family typography system with `Andes` across heading, body, and action work.
+      - Whitetail Resort is live as a one-family typography system with `Andes` across heading, body,
+        and action work.
       - 'Typography size continues to bind directly from published `Global: Typography`.'
+      - Brand-safe typography aliases now stage on `whitetail_resort/family_safe/*` from Vail Resorts
+        Guidelines.pdf.
 notes:
-- Whitetail Resort is live in the Foundations file with two raw color families (`two_top_green` plus a raw-only `neutral` support ramp), one raw typography family primitive, and Whitetail Resort semantic theme extension.
+- Whitetail Resort is live in the Foundations file with two raw color families (`two_top_green` plus a
+  raw-only `neutral` support ramp), one raw typography family primitive, and Whitetail Resort semantic
+  theme extension.

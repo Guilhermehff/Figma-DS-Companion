@@ -1,4 +1,4 @@
-date: 2026-03-19
+date: '2026-04-01'
 brand: seven_springs
 source_reference: User-provided image in chat showing the Seven Springs typography hierarchy guidance
 source_type: image
@@ -8,253 +8,282 @@ preview:
   required_before_write: true
   artifact: figma/brands/seven_springs/typography/preview.md
   status: written_in_figma
-
 source_roles:
-  - source_role: headline
-    source_family_name: Hoss Sharp
-    source_style_name: Black
-    source_weight_label: Black
-    source_usage_scope: primary_display_headline
-    text_case: not specified in source
-    tracking: 0px
-    leading: font_size_times_1
-    size_rule: source gives family, weight, alignment, and relational leading only
-    punctuation_rule: not specified in source
-    sample_copy: THESE SLOPES WON'T SKI THEMSELVES
-    notes: The source says all headlines are in Hoss Sharp Black, are left justified unless a layout calls for centering, use optical kerning, and use a 1:1 leading ratio.
-  - source_role: subhead
-    source_family_name: Hoss Sharp
-    source_style_name: Bold
-    source_weight_label: Bold
-    source_usage_scope: supporting_headline_copy
-    text_case: not specified in source
-    tracking: 0px
-    leading: font_size_times_1
-    size_rule: source gives family, weight, alignment, and relational leading only
-    punctuation_rule: not specified in source
-    sample_copy: HEADLINES
-    notes: The source says subheads are in Hoss Sharp Bold and follow the same alignment and leading rules as headlines.
-  - source_role: body
-    source_family_name: Hoss Sharp
-    source_style_name: Medium
-    source_weight_label: Medium
-    source_usage_scope: reading_copy
-    text_case: not specified in source
-    tracking: 0px
-    leading: font_size_times_1_2
-    size_rule: source gives family, weight, alignment, and relational leading only
-    punctuation_rule: not specified in source
-    sample_copy: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    notes: The source says all body copy is in Hoss Sharp Medium, left justified unless the layout calls for centering, with optical kerning and a 1:1.2 leading ratio.
-  - source_role: cta
-    source_family_name: Hoss Sharp
-    source_style_name: Heavy
-    source_weight_label: Heavy
-    source_usage_scope: action_or_button_copy
-    text_case: not specified in source
-    tracking: 0px
-    leading: font_size_times_1
-    size_rule: source gives family, weight, alignment, and relational leading only
-    punctuation_rule: not specified in source
-    sample_copy: BOOK YOUR WINTER VACATION
-    notes: The source says all CTAs are in Hoss Sharp Heavy, left justified unless the layout calls for centering, with optical kerning and a 1:1 leading ratio.
-
+- source_role: headline
+  source_family_name: Hoss Sharp
+  source_style_name: Black
+  source_weight_label: Black
+  source_usage_scope: primary_display_headline
+  text_case: not specified in source
+  tracking: 0px
+  leading: font_size_times_1
+  size_rule: source gives family, weight, alignment, and relational leading only
+  punctuation_rule: not specified in source
+  sample_copy: THESE SLOPES WON'T SKI THEMSELVES
+  notes: The source says all headlines are in Hoss Sharp Black, are left justified unless a layout calls
+    for centering, use optical kerning, and use a 1:1 leading ratio.
+  source_safe_family_name: Prompt
+  source_safe_reference_column: headline_font
+- source_role: subhead
+  source_family_name: Hoss Sharp
+  source_style_name: Bold
+  source_weight_label: Bold
+  source_usage_scope: supporting_headline_copy
+  text_case: not specified in source
+  tracking: 0px
+  leading: font_size_times_1
+  size_rule: source gives family, weight, alignment, and relational leading only
+  punctuation_rule: not specified in source
+  sample_copy: HEADLINES
+  notes: The source says subheads are in Hoss Sharp Bold and follow the same alignment and leading rules
+    as headlines.
+  source_safe_family_name: Prompt
+  source_safe_reference_column: headline_font
+- source_role: body
+  source_family_name: Hoss Sharp
+  source_style_name: Medium
+  source_weight_label: Medium
+  source_usage_scope: reading_copy
+  text_case: not specified in source
+  tracking: 0px
+  leading: font_size_times_1_2
+  size_rule: source gives family, weight, alignment, and relational leading only
+  punctuation_rule: not specified in source
+  sample_copy: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  notes: The source says all body copy is in Hoss Sharp Medium, left justified unless the layout calls
+    for centering, with optical kerning and a 1:1.2 leading ratio.
+  source_safe_family_name: Prompt
+  source_safe_reference_column: body_font
+- source_role: cta
+  source_family_name: Hoss Sharp
+  source_style_name: Heavy
+  source_weight_label: Heavy
+  source_usage_scope: action_or_button_copy
+  text_case: not specified in source
+  tracking: 0px
+  leading: font_size_times_1
+  size_rule: source gives family, weight, alignment, and relational leading only
+  punctuation_rule: not specified in source
+  sample_copy: BOOK YOUR WINTER VACATION
+  notes: The source says all CTAs are in Hoss Sharp Heavy, left justified unless the layout calls for
+    centering, with optical kerning and a 1:1 leading ratio.
+  source_safe_family_name: Prompt
+  source_safe_reference_column: cta_font
 primitive_recommendations:
   reuse_existing:
     families: []
     weights:
-      - source_weight_label: Black
-        existing_token: universal/weight/black
-        reason: Direct match for the headline treatment.
-      - source_weight_label: Bold
-        existing_token: universal/weight/bold
-        reason: Direct match for the subhead treatment.
-      - source_weight_label: Medium
-        existing_token: universal/weight/medium
-        reason: Direct match for the body copy treatment.
-      - source_weight_label: Heavy
-        existing_token: universal/weight/black
-        reason: The shared raw typography ladder has no dedicated heavy primitive, so the approved default staging path is to map Heavy to the strongest existing raw weight.
+    - source_weight_label: Black
+      existing_token: universal/weight/black
+      reason: Direct match for the headline treatment.
+    - source_weight_label: Bold
+      existing_token: universal/weight/bold
+      reason: Direct match for the subhead treatment.
+    - source_weight_label: Medium
+      existing_token: universal/weight/medium
+      reason: Direct match for the body copy treatment.
+    - source_weight_label: Heavy
+      existing_token: universal/weight/black
+      reason: The shared raw typography ladder has no dedicated heavy primitive, so the approved default
+        staging path is to map Heavy to the strongest existing raw weight.
     sizes:
-      - source_size_reference: headline default
-        existing_token: inherited current heading ladder
-        assumption_status: deferred_no_new_size
-        assumption_note: The source defines family, weight, alignment, and leading behavior, but not governed numeric sizes.
-        reason: Live semantic size aliases can remain inherited in the first pass.
-      - source_size_reference: body default
-        existing_token: inherited current body ladder
-        assumption_status: deferred_no_new_size
-        assumption_note: The source defines family, weight, alignment, and leading behavior, but not governed numeric sizes.
-        reason: Live semantic size aliases can remain inherited in the first pass.
-      - source_size_reference: cta default
-        existing_token: inherited current action ladder
-        assumption_status: deferred_no_new_size
-        assumption_note: The source defines family, weight, alignment, and leading behavior, but not governed numeric sizes.
-        reason: Live semantic size aliases can remain inherited in the first pass.
+    - source_size_reference: headline default
+      existing_token: inherited current heading ladder
+      assumption_status: deferred_no_new_size
+      assumption_note: The source defines family, weight, alignment, and leading behavior, but not governed
+        numeric sizes.
+      reason: Live semantic size aliases can remain inherited in the first pass.
+    - source_size_reference: body default
+      existing_token: inherited current body ladder
+      assumption_status: deferred_no_new_size
+      assumption_note: The source defines family, weight, alignment, and leading behavior, but not governed
+        numeric sizes.
+      reason: Live semantic size aliases can remain inherited in the first pass.
+    - source_size_reference: cta default
+      existing_token: inherited current action ladder
+      assumption_status: deferred_no_new_size
+      assumption_note: The source defines family, weight, alignment, and leading behavior, but not governed
+        numeric sizes.
+      reason: Live semantic size aliases can remain inherited in the first pass.
   proposed_primitives:
     families:
-      - token_name: seven_springs/family/01
-        source_family_name: Hoss Sharp
-        source_style_reference: Black headline, Bold subhead, Medium body, and Heavy CTA system
-        rationale: Seven Springs uses one type family across headline, subhead, body, and CTA roles, with weight and layout behavior carrying the hierarchy.
-        fallback_token: universal/family/fallback
-        fallback_note: The source does not define a fallback stack.
+    - token_name: seven_springs/family/01
+      source_family_name: Hoss Sharp
+      source_style_reference: Black headline, Bold subhead, Medium body, and Heavy CTA system
+      rationale: Seven Springs uses one type family across headline, subhead, body, and CTA roles, with
+        weight and layout behavior carrying the hierarchy.
+      safe_family_token: seven_springs/family_safe/01
+      safe_family_note: Approved safe-family companion from Vail Resorts Guidelines.pdf.
     weights: []
+    safe_families:
+    - token_name: seven_springs/family_safe/01
+      source_family_name: Prompt
+      source_role_reference: eyebrow, headline, body, cta
+      rationale: Approved web safe family from Vail Resorts Guidelines.pdf for the eyebrow, headline,
+        body, cta lane.
   hold_for_review: []
-
 semantic_recommendations:
   family_aliases:
-    - semantic_token: family/heading
-      global_token: seven_springs/family/01
-      safe_semantic_token: family/heading_safe
-      safe_global_token: universal/family/fallback
-      intended_channels:
-        - web
-        - email
-        - ads
-      notes: Headline and subhead work stay on Hoss Sharp.
-    - semantic_token: family/body
-      global_token: seven_springs/family/01
-      safe_semantic_token: family/body_safe
-      safe_global_token: universal/family/fallback
-      intended_channels:
-        - web
-        - email
-        - ads
-      notes: Body copy stays on Hoss Sharp with Medium carrying the reading tone.
-    - semantic_token: family/action
-      global_token: seven_springs/family/01
-      safe_semantic_token: family/action_safe
-      safe_global_token: universal/family/fallback
-      intended_channels:
-        - web
-        - email
-        - ads
-      notes: CTA stays on Hoss Sharp.
-  weight_aliases:
-    - semantic_token: weight/heading/base
-      global_token: universal/weight/black
-      intended_channels:
-        - web
-        - email
-        - ads
-      notes: Headlines explicitly use Black.
-    - semantic_token: weight/heading/strong
-      global_token: universal/weight/bold
-      intended_channels:
-        - web
-        - email
-        - ads
-      notes: Approved live write. Subheads stage through the stronger heading emphasis slot because the current semantic theme typography schema has no dedicated subhead role.
-    - semantic_token: weight/body/base
-      global_token: universal/weight/medium
-      intended_channels:
-        - web
-        - email
-        - ads
-      notes: Body copy explicitly uses Medium.
-    - semantic_token: weight/action/base
-      global_token: universal/weight/black
-      intended_channels:
-        - web
-        - email
-        - ads
-      notes: CTA uses Heavy in the source and stages on the strongest existing raw weight because there is no separate shared heavy primitive.
-  size_aliases: []
-
-role_recipes:
-  - role_name: headline
-    source_role: Headline | Hoss Sharp Black
-    proposed_family_token: seven_springs/family/01
-    fallback_token: universal/family/fallback
-    proposed_weight_token: universal/weight/black
-    proposed_size_token: inherited current heading ladder
-    size_assumption_status: deferred_no_new_size
-    text_case: not specified in source
-    tracking: 0px
-    leading_rule: leading equals the point size
-    size_rule: no governed source size token
-    punctuation_rule: not specified in source
-    sample_copy: THESE SLOPES WON'T SKI THEMSELVES
-    notes: Left justified unless the layout calls for centering, with optical kerning.
-  - role_name: subhead
-    source_role: Subhead | Hoss Sharp Bold
-    proposed_family_token: seven_springs/family/01
-    fallback_token: universal/family/fallback
-    proposed_weight_token: universal/weight/bold
-    proposed_size_token: inherited current heading ladder
-    size_assumption_status: deferred_no_new_size
-    text_case: not specified in source
-    tracking: 0px
-    leading_rule: leading equals the point size
-    size_rule: no governed source size token
-    punctuation_rule: not specified in source
-    sample_copy: HEADLINES
-    notes: The live mapping routes the subhead recipe through `weight/heading/strong` because the semantic theme typography model has no dedicated subhead slot.
-  - role_name: body
-    source_role: Body Copy | Hoss Sharp Medium
-    proposed_family_token: seven_springs/family/01
-    fallback_token: universal/family/fallback
-    proposed_weight_token: universal/weight/medium
-    proposed_size_token: inherited current body ladder
-    size_assumption_status: deferred_no_new_size
-    text_case: not specified in source
-    tracking: 0px
-    leading_rule: 1.2 times the font size
-    size_rule: no governed source size token
-    punctuation_rule: not specified in source
-    sample_copy: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    notes: Reading copy remains on Hoss Sharp with Medium carrying the default body tone.
-  - role_name: cta
-    source_role: CTA | Hoss Sharp Heavy
-    proposed_family_token: seven_springs/family/01
-    fallback_token: universal/family/fallback
-    proposed_weight_token: universal/weight/black
-    proposed_size_token: inherited current action ladder
-    size_assumption_status: deferred_no_new_size
-    text_case: not specified in source
-    tracking: 0px
-    leading_rule: leading equals the point size
-    size_rule: no governed source size token
-    punctuation_rule: not specified in source
-    sample_copy: BOOK YOUR WINTER VACATION
-    notes: Heavy stages on the strongest existing shared raw weight in the first pass.
-
-validation:
-  extraction_notes:
-    - The source is explicit about family choice, weight, tracking, kerning behavior, alignment behavior, and relative leading.
-    - The source does not provide governed numeric sizes, so live size aliases can remain inherited in the first pass.
-  governance_notes:
-    - The proposed live mapping stays inside the current semantic theme typography schema by using one family and weight-driven hierarchy.
-    - "`Heavy` stages on `universal/weight/black` because the shared raw ladder has no dedicated heavy primitive."
-    - User-approved live interpretation. The Seven Springs Bold subhead recipe stages through `weight/heading/strong` because the current schema has no dedicated subhead role.
-
-review_readiness:
-  intended_review_channels:
+  - semantic_token: family/heading
+    global_token: seven_springs/family/01
+    safe_semantic_token: family/heading_safe
+    safe_global_token: seven_springs/family_safe/01
+    intended_channels:
     - web
     - email
     - ads
+    notes: Headline and subhead work stay on Hoss Sharp. Safe mapping is staged from Vail Resorts Guidelines.pdf.
+  - semantic_token: family/body
+    global_token: seven_springs/family/01
+    safe_semantic_token: family/body_safe
+    safe_global_token: seven_springs/family_safe/01
+    intended_channels:
+    - web
+    - email
+    - ads
+    notes: Body copy stays on Hoss Sharp with Medium carrying the reading tone. Safe mapping is staged
+      from Vail Resorts Guidelines.pdf.
+  - semantic_token: family/action
+    global_token: seven_springs/family/01
+    safe_semantic_token: family/action_safe
+    safe_global_token: seven_springs/family_safe/01
+    intended_channels:
+    - web
+    - email
+    - ads
+    notes: CTA stays on Hoss Sharp. Safe mapping is staged from Vail Resorts Guidelines.pdf.
+  weight_aliases:
+  - semantic_token: weight/heading/base
+    global_token: universal/weight/black
+    intended_channels:
+    - web
+    - email
+    - ads
+    notes: Headlines explicitly use Black.
+  - semantic_token: weight/heading/strong
+    global_token: universal/weight/bold
+    intended_channels:
+    - web
+    - email
+    - ads
+    notes: Approved live write. Subheads stage through the stronger heading emphasis slot because the
+      current semantic theme typography schema has no dedicated subhead role.
+  - semantic_token: weight/body/base
+    global_token: universal/weight/medium
+    intended_channels:
+    - web
+    - email
+    - ads
+    notes: Body copy explicitly uses Medium.
+  - semantic_token: weight/action/base
+    global_token: universal/weight/black
+    intended_channels:
+    - web
+    - email
+    - ads
+    notes: CTA uses Heavy in the source and stages on the strongest existing raw weight because there
+      is no separate shared heavy primitive.
+  size_aliases: []
+role_recipes:
+- role_name: headline
+  source_role: Headline | Hoss Sharp Black
+  proposed_family_token: seven_springs/family/01
+  proposed_weight_token: universal/weight/black
+  proposed_size_token: inherited current heading ladder
+  size_assumption_status: deferred_no_new_size
+  text_case: not specified in source
+  tracking: 0px
+  leading_rule: leading equals the point size
+  size_rule: no governed source size token
+  punctuation_rule: not specified in source
+  sample_copy: THESE SLOPES WON'T SKI THEMSELVES
+  notes: Left justified unless the layout calls for centering, with optical kerning.
+  safe_family_token: seven_springs/family_safe/01
+- role_name: subhead
+  source_role: Subhead | Hoss Sharp Bold
+  proposed_family_token: seven_springs/family/01
+  proposed_weight_token: universal/weight/bold
+  proposed_size_token: inherited current heading ladder
+  size_assumption_status: deferred_no_new_size
+  text_case: not specified in source
+  tracking: 0px
+  leading_rule: leading equals the point size
+  size_rule: no governed source size token
+  punctuation_rule: not specified in source
+  sample_copy: HEADLINES
+  notes: The live mapping routes the subhead recipe through `weight/heading/strong` because the semantic
+    theme typography model has no dedicated subhead slot.
+  safe_family_token: seven_springs/family_safe/01
+- role_name: body
+  source_role: Body Copy | Hoss Sharp Medium
+  proposed_family_token: seven_springs/family/01
+  proposed_weight_token: universal/weight/medium
+  proposed_size_token: inherited current body ladder
+  size_assumption_status: deferred_no_new_size
+  text_case: not specified in source
+  tracking: 0px
+  leading_rule: 1.2 times the font size
+  size_rule: no governed source size token
+  punctuation_rule: not specified in source
+  sample_copy: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  notes: Reading copy remains on Hoss Sharp with Medium carrying the default body tone.
+  safe_family_token: seven_springs/family_safe/01
+- role_name: cta
+  source_role: CTA | Hoss Sharp Heavy
+  proposed_family_token: seven_springs/family/01
+  proposed_weight_token: universal/weight/black
+  proposed_size_token: inherited current action ladder
+  size_assumption_status: deferred_no_new_size
+  text_case: not specified in source
+  tracking: 0px
+  leading_rule: leading equals the point size
+  size_rule: no governed source size token
+  punctuation_rule: not specified in source
+  sample_copy: BOOK YOUR WINTER VACATION
+  notes: Heavy stages on the strongest existing shared raw weight in the first pass.
+  safe_family_token: seven_springs/family_safe/01
+validation:
+  extraction_notes:
+  - The source is explicit about family choice, weight, tracking, kerning behavior, alignment behavior,
+    and relative leading.
+  - The source does not provide governed numeric sizes, so live size aliases can remain inherited in the
+    first pass.
+  governance_notes:
+  - The proposed live mapping stays inside the current semantic theme typography schema by using one family
+    and weight-driven hierarchy.
+  - '`Heavy` stages on `universal/weight/black` because the shared raw ladder has no dedicated heavy primitive.'
+  - User-approved live interpretation. The Seven Springs Bold subhead recipe stages through `weight/heading/strong`
+    because the current schema has no dedicated subhead role.
+  - Brand-safe typography aliases now stage on `seven_springs/family_safe/*` from Vail Resorts Guidelines.pdf.
+review_readiness:
+  intended_review_channels:
+  - web
+  - email
+  - ads
   review_rules:
-    - subject: Seven Springs Hoss Sharp family
-      channels:
-        - web
-        - email
-        - ads
-      rule: Keep headline, subhead, body, and CTA work on the Hoss Sharp family, with weight and layout behavior carrying the hierarchy.
-      source_basis: Seven Springs typography guidance image.
-    - subject: Seven Springs heading and CTA weights
-      channels:
-        - web
-        - email
-        - ads
-      rule: Stage headline Black and CTA Heavy on `universal/weight/black` in the first pass.
-      source_basis: The source explicitly names Black for headlines and Heavy for CTAs, and the shared raw ladder currently tops out at Black.
-    - subject: Seven Springs body copy treatment
-      channels:
-        - web
-        - email
-        - ads
-      rule: Keep body copy on `Hoss Sharp Medium` with 0px tracking, optical kerning, and 1.2x leading.
-      source_basis: Seven Springs typography guidance image.
-
+  - subject: Seven Springs Hoss Sharp family
+    channels:
+    - web
+    - email
+    - ads
+    rule: Keep headline, subhead, body, and CTA work on the Hoss Sharp family, with weight and layout
+      behavior carrying the hierarchy.
+    source_basis: Seven Springs typography guidance image.
+  - subject: Seven Springs heading and CTA weights
+    channels:
+    - web
+    - email
+    - ads
+    rule: Stage headline Black and CTA Heavy on `universal/weight/black` in the first pass.
+    source_basis: The source explicitly names Black for headlines and Heavy for CTAs, and the shared raw
+      ladder currently tops out at Black.
+  - subject: Seven Springs body copy treatment
+    channels:
+    - web
+    - email
+    - ads
+    rule: Keep body copy on `Hoss Sharp Medium` with 0px tracking, optical kerning, and 1.2x leading.
+    source_basis: Seven Springs typography guidance image.
 open_questions: []
+safe_source_reference: Vail Resorts Guidelines.pdf
+safe_source_type: pdf

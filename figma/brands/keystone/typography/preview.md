@@ -1,193 +1,172 @@
 # Keystone Typography Preview
 
-Review state: approved preview artifact. Verify live write state in `figma/brands/keystone/brand.yml` and Figma.
+Review state: written_in_figma preview artifact. Verify live write state in `figma/brands/keystone/brand.yml` and Figma.
 
 ## Original Source Roles
 
 - Source role: `headline`
   Family: `Futura`
+  Safe family: `Open Sans`
   Style: `Futura Bold`
   Weight label: `Bold`
-  Usage scope: `primary display headline`
-  Case: `Sentence case`
+  Usage scope: `primary_display_headline`
+  Case: `sentence_case`
   Tracking: `0%`
-  Leading: `4px difference`
-  Size rule: `48px / 52px example`
-  Punctuation: `not specified`
+  Leading: `4px_difference`
+  Size rule: `explicit 48px with 52px leading example`
+  Punctuation: `not specified in source`
   Sample copy: `Headline`
-  Notes: Explicit headline recipe from the source.
+  Notes: The source explicitly says `Futura Bold / Sentence case`, `Leading: 4px difference (Ex: 48px / 52px leading)`, and `Kerning: 0%`.
 
 - Source role: `subheadline`
   Family: `Avenir`
+  Safe family: `Open Sans`
   Style: `Avenir Medium`
   Weight label: `Medium`
-  Usage scope: `supporting headline copy`
-  Case: `Sentence case`
+  Usage scope: `supporting_headline_copy`
+  Case: `sentence_case`
   Tracking: `0%`
-  Leading: `4px difference`
-  Size rule: `36px / 40px example`
-  Punctuation: `not specified`
+  Leading: `4px_difference`
+  Size rule: `explicit 36px with 40px leading example`
+  Punctuation: `not specified in source`
   Sample copy: `Sub Headline`
-  Notes: Explicit subheadline recipe from the source.
+  Notes: The source explicitly says `Avenir Medium / Sentence case`, `Leading: 4px difference (Ex: 36px / 40px leading)`, and `Kerning: 0%`.
 
 - Source role: `body`
   Family: `Avenir`
+  Safe family: `Open Sans`
   Style: `Avenir Medium`
   Weight label: `Medium`
-  Usage scope: `reading copy`
-  Case: `Sentence case`
+  Usage scope: `reading_copy`
+  Case: `sentence_case`
   Tracking: `0%`
-  Leading: `4px difference`
-  Size rule: `16px / 20px example`
+  Leading: `4px_difference`
+  Size rule: `explicit 16px with 20px leading example`
   Punctuation: `sentence punctuation allowed`
   Sample copy: `Body Copy`
-  Notes: Explicit body recipe from the source.
+  Notes: The source explicitly says `Avenir Medium / Sentence case`, `Leading: 4px difference (Ex: 16px / 20px leading)`, and `Kerning: 0%`.
 
 - Source role: `emphasized_body_copy`
   Family: `Futura`
+  Safe family: `Open Sans`
   Style: `Futura Bold`
   Weight label: `Bold`
-  Usage scope: `emphasized short body copy`
-  Case: `Sentence case`
+  Usage scope: `emphasized_short_body_copy`
+  Case: `sentence_case`
   Tracking: `0%`
-  Leading: `4px difference`
-  Size rule: `16px / 20px example`
+  Leading: `4px_difference`
+  Size rule: `explicit 16px with 20px leading example`
   Punctuation: `sentence punctuation allowed`
   Sample copy: `Emphasized body copy`
-  Notes: Explicit emphasized body recipe from the source.
+  Notes: The source explicitly says `Futura Bold / Sentence case`, `Leading: 4px difference (Ex: 16px / 20px leading)`, and `Kerning: 0%`.
 
 - Source role: `cta`
   Family: `Futura`
+  Safe family: `Open Sans`
   Style: `Futura Bold`
   Weight label: `Bold`
-  Usage scope: `action or button copy`
-  Case: `Title Case`
-  Tracking: `not specified`
-  Leading: `not specified`
-  Size rule: `20px example`
-  Punctuation: `not specified`
+  Usage scope: `action_or_button_copy`
+  Case: `title_case`
+  Tracking: `not specified in source`
+  Leading: `not specified in source`
+  Size rule: `explicit 20px in CTA example`
+  Punctuation: `not specified in source`
   Sample copy: `CTA`
-  Notes: Final approved CTA mapping.
-
-## Primitive Recommendations
-
-- Proposed primitive:
-  Token name: `keystone/family/01`
-  Source item: `Futura`
-  Fallback token: `universal/family/fallback`
-  Notes: Primary Keystone display and emphasis family.
-
-- Proposed primitive:
-  Token name: `keystone/family/02`
-  Source item: `Avenir`
-  Fallback token: `universal/family/fallback`
-  Notes: Secondary Keystone reading family.
-
-- Reuse:
-  Source item: `Bold`
-  Proposed token: `universal/weight/bold`
-  Assumption status: `explicit`
-  Notes: Headline, emphasized body copy, and CTA use Bold.
-
-- Reuse:
-  Source item: `Medium`
-  Proposed token: `universal/weight/medium`
-  Assumption status: `explicit`
-  Notes: Subheadline and body use Medium.
-
-- Reuse:
-  Source item: `20px CTA`
-  Proposed token: `universal/size/500`
-  Assumption status: `explicit`
-  Notes: CTA size fits the existing shared ladder, so no new raw size token was introduced.
-
-## Hold For Review
-
-- Item: `none`
-  Reason: Preview review is complete for this first Keystone write.
-
-## Semantic Mapping
-
-- `family/heading` -> `keystone/family/01`
-- `family/body` -> `keystone/family/02`
-- `family/action` -> `keystone/family/01`
-- `weight/heading/base` -> `universal/weight/bold`
-- `weight/body/base` -> `universal/weight/medium`
-- `weight/action/base` -> `universal/weight/bold`
-- `size/action/base` -> `universal/size/500`
-- No new shared size step was added for the explicit 48px headline recipe
+  Notes: User-approved review decision resolves the source contradiction in favor of the CTA example: Futura Bold in Title Case at 20px.
 
 ## Role Recipes
 
 ### Role: headline
 
-<div style="font-family: 'Futura', sans-serif; font-weight: 700; font-size: 48px; line-height: 52px; letter-spacing: 0; text-transform: none;">
-  Headline
-</div>
+Proposed family token: `keystone/family/01`
 
-- Proposed family token: `keystone/family/01`
-- Proposed weight token: `universal/weight/bold`
-- Proposed size token: `deferred`
-- Notes: The explicit source recipe remains documented, but this live write did not add a new raw size token.
+Safe family token: `keystone/family_safe/01`
+
+Proposed weight token: `universal/weight/bold`
+
+Proposed size token: `inherited current heading ladder`
+
+Recipe notes:
+
+- Case: `sentence_case`
+- Tracking: `0%`
+- Leading: `4px difference`
+- Size rule: `48px / 52px example`
+- Punctuation: `not specified in source`
+- Notes: The source is explicit, but no new shared size step was added in this pass, so the 48px headline recipe remains documented for later follow-up.
 
 ### Role: subheadline
 
-<div style="font-family: 'Avenir', sans-serif; font-weight: 500; font-size: 36px; line-height: 40px; letter-spacing: 0; text-transform: none;">
-  Sub Headline
-</div>
+Proposed family token: `keystone/family/02`
 
-- Proposed family token: `keystone/family/02`
-- Proposed weight token: `universal/weight/medium`
-- Proposed size token: `deferred`
-- Notes: The explicit source size remains documented, but no new size override was introduced in this pass.
+Safe family token: `keystone/family_safe/01`
+
+Proposed weight token: `universal/weight/medium`
+
+Proposed size token: `inherited current heading ladder`
+
+Recipe notes:
+
+- Case: `sentence_case`
+- Tracking: `0%`
+- Leading: `4px difference`
+- Size rule: `36px / 40px example`
+- Punctuation: `not specified in source`
+- Notes: The explicit source size remains documented, but no new size override was written in this pass.
 
 ### Role: body
 
-<div style="font-family: 'Avenir', sans-serif; font-weight: 500; font-size: 16px; line-height: 20px; letter-spacing: 0; text-transform: none;">
-  Body Copy
-</div>
+Proposed family token: `keystone/family/02`
 
-- Proposed family token: `keystone/family/02`
-- Proposed weight token: `universal/weight/medium`
-- Proposed size token: `universal/size/300`
-- Notes: Fully represented by the current shared body size step.
+Safe family token: `keystone/family_safe/01`
+
+Proposed weight token: `universal/weight/medium`
+
+Proposed size token: `universal/size/300`
+
+Recipe notes:
+
+- Case: `sentence_case`
+- Tracking: `0%`
+- Leading: `4px difference`
+- Size rule: `16px / 20px example`
+- Punctuation: `sentence punctuation allowed`
+- Notes: Source is explicit and fits the current shared body size step.
 
 ### Role: emphasized_body_copy
 
-<div style="font-family: 'Futura', sans-serif; font-weight: 700; font-size: 16px; line-height: 20px; letter-spacing: 0; text-transform: none;">
-  Emphasized body copy
-</div>
+Proposed family token: `keystone/family/01`
 
-- Proposed family token: `keystone/family/01`
-- Proposed weight token: `universal/weight/bold`
-- Proposed size token: `universal/size/300`
-- Notes: Small-size emphasis lane using the display family.
+Safe family token: `keystone/family_safe/01`
+
+Proposed weight token: `universal/weight/bold`
+
+Proposed size token: `universal/size/300`
+
+Recipe notes:
+
+- Case: `sentence_case`
+- Tracking: `0%`
+- Leading: `4px difference`
+- Size rule: `16px / 20px example`
+- Punctuation: `sentence punctuation allowed`
+- Notes: Uses the headline family in a small-size emphasis role.
 
 ### Role: cta
 
-<div style="font-family: 'Futura', sans-serif; font-weight: 700; font-size: 20px; line-height: 24px; letter-spacing: 0; text-transform: capitalize;">
-  CTA
-</div>
+Proposed family token: `keystone/family/01`
 
-- Proposed family token: `keystone/family/01`
-- Proposed weight token: `universal/weight/bold`
-- Proposed size token: `universal/size/500`
+Safe family token: `keystone/family_safe/01`
+
+Proposed weight token: `universal/weight/bold`
+
+Proposed size token: `universal/size/500`
+
+Recipe notes:
+
+- Case: `title_case`
+- Tracking: `not specified in source`
+- Leading: `not specified in source`
+- Size rule: `20px example`
+- Punctuation: `not specified in source`
 - Notes: Final approved CTA mapping for the live Keystone write.
-
-## Review Notes
-
-- CTA is now resolved to Futura Bold.
-- No new shared size token was introduced in this pass.
-- The explicit 48px headline recipe remains documented for a future size-ladder review rather than being silently collapsed into a new raw size.
-
-## Review Readiness
-
-- Subject: `Keystone CTA family`
-  Channels: `web, email, ads`
-  Rule: CTA uses Futura Bold in Title Case.
-  Source basis: User-approved preview review after the source contradiction was surfaced.
-
-- Subject: `Keystone size ladder scope`
-  Channels: `web, email, ads`
-  Rule: Keep the current shared size ladder unchanged in this pass.
-  Source basis: User-approved preview review direction.

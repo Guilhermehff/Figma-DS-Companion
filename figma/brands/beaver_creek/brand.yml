@@ -1,5 +1,5 @@
 version: 1
-updated: '2026-03-31'
+updated: '2026-04-01'
 brand_id: beaver_creek
 display_name: Beaver Creek
 status: active
@@ -33,6 +33,7 @@ artifacts:
     preview_artifact: figma/brands/beaver_creek/typography/preview.md
     decision_artifacts:
     - figma/decisions/2026-03-17-beaver-creek-foundations-written-to-figma.md
+    - figma/decisions/2026-04-01-safe-typography-lane-migration.md
 semantic_overrides:
   theme:
     status: active
@@ -103,11 +104,15 @@ semantic_overrides:
       - border/critical
       - border/critical_inverse
       notes:
-      - "`on_surface/*` tokens in the live semantic theme extension are contrast-derived from `universal/black` or `universal/white` and are not hue-tinted."
-      - Beaver Creek stages as a single silver system that absorbs the provided tint, light, medium, primary, and near-black swatches into one branded neutral ladder.
-      - Approved exception: the same `beaver_creek/silver` family drives semantic `neutral/*`, `brand/*`, and `brand_secondary/*`.
-      - "`assets/logo` is overridden to the string `Beaver Creek` in the semantic theme extension."
-      - Exact white remains inherited through the shared universal primitive rather than duplicating `#ffffff` under the brand group.
+      - '`on_surface/*` tokens in the live semantic theme extension are contrast-derived from `universal/black`
+        or `universal/white` and are not hue-tinted.'
+      - Beaver Creek stages as a single silver system that absorbs the provided tint, light, medium, primary,
+        and near-black swatches into one branded neutral ladder.
+      - Approved exception: the same `beaver_creek/silver` family drives semantic `neutral/*`, `brand/*`,
+          and `brand_secondary/*`.
+      - '`assets/logo` is overridden to the string `Beaver Creek` in the semantic theme extension.'
+      - Exact white remains inherited through the shared universal primitive rather than duplicating `#ffffff`
+        under the brand group.
     typography:
       override_scopes:
       - semantic_token: family/heading
@@ -122,15 +127,23 @@ semantic_overrides:
         alias_of: universal/weight/light
       - semantic_token: weight/action/base
         alias_of: universal/weight/bold
+      - semantic_token: family/heading_safe
+        alias_of: beaver_creek/family_safe/02
+      - semantic_token: family/body_safe
+        alias_of: beaver_creek/family_safe/01
+      - semantic_token: family/action_safe
+        alias_of: beaver_creek/family_safe/02
       inherited_from_base:
-      - family/heading_safe
-      - family/body_safe
-      - family/action_safe
       - weight/heading/strong
       - weight/body/strong
       notes:
-      - IvyPresto Display drives the heading lane and requires the new shared raw thin weight to preserve the supplied display treatment.
-      - Vinila remains the reading family, while Vinila Condensed drives subheads and CTA through the semantic action lane.
-      - The non-clickable URL recipe stays documented as a raw Beaver Creek pattern using the condensed family with light weight and tracking `120`, not as a separate semantic lane.
+      - IvyPresto Display drives the heading lane and requires the new shared raw thin weight to preserve
+        the supplied display treatment.
+      - Vinila remains the reading family, while Vinila Condensed drives subheads and CTA through the
+        semantic action lane.
+      - The non-clickable URL recipe stays documented as a raw Beaver Creek pattern using the condensed
+        family with light weight and tracking `120`, not as a separate semantic lane.
+      - Brand-safe typography aliases now stage on `beaver_creek/family_safe/*` from Vail Resorts Guidelines.pdf.
 notes:
-- Beaver Creek is live in the Foundations file with one silver color ladder, three raw typography families, the shared thin raw weight, a semantic theme logo-name override, and Beaver Creek semantic theme extension.
+- Beaver Creek is live in the Foundations file with one silver color ladder, three raw typography families,
+  the shared thin raw weight, a semantic theme logo-name override, and Beaver Creek semantic theme extension.

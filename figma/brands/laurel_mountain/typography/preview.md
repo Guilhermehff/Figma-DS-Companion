@@ -1,19 +1,97 @@
 # Laurel Mountain Typography Preview
 
-Review state: written in Figma. Verify live state in `figma/brands/laurel_mountain/brand.yml`.
+Review state: written_in_figma preview artifact. Verify live write state in `figma/brands/laurel_mountain/brand.yml` and Figma.
 
-## Source Roles
+## Original Source Roles
 
-- `Display / Design Headline` -> `Niagara`, all caps, `60px` tracking
-- `Digital Headline ALT`, `Subhead`, `CTA` -> `Roboto Black`, all caps, `0px` tracking
-- `Body` -> `Roboto Regular`, sentence case, `0px` tracking
+- Source role: `display_headline`
+  Family: `Niagara`
+  Safe family: `Roboto Slab`
+  Style: `Regular`
+  Weight label: `Display`
+  Usage scope: `logo_and_design_headline`
+  Case: `uppercase_without_punctuation`
+  Tracking: `60px`
+  Leading: `not_specified`
+  Size rule: `not_specified`
+  Punctuation: `no_punctuation`
+  Sample copy: `Laurel Highlands`
 
-## Live Semantic Mapping
+- Source role: `digital_headline_alt`
+  Family: `Roboto`
+  Safe family: `Roboto Slab`
+  Style: `Black`
+  Weight label: `Black`
+  Usage scope: `digital_headline`
+  Case: `uppercase_without_punctuation`
+  Tracking: `0px`
+  Leading: `not_specified`
+  Size rule: `not_specified`
+  Punctuation: `no_punctuation`
+  Sample copy: `Laurel Mountain`
 
-- `family/heading`, `family/body`, `family/action` -> `laurel_mountain/family/01`
-- `weight/heading/base`, `weight/heading/strong`, `weight/body/strong`, `weight/action/base` -> `universal/weight/black`
-- `weight/body/base` -> `universal/weight/normal`
+- Source role: `subhead`
+  Family: `Roboto`
+  Safe family: `Roboto Slab`
+  Style: `Black`
+  Weight label: `Black`
+  Usage scope: `subhead`
+  Case: `uppercase_without_punctuation`
+  Tracking: `0px`
+  Leading: `not_specified`
+  Size rule: `not_specified`
+  Punctuation: `no_punctuation`
+  Sample copy: `Laurel Highlands`
 
-## Notes
+- Source role: `body`
+  Family: `Roboto`
+  Safe family: `Open Sans`
+  Style: `Regular`
+  Weight label: `Regular`
+  Usage scope: `body_copy`
+  Case: `sentence_case`
+  Tracking: `0px`
+  Leading: `not_specified`
+  Size rule: `not_specified`
+  Punctuation: `standard`
+  Sample copy: `Guidelines have not been provided`
 
-- `Niagara` is preserved as `laurel_mountain/family/02` and remains raw-only in the first pass.
+## Role Recipes
+
+### Role: heading
+
+Proposed family token: `laurel_mountain/family/01`
+
+Safe family token: `laurel_mountain/family_safe/01`
+
+Proposed weight token: `universal/weight/black`
+
+Proposed size token: `inherited current heading ladder`
+
+Recipe notes:
+
+
+### Role: body
+
+Proposed family token: `laurel_mountain/family/01`
+
+Safe family token: `laurel_mountain/family_safe/02`
+
+Proposed weight token: `universal/weight/normal`
+
+Proposed size token: `inherited current body ladder`
+
+Recipe notes:
+
+
+### Role: action
+
+Proposed family token: `laurel_mountain/family/01`
+
+Safe family token: `laurel_mountain/family_safe/01`
+
+Proposed weight token: `universal/weight/black`
+
+Proposed size token: `inherited current action ladder`
+
+Recipe notes:

@@ -15,16 +15,11 @@ figma:
     typography_id: global-typography
     dimensions_id: global-dimensions
   semantic_extensions:
-    color:
+    theme:
       collection_name: Typography Override
-      collection_id: semantic-color-typography-override
-      parent_collection: "Semantic: Color"
-      parent_collection_id: semantic-color
-    typography:
-      collection_name: Typography Override
-      collection_id: semantic-typography-override
-      parent_collection: "Semantic: Typography"
-      parent_collection_id: semantic-typography
+      collection_id: semantic-theme-typography-override
+      parent_collection: "Semantic: Theme"
+      parent_collection_id: semantic-theme
 artifacts:
   color:
     intake_artifact: brands/typography-override/color-intake.yml
@@ -35,50 +30,50 @@ artifacts:
     preview_artifact: brands/typography-override/typography-preview.md
     decision_artifacts: []
 semantic_overrides:
-  color:
-    status: inherited
-    override_scopes: []
-    inherited_from_base:
-      - surface/neutral/*
-      - on_surface/neutral/*
-      - surface/brand/*
-      - on_surface/brand/*
-      - surface/brand_secondary/*
-      - on_surface/brand_secondary/*
-      - foreground/default
-      - foreground/subtle
-      - foreground/inverse
-      - foreground/brand
-      - foreground/brand_secondary
-      - border/default
-      - border/subtle
-      - border/brand
-      - border/brand_secondary
-      - surface/positive/*
-      - on_surface/positive/*
-      - surface/warning/*
-      - on_surface/warning/*
-      - surface/critical/*
-      - on_surface/critical/*
-      - foreground/positive
-      - foreground/warning
-      - foreground/critical
-      - border/positive
-      - border/warning
-      - border/critical
-    notes: []
-  typography:
+  theme:
     status: active
-    override_scopes:
-      - semantic_token: family/heading
-        alias_of: typography_override/family/display
-      - semantic_token: family/body
-        alias_of: typography_override/family/primary
-      - semantic_token: family/action
-        alias_of: typography_override/family/primary
-    inherited_from_base:
-      - family/*_safe
-      - weight/*
-      - size/*
-    notes: []
+    color:
+      override_scopes: []
+      inherited_from_base:
+        - surface/neutral/*
+        - on_surface/neutral/*
+        - surface/brand/*
+        - on_surface/brand/*
+        - surface/brand_secondary/*
+        - on_surface/brand_secondary/*
+        - foreground/default
+        - foreground/subtle
+        - foreground/inverse
+        - foreground/brand
+        - foreground/brand_secondary
+        - border/default
+        - border/subtle
+        - border/brand
+        - border/brand_secondary
+        - surface/positive/*
+        - on_surface/positive/*
+        - surface/warning/*
+        - on_surface/warning/*
+        - surface/critical/*
+        - on_surface/critical/*
+        - foreground/positive
+        - foreground/warning
+        - foreground/critical
+        - border/positive
+        - border/warning
+        - border/critical
+      notes: []
+    typography:
+      override_scopes:
+        - semantic_token: family/heading
+          alias_of: typography_override/family/display
+        - semantic_token: family/body
+          alias_of: typography_override/family/primary
+        - semantic_token: family/action
+          alias_of: typography_override/family/primary
+      inherited_from_base:
+        - family/*_safe
+        - weight/*
+        - size/*
+      notes: []
 notes: []

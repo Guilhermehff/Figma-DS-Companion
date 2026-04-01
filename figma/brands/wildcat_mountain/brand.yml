@@ -1,5 +1,5 @@
 version: 1
-updated: '2026-03-31'
+updated: '2026-04-01'
 brand_id: wildcat_mountain
 display_name: Wildcat Mountain
 status: active
@@ -30,7 +30,8 @@ artifacts:
   typography:
     intake_artifact: figma/brands/wildcat_mountain/typography/intake.yml
     preview_artifact: figma/brands/wildcat_mountain/typography/preview.md
-    decision_artifacts: []
+    decision_artifacts:
+    - figma/decisions/2026-04-01-safe-typography-lane-migration.md
 semantic_overrides:
   theme:
     status: active
@@ -98,17 +99,29 @@ semantic_overrides:
       - border/critical
       - border/critical_inverse
       notes:
-      - "`on_surface/*` tokens in the live semantic theme extension are contrast-derived from `universal/black` or `universal/white` and are not hue-tinted."
+      - '`on_surface/*` tokens in the live semantic theme extension are contrast-derived from `universal/black`
+        or `universal/white` and are not hue-tinted.'
       - Exact black and white remain inherited through the shared neutral role recipes.
-      - "`wildcat_green` drives the primary expressive lane and `wildcat_teal` drives the secondary expressive lane."
-      - "`wildcat_tan` and `wedding_blue` are governed raw-only families in the first pass."
+      - '`wildcat_green` drives the primary expressive lane and `wildcat_teal` drives the secondary expressive
+        lane.'
+      - '`wildcat_tan` and `wedding_blue` are governed raw-only families in the first pass.'
     typography:
-      override_scopes: []
+      override_scopes:
+      - semantic_token: family/heading_safe
+        alias_of: wildcat_mountain/family_safe/01
+      - semantic_token: family/body_safe
+        alias_of: wildcat_mountain/family_safe/02
+      - semantic_token: family/action_safe
+        alias_of: wildcat_mountain/family_safe/01
       inherited_from_base:
       - family/*
       - weight/*
       notes:
-      - The Vail Resorts Guidelines PDF does not list brand font guidance for Wildcat Mountain, so the semantic theme extension continues to inherit the shared universal typography base without overrides.
+      - The Vail Resorts Guidelines PDF does not list brand font guidance for Wildcat Mountain, so the
+        semantic theme extension continues to inherit the shared universal typography base without overrides.
       - 'Typography size continues to bind directly from published `Global: Typography`.'
+      - Brand-safe typography aliases now stage on `wildcat_mountain/family_safe/*` from Vail Resorts
+        Guidelines.pdf.
 notes:
-- Wildcat Mountain is live in the Foundations file with four raw color families, no brand-specific raw typography families, and Wildcat Mountain semantic theme extension.
+- Wildcat Mountain is live in the Foundations file with four raw color families, no brand-specific raw
+  typography families, and Wildcat Mountain semantic theme extension.

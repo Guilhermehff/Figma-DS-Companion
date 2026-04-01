@@ -1,5 +1,5 @@
 version: 1
-updated: '2026-03-31'
+updated: '2026-04-01'
 brand_id: stowe
 display_name: Stowe
 status: active
@@ -33,6 +33,7 @@ artifacts:
     preview_artifact: figma/brands/stowe/typography/preview.md
     decision_artifacts:
     - figma/decisions/2026-03-19-stowe-foundations-written-to-figma.md
+    - figma/decisions/2026-04-01-safe-typography-lane-migration.md
 semantic_overrides:
   theme:
     status: active
@@ -103,11 +104,16 @@ semantic_overrides:
       - border/critical
       - border/critical_inverse
       notes:
-      - "`on_surface/*` tokens in the live semantic theme extension are contrast-derived from `universal/black` or `universal/white` and are not hue-tinted."
-      - Stowe is live in the Foundations file with `stowe_red` as the primary expressive lane and `stowe_blue` as both the structural neutral lane and the approved supporting expressive lane.
-      - User-approved live write. `surface/neutral/canvas` remains on shared `universal/white`, while the rest of the neutral structural roles override to `stowe_blue`.
-      - User-approved live write. `brand_secondary` aliases `stowe_blue`, with the semantic default/strong/emphasis steps landing at `600/700/800` because the raw `500` source anchor does not support the shared white on-surface contract.
-      - "`assets/logo` resolves to the string `Stowe` in the semantic theme extension."
+      - '`on_surface/*` tokens in the live semantic theme extension are contrast-derived from `universal/black`
+        or `universal/white` and are not hue-tinted.'
+      - Stowe is live in the Foundations file with `stowe_red` as the primary expressive lane and `stowe_blue`
+        as both the structural neutral lane and the approved supporting expressive lane.
+      - User-approved live write. `surface/neutral/canvas` remains on shared `universal/white`, while
+        the rest of the neutral structural roles override to `stowe_blue`.
+      - User-approved live write. `brand_secondary` aliases `stowe_blue`, with the semantic default/strong/emphasis
+        steps landing at `600/700/800` because the raw `500` source anchor does not support the shared
+        white on-surface contract.
+      - '`assets/logo` resolves to the string `Stowe` in the semantic theme extension.'
     typography:
       override_scopes:
       - semantic_token: family/heading
@@ -124,16 +130,25 @@ semantic_overrides:
         alias_of: universal/weight/bold
       - semantic_token: weight/action/base
         alias_of: universal/weight/normal
+      - semantic_token: family/heading_safe
+        alias_of: stowe/family_safe/02
+      - semantic_token: family/body_safe
+        alias_of: stowe/family_safe/01
+      - semantic_token: family/action_safe
+        alias_of: stowe/family_safe/01
       inherited_from_base:
-      - family/heading_safe
-      - family/body_safe
-      - family/action_safe
       - weight/heading/strong
       notes:
-      - Stowe is live as a two-family system with `Athena` in the display lane and `Raleway` across the reading hierarchy.
-      - ? User-approved exception. The live write treats the headline prose word `bold` as a source copy mistake and follows the explicit `Headline
+      - Stowe is live as a two-family system with `Athena` in the display lane and `Raleway` across the
+        reading hierarchy.
+      - ? User-approved exception. The live write treats the headline prose word `bold` as a source copy
+          mistake and follows the explicit `Headline
         : Athena Regular` label.
-      - User-approved mapping. `family/action` and `weight/action/base` now follow the same family and weight as heading.
-      - "`weight/body/strong = universal/weight/bold` stages the explicit Raleway Bold subhead treatment through the existing semantic theme typography ladder."
+      - User-approved mapping. `family/action` and `weight/action/base` now follow the same family and
+        weight as heading.
+      - '`weight/body/strong = universal/weight/bold` stages the explicit Raleway Bold subhead treatment
+        through the existing semantic theme typography ladder.'
+      - Brand-safe typography aliases now stage on `stowe/family_safe/*` from Vail Resorts Guidelines.pdf.
 notes:
-- Stowe is live in the Foundations file with two raw color families, two raw typography family primitives, a semantic theme logo-name override, and Stowe semantic theme extension.
+- Stowe is live in the Foundations file with two raw color families, two raw typography family primitives,
+  a semantic theme logo-name override, and Stowe semantic theme extension.

@@ -1,4 +1,4 @@
-date: 2026-03-17
+date: '2026-04-01'
 brand: beaver_creek
 source_reference: User-provided image in chat showing the Beaver Creek typography guidance
 source_type: image
@@ -8,262 +8,295 @@ preview:
   required_before_write: true
   artifact: figma/brands/beaver_creek/typography/preview.md
   status: written_in_figma
-
 source_roles:
-  - source_role: headline
-    source_family_name: IvyPresto Display
-    source_style_name: Thin
-    source_weight_label: Thin
-    source_usage_scope: primary_display_headline
-    text_case: not specified in source
-    tracking: 90
-    leading: font_size_times_1_2
-    size_rule: headline size not numerically specified
-    punctuation_rule: not specified in source
-    sample_copy: Headlines
-    notes: Headlines are center justified unless a specific layout calls for left justification. Kerning is optical.
-  - source_role: subhead_or_cta
-    source_family_name: Vinila Condensed
-    source_style_name: Bold
-    source_weight_label: Bold
-    source_usage_scope: supporting_headline_copy_or_cta
-    text_case: not specified in source
-    tracking: 80
-    leading: font_size_times_1_2
-    size_rule: CTA and subheadline size not numerically specified
-    punctuation_rule: not specified in source
-    sample_copy: CTA / Subheadlines
-    notes: Sub-headlines and CTA are center justified unless a specific layout calls for left justification. Kerning is optical.
-  - source_role: body
-    source_family_name: Vinila
-    source_style_name: Light
-    source_weight_label: Light
-    source_usage_scope: reading_copy
-    text_case: not specified in source
-    tracking: 10
-    leading: font_size_times_1_7
-    size_rule: body size not numerically specified
-    punctuation_rule: not specified in source
-    sample_copy: All body copy should be in Light.
-    notes: Body copy is center justified unless a specific layout calls for left justification. Kerning is optical.
-  - source_role: url
-    source_family_name: Vinila Condensed
-    source_style_name: Light
-    source_weight_label: Light
-    source_usage_scope: non_clickable_url
-    text_case: mixed_case
-    tracking: 120
-    leading: not specified in source
-    size_rule: URL size not numerically specified
-    punctuation_rule: Always include BeaverCreek.com when relevant to media is not clickable.
-    sample_copy: BeaverCreek.com
-    notes: Kerning is optical. The source treats this as a distinct utility recipe rather than a general CTA rule.
-
+- source_role: headline
+  source_family_name: IvyPresto Display
+  source_style_name: Thin
+  source_weight_label: Thin
+  source_usage_scope: primary_display_headline
+  text_case: not specified in source
+  tracking: 90
+  leading: font_size_times_1_2
+  size_rule: headline size not numerically specified
+  punctuation_rule: not specified in source
+  sample_copy: Headlines
+  notes: Headlines are center justified unless a specific layout calls for left justification. Kerning
+    is optical.
+  source_safe_family_name: Playfair Display
+  source_safe_reference_column: headline_font
+- source_role: subhead_or_cta
+  source_family_name: Vinila Condensed
+  source_style_name: Bold
+  source_weight_label: Bold
+  source_usage_scope: supporting_headline_copy_or_cta
+  text_case: not specified in source
+  tracking: 80
+  leading: font_size_times_1_2
+  size_rule: CTA and subheadline size not numerically specified
+  punctuation_rule: not specified in source
+  sample_copy: CTA / Subheadlines
+  notes: Sub-headlines and CTA are center justified unless a specific layout calls for left justification.
+    Kerning is optical.
+  source_safe_family_name: Playfair Display
+  source_safe_reference_column: cta_font
+- source_role: body
+  source_family_name: Vinila
+  source_style_name: Light
+  source_weight_label: Light
+  source_usage_scope: reading_copy
+  text_case: not specified in source
+  tracking: 10
+  leading: font_size_times_1_7
+  size_rule: body size not numerically specified
+  punctuation_rule: not specified in source
+  sample_copy: All body copy should be in Light.
+  notes: Body copy is center justified unless a specific layout calls for left justification. Kerning
+    is optical.
+  source_safe_family_name: Open Sans
+  source_safe_reference_column: body_font
+- source_role: url
+  source_family_name: Vinila Condensed
+  source_style_name: Light
+  source_weight_label: Light
+  source_usage_scope: non_clickable_url
+  text_case: mixed_case
+  tracking: 120
+  leading: not specified in source
+  size_rule: URL size not numerically specified
+  punctuation_rule: Always include BeaverCreek.com when relevant to media is not clickable.
+  sample_copy: BeaverCreek.com
+  notes: Kerning is optical. The source treats this as a distinct utility recipe rather than a general
+    CTA rule.
+  source_safe_family_name: Open Sans
+  source_safe_reference_column: body_font
 primitive_recommendations:
   reuse_existing:
     families: []
     weights:
-      - source_weight_label: Bold
-        existing_token: universal/weight/bold
-        reason: Beaver Creek CTA and subheadline guidance explicitly calls for Bold.
-      - source_weight_label: Light
-        existing_token: universal/weight/light
-        reason: Beaver Creek body and URL guidance explicitly calls for Light.
+    - source_weight_label: Bold
+      existing_token: universal/weight/bold
+      reason: Beaver Creek CTA and subheadline guidance explicitly calls for Bold.
+    - source_weight_label: Light
+      existing_token: universal/weight/light
+      reason: Beaver Creek body and URL guidance explicitly calls for Light.
     sizes:
-      - source_size_reference: headline default
-        existing_token: universal/size/700
-        assumption_status: assumed
-        assumption_note: The source defines a display headline lane but does not provide a numeric size, so the first pass uses the current largest shared heading size.
-        reason: Keeps the display lane on the governed ladder without creating a new raw size.
-      - source_size_reference: subhead_or_cta default
-        existing_token: universal/size/400
-        assumption_status: assumed
-        assumption_note: The source shows a supportive emphasis lane smaller than the display headline and larger than body copy.
-        reason: Preserves hierarchy without creating a new raw size.
-      - source_size_reference: body default
-        existing_token: universal/size/200
-        assumption_status: assumed
-        assumption_note: The shared body base currently maps to 16 px and is the safest first-pass assumption.
-        reason: Keeps body aligned to the current semantic body baseline.
-      - source_size_reference: url default
-        existing_token: universal/size/100
-        assumption_status: assumed
-        assumption_note: The source treats the URL as ancillary utility copy rather than a primary headline lane.
-        reason: Stages the URL treatment on the smallest governed size step.
+    - source_size_reference: headline default
+      existing_token: universal/size/700
+      assumption_status: assumed
+      assumption_note: The source defines a display headline lane but does not provide a numeric size,
+        so the first pass uses the current largest shared heading size.
+      reason: Keeps the display lane on the governed ladder without creating a new raw size.
+    - source_size_reference: subhead_or_cta default
+      existing_token: universal/size/400
+      assumption_status: assumed
+      assumption_note: The source shows a supportive emphasis lane smaller than the display headline and
+        larger than body copy.
+      reason: Preserves hierarchy without creating a new raw size.
+    - source_size_reference: body default
+      existing_token: universal/size/200
+      assumption_status: assumed
+      assumption_note: The shared body base currently maps to 16 px and is the safest first-pass assumption.
+      reason: Keeps body aligned to the current semantic body baseline.
+    - source_size_reference: url default
+      existing_token: universal/size/100
+      assumption_status: assumed
+      assumption_note: The source treats the URL as ancillary utility copy rather than a primary headline
+        lane.
+      reason: Stages the URL treatment on the smallest governed size step.
   proposed_primitives:
     families:
-      - token_name: beaver_creek/family/01
-        source_family_name: IvyPresto Display
-        source_style_reference: Thin headline system
-        rationale: Primary display family for Beaver Creek headline work.
-        fallback_token: universal/family/fallback
-        fallback_note: The source does not provide a governed fallback stack.
-      - token_name: beaver_creek/family/02
-        source_family_name: Vinila
-        source_style_reference: Light body system
-        rationale: Reading family for Beaver Creek body copy.
-        fallback_token: universal/family/fallback
-        fallback_note: The source does not provide a governed fallback stack.
-      - token_name: beaver_creek/family/03
-        source_family_name: Vinila Condensed
-        source_style_reference: Bold CTA and subheadline system
-        rationale: Condensed family for Beaver Creek action and supporting emphasis work.
-        fallback_token: universal/family/fallback
-        fallback_note: The source does not provide a governed fallback stack.
+    - token_name: beaver_creek/family/01
+      source_family_name: IvyPresto Display
+      source_style_reference: Thin headline system
+      rationale: Primary display family for Beaver Creek headline work.
+      safe_family_token: beaver_creek/family_safe/02
+      safe_family_note: Approved safe-family companion from Vail Resorts Guidelines.pdf.
+    - token_name: beaver_creek/family/02
+      source_family_name: Vinila
+      source_style_reference: Light body system
+      rationale: Reading family for Beaver Creek body copy.
+      safe_family_token: beaver_creek/family_safe/01
+      safe_family_note: Approved safe-family companion from Vail Resorts Guidelines.pdf.
+    - token_name: beaver_creek/family/03
+      source_family_name: Vinila Condensed
+      source_style_reference: Bold CTA and subheadline system
+      rationale: Condensed family for Beaver Creek action and supporting emphasis work.
+      safe_family_token: ''
+      safe_family_note: Multiple approved role-level safe-family mappings apply to this brand family;
+        use the semantic safe aliases and role recipes below.
     weights:
-      - token_name: universal/weight/thin
-        source_weight_label: Thin
-        proposed_value: "200"
-        rationale: Beaver Creek introduces a repeated Thin display weight that should be preserved as a shared raw primitive rather than collapsed into Light.
+    - token_name: universal/weight/thin
+      source_weight_label: Thin
+      proposed_value: '200'
+      rationale: Beaver Creek introduces a repeated Thin display weight that should be preserved as a
+        shared raw primitive rather than collapsed into Light.
+    safe_families:
+    - token_name: beaver_creek/family_safe/01
+      source_family_name: Open Sans
+      source_role_reference: eyebrow, body
+      rationale: Approved web safe family from Vail Resorts Guidelines.pdf for the eyebrow, body lane.
+    - token_name: beaver_creek/family_safe/02
+      source_family_name: Playfair Display
+      source_role_reference: headline, cta
+      rationale: Approved web safe family from Vail Resorts Guidelines.pdf for the headline, cta lane.
   hold_for_review:
-    - item: semantic URL lane
-      reason: The current semantic theme typography schema exposes one action family and one action base weight, so the non-clickable URL treatment remains a documented raw recipe rather than a new semantic slot.
-
+  - item: semantic URL lane
+    reason: The current semantic theme typography schema exposes one action family and one action base
+      weight, so the non-clickable URL treatment remains a documented raw recipe rather than a new semantic
+      slot.
 semantic_recommendations:
   family_aliases:
-    - semantic_token: family/heading
-      global_token: beaver_creek/family/01
-      safe_semantic_token: family/heading_safe
-      safe_global_token: universal/family/fallback
-      intended_channels:
-        - web
-        - email
-        - ads
-      notes: IvyPresto Display drives Beaver Creek headline work in brand-capable channels.
-    - semantic_token: family/body
-      global_token: beaver_creek/family/02
-      safe_semantic_token: family/body_safe
-      safe_global_token: universal/family/fallback
-      intended_channels:
-        - web
-        - email
-        - ads
-      notes: Vinila remains the default reading family.
-    - semantic_token: family/action
-      global_token: beaver_creek/family/03
-      safe_semantic_token: family/action_safe
-      safe_global_token: universal/family/fallback
-      intended_channels:
-        - web
-        - email
-        - ads
-      notes: Vinila Condensed stages as the semantic action family for CTA and subheadline work.
-  weight_aliases:
-    - semantic_token: weight/heading/base
-      global_token: universal/weight/thin
-      intended_channels:
-        - web
-        - email
-        - ads
-      notes: Beaver Creek headlines explicitly use Thin.
-    - semantic_token: weight/body/base
-      global_token: universal/weight/light
-      intended_channels:
-        - web
-        - email
-        - ads
-      notes: Body copy explicitly uses Light.
-    - semantic_token: weight/action/base
-      global_token: universal/weight/bold
-      intended_channels:
-        - web
-        - email
-        - ads
-      notes: CTA and subheadline work explicitly uses Bold.
-  size_aliases: []
-
-role_recipes:
-  - role_name: headline
-    source_role: Headlines | IvyPresto Display Thin
-    proposed_family_token: beaver_creek/family/01
-    fallback_token: universal/family/fallback
-    proposed_weight_token: universal/weight/thin
-    proposed_size_token: universal/size/700
-    size_assumption_status: assumed
-    text_case: not specified in source
-    tracking: 90
-    leading_rule: font size to leading ratio 1 to 1.2
-    size_rule: headline size not numerically specified
-    punctuation_rule: not specified in source
-    sample_copy: Headlines
-    notes: Center justified unless a specific layout calls for left justification.
-  - role_name: subhead_or_cta
-    source_role: CTA / Subheadlines | Vinila Condensed Bold
-    proposed_family_token: beaver_creek/family/03
-    fallback_token: universal/family/fallback
-    proposed_weight_token: universal/weight/bold
-    proposed_size_token: universal/size/400
-    size_assumption_status: assumed
-    text_case: not specified in source
-    tracking: 80
-    leading_rule: font size to leading ratio 1 to 1.2
-    size_rule: CTA and subheadline size not numerically specified
-    punctuation_rule: not specified in source
-    sample_copy: CTA / Subheadlines
-    notes: Center justified unless a specific layout calls for left justification.
-  - role_name: body
-    source_role: Body Copy | Vinila Light
-    proposed_family_token: beaver_creek/family/02
-    fallback_token: universal/family/fallback
-    proposed_weight_token: universal/weight/light
-    proposed_size_token: universal/size/200
-    size_assumption_status: assumed
-    text_case: not specified in source
-    tracking: 10
-    leading_rule: font size to leading ratio 1 to 1.7
-    size_rule: body size not numerically specified
-    punctuation_rule: not specified in source
-    sample_copy: All body copy should be in Light.
-    notes: Center justified unless a specific layout calls for left justification.
-  - role_name: url
-    source_role: URL | Vinila Condensed Light
-    proposed_family_token: beaver_creek/family/03
-    fallback_token: universal/family/fallback
-    proposed_weight_token: universal/weight/light
-    proposed_size_token: universal/size/100
-    size_assumption_status: assumed
-    text_case: mixed_case
-    tracking: 120
-    leading_rule: not specified in source
-    size_rule: URL size not numerically specified
-    punctuation_rule: Always include BeaverCreek.com when relevant to media is not clickable.
-    sample_copy: BeaverCreek.com
-    notes: Raw-only utility recipe. It reuses the condensed family but does not alter the semantic action baseline.
-
-validation:
-  extraction_notes:
-    - The source is explicit about the named family treatments, tracking, justification, and leading ratios, but it does not provide numeric sizes.
-    - Beaver Creek uses one condensed family in both Bold and Light, so the URL treatment is preserved as a raw recipe rather than creating a new semantic family lane.
-  governance_notes:
-    - "`universal/weight/thin` is staged as the one new shared raw weight needed to preserve the Beaver Creek display system faithfully."
-    - The first Beaver Creek typography pass keeps semantic size aliases inherited from the shared baseline.
-
-review_readiness:
-  intended_review_channels:
+  - semantic_token: family/heading
+    global_token: beaver_creek/family/01
+    safe_semantic_token: family/heading_safe
+    safe_global_token: beaver_creek/family_safe/02
+    intended_channels:
     - web
     - email
     - ads
+    notes: IvyPresto Display drives Beaver Creek headline work in brand-capable channels. Safe mapping
+      is staged from Vail Resorts Guidelines.pdf.
+  - semantic_token: family/body
+    global_token: beaver_creek/family/02
+    safe_semantic_token: family/body_safe
+    safe_global_token: beaver_creek/family_safe/01
+    intended_channels:
+    - web
+    - email
+    - ads
+    notes: Vinila remains the default reading family. Safe mapping is staged from Vail Resorts Guidelines.pdf.
+  - semantic_token: family/action
+    global_token: beaver_creek/family/03
+    safe_semantic_token: family/action_safe
+    safe_global_token: beaver_creek/family_safe/02
+    intended_channels:
+    - web
+    - email
+    - ads
+    notes: Vinila Condensed stages as the semantic action family for CTA and subheadline work. Safe mapping
+      is staged from Vail Resorts Guidelines.pdf.
+  weight_aliases:
+  - semantic_token: weight/heading/base
+    global_token: universal/weight/thin
+    intended_channels:
+    - web
+    - email
+    - ads
+    notes: Beaver Creek headlines explicitly use Thin.
+  - semantic_token: weight/body/base
+    global_token: universal/weight/light
+    intended_channels:
+    - web
+    - email
+    - ads
+    notes: Body copy explicitly uses Light.
+  - semantic_token: weight/action/base
+    global_token: universal/weight/bold
+    intended_channels:
+    - web
+    - email
+    - ads
+    notes: CTA and subheadline work explicitly uses Bold.
+  size_aliases: []
+role_recipes:
+- role_name: headline
+  source_role: Headlines | IvyPresto Display Thin
+  proposed_family_token: beaver_creek/family/01
+  proposed_weight_token: universal/weight/thin
+  proposed_size_token: universal/size/700
+  size_assumption_status: assumed
+  text_case: not specified in source
+  tracking: 90
+  leading_rule: font size to leading ratio 1 to 1.2
+  size_rule: headline size not numerically specified
+  punctuation_rule: not specified in source
+  sample_copy: Headlines
+  notes: Center justified unless a specific layout calls for left justification.
+  safe_family_token: beaver_creek/family_safe/02
+- role_name: subhead_or_cta
+  source_role: CTA / Subheadlines | Vinila Condensed Bold
+  proposed_family_token: beaver_creek/family/03
+  proposed_weight_token: universal/weight/bold
+  proposed_size_token: universal/size/400
+  size_assumption_status: assumed
+  text_case: not specified in source
+  tracking: 80
+  leading_rule: font size to leading ratio 1 to 1.2
+  size_rule: CTA and subheadline size not numerically specified
+  punctuation_rule: not specified in source
+  sample_copy: CTA / Subheadlines
+  notes: Center justified unless a specific layout calls for left justification.
+  safe_family_token: beaver_creek/family_safe/02
+- role_name: body
+  source_role: Body Copy | Vinila Light
+  proposed_family_token: beaver_creek/family/02
+  proposed_weight_token: universal/weight/light
+  proposed_size_token: universal/size/200
+  size_assumption_status: assumed
+  text_case: not specified in source
+  tracking: 10
+  leading_rule: font size to leading ratio 1 to 1.7
+  size_rule: body size not numerically specified
+  punctuation_rule: not specified in source
+  sample_copy: All body copy should be in Light.
+  notes: Center justified unless a specific layout calls for left justification.
+  safe_family_token: beaver_creek/family_safe/01
+- role_name: url
+  source_role: URL | Vinila Condensed Light
+  proposed_family_token: beaver_creek/family/03
+  proposed_weight_token: universal/weight/light
+  proposed_size_token: universal/size/100
+  size_assumption_status: assumed
+  text_case: mixed_case
+  tracking: 120
+  leading_rule: not specified in source
+  size_rule: URL size not numerically specified
+  punctuation_rule: Always include BeaverCreek.com when relevant to media is not clickable.
+  sample_copy: BeaverCreek.com
+  notes: Raw-only utility recipe. It reuses the condensed family but does not alter the semantic action
+    baseline.
+  safe_family_token: beaver_creek/family_safe/01
+validation:
+  extraction_notes:
+  - The source is explicit about the named family treatments, tracking, justification, and leading ratios,
+    but it does not provide numeric sizes.
+  - Beaver Creek uses one condensed family in both Bold and Light, so the URL treatment is preserved as
+    a raw recipe rather than creating a new semantic family lane.
+  governance_notes:
+  - '`universal/weight/thin` is staged as the one new shared raw weight needed to preserve the Beaver
+    Creek display system faithfully.'
+  - The first Beaver Creek typography pass keeps semantic size aliases inherited from the shared baseline.
+  - Brand-safe typography aliases now stage on `beaver_creek/family_safe/*` from Vail Resorts Guidelines.pdf.
+review_readiness:
+  intended_review_channels:
+  - web
+  - email
+  - ads
   review_rules:
-    - subject: Beaver Creek headline lane
-      channels:
-        - web
-        - email
-        - ads
-      rule: Keep display headlines on IvyPresto Display Thin with tracking `90`, optical kerning, and a 1 to 1.2 size-to-leading ratio.
-      source_basis: Beaver Creek typography guidance image.
-    - subject: Beaver Creek action lane
-      channels:
-        - web
-        - email
-        - ads
-      rule: Keep CTA and subheadlines on Vinila Condensed Bold with tracking `80` and a 1 to 1.2 size-to-leading ratio.
-      source_basis: Beaver Creek typography guidance image.
-    - subject: Beaver Creek reading and utility copy
-      channels:
-        - web
-        - email
-        - ads
-      rule: Keep body copy on Vinila Light with tracking `10` and the URL recipe on Vinila Condensed Light with tracking `120`.
-      source_basis: Beaver Creek typography guidance image.
-
+  - subject: Beaver Creek headline lane
+    channels:
+    - web
+    - email
+    - ads
+    rule: Keep display headlines on IvyPresto Display Thin with tracking `90`, optical kerning, and a
+      1 to 1.2 size-to-leading ratio.
+    source_basis: Beaver Creek typography guidance image.
+  - subject: Beaver Creek action lane
+    channels:
+    - web
+    - email
+    - ads
+    rule: Keep CTA and subheadlines on Vinila Condensed Bold with tracking `80` and a 1 to 1.2 size-to-leading
+      ratio.
+    source_basis: Beaver Creek typography guidance image.
+  - subject: Beaver Creek reading and utility copy
+    channels:
+    - web
+    - email
+    - ads
+    rule: Keep body copy on Vinila Light with tracking `10` and the URL recipe on Vinila Condensed Light
+      with tracking `120`.
+    source_basis: Beaver Creek typography guidance image.
 open_questions: []
+safe_source_reference: Vail Resorts Guidelines.pdf
+safe_source_type: pdf

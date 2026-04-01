@@ -1,5 +1,5 @@
 version: 1
-updated: '2026-03-31'
+updated: '2026-04-01'
 brand_id: crotched
 display_name: Crotched
 status: active
@@ -30,7 +30,8 @@ artifacts:
   typography:
     intake_artifact: figma/brands/crotched/typography/intake.yml
     preview_artifact: figma/brands/crotched/typography/preview.md
-    decision_artifacts: []
+    decision_artifacts:
+    - figma/decisions/2026-04-01-safe-typography-lane-migration.md
 semantic_overrides:
   theme:
     status: active
@@ -98,17 +99,30 @@ semantic_overrides:
       - border/critical
       - border/critical_inverse
       notes:
-      - "`on_surface/*` tokens in the live semantic theme extension are contrast-derived from `universal/black` or `universal/white` and are not hue-tinted."
-      - Exact black and white remain inherited through the shared neutral role recipes because the supplied palette matches `universal/black` and `universal/white`.
-      - "`rocket_fuel` drives the primary expressive semantic lane, while `snow_gun` drives the secondary expressive lane."
-      - "`assets/logo` is overridden to the string `Crotched` in the semantic theme extension even though the source logo guide also shows `Crotched Mountain` and `CrotchedMTN` lockups."
+      - '`on_surface/*` tokens in the live semantic theme extension are contrast-derived from `universal/black`
+        or `universal/white` and are not hue-tinted.'
+      - Exact black and white remain inherited through the shared neutral role recipes because the supplied
+        palette matches `universal/black` and `universal/white`.
+      - '`rocket_fuel` drives the primary expressive semantic lane, while `snow_gun` drives the secondary
+        expressive lane.'
+      - '`assets/logo` is overridden to the string `Crotched` in the semantic theme extension even though
+        the source logo guide also shows `Crotched Mountain` and `CrotchedMTN` lockups.'
     typography:
-      override_scopes: []
+      override_scopes:
+      - semantic_token: family/heading_safe
+        alias_of: crotched/family_safe/01
+      - semantic_token: family/body_safe
+        alias_of: crotched/family_safe/02
+      - semantic_token: family/action_safe
+        alias_of: crotched/family_safe/01
       inherited_from_base:
       - family/*
       - weight/*
       notes:
-      - The Vail Resorts Guidelines PDF does not list brand font guidance for Crotched, so the semantic theme extension continues to inherit the shared universal typography base without overrides.
+      - The Vail Resorts Guidelines PDF does not list brand font guidance for Crotched, so the semantic
+        theme extension continues to inherit the shared universal typography base without overrides.
       - 'Typography size continues to bind directly from published `Global: Typography`.'
+      - Brand-safe typography aliases now stage on `crotched/family_safe/*` from Vail Resorts Guidelines.pdf.
 notes:
-- Crotched is live in the Foundations file with two raw color families, no brand-specific raw typography families, a semantic theme logo-name override, and Crotched semantic theme extension.
+- Crotched is live in the Foundations file with two raw color families, no brand-specific raw typography
+  families, a semantic theme logo-name override, and Crotched semantic theme extension.

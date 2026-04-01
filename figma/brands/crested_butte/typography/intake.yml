@@ -1,4 +1,4 @@
-date: 2026-03-11
+date: '2026-04-01'
 brand: crested_butte
 source_reference: User-provided image in chat showing the Crested Butte typography guidance
 source_type: image
@@ -8,236 +8,266 @@ preview:
   required_before_write: true
   artifact: figma/brands/crested_butte/typography/preview.md
   status: written_in_figma
-
 source_roles:
-  - source_role: headline
-    source_family_name: Gibson
-    source_style_name: Gibson Semibold
-    source_weight_label: Semibold
-    source_usage_scope: primary_display_headline
-    text_case: lowercase
-    tracking: regular
-    leading: 86% of type size
-    size_rule: headline size not numerically specified
-    punctuation_rule: not specified in source
-    sample_copy: gibson semibold
-    notes: Left aligned. Use varied indentation per line to create an intentional, fluid, and tight lockup. No more than four lines stacked, best in two or three lines. May use any brand color.
-  - source_role: subhead
-    source_family_name: Gibson
-    source_style_name: Gibson Semibold
-    source_weight_label: Semibold
-    source_usage_scope: supporting_headline_copy
-    text_case: all_caps
-    tracking: regular
-    leading: not specified in source
-    size_rule: sub-headline size not numerically specified
-    punctuation_rule: not specified in source
-    sample_copy: GIBSON SEMIBOLD
-    notes: Left aligned. Single line of copy. Black or white only.
-  - source_role: body
-    source_family_name: Gibson
-    source_style_name: Gibson Regular
-    source_weight_label: Regular
-    source_usage_scope: reading_copy
-    text_case: sentence_case
-    tracking: regular
-    leading: not specified in source
-    size_rule: body size not numerically specified
-    punctuation_rule: sentence punctuation allowed
-    sample_copy: Gibson Regular is our default body copy font, and should primarily be used in black on white backgrounds in layout. Or in White, against darker backgrounds.
-    notes: Source explicitly describes Gibson Regular as the default body copy font.
-
+- source_role: headline
+  source_family_name: Gibson
+  source_style_name: Gibson Semibold
+  source_weight_label: Semibold
+  source_usage_scope: primary_display_headline
+  text_case: lowercase
+  tracking: regular
+  leading: 86% of type size
+  size_rule: headline size not numerically specified
+  punctuation_rule: not specified in source
+  sample_copy: gibson semibold
+  notes: Left aligned. Use varied indentation per line to create an intentional, fluid, and tight lockup.
+    No more than four lines stacked, best in two or three lines. May use any brand color.
+  source_safe_family_name: Montserrat
+  source_safe_reference_column: headline_font
+- source_role: subhead
+  source_family_name: Gibson
+  source_style_name: Gibson Semibold
+  source_weight_label: Semibold
+  source_usage_scope: supporting_headline_copy
+  text_case: all_caps
+  tracking: regular
+  leading: not specified in source
+  size_rule: sub-headline size not numerically specified
+  punctuation_rule: not specified in source
+  sample_copy: GIBSON SEMIBOLD
+  notes: Left aligned. Single line of copy. Black or white only.
+  source_safe_family_name: Montserrat
+  source_safe_reference_column: headline_font
+- source_role: body
+  source_family_name: Gibson
+  source_style_name: Gibson Regular
+  source_weight_label: Regular
+  source_usage_scope: reading_copy
+  text_case: sentence_case
+  tracking: regular
+  leading: not specified in source
+  size_rule: body size not numerically specified
+  punctuation_rule: sentence punctuation allowed
+  sample_copy: Gibson Regular is our default body copy font, and should primarily be used in black on
+    white backgrounds in layout. Or in White, against darker backgrounds.
+  notes: Source explicitly describes Gibson Regular as the default body copy font.
+  source_safe_family_name: Open Sans
+  source_safe_reference_column: body_font
 primitive_recommendations:
   reuse_existing:
     families: []
     weights:
-      - source_weight_label: Regular
-        existing_token: universal/weight/normal
-        reason: Gibson Regular aligns to the current normal raw weight and does not justify a brand-specific weight token.
+    - source_weight_label: Regular
+      existing_token: universal/weight/normal
+      reason: Gibson Regular aligns to the current normal raw weight and does not justify a brand-specific
+        weight token.
     sizes:
-      - source_size_reference: headline default
-        existing_token: universal/size/800
-        assumption_status: assumed
-        assumption_note: The source provides behavior but no numeric size, so the initial review maps the display headline to the largest current shared heading size.
-        reason: Preserves the headline scale without inventing a new raw size before channel review.
-      - source_size_reference: sub-headline default
-        existing_token: universal/size/500
-        assumption_status: assumed
-        assumption_note: The source shows a single-line secondary headline clearly smaller than the headline lockup, so the first review uses a mid-large heading size.
-        reason: Keeps the supporting headline on the governed size ladder while preserving hierarchy.
-      - source_size_reference: body default
-        existing_token: universal/size/300
-        assumption_status: assumed
-        assumption_note: The source provides no numeric body size, so body defaults to the existing universal reading size.
-        reason: Keeps body on the shared raw ladder until a numeric specification is approved.
+    - source_size_reference: headline default
+      existing_token: universal/size/800
+      assumption_status: assumed
+      assumption_note: The source provides behavior but no numeric size, so the initial review maps the
+        display headline to the largest current shared heading size.
+      reason: Preserves the headline scale without inventing a new raw size before channel review.
+    - source_size_reference: sub-headline default
+      existing_token: universal/size/500
+      assumption_status: assumed
+      assumption_note: The source shows a single-line secondary headline clearly smaller than the headline
+        lockup, so the first review uses a mid-large heading size.
+      reason: Keeps the supporting headline on the governed size ladder while preserving hierarchy.
+    - source_size_reference: body default
+      existing_token: universal/size/300
+      assumption_status: assumed
+      assumption_note: The source provides no numeric body size, so body defaults to the existing universal
+        reading size.
+      reason: Keeps body on the shared raw ladder until a numeric specification is approved.
   proposed_primitives:
     families:
-      - token_name: crested_butte/family/01
-        source_family_name: Gibson
-        source_style_reference: Gibson Semibold and Gibson Regular across headline, sub-headline, and body
-        rationale: A single brand family spans the reviewed Crested Butte typography system.
-        fallback_token: universal/family/fallback
-        fallback_note: Source artifact does not specify a fallback stack, so the review defaults to the global fallback family.
+    - token_name: crested_butte/family/01
+      source_family_name: Gibson
+      source_style_reference: Gibson Semibold and Gibson Regular across headline, sub-headline, and body
+      rationale: A single brand family spans the reviewed Crested Butte typography system.
+      safe_family_token: ''
+      safe_family_note: Multiple approved role-level safe-family mappings apply to this brand family;
+        use the semantic safe aliases and role recipes below.
     weights:
-      - token_name: universal/weight/semibold
-        source_weight_label: Semibold
-        proposed_value: "600"
-        rationale: Crested Butte introduces a repeated Semibold label that should be governed as a shared raw weight, not approximated to Bold.
+    - token_name: universal/weight/semibold
+      source_weight_label: Semibold
+      proposed_value: '600'
+      rationale: Crested Butte introduces a repeated Semibold label that should be governed as a shared
+        raw weight, not approximated to Bold.
+    safe_families:
+    - token_name: crested_butte/family_safe/01
+      source_family_name: Montserrat
+      source_role_reference: eyebrow, headline, cta
+      rationale: Approved web safe family from Vail Resorts Guidelines.pdf for the eyebrow, headline,
+        cta lane.
+    - token_name: crested_butte/family_safe/02
+      source_family_name: Open Sans
+      source_role_reference: body
+      rationale: Approved web safe family from Vail Resorts Guidelines.pdf for the body lane.
   hold_for_review: []
-
 semantic_recommendations:
   family_aliases:
-    - semantic_token: family/heading
-      global_token: crested_butte/family/01
-      safe_semantic_token: family/heading_safe
-      safe_global_token: universal/family/fallback
-      intended_channels:
-        - web
-        - email
-        - ads
-      notes: Crested Butte keeps Gibson as the brand family for expressive headline work and falls back to the safe alias when delivery constraints require it.
-    - semantic_token: family/body
-      global_token: crested_butte/family/01
-      safe_semantic_token: family/body_safe
-      safe_global_token: universal/family/fallback
-      intended_channels:
-        - web
-        - email
-        - ads
-      notes: Body copy stays on the same family because the source explicitly defines Gibson Regular as the default body face.
-    - semantic_token: family/action
-      global_token: crested_butte/family/01
-      safe_semantic_token: family/action_safe
-      safe_global_token: universal/family/fallback
-      intended_channels:
-        - web
-        - email
-        - ads
-      notes: Action-oriented copy should stay on the same brand family in channels that can deliver it.
-  weight_aliases:
-    - semantic_token: weight/heading/base
-      global_token: universal/weight/semibold
-      intended_channels:
-        - web
-        - email
-        - ads
-      notes: Heading emphasis is explicitly Semibold in the source.
-    - semantic_token: weight/body/base
-      global_token: universal/weight/normal
-      intended_channels:
-        - web
-        - email
-        - ads
-      notes: Body copy maps to Gibson Regular and therefore reuses the shared normal raw weight.
-    - semantic_token: weight/action/base
-      global_token: universal/weight/semibold
-      intended_channels:
-        - web
-        - email
-        - ads
-      notes: The source uses Semibold for the emphasized non-body typography system, so the first pass stages action emphasis on the same raw weight.
-  size_aliases:
-    - semantic_token: size/heading/xl
-      global_token: universal/size/800
-      intended_channels:
-        - web
-        - email
-        - ads
-      notes: Assumed display size for the multi-line headline lockup.
-    - semantic_token: size/heading/base
-      global_token: universal/size/500
-      intended_channels:
-        - web
-        - email
-        - ads
-      notes: Assumed supporting headline size for the single-line sub-head.
-    - semantic_token: size/body/base
-      global_token: universal/size/300
-      intended_channels:
-        - web
-        - email
-        - ads
-      notes: Assumed reading size until a numeric body spec is provided.
-
-role_recipes:
-  - role_name: headline
-    source_role: Headline | Gibson Semibold
-    proposed_family_token: crested_butte/family/01
-    fallback_token: universal/family/fallback
-    proposed_weight_token: universal/weight/semibold
-    proposed_size_token: universal/size/800
-    size_assumption_status: assumed
-    text_case: lowercase
-    tracking: regular
-    leading_rule: 86% of type size
-    size_rule: headline size not numerically specified
-    punctuation_rule: not specified in source
-    sample_copy: gibson semibold
-    notes: Left aligned. Use varied indentation per line and keep the lockup to four lines or fewer.
-  - role_name: subhead
-    source_role: Sub-headline | Gibson Semibold
-    proposed_family_token: crested_butte/family/01
-    fallback_token: universal/family/fallback
-    proposed_weight_token: universal/weight/semibold
-    proposed_size_token: universal/size/500
-    size_assumption_status: assumed
-    text_case: all_caps
-    tracking: regular
-    leading_rule: not specified in source
-    size_rule: sub-headline size not numerically specified
-    punctuation_rule: not specified in source
-    sample_copy: GIBSON SEMIBOLD
-    notes: Intended as a single-line supporting headline and limited to black or white application.
-  - role_name: body
-    source_role: Body | Gibson Regular
-    proposed_family_token: crested_butte/family/01
-    fallback_token: universal/family/fallback
-    proposed_weight_token: universal/weight/normal
-    proposed_size_token: universal/size/300
-    size_assumption_status: assumed
-    text_case: sentence_case
-    tracking: regular
-    leading_rule: not specified in source
-    size_rule: body size not numerically specified
-    punctuation_rule: sentence punctuation allowed
-    sample_copy: Gibson Regular is our default body copy font, and should primarily be used in black on white backgrounds in layout.
-    notes: Source explicitly positions Gibson Regular as the default body treatment.
-
-validation:
-  extraction_notes:
-    - The source uses a single family, Gibson, across headline, sub-headline, and body, with the distinction carried by weight and casing rather than by multiple families.
-    - The source provides strong behavior rules for case, leading, alignment, and color use, but no numeric font sizes.
-  governance_notes:
-    - "`Semibold` is now governed as the shared raw token `universal/weight/semibold` at the global layer."
-    - The first Crested Butte typography pass does not create a second family token because the source does not justify one.
-    - Size mappings remain provisional until numeric specs or channel comps provide a stronger baseline.
-
-review_readiness:
-  intended_review_channels:
+  - semantic_token: family/heading
+    global_token: crested_butte/family/01
+    safe_semantic_token: family/heading_safe
+    safe_global_token: crested_butte/family_safe/01
+    intended_channels:
     - web
     - email
     - ads
+    notes: Crested Butte keeps Gibson as the brand family for expressive headline work and falls back
+      to the safe alias when delivery constraints require it. Safe mapping is staged from Vail Resorts
+      Guidelines.pdf.
+  - semantic_token: family/body
+    global_token: crested_butte/family/01
+    safe_semantic_token: family/body_safe
+    safe_global_token: crested_butte/family_safe/02
+    intended_channels:
+    - web
+    - email
+    - ads
+    notes: Body copy stays on the same family because the source explicitly defines Gibson Regular as
+      the default body face. Safe mapping is staged from Vail Resorts Guidelines.pdf.
+  - semantic_token: family/action
+    global_token: crested_butte/family/01
+    safe_semantic_token: family/action_safe
+    safe_global_token: crested_butte/family_safe/01
+    intended_channels:
+    - web
+    - email
+    - ads
+    notes: Action-oriented copy should stay on the same brand family in channels that can deliver it.
+      Safe mapping is staged from Vail Resorts Guidelines.pdf.
+  weight_aliases:
+  - semantic_token: weight/heading/base
+    global_token: universal/weight/semibold
+    intended_channels:
+    - web
+    - email
+    - ads
+    notes: Heading emphasis is explicitly Semibold in the source.
+  - semantic_token: weight/body/base
+    global_token: universal/weight/normal
+    intended_channels:
+    - web
+    - email
+    - ads
+    notes: Body copy maps to Gibson Regular and therefore reuses the shared normal raw weight.
+  - semantic_token: weight/action/base
+    global_token: universal/weight/semibold
+    intended_channels:
+    - web
+    - email
+    - ads
+    notes: The source uses Semibold for the emphasized non-body typography system, so the first pass stages
+      action emphasis on the same raw weight.
+  size_aliases:
+  - semantic_token: size/heading/xl
+    global_token: universal/size/800
+    intended_channels:
+    - web
+    - email
+    - ads
+    notes: Assumed display size for the multi-line headline lockup.
+  - semantic_token: size/heading/base
+    global_token: universal/size/500
+    intended_channels:
+    - web
+    - email
+    - ads
+    notes: Assumed supporting headline size for the single-line sub-head.
+  - semantic_token: size/body/base
+    global_token: universal/size/300
+    intended_channels:
+    - web
+    - email
+    - ads
+    notes: Assumed reading size until a numeric body spec is provided.
+role_recipes:
+- role_name: headline
+  source_role: Headline | Gibson Semibold
+  proposed_family_token: crested_butte/family/01
+  proposed_weight_token: universal/weight/semibold
+  proposed_size_token: universal/size/800
+  size_assumption_status: assumed
+  text_case: lowercase
+  tracking: regular
+  leading_rule: 86% of type size
+  size_rule: headline size not numerically specified
+  punctuation_rule: not specified in source
+  sample_copy: gibson semibold
+  notes: Left aligned. Use varied indentation per line and keep the lockup to four lines or fewer.
+  safe_family_token: crested_butte/family_safe/01
+- role_name: subhead
+  source_role: Sub-headline | Gibson Semibold
+  proposed_family_token: crested_butte/family/01
+  proposed_weight_token: universal/weight/semibold
+  proposed_size_token: universal/size/500
+  size_assumption_status: assumed
+  text_case: all_caps
+  tracking: regular
+  leading_rule: not specified in source
+  size_rule: sub-headline size not numerically specified
+  punctuation_rule: not specified in source
+  sample_copy: GIBSON SEMIBOLD
+  notes: Intended as a single-line supporting headline and limited to black or white application.
+  safe_family_token: crested_butte/family_safe/01
+- role_name: body
+  source_role: Body | Gibson Regular
+  proposed_family_token: crested_butte/family/01
+  proposed_weight_token: universal/weight/normal
+  proposed_size_token: universal/size/300
+  size_assumption_status: assumed
+  text_case: sentence_case
+  tracking: regular
+  leading_rule: not specified in source
+  size_rule: body size not numerically specified
+  punctuation_rule: sentence punctuation allowed
+  sample_copy: Gibson Regular is our default body copy font, and should primarily be used in black on
+    white backgrounds in layout.
+  notes: Source explicitly positions Gibson Regular as the default body treatment.
+  safe_family_token: crested_butte/family_safe/02
+validation:
+  extraction_notes:
+  - The source uses a single family, Gibson, across headline, sub-headline, and body, with the distinction
+    carried by weight and casing rather than by multiple families.
+  - The source provides strong behavior rules for case, leading, alignment, and color use, but no numeric
+    font sizes.
+  governance_notes:
+  - '`Semibold` is now governed as the shared raw token `universal/weight/semibold` at the global layer.'
+  - The first Crested Butte typography pass does not create a second family token because the source does
+    not justify one.
+  - Size mappings remain provisional until numeric specs or channel comps provide a stronger baseline.
+  - Brand-safe typography aliases now stage on `crested_butte/family_safe/*` from Vail Resorts Guidelines.pdf.
+review_readiness:
+  intended_review_channels:
+  - web
+  - email
+  - ads
   review_rules:
-    - subject: headline
-      channels:
-        - web
-        - email
-        - ads
-      rule: Keep the headline lowercase, left aligned, and set with leading at 86% of type size. Use varied indentation only when the layout can preserve the intended lockup.
-      source_basis: Crested Butte typography guidance image.
-    - subject: sub-headline
-      channels:
-        - web
-        - email
-        - ads
-      rule: Keep the sub-headline all caps, on one line, and limited to black or white application.
-      source_basis: Crested Butte typography guidance image.
-    - subject: body
-      channels:
-        - web
-        - email
-        - ads
-      rule: Use Gibson Regular primarily in black on white backgrounds or white on darker backgrounds.
-      source_basis: Crested Butte typography guidance image.
-
+  - subject: headline
+    channels:
+    - web
+    - email
+    - ads
+    rule: Keep the headline lowercase, left aligned, and set with leading at 86% of type size. Use varied
+      indentation only when the layout can preserve the intended lockup.
+    source_basis: Crested Butte typography guidance image.
+  - subject: sub-headline
+    channels:
+    - web
+    - email
+    - ads
+    rule: Keep the sub-headline all caps, on one line, and limited to black or white application.
+    source_basis: Crested Butte typography guidance image.
+  - subject: body
+    channels:
+    - web
+    - email
+    - ads
+    rule: Use Gibson Regular primarily in black on white backgrounds or white on darker backgrounds.
+    source_basis: Crested Butte typography guidance image.
 open_questions: []
+safe_source_reference: Vail Resorts Guidelines.pdf
+safe_source_type: pdf

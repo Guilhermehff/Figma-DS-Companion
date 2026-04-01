@@ -1,133 +1,106 @@
 # Northstar Typography Preview
 
-Review state: approved preview artifact. Verify live write state in `figma/brands/northstar/brand.yml` and Figma.
+Review state: written_in_figma preview artifact. Verify live write state in `figma/brands/northstar/brand.yml` and Figma.
 
 ## Original Source Roles
 
 - Source role: `headline`
   Family: `New Order`
+  Safe family: `Afacad Flux`
   Style: `New Order Medium`
   Weight label: `Medium`
-  Usage scope: `primary display headline`
-  Case: `Sentence case`
+  Usage scope: `primary_display_headline`
+  Case: `sentence_case`
   Tracking: `0px`
-  Leading: `not specified`
+  Leading: `not specified in source`
   Size rule: `headline size not numerically specified`
-  Punctuation: `required`
+  Punctuation: `punctuation required`
   Sample copy: `Headlines will be in New Order Medium in sentence case, left justified.`
-  Notes: The source explicitly calls for left justification and 0px tracking.
+  Notes: The source explicitly says headlines use New Order Medium, sentence case, left justified, and 0px tracking.
 
 - Source role: `subhead`
   Family: `New Order`
+  Safe family: `Afacad Flux`
   Style: `New Order Regular`
   Weight label: `Regular`
-  Usage scope: `supporting headline copy`
-  Case: `Sentence case`
+  Usage scope: `supporting_headline_copy`
+  Case: `sentence_case`
   Tracking: `0px`
-  Leading: `equal to font size`
+  Leading: `equal_to_font_size`
   Size rule: `sub-headline size not numerically specified`
-  Punctuation: `required`
+  Punctuation: `punctuation required`
   Sample copy: `Sub-Headlines will be in New Order Regular in sentence case, left justified.`
-  Notes: The source explicitly defines line-height as equal to the font size.
+  Notes: The source explicitly says sub-headlines use New Order Regular and leading equal to type size.
 
 - Source role: `body`
   Family: `New Order`
+  Safe family: `Open Sans`
   Style: `New Order Regular`
   Weight label: `Regular`
-  Usage scope: `reading copy`
-  Case: `Sentence case`
+  Usage scope: `reading_copy`
+  Case: `sentence_case`
   Tracking: `0px`
   Leading: `1.8x type size`
   Size rule: `body size not numerically specified`
-  Punctuation: `required`
+  Punctuation: `punctuation required`
   Sample copy: `Body Copy will be in New Order Regular in sentence case, left justified.`
-  Notes: The source explicitly defines line-height as `1.8` times type size.
-
-## Primitive Recommendations
-
-- Proposed primitive:
-  Token name: `northstar/family/01`
-  Source item: `New Order`
-  Fallback token: `universal/family/fallback`
-  Notes: One brand family covers all reviewed Northstar typography roles.
-
-- Reuse:
-  Source item: `Medium`
-  Proposed token: `universal/weight/medium`
-  Assumption status: `explicit`
-  Notes: The source directly names New Order Medium for headlines.
-
-- Reuse:
-  Source item: `Regular`
-  Proposed token: `universal/weight/normal`
-  Assumption status: `explicit`
-  Notes: The source directly names New Order Regular for sub-headline and body roles.
-
-## Hold For Review
-
-- Item: `Adobe Fonts delivery link`
-  Reason: The source references Adobe Fonts but the URL is not visible in the provided image.
-
-- Item: `action typography`
-  Reason: The source does not define CTA or action-specific typography behavior.
-
-## Semantic Mapping
-
-- `family/heading` -> `northstar/family/01`
-- `family/body` -> `northstar/family/01`
-- `weight/heading/base` -> `universal/weight/medium`
-- `weight/body/base` -> `universal/weight/normal`
-- `family/action`, `weight/action/*`, and safe aliases remain inherited until a delivery-specific Northstar rule exists
+  Notes: The source explicitly says body copy uses New Order Regular with leading set to 1.8 type size.
 
 ## Role Recipes
 
 ### Role: headline
 
-<div style="font-family: 'New Order', sans-serif; font-weight: 500; font-size: 36px; line-height: 1.1; letter-spacing: 0; text-transform: none;">
-  Headlines will be in New Order Medium in sentence case.
-</div>
+Proposed family token: `northstar/family/01`
 
-- Proposed family token: `northstar/family/01`
-- Proposed weight token: `universal/weight/medium`
-- Proposed size token: `universal/size/800`
-- Notes: Left justified, sentence case, 0px tracking, punctuation retained.
+Safe family token: `northstar/family_safe/01`
+
+Proposed weight token: `universal/weight/medium`
+
+Proposed size token: `universal/size/800`
+
+Recipe notes:
+
+- Case: `sentence_case`
+- Tracking: `0px`
+- Leading: `not specified in source`
+- Size rule: `headline size not numerically specified`
+- Punctuation: `punctuation required`
+- Notes: Left justified. The source explicitly requires punctuation on all reviewed copy types.
 
 ### Role: subhead
 
-<div style="font-family: 'New Order', sans-serif; font-weight: 400; font-size: 20px; line-height: 1; letter-spacing: 0; text-transform: none;">
-  Sub-Headlines will be in New Order Regular in sentence case.
-</div>
+Proposed family token: `northstar/family/01`
 
-- Proposed family token: `northstar/family/01`
-- Proposed weight token: `universal/weight/normal`
-- Proposed size token: `universal/size/500`
-- Notes: Left justified, sentence case, leading equal to the font size.
+Safe family token: `northstar/family_safe/01`
+
+Proposed weight token: `universal/weight/normal`
+
+Proposed size token: `universal/size/500`
+
+Recipe notes:
+
+- Case: `sentence_case`
+- Tracking: `0px`
+- Leading: `line-height equals font size`
+- Size rule: `sub-headline size not numerically specified`
+- Punctuation: `punctuation required`
+- Notes: Left justified, with leading set to the same value as the font size.
 
 ### Role: body
 
-<div style="font-family: 'New Order', sans-serif; font-weight: 400; font-size: 16px; line-height: 1.8; letter-spacing: 0; text-transform: none;">
-  Body Copy will be in New Order Regular in sentence case.
-</div>
+Proposed family token: `northstar/family/01`
 
-- Proposed family token: `northstar/family/01`
-- Proposed weight token: `universal/weight/normal`
-- Proposed size token: `universal/size/300`
-- Notes: Left justified, sentence case, with 1.8x leading.
+Safe family token: `northstar/family_safe/02`
 
-## Review Notes
+Proposed weight token: `universal/weight/normal`
 
-- The source is strong on behavior and typographic voice, but it does not give numeric sizes, so all size mappings remain staged assumptions.
-- Northstar can stage on one family token and existing shared weight tokens without expanding the raw typography ladder.
-- No action role was supplied, so action aliases remain inherited rather than guessed.
+Proposed size token: `universal/size/300`
 
-## Review Readiness
+Recipe notes:
 
-- Subject: `Northstar headline and sub-headline`
-  Channels: `web, email, ads`
-  Rule: Keep the sentence-case New Order system, with Medium reserved for headlines and Regular for supporting copy.
-  Source basis: Northstar typography and typography-in-use images.
-
-- Subject: `Northstar body copy`
-  Channels: `web, email, ads`
-  Rule: Keep body copy on New Order Regular with 1.8x line-height and punctuation.
-  Source basis: Northstar typography-in-use image.
+- Case: `sentence_case`
+- Tracking: `0px`
+- Leading: `1.8x type size`
+- Size rule: `body size not numerically specified`
+- Punctuation: `punctuation required`
+- Notes: Left justified, with generous leading defined relative to the type size.

@@ -1,5 +1,5 @@
 version: 1
-updated: '2026-03-31'
+updated: '2026-04-01'
 brand_id: heavenly
 display_name: Heavenly
 status: active
@@ -36,6 +36,7 @@ artifacts:
     decision_artifacts:
     - figma/decisions/2026-03-11-heavenly-staged-foundations-from-source-images.md
     - figma/decisions/2026-03-11-heavenly-foundations-written-to-figma.md
+    - figma/decisions/2026-04-01-safe-typography-lane-migration.md
 semantic_overrides:
   theme:
     status: active
@@ -103,11 +104,13 @@ semantic_overrides:
       - border/critical
       - border/critical_inverse
       notes:
-      - "`on_surface/*` tokens in the live semantic theme extension are contrast-derived from `universal/black` or `universal/white` and are not hue-tinted."
+      - '`on_surface/*` tokens in the live semantic theme extension are contrast-derived from `universal/black`
+        or `universal/white` and are not hue-tinted.'
       - Exact white and black remain inherited through the shared neutral and status role recipes.
-      - The role-based migration keeps `snow_flower_red` and `deep_water_blue` as the only expressive semantic lanes.
-      - "`assets/logo` is overridden to the string `Heavenly` in the semantic theme extension."
-      - "`shore_blue` remains a governed global family but is no longer promoted into semantic."
+      - The role-based migration keeps `snow_flower_red` and `deep_water_blue` as the only expressive
+        semantic lanes.
+      - '`assets/logo` is overridden to the string `Heavenly` in the semantic theme extension.'
+      - '`shore_blue` remains a governed global family but is no longer promoted into semantic.'
     typography:
       override_scopes:
       - semantic_token: family/heading
@@ -122,15 +125,24 @@ semantic_overrides:
         alias_of: universal/weight/normal
       - semantic_token: weight/body/strong
         alias_of: universal/weight/medium
+      - semantic_token: family/heading_safe
+        alias_of: heavenly/family_safe/01
+      - semantic_token: family/body_safe
+        alias_of: heavenly/family_safe/01
+      - semantic_token: family/action_safe
+        alias_of: heavenly/family_safe/01
       inherited_from_base:
-      - family/heading_safe
-      - family/body_safe
       - family/action
-      - family/action_safe
       - weight/action/*
       notes:
-      - Heavenly stages on a two-family system: Din Condensed for titles and headlines, and Brandon Grotesque for subheads and body copy.
-      - CTA typography remains intentionally inherited because the supplied image specifies CTA tracking but does not explicitly name a CTA family or weight.
-      - The shared semantic theme base now also includes `weight/heading/strong`, `weight/body/strong`, and `size/body/lg` so the Heavenly extension can override against governed base variables rather than a parallel schema.
+      - Heavenly stages on a two-family system: Din Condensed for titles and headlines, and Brandon Grotesque
+          for subheads and body copy.
+      - CTA typography remains intentionally inherited because the supplied image specifies CTA tracking
+        but does not explicitly name a CTA family or weight.
+      - The shared semantic theme base now also includes `weight/heading/strong`, `weight/body/strong`,
+        and `size/body/lg` so the Heavenly extension can override against governed base variables rather
+        than a parallel schema.
+      - Brand-safe typography aliases now stage on `heavenly/family_safe/*` from Vail Resorts Guidelines.pdf.
 notes:
-- Heavenly is live in the Foundations file with global color ladders, two global typography families, the shared raw light weight, a semantic theme logo-name override, and semantic theme extension.
+- Heavenly is live in the Foundations file with global color ladders, two global typography families,
+  the shared raw light weight, a semantic theme logo-name override, and semantic theme extension.

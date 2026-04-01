@@ -1,95 +1,139 @@
 # Stevens Pass Typography Preview
 
-Review state: approved preview artifact. Verify live write state in `figma/brands/stevens_pass/brand.yml` and Figma.
+Review state: written_in_figma preview artifact. Verify live write state in `figma/brands/stevens_pass/brand.yml` and Figma.
 
 ## Original Source Roles
 
 - Source role: `headline`
   Family: `Gibson`
+  Safe family: `Montserrat`
   Style: `Bold`
   Weight label: `Bold`
-  Usage scope: `primary display headline`
-  Notes: The source explicitly labels headlines as `Gibson Bold`.
+  Usage scope: `primary_display_headline`
+  Case: `not specified in source`
+  Tracking: `not specified in source`
+  Leading: `not specified in source`
+  Size rule: `source shows family and weight only`
+  Punctuation: `not specified in source`
+  Sample copy: `GIBSON BOLD`
+  Notes: The typography sheet explicitly labels headlines as Gibson Bold.
 
 - Source role: `subhead`
   Family: `Gibson`
+  Safe family: `Montserrat`
   Style: `Semi Bold`
   Weight label: `Semi Bold`
-  Usage scope: `supporting headline copy`
-  Notes: The source explicitly labels subheads as `Gibson Semi Bold`.
+  Usage scope: `supporting_headline_copy`
+  Case: `not specified in source`
+  Tracking: `not specified in source`
+  Leading: `not specified in source`
+  Size rule: `source shows family and weight only`
+  Punctuation: `not specified in source`
+  Sample copy: `GIBSON SEMI BOLD`
+  Notes: The typography sheet explicitly labels subheads as Gibson Semi Bold.
 
 - Source role: `cta`
   Family: `Gibson`
+  Safe family: `Montserrat`
   Style: `Regular`
   Weight label: `Regular`
-  Usage scope: `action or button copy`
-  Notes: The source explicitly labels CTA as `Gibson Regular`.
+  Usage scope: `action_or_button_copy`
+  Case: `not specified in source`
+  Tracking: `not specified in source`
+  Leading: `not specified in source`
+  Size rule: `source shows family and weight only`
+  Punctuation: `not specified in source`
+  Sample copy: `GIBSON REGULAR`
+  Notes: The typography sheet explicitly labels CTA as Gibson Regular.
 
 - Source role: `body`
   Family: `Gibson`
-  Style: `Medium`, `Regular`, `Light`, and italic variants
+  Safe family: `Open Sans`
+  Style: `Medium, Regular, Light, and italic variants`
   Weight label: `Mixed`
-  Usage scope: `reading copy`
-  Notes: The source shows multiple approved body variants rather than a single semantic default.
+  Usage scope: `reading_copy`
+  Case: `not specified in source`
+  Tracking: `not specified in source`
+  Leading: `not specified in source`
+  Size rule: `source shows approved family variants rather than a single governed body recipe`
+  Punctuation: `not specified in source`
+  Sample copy: `GIBSON MEDIUM / REGULAR / LIGHT`
+  Notes: The source lists multiple acceptable body weights and italics without stating which one is the semantic default.
 
-## Primitive Recommendations
+## Role Recipes
 
-- Proposed primitive:
-  Token name: `stevens_pass/family/01`
-  Source item: `Gibson`
-  Fallback token: `universal/family/fallback`
-  Notes: One-family Stevens Pass system across headline, subhead, CTA, and body roles.
+### Role: headline
 
-- Reuse:
-  Source item: `Bold`
-  Proposed token: `universal/weight/bold`
-  Assumption status: `explicit`
-  Notes: Headline lane.
+Proposed family token: `stevens_pass/family/01`
 
-- Reuse:
-  Source item: `Semi Bold`
-  Proposed token: `universal/weight/semibold`
-  Assumption status: `explicit`
-  Notes: Subhead lane.
+Safe family token: `stevens_pass/family_safe/01`
 
-- Reuse:
-  Source item: `Regular`
-  Proposed token: `universal/weight/normal`
-  Assumption status: `explicit`
-  Notes: CTA lane and one allowed body variant.
+Proposed weight token: `universal/weight/bold`
 
-- Reuse:
-  Source item: `Medium`
-  Proposed token: `universal/weight/medium`
-  Assumption status: `explicit`
-  Notes: One allowed body variant and the recommended `body/base` candidate.
+Proposed size token: `inherited current heading ladder`
 
-- Reuse:
-  Source item: `Light`
-  Proposed token: `universal/weight/light`
-  Assumption status: `explicit`
-  Notes: Approved raw body variant.
+Recipe notes:
 
-## Proposed Semantic Mapping
+- Case: `not specified in source`
+- Tracking: `not specified in source`
+- Leading: `not specified in source`
+- Size rule: `source shows family and weight only`
+- Punctuation: `not specified in source`
+- Notes: Straightforward headline mapping.
 
-- `family/heading` -> `stevens_pass/family/01`
-- `family/body` -> `stevens_pass/family/01`
-- `family/action` -> `stevens_pass/family/01`
-- `weight/heading/base` -> `universal/weight/bold`
-- `weight/body/base` -> `universal/weight/light`
-- `weight/body/strong` -> `universal/weight/medium`
-- `weight/action/base` -> `universal/weight/medium`
-- `size/*` remain inherited
+### Role: subhead
 
-## Review Notes
+Proposed family token: `stevens_pass/family/01`
 
-- Stevens Pass fits the existing one-family semantic pattern cleanly.
-- User-approved exception: even though the source labels subheads as `Semi Bold` and CTA as `Regular`, the approved live mapping uses `body/base = Light`, `body/strong = Medium`, and `action/base = Medium`.
-- Regular, Light, Medium, and italic variants remain documented raw Gibson options for downstream channel recipes.
+Safe family token: `stevens_pass/family_safe/01`
 
-## Approved Exception
+Proposed weight token: `universal/weight/medium`
 
-- `weight/body/base` -> `universal/weight/light`
-- `weight/body/strong` -> `universal/weight/medium`
-- `weight/action/base` -> `universal/weight/medium`
-- Reason: This is the approved exception in chat resolving the ambiguous body baseline and overriding the source CTA weight for the live semantic pass.
+Proposed size token: `inherited current heading ladder`
+
+Recipe notes:
+
+- Case: `not specified in source`
+- Tracking: `not specified in source`
+- Leading: `not specified in source`
+- Size rule: `source shows family and weight only`
+- Punctuation: `not specified in source`
+- Notes: User-approved exception. Subheads stage through `weight/body/strong = medium` rather than a separate semantic family or the source-labeled semibold.
+
+### Role: cta
+
+Proposed family token: `stevens_pass/family/01`
+
+Safe family token: `stevens_pass/family_safe/01`
+
+Proposed weight token: `universal/weight/medium`
+
+Proposed size token: `inherited current action ladder`
+
+Recipe notes:
+
+- Case: `not specified in source`
+- Tracking: `not specified in source`
+- Leading: `not specified in source`
+- Size rule: `source shows family and weight only`
+- Punctuation: `not specified in source`
+- Notes: User-approved exception. The live semantic action baseline will use Medium rather than the source-labeled Regular treatment.
+
+### Role: body
+
+Proposed family token: `stevens_pass/family/01`
+
+Safe family token: `stevens_pass/family_safe/02`
+
+Proposed weight token: `universal/weight/light`
+
+Proposed size token: `inherited current body ladder`
+
+Recipe notes:
+
+- Case: `not specified in source`
+- Tracking: `not specified in source`
+- Leading: `not specified in source`
+- Size rule: `source shows approved variants rather than a single default recipe`
+- Punctuation: `not specified in source`
+- Notes: User-approved exception. Light becomes the semantic body baseline, while Medium becomes the stronger body or subhead emphasis weight. Regular and italic variants remain documented raw options.

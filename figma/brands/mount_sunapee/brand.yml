@@ -1,5 +1,5 @@
 version: 1
-updated: '2026-03-31'
+updated: '2026-04-01'
 brand_id: mount_sunapee
 display_name: Mount Sunapee
 status: active
@@ -33,6 +33,7 @@ artifacts:
     preview_artifact: figma/brands/mount_sunapee/typography/preview.md
     decision_artifacts:
     - figma/decisions/2026-03-19-mount-sunapee-foundations-written-to-figma.md
+    - figma/decisions/2026-04-01-safe-typography-lane-migration.md
 semantic_overrides:
   theme:
     status: active
@@ -103,12 +104,21 @@ semantic_overrides:
       - border/critical
       - border/critical_inverse
       notes:
-      - "`on_surface/*` tokens in the live semantic theme extension are contrast-derived from `universal/black` or `universal/white` and are not hue-tinted."
-      - Mount Sunapee is live in the Foundations file with `sunapee_neutral` as the structural neutral lane, `cold_wax` as the primary expressive lane, and `golden_hour` as the supporting expressive lane.
-      - User-approved live write. `sunapee_neutral` absorbs Snow Gun, Verde Slate, and Lake Sunapee into one structural family because the source usage guidance gives the white canvas, the dark Lake block, and the muted support tones more structural weight than a classic gray-neutral system.
-      - User-approved live write. `surface/brand/default`, `surface/brand/strong`, and `surface/brand/emphasis` stage on `mount_sunapee/cold_wax/700`, `800`, and `900` so the shared white on-surface contract holds on brand surfaces.
-      - User-approved live write. `surface/brand_secondary/default`, `surface/brand_secondary/strong`, and `surface/brand_secondary/emphasis` stage on `mount_sunapee/golden_hour/600`, `700`, and `800` so the supporting expressive lane also holds the shared white on-surface contract.
-      - "`assets/logo` resolves to the string `Mount Sunapee` in the semantic theme extension."
+      - '`on_surface/*` tokens in the live semantic theme extension are contrast-derived from `universal/black`
+        or `universal/white` and are not hue-tinted.'
+      - Mount Sunapee is live in the Foundations file with `sunapee_neutral` as the structural neutral
+        lane, `cold_wax` as the primary expressive lane, and `golden_hour` as the supporting expressive
+        lane.
+      - User-approved live write. `sunapee_neutral` absorbs Snow Gun, Verde Slate, and Lake Sunapee into
+        one structural family because the source usage guidance gives the white canvas, the dark Lake
+        block, and the muted support tones more structural weight than a classic gray-neutral system.
+      - User-approved live write. `surface/brand/default`, `surface/brand/strong`, and `surface/brand/emphasis`
+        stage on `mount_sunapee/cold_wax/700`, `800`, and `900` so the shared white on-surface contract
+        holds on brand surfaces.
+      - User-approved live write. `surface/brand_secondary/default`, `surface/brand_secondary/strong`,
+        and `surface/brand_secondary/emphasis` stage on `mount_sunapee/golden_hour/600`, `700`, and `800`
+        so the supporting expressive lane also holds the shared white on-surface contract.
+      - '`assets/logo` resolves to the string `Mount Sunapee` in the semantic theme extension.'
     typography:
       override_scopes:
       - semantic_token: family/heading
@@ -121,16 +131,27 @@ semantic_overrides:
         alias_of: universal/weight/light
       - semantic_token: weight/body/strong
         alias_of: universal/weight/normal
+      - semantic_token: family/heading_safe
+        alias_of: mount_sunapee/family_safe/01
+      - semantic_token: family/body_safe
+        alias_of: mount_sunapee/family_safe/02
+      - semantic_token: family/action_safe
+        alias_of: mount_sunapee/family_safe/01
       inherited_from_base:
-      - family/heading_safe
-      - family/body_safe
       - family/action
-      - family/action_safe
       - weight/action/*
       notes:
-      - Mount Sunapee is live as a Graphik-led typography system with `family/heading` and `family/body` both mapped to `mount_sunapee/family/01`.
-      - User-approved live write. `Neutraface Text Bold Italic` is preserved as the raw `mount_sunapee/family/02` primitive because the current semantic theme typography schema has no dedicated subhead family lane.
-      - "`weight/heading/base = universal/weight/bold`, `weight/body/base = universal/weight/light`, and `weight/body/strong = universal/weight/normal` stage the explicit H1, H2, and body hierarchy through the current semantic theme typography ladder."
-      - The source does not define a CTA or action recipe, so the action lane remains inherited in the live semantic extension.
+      - Mount Sunapee is live as a Graphik-led typography system with `family/heading` and `family/body`
+        both mapped to `mount_sunapee/family/01`.
+      - User-approved live write. `Neutraface Text Bold Italic` is preserved as the raw `mount_sunapee/family/02`
+        primitive because the current semantic theme typography schema has no dedicated subhead family
+        lane.
+      - '`weight/heading/base = universal/weight/bold`, `weight/body/base = universal/weight/light`, and
+        `weight/body/strong = universal/weight/normal` stage the explicit H1, H2, and body hierarchy through
+        the current semantic theme typography ladder.'
+      - The source does not define a CTA or action recipe, so the action lane remains inherited in the
+        live semantic extension.
+      - Brand-safe typography aliases now stage on `mount_sunapee/family_safe/*` from Vail Resorts Guidelines.pdf.
 notes:
-- Mount Sunapee is live in the Foundations file with three raw color families, two raw typography family primitives, a semantic theme logo-name override, and Mount Sunapee semantic theme extension.
+- Mount Sunapee is live in the Foundations file with three raw color families, two raw typography family
+  primitives, a semantic theme logo-name override, and Mount Sunapee semantic theme extension.

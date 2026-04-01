@@ -1,5 +1,5 @@
 version: 1
-updated: '2026-03-31'
+updated: '2026-04-01'
 brand_id: alpine_valley
 display_name: Alpine Valley
 status: active
@@ -33,6 +33,7 @@ artifacts:
     preview_artifact: figma/brands/alpine_valley/typography/preview.md
     decision_artifacts:
     - figma/decisions/2026-03-18-alpine-valley-foundations-written-to-figma.md
+    - figma/decisions/2026-04-01-safe-typography-lane-migration.md
 semantic_overrides:
   theme:
     status: active
@@ -103,10 +104,13 @@ semantic_overrides:
       - border/critical
       - border/critical_inverse
       notes:
-      - "`on_surface/*` tokens in the live semantic theme extension are contrast-derived from `universal/black` or `universal/white` and are not hue-tinted."
-      - Exact `Valley Black` remains shared through `universal/black` rather than becoming a duplicate Alpine Valley raw family.
-      - The supplied palette has one expressive non-neutral family, so `alpine` drives both expressive semantic lanes in the current live schema.
-      - "`assets/logo` is overridden to the string `Alpine Valley` in the semantic theme extension."
+      - '`on_surface/*` tokens in the live semantic theme extension are contrast-derived from `universal/black`
+        or `universal/white` and are not hue-tinted.'
+      - Exact `Valley Black` remains shared through `universal/black` rather than becoming a duplicate
+        Alpine Valley raw family.
+      - The supplied palette has one expressive non-neutral family, so `alpine` drives both expressive
+        semantic lanes in the current live schema.
+      - '`assets/logo` is overridden to the string `Alpine Valley` in the semantic theme extension.'
     typography:
       override_scopes:
       - semantic_token: family/heading
@@ -121,15 +125,22 @@ semantic_overrides:
         alias_of: universal/weight/bold
       - semantic_token: weight/action/base
         alias_of: universal/weight/bold
+      - semantic_token: family/heading_safe
+        alias_of: alpine_valley/family_safe/01
+      - semantic_token: family/body_safe
+        alias_of: alpine_valley/family_safe/02
+      - semantic_token: family/action_safe
+        alias_of: alpine_valley/family_safe/01
       inherited_from_base:
-      - family/heading_safe
-      - family/body_safe
-      - family/action_safe
       - weight/heading/base
       - weight/heading/strong
       notes:
       - Alpine Valley stages on one raw family, `Prompt`, across heading, body, and CTA work.
-      - The source explicitly defines H1, H2, and body treatments; CTA on Prompt Bold is a user-approved live extension of that same-family system.
-      - 'Typography size now binds directly from published `Global: Typography`; the supplied hierarchy defines role intent but not new governed numeric size tokens.'
+      - The source explicitly defines H1, H2, and body treatments; CTA on Prompt Bold is a user-approved
+        live extension of that same-family system.
+      - 'Typography size now binds directly from published `Global: Typography`; the supplied hierarchy
+        defines role intent but not new governed numeric size tokens.'
+      - Brand-safe typography aliases now stage on `alpine_valley/family_safe/*` from Vail Resorts Guidelines.pdf.
 notes:
-- Alpine Valley is live in the Foundations file with one raw color family, one raw typography family primitive, a semantic theme logo-name override, and Alpine Valley semantic theme extension.
+- Alpine Valley is live in the Foundations file with one raw color family, one raw typography family primitive,
+  a semantic theme logo-name override, and Alpine Valley semantic theme extension.

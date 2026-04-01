@@ -30,7 +30,7 @@ If the brand has no established typography guidance, collapse the preview to `Cu
 - Proposed primitive:
   Token name:
   Source item:
-  Fallback token:
+  Safe family token:
   Notes:
 
 ## Hold For Review
@@ -61,6 +61,7 @@ Sample block:
 </div>
 
 - Proposed family token:
+- Safe family token:
 - Proposed weight token:
 - Proposed size token:
 - Notes:

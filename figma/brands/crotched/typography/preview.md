@@ -1,16 +1,7 @@
 # Crotched Typography Preview
 
-Review state: written in Figma. Verify live state in `figma/brands/crotched/brand.yml`.
+Review state: written_in_figma preview artifact. Verify live write state in `figma/brands/crotched/brand.yml` and Figma.
 
-## Source Status
+## Original Source Roles
 
-- The Vail Resorts Guidelines PDF does not list brand font guidance for Crotched.
-
-## Live Semantic Mapping
-
-- `family/*` -> inherited from the shared universal base
-- `weight/*` -> inherited from the shared universal base
-
-## Notes
-
-- Keep the brand on the universal typography baseline until governed PDF guidance exists.
+## Role Recipes

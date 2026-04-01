@@ -1,5 +1,5 @@
 version: 1
-updated: '2026-03-31'
+updated: '2026-04-01'
 brand_id: kirkwood
 display_name: Kirkwood
 status: active
@@ -34,6 +34,7 @@ artifacts:
     preview_artifact: figma/brands/kirkwood/typography/preview.md
     decision_artifacts:
     - figma/decisions/2026-03-12-kirkwood-foundations-written-to-figma.md
+    - figma/decisions/2026-04-01-safe-typography-lane-migration.md
 semantic_overrides:
   theme:
     status: active
@@ -104,10 +105,12 @@ semantic_overrides:
       - border/critical
       - border/critical_inverse
       notes:
-      - "`on_surface/*` tokens in the live semantic theme extension are contrast-derived from `universal/black` or `universal/white` and are not hue-tinted."
-      - Kirkwood's `642 C` pale blue remains absorbed into the neutral role set rather than creating a third expressive semantic lane.
-      - "`teal_633_c` remains global-only after the role-based migration."
-      - "`assets/logo` is overridden to the string `Kirkwood` in the semantic theme extension."
+      - '`on_surface/*` tokens in the live semantic theme extension are contrast-derived from `universal/black`
+        or `universal/white` and are not hue-tinted.'
+      - Kirkwood's `642 C` pale blue remains absorbed into the neutral role set rather than creating a
+        third expressive semantic lane.
+      - '`teal_633_c` remains global-only after the role-based migration.'
+      - '`assets/logo` is overridden to the string `Kirkwood` in the semantic theme extension.'
       - Exact white and black stay inherited through the shared role recipes.
     typography:
       override_scopes:
@@ -123,15 +126,24 @@ semantic_overrides:
         alias_of: universal/weight/normal
       - semantic_token: weight/action/base
         alias_of: universal/weight/bold
+      - semantic_token: family/heading_safe
+        alias_of: kirkwood/family_safe/01
+      - semantic_token: family/body_safe
+        alias_of: kirkwood/family_safe/02
+      - semantic_token: family/action_safe
+        alias_of: kirkwood/family_safe/01
       inherited_from_base:
-      - family/heading_safe
-      - family/body_safe
-      - family/action_safe
       - weight/heading/strong
       - weight/body/strong
       notes:
-      - Trade Gothic Bold Condensed No. 20 drives the headline lane, Avenir Next remains the reading family, and Futura Bold stages as the action-emphasis family.
-      - "`kirkwood/family/04` preserves Trade Gothic Condensed No. 18 as an extra raw primitive outside the current semantic theme alias set; the neutral slot remains available for future approved mappings without encoding role meaning into the global layer."
+      - Trade Gothic Bold Condensed No. 20 drives the headline lane, Avenir Next remains the reading family,
+        and Futura Bold stages as the action-emphasis family.
+      - '`kirkwood/family/04` preserves Trade Gothic Condensed No. 18 as an extra raw primitive outside
+        the current semantic theme alias set; the neutral slot remains available for future approved mappings
+        without encoding role meaning into the global layer.'
+      - Brand-safe typography aliases now stage on `kirkwood/family_safe/*` from Vail Resorts Guidelines.pdf.
 notes:
-- Kirkwood is live in the Foundations file with four raw color families, four raw typography family primitives, a semantic theme logo-name override, and semantic theme extension.
-- Governance exception: the Kirkwood write occurred before preview review was completed, so the decision log and preview artifacts explicitly record the sequencing defect.
+- Kirkwood is live in the Foundations file with four raw color families, four raw typography family primitives,
+  a semantic theme logo-name override, and semantic theme extension.
+- Governance exception: the Kirkwood write occurred before preview review was completed, so the decision
+    log and preview artifacts explicitly record the sequencing defect.

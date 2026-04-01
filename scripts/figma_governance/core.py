@@ -123,30 +123,46 @@ def _extract_brand_fonts(intake: Any) -> list[dict[str, Any]]:
     if not isinstance(intake, dict):
         return []
 
-    fonts_by_name: dict[str, dict[str, list[str]]] = {}
-    font_order: list[str] = []
+    fonts_by_key: dict[tuple[str, str], dict[str, list[str]]] = {}
+    font_order: list[tuple[str, str]] = []
+
+    def ensure_entry(*, lane: str, family_name: str) -> dict[str, list[str]]:
+        key = (lane, family_name)
+        if key not in fonts_by_key:
+            fonts_by_key[key] = {
+                "token_names": [],
+                "source_style_references": [],
+            }
+            font_order.append(key)
+        return fonts_by_key[key]
+
+    def record_families(items: Any, *, lane: str, style_field: str) -> None:
+        if not isinstance(items, list):
+            return
+        for family in items:
+            if not isinstance(family, dict):
+                continue
+            family_name = family.get("source_family_name")
+            if not isinstance(family_name, str) or not family_name:
+                continue
+            entry = ensure_entry(lane=lane, family_name=family_name)
+            _append_unique(entry["token_names"], family.get("token_name"))
+            _append_unique(entry["source_style_references"], family.get(style_field))
 
     primitive_recommendations = intake.get("primitive_recommendations", {})
     if isinstance(primitive_recommendations, dict):
         proposed_primitives = primitive_recommendations.get("proposed_primitives", {})
         if isinstance(proposed_primitives, dict):
-            proposed_families = proposed_primitives.get("families", [])
-            if isinstance(proposed_families, list):
-                for family in proposed_families:
-                    if not isinstance(family, dict):
-                        continue
-                    family_name = family.get("source_family_name")
-                    if not isinstance(family_name, str) or not family_name:
-                        continue
-                    if family_name not in fonts_by_name:
-                        fonts_by_name[family_name] = {
-                            "token_names": [],
-                            "source_style_references": [],
-                        }
-                        font_order.append(family_name)
-                    entry = fonts_by_name[family_name]
-                    _append_unique(entry["token_names"], family.get("token_name"))
-                    _append_unique(entry["source_style_references"], family.get("source_style_reference"))
+            record_families(
+                proposed_primitives.get("families", []),
+                lane="brand",
+                style_field="source_style_reference",
+            )
+            record_families(
+                proposed_primitives.get("safe_families", []),
+                lane="safe",
+                style_field="source_role_reference",
+            )
 
     if not font_order:
         source_roles = intake.get("source_roles", [])
@@ -157,19 +173,13 @@ def _extract_brand_fonts(intake: Any) -> list[dict[str, Any]]:
                 family_name = role.get("source_family_name")
                 if not isinstance(family_name, str) or not family_name:
                     continue
-                if family_name not in fonts_by_name:
-                    fonts_by_name[family_name] = {
-                        "token_names": [],
-                        "source_style_references": [],
-                    }
-                    font_order.append(family_name)
-                entry = fonts_by_name[family_name]
+                entry = ensure_entry(lane="brand", family_name=family_name)
                 _append_unique(entry["source_style_references"], role.get("source_style_name"))
 
     fonts: list[dict[str, Any]] = []
-    for family_name in font_order:
-        entry = {"family_name": family_name}
-        details = fonts_by_name[family_name]
+    for lane, family_name in font_order:
+        entry = {"lane": lane, "family_name": family_name}
+        details = fonts_by_key[(lane, family_name)]
         if details["token_names"]:
             entry["token_names"] = details["token_names"]
         if details["source_style_references"]:
@@ -179,7 +189,7 @@ def _extract_brand_fonts(intake: Any) -> list[dict[str, Any]]:
 
 
 def _build_brand_font_directory_entries(inventory: dict[str, Any]) -> list[dict[str, Any]]:
-    font_to_brands: dict[str, list[str]] = {}
+    font_to_brands: dict[tuple[str, str], list[str]] = {}
     brands = inventory.get("brands", [])
     if not isinstance(brands, list):
         return []
@@ -196,19 +206,23 @@ def _build_brand_font_directory_entries(inventory: dict[str, Any]) -> list[dict[
         for font in fonts:
             if not isinstance(font, dict):
                 continue
+            lane = font.get("lane")
+            if not isinstance(lane, str) or not lane:
+                continue
             family_name = font.get("family_name")
             if not isinstance(family_name, str) or not family_name:
                 continue
-            brand_names = font_to_brands.setdefault(family_name, [])
+            brand_names = font_to_brands.setdefault((lane, family_name), [])
             if display_name not in brand_names:
                 brand_names.append(display_name)
 
     entries: list[dict[str, Any]] = []
-    for family_name in sorted(font_to_brands, key=str.casefold):
+    for lane, family_name in sorted(font_to_brands, key=lambda item: (item[0].casefold(), item[1].casefold())):
         entries.append(
             {
+                "lane": lane,
                 "family_name": family_name,
-                "brands": sorted(font_to_brands[family_name], key=str.casefold),
+                "brands": sorted(font_to_brands[(lane, family_name)], key=str.casefold),
             }
         )
     return entries
@@ -227,17 +241,20 @@ def build_brand_font_directory_markdown(inventory: dict[str, Any]) -> str:
         lines.extend([f"Updated: {updated}", ""])
     lines.extend(
         [
-            "| Font | Brands |",
-            "| --- | --- |",
+            "| Font | Lane | Brands |",
+            "| --- | --- | --- |",
         ]
     )
     if not entries:
-        lines.append("| None recorded | - |")
+        lines.append("| None recorded | - | - |")
     else:
         for entry in entries:
             family_name = _escape_markdown_cell(entry["family_name"])
+            lane = "Brand" if entry["lane"] == "brand" else "Web Safe"
             brands = ", ".join(entry["brands"])
-            lines.append(f"| {family_name} | {_escape_markdown_cell(brands)} |")
+            lines.append(
+                f"| {family_name} | {_escape_markdown_cell(lane)} | {_escape_markdown_cell(brands)} |"
+            )
     return "\n".join(lines)
 
 
@@ -305,7 +322,8 @@ def build_brand_font_inventory(root: Path = ROOT) -> dict[str, Any]:
             "registry": "figma/brands/registry.yml",
             "extraction_rule": (
                 "Collect unique family names from each brand typography intake artifact, "
-                "preferring `primitive_recommendations.proposed_primitives.families`."
+                "preferring `primitive_recommendations.proposed_primitives.families` and "
+                "`primitive_recommendations.proposed_primitives.safe_families`."
             ),
         },
         "brands": inventory_brands,

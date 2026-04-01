@@ -1,5 +1,5 @@
 version: 1
-updated: '2026-03-31'
+updated: '2026-04-01'
 brand_id: mount_snow
 display_name: Mount Snow
 status: active
@@ -33,6 +33,7 @@ artifacts:
     preview_artifact: figma/brands/mount_snow/typography/preview.md
     decision_artifacts:
     - figma/decisions/2026-03-17-mount-snow-foundations-written-to-figma.md
+    - figma/decisions/2026-04-01-safe-typography-lane-migration.md
 semantic_overrides:
   theme:
     status: active
@@ -103,11 +104,15 @@ semantic_overrides:
       - border/critical
       - border/critical_inverse
       notes:
-      - "`on_surface/*` tokens in the live semantic theme extension are contrast-derived from `universal/black` or `universal/white` and are not hue-tinted."
-      - Mount Snow stages Bluebird Express and Heart Red as the two expressive semantic lanes because they are the strongest supplied primary accents.
-      - Whipped Cream drives the neutral surface system, while exact black is reused from `universal/black` for readable neutral foregrounds and the dark end of the palette.
-      - Somerset Blue and Rosy Cheeks remain governed global-only extra families after the two-lane semantic mapping.
-      - "`assets/logo` is overridden to the string `Mount Snow` in the semantic theme extension."
+      - '`on_surface/*` tokens in the live semantic theme extension are contrast-derived from `universal/black`
+        or `universal/white` and are not hue-tinted.'
+      - Mount Snow stages Bluebird Express and Heart Red as the two expressive semantic lanes because
+        they are the strongest supplied primary accents.
+      - Whipped Cream drives the neutral surface system, while exact black is reused from `universal/black`
+        for readable neutral foregrounds and the dark end of the palette.
+      - Somerset Blue and Rosy Cheeks remain governed global-only extra families after the two-lane semantic
+        mapping.
+      - '`assets/logo` is overridden to the string `Mount Snow` in the semantic theme extension.'
     typography:
       override_scopes:
       - semantic_token: family/heading
@@ -120,15 +125,24 @@ semantic_overrides:
         alias_of: universal/weight/medium
       - semantic_token: weight/body/strong
         alias_of: universal/weight/black
+      - semantic_token: family/heading_safe
+        alias_of: mount_snow/family_safe/01
+      - semantic_token: family/body_safe
+        alias_of: mount_snow/family_safe/02
+      - semantic_token: family/action_safe
+        alias_of: mount_snow/family_safe/01
       inherited_from_base:
-      - family/heading_safe
-      - family/body_safe
       - family/action
-      - family/action_safe
       - weight/action/*
       notes:
-      - Vastago Grotesk drives the Mount Snow headline lane, and Area Extended covers both subheadline and body copy.
-      - "`Heavy` and `Extra Bold` are both staged on `universal/weight/black` because the current shared raw ladder has no separate heavy or extra-bold primitive and the source does not provide numeric weight values."
-      - 'Typography size binds directly from published `Global: Typography` because the source uses example leading pairs rather than governed raw size tokens.'
+      - Vastago Grotesk drives the Mount Snow headline lane, and Area Extended covers both subheadline
+        and body copy.
+      - '`Heavy` and `Extra Bold` are both staged on `universal/weight/black` because the current shared
+        raw ladder has no separate heavy or extra-bold primitive and the source does not provide numeric
+        weight values.'
+      - 'Typography size binds directly from published `Global: Typography` because the source uses example
+        leading pairs rather than governed raw size tokens.'
+      - Brand-safe typography aliases now stage on `mount_snow/family_safe/*` from Vail Resorts Guidelines.pdf.
 notes:
-- Mount Snow is live in the Foundations file with five raw color families, two raw typography families, a semantic theme logo-name override, and Mount Snow semantic theme extension.
+- Mount Snow is live in the Foundations file with five raw color families, two raw typography families,
+  a semantic theme logo-name override, and Mount Snow semantic theme extension.

@@ -1,20 +1,84 @@
 # Afton Alps Typography Preview
 
-Review state: written in Figma. Verify live state in `figma/brands/afton_alps/brand.yml`.
+Review state: written_in_figma preview artifact. Verify live write state in `figma/brands/afton_alps/brand.yml` and Figma.
 
-## Source Roles
+## Original Source Roles
 
-- `Headline` -> `Dela Gothic One Regular`
-- `Subheadline`, `Body` -> `Chivo Bold` / `Chivo Regular`
+- Source role: `headline`
+  Family: `Dela Gothic One`
+  Safe family: `Prompt`
+  Style: `Regular`
+  Weight label: `Regular`
+  Usage scope: `headline`
+  Case: `source dependent`
+  Tracking: `not specified in source`
+  Leading: `not specified in source`
+  Size rule: `source names roles and weights but does not define governed numeric sizes`
+  Punctuation: `not specified in source`
+  Sample copy: `Afton Alps`
 
-## Live Semantic Mapping
+- Source role: `subheadline`
+  Family: `Chivo`
+  Safe family: `Prompt`
+  Style: `Bold`
+  Weight label: `Bold`
+  Usage scope: `supporting headline`
+  Case: `source dependent`
+  Tracking: `not specified in source`
+  Leading: `not specified in source`
+  Size rule: `source names roles and weights but does not define governed numeric sizes`
+  Punctuation: `not specified in source`
+  Sample copy: `Winter starts here`
 
-- `family/heading`, `family/action` -> `afton_alps/family/01`
-- `family/body` -> `afton_alps/family/02`
-- `weight/heading/base`, `weight/heading/strong`, `weight/action/base` -> `universal/weight/normal`
-- `weight/body/base` -> `universal/weight/normal`
-- `weight/body/strong` -> `universal/weight/bold`
+- Source role: `body`
+  Family: `Chivo`
+  Safe family: `Helvetica`
+  Style: `Regular`
+  Weight label: `Regular`
+  Usage scope: `body copy`
+  Case: `source dependent`
+  Tracking: `not specified in source`
+  Leading: `not specified in source`
+  Size rule: `source names roles and weights but does not define governed numeric sizes`
+  Punctuation: `sentence punctuation allowed`
+  Sample copy: `Plan your next visit with the current snow and lift information.`
 
-## Notes
+## Role Recipes
 
-- The PDF does not define a separate CTA lane, so action follows the headline family in the first governed pass.
+### Role: heading
+
+Proposed family token: `afton_alps/family/01`
+
+Safe family token: `afton_alps/family_safe/01`
+
+Proposed weight token: `universal/weight/normal`
+
+Proposed size token: `inherited current heading ladder`
+
+Recipe notes:
+
+
+### Role: body
+
+Proposed family token: `afton_alps/family/02`
+
+Safe family token: `afton_alps/family_safe/02`
+
+Proposed weight token: `universal/weight/normal`
+
+Proposed size token: `inherited current body ladder`
+
+Recipe notes:
+
+
+### Role: action
+
+Proposed family token: `afton_alps/family/01`
+
+Safe family token: `afton_alps/family_safe/01`
+
+Proposed weight token: `universal/weight/normal`
+
+Proposed size token: `inherited current action ladder`
+
+Recipe notes:

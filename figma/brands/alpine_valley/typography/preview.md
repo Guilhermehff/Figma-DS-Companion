@@ -1,11 +1,12 @@
 # Alpine Valley Typography Preview
 
-Review state: approved preview artifact. Verify live write state in `figma/brands/alpine_valley/brand.yml` and Figma.
+Review state: written_in_figma preview artifact. Verify live write state in `figma/brands/alpine_valley/brand.yml` and Figma.
 
 ## Original Source Roles
 
 - Source role: `primary_header`
   Family: `Prompt`
+  Safe family: `Prompt`
   Style: `Bold`
   Weight label: `Bold`
   Usage scope: `primary_header_h1`
@@ -19,6 +20,7 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
 
 - Source role: `secondary_header`
   Family: `Prompt`
+  Safe family: `Prompt`
   Style: `Bold`
   Weight label: `Bold`
   Usage scope: `secondary_header_h2`
@@ -32,6 +34,7 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
 
 - Source role: `body`
   Family: `Prompt`
+  Safe family: `Open Sans`
   Style: `Regular`
   Weight label: `Regular`
   Usage scope: `body_copy`
@@ -43,52 +46,80 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
   Sample copy: `PROMPT REGULAR: Alpine Valley is an easy getaway...`
   Notes: The source explicitly shows Prompt Regular for body copy.
 
-## Primitive Recommendations
+## Role Recipes
 
-- Proposed primitive:
-  Token name: `alpine_valley/family/01`
-  Source item: `Prompt`
-  Fallback token: `universal/family/fallback`
-  Notes: One-family Alpine Valley digital campaign system across H1, H2, and body copy.
+### Role: primary_header
 
-- Reuse:
-  Source item: `Bold`
-  Proposed token: `universal/weight/bold`
-  Assumption status: `explicit`
-  Notes: H1 and H2 lane.
+Proposed family token: `alpine_valley/family/01`
 
-- Reuse:
-  Source item: `Regular`
-  Proposed token: `universal/weight/normal`
-  Assumption status: `explicit`
-  Notes: Body lane.
+Safe family token: `alpine_valley/family_safe/01`
 
-## Live Semantic Mapping
+Proposed weight token: `universal/weight/bold`
 
-- `family/heading` -> `alpine_valley/family/01`
-- `family/body` -> `alpine_valley/family/01`
-- `family/action` -> `alpine_valley/family/01`
-- `weight/heading/base` -> `universal/weight/bold`
-- `weight/body/base` -> `universal/weight/normal`
-- `weight/body/strong` -> `universal/weight/bold`
-- `weight/action/base` -> `universal/weight/bold`
-- `family/*_safe` -> inherit `universal/family/fallback`
-- `size/*` -> inherit current semantic base
+Proposed size token: `inherited current heading ladder`
 
-## Review Notes
+Recipe notes:
 
-- Alpine Valley can stage on one raw family, `Prompt`, because the reviewed system uses Bold and Regular variants of the same family.
-- Extra Bold and italic variants remain documented raw Prompt options, but the current semantic pass does not need extra family or weight slots for them.
-- User-approved follow-up: CTA also stages on Prompt, using Bold for the live semantic action pass.
+- Case: `all_caps_in_example`
+- Tracking: `not specified in source`
+- Leading: `not specified in source`
+- Size rule: `source labels H1 but does not define governed token sizes`
+- Punctuation: `not specified in source`
+- Notes: The source explicitly shows H1 on Prompt Bold.
 
-## Review Readiness
+### Role: secondary_header
 
-- Subject: `Alpine Valley campaign typography`
-  Channels: `web, email, ads`
-  Rule: Keep H1 and H2 on Prompt Bold and body on Prompt Regular.
-  Source basis: Alpine Valley campaign typography guide image.
+Proposed family token: `alpine_valley/family/01`
 
-- Subject: `Alpine Valley CTA typography`
-  Channels: `web, email, ads`
-  Rule: Use Prompt for CTA copy and stage the live semantic action pass on Bold.
-  Source basis: User-approved follow-up in chat.
+Safe family token: `alpine_valley/family_safe/01`
+
+Proposed weight token: `universal/weight/bold`
+
+Proposed size token: `inherited current heading ladder`
+
+Recipe notes:
+
+- Case: `all_caps_in_example`
+- Tracking: `not specified in source`
+- Leading: `not specified in source`
+- Size rule: `source labels H2 but does not define governed token sizes`
+- Punctuation: `not specified in source`
+- Notes: The source explicitly shows H2 on Prompt Bold.
+
+### Role: body
+
+Proposed family token: `alpine_valley/family/01`
+
+Safe family token: `alpine_valley/family_safe/02`
+
+Proposed weight token: `universal/weight/normal`
+
+Proposed size token: `inherited current body ladder`
+
+Recipe notes:
+
+- Case: `sentence_case`
+- Tracking: `not specified in source`
+- Leading: `not specified in source`
+- Size rule: `source labels body copy but does not define governed token sizes`
+- Punctuation: `sentence punctuation allowed`
+- Notes: The source explicitly shows body copy on Prompt Regular.
+
+### Role: action
+
+Proposed family token: `alpine_valley/family/01`
+
+Safe family token: `alpine_valley/family_safe/01`
+
+Proposed weight token: `universal/weight/bold`
+
+Proposed size token: `inherited current action ladder`
+
+Recipe notes:
+
+- Case: `not specified in source`
+- Tracking: `not specified in source`
+- Leading: `not specified in source`
+- Size rule: `source does not define CTA behavior`
+- Punctuation: `not specified in source`
+- Notes: User-approved follow-up. CTA uses Prompt and stages on Bold even though the source image does not explicitly define a CTA recipe.

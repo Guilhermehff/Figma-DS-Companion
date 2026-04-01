@@ -14,16 +14,11 @@ figma:
     typography_id: global-typography
     dimensions_id: global-dimensions
   semantic_extensions:
-    color:
+    theme:
       collection_name: Primary Only
-      collection_id: semantic-color-primary-only
-      parent_collection: "Semantic: Color"
-      parent_collection_id: semantic-color
-    typography:
-      collection_name: Primary Only
-      collection_id: semantic-typography-primary-only
-      parent_collection: "Semantic: Typography"
-      parent_collection_id: semantic-typography
+      collection_id: semantic-theme-primary-only
+      parent_collection: "Semantic: Theme"
+      parent_collection_id: semantic-theme
 artifacts:
   color:
     intake_artifact: brands/primary-only/color-intake.yml
@@ -34,47 +29,47 @@ artifacts:
     preview_artifact: brands/primary-only/typography-preview.md
     decision_artifacts: []
 semantic_overrides:
-  color:
+  theme:
     status: active
-    override_scopes:
-      - scope: brand
-        source_family: primary_only/blue
-        targets:
-          - surface/brand/*
-          - on_surface/brand/*
-          - foreground/brand
-          - border/brand
-    inherited_from_base:
-      - surface/neutral/*
-      - on_surface/neutral/*
-      - foreground/default
-      - foreground/subtle
-      - foreground/inverse
-      - border/default
-      - border/subtle
-      - surface/brand_secondary/*
-      - on_surface/brand_secondary/*
-      - foreground/brand_secondary
-      - border/brand_secondary
-      - surface/positive/*
-      - on_surface/positive/*
-      - surface/warning/*
-      - on_surface/warning/*
-      - surface/critical/*
-      - on_surface/critical/*
-      - foreground/positive
-      - foreground/warning
-      - foreground/critical
-      - border/positive
-      - border/warning
-      - border/critical
-    notes: []
-  typography:
-    status: inherited
-    override_scopes: []
-    inherited_from_base:
-      - family/*
-      - weight/*
-      - size/*
-    notes: []
+    color:
+      override_scopes:
+        - scope: brand
+          source_family: primary_only/blue
+          targets:
+            - surface/brand/*
+            - on_surface/brand/*
+            - foreground/brand
+            - border/brand
+      inherited_from_base:
+        - surface/neutral/*
+        - on_surface/neutral/*
+        - foreground/default
+        - foreground/subtle
+        - foreground/inverse
+        - border/default
+        - border/subtle
+        - surface/brand_secondary/*
+        - on_surface/brand_secondary/*
+        - foreground/brand_secondary
+        - border/brand_secondary
+        - surface/positive/*
+        - on_surface/positive/*
+        - surface/warning/*
+        - on_surface/warning/*
+        - surface/critical/*
+        - on_surface/critical/*
+        - foreground/positive
+        - foreground/warning
+        - foreground/critical
+        - border/positive
+        - border/warning
+        - border/critical
+      notes: []
+    typography:
+      override_scopes: []
+      inherited_from_base:
+        - family/*
+        - weight/*
+        - size/*
+      notes: []
 notes: []

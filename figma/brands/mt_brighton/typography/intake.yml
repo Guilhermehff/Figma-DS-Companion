@@ -1,4 +1,4 @@
-date: 2026-03-19
+date: '2026-04-01'
 brand: mt_brighton
 source_reference: User-provided exported Mt. Brighton brand sheet image in chat
 source_type: image
@@ -8,161 +8,182 @@ preview:
   required_before_write: true
   artifact: figma/brands/mt_brighton/typography/preview.md
   status: written_in_figma
-
 source_roles:
-  - source_role: headline
-    source_family_name: Museo Slab
-    source_style_name: 900
-    source_weight_label: Black
-    source_usage_scope: headline
-    text_case: uppercase_without_punctuation
-    tracking: 0px
-    leading: not_specified
-    size_rule: not_specified
-    punctuation_rule: no_punctuation
-    sample_copy: Mt. Brighton
-  - source_role: action
-    source_family_name: Museo Slab
-    source_style_name: 900
-    source_weight_label: Black
-    source_usage_scope: cta
-    text_case: uppercase_without_punctuation
-    tracking: 0px
-    leading: not_specified
-    size_rule: not_specified
-    punctuation_rule: no_punctuation
-    sample_copy: Ski or Ride
-  - source_role: subhead
-    source_family_name: Museo Sans
-    source_style_name: 700
-    source_weight_label: Bold
-    source_usage_scope: subhead
-    text_case: uppercase_without_punctuation
-    tracking: 0px
-    leading: not_specified
-    size_rule: not_specified
-    punctuation_rule: no_punctuation
-    sample_copy: Pass prices go up
-  - source_role: utility
-    source_family_name: Prompt
-    source_style_name: fallback
-    source_weight_label: Utility
-    source_usage_scope: digital_fallback
-    text_case: source_dependent
-    tracking: source_dependent
-    leading: source_dependent
-    size_rule: source_dependent
-    punctuation_rule: source_dependent
-    sample_copy: Epic Local Pass
-
+- source_role: headline
+  source_family_name: Museo Slab
+  source_style_name: 900
+  source_weight_label: Black
+  source_usage_scope: headline
+  text_case: uppercase_without_punctuation
+  tracking: 0px
+  leading: not_specified
+  size_rule: not_specified
+  punctuation_rule: no_punctuation
+  sample_copy: Mt. Brighton
+  source_safe_family_name: Roboto Slab
+  source_safe_reference_column: headline_font
+- source_role: action
+  source_family_name: Museo Slab
+  source_style_name: 900
+  source_weight_label: Black
+  source_usage_scope: cta
+  text_case: uppercase_without_punctuation
+  tracking: 0px
+  leading: not_specified
+  size_rule: not_specified
+  punctuation_rule: no_punctuation
+  sample_copy: Ski or Ride
+  source_safe_family_name: Roboto Slab
+  source_safe_reference_column: cta_font
+- source_role: subhead
+  source_family_name: Museo Sans
+  source_style_name: 700
+  source_weight_label: Bold
+  source_usage_scope: subhead
+  text_case: uppercase_without_punctuation
+  tracking: 0px
+  leading: not_specified
+  size_rule: not_specified
+  punctuation_rule: no_punctuation
+  sample_copy: Pass prices go up
+  source_safe_family_name: Roboto Slab
+  source_safe_reference_column: headline_font
+- source_role: utility
+  source_family_name: Prompt
+  source_style_name: safe family
+  source_weight_label: Utility
+  source_usage_scope: digital_safe family
+  text_case: source_dependent
+  tracking: source_dependent
+  leading: source_dependent
+  size_rule: source_dependent
+  punctuation_rule: source_dependent
+  sample_copy: Epic Local Pass
+  source_safe_family_name: Roboto Slab
+  source_safe_reference_column: cta_font
 primitive_recommendations:
   reuse_existing:
     families: []
     weights:
-      - source_weight_label: Black
-        existing_token: universal/weight/black
-        reason: Direct match for Museo Slab 900.
-      - source_weight_label: Bold
-        existing_token: universal/weight/bold
-        reason: Direct match for Museo Sans 700.
+    - source_weight_label: Black
+      existing_token: universal/weight/black
+      reason: Direct match for Museo Slab 900.
+    - source_weight_label: Bold
+      existing_token: universal/weight/bold
+      reason: Direct match for Museo Sans 700.
     sizes: []
   proposed_primitives:
     families:
-      - token_name: mt_brighton/family/01
-        source_family_name: Museo Slab
-        source_style_reference: 900 headline and CTA
-        rationale: Display and CTA family.
-        fallback_token: universal/family/fallback
-        fallback_note: Safe-family behavior remains inherited.
-      - token_name: mt_brighton/family/02
-        source_family_name: Museo Sans
-        source_style_reference: 700 subhead family
-        rationale: Reading and supporting family.
-        fallback_token: universal/family/fallback
-        fallback_note: Safe-family behavior remains inherited.
-      - token_name: mt_brighton/family/03
-        source_family_name: Prompt
-        source_style_reference: digital fallback when Museo fonts are unavailable
-        rationale: Preserved as a raw utility family.
-        fallback_token: universal/family/fallback
-        fallback_note: Safe-family behavior remains inherited.
+    - token_name: mt_brighton/family/01
+      source_family_name: Museo Slab
+      source_style_reference: 900 headline and CTA
+      rationale: Display and CTA family.
+      safe_family_token: mt_brighton/family_safe/02
+      safe_family_note: Approved safe-family companion from Vail Resorts Guidelines.pdf.
+    - token_name: mt_brighton/family/02
+      source_family_name: Museo Sans
+      source_style_reference: 700 subhead family
+      rationale: Reading and supporting family.
+      safe_family_token: mt_brighton/family_safe/02
+      safe_family_note: Approved safe-family companion from Vail Resorts Guidelines.pdf.
+    - token_name: mt_brighton/family/03
+      source_family_name: Prompt
+      source_style_reference: digital safe family when Museo fonts are unavailable
+      rationale: Preserved as a raw utility family.
+      safe_family_token: mt_brighton/family_safe/02
+      safe_family_note: Approved safe-family companion from Vail Resorts Guidelines.pdf.
     weights: []
+    safe_families:
+    - token_name: mt_brighton/family_safe/01
+      source_family_name: Open Sans
+      source_role_reference: eyebrow, body
+      rationale: Approved web safe family from Vail Resorts Guidelines.pdf for the eyebrow, body lane.
+    - token_name: mt_brighton/family_safe/02
+      source_family_name: Roboto Slab
+      source_role_reference: headline, cta
+      rationale: Approved web safe family from Vail Resorts Guidelines.pdf for the headline, cta lane.
   hold_for_review: []
-
 semantic_recommendations:
   family_aliases:
-    - semantic_token: family/heading
-      global_token: mt_brighton/family/01
-      safe_semantic_token: family/heading_safe
-      safe_global_token: universal/family/fallback
-      intended_channels:
-        - web
-        - email
-        - ads
-    - semantic_token: family/body
-      global_token: mt_brighton/family/02
-      safe_semantic_token: family/body_safe
-      safe_global_token: universal/family/fallback
-      intended_channels:
-        - web
-        - email
-        - ads
-    - semantic_token: family/action
-      global_token: mt_brighton/family/01
-      safe_semantic_token: family/action_safe
-      safe_global_token: universal/family/fallback
-      intended_channels:
-        - web
-        - email
-        - ads
-  weight_aliases:
-    - semantic_token: weight/heading/base
-      global_token: universal/weight/black
-    - semantic_token: weight/heading/strong
-      global_token: universal/weight/black
-    - semantic_token: weight/body/base
-      global_token: universal/weight/bold
-    - semantic_token: weight/body/strong
-      global_token: universal/weight/bold
-    - semantic_token: weight/action/base
-      global_token: universal/weight/black
-  size_aliases: []
-
-role_recipes:
-  - role_name: heading
-    source_role: Museo Slab 900
-    proposed_family_token: mt_brighton/family/01
-    proposed_weight_token: universal/weight/black
-    proposed_size_token: inherited current heading ladder
-  - role_name: body
-    source_role: Museo Sans 700
-    proposed_family_token: mt_brighton/family/02
-    proposed_weight_token: universal/weight/bold
-    proposed_size_token: inherited current body ladder
-  - role_name: action
-    source_role: Museo Slab 900
-    proposed_family_token: mt_brighton/family/01
-    proposed_weight_token: universal/weight/black
-    proposed_size_token: inherited current action ladder
-
-validation:
-  extraction_notes:
-    - The source explicitly uses Museo Slab for heading and CTA work, Museo Sans for subhead work, and Prompt only as a digital fallback.
-  governance_notes:
-    - 'Prompt is preserved as `mt_brighton/family/03` and remains raw-only in the first pass.'
-
-review_readiness:
-  intended_review_channels:
+  - semantic_token: family/heading
+    global_token: mt_brighton/family/01
+    safe_semantic_token: family/heading_safe
+    safe_global_token: mt_brighton/family_safe/02
+    intended_channels:
     - web
     - email
     - ads
+    notes: Safe mapping is staged from Vail Resorts Guidelines.pdf.
+  - semantic_token: family/body
+    global_token: mt_brighton/family/02
+    safe_semantic_token: family/body_safe
+    safe_global_token: mt_brighton/family_safe/01
+    intended_channels:
+    - web
+    - email
+    - ads
+    notes: Safe mapping is staged from Vail Resorts Guidelines.pdf.
+  - semantic_token: family/action
+    global_token: mt_brighton/family/01
+    safe_semantic_token: family/action_safe
+    safe_global_token: mt_brighton/family_safe/02
+    intended_channels:
+    - web
+    - email
+    - ads
+    notes: Safe mapping is staged from Vail Resorts Guidelines.pdf.
+  weight_aliases:
+  - semantic_token: weight/heading/base
+    global_token: universal/weight/black
+  - semantic_token: weight/heading/strong
+    global_token: universal/weight/black
+  - semantic_token: weight/body/base
+    global_token: universal/weight/bold
+  - semantic_token: weight/body/strong
+    global_token: universal/weight/bold
+  - semantic_token: weight/action/base
+    global_token: universal/weight/black
+  size_aliases: []
+role_recipes:
+- role_name: heading
+  source_role: Museo Slab 900
+  proposed_family_token: mt_brighton/family/01
+  proposed_weight_token: universal/weight/black
+  proposed_size_token: inherited current heading ladder
+  safe_family_token: mt_brighton/family_safe/02
+- role_name: body
+  source_role: Museo Sans 700
+  proposed_family_token: mt_brighton/family/02
+  proposed_weight_token: universal/weight/bold
+  proposed_size_token: inherited current body ladder
+  safe_family_token: mt_brighton/family_safe/01
+- role_name: action
+  source_role: Museo Slab 900
+  proposed_family_token: mt_brighton/family/01
+  proposed_weight_token: universal/weight/black
+  proposed_size_token: inherited current action ladder
+  safe_family_token: mt_brighton/family_safe/02
+validation:
+  extraction_notes:
+  - The source explicitly uses Museo Slab for heading and CTA work, Museo Sans for subhead work, and Prompt
+    only as a digital safe family.
+  governance_notes:
+  - Prompt is preserved as `mt_brighton/family/03` and remains raw-only in the first pass.
+  - Brand-safe typography aliases now stage on `mt_brighton/family_safe/*` from Vail Resorts Guidelines.pdf.
+review_readiness:
+  intended_review_channels:
+  - web
+  - email
+  - ads
   review_rules:
-    - subject: Mt. Brighton utility family handling
-      channels:
-        - web
-        - email
-        - ads
-      rule: Keep Prompt documented as a raw utility family and keep Museo Slab and Museo Sans on the live semantic lanes.
-      source_basis: Source sheet only uses Prompt when the Museo families are unavailable.
-
+  - subject: Mt. Brighton utility family handling
+    channels:
+    - web
+    - email
+    - ads
+    rule: Keep Prompt documented as a raw utility family and keep Museo Slab and Museo Sans on the live
+      semantic lanes.
+    source_basis: Source sheet only uses Prompt when the Museo families are unavailable.
 open_questions: []
+safe_source_reference: Vail Resorts Guidelines.pdf
+safe_source_type: pdf

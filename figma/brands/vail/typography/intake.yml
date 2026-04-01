@@ -1,276 +1,312 @@
-date: 2026-03-10
+date: '2026-04-01'
 brand: vail
 source_reference: User-provided image in chat showing Vail typography guidance
 source_type: image
-figma_url: ""
+figma_url: ''
 status: active
 preview:
   required_before_write: true
   artifact: figma/brands/vail/typography/preview.md
   status: approved
-
 source_roles:
-  - source_role: eyebrow
-    source_family_name: Avenir
-    source_style_name: Avenir Black
-    source_weight_label: Black
-    source_usage_scope: section_header_or_hierarchy_breaker
-    text_case: all_caps
-    tracking: 0px
-    leading: use_text_height_to_inform_spacing_between_lines
-    size_rule: 0.5x headline size
-    punctuation_rule: not specified
-    sample_copy: SAMPLE EYEBROW
-    notes: Use to break up the headline for stronger hierarchy or as a section title or header. Stroke width should be as thick as the text.
-  - source_role: headline
-    source_family_name: Termina
-    source_style_name: Termina Black
-    source_weight_label: Black
-    source_usage_scope: primary_display_headline
-    text_case: all_caps
-    tracking: 0px
-    leading: equal_to_font_size
-    size_rule: base headline size not numerically specified
-    punctuation_rule: No end punctuation by default. Exceptions allowed for exclamation points, question marks, and two short thoughts in one headline.
-    sample_copy: HEADLINES SHOULD ALWAYS BE IN TERMINA
-    notes: Headline style should be all caps.
-  - source_role: subhead
-    source_family_name: Avenir
-    source_style_name: Avenir Black
-    source_weight_label: Black
-    source_usage_scope: supporting_headline_copy
-    text_case: sentence_case
-    tracking: 0px
-    leading: not specified
-    size_rule: 0.5x headline size
-    punctuation_rule: punctuation allowed
-    sample_copy: This is your subhead.
-    notes: Subhead is half the size of headline type.
-  - source_role: body
-    source_family_name: Avenir
-    source_style_name: Avenir Medium
-    source_weight_label: Medium
-    source_usage_scope: reading_copy
-    text_case: sentence_case
-    tracking: 0px
-    leading: 1.6x type size
-    size_rule: base body size not numerically specified
-    punctuation_rule: sentence punctuation allowed
-    sample_copy: This is your body copy. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sodales diam ut metus bibendum sodales. Curabitur congue ligula et leo scelerisque lacinia.
-    notes: Avoid widows and orphans if possible.
-  - source_role: cta
-    source_family_name: Avenir
-    source_style_name: Avenir Black
-    source_weight_label: Black
-    source_usage_scope: action_or_button_copy
-    text_case: all_caps
-    tracking: 0px
-    leading: not specified
-    size_rule: base CTA size not numerically specified
-    punctuation_rule: do not use end punctuation
-    sample_copy: PLAN YOUR VISIT
-    notes: CTA styling is all caps.
-
+- source_role: eyebrow
+  source_family_name: Avenir
+  source_style_name: Avenir Black
+  source_weight_label: Black
+  source_usage_scope: section_header_or_hierarchy_breaker
+  text_case: all_caps
+  tracking: 0px
+  leading: use_text_height_to_inform_spacing_between_lines
+  size_rule: 0.5x headline size
+  punctuation_rule: not specified
+  sample_copy: SAMPLE EYEBROW
+  notes: Use to break up the headline for stronger hierarchy or as a section title or header. Stroke width
+    should be as thick as the text.
+  source_safe_family_name: Open Sans
+  source_safe_reference_column: eyebrow_font
+- source_role: headline
+  source_family_name: Termina
+  source_style_name: Termina Black
+  source_weight_label: Black
+  source_usage_scope: primary_display_headline
+  text_case: all_caps
+  tracking: 0px
+  leading: equal_to_font_size
+  size_rule: base headline size not numerically specified
+  punctuation_rule: No end punctuation by default. Exceptions allowed for exclamation points, question
+    marks, and two short thoughts in one headline.
+  sample_copy: HEADLINES SHOULD ALWAYS BE IN TERMINA
+  notes: Headline style should be all caps.
+  source_safe_family_name: Open Sans
+  source_safe_reference_column: headline_font
+- source_role: subhead
+  source_family_name: Avenir
+  source_style_name: Avenir Black
+  source_weight_label: Black
+  source_usage_scope: supporting_headline_copy
+  text_case: sentence_case
+  tracking: 0px
+  leading: not specified
+  size_rule: 0.5x headline size
+  punctuation_rule: punctuation allowed
+  sample_copy: This is your subhead.
+  notes: Subhead is half the size of headline type.
+  source_safe_family_name: Open Sans
+  source_safe_reference_column: headline_font
+- source_role: body
+  source_family_name: Avenir
+  source_style_name: Avenir Medium
+  source_weight_label: Medium
+  source_usage_scope: reading_copy
+  text_case: sentence_case
+  tracking: 0px
+  leading: 1.6x type size
+  size_rule: base body size not numerically specified
+  punctuation_rule: sentence punctuation allowed
+  sample_copy: This is your body copy. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
+    sodales diam ut metus bibendum sodales. Curabitur congue ligula et leo scelerisque lacinia.
+  notes: Avoid widows and orphans if possible.
+  source_safe_family_name: Open Sans
+  source_safe_reference_column: body_font
+- source_role: cta
+  source_family_name: Avenir
+  source_style_name: Avenir Black
+  source_weight_label: Black
+  source_usage_scope: action_or_button_copy
+  text_case: all_caps
+  tracking: 0px
+  leading: not specified
+  size_rule: base CTA size not numerically specified
+  punctuation_rule: do not use end punctuation
+  sample_copy: PLAN YOUR VISIT
+  notes: CTA styling is all caps.
+  source_safe_family_name: Open Sans
+  source_safe_reference_column: cta_font
 primitive_recommendations:
   reuse_existing:
     families: []
     weights:
-      - source_weight_label: Medium
-        existing_token: universal/weight/medium
-        reason: Source explicitly specifies Avenir Medium and the current global medium raw primitive already exists at the universal layer.
-      - source_weight_label: Black
-        existing_token: universal/weight/black
-        reason: Black is now governed as a shared universal raw weight and should be reused across brand typography reviews unless a later numeric exception is approved.
+    - source_weight_label: Medium
+      existing_token: universal/weight/medium
+      reason: Source explicitly specifies Avenir Medium and the current global medium raw primitive already
+        exists at the universal layer.
+    - source_weight_label: Black
+      existing_token: universal/weight/black
+      reason: Black is now governed as a shared universal raw weight and should be reused across brand
+        typography reviews unless a later numeric exception is approved.
     sizes:
-      - source_size_reference: headline default
-        existing_token: universal/size/800
-        assumption_status: assumed
-        assumption_note: Source provides no numeric size, so the initial review maps headline to the current largest universal display size.
-        reason: Use the existing universal size ladder for provisional review values until design experimentation confirms a different headline size.
-      - source_size_reference: eyebrow at 0.5x headline
-        existing_token: universal/size/400
-        assumption_status: assumed
-        assumption_note: Eyebrow is defined as half the headline size, so it inherits the provisional 18px mapping from the assumed 36px headline.
-        reason: Matches the relational source rule without inventing a new raw size.
-      - source_size_reference: subhead at 0.5x headline
-        existing_token: universal/size/400
-        assumption_status: assumed
-        assumption_note: Subhead is defined as half the headline size, so it inherits the provisional 18px mapping from the assumed 36px headline.
-        reason: Matches the relational source rule without inventing a new raw size.
-      - source_size_reference: body default
-        existing_token: universal/size/300
-        assumption_status: assumed
-        assumption_note: Source provides no numeric size, so body defaults to the current universal base reading size.
-        reason: Keeps raw body size in the shared universal ladder until channel testing suggests a change.
-      - source_size_reference: cta default
-        existing_token: universal/size/300
-        assumption_status: assumed
-        assumption_note: Source provides no numeric CTA size, so CTA defaults to the universal base action size for initial review.
-        reason: Keeps CTA on the shared universal ladder until later experimentation justifies a different raw size.
+    - source_size_reference: headline default
+      existing_token: universal/size/800
+      assumption_status: assumed
+      assumption_note: Source provides no numeric size, so the initial review maps headline to the current
+        largest universal display size.
+      reason: Use the existing universal size ladder for provisional review values until design experimentation
+        confirms a different headline size.
+    - source_size_reference: eyebrow at 0.5x headline
+      existing_token: universal/size/400
+      assumption_status: assumed
+      assumption_note: Eyebrow is defined as half the headline size, so it inherits the provisional 18px
+        mapping from the assumed 36px headline.
+      reason: Matches the relational source rule without inventing a new raw size.
+    - source_size_reference: subhead at 0.5x headline
+      existing_token: universal/size/400
+      assumption_status: assumed
+      assumption_note: Subhead is defined as half the headline size, so it inherits the provisional 18px
+        mapping from the assumed 36px headline.
+      reason: Matches the relational source rule without inventing a new raw size.
+    - source_size_reference: body default
+      existing_token: universal/size/300
+      assumption_status: assumed
+      assumption_note: Source provides no numeric size, so body defaults to the current universal base
+        reading size.
+      reason: Keeps raw body size in the shared universal ladder until channel testing suggests a change.
+    - source_size_reference: cta default
+      existing_token: universal/size/300
+      assumption_status: assumed
+      assumption_note: Source provides no numeric CTA size, so CTA defaults to the universal base action
+        size for initial review.
+      reason: Keeps CTA on the shared universal ladder until later experimentation justifies a different
+        raw size.
   proposed_primitives:
     families:
-      - token_name: vail/family/02
-        source_family_name: Avenir
-        source_style_reference: Avenir Black and Avenir Medium across eyebrow, subhead, body, and cta
-        rationale: Shared text family across most Vail typography roles.
-        fallback_token: universal/family/fallback
-        fallback_note: Source artifact does not specify a fallback stack, so the review defaults to the global fallback family.
-      - token_name: vail/family/01
-        source_family_name: Termina
-        source_style_reference: Termina Black for headline
-        rationale: Distinct display family reserved for headline treatment.
-        fallback_token: universal/family/fallback
-        fallback_note: Source artifact does not specify a fallback stack, so the review defaults to the global fallback family.
+    - token_name: vail/family/02
+      source_family_name: Avenir
+      source_style_reference: Avenir Black and Avenir Medium across eyebrow, subhead, body, and cta
+      rationale: Shared text family across most Vail typography roles.
+      safe_family_token: vail/family_safe/01
+      safe_family_note: Approved safe-family companion from Vail Resorts Guidelines.pdf.
+    - token_name: vail/family/01
+      source_family_name: Termina
+      source_style_reference: Termina Black for headline
+      rationale: Distinct display family reserved for headline treatment.
+      safe_family_token: vail/family_safe/01
+      safe_family_note: Approved safe-family companion from Vail Resorts Guidelines.pdf.
     weights: []
+    safe_families:
+    - token_name: vail/family_safe/01
+      source_family_name: Open Sans
+      source_role_reference: eyebrow, headline, body, cta
+      rationale: Approved web safe family from Vail Resorts Guidelines.pdf for the eyebrow, headline,
+        body, cta lane.
   hold_for_review: []
-
 semantic_recommendations:
   family_aliases:
-    - semantic_token: family/heading
-      global_token: vail/family/01
-      safe_semantic_token: family/heading_safe
-      safe_global_token: universal/family/fallback
-      intended_channels:
-        - web
-        - email
-        - ads
-      notes: Use the brand display family in web and ad executions. Use the safe alias for email or any constrained placement that cannot reliably deliver Termina.
-    - semantic_token: family/body
-      global_token: vail/family/02
-      safe_semantic_token: family/body_safe
-      safe_global_token: universal/family/fallback
-      intended_channels:
-        - web
-        - email
-        - ads
-      notes: Primary reading family across channels. Use the safe alias where brand-font delivery is constrained.
-    - semantic_token: family/action
-      global_token: vail/family/02
-      safe_semantic_token: family/action_safe
-      safe_global_token: universal/family/fallback
-      intended_channels:
-        - web
-        - email
-        - ads
-      notes: Action-oriented copy continues to use the primary text family, with the safe alias available for email-safe rendering.
-
-role_recipes:
-  - role_name: eyebrow
-    source_role: Eyebrow | Avenir Black
-    proposed_family_token: vail/family/02
-    fallback_token: universal/family/fallback
-    proposed_weight_token: universal/weight/black
-    proposed_size_token: universal/size/400
-    size_assumption_status: assumed
-    text_case: all_caps
-    tracking: 0px
-    leading_rule: Use text height to inform spacing between lines
-    size_rule: 0.5x headline size
-    punctuation_rule: not specified in source
-    sample_copy: SAMPLE EYEBROW
-    notes: Use as a section title or header and to break up headline hierarchy. Stroke width should be as thick as the text.
-  - role_name: headline
-    source_role: Headline | Termina Black
-    proposed_family_token: vail/family/01
-    fallback_token: universal/family/fallback
-    proposed_weight_token: universal/weight/black
-    proposed_size_token: universal/size/800
-    size_assumption_status: assumed
-    text_case: all_caps
-    tracking: 0px
-    leading_rule: line-height equals font size
-    size_rule: headline base size not numerically specified
-    punctuation_rule: No end punctuation by default. Exceptions allowed for question marks, exclamation points, and paired short thoughts.
-    sample_copy: HEADLINES SHOULD ALWAYS BE IN TERMINA
-    notes: Primary display treatment.
-  - role_name: subhead
-    source_role: Subhead | Avenir Black
-    proposed_family_token: vail/family/02
-    fallback_token: universal/family/fallback
-    proposed_weight_token: universal/weight/black
-    proposed_size_token: universal/size/400
-    size_assumption_status: assumed
-    text_case: sentence_case
-    tracking: 0px
-    leading_rule: not specified in source
-    size_rule: 0.5x headline size
-    punctuation_rule: punctuation allowed
-    sample_copy: This is your subhead.
-    notes: Intended as secondary supporting headline copy.
-  - role_name: body
-    source_role: Body Copy | Avenir Medium
-    proposed_family_token: vail/family/02
-    fallback_token: universal/family/fallback
-    proposed_weight_token: universal/weight/medium
-    proposed_size_token: universal/size/300
-    size_assumption_status: assumed
-    text_case: sentence_case
-    tracking: 0px
-    leading_rule: 1.6x type size
-    size_rule: body base size not numerically specified
-    punctuation_rule: sentence punctuation allowed
-    sample_copy: This is your body copy. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sodales diam ut metus bibendum sodales. Curabitur congue ligula et leo scelerisque lacinia.
-    notes: Avoid widows and orphans when setting copy.
-  - role_name: cta
-    source_role: CTA | Avenir Black
-    proposed_family_token: vail/family/02
-    fallback_token: universal/family/fallback
-    proposed_weight_token: universal/weight/black
-    proposed_size_token: universal/size/300
-    size_assumption_status: assumed
-    text_case: all_caps
-    tracking: 0px
-    leading_rule: not specified in source
-    size_rule: CTA base size not numerically specified
-    punctuation_rule: do not use end punctuation
-    sample_copy: PLAN YOUR VISIT
-    notes: Intended for action-oriented interface copy.
-
-validation:
-  extraction_notes:
-    - The source guide clearly defines role behavior and relationships but does not provide numeric font sizes.
-    - Avenir serves as the shared text family while Termina is reserved for headline treatment.
-  governance_notes:
-    - Missing raw sizes are mapped provisionally to the universal size ladder and should be revisited only after design experimentation produces a better shared baseline.
-    - Missing fallback stacks default to universal/family/fallback unless a brand guide later specifies a different approved fallback.
-    - Black weights should reuse universal/weight/black at the global raw layer unless a later numeric exception is approved.
-
-review_readiness:
-  intended_review_channels:
+  - semantic_token: family/heading
+    global_token: vail/family/01
+    safe_semantic_token: family/heading_safe
+    safe_global_token: vail/family_safe/01
+    intended_channels:
     - web
     - email
     - ads
+    notes: Use the brand display family in web and ad executions. Use the safe alias for email or any
+      constrained placement that cannot reliably deliver Termina. Safe mapping is staged from Vail Resorts
+      Guidelines.pdf.
+  - semantic_token: family/body
+    global_token: vail/family/02
+    safe_semantic_token: family/body_safe
+    safe_global_token: vail/family_safe/01
+    intended_channels:
+    - web
+    - email
+    - ads
+    notes: Primary reading family across channels. Use the safe alias where brand-font delivery is constrained.
+      Safe mapping is staged from Vail Resorts Guidelines.pdf.
+  - semantic_token: family/action
+    global_token: vail/family/02
+    safe_semantic_token: family/action_safe
+    safe_global_token: vail/family_safe/01
+    intended_channels:
+    - web
+    - email
+    - ads
+    notes: Action-oriented copy continues to use the primary text family, with the safe alias available
+      for email-safe rendering. Safe mapping is staged from Vail Resorts Guidelines.pdf.
+role_recipes:
+- role_name: eyebrow
+  source_role: Eyebrow | Avenir Black
+  proposed_family_token: vail/family/02
+  proposed_weight_token: universal/weight/black
+  proposed_size_token: universal/size/400
+  size_assumption_status: assumed
+  text_case: all_caps
+  tracking: 0px
+  leading_rule: Use text height to inform spacing between lines
+  size_rule: 0.5x headline size
+  punctuation_rule: not specified in source
+  sample_copy: SAMPLE EYEBROW
+  notes: Use as a section title or header and to break up headline hierarchy. Stroke width should be as
+    thick as the text.
+  safe_family_token: vail/family_safe/01
+- role_name: headline
+  source_role: Headline | Termina Black
+  proposed_family_token: vail/family/01
+  proposed_weight_token: universal/weight/black
+  proposed_size_token: universal/size/800
+  size_assumption_status: assumed
+  text_case: all_caps
+  tracking: 0px
+  leading_rule: line-height equals font size
+  size_rule: headline base size not numerically specified
+  punctuation_rule: No end punctuation by default. Exceptions allowed for question marks, exclamation
+    points, and paired short thoughts.
+  sample_copy: HEADLINES SHOULD ALWAYS BE IN TERMINA
+  notes: Primary display treatment.
+  safe_family_token: vail/family_safe/01
+- role_name: subhead
+  source_role: Subhead | Avenir Black
+  proposed_family_token: vail/family/02
+  proposed_weight_token: universal/weight/black
+  proposed_size_token: universal/size/400
+  size_assumption_status: assumed
+  text_case: sentence_case
+  tracking: 0px
+  leading_rule: not specified in source
+  size_rule: 0.5x headline size
+  punctuation_rule: punctuation allowed
+  sample_copy: This is your subhead.
+  notes: Intended as secondary supporting headline copy.
+  safe_family_token: vail/family_safe/01
+- role_name: body
+  source_role: Body Copy | Avenir Medium
+  proposed_family_token: vail/family/02
+  proposed_weight_token: universal/weight/medium
+  proposed_size_token: universal/size/300
+  size_assumption_status: assumed
+  text_case: sentence_case
+  tracking: 0px
+  leading_rule: 1.6x type size
+  size_rule: body base size not numerically specified
+  punctuation_rule: sentence punctuation allowed
+  sample_copy: This is your body copy. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
+    sodales diam ut metus bibendum sodales. Curabitur congue ligula et leo scelerisque lacinia.
+  notes: Avoid widows and orphans when setting copy.
+  safe_family_token: vail/family_safe/01
+- role_name: cta
+  source_role: CTA | Avenir Black
+  proposed_family_token: vail/family/02
+  proposed_weight_token: universal/weight/black
+  proposed_size_token: universal/size/300
+  size_assumption_status: assumed
+  text_case: all_caps
+  tracking: 0px
+  leading_rule: not specified in source
+  size_rule: CTA base size not numerically specified
+  punctuation_rule: do not use end punctuation
+  sample_copy: PLAN YOUR VISIT
+  notes: Intended for action-oriented interface copy.
+  safe_family_token: vail/family_safe/01
+validation:
+  extraction_notes:
+  - The source guide clearly defines role behavior and relationships but does not provide numeric font
+    sizes.
+  - Avenir serves as the shared text family while Termina is reserved for headline treatment.
+  governance_notes:
+  - Missing raw sizes are mapped provisionally to the universal size ladder and should be revisited only
+    after design experimentation produces a better shared baseline.
+  - Missing safe family stacks default to universal/family_safe/01 unless a brand guide later specifies
+    a different approved safe family.
+  - Black weights should reuse universal/weight/black at the global raw layer unless a later numeric exception
+    is approved.
+  - Brand-safe typography aliases now stage on `vail/family_safe/*` from Vail Resorts Guidelines.pdf.
+review_readiness:
+  intended_review_channels:
+  - web
+  - email
+  - ads
   review_rules:
-    - subject: family/heading_safe
-      channels:
-        - email
-      rule: Use the safe semantic alias when the channel cannot reliably deliver Termina.
-      source_basis: Safe-semantic governance for constrained channels.
-    - subject: family/body_safe
-      channels:
-        - email
-      rule: Use the safe semantic alias when the channel cannot reliably deliver Avenir.
-      source_basis: Safe-semantic governance for constrained channels.
-    - subject: headline
-      channels:
-        - web
-        - email
-        - ads
-      rule: Headlines stay all caps with 0px tracking and avoid end punctuation except the source-approved exceptions.
-      source_basis: Vail typography guide headline rule.
-    - subject: body
-      channels:
-        - web
-        - email
-        - ads
-      rule: Body copy stays sentence case with 0px tracking and 1.6x leading.
-      source_basis: Vail typography guide body rule.
-    - subject: cta
-      channels:
-        - web
-        - email
-        - ads
-      rule: CTA copy stays all caps and does not use end punctuation.
-      source_basis: Vail typography guide CTA rule.
-
+  - subject: family/heading_safe
+    channels:
+    - email
+    rule: Use the safe semantic alias when the channel cannot reliably deliver Termina.
+    source_basis: Safe-semantic governance for constrained channels.
+  - subject: family/body_safe
+    channels:
+    - email
+    rule: Use the safe semantic alias when the channel cannot reliably deliver Avenir.
+    source_basis: Safe-semantic governance for constrained channels.
+  - subject: headline
+    channels:
+    - web
+    - email
+    - ads
+    rule: Headlines stay all caps with 0px tracking and avoid end punctuation except the source-approved
+      exceptions.
+    source_basis: Vail typography guide headline rule.
+  - subject: body
+    channels:
+    - web
+    - email
+    - ads
+    rule: Body copy stays sentence case with 0px tracking and 1.6x leading.
+    source_basis: Vail typography guide body rule.
+  - subject: cta
+    channels:
+    - web
+    - email
+    - ads
+    rule: CTA copy stays all caps and does not use end punctuation.
+    source_basis: Vail typography guide CTA rule.
 open_questions: []
+safe_source_reference: Vail Resorts Guidelines.pdf
+safe_source_type: pdf

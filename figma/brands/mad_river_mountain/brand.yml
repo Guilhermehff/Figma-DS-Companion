@@ -1,5 +1,5 @@
 version: 1
-updated: '2026-03-31'
+updated: '2026-04-01'
 brand_id: mad_river_mountain
 display_name: Mad River Mountain
 status: active
@@ -30,7 +30,8 @@ artifacts:
   typography:
     intake_artifact: figma/brands/mad_river_mountain/typography/intake.yml
     preview_artifact: figma/brands/mad_river_mountain/typography/preview.md
-    decision_artifacts: []
+    decision_artifacts:
+    - figma/decisions/2026-04-01-safe-typography-lane-migration.md
 semantic_overrides:
   theme:
     status: active
@@ -98,32 +99,41 @@ semantic_overrides:
       - border/critical
       - border/critical_inverse
       notes:
-      - "`on_surface/*` tokens in the live semantic theme extension are contrast-derived from `universal/black` or `universal/white` and are not hue-tinted."
-      - "`river_blue` drives the primary expressive lane and `mountain_green` drives the supporting expressive lane."
+      - '`on_surface/*` tokens in the live semantic theme extension are contrast-derived from `universal/black`
+        or `universal/white` and are not hue-tinted.'
+      - '`river_blue` drives the primary expressive lane and `mountain_green` drives the supporting expressive
+        lane.'
     typography:
       override_scopes:
       - semantic_token: family/heading
-        alias_to: mad_river_mountain/family/01
+        alias_of: mad_river_mountain/family/01
       - semantic_token: family/body
-        alias_to: mad_river_mountain/family/01
+        alias_of: mad_river_mountain/family/01
       - semantic_token: family/action
-        alias_to: mad_river_mountain/family/01
+        alias_of: mad_river_mountain/family/01
       - semantic_token: weight/heading/base
-        alias_to: universal/weight/normal
+        alias_of: universal/weight/normal
       - semantic_token: weight/heading/strong
-        alias_to: universal/weight/normal
+        alias_of: universal/weight/normal
       - semantic_token: weight/body/base
-        alias_to: universal/weight/normal
+        alias_of: universal/weight/normal
       - semantic_token: weight/body/strong
-        alias_to: universal/weight/normal
+        alias_of: universal/weight/normal
       - semantic_token: weight/action/base
-        alias_to: universal/weight/normal
-      inherited_from_base:
-      - family/heading_safe
-      - family/body_safe
-      - family/action_safe
+        alias_of: universal/weight/normal
+      - semantic_token: family/heading_safe
+        alias_of: mad_river_mountain/family_safe/01
+      - semantic_token: family/body_safe
+        alias_of: mad_river_mountain/family_safe/02
+      - semantic_token: family/action_safe
+        alias_of: mad_river_mountain/family_safe/01
+      inherited_from_base: []
       notes:
-      - Mad River Mountain is live as a one-family typography system with `Prompt` across heading, body, and action work.
+      - Mad River Mountain is live as a one-family typography system with `Prompt` across heading, body,
+        and action work.
       - 'Typography size continues to bind directly from published `Global: Typography`.'
+      - Brand-safe typography aliases now stage on `mad_river_mountain/family_safe/*` from Vail Resorts
+        Guidelines.pdf.
 notes:
-- Mad River Mountain is live in the Foundations file with two raw color families, one raw typography family primitive, and Mad River Mountain semantic theme extension.
+- Mad River Mountain is live in the Foundations file with two raw color families, one raw typography family
+  primitive, and Mad River Mountain semantic theme extension.

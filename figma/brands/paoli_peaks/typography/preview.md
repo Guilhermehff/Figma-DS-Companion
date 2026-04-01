@@ -1,18 +1,71 @@
 # Paoli Peaks Typography Preview
 
-Review state: written in Figma. Verify live state in `figma/brands/paoli_peaks/brand.yml`.
+Review state: written_in_figma preview artifact. Verify live write state in `figma/brands/paoli_peaks/brand.yml` and Figma.
 
-## Source Roles
+## Original Source Roles
 
-- `Headline` -> `Rockwell Nova Extra Bold`
-- `Subheadline` -> `Rockwell Nova`
+- Source role: `headline`
+  Family: `Rockwell Nova`
+  Safe family: `Roboto Slab`
+  Style: `Extra Bold`
+  Weight label: `Extra Bold`
+  Usage scope: `headline`
+  Case: `source dependent`
+  Tracking: `not specified in source`
+  Leading: `not specified in source`
+  Size rule: `source names roles and weights but does not define governed numeric sizes`
+  Punctuation: `not specified in source`
+  Sample copy: `Paoli Peaks`
 
-## Live Semantic Mapping
+- Source role: `subheadline`
+  Family: `Rockwell Nova`
+  Safe family: `Roboto Slab`
+  Style: `not specified`
+  Weight label: `Regular`
+  Usage scope: `supporting headline`
+  Case: `source dependent`
+  Tracking: `not specified in source`
+  Leading: `not specified in source`
+  Size rule: `source names roles and weights but does not define governed numeric sizes`
+  Punctuation: `not specified in source`
+  Sample copy: `Current conditions`
 
-- `family/heading`, `family/body`, `family/action` -> `paoli_peaks/family/01`
-- `weight/heading/base`, `weight/heading/strong`, `weight/action/base` -> `universal/weight/black`
-- `weight/body/base`, `weight/body/strong` -> `universal/weight/normal`
+## Role Recipes
 
-## Notes
+### Role: heading
 
-- The PDF does not define a body or CTA lane, so body remains normal and action follows the headline family in the first governed pass.
+Proposed family token: `paoli_peaks/family/01`
+
+Safe family token: `paoli_peaks/family_safe/01`
+
+Proposed weight token: `universal/weight/black`
+
+Proposed size token: `inherited current heading ladder`
+
+Recipe notes:
+
+
+### Role: body
+
+Proposed family token: `paoli_peaks/family/01`
+
+Safe family token: `paoli_peaks/family_safe/02`
+
+Proposed weight token: `universal/weight/normal`
+
+Proposed size token: `inherited current body ladder`
+
+Recipe notes:
+
+
+### Role: action
+
+Proposed family token: `paoli_peaks/family/01`
+
+Safe family token: `paoli_peaks/family_safe/01`
+
+Proposed weight token: `universal/weight/black`
+
+Proposed size token: `inherited current action ladder`
+
+Recipe notes:

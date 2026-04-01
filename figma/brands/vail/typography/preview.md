@@ -6,12 +6,13 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
 
 - Source role: `eyebrow`
   Family: `Avenir`
+  Safe family: `Open Sans`
   Style: `Avenir Black`
   Weight label: `Black`
-  Usage scope: `section header or hierarchy breaker`
-  Case: `ALL CAPS`
+  Usage scope: `section_header_or_hierarchy_breaker`
+  Case: `all_caps`
   Tracking: `0px`
-  Leading: `Use text height to inform spacing between lines`
+  Leading: `use_text_height_to_inform_spacing_between_lines`
   Size rule: `0.5x headline size`
   Punctuation: `not specified`
   Sample copy: `SAMPLE EYEBROW`
@@ -19,139 +20,59 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
 
 - Source role: `headline`
   Family: `Termina`
+  Safe family: `Open Sans`
   Style: `Termina Black`
   Weight label: `Black`
-  Usage scope: `primary display headline`
-  Case: `ALL CAPS`
+  Usage scope: `primary_display_headline`
+  Case: `all_caps`
   Tracking: `0px`
-  Leading: `Equal to font size`
-  Size rule: `Base headline size not numerically specified`
-  Punctuation: `No end punctuation by default; exceptions for question marks, exclamation points, and paired short thoughts`
+  Leading: `equal_to_font_size`
+  Size rule: `base headline size not numerically specified`
+  Punctuation: `No end punctuation by default. Exceptions allowed for exclamation points, question marks, and two short thoughts in one headline.`
   Sample copy: `HEADLINES SHOULD ALWAYS BE IN TERMINA`
   Notes: Headline style should be all caps.
 
 - Source role: `subhead`
   Family: `Avenir`
+  Safe family: `Open Sans`
   Style: `Avenir Black`
   Weight label: `Black`
-  Usage scope: `supporting headline copy`
-  Case: `Sentence case`
+  Usage scope: `supporting_headline_copy`
+  Case: `sentence_case`
   Tracking: `0px`
   Leading: `not specified`
   Size rule: `0.5x headline size`
-  Punctuation: `allowed`
+  Punctuation: `punctuation allowed`
   Sample copy: `This is your subhead.`
   Notes: Subhead is half the size of headline type.
 
 - Source role: `body`
   Family: `Avenir`
+  Safe family: `Open Sans`
   Style: `Avenir Medium`
   Weight label: `Medium`
-  Usage scope: `reading copy`
-  Case: `Sentence case`
+  Usage scope: `reading_copy`
+  Case: `sentence_case`
   Tracking: `0px`
   Leading: `1.6x type size`
-  Size rule: `Base body size not numerically specified`
+  Size rule: `base body size not numerically specified`
   Punctuation: `sentence punctuation allowed`
   Sample copy: `This is your body copy. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sodales diam ut metus bibendum sodales. Curabitur congue ligula et leo scelerisque lacinia.`
   Notes: Avoid widows and orphans if possible.
 
 - Source role: `cta`
   Family: `Avenir`
+  Safe family: `Open Sans`
   Style: `Avenir Black`
   Weight label: `Black`
-  Usage scope: `action or button copy`
-  Case: `ALL CAPS`
+  Usage scope: `action_or_button_copy`
+  Case: `all_caps`
   Tracking: `0px`
   Leading: `not specified`
-  Size rule: `Base CTA size not numerically specified`
-  Punctuation: `Do not use end punctuation`
+  Size rule: `base CTA size not numerically specified`
+  Punctuation: `do not use end punctuation`
   Sample copy: `PLAN YOUR VISIT`
   Notes: CTA styling is all caps.
-
-## Primitive Recommendations
-
-- Reuse:
-  Source item: `Avenir Medium`
-  Proposed token: `universal/weight/medium`
-  Assumption status: `confirmed`
-  Notes: Recommended reuse of the existing universal raw medium weight token.
-
-- Proposed primitive:
-  Token name: `vail/family/02`
-  Source item: `Avenir`
-  Fallback token: `universal/family/fallback`
-  Notes: Shared text family for eyebrow, subhead, body, and cta. Because no fallback stack is provided, the review defaults to the universal fallback family.
-
-- Proposed primitive:
-  Token name: `vail/family/01`
-  Source item: `Termina`
-  Fallback token: `universal/family/fallback`
-  Notes: Distinct display family for headline treatment. Because no fallback stack is provided, the review defaults to the universal fallback family.
-
-- Reuse:
-  Source item: `Black`
-  Proposed token: `universal/weight/black`
-  Assumption status: `governed default`
-  Notes: Brand typography reviews now reuse one shared universal raw black weight instead of opening a brand-specific weight question.
-
-- Reuse:
-  Source item: `headline default size`
-  Proposed token: `universal/size/800`
-  Assumption status: `assumed`
-  Notes: The source does not provide a numeric headline size, so the initial review uses the current largest universal size.
-
-- Reuse:
-  Source item: `eyebrow at 0.5x headline`
-  Proposed token: `universal/size/400`
-  Assumption status: `assumed`
-  Notes: Half of the provisional headline size preserves the source relationship without inventing a new raw size.
-
-- Reuse:
-  Source item: `subhead at 0.5x headline`
-  Proposed token: `universal/size/400`
-  Assumption status: `assumed`
-  Notes: Half of the provisional headline size preserves the source relationship without inventing a new raw size.
-
-- Reuse:
-  Source item: `body default size`
-  Proposed token: `universal/size/300`
-  Assumption status: `assumed`
-  Notes: The source does not provide a numeric body size, so the initial review uses the current universal base reading size.
-
-- Reuse:
-  Source item: `cta default size`
-  Proposed token: `universal/size/300`
-  Assumption status: `assumed`
-  Notes: The source does not provide a numeric CTA size, so the initial review uses the current universal base action size.
-
-## Hold For Review
-
-- Item: `None`
-  Reason: The shared semantic collection and brand-extension model is now approved and written.
-
-## Semantic Mapping
-
-- Semantic token: `family/heading`
-  Global token: `vail/family/01`
-  Safe semantic token: `family/heading_safe`
-  Safe global token: `universal/family/fallback`
-  Intended channels: `web, email, ads`
-  Notes: Web and ad executions should use the brand display family. Email should use the safe alias when Termina delivery is not reliable.
-
-- Semantic token: `family/body`
-  Global token: `vail/family/02`
-  Safe semantic token: `family/body_safe`
-  Safe global token: `universal/family/fallback`
-  Intended channels: `web, email, ads`
-  Notes: Primary reading family across channels, with the safe alias reserved for constrained rendering environments.
-
-- Semantic token: `family/action`
-  Global token: `vail/family/02`
-  Safe semantic token: `family/action_safe`
-  Safe global token: `universal/family/fallback`
-  Intended channels: `web, email, ads`
-  Notes: Action-oriented copy stays on the primary family, with a safe counterpart for email-safe use.
 
 ## Role Recipes
 
@@ -159,168 +80,93 @@ Review state: approved preview artifact. Verify live write state in `figma/brand
 
 Proposed family token: `vail/family/02`
 
-Fallback token: `universal/family/fallback`
+Safe family token: `vail/family_safe/01`
 
 Proposed weight token: `universal/weight/black`
 
 Proposed size token: `universal/size/400`
 
-Size assumption: `assumed from the universal size ladder`
-
-Sample block:
-
-<div style="font-family: 'Avenir', sans-serif; font-weight: 900; font-size: 18px; line-height: 1; letter-spacing: 0; text-transform: uppercase;">
-  SAMPLE EYEBROW
-</div>
-
 Recipe notes:
 
-- Case: `ALL CAPS`
+- Case: `all_caps`
 - Tracking: `0px`
 - Leading: `Use text height to inform spacing between lines`
 - Size rule: `0.5x headline size`
-- Punctuation: `not specified`
-- Notes: Intended as section-header or hierarchy-breaking text.
+- Punctuation: `not specified in source`
+- Notes: Use as a section title or header and to break up headline hierarchy. Stroke width should be as thick as the text.
 
 ### Role: headline
 
 Proposed family token: `vail/family/01`
 
-Fallback token: `universal/family/fallback`
+Safe family token: `vail/family_safe/01`
 
 Proposed weight token: `universal/weight/black`
 
 Proposed size token: `universal/size/800`
 
-Size assumption: `assumed from the universal size ladder`
-
-Sample block:
-
-<div style="font-family: 'Termina', sans-serif; font-weight: 900; font-size: 36px; line-height: 1; letter-spacing: 0; text-transform: uppercase;">
-  HEADLINES SHOULD ALWAYS BE IN TERMINA
-</div>
-
 Recipe notes:
 
-- Case: `ALL CAPS`
+- Case: `all_caps`
 - Tracking: `0px`
-- Leading: `Equal to font size`
-- Size rule: `Base headline size not numerically specified`
-- Punctuation: `No end punctuation by default; limited exceptions allowed`
-- Notes: Primary display style.
+- Leading: `line-height equals font size`
+- Size rule: `headline base size not numerically specified`
+- Punctuation: `No end punctuation by default. Exceptions allowed for question marks, exclamation points, and paired short thoughts.`
+- Notes: Primary display treatment.
 
 ### Role: subhead
 
 Proposed family token: `vail/family/02`
 
-Fallback token: `universal/family/fallback`
+Safe family token: `vail/family_safe/01`
 
 Proposed weight token: `universal/weight/black`
 
 Proposed size token: `universal/size/400`
 
-Size assumption: `assumed from the universal size ladder`
-
-Sample block:
-
-<div style="font-family: 'Avenir', sans-serif; font-weight: 900; font-size: 18px; line-height: 1.2; letter-spacing: 0; text-transform: none;">
-  This is your subhead.
-</div>
-
 Recipe notes:
 
-- Case: `Sentence case`
+- Case: `sentence_case`
 - Tracking: `0px`
-- Leading: `not specified`
+- Leading: `not specified in source`
 - Size rule: `0.5x headline size`
-- Punctuation: `allowed`
-- Notes: Supporting headline copy.
+- Punctuation: `punctuation allowed`
+- Notes: Intended as secondary supporting headline copy.
 
 ### Role: body
 
 Proposed family token: `vail/family/02`
 
-Fallback token: `universal/family/fallback`
+Safe family token: `vail/family_safe/01`
 
 Proposed weight token: `universal/weight/medium`
 
 Proposed size token: `universal/size/300`
 
-Size assumption: `assumed from the universal size ladder`
-
-Sample block:
-
-<div style="font-family: 'Avenir', sans-serif; font-weight: 500; font-size: 16px; line-height: 1.6; letter-spacing: 0; text-transform: none;">
-  This is your body copy. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-</div>
-
 Recipe notes:
 
-- Case: `Sentence case`
+- Case: `sentence_case`
 - Tracking: `0px`
 - Leading: `1.6x type size`
-- Size rule: `Base body size not numerically specified`
+- Size rule: `body base size not numerically specified`
 - Punctuation: `sentence punctuation allowed`
-- Notes: Avoid widows and orphans when possible.
+- Notes: Avoid widows and orphans when setting copy.
 
 ### Role: cta
 
 Proposed family token: `vail/family/02`
 
-Fallback token: `universal/family/fallback`
+Safe family token: `vail/family_safe/01`
 
 Proposed weight token: `universal/weight/black`
 
 Proposed size token: `universal/size/300`
 
-Size assumption: `assumed from the universal size ladder`
-
-Sample block:
-
-<div style="font-family: 'Avenir', sans-serif; font-weight: 900; font-size: 16px; line-height: 1.2; letter-spacing: 0; text-transform: uppercase;">
-  PLAN YOUR VISIT
-</div>
-
 Recipe notes:
 
-- Case: `ALL CAPS`
+- Case: `all_caps`
 - Tracking: `0px`
-- Leading: `not specified`
-- Size rule: `Base CTA size not numerically specified`
-- Punctuation: `Do not use end punctuation`
-- Notes: Action-oriented interface copy.
-
-## Review Notes
-
-- This preview is for governance review only. The rendered font in Markdown depends on local font availability and is not a guaranteed visual match.
-- Missing fallback stacks default to `universal/family/fallback`.
-- Missing numeric sizes are mapped provisionally to the universal size ladder and should be revisited after design experimentation.
-- Global family naming is now approved as `primary`, `display`, and `web_safe`.
-- The shared family and weight baseline now lives in `Semantic: Theme`, while Vail-specific family overrides live in the Vail theme extension.
-
-## Review Readiness
-
-- Subject: `family/heading_safe`
-  Channels: `email`
-  Rule: Use the safe semantic alias when the channel cannot reliably deliver the brand display font.
-  Source basis: Safe-semantic governance for constrained channels.
-
-- Subject: `family/body_safe`
-  Channels: `email`
-  Rule: Use the safe semantic alias when the channel cannot reliably deliver Avenir.
-  Source basis: Safe-semantic governance for constrained channels.
-
-- Subject: `headline`
-  Channels: `web, email, ads`
-  Rule: Headlines stay all caps with 0px tracking and avoid end punctuation except the source-approved exceptions.
-  Source basis: Vail typography guide headline rule.
-
-- Subject: `body`
-  Channels: `web, email, ads`
-  Rule: Body copy stays sentence case with 0px tracking and 1.6x leading.
-  Source basis: Vail typography guide body rule.
-
-- Subject: `cta`
-  Channels: `web, email, ads`
-  Rule: CTA copy stays all caps and does not use end punctuation.
-  Source basis: Vail typography guide CTA rule.
+- Leading: `not specified in source`
+- Size rule: `CTA base size not numerically specified`
+- Punctuation: `do not use end punctuation`
+- Notes: Intended for action-oriented interface copy.

@@ -1,16 +1,84 @@
 # Snow Creek Typography Preview
 
-Review state: written in Figma. Verify live state in `figma/brands/snow_creek/brand.yml`.
+Review state: written_in_figma preview artifact. Verify live write state in `figma/brands/snow_creek/brand.yml` and Figma.
 
-## Source Roles
+## Original Source Roles
 
-- `Headline`, `Subheadline`, `Body` -> `Prompt`
+- Source role: `headline`
+  Family: `Prompt`
+  Safe family: `Prompt`
+  Style: `not specified`
+  Weight label: `Regular`
+  Usage scope: `headline`
+  Case: `source dependent`
+  Tracking: `not specified in source`
+  Leading: `not specified in source`
+  Size rule: `source names the family but does not govern numeric sizes`
+  Punctuation: `not specified in source`
+  Sample copy: `Snow Creek`
 
-## Live Semantic Mapping
+- Source role: `subheadline`
+  Family: `Prompt`
+  Safe family: `Prompt`
+  Style: `not specified`
+  Weight label: `Regular`
+  Usage scope: `supporting headline`
+  Case: `source dependent`
+  Tracking: `not specified in source`
+  Leading: `not specified in source`
+  Size rule: `source names the family but does not govern numeric sizes`
+  Punctuation: `not specified in source`
+  Sample copy: `Weekend plans`
 
-- `family/heading`, `family/body`, `family/action` -> `snow_creek/family/01`
-- `weight/heading/base`, `weight/heading/strong`, `weight/body/base`, `weight/body/strong`, `weight/action/base` -> `universal/weight/normal`
+- Source role: `body`
+  Family: `Prompt`
+  Safe family: `Open Sans`
+  Style: `not specified`
+  Weight label: `Regular`
+  Usage scope: `body copy`
+  Case: `source dependent`
+  Tracking: `not specified in source`
+  Leading: `not specified in source`
+  Size rule: `source names the family but does not govern numeric sizes`
+  Punctuation: `sentence punctuation allowed`
+  Sample copy: `Check operations, passes, and mountain updates before you go.`
 
-## Notes
+## Role Recipes
 
-- The PDF does not define a separate CTA lane, so action follows the shared Prompt family in the first governed pass.
+### Role: heading
+
+Proposed family token: `snow_creek/family/01`
+
+Safe family token: `snow_creek/family_safe/01`
+
+Proposed weight token: `universal/weight/normal`
+
+Proposed size token: `inherited current heading ladder`
+
+Recipe notes:
+
+
+### Role: body
+
+Proposed family token: `snow_creek/family/01`
+
+Safe family token: `snow_creek/family_safe/02`
+
+Proposed weight token: `universal/weight/normal`
+
+Proposed size token: `inherited current body ladder`
+
+Recipe notes:
+
+
+### Role: action
+
+Proposed family token: `snow_creek/family/01`
+
+Safe family token: `snow_creek/family_safe/01`
+
+Proposed weight token: `universal/weight/normal`
+
+Proposed size token: `inherited current action ladder`
+
+Recipe notes:

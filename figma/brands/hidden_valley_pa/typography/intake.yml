@@ -1,4 +1,4 @@
-date: 2026-03-19
+date: '2026-04-01'
 brand: hidden_valley_pa
 source_reference: User-provided exported Hidden Valley Pennsylvania brand sheet image in chat
 source_type: image
@@ -8,155 +8,178 @@ preview:
   required_before_write: true
   artifact: figma/brands/hidden_valley_pa/typography/preview.md
   status: written_in_figma
-
 source_roles:
-  - source_role: headline
-    source_family_name: Roboto
-    source_style_name: Black
-    source_weight_label: Black
-    source_usage_scope: headline
-    text_case: uppercase_without_punctuation
-    tracking: 0px
-    leading: not_specified
-    size_rule: not_specified
-    punctuation_rule: no_punctuation
-    sample_copy: Hidden Valley
-  - source_role: subhead
-    source_family_name: Roboto
-    source_style_name: Black
-    source_weight_label: Black
-    source_usage_scope: subhead
-    text_case: uppercase_without_punctuation
-    tracking: 0px
-    leading: not_specified
-    size_rule: not_specified
-    punctuation_rule: no_punctuation
-    sample_copy: Pennsylvania
-  - source_role: body
-    source_family_name: Roboto
-    source_style_name: Regular
-    source_weight_label: Regular
-    source_usage_scope: body_copy
-    text_case: sentence_case
-    tracking: 0px
-    leading: not_specified
-    size_rule: not_specified
-    punctuation_rule: standard
-    sample_copy: Guidelines have not been provided
-  - source_role: display
-    source_family_name: Mrs Eaves XL Regular
-    source_style_name: Regular
-    source_weight_label: Regular
-    source_usage_scope: display_or_logo_applications
-    text_case: title_case
-    tracking: 0px
-    leading: not_specified
-    size_rule: not_specified
-    punctuation_rule: standard
-    sample_copy: Hidden Valley
-
+- source_role: headline
+  source_family_name: Roboto
+  source_style_name: Black
+  source_weight_label: Black
+  source_usage_scope: headline
+  text_case: uppercase_without_punctuation
+  tracking: 0px
+  leading: not_specified
+  size_rule: not_specified
+  punctuation_rule: no_punctuation
+  sample_copy: Hidden Valley
+  source_safe_family_name: Roboto Slab
+  source_safe_reference_column: headline_font
+- source_role: subhead
+  source_family_name: Roboto
+  source_style_name: Black
+  source_weight_label: Black
+  source_usage_scope: subhead
+  text_case: uppercase_without_punctuation
+  tracking: 0px
+  leading: not_specified
+  size_rule: not_specified
+  punctuation_rule: no_punctuation
+  sample_copy: Pennsylvania
+  source_safe_family_name: Roboto Slab
+  source_safe_reference_column: headline_font
+- source_role: body
+  source_family_name: Roboto
+  source_style_name: Regular
+  source_weight_label: Regular
+  source_usage_scope: body_copy
+  text_case: sentence_case
+  tracking: 0px
+  leading: not_specified
+  size_rule: not_specified
+  punctuation_rule: standard
+  sample_copy: Guidelines have not been provided
+  source_safe_family_name: Open Sans
+  source_safe_reference_column: body_font
+- source_role: display
+  source_family_name: Mrs Eaves XL Regular
+  source_style_name: Regular
+  source_weight_label: Regular
+  source_usage_scope: display_or_logo_applications
+  text_case: title_case
+  tracking: 0px
+  leading: not_specified
+  size_rule: not_specified
+  punctuation_rule: standard
+  sample_copy: Hidden Valley
+  source_safe_family_name: Roboto Slab
+  source_safe_reference_column: headline_font
 primitive_recommendations:
   reuse_existing:
     families: []
     weights:
-      - source_weight_label: Black
-        existing_token: universal/weight/black
-        reason: Direct match for Roboto Black.
-      - source_weight_label: Regular
-        existing_token: universal/weight/normal
-        reason: Direct match for Roboto Regular.
+    - source_weight_label: Black
+      existing_token: universal/weight/black
+      reason: Direct match for Roboto Black.
+    - source_weight_label: Regular
+      existing_token: universal/weight/normal
+      reason: Direct match for Roboto Regular.
     sizes: []
   proposed_primitives:
     families:
-      - token_name: hidden_valley_pa/family/01
-        source_family_name: Roboto
-        source_style_reference: Black and Regular across the functional hierarchy
-        rationale: Roboto carries the live semantic hierarchy.
-        fallback_token: universal/family/fallback
-        fallback_note: Safe-family behavior remains inherited.
-      - token_name: hidden_valley_pa/family/02
-        source_family_name: Mrs Eaves XL Regular
-        source_style_reference: logo and design applications
-        rationale: Preserved as the raw display family.
-        fallback_token: universal/family/fallback
-        fallback_note: Safe-family behavior remains inherited.
+    - token_name: hidden_valley_pa/family/01
+      source_family_name: Roboto
+      source_style_reference: Black and Regular across the functional hierarchy
+      rationale: Roboto carries the live semantic hierarchy.
+      safe_family_token: ''
+      safe_family_note: Multiple approved role-level safe-family mappings apply to this brand family;
+        use the semantic safe aliases and role recipes below.
+    - token_name: hidden_valley_pa/family/02
+      source_family_name: Mrs Eaves XL Regular
+      source_style_reference: logo and design applications
+      rationale: Preserved as the raw display family.
+      safe_family_token: hidden_valley_pa/family_safe/01
+      safe_family_note: Approved safe-family companion from Vail Resorts Guidelines.pdf.
     weights: []
+    safe_families:
+    - token_name: hidden_valley_pa/family_safe/01
+      source_family_name: Roboto Slab
+      source_role_reference: eyebrow, headline, cta
+      rationale: Approved web safe family from Vail Resorts Guidelines.pdf for the eyebrow, headline,
+        cta lane.
+    - token_name: hidden_valley_pa/family_safe/02
+      source_family_name: Open Sans
+      source_role_reference: body
+      rationale: Approved web safe family from Vail Resorts Guidelines.pdf for the body lane.
   hold_for_review: []
-
 semantic_recommendations:
   family_aliases:
-    - semantic_token: family/heading
-      global_token: hidden_valley_pa/family/01
-      safe_semantic_token: family/heading_safe
-      safe_global_token: universal/family/fallback
-      intended_channels:
-        - web
-        - email
-        - ads
-    - semantic_token: family/body
-      global_token: hidden_valley_pa/family/01
-      safe_semantic_token: family/body_safe
-      safe_global_token: universal/family/fallback
-      intended_channels:
-        - web
-        - email
-        - ads
-    - semantic_token: family/action
-      global_token: hidden_valley_pa/family/01
-      safe_semantic_token: family/action_safe
-      safe_global_token: universal/family/fallback
-      intended_channels:
-        - web
-        - email
-        - ads
-  weight_aliases:
-    - semantic_token: weight/heading/base
-      global_token: universal/weight/black
-    - semantic_token: weight/heading/strong
-      global_token: universal/weight/black
-    - semantic_token: weight/body/base
-      global_token: universal/weight/normal
-    - semantic_token: weight/body/strong
-      global_token: universal/weight/black
-    - semantic_token: weight/action/base
-      global_token: universal/weight/black
-  size_aliases: []
-
-role_recipes:
-  - role_name: heading
-    source_role: Roboto Black
-    proposed_family_token: hidden_valley_pa/family/01
-    proposed_weight_token: universal/weight/black
-    proposed_size_token: inherited current heading ladder
-  - role_name: body
-    source_role: Roboto Regular
-    proposed_family_token: hidden_valley_pa/family/01
-    proposed_weight_token: universal/weight/normal
-    proposed_size_token: inherited current body ladder
-  - role_name: action
-    source_role: Roboto Black
-    proposed_family_token: hidden_valley_pa/family/01
-    proposed_weight_token: universal/weight/black
-    proposed_size_token: inherited current action ladder
-
-validation:
-  extraction_notes:
-    - 'The source defines Roboto for all functional typography roles and `Mrs Eaves XL Regular` for display and logo work.'
-  governance_notes:
-    - 'The first semantic pass keeps `Mrs Eaves XL Regular` raw-only because the shared semantic ladder does not have a dedicated ornamental display lane.'
-
-review_readiness:
-  intended_review_channels:
+  - semantic_token: family/heading
+    global_token: hidden_valley_pa/family/01
+    safe_semantic_token: family/heading_safe
+    safe_global_token: hidden_valley_pa/family_safe/01
+    intended_channels:
     - web
     - email
     - ads
+    notes: Safe mapping is staged from Vail Resorts Guidelines.pdf.
+  - semantic_token: family/body
+    global_token: hidden_valley_pa/family/01
+    safe_semantic_token: family/body_safe
+    safe_global_token: hidden_valley_pa/family_safe/02
+    intended_channels:
+    - web
+    - email
+    - ads
+    notes: Safe mapping is staged from Vail Resorts Guidelines.pdf.
+  - semantic_token: family/action
+    global_token: hidden_valley_pa/family/01
+    safe_semantic_token: family/action_safe
+    safe_global_token: hidden_valley_pa/family_safe/01
+    intended_channels:
+    - web
+    - email
+    - ads
+    notes: Safe mapping is staged from Vail Resorts Guidelines.pdf.
+  weight_aliases:
+  - semantic_token: weight/heading/base
+    global_token: universal/weight/black
+  - semantic_token: weight/heading/strong
+    global_token: universal/weight/black
+  - semantic_token: weight/body/base
+    global_token: universal/weight/normal
+  - semantic_token: weight/body/strong
+    global_token: universal/weight/black
+  - semantic_token: weight/action/base
+    global_token: universal/weight/black
+  size_aliases: []
+role_recipes:
+- role_name: heading
+  source_role: Roboto Black
+  proposed_family_token: hidden_valley_pa/family/01
+  proposed_weight_token: universal/weight/black
+  proposed_size_token: inherited current heading ladder
+  safe_family_token: hidden_valley_pa/family_safe/01
+- role_name: body
+  source_role: Roboto Regular
+  proposed_family_token: hidden_valley_pa/family/01
+  proposed_weight_token: universal/weight/normal
+  proposed_size_token: inherited current body ladder
+  safe_family_token: hidden_valley_pa/family_safe/02
+- role_name: action
+  source_role: Roboto Black
+  proposed_family_token: hidden_valley_pa/family/01
+  proposed_weight_token: universal/weight/black
+  proposed_size_token: inherited current action ladder
+  safe_family_token: hidden_valley_pa/family_safe/01
+validation:
+  extraction_notes:
+  - The source defines Roboto for all functional typography roles and `Mrs Eaves XL Regular` for display
+    and logo work.
+  governance_notes:
+  - The first semantic pass keeps `Mrs Eaves XL Regular` raw-only because the shared semantic ladder does
+    not have a dedicated ornamental display lane.
+  - Brand-safe typography aliases now stage on `hidden_valley_pa/family_safe/*` from Vail Resorts Guidelines.pdf.
+review_readiness:
+  intended_review_channels:
+  - web
+  - email
+  - ads
   review_rules:
-    - subject: Hidden Valley PA display family handling
-      channels:
-        - web
-        - email
-        - ads
-      rule: 'Keep `Mrs Eaves XL Regular` raw-only until a broader display-family semantic slot is justified.'
-      source_basis: Source sheet limits the family to display and design applications.
-
+  - subject: Hidden Valley PA display family handling
+    channels:
+    - web
+    - email
+    - ads
+    rule: Keep `Mrs Eaves XL Regular` raw-only until a broader display-family semantic slot is justified.
+    source_basis: Source sheet limits the family to display and design applications.
 open_questions: []
+safe_source_reference: Vail Resorts Guidelines.pdf
+safe_source_type: pdf

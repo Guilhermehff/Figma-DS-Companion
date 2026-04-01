@@ -95,17 +95,11 @@ def _make_valid_brand_repo(root: Path) -> None:
                     "dimensions_id": "global-dimensions",
                 },
                 "semantic_extensions": {
-                    "color": {
+                    "theme": {
                         "collection_name": "Demo",
-                        "collection_id": "ext-color",
-                        "parent_collection": "Semantic: Color",
-                        "parent_collection_id": "base-color",
-                    },
-                    "typography": {
-                        "collection_name": "Demo",
-                        "collection_id": "ext-typography",
-                        "parent_collection": "Semantic: Typography",
-                        "parent_collection_id": "base-typography",
+                        "collection_id": "ext-theme",
+                        "parent_collection": "Semantic: Theme",
+                        "parent_collection_id": "base-theme",
                     },
                 },
             },
@@ -217,17 +211,18 @@ def test_validate_brand_manifest_rejects_legacy_color_override_shape(tmp_path: P
                 },
             },
             "semantic_overrides": {
-                "color": {
+                "theme": {
                     "status": "active",
-                    "override_scopes": [{"semantic_slot": "brand", "raw_family": "demo/blue"}],
-                    "inherited_from_base": [],
-                    "notes": [],
-                },
-                "typography": {
-                    "status": "active",
-                    "override_scopes": [],
-                    "inherited_from_base": [],
-                    "notes": [],
+                    "color": {
+                        "override_scopes": [{"semantic_slot": "brand", "raw_family": "demo/blue"}],
+                        "inherited_from_base": [],
+                        "notes": [],
+                    },
+                    "typography": {
+                        "override_scopes": [],
+                        "inherited_from_base": [],
+                        "notes": [],
+                    },
                 },
             },
             "notes": [],
@@ -407,7 +402,14 @@ def test_sync_brand_font_inventory_collects_fonts_by_brand(tmp_path: Path) -> No
                             "source_family_name": "Avenir Next",
                             "source_style_reference": "Avenir Next Demi Bold",
                         },
-                    ]
+                    ],
+                    "safe_families": [
+                        {
+                            "token_name": "demo/family_safe/01",
+                            "source_family_name": "Arial",
+                            "source_role_reference": "headline safe",
+                        }
+                    ],
                 }
             },
         },
@@ -426,7 +428,8 @@ def test_sync_brand_font_inventory_collects_fonts_by_brand(tmp_path: Path) -> No
             "registry": "figma/brands/registry.yml",
             "extraction_rule": (
                 "Collect unique family names from each brand typography intake artifact, "
-                "preferring `primitive_recommendations.proposed_primitives.families`."
+                "preferring `primitive_recommendations.proposed_primitives.families` and "
+                "`primitive_recommendations.proposed_primitives.safe_families`."
             ),
         },
         "brands": [
@@ -437,17 +440,25 @@ def test_sync_brand_font_inventory_collects_fonts_by_brand(tmp_path: Path) -> No
                 "typography_intake_artifact": "figma/brands/demo/typography-intake.yml",
                 "fonts": [
                     {
+                        "lane": "brand",
                         "family_name": "Inter",
                         "token_names": ["demo/family/primary"],
                         "source_style_references": ["Inter Bold"],
                     },
                     {
+                        "lane": "brand",
                         "family_name": "Avenir Next",
                         "token_names": ["demo/family/secondary", "demo/family/utility"],
                         "source_style_references": [
                             "Avenir Next Regular",
                             "Avenir Next Demi Bold",
                         ],
+                    },
+                    {
+                        "lane": "safe",
+                        "family_name": "Arial",
+                        "token_names": ["demo/family_safe/01"],
+                        "source_style_references": ["headline safe"],
                     },
                 ],
             }
@@ -456,10 +467,11 @@ def test_sync_brand_font_inventory_collects_fonts_by_brand(tmp_path: Path) -> No
     assert directory == (
         "# Font Directory\n\n"
         "Updated: 2026-03-13\n\n"
-        "| Font | Brands |\n"
-        "| --- | --- |\n"
-        "| Avenir Next | Demo |\n"
-        "| Inter | Demo |\n"
+        "| Font | Lane | Brands |\n"
+        "| --- | --- | --- |\n"
+        "| Avenir Next | Brand | Demo |\n"
+        "| Inter | Brand | Demo |\n"
+        "| Arial | Web Safe | Demo |\n"
     )
 
 

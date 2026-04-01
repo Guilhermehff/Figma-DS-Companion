@@ -1,6 +1,7 @@
-date: 2026-03-19
+date: '2026-04-01'
 brand: hunter
-source_reference: User-provided image in chat showing the Hunter typography hierarchy guidance and example application
+source_reference: User-provided image in chat showing the Hunter typography hierarchy guidance and example
+  application
 source_type: image
 figma_url: https://www.figma.com/design/70O01X6MWNKMpsLqIke99Q/Foundations?node-id=1-3
 status: active
@@ -8,230 +9,254 @@ preview:
   required_before_write: true
   artifact: figma/brands/hunter/typography/preview.md
   status: written_in_figma
-
 source_roles:
-  - source_role: headline
-    source_family_name: Galano Grotesque
-    source_style_name: Bold
-    source_weight_label: Bold
-    source_usage_scope: primary_headers_h1
-    text_case: sentence_case
-    tracking: not specified in source
-    leading: not specified in source
-    size_rule: source names roles and weights but does not define governed numeric sizes
-    punctuation_rule: not specified in source
-    sample_copy: You can't get these views in SOHO.
-    notes: The typography sheet explicitly labels headlines as Galano Grotesque Bold.
-  - source_role: subheadline
-    source_family_name: Galano Grotesque
-    source_style_name: Semibold
-    source_weight_label: Semibold
-    source_usage_scope: supporting_headers_h2
-    text_case: sentence_case
-    tracking: not specified in source
-    leading: not specified in source
-    size_rule: source names roles and weights but does not define governed numeric sizes
-    punctuation_rule: not specified in source
-    sample_copy: Experience Hunter Mountain in the Catskills.
-    notes: The typography sheet explicitly labels sub-headlines as Galano Grotesque Semibold.
-  - source_role: body
-    source_family_name: Galano Grotesque
-    source_style_name: Regular
-    source_weight_label: Regular
-    source_usage_scope: body_copy
-    text_case: sentence_case
-    tracking: not specified in source
-    leading: not specified in source
-    size_rule: source names roles and weights but does not define governed numeric sizes
-    punctuation_rule: sentence punctuation allowed
-    sample_copy: Nam velliqui beatur alit la volorpo rionsedi consecus ent quam sumquiam, occatur?
-    notes: The typography sheet explicitly labels body copy as Galano Grotesque Regular.
-  - source_role: body_contrasting
-    source_family_name: Galano Grotesque
-    source_style_name: Light
-    source_weight_label: Light
-    source_usage_scope: contrasting_body_or_supporting_copy
-    text_case: sentence_case
-    tracking: not specified in source
-    leading: not specified in source
-    size_rule: source names roles and weights but does not define governed numeric sizes
-    punctuation_rule: sentence punctuation allowed
-    sample_copy: This font should be used sparingly due to legibility.
-    notes: The typography sheet explicitly labels the contrasting body lane as Galano Grotesque Light and says it should be used sparingly.
-
+- source_role: headline
+  source_family_name: Galano Grotesque
+  source_style_name: Bold
+  source_weight_label: Bold
+  source_usage_scope: primary_headers_h1
+  text_case: sentence_case
+  tracking: not specified in source
+  leading: not specified in source
+  size_rule: source names roles and weights but does not define governed numeric sizes
+  punctuation_rule: not specified in source
+  sample_copy: You can't get these views in SOHO.
+  notes: The typography sheet explicitly labels headlines as Galano Grotesque Bold.
+  source_safe_family_name: Poppins
+  source_safe_reference_column: headline_font
+- source_role: subheadline
+  source_family_name: Galano Grotesque
+  source_style_name: Semibold
+  source_weight_label: Semibold
+  source_usage_scope: supporting_headers_h2
+  text_case: sentence_case
+  tracking: not specified in source
+  leading: not specified in source
+  size_rule: source names roles and weights but does not define governed numeric sizes
+  punctuation_rule: not specified in source
+  sample_copy: Experience Hunter Mountain in the Catskills.
+  notes: The typography sheet explicitly labels sub-headlines as Galano Grotesque Semibold.
+  source_safe_family_name: Poppins
+  source_safe_reference_column: headline_font
+- source_role: body
+  source_family_name: Galano Grotesque
+  source_style_name: Regular
+  source_weight_label: Regular
+  source_usage_scope: body_copy
+  text_case: sentence_case
+  tracking: not specified in source
+  leading: not specified in source
+  size_rule: source names roles and weights but does not define governed numeric sizes
+  punctuation_rule: sentence punctuation allowed
+  sample_copy: Nam velliqui beatur alit la volorpo rionsedi consecus ent quam sumquiam, occatur?
+  notes: The typography sheet explicitly labels body copy as Galano Grotesque Regular.
+  source_safe_family_name: Poppins
+  source_safe_reference_column: body_font
+- source_role: body_contrasting
+  source_family_name: Galano Grotesque
+  source_style_name: Light
+  source_weight_label: Light
+  source_usage_scope: contrasting_body_or_supporting_copy
+  text_case: sentence_case
+  tracking: not specified in source
+  leading: not specified in source
+  size_rule: source names roles and weights but does not define governed numeric sizes
+  punctuation_rule: sentence punctuation allowed
+  sample_copy: This font should be used sparingly due to legibility.
+  notes: The typography sheet explicitly labels the contrasting body lane as Galano Grotesque Light and
+    says it should be used sparingly.
+  source_safe_family_name: Poppins
+  source_safe_reference_column: body_font
 primitive_recommendations:
   reuse_existing:
     families: []
     weights:
-      - source_weight_label: Bold
-        existing_token: universal/weight/bold
-        reason: Direct match for the H1 headline lane.
-      - source_weight_label: Semibold
-        existing_token: universal/weight/semibold
-        reason: Direct match for the H2 supporting headline lane.
-      - source_weight_label: Regular
-        existing_token: universal/weight/normal
-        reason: Direct match for the body-copy baseline.
-      - source_weight_label: Light
-        existing_token: universal/weight/light
-        reason: Direct match for the contrasting body lane.
+    - source_weight_label: Bold
+      existing_token: universal/weight/bold
+      reason: Direct match for the H1 headline lane.
+    - source_weight_label: Semibold
+      existing_token: universal/weight/semibold
+      reason: Direct match for the H2 supporting headline lane.
+    - source_weight_label: Regular
+      existing_token: universal/weight/normal
+      reason: Direct match for the body-copy baseline.
+    - source_weight_label: Light
+      existing_token: universal/weight/light
+      reason: Direct match for the contrasting body lane.
     sizes:
-      - source_size_reference: headline default
-        existing_token: inherited current heading ladder
-        assumption_status: deferred_no_new_size
-        assumption_note: The source names roles and weights only, without governed numeric sizes.
-        reason: Live semantic size aliases can remain inherited in the first pass.
-      - source_size_reference: subheadline default
-        existing_token: inherited current heading and body ladders
-        assumption_status: deferred_no_new_size
-        assumption_note: The source names roles and weights only, without governed numeric sizes.
-        reason: No new raw size values are justified yet.
-      - source_size_reference: body default
-        existing_token: inherited current body ladder
-        assumption_status: deferred_no_new_size
-        assumption_note: The source names roles and weights only, without governed numeric sizes.
-        reason: Live semantic size aliases can remain inherited in the first pass.
+    - source_size_reference: headline default
+      existing_token: inherited current heading ladder
+      assumption_status: deferred_no_new_size
+      assumption_note: The source names roles and weights only, without governed numeric sizes.
+      reason: Live semantic size aliases can remain inherited in the first pass.
+    - source_size_reference: subheadline default
+      existing_token: inherited current heading and body ladders
+      assumption_status: deferred_no_new_size
+      assumption_note: The source names roles and weights only, without governed numeric sizes.
+      reason: No new raw size values are justified yet.
+    - source_size_reference: body default
+      existing_token: inherited current body ladder
+      assumption_status: deferred_no_new_size
+      assumption_note: The source names roles and weights only, without governed numeric sizes.
+      reason: Live semantic size aliases can remain inherited in the first pass.
   proposed_primitives:
     families:
-      - token_name: hunter/family/01
-        source_family_name: Galano Grotesque
-        source_style_reference: Bold, Semibold, Regular, and Light across headline, subheadline, body, and contrasting body roles
-        rationale: Hunter uses one Galano Grotesque family across the full hierarchy, with weight carrying the structure.
-        fallback_token: universal/family/fallback
-        fallback_note: The source does not define a fallback stack.
+    - token_name: hunter/family/01
+      source_family_name: Galano Grotesque
+      source_style_reference: Bold, Semibold, Regular, and Light across headline, subheadline, body, and
+        contrasting body roles
+      rationale: Hunter uses one Galano Grotesque family across the full hierarchy, with weight carrying
+        the structure.
+      safe_family_token: hunter/family_safe/01
+      safe_family_note: Approved safe-family companion from Vail Resorts Guidelines.pdf.
     weights: []
+    safe_families:
+    - token_name: hunter/family_safe/01
+      source_family_name: Poppins
+      source_role_reference: eyebrow, headline, body, cta
+      rationale: Approved web safe family from Vail Resorts Guidelines.pdf for the eyebrow, headline,
+        body, cta lane.
   hold_for_review: []
-
 semantic_recommendations:
   family_aliases:
-    - semantic_token: family/heading
-      global_token: hunter/family/01
-      safe_semantic_token: family/heading_safe
-      safe_global_token: universal/family/fallback
-      intended_channels:
-        - web
-        - email
-        - ads
-      notes: Galano Grotesque is the repeated Hunter headline family.
-    - semantic_token: family/body
-      global_token: hunter/family/01
-      safe_semantic_token: family/body_safe
-      safe_global_token: universal/family/fallback
-      intended_channels:
-        - web
-        - email
-        - ads
-      notes: Galano Grotesque also drives the reading-copy lane.
-  weight_aliases:
-    - semantic_token: weight/heading/base
-      global_token: universal/weight/bold
-      intended_channels:
-        - web
-        - email
-        - ads
-      notes: Headlines explicitly use Galano Grotesque Bold.
-    - semantic_token: weight/body/base
-      global_token: universal/weight/normal
-      intended_channels:
-        - web
-        - email
-        - ads
-      notes: Body copy explicitly uses Galano Grotesque Regular.
-    - semantic_token: weight/body/strong
-      global_token: universal/weight/semibold
-      intended_channels:
-        - web
-        - email
-        - ads
-      notes: Approved live write. The stronger body-emphasis lane stages the explicit Galano Grotesque Semibold subheadline treatment through the current semantic theme typography ladder.
-  size_aliases: []
-
-role_recipes:
-  - role_name: headline
-    source_role: Headlines | Galano Grotesque Bold
-    proposed_family_token: hunter/family/01
-    fallback_token: universal/family/fallback
-    proposed_weight_token: universal/weight/bold
-    proposed_size_token: inherited current heading ladder
-    size_assumption_status: deferred_no_new_size
-    text_case: sentence_case
-    tracking: not specified in source
-    leading_rule: not specified in source
-    size_rule: no governed source size token
-    punctuation_rule: not specified in source
-    sample_copy: You can't get these views in SOHO.
-    notes: H1 remains on Galano Grotesque Bold.
-  - role_name: subheadline
-    source_role: Sub-headlines | Galano Grotesque Semibold
-    proposed_family_token: hunter/family/01
-    fallback_token: universal/family/fallback
-    proposed_weight_token: universal/weight/semibold
-    proposed_size_token: inherited current heading and body ladders
-    size_assumption_status: deferred_no_new_size
-    text_case: sentence_case
-    tracking: not specified in source
-    leading_rule: not specified in source
-    size_rule: no governed source size token
-    punctuation_rule: not specified in source
-    sample_copy: Experience Hunter Mountain in the Catskills.
-    notes: Approved live write. H2 stages through the shared Galano Grotesque family with the semibold weight.
-  - role_name: body
-    source_role: Body Copy | Galano Grotesque Regular
-    proposed_family_token: hunter/family/01
-    fallback_token: universal/family/fallback
-    proposed_weight_token: universal/weight/normal
-    proposed_size_token: inherited current body ladder
-    size_assumption_status: deferred_no_new_size
-    text_case: sentence_case
-    tracking: not specified in source
-    leading_rule: not specified in source
-    size_rule: no governed source size token
-    punctuation_rule: sentence punctuation allowed
-    sample_copy: Nam velliqui beatur alit la volorpo rionsedi consecus ent quam sumquiam, occatur?
-    notes: Body copy remains on Galano Grotesque Regular.
-  - role_name: body_contrasting
-    source_role: Contrasting Body | Galano Grotesque Light
-    proposed_family_token: hunter/family/01
-    fallback_token: universal/family/fallback
-    proposed_weight_token: universal/weight/light
-    proposed_size_token: inherited current body ladder
-    size_assumption_status: deferred_no_new_size
-    text_case: sentence_case
-    tracking: not specified in source
-    leading_rule: not specified in source
-    size_rule: no governed source size token
-    punctuation_rule: sentence punctuation allowed
-    sample_copy: This font should be used sparingly due to legibility.
-    notes: Contrasting type remains a documented raw option rather than a separate semantic lane in the first pass.
-
-validation:
-  extraction_notes:
-    - The source is explicit about one family choice and four weight roles, but not about governed numeric sizes, tracking values, or CTA recipes.
-    - Hunter uses one repeated Galano Grotesque family across headline, subheadline, body, and contrasting body work.
-  governance_notes:
-    - Galano Grotesque stages cleanly as one shared family, with weight carrying the hierarchy between H1, H2, body, and the lighter contrasting-copy lane.
-    - Approved live write. `weight/body/strong` uses `universal/weight/semibold` so the explicit subheadline treatment remains available through the current semantic theme typography ladder.
-    - The source does not define a CTA or action recipe, so the action family and weight remain inherited in the live semantic extension.
-
-review_readiness:
-  intended_review_channels:
+  - semantic_token: family/heading
+    global_token: hunter/family/01
+    safe_semantic_token: family/heading_safe
+    safe_global_token: hunter/family_safe/01
+    intended_channels:
     - web
     - email
     - ads
+    notes: Galano Grotesque is the repeated Hunter headline family. Safe mapping is staged from Vail Resorts
+      Guidelines.pdf.
+  - semantic_token: family/body
+    global_token: hunter/family/01
+    safe_semantic_token: family/body_safe
+    safe_global_token: hunter/family_safe/01
+    intended_channels:
+    - web
+    - email
+    - ads
+    notes: Galano Grotesque also drives the reading-copy lane. Safe mapping is staged from Vail Resorts
+      Guidelines.pdf.
+  weight_aliases:
+  - semantic_token: weight/heading/base
+    global_token: universal/weight/bold
+    intended_channels:
+    - web
+    - email
+    - ads
+    notes: Headlines explicitly use Galano Grotesque Bold.
+  - semantic_token: weight/body/base
+    global_token: universal/weight/normal
+    intended_channels:
+    - web
+    - email
+    - ads
+    notes: Body copy explicitly uses Galano Grotesque Regular.
+  - semantic_token: weight/body/strong
+    global_token: universal/weight/semibold
+    intended_channels:
+    - web
+    - email
+    - ads
+    notes: Approved live write. The stronger body-emphasis lane stages the explicit Galano Grotesque Semibold
+      subheadline treatment through the current semantic theme typography ladder.
+  size_aliases: []
+role_recipes:
+- role_name: headline
+  source_role: Headlines | Galano Grotesque Bold
+  proposed_family_token: hunter/family/01
+  proposed_weight_token: universal/weight/bold
+  proposed_size_token: inherited current heading ladder
+  size_assumption_status: deferred_no_new_size
+  text_case: sentence_case
+  tracking: not specified in source
+  leading_rule: not specified in source
+  size_rule: no governed source size token
+  punctuation_rule: not specified in source
+  sample_copy: You can't get these views in SOHO.
+  notes: H1 remains on Galano Grotesque Bold.
+  safe_family_token: hunter/family_safe/01
+- role_name: subheadline
+  source_role: Sub-headlines | Galano Grotesque Semibold
+  proposed_family_token: hunter/family/01
+  proposed_weight_token: universal/weight/semibold
+  proposed_size_token: inherited current heading and body ladders
+  size_assumption_status: deferred_no_new_size
+  text_case: sentence_case
+  tracking: not specified in source
+  leading_rule: not specified in source
+  size_rule: no governed source size token
+  punctuation_rule: not specified in source
+  sample_copy: Experience Hunter Mountain in the Catskills.
+  notes: Approved live write. H2 stages through the shared Galano Grotesque family with the semibold weight.
+  safe_family_token: hunter/family_safe/01
+- role_name: body
+  source_role: Body Copy | Galano Grotesque Regular
+  proposed_family_token: hunter/family/01
+  proposed_weight_token: universal/weight/normal
+  proposed_size_token: inherited current body ladder
+  size_assumption_status: deferred_no_new_size
+  text_case: sentence_case
+  tracking: not specified in source
+  leading_rule: not specified in source
+  size_rule: no governed source size token
+  punctuation_rule: sentence punctuation allowed
+  sample_copy: Nam velliqui beatur alit la volorpo rionsedi consecus ent quam sumquiam, occatur?
+  notes: Body copy remains on Galano Grotesque Regular.
+  safe_family_token: hunter/family_safe/01
+- role_name: body_contrasting
+  source_role: Contrasting Body | Galano Grotesque Light
+  proposed_family_token: hunter/family/01
+  proposed_weight_token: universal/weight/light
+  proposed_size_token: inherited current body ladder
+  size_assumption_status: deferred_no_new_size
+  text_case: sentence_case
+  tracking: not specified in source
+  leading_rule: not specified in source
+  size_rule: no governed source size token
+  punctuation_rule: sentence punctuation allowed
+  sample_copy: This font should be used sparingly due to legibility.
+  notes: Contrasting type remains a documented raw option rather than a separate semantic lane in the
+    first pass.
+  safe_family_token: hunter/family_safe/01
+validation:
+  extraction_notes:
+  - The source is explicit about one family choice and four weight roles, but not about governed numeric
+    sizes, tracking values, or CTA recipes.
+  - Hunter uses one repeated Galano Grotesque family across headline, subheadline, body, and contrasting
+    body work.
+  governance_notes:
+  - Galano Grotesque stages cleanly as one shared family, with weight carrying the hierarchy between H1,
+    H2, body, and the lighter contrasting-copy lane.
+  - Approved live write. `weight/body/strong` uses `universal/weight/semibold` so the explicit subheadline
+    treatment remains available through the current semantic theme typography ladder.
+  - The source does not define a CTA or action recipe, so the action family and weight remain inherited
+    in the live semantic extension.
+  - Brand-safe typography aliases now stage on `hunter/family_safe/*` from Vail Resorts Guidelines.pdf.
+review_readiness:
+  intended_review_channels:
+  - web
+  - email
+  - ads
   review_rules:
-    - subject: Hunter Galano hierarchy
-      channels:
-        - web
-        - email
-        - ads
-      rule: Keep H1 on Galano Grotesque Bold, H2 on Galano Grotesque Semibold, and body copy on Galano Grotesque Regular.
-      source_basis: Hunter typography image.
-    - subject: Hunter contrasting body lane
-      channels:
-        - web
-        - email
-        - ads
-      rule: Preserve Galano Grotesque Light as a documented contrasting-body option rather than forcing it into the primary semantic weight mapping.
-      source_basis: Hunter typography image.
-
+  - subject: Hunter Galano hierarchy
+    channels:
+    - web
+    - email
+    - ads
+    rule: Keep H1 on Galano Grotesque Bold, H2 on Galano Grotesque Semibold, and body copy on Galano Grotesque
+      Regular.
+    source_basis: Hunter typography image.
+  - subject: Hunter contrasting body lane
+    channels:
+    - web
+    - email
+    - ads
+    rule: Preserve Galano Grotesque Light as a documented contrasting-body option rather than forcing
+      it into the primary semantic weight mapping.
+    source_basis: Hunter typography image.
 open_questions: []
+safe_source_reference: Vail Resorts Guidelines.pdf
+safe_source_type: pdf

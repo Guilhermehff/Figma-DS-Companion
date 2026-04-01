@@ -1,19 +1,97 @@
 # Hidden Valley PA Typography Preview
 
-Review state: written in Figma. Verify live state in `figma/brands/hidden_valley_pa/brand.yml`.
+Review state: written_in_figma preview artifact. Verify live write state in `figma/brands/hidden_valley_pa/brand.yml` and Figma.
 
-## Source Roles
+## Original Source Roles
 
-- `Headline`, `Subhead`, `CTA` -> `Roboto Black`, all caps, `0px` tracking
-- `Body` -> `Roboto Regular`, sentence case, `0px` tracking
-- `Display` -> `Mrs Eaves XL Regular`
+- Source role: `headline`
+  Family: `Roboto`
+  Safe family: `Roboto Slab`
+  Style: `Black`
+  Weight label: `Black`
+  Usage scope: `headline`
+  Case: `uppercase_without_punctuation`
+  Tracking: `0px`
+  Leading: `not_specified`
+  Size rule: `not_specified`
+  Punctuation: `no_punctuation`
+  Sample copy: `Hidden Valley`
 
-## Live Semantic Mapping
+- Source role: `subhead`
+  Family: `Roboto`
+  Safe family: `Roboto Slab`
+  Style: `Black`
+  Weight label: `Black`
+  Usage scope: `subhead`
+  Case: `uppercase_without_punctuation`
+  Tracking: `0px`
+  Leading: `not_specified`
+  Size rule: `not_specified`
+  Punctuation: `no_punctuation`
+  Sample copy: `Pennsylvania`
 
-- `family/heading`, `family/body`, `family/action` -> `hidden_valley_pa/family/01`
-- `weight/heading/base`, `weight/heading/strong`, `weight/body/strong`, `weight/action/base` -> `universal/weight/black`
-- `weight/body/base` -> `universal/weight/normal`
+- Source role: `body`
+  Family: `Roboto`
+  Safe family: `Open Sans`
+  Style: `Regular`
+  Weight label: `Regular`
+  Usage scope: `body_copy`
+  Case: `sentence_case`
+  Tracking: `0px`
+  Leading: `not_specified`
+  Size rule: `not_specified`
+  Punctuation: `standard`
+  Sample copy: `Guidelines have not been provided`
 
-## Notes
+- Source role: `display`
+  Family: `Mrs Eaves XL Regular`
+  Safe family: `Roboto Slab`
+  Style: `Regular`
+  Weight label: `Regular`
+  Usage scope: `display_or_logo_applications`
+  Case: `title_case`
+  Tracking: `0px`
+  Leading: `not_specified`
+  Size rule: `not_specified`
+  Punctuation: `standard`
+  Sample copy: `Hidden Valley`
 
-- `Mrs Eaves XL Regular` is preserved as `hidden_valley_pa/family/02` and remains raw-only in the first pass.
+## Role Recipes
+
+### Role: heading
+
+Proposed family token: `hidden_valley_pa/family/01`
+
+Safe family token: `hidden_valley_pa/family_safe/01`
+
+Proposed weight token: `universal/weight/black`
+
+Proposed size token: `inherited current heading ladder`
+
+Recipe notes:
+
+
+### Role: body
+
+Proposed family token: `hidden_valley_pa/family/01`
+
+Safe family token: `hidden_valley_pa/family_safe/02`
+
+Proposed weight token: `universal/weight/normal`
+
+Proposed size token: `inherited current body ladder`
+
+Recipe notes:
+
+
+### Role: action
+
+Proposed family token: `hidden_valley_pa/family/01`
+
+Safe family token: `hidden_valley_pa/family_safe/01`
+
+Proposed weight token: `universal/weight/black`
+
+Proposed size token: `inherited current action ladder`
+
+Recipe notes:

@@ -1,82 +1,134 @@
 # Liberty Mountain Typography Preview
 
-Review state: approved preview artifact. Verify live write state in `figma/brands/liberty_mountain/brand.yml` and Figma.
+Review state: written_in_figma preview artifact. Verify live write state in `figma/brands/liberty_mountain/brand.yml` and Figma.
 
 ## Original Source Roles
 
-- Headline
+- Source role: `headline`
   Family: `Brown`
-  Styles: `Brown Regular`, `Brown Light`
+  Safe family: `Semplicitapro`
+  Style: `Brown Regular`
+  Weight label: `Regular`
+  Usage scope: `Headlines`
+  Case: `not specified in source`
   Tracking: `-40`
   Leading: `90 percent minimum / 100 percent maximum`
   Size rule: `36 to 72 pt and above`
-- Sub headline
-  Family: `Brown Light`
-  Alternate: `Sentinel Book`
+  Punctuation: `not specified in source`
+  Sample copy: `Duis non, commodo luctus!`
+  Notes: The source also lists Brown Light in the Headlines section, so Brown Light remains documented as a raw alternate headline treatment.
+
+- Source role: `headline_alternate`
+  Family: `Brown`
+  Safe family: `Semplicitapro`
+  Style: `Brown Light`
+  Weight label: `Light`
+  Usage scope: `Headlines`
+  Case: `not specified in source`
+  Tracking: `-40`
+  Leading: `90 percent minimum / 100 percent maximum`
+  Size rule: `36 to 72 pt and above`
+  Punctuation: `not specified in source`
+  Sample copy: `Maecenas diam eget.`
+  Notes: Preserved in documentation as a raw alternate headline treatment rather than a separate semantic lane.
+
+- Source role: `subheadline`
+  Family: `Brown`
+  Safe family: `Semplicitapro`
+  Style: `Brown Light`
+  Weight label: `Light`
+  Usage scope: `Sub headline`
+  Case: `not specified in source`
   Tracking: `-40`
   Leading: `110 percent minimum / 120 percent maximum`
   Size rule: `14 to 36 pt`
-- Body copy
-  Family: `Brown Light`
-  Alternate: `Sentinel Book`
+  Punctuation: `not specified in source`
+  Sample copy: `Donec ullamcorper nulla non metus auctor fringilla.`
+  Notes: The source lists Sentinel Book as an alternate subheadline family.
+
+- Source role: `body`
+  Family: `Brown`
+  Safe family: `Open Sans`
+  Style: `Brown Light`
+  Weight label: `Light`
+  Usage scope: `Body copy`
+  Case: `sentence case`
   Tracking: `0`
   Leading: `110 percent minimum / 120 percent maximum`
   Size rule: `below 14 pt`
+  Punctuation: `not specified in source`
+  Sample copy: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.`
+  Notes: The source lists Sentinel Book as an alternate body family.
 
-## Primitive Recommendations
-
-- Proposed raw primary family: `liberty_mountain/family/01` -> `Brown`
-- Proposed raw alternate family: `liberty_mountain/family/02` -> `Sentinel Book`
-- Shared weights:
-  - `Regular` -> `universal/weight/normal`
-  - `Light` -> `universal/weight/light`
-
-## Semantic Mapping
-
-- `family/heading` -> `liberty_mountain/family/01`
-- `family/body` -> `liberty_mountain/family/01`
-- `family/action` -> `liberty_mountain/family/01`
-- `family/heading_safe` -> inherited `universal/family/fallback`
-- `family/body_safe` -> inherited `universal/family/fallback`
-- `family/action_safe` -> inherited `universal/family/fallback`
-- `weight/heading/base` -> `universal/weight/normal`
-- `weight/heading/strong` -> `universal/weight/normal`
-- `weight/body/base` -> `universal/weight/light`
-- `weight/body/strong` -> `universal/weight/normal`
-- `weight/action/base` -> `universal/weight/normal`
-- `size/*` -> inherited from the shared semantic base
+- Source role: `alternate`
+  Family: `Sentinel Book`
+  Safe family: `Open Sans`
+  Style: `Sentinel Book`
+  Weight label: `Book`
+  Usage scope: `Alternate sub headline and body copy`
+  Case: `sentence case`
+  Tracking: `not specified in source`
+  Leading: `follows the paired role`
+  Size rule: `follows the paired role`
+  Punctuation: `not specified in source`
+  Sample copy: `Nullam id dolor! Nibh ultricies ut id elit.`
+  Notes: Preserved as a raw alternate family because the current semantic theme typography schema has no dedicated alternate serif lane.
 
 ## Role Recipes
 
-- Heading
-  Sample copy: `Duis non, commodo luctus!`
-  Proposed family token: `liberty_mountain/family/01`
-  Proposed weight token: `universal/weight/normal`
-  Notes: Brown Light remains documented as a raw alternate headline treatment rather than a separate semantic slot.
-- Subheadline
-  Sample copy: `Donec ullamcorper nulla non metus auctor fringilla.`
-  Proposed family token: `liberty_mountain/family/01`
-  Proposed weight token: `universal/weight/light`
-  Notes: Sentinel Book remains raw-only in the first pass.
-- Body
-  Sample copy: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.`
-  Proposed family token: `liberty_mountain/family/01`
-  Proposed weight token: `universal/weight/light`
-  Notes: Sentinel Book remains raw-only in the first pass.
+### Role: heading
 
-## Review Notes
+Proposed family token: `liberty_mountain/family/01`
 
-- Brown is the live family across the semantic hierarchy because the source explicitly defines it as the primary Liberty Mountain font for print and web.
-- Sentinel Book is preserved as a governed raw family only; the current shared semantic theme typography ladder has no alternate serif slot.
-- The live write overrides `weight/heading/strong` and `weight/action/base` away from the shared black default so Liberty Mountain does not inherit an unsupported heavy treatment.
+Safe family token: `liberty_mountain/family_safe/01`
 
-## Review Readiness
+Proposed weight token: `universal/weight/normal`
 
-- Subject: `Liberty Mountain Brown-led semantic family`
-  Channels: `web`, `email`, `ads`
-  Rule: Brown should drive heading, body, and action families.
-  Source basis: Source typography page
-- Subject: `Liberty Mountain Sentinel containment`
-  Channels: `web`, `email`, `ads`
-  Rule: Sentinel Book remains raw-only in the first pass.
-  Source basis: Source typography page
+Proposed size token: `inherited`
+
+Recipe notes:
+
+- Case: `not specified in source`
+- Tracking: `-40`
+- Leading: `90 percent minimum / 100 percent maximum`
+- Size rule: `36 to 72 pt and above`
+- Punctuation: `not specified in source`
+- Notes: Brown Light remains documented as a raw alternate headline treatment.
+
+### Role: subheadline
+
+Proposed family token: `liberty_mountain/family/01`
+
+Safe family token: `liberty_mountain/family_safe/01`
+
+Proposed weight token: `universal/weight/light`
+
+Proposed size token: `inherited`
+
+Recipe notes:
+
+- Case: `not specified in source`
+- Tracking: `-40`
+- Leading: `110 percent minimum / 120 percent maximum`
+- Size rule: `14 to 36 pt`
+- Punctuation: `not specified in source`
+- Notes: Sentinel Book remains a raw alternate rather than a live semantic family override.
+
+### Role: body
+
+Proposed family token: `liberty_mountain/family/01`
+
+Safe family token: `liberty_mountain/family_safe/02`
+
+Proposed weight token: `universal/weight/light`
+
+Proposed size token: `inherited`
+
+Recipe notes:
+
+- Case: `sentence case`
+- Tracking: `0`
+- Leading: `110 percent minimum / 120 percent maximum`
+- Size rule: `below 14 pt`
+- Punctuation: `not specified in source`
+- Notes: Sentinel Book remains a raw alternate rather than a live semantic family override.
