@@ -1,5 +1,5 @@
 version: 1
-updated: '2026-04-01'
+updated: '2026-04-02'
 brand_id: vail
 display_name: Vail
 status: active
@@ -49,8 +49,6 @@ semantic_overrides:
         targets:
         - surface/brand/*
         - surface/brand/*_inverse
-        - on_surface/brand/*
-        - on_surface/brand/*_inverse
         - foreground/brand
         - foreground/brand_inverse
         - border/brand
@@ -60,8 +58,6 @@ semantic_overrides:
         targets:
         - surface/brand_secondary/*
         - surface/brand_secondary/*_inverse
-        - on_surface/brand_secondary/*
-        - on_surface/brand_secondary/*_inverse
         - foreground/brand_secondary
         - foreground/brand_secondary_inverse
         - border/brand_secondary
@@ -81,6 +77,10 @@ semantic_overrides:
       - border/default_inverse
       - border/subtle
       - border/subtle_inverse
+      - on_surface/brand/*
+      - on_surface/brand/*_inverse
+      - on_surface/brand_secondary/*
+      - on_surface/brand_secondary/*_inverse
       - surface/positive/*
       - surface/positive/*_inverse
       - on_surface/positive/*
@@ -106,12 +106,9 @@ semantic_overrides:
       - border/critical
       - border/critical_inverse
       notes:
-      - '`on_surface/*` tokens in the live semantic theme extension are contrast-derived from `universal/black`
-        or `universal/white` and are not hue-tinted.'
-      - The role-based migration rebuilds Vail around `digital_blue` and `navy` while inheriting the shared
-        neutral and status role sets from the base collection.
-      - '`vintage_blue` and `dark_blue` are preserved as additional raw `_Global: Color` families from
-        the primary Vail brand palette, but they remain outside the current semantic override model.'
+      - '`on_surface/*` tokens in the live semantic theme extension are contrast-derived from `universal/black` or `universal/white` and are not hue-tinted.'
+      - The role-based migration rebuilds Vail around `digital_blue` and `navy` while inheriting the shared neutral and status role sets from the base collection.
+      - '`vintage_blue` and `dark_blue` are preserved as additional raw `_Global: Color` families from the primary Vail brand palette, but they remain outside the current semantic override model.'
       - '`assets/logo` is overridden to the string `Vail` in the semantic theme extension.'
       - '`yellow` remains a governed global family but is no longer promoted into semantic.'
     typography:
@@ -129,13 +126,14 @@ semantic_overrides:
       - semantic_token: family/action_safe
         alias_of: vail/family_safe/01
       inherited_from_base:
-      - weight/*
+      - weight/heading/base
+      - weight/heading/strong
+      - weight/body/base
+      - weight/body/strong
+      - weight/action/base
       notes:
-      - 'Typography weight semantics remain on the shared semantic theme base collection because the approved
-        Vail recipes reuse the universal baseline. Typography size now binds directly from published `Global:
-        Typography`.'
+      - 'Typography weight semantics remain on the shared semantic theme base collection because the approved Vail recipes reuse the universal baseline. Typography size now binds directly from published `Global: Typography`.'
       - Brand-safe typography aliases now stage on `vail/family_safe/*` from Vail Resorts Guidelines.pdf.
 notes:
 - Active Vail brand artifacts now live under figma/brands/vail and are the canonical approved sources.
-- Vail now carries five raw color families in `_Global: Color`, with `vintage_blue` and `dark_blue` preserved
-    as raw-only primary brand families while semantic stays aligned to the digital palette.
+- Vail now carries five raw color families in `_Global: Color`, with `vintage_blue` and `dark_blue` preserved as raw-only primary brand families while semantic stays aligned to the digital palette.

@@ -1,5 +1,5 @@
 version: 1
-updated: '2026-04-01'
+updated: '2026-04-02'
 brand_id: afton_alps
 display_name: Afton Alps
 status: active
@@ -42,23 +42,15 @@ semantic_overrides:
         targets:
         - surface/brand/*
         - surface/brand/*_inverse
-        - on_surface/brand/*
-        - on_surface/brand/*_inverse
         - foreground/brand
-        - foreground/brand_inverse
         - border/brand
-        - border/brand_inverse
       - scope: brand_secondary
         source_family: afton_alps/yellow
         targets:
         - surface/brand_secondary/*
         - surface/brand_secondary/*_inverse
-        - on_surface/brand_secondary/*
-        - on_surface/brand_secondary/*_inverse
         - foreground/brand_secondary
-        - foreground/brand_secondary_inverse
         - border/brand_secondary
-        - border/brand_secondary_inverse
       - scope: asset_logo
         source_value: Afton Alps
         targets:
@@ -74,6 +66,14 @@ semantic_overrides:
       - border/default_inverse
       - border/subtle
       - border/subtle_inverse
+      - on_surface/brand/*
+      - on_surface/brand/*_inverse
+      - foreground/brand_inverse
+      - border/brand_inverse
+      - on_surface/brand_secondary/*
+      - on_surface/brand_secondary/*_inverse
+      - foreground/brand_secondary_inverse
+      - border/brand_secondary_inverse
       - surface/positive/*
       - surface/positive/*_inverse
       - on_surface/positive/*
@@ -99,15 +99,10 @@ semantic_overrides:
       - border/critical
       - border/critical_inverse
       notes:
-      - '`on_surface/*` tokens in the live semantic theme extension are contrast-derived from `universal/black`
-        or `universal/white` and are not hue-tinted.'
-      - No Afton Alps neutral swatch was supplied, so neutral roles remain inherited from the shared semantic
-        base.
-      - The exact source blue anchors the raw ladder at `900`, while the live primary default surface
-        stages on `blue/800` so the source `blue/900` remains the stronger branded text and dark-surface
-        step.
-      - The bright yellow secondary lane uses black on lighter surfaces and reserves white for the darker
-        emphasis step.
+      - '`on_surface/*` tokens in the live semantic theme extension are contrast-derived from `universal/black` or `universal/white` and are not hue-tinted.'
+      - No Afton Alps neutral swatch was supplied, so neutral roles remain inherited from the shared semantic base.
+      - The exact source blue anchors the raw ladder at `900`, while the live primary default surface stages on `blue/800` so the source `blue/900` remains the stronger branded text and dark-surface step.
+      - The bright yellow secondary lane uses black on lighter surfaces and reserves white for the darker emphasis step.
       - '`assets/logo` is overridden to the string `Afton Alps` in the semantic theme extension.'
     typography:
       override_scopes:
@@ -135,12 +130,9 @@ semantic_overrides:
         alias_of: afton_alps/family_safe/01
       inherited_from_base: []
       notes:
-      - Afton Alps is live as a two-family typography system, with `Dela Gothic One` on heading and action
-        work and `Chivo` on the reading lane.
-      - The PDF does not define a separate CTA recipe, so `family/action` and `weight/action/base` follow
-        the headline family and regular weight in the first pass.
+      - Afton Alps is live as a two-family typography system, with `Dela Gothic One` on heading and action work and `Chivo` on the reading lane.
+      - The PDF does not define a separate CTA recipe, so `family/action` and `weight/action/base` follow the headline family and regular weight in the first pass.
       - 'Typography size continues to bind directly from published `Global: Typography`.'
       - Brand-safe typography aliases now stage on `afton_alps/family_safe/*` from Vail Resorts Guidelines.pdf.
 notes:
-- Afton Alps is live in the Foundations file with two raw color families, two raw typography family primitives,
-  a semantic theme logo-name override, and Afton Alps semantic theme extension.
+- Afton Alps is live in the Foundations file with two raw color families, two raw typography family primitives, a semantic theme logo-name override, and Afton Alps semantic theme extension.

@@ -1,5 +1,5 @@
 version: 1
-updated: '2026-04-01'
+updated: '2026-04-02'
 brand_id: hidden_valley_pa
 display_name: Hidden Valley PA
 status: active
@@ -39,26 +39,11 @@ semantic_overrides:
     status: active
     color:
       override_scopes:
-      - scope: neutral
-        source_family: hidden_valley_pa/beige
-        targets:
-        - surface/neutral/*
-        - surface/neutral/*_inverse
-        - foreground/default
-        - foreground/default_inverse
-        - foreground/subtle
-        - foreground/subtle_inverse
-        - border/default
-        - border/default_inverse
-        - border/subtle
-        - border/subtle_inverse
       - scope: brand
         source_family: hidden_valley_pa/laurel_blue
         targets:
         - surface/brand/*
         - surface/brand/*_inverse
-        - on_surface/brand/*
-        - on_surface/brand/*_inverse
         - foreground/brand
         - foreground/brand_inverse
         - border/brand
@@ -68,8 +53,6 @@ semantic_overrides:
         targets:
         - surface/brand_secondary/*
         - surface/brand_secondary/*_inverse
-        - on_surface/brand_secondary/*
-        - on_surface/brand_secondary/*_inverse
         - foreground/brand_secondary
         - foreground/brand_secondary_inverse
         - border/brand_secondary
@@ -79,6 +62,20 @@ semantic_overrides:
         targets:
         - assets/logo
       inherited_from_base:
+      - surface/neutral/*
+      - surface/neutral/*_inverse
+      - foreground/default
+      - foreground/default_inverse
+      - foreground/subtle
+      - foreground/subtle_inverse
+      - border/default
+      - border/default_inverse
+      - border/subtle
+      - border/subtle_inverse
+      - on_surface/brand/*
+      - on_surface/brand/*_inverse
+      - on_surface/brand_secondary/*
+      - on_surface/brand_secondary/*_inverse
       - surface/positive/*
       - surface/positive/*_inverse
       - on_surface/positive/*
@@ -104,18 +101,12 @@ semantic_overrides:
       - border/critical
       - border/critical_inverse
       notes:
-      - '`on_surface/*` tokens in the live semantic theme extension are contrast-derived from `universal/black`
-        or `universal/white` and are not hue-tinted.'
-      - Hidden Valley PA is live in the Foundations file as a Pennsylvania-distinguished brand record
-        separate from Hidden Valley MO.
-      - The current semantic pass uses `beige` for both structural neutral and supporting brand-secondary
-        roles, with `laurel_blue` on the primary expressive lane.
-      - The beige ladder was redesigned after consolidation so the source swatches stay exact inside a
-        smoother single-ramp progression.
-      - '`beige/300` preserves the Light Beige source swatch and `beige/500` preserves the Dark Beige
-        source swatch.'
-      - '`beige/100` is a derived very light beige so white remains governed through universal reuse instead
-        of the brand ramp.'
+      - '`on_surface/*` tokens in the live semantic theme extension are contrast-derived from `universal/black` or `universal/white` and are not hue-tinted.'
+      - Hidden Valley PA is live in the Foundations file as a Pennsylvania-distinguished brand record separate from Hidden Valley MO.
+      - The current semantic pass uses `beige` for both structural neutral and supporting brand-secondary roles, with `laurel_blue` on the primary expressive lane.
+      - The beige ladder was redesigned after consolidation so the source swatches stay exact inside a smoother single-ramp progression.
+      - '`beige/300` preserves the Light Beige source swatch and `beige/500` preserves the Dark Beige source swatch.'
+      - '`beige/100` is a derived very light beige so white remains governed through universal reuse instead of the brand ramp.'
       - '`assets/logo` resolves to the string `Hidden Valley PA` in the semantic theme extension.'
     typography:
       override_scopes:
@@ -127,13 +118,9 @@ semantic_overrides:
         alias_of: hidden_valley_pa/family/01
       - semantic_token: weight/heading/base
         alias_of: universal/weight/black
-      - semantic_token: weight/heading/strong
-        alias_of: universal/weight/black
       - semantic_token: weight/body/base
         alias_of: universal/weight/normal
       - semantic_token: weight/body/strong
-        alias_of: universal/weight/black
-      - semantic_token: weight/action/base
         alias_of: universal/weight/black
       - semantic_token: family/heading_safe
         alias_of: hidden_valley_pa/family_safe/01
@@ -141,14 +128,12 @@ semantic_overrides:
         alias_of: hidden_valley_pa/family_safe/02
       - semantic_token: family/action_safe
         alias_of: hidden_valley_pa/family_safe/01
-      inherited_from_base: []
+      inherited_from_base:
+      - weight/heading/strong
+      - weight/action/base
       notes:
-      - Hidden Valley PA is live as a Roboto-led semantic system, with `Mrs Eaves XL` preserved
-        as the raw display family used for logo and design applications.
-      - The first semantic pass keeps heading, body, and action on `hidden_valley_pa/family/01` because
-        the current shared typography ladder does not have a dedicated ornamental display role.
-      - Brand-safe typography aliases now stage on `hidden_valley_pa/family_safe/*` from Vail Resorts
-        Guidelines.pdf.
+      - Hidden Valley PA is live as a Roboto-led semantic system, with `Mrs Eaves XL` preserved as the raw display family used for logo and design applications.
+      - The first semantic pass keeps heading, body, and action on `hidden_valley_pa/family/01` because the current shared typography ladder does not have a dedicated ornamental display role.
+      - Brand-safe typography aliases now stage on `hidden_valley_pa/family_safe/*` from Vail Resorts Guidelines.pdf.
 notes:
-- Hidden Valley PA is live in the Foundations file with two raw color families, two raw typography family
-  primitives, a semantic theme logo-name override, and Hidden Valley PA semantic theme extension.
+- Hidden Valley PA is live in the Foundations file with two raw color families, two raw typography family primitives, a semantic theme logo-name override, and Hidden Valley PA semantic theme extension.

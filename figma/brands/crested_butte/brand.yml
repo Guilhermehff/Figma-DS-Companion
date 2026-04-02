@@ -1,5 +1,5 @@
 version: 1
-updated: '2026-04-01'
+updated: '2026-04-02'
 brand_id: crested_butte
 display_name: Crested Butte
 status: active
@@ -44,26 +44,11 @@ semantic_overrides:
     status: active
     color:
       override_scopes:
-      - scope: neutral
-        source_family: crested_butte/beyond_black
-        targets:
-        - surface/neutral/*
-        - surface/neutral/*_inverse
-        - foreground/default
-        - foreground/default_inverse
-        - foreground/subtle
-        - foreground/subtle_inverse
-        - border/default
-        - border/default_inverse
-        - border/subtle
-        - border/subtle_inverse
       - scope: brand
         source_family: crested_butte/wild_red
         targets:
         - surface/brand/*
         - surface/brand/*_inverse
-        - on_surface/brand/*
-        - on_surface/brand/*_inverse
         - foreground/brand
         - foreground/brand_inverse
         - border/brand
@@ -73,8 +58,6 @@ semantic_overrides:
         targets:
         - surface/brand_secondary/*
         - surface/brand_secondary/*_inverse
-        - on_surface/brand_secondary/*
-        - on_surface/brand_secondary/*_inverse
         - foreground/brand_secondary
         - foreground/brand_secondary_inverse
         - border/brand_secondary
@@ -84,6 +67,20 @@ semantic_overrides:
         targets:
         - assets/logo
       inherited_from_base:
+      - surface/neutral/*
+      - surface/neutral/*_inverse
+      - foreground/default
+      - foreground/default_inverse
+      - foreground/subtle
+      - foreground/subtle_inverse
+      - border/default
+      - border/default_inverse
+      - border/subtle
+      - border/subtle_inverse
+      - on_surface/brand/*
+      - on_surface/brand/*_inverse
+      - on_surface/brand_secondary/*
+      - on_surface/brand_secondary/*_inverse
       - surface/positive/*
       - surface/positive/*_inverse
       - on_surface/positive/*
@@ -109,11 +106,9 @@ semantic_overrides:
       - border/critical
       - border/critical_inverse
       notes:
-      - '`on_surface/*` tokens in the live semantic theme extension are contrast-derived from `universal/black`
-        or `universal/white` and are not hue-tinted.'
+      - '`on_surface/*` tokens in the live semantic theme extension are contrast-derived from `universal/black` or `universal/white` and are not hue-tinted.'
       - Wild Red now feeds both expressive role sets in the role-based migration.
-      - Beyond Black drives the neutral role set, and no third expressive semantic lane survives this
-        migration.
+      - Beyond Black drives the neutral role set, and no third expressive semantic lane survives this migration.
       - '`assets/logo` is overridden to the string `Crested Butte` in the semantic theme extension.'
     typography:
       override_scopes:
@@ -135,13 +130,12 @@ semantic_overrides:
         alias_of: crested_butte/family_safe/02
       - semantic_token: family/action_safe
         alias_of: crested_butte/family_safe/01
-      inherited_from_base: []
+      inherited_from_base:
+      - weight/heading/strong
+      - weight/body/strong
       notes:
-      - The supplied typography source uses Gibson across all reviewed roles, so a single brand family
-        primitive is sufficient.
-      - '`universal/weight/semibold` is now written in `_Global: Typography` and used by the Crested Butte
-        semantic theme typography override set.'
+      - The supplied typography source uses Gibson across all reviewed roles, so a single brand family primitive is sufficient.
+      - '`universal/weight/semibold` is now written in `_Global: Typography` and used by the Crested Butte semantic theme typography override set.'
       - Brand-safe typography aliases now stage on `crested_butte/family_safe/*` from Vail Resorts Guidelines.pdf.
 notes:
-- Crested Butte is live in the Foundations file with global color ladders, a global typography family,
-  the shared semibold raw weight, a semantic theme logo-name override, and semantic theme extension.
+- Crested Butte is live in the Foundations file with global color ladders, a global typography family, the shared semibold raw weight, a semantic theme logo-name override, and semantic theme extension.

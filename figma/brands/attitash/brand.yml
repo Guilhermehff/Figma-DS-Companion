@@ -1,5 +1,5 @@
 version: 1
-updated: '2026-04-01'
+updated: '2026-04-02'
 brand_id: attitash
 display_name: Attitash
 status: active
@@ -38,26 +38,11 @@ semantic_overrides:
     status: active
     color:
       override_scopes:
-      - scope: neutral
-        source_family: attitash/attitash_neutral
-        targets:
-        - surface/neutral/*
-        - surface/neutral/*_inverse
-        - foreground/default
-        - foreground/default_inverse
-        - foreground/subtle
-        - foreground/subtle_inverse
-        - border/default
-        - border/default_inverse
-        - border/subtle
-        - border/subtle_inverse
       - scope: brand
         source_family: attitash/attitash_blue
         targets:
         - surface/brand/*
         - surface/brand/*_inverse
-        - on_surface/brand/*
-        - on_surface/brand/*_inverse
         - foreground/brand
         - foreground/brand_inverse
         - border/brand
@@ -67,8 +52,6 @@ semantic_overrides:
         targets:
         - surface/brand_secondary/*
         - surface/brand_secondary/*_inverse
-        - on_surface/brand_secondary/*
-        - on_surface/brand_secondary/*_inverse
         - foreground/brand_secondary
         - foreground/brand_secondary_inverse
         - border/brand_secondary
@@ -78,6 +61,20 @@ semantic_overrides:
         targets:
         - assets/logo
       inherited_from_base:
+      - surface/neutral/*
+      - surface/neutral/*_inverse
+      - foreground/default
+      - foreground/default_inverse
+      - foreground/subtle
+      - foreground/subtle_inverse
+      - border/default
+      - border/default_inverse
+      - border/subtle
+      - border/subtle_inverse
+      - on_surface/brand/*
+      - on_surface/brand/*_inverse
+      - on_surface/brand_secondary/*
+      - on_surface/brand_secondary/*_inverse
       - surface/positive/*
       - surface/positive/*_inverse
       - on_surface/positive/*
@@ -103,14 +100,10 @@ semantic_overrides:
       - border/critical
       - border/critical_inverse
       notes:
-      - '`on_surface/*` tokens in the live semantic theme extension are contrast-derived from `universal/black`
-        or `universal/white` and are not hue-tinted.'
-      - Attitash is live in the Foundations file with `attitash_neutral` as the structural lane, `attitash_blue`
-        as the primary expressive lane, and `daybreak` as the supporting expressive lane.
-      - '`attitash_neutral` preserves the `Mogul Shadow 20%`, `Mogul Shadow`, and `Sharp Edge Grey` source
-        anchors directly.'
-      - The duplicate raw-only grey ramps were removed because they introduced no additional governed
-        values beyond `attitash_neutral`.
+      - '`on_surface/*` tokens in the live semantic theme extension are contrast-derived from `universal/black` or `universal/white` and are not hue-tinted.'
+      - Attitash is live in the Foundations file with `attitash_neutral` as the structural lane, `attitash_blue` as the primary expressive lane, and `daybreak` as the supporting expressive lane.
+      - '`attitash_neutral` preserves the `Mogul Shadow 20%`, `Mogul Shadow`, and `Sharp Edge Grey` source anchors directly.'
+      - The duplicate raw-only grey ramps were removed because they introduced no additional governed values beyond `attitash_neutral`.
       - '`assets/logo` resolves to the string `Attitash` in the semantic theme extension.'
     typography:
       override_scopes:
@@ -120,14 +113,10 @@ semantic_overrides:
         alias_of: attitash/family/01
       - semantic_token: family/action
         alias_of: attitash/family/01
-      - semantic_token: weight/heading/base
-        alias_of: universal/weight/bold
       - semantic_token: weight/heading/strong
         alias_of: universal/weight/bold
       - semantic_token: weight/body/base
         alias_of: universal/weight/light
-      - semantic_token: weight/body/strong
-        alias_of: universal/weight/medium
       - semantic_token: weight/action/base
         alias_of: universal/weight/bold
       - semantic_token: family/heading_safe
@@ -136,13 +125,12 @@ semantic_overrides:
         alias_of: attitash/family_safe/02
       - semantic_token: family/action_safe
         alias_of: attitash/family_safe/01
-      inherited_from_base: []
+      inherited_from_base:
+      - weight/heading/base
+      - weight/body/strong
       notes:
-      - Attitash is live as a Buenos Aires-led semantic system, with `Coordinates` preserved as the raw
-        alternate family for subhead-style work that does not yet have its own semantic lane.
-      - The first semantic pass keeps heading, body, and action on `attitash/family/01` because the current
-        shared typography schema has no dedicated alternate subhead family slot.
+      - Attitash is live as a Buenos Aires-led semantic system, with `Coordinates` preserved as the raw alternate family for subhead-style work that does not yet have its own semantic lane.
+      - The first semantic pass keeps heading, body, and action on `attitash/family/01` because the current shared typography schema has no dedicated alternate subhead family slot.
       - Brand-safe typography aliases now stage on `attitash/family_safe/*` from Vail Resorts Guidelines.pdf.
 notes:
-- Attitash is live in the Foundations file with three raw color families, two raw typography family primitives,
-  a semantic theme logo-name override, and Attitash semantic theme extension.
+- Attitash is live in the Foundations file with three raw color families, two raw typography family primitives, a semantic theme logo-name override, and Attitash semantic theme extension.

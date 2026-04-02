@@ -1,5 +1,5 @@
 version: 1
-updated: '2026-04-01'
+updated: '2026-04-02'
 brand_id: keystone
 display_name: Keystone
 status: active
@@ -42,26 +42,11 @@ semantic_overrides:
     status: active
     color:
       override_scopes:
-      - scope: neutral
-        source_family: keystone/cool_grey
-        targets:
-        - surface/neutral/*
-        - surface/neutral/*_inverse
-        - foreground/default
-        - foreground/default_inverse
-        - foreground/subtle
-        - foreground/subtle_inverse
-        - border/default
-        - border/default_inverse
-        - border/subtle
-        - border/subtle_inverse
       - scope: brand
         source_family: keystone/valencia
         targets:
         - surface/brand/*
         - surface/brand/*_inverse
-        - on_surface/brand/*
-        - on_surface/brand/*_inverse
         - foreground/brand
         - foreground/brand_inverse
         - border/brand
@@ -71,8 +56,6 @@ semantic_overrides:
         targets:
         - surface/brand_secondary/*
         - surface/brand_secondary/*_inverse
-        - on_surface/brand_secondary/*
-        - on_surface/brand_secondary/*_inverse
         - foreground/brand_secondary
         - foreground/brand_secondary_inverse
         - border/brand_secondary
@@ -82,6 +65,20 @@ semantic_overrides:
         targets:
         - assets/logo
       inherited_from_base:
+      - surface/neutral/*
+      - surface/neutral/*_inverse
+      - foreground/default
+      - foreground/default_inverse
+      - foreground/subtle
+      - foreground/subtle_inverse
+      - border/default
+      - border/default_inverse
+      - border/subtle
+      - border/subtle_inverse
+      - on_surface/brand/*
+      - on_surface/brand/*_inverse
+      - on_surface/brand_secondary/*
+      - on_surface/brand_secondary/*_inverse
       - surface/positive/*
       - surface/positive/*_inverse
       - on_surface/positive/*
@@ -107,11 +104,9 @@ semantic_overrides:
       - border/critical
       - border/critical_inverse
       notes:
-      - '`on_surface/*` tokens in the live semantic theme extension are contrast-derived from `universal/black`
-        or `universal/white` and are not hue-tinted.'
+      - '`on_surface/*` tokens in the live semantic theme extension are contrast-derived from `universal/black` or `universal/white` and are not hue-tinted.'
       - Cool Grey continues to map to the neutral role set only.
-      - The reviewed role-based migration uses `valencia` and `curious_blue` as the only expressive semantic
-        lanes.
+      - The reviewed role-based migration uses `valencia` and `curious_blue` as the only expressive semantic lanes.
       - '`assets/logo` is overridden to the string `Keystone` in the semantic theme extension.'
     typography:
       override_scopes:
@@ -121,14 +116,8 @@ semantic_overrides:
         alias_of: keystone/family/02
       - semantic_token: family/action
         alias_of: keystone/family/01
-      - semantic_token: weight/heading/base
-        alias_of: universal/weight/bold
-      - semantic_token: weight/body/base
-        alias_of: universal/weight/medium
       - semantic_token: weight/action/base
         alias_of: universal/weight/bold
-      - semantic_token: size/action/base
-        alias_of: universal/size/500
       - semantic_token: family/heading_safe
         alias_of: keystone/family_safe/01
       - semantic_token: family/body_safe
@@ -136,18 +125,14 @@ semantic_overrides:
       - semantic_token: family/action_safe
         alias_of: keystone/family_safe/01
       inherited_from_base:
+      - weight/heading/base
       - weight/heading/strong
+      - weight/body/base
       - weight/body/strong
-      - size/heading/*
-      - size/body/*
       notes:
-      - CTA is approved to use Futura Bold, so the semantic action family now aliases the Keystone primary
-        family.
-      - 'No new raw size step was introduced in this pass; typography size continues to bind the published
-        shared `Global: Typography` ladder while the explicit 48px headline recipe remains documented
-        for a future ladder decision.'
+      - CTA is approved to use Futura Bold, so the semantic action family now aliases the Keystone primary family.
+      - 'No new raw size step was introduced in this pass; typography size continues to bind the published shared `Global: Typography` ladder while the explicit 48px headline recipe remains documented for a future ladder decision.'
       - Brand-safe typography aliases now stage on `keystone/family_safe/*` from Vail Resorts Guidelines.pdf.
 notes:
-- Keystone is live in the Foundations file with three raw color families, two raw typography family primitives,
-  a semantic theme logo-name override, and semantic theme extension.
+- Keystone is live in the Foundations file with three raw color families, two raw typography family primitives, a semantic theme logo-name override, and semantic theme extension.
 - The live write intentionally defers any shared size-ladder expansion beyond the current governed steps.

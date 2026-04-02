@@ -1,5 +1,5 @@
 version: 1
-updated: '2026-04-01'
+updated: '2026-04-02'
 brand_id: park_city
 display_name: Park City
 status: active
@@ -40,26 +40,12 @@ semantic_overrides:
     status: active
     color:
       override_scopes:
-      - scope: neutral
-        source_family: park_city/park_city_gray
-        targets:
-        - surface/neutral/*
-        - surface/neutral/*_inverse
-        - foreground/default
-        - foreground/default_inverse
-        - foreground/subtle
-        - foreground/subtle_inverse
-        - border/default
-        - border/default_inverse
-        - border/subtle
-        - border/subtle_inverse
       - scope: brand
         source_family: park_city/park_city_red
         targets:
         - surface/brand/*
         - surface/brand/*_inverse
-        - on_surface/brand/*
-        - on_surface/brand/*_inverse
+        - on_surface/brand/emphasis_inverse
         - foreground/brand
         - foreground/brand_inverse
         - border/brand
@@ -69,8 +55,7 @@ semantic_overrides:
         targets:
         - surface/brand_secondary/*
         - surface/brand_secondary/*_inverse
-        - on_surface/brand_secondary/*
-        - on_surface/brand_secondary/*_inverse
+        - on_surface/brand_secondary/emphasis_inverse
         - foreground/brand_secondary
         - foreground/brand_secondary_inverse
         - border/brand_secondary
@@ -80,6 +65,26 @@ semantic_overrides:
         targets:
         - assets/logo
       inherited_from_base:
+      - surface/neutral/*
+      - surface/neutral/*_inverse
+      - foreground/default
+      - foreground/default_inverse
+      - foreground/subtle
+      - foreground/subtle_inverse
+      - border/default
+      - border/default_inverse
+      - border/subtle
+      - border/subtle_inverse
+      - on_surface/brand/*
+      - on_surface/brand/default_inverse
+      - on_surface/brand/muted_inverse
+      - on_surface/brand/strong_inverse
+      - on_surface/brand/subtle_inverse
+      - on_surface/brand_secondary/*
+      - on_surface/brand_secondary/default_inverse
+      - on_surface/brand_secondary/muted_inverse
+      - on_surface/brand_secondary/strong_inverse
+      - on_surface/brand_secondary/subtle_inverse
       - surface/positive/*
       - surface/positive/*_inverse
       - on_surface/positive/*
@@ -105,17 +110,12 @@ semantic_overrides:
       - border/critical
       - border/critical_inverse
       notes:
-      - '`on_surface/*` tokens in the live semantic theme extension are contrast-derived from `universal/black`
-        or `universal/white` and are not hue-tinted.'
-      - Park City keeps `park_city_gray` as the semantic neutral family, but the live ladder is now a
-        true gray scale anchored by `Cool Gray` at `park_city_gray/400` and `Park City Gray` at `park_city_gray/800`.
-      - '`pale_red` is preserved as a raw global-only family for branded wash usage and no longer drives
-        semantic neutral surfaces.'
-      - '`park_city_red` drives the primary expressive semantic lane, while `bright_red` drives the secondary
-        expressive lane.'
+      - '`on_surface/*` tokens in the live semantic theme extension are contrast-derived from `universal/black` or `universal/white` and are not hue-tinted.'
+      - Park City keeps `park_city_gray` as the semantic neutral family, but the live ladder is now a true gray scale anchored by `Cool Gray` at `park_city_gray/400` and `Park City Gray` at `park_city_gray/800`.
+      - '`pale_red` is preserved as a raw global-only family for branded wash usage and no longer drives semantic neutral surfaces.'
+      - '`park_city_red` drives the primary expressive semantic lane, while `bright_red` drives the secondary expressive lane.'
       - '`assets/logo` is overridden to the string `Park City` in the semantic theme extension.'
-      - Exact white remains shared through `universal/white` rather than duplicated under the Park City
-        group.
+      - Exact white remains shared through `universal/white` rather than duplicated under the Park City group.
     typography:
       override_scopes:
       - semantic_token: family/heading
@@ -124,8 +124,6 @@ semantic_overrides:
         alias_of: park_city/family/01
       - semantic_token: family/action
         alias_of: park_city/family/01
-      - semantic_token: weight/heading/base
-        alias_of: universal/weight/bold
       - semantic_token: weight/body/base
         alias_of: universal/weight/light
       - semantic_token: weight/action/base
@@ -137,16 +135,13 @@ semantic_overrides:
       - semantic_token: family/action_safe
         alias_of: park_city/family_safe/03
       inherited_from_base:
+      - weight/heading/base
       - weight/heading/strong
       - weight/body/strong
       notes:
-      - Park City uses `Futura Std` across headline, body, and CTA work, with Bold and Light carrying
-        the hierarchy.
-      - '`park_city/family/02` preserves `Trade Gothic LT Std Condensed No. 20` as a raw primitive
-        because the current semantic theme typography schema has no dedicated subhead family lane.'
-      - 'Typography size now binds directly from published `Global: Typography`; the supplied hierarchy
-        guidance defines case, tracking, and leading behavior but not new governed numeric size tokens.'
+      - Park City uses `Futura Std` across headline, body, and CTA work, with Bold and Light carrying the hierarchy.
+      - '`park_city/family/02` preserves `Trade Gothic LT Std Condensed No. 20` as a raw primitive because the current semantic theme typography schema has no dedicated subhead family lane.'
+      - 'Typography size now binds directly from published `Global: Typography`; the supplied hierarchy guidance defines case, tracking, and leading behavior but not new governed numeric size tokens.'
       - Brand-safe typography aliases now stage on `park_city/family_safe/*` from Vail Resorts Guidelines.pdf.
 notes:
-- Park City is live in the Foundations file with four raw color families, two raw typography family primitives,
-  a semantic theme logo-name override, and Park City semantic theme extension.
+- Park City is live in the Foundations file with four raw color families, two raw typography family primitives, a semantic theme logo-name override, and Park City semantic theme extension.

@@ -1,5 +1,5 @@
 version: 1
-updated: '2026-04-01'
+updated: '2026-04-02'
 brand_id: roundtop_mountain
 display_name: Roundtop Mountain
 status: active
@@ -42,8 +42,6 @@ semantic_overrides:
         targets:
         - surface/brand/*
         - surface/brand/*_inverse
-        - on_surface/brand/*
-        - on_surface/brand/*_inverse
         - foreground/brand
         - foreground/brand_inverse
         - border/brand
@@ -53,8 +51,6 @@ semantic_overrides:
         targets:
         - surface/brand_secondary/*
         - surface/brand_secondary/*_inverse
-        - on_surface/brand_secondary/*
-        - on_surface/brand_secondary/*_inverse
         - foreground/brand_secondary
         - foreground/brand_secondary_inverse
         - border/brand_secondary
@@ -74,6 +70,10 @@ semantic_overrides:
       - border/default_inverse
       - border/subtle
       - border/subtle_inverse
+      - on_surface/brand/*
+      - on_surface/brand/*_inverse
+      - on_surface/brand_secondary/*
+      - on_surface/brand_secondary/*_inverse
       - surface/positive/*
       - surface/positive/*_inverse
       - on_surface/positive/*
@@ -99,8 +99,7 @@ semantic_overrides:
       - border/critical
       - border/critical_inverse
       notes:
-      - '`on_surface/*` tokens in the live semantic theme extension are contrast-derived from `universal/black`
-        or `universal/white` and are not hue-tinted.'
+      - '`on_surface/*` tokens in the live semantic theme extension are contrast-derived from `universal/black` or `universal/white` and are not hue-tinted.'
       - '`green` drives the primary expressive lane and `blue` drives the secondary expressive lane.'
       - '`yellow`, `orange`, `red`, and `cyan` remain governed raw-only families in the first pass.'
     typography:
@@ -129,13 +128,9 @@ semantic_overrides:
         alias_of: roundtop_mountain/family_safe/01
       inherited_from_base: []
       notes:
-      - Roundtop Mountain is live as a two-family typography system, with `Rhode` on heading and action
-        work and `Antique Olive` on the reading lane.
-      - The PDF does not define a separate CTA recipe, so `family/action` follows the Rhode headline family
-        in the first pass.
+      - Roundtop Mountain is live as a two-family typography system, with `Rhode` on heading and action work and `Antique Olive` on the reading lane.
+      - The PDF does not define a separate CTA recipe, so `family/action` follows the Rhode headline family in the first pass.
       - 'Typography size continues to bind directly from published `Global: Typography`.'
-      - Brand-safe typography aliases now stage on `roundtop_mountain/family_safe/*` from Vail Resorts
-        Guidelines.pdf.
+      - Brand-safe typography aliases now stage on `roundtop_mountain/family_safe/*` from Vail Resorts Guidelines.pdf.
 notes:
-- Roundtop Mountain is live in the Foundations file with six raw color families, two raw typography family
-  primitives, and Roundtop Mountain semantic theme extension.
+- Roundtop Mountain is live in the Foundations file with six raw color families, two raw typography family primitives, and Roundtop Mountain semantic theme extension.

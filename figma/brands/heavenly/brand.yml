@@ -1,5 +1,5 @@
 version: 1
-updated: '2026-04-01'
+updated: '2026-04-02'
 brand_id: heavenly
 display_name: Heavenly
 status: active
@@ -47,8 +47,6 @@ semantic_overrides:
         targets:
         - surface/brand/*
         - surface/brand/*_inverse
-        - on_surface/brand/*
-        - on_surface/brand/*_inverse
         - foreground/brand
         - foreground/brand_inverse
         - border/brand
@@ -58,8 +56,6 @@ semantic_overrides:
         targets:
         - surface/brand_secondary/*
         - surface/brand_secondary/*_inverse
-        - on_surface/brand_secondary/*
-        - on_surface/brand_secondary/*_inverse
         - foreground/brand_secondary
         - foreground/brand_secondary_inverse
         - border/brand_secondary
@@ -79,6 +75,10 @@ semantic_overrides:
       - border/default_inverse
       - border/subtle
       - border/subtle_inverse
+      - on_surface/brand/*
+      - on_surface/brand/*_inverse
+      - on_surface/brand_secondary/*
+      - on_surface/brand_secondary/*_inverse
       - surface/positive/*
       - surface/positive/*_inverse
       - on_surface/positive/*
@@ -104,11 +104,9 @@ semantic_overrides:
       - border/critical
       - border/critical_inverse
       notes:
-      - '`on_surface/*` tokens in the live semantic theme extension are contrast-derived from `universal/black`
-        or `universal/white` and are not hue-tinted.'
+      - '`on_surface/*` tokens in the live semantic theme extension are contrast-derived from `universal/black` or `universal/white` and are not hue-tinted.'
       - Exact white and black remain inherited through the shared neutral and status role recipes.
-      - The role-based migration keeps `snow_flower_red` and `deep_water_blue` as the only expressive
-        semantic lanes.
+      - The role-based migration keeps `snow_flower_red` and `deep_water_blue` as the only expressive semantic lanes.
       - '`assets/logo` is overridden to the string `Heavenly` in the semantic theme extension.'
       - '`shore_blue` remains a governed global family but is no longer promoted into semantic.'
     typography:
@@ -123,8 +121,6 @@ semantic_overrides:
         alias_of: universal/weight/bold
       - semantic_token: weight/body/base
         alias_of: universal/weight/normal
-      - semantic_token: weight/body/strong
-        alias_of: universal/weight/medium
       - semantic_token: family/heading_safe
         alias_of: heavenly/family_safe/01
       - semantic_token: family/body_safe
@@ -133,16 +129,12 @@ semantic_overrides:
         alias_of: heavenly/family_safe/01
       inherited_from_base:
       - family/action
-      - weight/action/*
+      - weight/body/strong
+      - weight/action/base
       notes:
-      - Heavenly stages on a two-family system: Din Condensed for titles and headlines, and Brandon Grotesque
-          for subheads and body copy.
-      - CTA typography remains intentionally inherited because the supplied image specifies CTA tracking
-        but does not explicitly name a CTA family or weight.
-      - The shared semantic theme base now also includes `weight/heading/strong`, `weight/body/strong`,
-        and `size/body/lg` so the Heavenly extension can override against governed base variables rather
-        than a parallel schema.
+      - Heavenly stages on a two-family system: Din Condensed for titles and headlines, and Brandon Grotesque for subheads and body copy.
+      - CTA typography remains intentionally inherited because the supplied image specifies CTA tracking but does not explicitly name a CTA family or weight.
+      - The shared semantic theme base now also includes `weight/heading/strong`, `weight/body/strong`, and `size/body/lg` so the Heavenly extension can override against governed base variables rather than a parallel schema.
       - Brand-safe typography aliases now stage on `heavenly/family_safe/*` from Vail Resorts Guidelines.pdf.
 notes:
-- Heavenly is live in the Foundations file with global color ladders, two global typography families,
-  the shared raw light weight, a semantic theme logo-name override, and semantic theme extension.
+- Heavenly is live in the Foundations file with global color ladders, two global typography families, the shared raw light weight, a semantic theme logo-name override, and semantic theme extension.

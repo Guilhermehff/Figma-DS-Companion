@@ -1,5 +1,5 @@
 version: 1
-updated: '2026-04-01'
+updated: '2026-04-02'
 brand_id: whistler_blackcomb
 display_name: Whistler Blackcomb
 status: active
@@ -42,8 +42,6 @@ semantic_overrides:
         targets:
         - surface/brand/*
         - surface/brand/*_inverse
-        - on_surface/brand/*
-        - on_surface/brand/*_inverse
         - foreground/brand
         - foreground/brand_inverse
         - border/brand
@@ -53,8 +51,6 @@ semantic_overrides:
         targets:
         - surface/brand_secondary/*
         - surface/brand_secondary/*_inverse
-        - on_surface/brand_secondary/*
-        - on_surface/brand_secondary/*_inverse
         - foreground/brand_secondary
         - foreground/brand_secondary_inverse
         - border/brand_secondary
@@ -74,6 +70,10 @@ semantic_overrides:
       - border/default_inverse
       - border/subtle
       - border/subtle_inverse
+      - on_surface/brand/*
+      - on_surface/brand/*_inverse
+      - on_surface/brand_secondary/*
+      - on_surface/brand_secondary/*_inverse
       - surface/positive/*
       - surface/positive/*_inverse
       - on_surface/positive/*
@@ -99,15 +99,11 @@ semantic_overrides:
       - border/critical
       - border/critical_inverse
       notes:
-      - '`on_surface/*` tokens in the live semantic theme extension are contrast-derived from `universal/black`
-        or `universal/white` and are not hue-tinted.'
-      - Exact black and white remain inherited through the shared neutral role recipes because the supplied
-        palette matches `universal/black` and `universal/white`.
-      - The official palette supplies one expressive hue, so `whistler_blackcomb/red` now drives both
-        expressive semantic lanes in the current live schema.
+      - '`on_surface/*` tokens in the live semantic theme extension are contrast-derived from `universal/black` or `universal/white` and are not hue-tinted.'
+      - Exact black and white remain inherited through the shared neutral role recipes because the supplied palette matches `universal/black` and `universal/white`.
+      - The official palette supplies one expressive hue, so `whistler_blackcomb/red` now drives both expressive semantic lanes in the current live schema.
       - '`assets/logo` is overridden to the string `Whistler Blackcomb` in the semantic theme extension.'
-      - The source guidance to balance red, black, and white evenly is preserved as a composition rule
-        in the intake and preview artifacts rather than as duplicate raw exact tokens.
+      - The source guidance to balance red, black, and white evenly is preserved as a composition rule in the intake and preview artifacts rather than as duplicate raw exact tokens.
     typography:
       override_scopes:
       - semantic_token: family/heading
@@ -133,14 +129,9 @@ semantic_overrides:
       inherited_from_base:
       - weight/heading/strong
       notes:
-      - Whistler Blackcomb stages on one raw family, `Proxima Nova`, across headline, eyebrow, subhead,
-        body, and button work, with weight carrying the hierarchy.
-      - Eyebrow remains a documented role recipe under the heading lane because the current semantic theme
-        typography schema has no separate eyebrow token.
-      - Live size semantics remain inherited because the supplied hierarchy defines tracking and leading
-        behavior but not governed token sizes.
-      - Brand-safe typography aliases now stage on `whistler_blackcomb/family_safe/*` from Vail Resorts
-        Guidelines.pdf.
+      - Whistler Blackcomb stages on one raw family, `Proxima Nova`, across headline, eyebrow, subhead, body, and button work, with weight carrying the hierarchy.
+      - Eyebrow remains a documented role recipe under the heading lane because the current semantic theme typography schema has no separate eyebrow token.
+      - Live size semantics remain inherited because the supplied hierarchy defines tracking and leading behavior but not governed token sizes.
+      - Brand-safe typography aliases now stage on `whistler_blackcomb/family_safe/*` from Vail Resorts Guidelines.pdf.
 notes:
-- Whistler Blackcomb is live in the Foundations file with one raw color family, one raw typography family
-  primitive, a semantic theme logo-name override, and Whistler Blackcomb semantic theme extension.
+- Whistler Blackcomb is live in the Foundations file with one raw color family, one raw typography family primitive, a semantic theme logo-name override, and Whistler Blackcomb semantic theme extension.

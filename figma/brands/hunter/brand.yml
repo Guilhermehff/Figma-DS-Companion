@@ -1,5 +1,5 @@
 version: 1
-updated: '2026-04-01'
+updated: '2026-04-02'
 brand_id: hunter
 display_name: Hunter
 status: active
@@ -39,26 +39,11 @@ semantic_overrides:
     status: active
     color:
       override_scopes:
-      - scope: neutral
-        source_family: hunter/hunter_neutral
-        targets:
-        - surface/neutral/*
-        - surface/neutral/*_inverse
-        - foreground/default
-        - foreground/default_inverse
-        - foreground/subtle
-        - foreground/subtle_inverse
-        - border/default
-        - border/default_inverse
-        - border/subtle
-        - border/subtle_inverse
       - scope: brand
         source_family: hunter/mountain_blue
         targets:
         - surface/brand/*
         - surface/brand/*_inverse
-        - on_surface/brand/*
-        - on_surface/brand/*_inverse
         - foreground/brand
         - foreground/brand_inverse
         - border/brand
@@ -68,8 +53,6 @@ semantic_overrides:
         targets:
         - surface/brand_secondary/*
         - surface/brand_secondary/*_inverse
-        - on_surface/brand_secondary/*
-        - on_surface/brand_secondary/*_inverse
         - foreground/brand_secondary
         - foreground/brand_secondary_inverse
         - border/brand_secondary
@@ -79,6 +62,20 @@ semantic_overrides:
         targets:
         - assets/logo
       inherited_from_base:
+      - surface/neutral/*
+      - surface/neutral/*_inverse
+      - foreground/default
+      - foreground/default_inverse
+      - foreground/subtle
+      - foreground/subtle_inverse
+      - border/default
+      - border/default_inverse
+      - border/subtle
+      - border/subtle_inverse
+      - on_surface/brand/*
+      - on_surface/brand/*_inverse
+      - on_surface/brand_secondary/*
+      - on_surface/brand_secondary/*_inverse
       - surface/positive/*
       - surface/positive/*_inverse
       - on_surface/positive/*
@@ -104,21 +101,12 @@ semantic_overrides:
       - border/critical
       - border/critical_inverse
       notes:
-      - '`on_surface/*` tokens in the live semantic theme extension are contrast-derived from `universal/black`
-        or `universal/white` and are not hue-tinted.'
-      - Hunter is live in the Foundations file with `hunter_neutral` as the structural neutral lane, `mountain_blue`
-        as the primary expressive lane, and `sunrise_orange` as the supporting expressive lane.
-      - User-approved live write. `hunter_neutral` maps only Flurry White and City Grey into the structural
-        neutral family, while Snow Blue and Mountain Blue move together into the expressive `mountain_blue`
-        ramp.
-      - User-approved live write. `surface/brand/default`, `surface/brand/strong`, and `surface/brand/emphasis`
-        stage on `hunter/mountain_blue/600`, `700`, and `800` so the primary expressive lane holds the
-        shared white on-surface contract.
-      - User-approved live write. `surface/brand_secondary/default`, `surface/brand_secondary/strong`,
-        and `surface/brand_secondary/emphasis` stage on `hunter/sunrise_orange/600`, `700`, and `800`
-        so the supporting expressive lane also holds the shared white on-surface contract.
-      - User-approved live write. `forest_green` is preserved as a governed global-only family in the
-        first pass and is intentionally not mapped into the semantic extension.
+      - '`on_surface/*` tokens in the live semantic theme extension are contrast-derived from `universal/black` or `universal/white` and are not hue-tinted.'
+      - Hunter is live in the Foundations file with `hunter_neutral` as the structural neutral lane, `mountain_blue` as the primary expressive lane, and `sunrise_orange` as the supporting expressive lane.
+      - User-approved live write. `hunter_neutral` maps only Flurry White and City Grey into the structural neutral family, while Snow Blue and Mountain Blue move together into the expressive `mountain_blue` ramp.
+      - User-approved live write. `surface/brand/default`, `surface/brand/strong`, and `surface/brand/emphasis` stage on `hunter/mountain_blue/600`, `700`, and `800` so the primary expressive lane holds the shared white on-surface contract.
+      - User-approved live write. `surface/brand_secondary/default`, `surface/brand_secondary/strong`, and `surface/brand_secondary/emphasis` stage on `hunter/sunrise_orange/600`, `700`, and `800` so the supporting expressive lane also holds the shared white on-surface contract.
+      - User-approved live write. `forest_green` is preserved as a governed global-only family in the first pass and is intentionally not mapped into the semantic extension.
       - '`assets/logo` resolves to the string `Hunter` in the semantic theme extension.'
     typography:
       override_scopes:
@@ -126,8 +114,6 @@ semantic_overrides:
         alias_of: hunter/family/01
       - semantic_token: family/body
         alias_of: hunter/family/01
-      - semantic_token: weight/heading/base
-        alias_of: universal/weight/bold
       - semantic_token: weight/body/base
         alias_of: universal/weight/normal
       - semantic_token: weight/body/strong
@@ -140,18 +126,14 @@ semantic_overrides:
         alias_of: hunter/family_safe/01
       inherited_from_base:
       - family/action
-      - weight/action/*
+      - weight/heading/base
+      - weight/heading/strong
+      - weight/action/base
       notes:
-      - Hunter is live as a one-family typography system with `family/heading` and `family/body` both
-        mapped to `hunter/family/01`.
-      - '`weight/heading/base = universal/weight/bold`, `weight/body/base = universal/weight/normal`,
-        and `weight/body/strong = universal/weight/semibold` stage the explicit headline, subheadline,
-        and body hierarchy through the current semantic theme typography ladder.'
-      - Galano Grotesque Light remains documented as a raw contrasting-body option rather than a separate
-        semantic lane.
-      - The source does not define a CTA or action recipe, so the action lane remains inherited in the
-        live semantic extension.
+      - Hunter is live as a one-family typography system with `family/heading` and `family/body` both mapped to `hunter/family/01`.
+      - '`weight/heading/base = universal/weight/bold`, `weight/body/base = universal/weight/normal`, and `weight/body/strong = universal/weight/semibold` stage the explicit headline, subheadline, and body hierarchy through the current semantic theme typography ladder.'
+      - Galano Grotesque Light remains documented as a raw contrasting-body option rather than a separate semantic lane.
+      - The source does not define a CTA or action recipe, so the action lane remains inherited in the live semantic extension.
       - Brand-safe typography aliases now stage on `hunter/family_safe/*` from Vail Resorts Guidelines.pdf.
 notes:
-- Hunter is live in the Foundations file with four raw color families, one raw typography family primitive,
-  a semantic theme logo-name override, a Hunter semantic theme extension.
+- Hunter is live in the Foundations file with four raw color families, one raw typography family primitive, a semantic theme logo-name override, a Hunter semantic theme extension.

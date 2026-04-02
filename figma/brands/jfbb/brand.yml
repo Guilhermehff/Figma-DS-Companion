@@ -1,5 +1,5 @@
 version: 1
-updated: '2026-04-01'
+updated: '2026-04-02'
 brand_id: jfbb
 display_name: JFBB
 status: active
@@ -39,26 +39,11 @@ semantic_overrides:
     status: active
     color:
       override_scopes:
-      - scope: neutral
-        source_family: jfbb/snow_day
-        targets:
-        - surface/neutral/*
-        - surface/neutral/*_inverse
-        - foreground/default
-        - foreground/default_inverse
-        - foreground/subtle
-        - foreground/subtle_inverse
-        - border/default
-        - border/default_inverse
-        - border/subtle
-        - border/subtle_inverse
       - scope: brand
         source_family: jfbb/early_sunrise
         targets:
         - surface/brand/*
         - surface/brand/*_inverse
-        - on_surface/brand/*
-        - on_surface/brand/*_inverse
         - foreground/brand
         - foreground/brand_inverse
         - border/brand
@@ -68,8 +53,6 @@ semantic_overrides:
         targets:
         - surface/brand_secondary/*
         - surface/brand_secondary/*_inverse
-        - on_surface/brand_secondary/*
-        - on_surface/brand_secondary/*_inverse
         - foreground/brand_secondary
         - foreground/brand_secondary_inverse
         - border/brand_secondary
@@ -79,6 +62,20 @@ semantic_overrides:
         targets:
         - assets/logo
       inherited_from_base:
+      - surface/neutral/*
+      - surface/neutral/*_inverse
+      - foreground/default
+      - foreground/default_inverse
+      - foreground/subtle
+      - foreground/subtle_inverse
+      - border/default
+      - border/default_inverse
+      - border/subtle
+      - border/subtle_inverse
+      - on_surface/brand/*
+      - on_surface/brand/*_inverse
+      - on_surface/brand_secondary/*
+      - on_surface/brand_secondary/*_inverse
       - surface/positive/*
       - surface/positive/*_inverse
       - on_surface/positive/*
@@ -104,10 +101,8 @@ semantic_overrides:
       - border/critical
       - border/critical_inverse
       notes:
-      - '`on_surface/*` tokens in the live semantic theme extension are contrast-derived from `universal/black`
-        or `universal/white` and are not hue-tinted.'
-      - Snow Day drives the light neutral surface system, while Last Chair supplies the readable dark
-        neutral roles so the brand keeps the supplied icy-background and navy-type pairing.
+      - '`on_surface/*` tokens in the live semantic theme extension are contrast-derived from `universal/black` or `universal/white` and are not hue-tinted.'
+      - Snow Day drives the light neutral surface system, while Last Chair supplies the readable dark neutral roles so the brand keeps the supplied icy-background and navy-type pairing.
       - The reviewed expressive semantic lanes use Early Sunrise as `brand/*` and Bluebird as `brand_secondary/*`.
       - Frost and Night Ski remain governed global-only extra families after the first semantic pass.
       - '`assets/logo` is overridden to the string `JFBB` in the semantic theme extension.'
@@ -131,15 +126,12 @@ semantic_overrides:
         alias_of: jfbb/family_safe/01
       inherited_from_base:
       - family/action
-      - weight/action/*
+      - weight/heading/strong
+      - weight/action/base
       notes:
-      - JFBB uses one raw family, Vista Sans NAR OTCE, across headline, subheadline, and body roles, with
-        weight carrying the hierarchy.
-      - '`Book` stages on `universal/weight/normal` because the shared raw ladder has no separate book
-        primitive.'
-      - 'The source body-leading example is internally inconsistent (`100px difference` / `24px / 124px`),
-        so typography size continues to bind the published shared `Global: Typography` ladder.'
+      - JFBB uses one raw family, Vista Sans NAR OTCE, across headline, subheadline, and body roles, with weight carrying the hierarchy.
+      - '`Book` stages on `universal/weight/normal` because the shared raw ladder has no separate book primitive.'
+      - 'The source body-leading example is internally inconsistent (`100px difference` / `24px / 124px`), so typography size continues to bind the published shared `Global: Typography` ladder.'
       - Brand-safe typography aliases now stage on `jfbb/family_safe/*` from Vail Resorts Guidelines.pdf.
 notes:
-- JFBB is live in the Foundations file with six raw color families, one raw typography family, a semantic
-  theme logo-name override, and JFBB semantic theme extension.
+- JFBB is live in the Foundations file with six raw color families, one raw typography family, a semantic theme logo-name override, and JFBB semantic theme extension.

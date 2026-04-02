@@ -1,5 +1,5 @@
 version: 1
-updated: '2026-04-01'
+updated: '2026-04-02'
 brand_id: hidden_valley_mo
 display_name: Hidden Valley MO
 status: active
@@ -42,8 +42,6 @@ semantic_overrides:
         targets:
         - surface/brand/*
         - surface/brand/*_inverse
-        - on_surface/brand/*
-        - on_surface/brand/*_inverse
         - foreground/brand
         - foreground/brand_inverse
         - border/brand
@@ -53,8 +51,6 @@ semantic_overrides:
         targets:
         - surface/brand_secondary/*
         - surface/brand_secondary/*_inverse
-        - on_surface/brand_secondary/*
-        - on_surface/brand_secondary/*_inverse
         - foreground/brand_secondary
         - foreground/brand_secondary_inverse
         - border/brand_secondary
@@ -74,6 +70,10 @@ semantic_overrides:
       - border/default_inverse
       - border/subtle
       - border/subtle_inverse
+      - on_surface/brand/*
+      - on_surface/brand/*_inverse
+      - on_surface/brand_secondary/*
+      - on_surface/brand_secondary/*_inverse
       - surface/positive/*
       - surface/positive/*_inverse
       - on_surface/positive/*
@@ -99,12 +99,9 @@ semantic_overrides:
       - border/critical
       - border/critical_inverse
       notes:
-      - '`on_surface/*` tokens in the live semantic theme extension are contrast-derived from `universal/black`
-        or `universal/white` and are not hue-tinted.'
-      - Exact black and white remain inherited through the shared neutral role recipes because the supplied
-        logo variants match `universal/black` and `universal/white`.
-      - '`hv_blue` drives the primary expressive semantic lane, while `tagline_grey` drives the secondary
-        expressive lane.'
+      - '`on_surface/*` tokens in the live semantic theme extension are contrast-derived from `universal/black` or `universal/white` and are not hue-tinted.'
+      - Exact black and white remain inherited through the shared neutral role recipes because the supplied logo variants match `universal/black` and `universal/white`.
+      - '`hv_blue` drives the primary expressive semantic lane, while `tagline_grey` drives the secondary expressive lane.'
       - '`assets/logo` is overridden to the string `Hidden Valley MO` in the semantic theme extension.'
     typography:
       override_scopes:
@@ -132,13 +129,9 @@ semantic_overrides:
         alias_of: hidden_valley_mo/family_safe/01
       inherited_from_base: []
       notes:
-      - Hidden Valley MO is live as a two-family typography system, with `Altero` on heading and action
-        work and `Prompt` on the reading lane.
-      - The PDF's `Altero Outline` subheadline remains documentation-only because the current semantic
-        typography model has no dedicated outline or style slot.
+      - Hidden Valley MO is live as a two-family typography system, with `Altero` on heading and action work and `Prompt` on the reading lane.
+      - The PDF's `Altero Outline` subheadline remains documentation-only because the current semantic typography model has no dedicated outline or style slot.
       - 'Typography size continues to bind directly from published `Global: Typography`.'
-      - Brand-safe typography aliases now stage on `hidden_valley_mo/family_safe/*` from Vail Resorts
-        Guidelines.pdf.
+      - Brand-safe typography aliases now stage on `hidden_valley_mo/family_safe/*` from Vail Resorts Guidelines.pdf.
 notes:
-- Hidden Valley MO is live in the Foundations file with two raw color families, two raw typography family
-  primitives, a semantic theme logo-name override, and Hidden Valley MO semantic theme extension.
+- Hidden Valley MO is live in the Foundations file with two raw color families, two raw typography family primitives, a semantic theme logo-name override, and Hidden Valley MO semantic theme extension.

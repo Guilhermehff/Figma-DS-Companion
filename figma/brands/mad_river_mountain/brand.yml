@@ -1,5 +1,5 @@
 version: 1
-updated: '2026-04-01'
+updated: '2026-04-02'
 brand_id: mad_river_mountain
 display_name: Mad River Mountain
 status: active
@@ -42,8 +42,6 @@ semantic_overrides:
         targets:
         - surface/brand/*
         - surface/brand/*_inverse
-        - on_surface/brand/*
-        - on_surface/brand/*_inverse
         - foreground/brand
         - foreground/brand_inverse
         - border/brand
@@ -53,8 +51,6 @@ semantic_overrides:
         targets:
         - surface/brand_secondary/*
         - surface/brand_secondary/*_inverse
-        - on_surface/brand_secondary/*
-        - on_surface/brand_secondary/*_inverse
         - foreground/brand_secondary
         - foreground/brand_secondary_inverse
         - border/brand_secondary
@@ -74,6 +70,10 @@ semantic_overrides:
       - border/default_inverse
       - border/subtle
       - border/subtle_inverse
+      - on_surface/brand/*
+      - on_surface/brand/*_inverse
+      - on_surface/brand_secondary/*
+      - on_surface/brand_secondary/*_inverse
       - surface/positive/*
       - surface/positive/*_inverse
       - on_surface/positive/*
@@ -99,10 +99,8 @@ semantic_overrides:
       - border/critical
       - border/critical_inverse
       notes:
-      - '`on_surface/*` tokens in the live semantic theme extension are contrast-derived from `universal/black`
-        or `universal/white` and are not hue-tinted.'
-      - '`river_blue` drives the primary expressive lane and `mountain_green` drives the supporting expressive
-        lane.'
+      - '`on_surface/*` tokens in the live semantic theme extension are contrast-derived from `universal/black` or `universal/white` and are not hue-tinted.'
+      - '`river_blue` drives the primary expressive lane and `mountain_green` drives the supporting expressive lane.'
     typography:
       override_scopes:
       - semantic_token: family/heading
@@ -129,11 +127,8 @@ semantic_overrides:
         alias_of: mad_river_mountain/family_safe/01
       inherited_from_base: []
       notes:
-      - Mad River Mountain is live as a one-family typography system with `Prompt` across heading, body,
-        and action work.
+      - Mad River Mountain is live as a one-family typography system with `Prompt` across heading, body, and action work.
       - 'Typography size continues to bind directly from published `Global: Typography`.'
-      - Brand-safe typography aliases now stage on `mad_river_mountain/family_safe/*` from Vail Resorts
-        Guidelines.pdf.
+      - Brand-safe typography aliases now stage on `mad_river_mountain/family_safe/*` from Vail Resorts Guidelines.pdf.
 notes:
-- Mad River Mountain is live in the Foundations file with two raw color families, one raw typography family
-  primitive, and Mad River Mountain semantic theme extension.
+- Mad River Mountain is live in the Foundations file with two raw color families, one raw typography family primitive, and Mad River Mountain semantic theme extension.

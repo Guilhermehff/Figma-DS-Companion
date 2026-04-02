@@ -1,5 +1,5 @@
 version: 1
-updated: '2026-04-01'
+updated: '2026-04-02'
 brand_id: mt_brighton
 display_name: Mt. Brighton
 status: active
@@ -37,26 +37,11 @@ semantic_overrides:
     status: active
     color:
       override_scopes:
-      - scope: neutral
-        source_family: mt_brighton/brighton_grey
-        targets:
-        - surface/neutral/*
-        - surface/neutral/*_inverse
-        - foreground/default
-        - foreground/default_inverse
-        - foreground/subtle
-        - foreground/subtle_inverse
-        - border/default
-        - border/default_inverse
-        - border/subtle
-        - border/subtle_inverse
       - scope: brand
         source_family: mt_brighton/brighton_purple
         targets:
         - surface/brand/*
         - surface/brand/*_inverse
-        - on_surface/brand/*
-        - on_surface/brand/*_inverse
         - foreground/brand
         - foreground/brand_inverse
         - border/brand
@@ -66,8 +51,6 @@ semantic_overrides:
         targets:
         - surface/brand_secondary/*
         - surface/brand_secondary/*_inverse
-        - on_surface/brand_secondary/*
-        - on_surface/brand_secondary/*_inverse
         - foreground/brand_secondary
         - foreground/brand_secondary_inverse
         - border/brand_secondary
@@ -77,6 +60,20 @@ semantic_overrides:
         targets:
         - assets/logo
       inherited_from_base:
+      - surface/neutral/*
+      - surface/neutral/*_inverse
+      - foreground/default
+      - foreground/default_inverse
+      - foreground/subtle
+      - foreground/subtle_inverse
+      - border/default
+      - border/default_inverse
+      - border/subtle
+      - border/subtle_inverse
+      - on_surface/brand/*
+      - on_surface/brand/*_inverse
+      - on_surface/brand_secondary/*
+      - on_surface/brand_secondary/*_inverse
       - surface/positive/*
       - surface/positive/*_inverse
       - on_surface/positive/*
@@ -102,10 +99,8 @@ semantic_overrides:
       - border/critical
       - border/critical_inverse
       notes:
-      - '`on_surface/*` tokens in the live semantic theme extension are contrast-derived from `universal/black`
-        or `universal/white` and are not hue-tinted.'
-      - Mt. Brighton is live in the Foundations file with `brighton_grey` as the structural lane, `brighton_purple`
-        as the primary expressive lane, and `brighton_purple_alt` as the supporting expressive lane.
+      - '`on_surface/*` tokens in the live semantic theme extension are contrast-derived from `universal/black` or `universal/white` and are not hue-tinted.'
+      - Mt. Brighton is live in the Foundations file with `brighton_grey` as the structural lane, `brighton_purple` as the primary expressive lane, and `brighton_purple_alt` as the supporting expressive lane.
       - '`assets/logo` resolves to the string `Mt. Brighton` in the semantic theme extension.'
     typography:
       override_scopes:
@@ -117,26 +112,21 @@ semantic_overrides:
         alias_of: mt_brighton/family/01
       - semantic_token: weight/heading/base
         alias_of: universal/weight/black
-      - semantic_token: weight/heading/strong
-        alias_of: universal/weight/black
       - semantic_token: weight/body/base
         alias_of: universal/weight/bold
       - semantic_token: weight/body/strong
         alias_of: universal/weight/bold
-      - semantic_token: weight/action/base
-        alias_of: universal/weight/black
       - semantic_token: family/heading_safe
         alias_of: mt_brighton/family_safe/02
       - semantic_token: family/body_safe
         alias_of: mt_brighton/family_safe/01
       - semantic_token: family/action_safe
         alias_of: mt_brighton/family_safe/02
-      inherited_from_base: []
+      inherited_from_base:
+      - weight/heading/strong
+      - weight/action/base
       notes:
-      - Mt. Brighton is live as a Museo-led semantic system, with `Museo Slab` on display and action work,
-        `Museo Sans` on the reading lane, and `Prompt` preserved as the raw utility family for digital
-        safe family contexts.
+      - Mt. Brighton is live as a Museo-led semantic system, with `Museo Slab` on display and action work, `Museo Sans` on the reading lane, and `Prompt` preserved as the raw utility family for digital safe family contexts.
       - Brand-safe typography aliases now stage on `mt_brighton/family_safe/*` from Vail Resorts Guidelines.pdf.
 notes:
-- Mt. Brighton is live in the Foundations file with three raw color families, three raw typography family
-  primitives, a semantic theme logo-name override, and Mt. Brighton semantic theme extension.
+- Mt. Brighton is live in the Foundations file with three raw color families, three raw typography family primitives, a semantic theme logo-name override, and Mt. Brighton semantic theme extension.

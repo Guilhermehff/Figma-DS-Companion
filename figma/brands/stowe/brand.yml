@@ -1,5 +1,5 @@
 version: 1
-updated: '2026-04-01'
+updated: '2026-04-02'
 brand_id: stowe
 display_name: Stowe
 status: active
@@ -39,26 +39,11 @@ semantic_overrides:
     status: active
     color:
       override_scopes:
-      - scope: neutral
-        source_family: stowe/stowe_blue
-        targets:
-        - surface/neutral/*
-        - surface/neutral/*_inverse
-        - foreground/default
-        - foreground/default_inverse
-        - foreground/subtle
-        - foreground/subtle_inverse
-        - border/default
-        - border/default_inverse
-        - border/subtle
-        - border/subtle_inverse
       - scope: brand
         source_family: stowe/stowe_red
         targets:
         - surface/brand/*
         - surface/brand/*_inverse
-        - on_surface/brand/*
-        - on_surface/brand/*_inverse
         - foreground/brand
         - foreground/brand_inverse
         - border/brand
@@ -68,8 +53,6 @@ semantic_overrides:
         targets:
         - surface/brand_secondary/*
         - surface/brand_secondary/*_inverse
-        - on_surface/brand_secondary/*
-        - on_surface/brand_secondary/*_inverse
         - foreground/brand_secondary
         - foreground/brand_secondary_inverse
         - border/brand_secondary
@@ -79,6 +62,20 @@ semantic_overrides:
         targets:
         - assets/logo
       inherited_from_base:
+      - surface/neutral/*
+      - surface/neutral/*_inverse
+      - foreground/default
+      - foreground/default_inverse
+      - foreground/subtle
+      - foreground/subtle_inverse
+      - border/default
+      - border/default_inverse
+      - border/subtle
+      - border/subtle_inverse
+      - on_surface/brand/*
+      - on_surface/brand/*_inverse
+      - on_surface/brand_secondary/*
+      - on_surface/brand_secondary/*_inverse
       - surface/positive/*
       - surface/positive/*_inverse
       - on_surface/positive/*
@@ -104,15 +101,10 @@ semantic_overrides:
       - border/critical
       - border/critical_inverse
       notes:
-      - '`on_surface/*` tokens in the live semantic theme extension are contrast-derived from `universal/black`
-        or `universal/white` and are not hue-tinted.'
-      - Stowe is live in the Foundations file with `stowe_red` as the primary expressive lane and `stowe_blue`
-        as both the structural neutral lane and the approved supporting expressive lane.
-      - User-approved live write. `surface/neutral/canvas` remains on shared `universal/white`, while
-        the rest of the neutral structural roles override to `stowe_blue`.
-      - User-approved live write. `brand_secondary` aliases `stowe_blue`, with the semantic default/strong/emphasis
-        steps landing at `600/700/800` because the raw `500` source anchor does not support the shared
-        white on-surface contract.
+      - '`on_surface/*` tokens in the live semantic theme extension are contrast-derived from `universal/black` or `universal/white` and are not hue-tinted.'
+      - Stowe is live in the Foundations file with `stowe_red` as the primary expressive lane and `stowe_blue` as both the structural neutral lane and the approved supporting expressive lane.
+      - User-approved live write. `surface/neutral/canvas` remains on shared `universal/white`, while the rest of the neutral structural roles override to `stowe_blue`.
+      - User-approved live write. `brand_secondary` aliases `stowe_blue`, with the semantic default/strong/emphasis steps landing at `600/700/800` because the raw `500` source anchor does not support the shared white on-surface contract.
       - '`assets/logo` resolves to the string `Stowe` in the semantic theme extension.'
     typography:
       override_scopes:
@@ -139,16 +131,11 @@ semantic_overrides:
       inherited_from_base:
       - weight/heading/strong
       notes:
-      - Stowe is live as a two-family system with `Athena` in the display lane and `Raleway` across the
-        reading hierarchy.
-      - ? User-approved exception. The live write treats the headline prose word `bold` as a source copy
-          mistake and follows the explicit `Headline
+      - Stowe is live as a two-family system with `Athena` in the display lane and `Raleway` across the reading hierarchy.
+      - ? User-approved exception. The live write treats the headline prose word `bold` as a source copy mistake and follows the explicit `Headline
         : Athena Regular` label.
-      - User-approved mapping. `family/action` and `weight/action/base` now follow the same family and
-        weight as heading.
-      - '`weight/body/strong = universal/weight/bold` stages the explicit Raleway Bold subhead treatment
-        through the existing semantic theme typography ladder.'
+      - User-approved mapping. `family/action` and `weight/action/base` now follow the same family and weight as heading.
+      - '`weight/body/strong = universal/weight/bold` stages the explicit Raleway Bold subhead treatment through the existing semantic theme typography ladder.'
       - Brand-safe typography aliases now stage on `stowe/family_safe/*` from Vail Resorts Guidelines.pdf.
 notes:
-- Stowe is live in the Foundations file with two raw color families, two raw typography family primitives,
-  a semantic theme logo-name override, and Stowe semantic theme extension.
+- Stowe is live in the Foundations file with two raw color families, two raw typography family primitives, a semantic theme logo-name override, and Stowe semantic theme extension.

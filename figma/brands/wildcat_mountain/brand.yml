@@ -1,5 +1,5 @@
 version: 1
-updated: '2026-04-01'
+updated: '2026-04-02'
 brand_id: wildcat_mountain
 display_name: Wildcat Mountain
 status: active
@@ -42,8 +42,6 @@ semantic_overrides:
         targets:
         - surface/brand/*
         - surface/brand/*_inverse
-        - on_surface/brand/*
-        - on_surface/brand/*_inverse
         - foreground/brand
         - foreground/brand_inverse
         - border/brand
@@ -53,8 +51,6 @@ semantic_overrides:
         targets:
         - surface/brand_secondary/*
         - surface/brand_secondary/*_inverse
-        - on_surface/brand_secondary/*
-        - on_surface/brand_secondary/*_inverse
         - foreground/brand_secondary
         - foreground/brand_secondary_inverse
         - border/brand_secondary
@@ -74,6 +70,10 @@ semantic_overrides:
       - border/default_inverse
       - border/subtle
       - border/subtle_inverse
+      - on_surface/brand/*
+      - on_surface/brand/*_inverse
+      - on_surface/brand_secondary/*
+      - on_surface/brand_secondary/*_inverse
       - surface/positive/*
       - surface/positive/*_inverse
       - on_surface/positive/*
@@ -99,11 +99,9 @@ semantic_overrides:
       - border/critical
       - border/critical_inverse
       notes:
-      - '`on_surface/*` tokens in the live semantic theme extension are contrast-derived from `universal/black`
-        or `universal/white` and are not hue-tinted.'
+      - '`on_surface/*` tokens in the live semantic theme extension are contrast-derived from `universal/black` or `universal/white` and are not hue-tinted.'
       - Exact black and white remain inherited through the shared neutral role recipes.
-      - '`wildcat_green` drives the primary expressive lane and `wildcat_teal` drives the secondary expressive
-        lane.'
+      - '`wildcat_green` drives the primary expressive lane and `wildcat_teal` drives the secondary expressive lane.'
       - '`wildcat_tan` and `wedding_blue` are governed raw-only families in the first pass.'
     typography:
       override_scopes:
@@ -114,14 +112,17 @@ semantic_overrides:
       - semantic_token: family/action_safe
         alias_of: wildcat_mountain/family_safe/01
       inherited_from_base:
-      - family/*
-      - weight/*
+      - family/heading
+      - family/body
+      - family/action
+      - weight/heading/base
+      - weight/heading/strong
+      - weight/body/base
+      - weight/body/strong
+      - weight/action/base
       notes:
-      - The Vail Resorts Guidelines PDF does not list brand font guidance for Wildcat Mountain, so the
-        semantic theme extension continues to inherit the shared universal typography base without overrides.
+      - The Vail Resorts Guidelines PDF does not list brand font guidance for Wildcat Mountain, so the semantic theme extension continues to inherit the shared universal typography base without overrides.
       - 'Typography size continues to bind directly from published `Global: Typography`.'
-      - Brand-safe typography aliases now stage on `wildcat_mountain/family_safe/*` from Vail Resorts
-        Guidelines.pdf.
+      - Brand-safe typography aliases now stage on `wildcat_mountain/family_safe/*` from Vail Resorts Guidelines.pdf.
 notes:
-- Wildcat Mountain is live in the Foundations file with four raw color families, no brand-specific raw
-  typography families, and Wildcat Mountain semantic theme extension.
+- Wildcat Mountain is live in the Foundations file with four raw color families, no brand-specific raw typography families, and Wildcat Mountain semantic theme extension.

@@ -1,5 +1,5 @@
 version: 1
-updated: '2026-04-01'
+updated: '2026-04-02'
 brand_id: stevens_pass
 display_name: Stevens Pass
 status: active
@@ -44,8 +44,6 @@ semantic_overrides:
         targets:
         - surface/brand/*
         - surface/brand/*_inverse
-        - on_surface/brand/*
-        - on_surface/brand/*_inverse
         - foreground/brand
         - foreground/brand_inverse
         - border/brand
@@ -55,8 +53,6 @@ semantic_overrides:
         targets:
         - surface/brand_secondary/*
         - surface/brand_secondary/*_inverse
-        - on_surface/brand_secondary/*
-        - on_surface/brand_secondary/*_inverse
         - foreground/brand_secondary
         - foreground/brand_secondary_inverse
         - border/brand_secondary
@@ -76,6 +72,10 @@ semantic_overrides:
       - border/default_inverse
       - border/subtle
       - border/subtle_inverse
+      - on_surface/brand/*
+      - on_surface/brand/*_inverse
+      - on_surface/brand_secondary/*
+      - on_surface/brand_secondary/*_inverse
       - surface/positive/*
       - surface/positive/*_inverse
       - on_surface/positive/*
@@ -101,14 +101,10 @@ semantic_overrides:
       - border/critical
       - border/critical_inverse
       notes:
-      - '`on_surface/*` tokens in the live semantic theme extension are contrast-derived from `universal/black`
-        or `universal/white` and are not hue-tinted.'
-      - Exact black and white remain inherited through the shared neutral role recipes because the supplied
-        palette matches `universal/black` and `universal/white`.
-      - '`stevens_blue` drives the primary expressive semantic lane, while `secondary_blue` drives the
-        secondary expressive lane.'
-      - '`mossy_green` remains a governed global-only family for special-case use after the first semantic
-        pass.'
+      - '`on_surface/*` tokens in the live semantic theme extension are contrast-derived from `universal/black` or `universal/white` and are not hue-tinted.'
+      - Exact black and white remain inherited through the shared neutral role recipes because the supplied palette matches `universal/black` and `universal/white`.
+      - '`stevens_blue` drives the primary expressive semantic lane, while `secondary_blue` drives the secondary expressive lane.'
+      - '`mossy_green` remains a governed global-only family for special-case use after the first semantic pass.'
       - '`assets/logo` is overridden to the string `Stevens Pass` in the semantic theme extension.'
     typography:
       override_scopes:
@@ -118,12 +114,8 @@ semantic_overrides:
         alias_of: stevens_pass/family/01
       - semantic_token: family/action
         alias_of: stevens_pass/family/01
-      - semantic_token: weight/heading/base
-        alias_of: universal/weight/bold
       - semantic_token: weight/body/base
         alias_of: universal/weight/light
-      - semantic_token: weight/body/strong
-        alias_of: universal/weight/medium
       - semantic_token: weight/action/base
         alias_of: universal/weight/medium
       - semantic_token: family/heading_safe
@@ -133,16 +125,13 @@ semantic_overrides:
       - semantic_token: family/action_safe
         alias_of: stevens_pass/family_safe/01
       inherited_from_base:
+      - weight/heading/base
       - weight/heading/strong
+      - weight/body/strong
       notes:
-      - Stevens Pass stages on one raw family, `Gibson`, across headline, subhead, body, and CTA roles,
-        with weight carrying the hierarchy.
-      - 'User-approved exception: `weight/body/base` stages on Light, `weight/body/strong` stages on Medium,
-        and `weight/action/base` stages on Medium even though the source labels subheads as Semi Bold
-        and CTA as Regular.'
-      - The source body variants and italics remain documented in the intake and preview artifacts rather
-        than becoming separate semantic lanes.
+      - Stevens Pass stages on one raw family, `Gibson`, across headline, subhead, body, and CTA roles, with weight carrying the hierarchy.
+      - 'User-approved exception: `weight/body/base` stages on Light and `weight/action/base` stages on Medium even though the source labels subheads as Semi Bold and CTA as Regular.'
+      - The source body variants and italics remain documented in the intake and preview artifacts rather than becoming separate semantic lanes.
       - Brand-safe typography aliases now stage on `stevens_pass/family_safe/*` from Vail Resorts Guidelines.pdf.
 notes:
-- Stevens Pass is live in the Foundations file with three raw color families, one raw typography family
-  primitive, a semantic theme logo-name override, and Stevens Pass semantic theme extension.
+- Stevens Pass is live in the Foundations file with three raw color families, one raw typography family primitive, a semantic theme logo-name override, and Stevens Pass semantic theme extension.

@@ -1,5 +1,5 @@
 version: 1
-updated: '2026-04-01'
+updated: '2026-04-02'
 brand_id: beaver_creek
 display_name: Beaver Creek
 status: active
@@ -39,26 +39,11 @@ semantic_overrides:
     status: active
     color:
       override_scopes:
-      - scope: neutral
-        source_family: beaver_creek/silver
-        targets:
-        - surface/neutral/*
-        - surface/neutral/*_inverse
-        - foreground/default
-        - foreground/default_inverse
-        - foreground/subtle
-        - foreground/subtle_inverse
-        - border/default
-        - border/default_inverse
-        - border/subtle
-        - border/subtle_inverse
       - scope: brand
         source_family: beaver_creek/silver
         targets:
         - surface/brand/*
         - surface/brand/*_inverse
-        - on_surface/brand/*
-        - on_surface/brand/*_inverse
         - foreground/brand
         - foreground/brand_inverse
         - border/brand
@@ -68,8 +53,6 @@ semantic_overrides:
         targets:
         - surface/brand_secondary/*
         - surface/brand_secondary/*_inverse
-        - on_surface/brand_secondary/*
-        - on_surface/brand_secondary/*_inverse
         - foreground/brand_secondary
         - foreground/brand_secondary_inverse
         - border/brand_secondary
@@ -79,6 +62,20 @@ semantic_overrides:
         targets:
         - assets/logo
       inherited_from_base:
+      - surface/neutral/*
+      - surface/neutral/*_inverse
+      - foreground/default
+      - foreground/default_inverse
+      - foreground/subtle
+      - foreground/subtle_inverse
+      - border/default
+      - border/default_inverse
+      - border/subtle
+      - border/subtle_inverse
+      - on_surface/brand/*
+      - on_surface/brand/*_inverse
+      - on_surface/brand_secondary/*
+      - on_surface/brand_secondary/*_inverse
       - surface/positive/*
       - surface/positive/*_inverse
       - on_surface/positive/*
@@ -104,15 +101,11 @@ semantic_overrides:
       - border/critical
       - border/critical_inverse
       notes:
-      - '`on_surface/*` tokens in the live semantic theme extension are contrast-derived from `universal/black`
-        or `universal/white` and are not hue-tinted.'
-      - Beaver Creek stages as a single silver system that absorbs the provided tint, light, medium, primary,
-        and near-black swatches into one branded neutral ladder.
-      - Approved exception: the same `beaver_creek/silver` family drives semantic `neutral/*`, `brand/*`,
-          and `brand_secondary/*`.
+      - '`on_surface/*` tokens in the live semantic theme extension are contrast-derived from `universal/black` or `universal/white` and are not hue-tinted.'
+      - Beaver Creek stages as a single silver system that absorbs the provided tint, light, medium, primary, and near-black swatches into one branded neutral ladder.
+      - Approved exception: the same `beaver_creek/silver` family drives semantic `neutral/*`, `brand/*`, and `brand_secondary/*`.
       - '`assets/logo` is overridden to the string `Beaver Creek` in the semantic theme extension.'
-      - Exact white remains inherited through the shared universal primitive rather than duplicating `#ffffff`
-        under the brand group.
+      - Exact white remains inherited through the shared universal primitive rather than duplicating `#ffffff` under the brand group.
     typography:
       override_scopes:
       - semantic_token: family/heading
@@ -122,9 +115,9 @@ semantic_overrides:
       - semantic_token: family/action
         alias_of: beaver_creek/family/03
       - semantic_token: weight/heading/base
-        alias_of: universal/weight/thin
-      - semantic_token: weight/body/base
         alias_of: universal/weight/light
+      - semantic_token: weight/body/base
+        alias_of: universal/weight/normal
       - semantic_token: weight/action/base
         alias_of: universal/weight/bold
       - semantic_token: family/heading_safe
@@ -137,13 +130,9 @@ semantic_overrides:
       - weight/heading/strong
       - weight/body/strong
       notes:
-      - IvyPresto Display drives the heading lane and requires the new shared raw thin weight to preserve
-        the supplied display treatment.
-      - Vinila remains the reading family, while Vinila Condensed drives subheads and CTA through the
-        semantic action lane.
-      - The non-clickable URL recipe stays documented as a raw Beaver Creek pattern using the condensed
-        family with light weight and tracking `120`, not as a separate semantic lane.
+      - IvyPresto Display drives the heading lane and keeps the shared raw Light weight in the live semantic mapping.
+      - Vinila remains the reading family, while Vinila Condensed drives subheads and CTA through the semantic action lane.
+      - The non-clickable URL recipe stays documented as a raw Beaver Creek pattern using the condensed family with light weight and tracking `120`, not as a separate semantic lane.
       - Brand-safe typography aliases now stage on `beaver_creek/family_safe/*` from Vail Resorts Guidelines.pdf.
 notes:
-- Beaver Creek is live in the Foundations file with one silver color ladder, three raw typography families,
-  the shared thin raw weight, a semantic theme logo-name override, and Beaver Creek semantic theme extension.
+- Beaver Creek is live in the Foundations file with one silver color ladder, three raw typography families, the shared thin raw weight, a semantic theme logo-name override, and Beaver Creek semantic theme extension.

@@ -1,5 +1,5 @@
 version: 1
-updated: '2026-04-01'
+updated: '2026-04-02'
 brand_id: alpine_valley
 display_name: Alpine Valley
 status: active
@@ -39,26 +39,11 @@ semantic_overrides:
     status: active
     color:
       override_scopes:
-      - scope: neutral
-        source_family: inherited_base
-        targets:
-        - surface/neutral/*
-        - surface/neutral/*_inverse
-        - foreground/default
-        - foreground/default_inverse
-        - foreground/subtle
-        - foreground/subtle_inverse
-        - border/default
-        - border/default_inverse
-        - border/subtle
-        - border/subtle_inverse
       - scope: brand
         source_family: alpine_valley/alpine
         targets:
         - surface/brand/*
         - surface/brand/*_inverse
-        - on_surface/brand/*
-        - on_surface/brand/*_inverse
         - foreground/brand
         - foreground/brand_inverse
         - border/brand
@@ -68,8 +53,6 @@ semantic_overrides:
         targets:
         - surface/brand_secondary/*
         - surface/brand_secondary/*_inverse
-        - on_surface/brand_secondary/*
-        - on_surface/brand_secondary/*_inverse
         - foreground/brand_secondary
         - foreground/brand_secondary_inverse
         - border/brand_secondary
@@ -79,6 +62,20 @@ semantic_overrides:
         targets:
         - assets/logo
       inherited_from_base:
+      - surface/neutral/*
+      - surface/neutral/*_inverse
+      - foreground/default
+      - foreground/default_inverse
+      - foreground/subtle
+      - foreground/subtle_inverse
+      - border/default
+      - border/default_inverse
+      - border/subtle
+      - border/subtle_inverse
+      - on_surface/brand/*
+      - on_surface/brand/*_inverse
+      - on_surface/brand_secondary/*
+      - on_surface/brand_secondary/*_inverse
       - surface/positive/*
       - surface/positive/*_inverse
       - on_surface/positive/*
@@ -104,12 +101,9 @@ semantic_overrides:
       - border/critical
       - border/critical_inverse
       notes:
-      - '`on_surface/*` tokens in the live semantic theme extension are contrast-derived from `universal/black`
-        or `universal/white` and are not hue-tinted.'
-      - Exact `Valley Black` remains shared through `universal/black` rather than becoming a duplicate
-        Alpine Valley raw family.
-      - The supplied palette has one expressive non-neutral family, so `alpine` drives both expressive
-        semantic lanes in the current live schema.
+      - '`on_surface/*` tokens in the live semantic theme extension are contrast-derived from `universal/black` or `universal/white` and are not hue-tinted.'
+      - Exact `Valley Black` remains shared through `universal/black` rather than becoming a duplicate Alpine Valley raw family.
+      - The supplied palette has one expressive non-neutral family, so `alpine` drives both expressive semantic lanes in the current live schema.
       - '`assets/logo` is overridden to the string `Alpine Valley` in the semantic theme extension.'
     typography:
       override_scopes:
@@ -136,11 +130,8 @@ semantic_overrides:
       - weight/heading/strong
       notes:
       - Alpine Valley stages on one raw family, `Prompt`, across heading, body, and CTA work.
-      - The source explicitly defines H1, H2, and body treatments; CTA on Prompt Bold is a user-approved
-        live extension of that same-family system.
-      - 'Typography size now binds directly from published `Global: Typography`; the supplied hierarchy
-        defines role intent but not new governed numeric size tokens.'
+      - The source explicitly defines H1, H2, and body treatments; CTA on Prompt Bold is a user-approved live extension of that same-family system.
+      - 'Typography size now binds directly from published `Global: Typography`; the supplied hierarchy defines role intent but not new governed numeric size tokens.'
       - Brand-safe typography aliases now stage on `alpine_valley/family_safe/*` from Vail Resorts Guidelines.pdf.
 notes:
-- Alpine Valley is live in the Foundations file with one raw color family, one raw typography family primitive,
-  a semantic theme logo-name override, and Alpine Valley semantic theme extension.
+- Alpine Valley is live in the Foundations file with one raw color family, one raw typography family primitive, a semantic theme logo-name override, and Alpine Valley semantic theme extension.
