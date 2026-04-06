@@ -1,5 +1,5 @@
 version: 1
-updated: '2026-04-02'
+updated: '2026-04-06'
 brand_id: mt_brighton
 display_name: Mt. Brighton
 status: active
@@ -32,6 +32,7 @@ artifacts:
     preview_artifact: figma/brands/mt_brighton/typography/preview.md
     decision_artifacts:
     - figma/decisions/2026-04-01-safe-typography-lane-migration.md
+    - figma/decisions/2026-04-06-semantic-theme-ad-brand-row-order-mappings.md
 semantic_overrides:
   theme:
     status: active
@@ -128,5 +129,6 @@ semantic_overrides:
       notes:
       - Mt. Brighton is live as a Museo-led semantic system, with `Museo Slab` on display and action work, `Museo Sans` on the reading lane, and `Prompt` preserved as the raw utility family for digital safe family contexts.
       - Brand-safe typography aliases now stage on `mt_brighton/family_safe/*` from Vail Resorts Guidelines.pdf.
+      - Ads heading size now stages on the 0.875x row in the approved row-order mapping.
 notes:
 - Mt. Brighton is live in the Foundations file with three raw color families, three raw typography family primitives, a semantic theme logo-name override, and Mt. Brighton semantic theme extension.

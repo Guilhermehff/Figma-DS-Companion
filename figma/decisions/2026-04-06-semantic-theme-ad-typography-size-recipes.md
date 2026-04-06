@@ -10,6 +10,7 @@
 - Supersedes:
   - `2026-03-26-semantic-theme-and-published-global-typography.md`
 - Superseded by:
+  - `2026-04-06-semantic-theme-ad-brand-row-order-mappings.md`
 
 ## Context
 

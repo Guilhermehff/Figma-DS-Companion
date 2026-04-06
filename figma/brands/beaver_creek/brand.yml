@@ -1,5 +1,5 @@
 version: 1
-updated: '2026-04-02'
+updated: '2026-04-06'
 brand_id: beaver_creek
 display_name: Beaver Creek
 status: active
@@ -34,6 +34,7 @@ artifacts:
     decision_artifacts:
     - figma/decisions/2026-03-17-beaver-creek-foundations-written-to-figma.md
     - figma/decisions/2026-04-01-safe-typography-lane-migration.md
+    - figma/decisions/2026-04-06-semantic-theme-ad-brand-row-order-mappings.md
 semantic_overrides:
   theme:
     status: active
@@ -134,5 +135,6 @@ semantic_overrides:
       - Vinila remains the reading family, while Vinila Condensed drives subheads and CTA through the semantic action lane.
       - The non-clickable URL recipe stays documented as a raw Beaver Creek pattern using the condensed family with light weight and tracking `120`, not as a separate semantic lane.
       - Brand-safe typography aliases now stage on `beaver_creek/family_safe/*` from Vail Resorts Guidelines.pdf.
+      - Ads heading size now stages on the 1.125x row in the approved row-order mapping.
 notes:
 - Beaver Creek is live in the Foundations file with one silver color ladder, three raw typography families, the shared thin raw weight, a semantic theme logo-name override, and Beaver Creek semantic theme extension.

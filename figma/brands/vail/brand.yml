@@ -1,5 +1,5 @@
 version: 1
-updated: '2026-04-02'
+updated: '2026-04-06'
 brand_id: vail
 display_name: Vail
 status: active
@@ -39,6 +39,7 @@ artifacts:
     - figma/decisions/2026-03-10-brand-typography-governance.md
     - figma/decisions/2026-03-11-role-scoped-semantic-typography-ladders.md
     - figma/decisions/2026-04-01-safe-typography-lane-migration.md
+    - figma/decisions/2026-04-06-semantic-theme-ad-brand-row-order-mappings.md
 semantic_overrides:
   theme:
     status: active
@@ -134,6 +135,7 @@ semantic_overrides:
       notes:
       - 'Typography weight semantics remain on the shared semantic theme base collection because the approved Vail recipes reuse the universal baseline. Typography size now binds directly from published `Global: Typography`.'
       - Brand-safe typography aliases now stage on `vail/family_safe/*` from Vail Resorts Guidelines.pdf.
+      - Ads heading size now stages on the 0.75x row in the approved row-order mapping.
 notes:
 - Active Vail brand artifacts now live under figma/brands/vail and are the canonical approved sources.
 - Vail now carries five raw color families in `_Global: Color`, with `vintage_blue` and `dark_blue` preserved as raw-only primary brand families while semantic stays aligned to the digital palette.

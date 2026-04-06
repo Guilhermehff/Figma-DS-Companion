@@ -1,5 +1,5 @@
 version: 1
-updated: '2026-04-02'
+updated: '2026-04-06'
 brand_id: mount_sunapee
 display_name: Mount Sunapee
 status: active
@@ -34,6 +34,7 @@ artifacts:
     decision_artifacts:
     - figma/decisions/2026-03-19-mount-sunapee-foundations-written-to-figma.md
     - figma/decisions/2026-04-01-safe-typography-lane-migration.md
+    - figma/decisions/2026-04-06-semantic-theme-ad-brand-row-order-mappings.md
 semantic_overrides:
   theme:
     status: active
@@ -135,5 +136,6 @@ semantic_overrides:
       - '`typography/weight/body/base = universal/weight/light` and `typography/weight/body/strong = universal/weight/normal` stage the explicit body hierarchy through the current semantic theme typography ladder, while heading weights inherit from base.'
       - The source does not define a distinct CTA weight recipe, so `typography/family/action` follows the shared Graphik family while `typography/weight/action/*` remains inherited in the live semantic extension.
       - Brand-safe typography aliases now stage on `mount_sunapee/family_safe/*` from Vail Resorts Guidelines.pdf.
+      - Ads heading size now stages on the 1.125x row in the approved row-order mapping.
 notes:
 - Mount Sunapee is live in the Foundations file with three raw color families, two raw typography family primitives, a semantic theme logo-name override, and Mount Sunapee semantic theme extension.

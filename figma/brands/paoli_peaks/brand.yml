@@ -1,5 +1,5 @@
 version: 1
-updated: '2026-04-02'
+updated: '2026-04-06'
 brand_id: paoli_peaks
 display_name: Paoli Peaks
 status: active
@@ -32,6 +32,7 @@ artifacts:
     preview_artifact: figma/brands/paoli_peaks/typography/preview.md
     decision_artifacts:
     - figma/decisions/2026-04-01-safe-typography-lane-migration.md
+    - figma/decisions/2026-04-06-semantic-theme-ad-brand-row-order-mappings.md
 semantic_overrides:
   theme:
     status: active
@@ -135,5 +136,6 @@ semantic_overrides:
       - The PDF does not define a body or CTA lane, so body stays on the shared normal weight and action follows the headline family in the first pass.
       - 'Typography size continues to bind directly from published `Global: Typography`.'
       - Brand-safe typography aliases now stage on `paoli_peaks/family_safe/*` from Vail Resorts Guidelines.pdf.
+      - Ads heading size now stages on the 0.875x row in the approved row-order mapping.
 notes:
 - Paoli Peaks is live in the Foundations file with three raw color families, one raw typography family primitive, and Paoli Peaks semantic theme extension.

@@ -1,5 +1,5 @@
 version: 1
-updated: '2026-04-02'
+updated: '2026-04-06'
 brand_id: snow_creek
 display_name: Snow Creek
 status: active
@@ -32,6 +32,7 @@ artifacts:
     preview_artifact: figma/brands/snow_creek/typography/preview.md
     decision_artifacts:
     - figma/decisions/2026-04-01-safe-typography-lane-migration.md
+    - figma/decisions/2026-04-06-semantic-theme-ad-brand-row-order-mappings.md
 semantic_overrides:
   theme:
     status: active
@@ -131,5 +132,6 @@ semantic_overrides:
       - Snow Creek is live as a one-family typography system with `Prompt` across heading, body, and action work.
       - 'Typography size continues to bind directly from published `Global: Typography`.'
       - Brand-safe typography aliases now stage on `snow_creek/family_safe/*` from Vail Resorts Guidelines.pdf.
+      - Ads heading size now stages on the 1.125x row in the approved row-order mapping.
 notes:
 - Snow Creek is live in the Foundations file with three raw color families, one raw typography family primitive, and Snow Creek semantic theme extension.

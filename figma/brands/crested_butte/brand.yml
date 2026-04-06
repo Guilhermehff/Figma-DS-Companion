@@ -1,5 +1,5 @@
 version: 1
-updated: '2026-04-02'
+updated: '2026-04-06'
 brand_id: crested_butte
 display_name: Crested Butte
 status: active
@@ -39,6 +39,7 @@ artifacts:
     - figma/decisions/2026-03-11-crested-butte-staged-foundations-from-source-images.md
     - figma/decisions/2026-03-11-crested-butte-foundations-written-to-figma.md
     - figma/decisions/2026-04-01-safe-typography-lane-migration.md
+    - figma/decisions/2026-04-06-semantic-theme-ad-brand-row-order-mappings.md
 semantic_overrides:
   theme:
     status: active
@@ -137,5 +138,6 @@ semantic_overrides:
       - The supplied typography source uses Gibson across all reviewed roles, so a single brand family primitive is sufficient.
       - '`universal/weight/semibold` is now written in `_Global: Typography` and used by the Crested Butte semantic theme typography override set.'
       - Brand-safe typography aliases now stage on `crested_butte/family_safe/*` from Vail Resorts Guidelines.pdf.
+      - Ads heading size now stages on the 1.125x row in the approved row-order mapping.
 notes:
 - Crested Butte is live in the Foundations file with global color ladders, a global typography family, the shared semibold raw weight, a semantic theme logo-name override, and semantic theme extension.

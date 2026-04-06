@@ -1,5 +1,5 @@
 version: 1
-updated: '2026-04-02'
+updated: '2026-04-06'
 brand_id: heavenly
 display_name: Heavenly
 status: active
@@ -37,6 +37,7 @@ artifacts:
     - figma/decisions/2026-03-11-heavenly-staged-foundations-from-source-images.md
     - figma/decisions/2026-03-11-heavenly-foundations-written-to-figma.md
     - figma/decisions/2026-04-01-safe-typography-lane-migration.md
+    - figma/decisions/2026-04-06-semantic-theme-ad-brand-row-order-mappings.md
 semantic_overrides:
   theme:
     status: active
@@ -136,5 +137,6 @@ semantic_overrides:
       - CTA typography remains intentionally inherited because the supplied image specifies CTA tracking but does not explicitly name a CTA family or weight.
       - The shared semantic theme base now also includes `typography/weight/heading/strong`, `typography/weight/body/strong`, and `size/body/lg` so the Heavenly extension can override against governed base variables rather than a parallel schema.
       - Brand-safe typography aliases now stage on `heavenly/family_safe/*` from Vail Resorts Guidelines.pdf.
+      - Ads heading size now stages on the 1.375x row in the approved row-order mapping.
 notes:
 - Heavenly is live in the Foundations file with global color ladders, two global typography families, the shared raw light weight, a semantic theme logo-name override, and semantic theme extension.

@@ -1,5 +1,5 @@
 version: 1
-updated: '2026-04-02'
+updated: '2026-04-06'
 brand_id: park_city
 display_name: Park City
 status: active
@@ -35,6 +35,7 @@ artifacts:
     decision_artifacts:
     - figma/decisions/2026-03-18-park-city-foundations-written-to-figma.md
     - figma/decisions/2026-04-01-safe-typography-lane-migration.md
+    - figma/decisions/2026-04-06-semantic-theme-ad-brand-row-order-mappings.md
 semantic_overrides:
   theme:
     status: active
@@ -143,5 +144,6 @@ semantic_overrides:
       - '`park_city/family/02` preserves `Trade Gothic LT Std Condensed No. 20` as a raw primitive because the current semantic theme typography schema has no dedicated subhead family lane.'
       - 'Typography size now binds directly from published `Global: Typography`; the supplied hierarchy guidance defines case, tracking, and leading behavior but not new governed numeric size tokens.'
       - Brand-safe typography aliases now stage on `park_city/family_safe/*` from Vail Resorts Guidelines.pdf.
+      - Ads heading size now stages on the 0.875x row in the approved row-order mapping.
 notes:
 - Park City is live in the Foundations file with four raw color families, two raw typography family primitives, a semantic theme logo-name override, and Park City semantic theme extension.

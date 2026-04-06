@@ -1,5 +1,5 @@
 version: 1
-updated: '2026-04-02'
+updated: '2026-04-06'
 brand_id: afton_alps
 display_name: Afton Alps
 status: active
@@ -32,6 +32,7 @@ artifacts:
     preview_artifact: figma/brands/afton_alps/typography/preview.md
     decision_artifacts:
     - figma/decisions/2026-04-01-safe-typography-lane-migration.md
+    - figma/decisions/2026-04-06-semantic-theme-ad-brand-row-order-mappings.md
 semantic_overrides:
   theme:
     status: active
@@ -134,5 +135,6 @@ semantic_overrides:
       - The PDF does not define a separate CTA recipe, so `typography/family/action` and `typography/weight/action/base` follow the headline family and regular weight in the first pass.
       - 'Typography size continues to bind directly from published `Global: Typography`.'
       - Brand-safe typography aliases now stage on `afton_alps/family_safe/*` from Vail Resorts Guidelines.pdf.
+      - Ads heading size now stages on the 0.75x row in the approved row-order mapping.
 notes:
 - Afton Alps is live in the Foundations file with two raw color families, two raw typography family primitives, a semantic theme logo-name override, and Afton Alps semantic theme extension.

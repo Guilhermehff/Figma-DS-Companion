@@ -1,5 +1,5 @@
 version: 1
-updated: '2026-04-02'
+updated: '2026-04-06'
 brand_id: roundtop_mountain
 display_name: Roundtop Mountain
 status: active
@@ -32,6 +32,7 @@ artifacts:
     preview_artifact: figma/brands/roundtop_mountain/typography/preview.md
     decision_artifacts:
     - figma/decisions/2026-04-01-safe-typography-lane-migration.md
+    - figma/decisions/2026-04-06-semantic-theme-ad-brand-row-order-mappings.md
 semantic_overrides:
   theme:
     status: active
@@ -132,5 +133,6 @@ semantic_overrides:
       - The PDF does not define a separate CTA recipe, so `typography/family/action` follows the Rhode headline family in the first pass.
       - 'Typography size continues to bind directly from published `Global: Typography`.'
       - Brand-safe typography aliases now stage on `roundtop_mountain/family_safe/*` from Vail Resorts Guidelines.pdf.
+      - Ads heading size now stages on the 0.75x row in the approved row-order mapping.
 notes:
 - Roundtop Mountain is live in the Foundations file with six raw color families, two raw typography family primitives, and Roundtop Mountain semantic theme extension.

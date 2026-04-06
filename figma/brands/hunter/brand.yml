@@ -1,5 +1,5 @@
 version: 1
-updated: '2026-04-02'
+updated: '2026-04-06'
 brand_id: hunter
 display_name: Hunter
 status: active
@@ -34,6 +34,7 @@ artifacts:
     decision_artifacts:
     - figma/decisions/2026-03-19-hunter-foundations-written-to-figma.md
     - figma/decisions/2026-04-01-safe-typography-lane-migration.md
+    - figma/decisions/2026-04-06-semantic-theme-ad-brand-row-order-mappings.md
 semantic_overrides:
   theme:
     status: active
@@ -135,5 +136,6 @@ semantic_overrides:
       - Galano Grotesque Light remains documented as a raw contrasting-body option rather than a separate semantic lane.
       - The source does not define a CTA or action recipe, so the action lane remains inherited in the live semantic extension.
       - Brand-safe typography aliases now stage on `hunter/family_safe/*` from Vail Resorts Guidelines.pdf.
+      - Ads heading size now stages on the 1.125x row in the approved row-order mapping.
 notes:
 - Hunter is live in the Foundations file with four raw color families, one raw typography family primitive, a semantic theme logo-name override, a Hunter semantic theme extension.
