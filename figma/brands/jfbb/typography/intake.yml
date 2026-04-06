@@ -68,17 +68,17 @@ primitive_recommendations:
         does not provide a numeric distinction from normal.
     sizes:
     - source_size_reference: headline default
-      existing_token: universal/size/700
+      existing_token: universal/size/core/700
       assumption_status: assumed
       assumption_note: The source provides an example size pair but not a governed semantic size token.
       reason: Keeps headline sizing inside the current shared raw ladder.
     - source_size_reference: subheadline default
-      existing_token: universal/size/500
+      existing_token: universal/size/core/500
       assumption_status: assumed
       assumption_note: The source provides an example pair but no governed semantic size step.
       reason: Preserves hierarchy without introducing a new raw size.
     - source_size_reference: body default
-      existing_token: universal/size/200
+      existing_token: universal/size/core/200
       assumption_status: assumed
       assumption_note: The body example is internally inconsistent, so the live extension keeps size semantics
         inherited.
@@ -110,18 +110,18 @@ primitive_recommendations:
     reason: The source does not define CTA, button, or action-specific typography behavior.
 semantic_recommendations:
   family_aliases:
-  - semantic_token: family/heading
+  - semantic_token: typography/family/heading
     global_token: jfbb/family/01
-    safe_semantic_token: family/heading_safe
+    safe_semantic_token: typography/family/heading_safe
     safe_global_token: jfbb/family_safe/01
     intended_channels:
     - web
     - email
     - ads
     notes: Headline work stays on the single JFBB family. Safe mapping is staged from Vail Resorts Guidelines.pdf.
-  - semantic_token: family/body
+  - semantic_token: typography/family/body
     global_token: jfbb/family/01
-    safe_semantic_token: family/body_safe
+    safe_semantic_token: typography/family/body_safe
     safe_global_token: jfbb/family_safe/02
     intended_channels:
     - web
@@ -130,21 +130,21 @@ semantic_recommendations:
     notes: Body and subheadline copy use the same family, with weight carrying hierarchy. Safe mapping
       is staged from Vail Resorts Guidelines.pdf.
   weight_aliases:
-  - semantic_token: weight/heading/base
+  - semantic_token: typography/weight/heading/base
     global_token: universal/weight/black
     intended_channels:
     - web
     - email
     - ads
     notes: Headline weight is an explicit direct match to the shared black raw weight.
-  - semantic_token: weight/body/base
+  - semantic_token: typography/weight/body/base
     global_token: universal/weight/normal
     intended_channels:
     - web
     - email
     - ads
     notes: Book is staged on normal because there is no separate shared raw book primitive.
-  - semantic_token: weight/body/strong
+  - semantic_token: typography/weight/body/strong
     global_token: universal/weight/bold
     intended_channels:
     - web
@@ -157,7 +157,7 @@ role_recipes:
   source_role: Headline | Vista Sans NAR OTCE Black
   proposed_family_token: jfbb/family/01
   proposed_weight_token: universal/weight/black
-  proposed_size_token: universal/size/700
+  proposed_size_token: universal/size/core/700
   size_assumption_status: assumed
   text_case: all_caps
   tracking: 0%
@@ -171,7 +171,7 @@ role_recipes:
   source_role: Subheadline | Vista Sans NAR OTCE Bold
   proposed_family_token: jfbb/family/01
   proposed_weight_token: universal/weight/bold
-  proposed_size_token: universal/size/500
+  proposed_size_token: universal/size/core/500
   size_assumption_status: assumed
   text_case: all_caps
   tracking: 0%
@@ -185,7 +185,7 @@ role_recipes:
   source_role: Body | Vista Sans NAR OTCE Book
   proposed_family_token: jfbb/family/01
   proposed_weight_token: universal/weight/normal
-  proposed_size_token: universal/size/200
+  proposed_size_token: universal/size/core/200
   size_assumption_status: assumed
   text_case: sentence_case
   tracking: 0%

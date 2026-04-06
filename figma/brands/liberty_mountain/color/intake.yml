@@ -438,28 +438,28 @@ semantic_recommendations:
     source_family: liberty_mountain/warm_neutral
     rationale: User-approved live write. The neutral lane should behave as one warm structural ramp rather than three disconnected raw swatches.
     targets:
-    - surface/neutral/*
-    - on_surface/neutral/*
-    - foreground/default
-    - foreground/subtle
-    - border/default
-    - border/subtle
+    - color/surface/neutral/*
+    - color/on_surface/neutral/*
+    - color/foreground/default
+    - color/foreground/subtle
+    - color/border/default
+    - color/border/subtle
   - scope: brand
     source_family: liberty_mountain/sunrise
     rationale: User-approved live write. Sunrise is the primary expressive lane.
     targets:
-    - surface/brand/*
-    - on_surface/brand/*
-    - foreground/brand
-    - border/brand
+    - color/surface/brand/*
+    - color/on_surface/brand/*
+    - color/foreground/brand
+    - color/border/brand
   - scope: brand_secondary
     source_family: liberty_mountain/spring
     rationale: User-approved live write. Spring is the supporting expressive lane.
     targets:
-    - surface/brand_secondary/*
-    - on_surface/brand_secondary/*
-    - foreground/brand_secondary
-    - border/brand_secondary
+    - color/surface/brand_secondary/*
+    - color/on_surface/brand_secondary/*
+    - color/foreground/brand_secondary
+    - color/border/brand_secondary
   global_only_families:
   - family: liberty_mountain/cool_neutral
     rationale: Preserved as a grouped raw source family only. The original Twilight, Summit, and Tundra swatches stay visible in documentation as alias anchors.
@@ -474,7 +474,7 @@ semantic_recommendations:
   - family: liberty_mountain/copper
     rationale: Preserved as a raw source family only.
   role_exceptions:
-  - target: assets/logo
+  - target: variables/assets/logo
     source_token: Liberty Mountain
     rationale: The live semantic color extension should resolve the logo-name string to the brand display name.
 review_readiness:

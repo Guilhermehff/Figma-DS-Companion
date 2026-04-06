@@ -68,7 +68,7 @@ Source anchor: `500_source`
 - Scope: `brand_secondary` -> `whitetail_resort/two_top_green`
   One non-neutral brand hue drives the second expressive lane as well.
 - Global-only families: `whitetail_resort/neutral`
-- `assets/logo` -> `Whitetail Resort`
+- `variables/assets/logo` -> `Whitetail Resort`
 
 ## Review Readiness
 

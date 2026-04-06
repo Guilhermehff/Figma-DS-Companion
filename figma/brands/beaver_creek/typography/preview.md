@@ -70,7 +70,7 @@ Safe family token: `beaver_creek/family_safe/02`
 
 Proposed weight token: `universal/weight/thin`
 
-Proposed size token: `universal/size/700`
+Proposed size token: `universal/size/core/700`
 
 Recipe notes:
 
@@ -89,7 +89,7 @@ Safe family token: `beaver_creek/family_safe/02`
 
 Proposed weight token: `universal/weight/bold`
 
-Proposed size token: `universal/size/400`
+Proposed size token: `universal/size/core/400`
 
 Recipe notes:
 
@@ -108,7 +108,7 @@ Safe family token: `beaver_creek/family_safe/01`
 
 Proposed weight token: `universal/weight/light`
 
-Proposed size token: `universal/size/200`
+Proposed size token: `universal/size/core/200`
 
 Recipe notes:
 
@@ -127,7 +127,7 @@ Safe family token: `beaver_creek/family_safe/01`
 
 Proposed weight token: `universal/weight/light`
 
-Proposed size token: `universal/size/100`
+Proposed size token: `universal/size/core/100`
 
 Recipe notes:
 

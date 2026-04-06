@@ -80,14 +80,14 @@ Source anchor: `900_source`
 
 ## Live Semantic Mapping
 
-- `surface/neutral/*`, `on_surface/neutral/*`, `foreground/default`, `foreground/subtle`, `border/default`, `border/subtle` -> `inherited_base`
+- `color/surface/neutral/*`, `color/on_surface/neutral/*`, `color/foreground/default`, `color/foreground/subtle`, `color/border/default`, `color/border/subtle` -> `inherited_base`
   Exact black and white are already governed by the shared universal primitives, so the first pass keeps the neutral role set inherited.
-- `surface/brand/*`, `on_surface/brand/*`, `foreground/brand`, `border/brand` -> `crotched/rocket_fuel`
+- `color/surface/brand/*`, `color/on_surface/brand/*`, `color/foreground/brand`, `color/border/brand` -> `crotched/rocket_fuel`
   Rocket Fuel is the signature bright brand color and should drive the primary expressive semantic lane.
-- `surface/brand_secondary/*`, `on_surface/brand_secondary/*`, `foreground/brand_secondary`, `border/brand_secondary` -> `crotched/snow_gun`
+- `color/surface/brand_secondary/*`, `color/on_surface/brand_secondary/*`, `color/foreground/brand_secondary`, `color/border/brand_secondary` -> `crotched/snow_gun`
   Snow Gun is the dark supporting brand color and should drive the secondary expressive lane.
-- `assets/logo` -> `Crotched`
-  The live semantic color schema stores the governed brand display label in `assets/logo`; the source image shows longer logo lockups, but the user requested the brand be added as Crotched.
+- `variables/assets/logo` -> `Crotched`
+  The live semantic color schema stores the governed brand display label in `variables/assets/logo`; the source image shows longer logo lockups, but the user requested the brand be added as Crotched.
 
 ## Review Readiness
 

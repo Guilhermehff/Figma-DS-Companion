@@ -31,7 +31,7 @@ semantic_recommendations:
     rationale: The supplied brand palette is monochrome, so the second expressive lane aliases the shared universal black primitive as well.
   global_only_families: []
   role_exceptions:
-  - target: assets/logo
+  - target: variables/assets/logo
     source_token: Boston Mills / Brandywine
 review_readiness:
   review_rules:

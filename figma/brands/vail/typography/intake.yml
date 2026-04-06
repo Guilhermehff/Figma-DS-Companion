@@ -96,32 +96,32 @@ primitive_recommendations:
         typography reviews unless a later numeric exception is approved.
     sizes:
     - source_size_reference: headline default
-      existing_token: universal/size/800
+      existing_token: universal/size/core/800
       assumption_status: assumed
       assumption_note: Source provides no numeric size, so the initial review maps headline to the current
         largest universal display size.
       reason: Use the existing universal size ladder for provisional review values until design experimentation
         confirms a different headline size.
     - source_size_reference: eyebrow at 0.5x headline
-      existing_token: universal/size/400
+      existing_token: universal/size/core/400
       assumption_status: assumed
       assumption_note: Eyebrow is defined as half the headline size, so it inherits the provisional 18px
         mapping from the assumed 36px headline.
       reason: Matches the relational source rule without inventing a new raw size.
     - source_size_reference: subhead at 0.5x headline
-      existing_token: universal/size/400
+      existing_token: universal/size/core/400
       assumption_status: assumed
       assumption_note: Subhead is defined as half the headline size, so it inherits the provisional 18px
         mapping from the assumed 36px headline.
       reason: Matches the relational source rule without inventing a new raw size.
     - source_size_reference: body default
-      existing_token: universal/size/300
+      existing_token: universal/size/core/300
       assumption_status: assumed
       assumption_note: Source provides no numeric size, so body defaults to the current universal base
         reading size.
       reason: Keeps raw body size in the shared universal ladder until channel testing suggests a change.
     - source_size_reference: cta default
-      existing_token: universal/size/300
+      existing_token: universal/size/core/300
       assumption_status: assumed
       assumption_note: Source provides no numeric CTA size, so CTA defaults to the universal base action
         size for initial review.
@@ -151,9 +151,9 @@ primitive_recommendations:
   hold_for_review: []
 semantic_recommendations:
   family_aliases:
-  - semantic_token: family/heading
+  - semantic_token: typography/family/heading
     global_token: vail/family/01
-    safe_semantic_token: family/heading_safe
+    safe_semantic_token: typography/family/heading_safe
     safe_global_token: vail/family_safe/01
     intended_channels:
     - web
@@ -162,9 +162,9 @@ semantic_recommendations:
     notes: Use the brand display family in web and ad executions. Use the safe alias for email or any
       constrained placement that cannot reliably deliver Termina. Safe mapping is staged from Vail Resorts
       Guidelines.pdf.
-  - semantic_token: family/body
+  - semantic_token: typography/family/body
     global_token: vail/family/02
-    safe_semantic_token: family/body_safe
+    safe_semantic_token: typography/family/body_safe
     safe_global_token: vail/family_safe/01
     intended_channels:
     - web
@@ -172,9 +172,9 @@ semantic_recommendations:
     - ads
     notes: Primary reading family across channels. Use the safe alias where brand-font delivery is constrained.
       Safe mapping is staged from Vail Resorts Guidelines.pdf.
-  - semantic_token: family/action
+  - semantic_token: typography/family/action
     global_token: vail/family/02
-    safe_semantic_token: family/action_safe
+    safe_semantic_token: typography/family/action_safe
     safe_global_token: vail/family_safe/01
     intended_channels:
     - web
@@ -187,7 +187,7 @@ role_recipes:
   source_role: Eyebrow | Avenir Black
   proposed_family_token: vail/family/02
   proposed_weight_token: universal/weight/black
-  proposed_size_token: universal/size/400
+  proposed_size_token: universal/size/core/400
   size_assumption_status: assumed
   text_case: all_caps
   tracking: 0px
@@ -202,7 +202,7 @@ role_recipes:
   source_role: Headline | Termina Black
   proposed_family_token: vail/family/01
   proposed_weight_token: universal/weight/black
-  proposed_size_token: universal/size/800
+  proposed_size_token: universal/size/core/800
   size_assumption_status: assumed
   text_case: all_caps
   tracking: 0px
@@ -217,7 +217,7 @@ role_recipes:
   source_role: Subhead | Avenir Black
   proposed_family_token: vail/family/02
   proposed_weight_token: universal/weight/black
-  proposed_size_token: universal/size/400
+  proposed_size_token: universal/size/core/400
   size_assumption_status: assumed
   text_case: sentence_case
   tracking: 0px
@@ -231,7 +231,7 @@ role_recipes:
   source_role: Body Copy | Avenir Medium
   proposed_family_token: vail/family/02
   proposed_weight_token: universal/weight/medium
-  proposed_size_token: universal/size/300
+  proposed_size_token: universal/size/core/300
   size_assumption_status: assumed
   text_case: sentence_case
   tracking: 0px
@@ -246,7 +246,7 @@ role_recipes:
   source_role: CTA | Avenir Black
   proposed_family_token: vail/family/02
   proposed_weight_token: universal/weight/black
-  proposed_size_token: universal/size/300
+  proposed_size_token: universal/size/core/300
   size_assumption_status: assumed
   text_case: all_caps
   tracking: 0px
@@ -275,12 +275,12 @@ review_readiness:
   - email
   - ads
   review_rules:
-  - subject: family/heading_safe
+  - subject: typography/family/heading_safe
     channels:
     - email
     rule: Use the safe semantic alias when the channel cannot reliably deliver Termina.
     source_basis: Safe-semantic governance for constrained channels.
-  - subject: family/body_safe
+  - subject: typography/family/body_safe
     channels:
     - email
     rule: Use the safe semantic alias when the channel cannot reliably deliver Avenir.

@@ -119,9 +119,9 @@ primitive_recommendations:
   hold_for_review: []
 semantic_recommendations:
   family_aliases:
-  - semantic_token: family/heading
+  - semantic_token: typography/family/heading
     global_token: hunter/family/01
-    safe_semantic_token: family/heading_safe
+    safe_semantic_token: typography/family/heading_safe
     safe_global_token: hunter/family_safe/01
     intended_channels:
     - web
@@ -129,9 +129,9 @@ semantic_recommendations:
     - ads
     notes: Galano Grotesque is the repeated Hunter headline family. Safe mapping is staged from Vail Resorts
       Guidelines.pdf.
-  - semantic_token: family/body
+  - semantic_token: typography/family/body
     global_token: hunter/family/01
-    safe_semantic_token: family/body_safe
+    safe_semantic_token: typography/family/body_safe
     safe_global_token: hunter/family_safe/01
     intended_channels:
     - web
@@ -140,21 +140,21 @@ semantic_recommendations:
     notes: Galano Grotesque also drives the reading-copy lane. Safe mapping is staged from Vail Resorts
       Guidelines.pdf.
   weight_aliases:
-  - semantic_token: weight/heading/base
+  - semantic_token: typography/weight/heading/base
     global_token: universal/weight/bold
     intended_channels:
     - web
     - email
     - ads
     notes: Headlines explicitly use Galano Grotesque Bold.
-  - semantic_token: weight/body/base
+  - semantic_token: typography/weight/body/base
     global_token: universal/weight/normal
     intended_channels:
     - web
     - email
     - ads
     notes: Body copy explicitly uses Galano Grotesque Regular.
-  - semantic_token: weight/body/strong
+  - semantic_token: typography/weight/body/strong
     global_token: universal/weight/semibold
     intended_channels:
     - web
@@ -230,7 +230,7 @@ validation:
   governance_notes:
   - Galano Grotesque stages cleanly as one shared family, with weight carrying the hierarchy between H1,
     H2, body, and the lighter contrasting-copy lane.
-  - Approved live write. `weight/body/strong` uses `universal/weight/semibold` so the explicit subheadline
+  - Approved live write. `typography/weight/body/strong` uses `universal/weight/semibold` so the explicit subheadline
     treatment remains available through the current semantic theme typography ladder.
   - The source does not define a CTA or action recipe, so the action family and weight remain inherited
     in the live semantic extension.

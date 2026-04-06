@@ -98,7 +98,7 @@ Recipe notes:
 - Leading: `leading equals the point size`
 - Size rule: `no governed source size token`
 - Punctuation: `not specified in source`
-- Notes: The live mapping routes the subhead recipe through `weight/heading/strong` because the semantic theme typography model has no dedicated subhead slot.
+- Notes: The live mapping routes the subhead recipe through `typography/weight/heading/strong` because the semantic theme typography model has no dedicated subhead slot.
 
 ### Role: body
 

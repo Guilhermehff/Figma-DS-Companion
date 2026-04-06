@@ -335,41 +335,41 @@ semantic_recommendations:
     source_family: jfbb/snow_day
     rationale: Snow Day is the explicit light background color across the supplied brand guidance and should drive the neutral surface stack.
     targets:
-    - surface/neutral/*
-    - border/default
-    - border/subtle
+    - color/surface/neutral/*
+    - color/border/default
+    - color/border/subtle
   - scope: brand
     source_family: jfbb/early_sunrise
     rationale: Early Sunrise is the loudest primary expressive accent and the clearest first brand lane for the current semantic model.
     targets:
-    - surface/brand/*
-    - on_surface/brand/*
-    - foreground/brand
-    - border/brand
+    - color/surface/brand/*
+    - color/on_surface/brand/*
+    - color/foreground/brand
+    - color/border/brand
   - scope: brand_secondary
     source_family: jfbb/bluebird
     rationale: Bluebird is the cleanest supporting expressive lane and preserves a balanced warm/cool pairing with Early Sunrise.
     targets:
-    - surface/brand_secondary/*
-    - on_surface/brand_secondary/*
-    - foreground/brand_secondary
-    - border/brand_secondary
+    - color/surface/brand_secondary/*
+    - color/on_surface/brand_secondary/*
+    - color/foreground/brand_secondary
+    - color/border/brand_secondary
   global_only_families:
   - family: jfbb/frost
     rationale: Frost remains available as a governed cyan accent but does not displace Bluebird in the shared second expressive lane.
   - family: jfbb/night_ski
     rationale: Night Ski stays global-only so the first semantic pass does not promote a second dark navy lane beyond the readable Last Chair exception.
   role_exceptions:
-  - target: on_surface/neutral/*
+  - target: color/on_surface/neutral/*
     source_token: jfbb/last_chair/900
     rationale: Readable neutral copy follows the supplied dark navy rather than the very light Snow Day surface ladder.
-  - target: foreground/default
+  - target: color/foreground/default
     source_token: jfbb/last_chair/900
     rationale: Default foreground needs the same brand navy used across the supplied hierarchy sheet.
-  - target: foreground/subtle
+  - target: color/foreground/subtle
     source_token: jfbb/last_chair/800
     rationale: Subtle neutral foreground keeps a softer navy tone without leaving the brand palette.
-  - target: assets/logo
+  - target: variables/assets/logo
     source_token: JFBB
     rationale: The semantic color extension overrides the shared logo string to the JFBB brand name.
 review_readiness:

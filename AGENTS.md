@@ -98,16 +98,18 @@ Rules:
 - Semantic tokens alias Global tokens.
 - The semantic layer lives in one shared published collection named `Semantic: Theme`.
 - **Extended collections happen at the Semantic level** to support brand differences while keeping one semantic schema.
-- `Semantic: Theme` carries semantic color roles, brand assets, and semantic typography family and weight aliases.
-- Typography size stays out of the semantic layer and is published directly from `Global: Typography`.
+- `Semantic: Theme` carries semantic color roles, brand assets, semantic typography family and weight aliases, and only the approved channel-scoped typography size recipe aliases recorded in accepted decisions.
+- Typography size stays out of the semantic layer by default and is published directly from `Global: Typography` unless an accepted decision approves a channel-scoped semantic recipe exception.
 - Brands without established typography guidance must inherit semantic typography family and weight aliases from the shared base without extension overrides.
 - Semantic extensions must not keep redundant overrides. If an extension resolves to the same alias target or the same literal value as the base semantic token, remove the override and inherit from the base instead.
 - Semantic tokens should be structured so they can be mapped into channel meaning cleanly.
+- Active semantic token paths are grouped by foundation family at the top level: `color/*`, `typography/*`, and `variables/*`.
 
 Naming note:
 
 - Figma variable names use slash-delimited paths, not dot-delimited names.
-- In `_Global: Color`, `Global: Typography`, and `Global: Dimensions`, the collection already defines the category, so variable names start at the child path (for example `universal/slate/50`, `universal/size/100`, `space/4`).
+- In `_Global: Color`, `Global: Typography`, and `Global: Dimensions`, the collection already defines the category, so variable names start at the child path (for example `universal/slate/50`, `universal/size/core/100`, `space/4`).
+- In `Semantic: Theme`, active paths are grouped under the top-level families `color`, `typography`, and `variables` (for example `color/surface/neutral/default`, `typography/family/heading`, `variables/assets/logo`).
 
 ### Level 3: Channel
 
@@ -120,18 +122,19 @@ Rules:
 - Channel specific constraints are allowed and expected (e.g., Email limitations).
 - Channel typography is typically handled as **styles** in the channel library.
 - Channel text styles bind `fontFamily` and `fontWeight` from `Semantic: Theme`.
-- Channel text styles bind `fontSize` directly from `Global: Typography`.
+- Channel text styles bind `fontSize` directly from `Global: Typography` unless they intentionally consume an approved channel-scoped semantic size recipe.
 
 ### Exception: Typography
 
-Typography sizes are published directly from `Global: Typography`.
+Typography sizes are published directly from `Global: Typography`, with narrow semantic recipe exceptions only when a recorded governance decision approves them.
 
 Rules:
 
 - `Global: Typography` is an approved published global exception.
-- Only the shared raw size ladder is publish-visible from `Global: Typography`.
+- Shared raw size ladders and approved channel-scoped raw size families may be publish-visible from `Global: Typography`.
 - Raw typography family and weight primitives remain hidden from publishing even though the collection is published.
 - Brands without established typography guidance must not receive mirrored raw family or weight primitives in `Global: Typography`.
+- `Semantic: Theme` may carry channel-scoped typography size recipe aliases only when an accepted decision explicitly defines the scope, naming, and downstream use.
 
 ### Exception: Dimensions
 

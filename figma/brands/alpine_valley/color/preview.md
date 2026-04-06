@@ -48,14 +48,14 @@ Source anchor: `300_source`
 
 ## Live Semantic Mapping
 
-- `surface/neutral/*`, `on_surface/neutral/*`, `foreground/default`, `foreground/subtle`, `border/default`, `border/subtle` -> `inherited_base`
+- `color/surface/neutral/*`, `color/on_surface/neutral/*`, `color/foreground/default`, `color/foreground/subtle`, `color/border/default`, `color/border/subtle` -> `inherited_base`
   Exact black is reused as the universal primitive and no Alpine Valley light neutral or white swatch was supplied, so the shared neutral role set remains inherited in the first pass.
-- `surface/brand/*`, `on_surface/brand/*`, `foreground/brand`, `border/brand` -> `alpine_valley/alpine`
+- `color/surface/brand/*`, `color/on_surface/brand/*`, `color/foreground/brand`, `color/border/brand` -> `alpine_valley/alpine`
   Recommended first pass. `alpine/*` is the only non-neutral supplied family, so it is the most stable expressive lane under the current semantic model.
-- `surface/brand_secondary/*`, `on_surface/brand_secondary/*`, `foreground/brand_secondary`, `border/brand_secondary` -> `alpine_valley/alpine`
+- `color/surface/brand_secondary/*`, `color/on_surface/brand_secondary/*`, `color/foreground/brand_secondary`, `color/border/brand_secondary` -> `alpine_valley/alpine`
   Recommended first pass. The source does not provide a second expressive hue, so the accepted semantic color model allows `brand_secondary/*` to reuse the same raw family as `brand/*`.
-- `assets/logo` -> `Alpine Valley`
-  The live `Semantic: Theme` schema includes `assets/logo`, and each brand extension overrides it to the brand display name string.
+- `variables/assets/logo` -> `Alpine Valley`
+  The live `Semantic: Theme` schema includes `variables/assets/logo`, and each brand extension overrides it to the brand display name string.
 
 ## Review Readiness
 

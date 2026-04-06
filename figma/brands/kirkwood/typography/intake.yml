@@ -86,22 +86,22 @@ primitive_recommendations:
       reason: The body and Trade Gothic No. 18 support lane both stage cleanly on the shared normal weight.
     sizes:
     - source_size_reference: headline default
-      existing_token: universal/size/800
+      existing_token: universal/size/core/800
       assumption_status: assumed
       assumption_note: The source shows a dominant condensed display treatment without a numeric size.
       reason: Uses the largest governed heading size for the first staged pass.
     - source_size_reference: title_or_small_type default
-      existing_token: universal/size/400
+      existing_token: universal/size/core/400
       assumption_status: assumed
       assumption_note: The source shows compact supporting titling rather than a full display headline.
       reason: Keeps the title lane inside the shared size ladder without creating a new raw size.
     - source_size_reference: body default
-      existing_token: universal/size/300
+      existing_token: universal/size/core/300
       assumption_status: explicit
       assumption_note: The source caps body at 16 pt, which matches the current shared base body size.
       reason: Preserves the governed raw body step without adding a duplicate size token.
     - source_size_reference: action_or_short_emphasis default
-      existing_token: universal/size/300
+      existing_token: universal/size/core/300
       assumption_status: assumed
       assumption_note: The source describes short emphasis behavior but does not define a numeric size.
       reason: Stages the action-support lane on the shared reading size for the first pass.
@@ -150,9 +150,9 @@ primitive_recommendations:
       lanes.
 semantic_recommendations:
   family_aliases:
-  - semantic_token: family/heading
+  - semantic_token: typography/family/heading
     global_token: kirkwood/family/01
-    safe_semantic_token: family/heading_safe
+    safe_semantic_token: typography/family/heading_safe
     safe_global_token: kirkwood/family_safe/01
     intended_channels:
     - web
@@ -160,9 +160,9 @@ semantic_recommendations:
     - ads
     notes: Kirkwood display headlines use Trade Gothic Condensed No. 20. Safe mapping is staged from
       Vail Resorts Guidelines.pdf.
-  - semantic_token: family/body
+  - semantic_token: typography/family/body
     global_token: kirkwood/family/02
-    safe_semantic_token: family/body_safe
+    safe_semantic_token: typography/family/body_safe
     safe_global_token: kirkwood/family_safe/02
     intended_channels:
     - web
@@ -170,9 +170,9 @@ semantic_recommendations:
     - ads
     notes: Avenir Next remains the sentence-case reading family. Safe mapping is staged from Vail Resorts
       Guidelines.pdf.
-  - semantic_token: family/action
+  - semantic_token: typography/family/action
     global_token: kirkwood/family/03
-    safe_semantic_token: family/action_safe
+    safe_semantic_token: typography/family/action_safe
     safe_global_token: kirkwood/family_safe/01
     intended_channels:
     - web
@@ -181,21 +181,21 @@ semantic_recommendations:
     notes: Futura stages as the semantic action lane because it supports short, emphatic copy in
       both all caps and title case. Safe mapping is staged from Vail Resorts Guidelines.pdf.
   weight_aliases:
-  - semantic_token: weight/heading/base
+  - semantic_token: typography/weight/heading/base
     global_token: universal/weight/bold
     intended_channels:
     - web
     - email
     - ads
     notes: The headline lane is explicitly bold.
-  - semantic_token: weight/body/base
+  - semantic_token: typography/weight/body/base
     global_token: universal/weight/normal
     intended_channels:
     - web
     - email
     - ads
     notes: Avenir Next Regular remains the body baseline.
-  - semantic_token: weight/action/base
+  - semantic_token: typography/weight/action/base
     global_token: universal/weight/bold
     intended_channels:
     - web
@@ -208,7 +208,7 @@ role_recipes:
   source_role: Title / Small Type | Futura Bold
   proposed_family_token: kirkwood/family/03
   proposed_weight_token: universal/weight/bold
-  proposed_size_token: universal/size/400
+  proposed_size_token: universal/size/core/400
   size_assumption_status: assumed
   text_case: all_caps_or_title_case
   tracking: not specified in source
@@ -222,7 +222,7 @@ role_recipes:
   source_role: Headline | Trade Gothic Bold Condensed No. 20
   proposed_family_token: kirkwood/family/01
   proposed_weight_token: universal/weight/bold
-  proposed_size_token: universal/size/800
+  proposed_size_token: universal/size/core/800
   size_assumption_status: assumed
   text_case: all_caps
   tracking: not specified in source
@@ -236,7 +236,7 @@ role_recipes:
   source_role: Body | Avenir Next Regular
   proposed_family_token: kirkwood/family/02
   proposed_weight_token: universal/weight/normal
-  proposed_size_token: universal/size/300
+  proposed_size_token: universal/size/core/300
   size_assumption_status: explicit
   text_case: sentence_case
   tracking: not specified in source
@@ -250,7 +250,7 @@ role_recipes:
   source_role: Limited Space | Trade Gothic Condensed No. 18
   proposed_family_token: kirkwood/family/04
   proposed_weight_token: universal/weight/normal
-  proposed_size_token: universal/size/300
+  proposed_size_token: universal/size/core/300
   size_assumption_status: assumed
   text_case: not specified in source
   tracking: not specified in source
@@ -267,7 +267,7 @@ validation:
   - Kirkwood uses four distinct named families or family-styles across the supplied guidance, which exceeds
     the current three-lane semantic family schema.
   governance_notes:
-  - Futura Bold is staged into `family/action` because it best fits short emphatic copy that can appear
+  - Futura Bold is staged into `typography/family/action` because it best fits short emphatic copy that can appear
     in title case or all caps.
   - Trade Gothic Condensed No. 18 is preserved as a raw primitive only, avoiding a silent semantic schema
     expansion.

@@ -96,13 +96,13 @@ primitive_recommendations:
       reason: Subheadline and body copy use Avenir Medium.
     sizes:
     - source_size_reference: body default
-      existing_token: universal/size/300
+      existing_token: universal/size/core/300
       assumption_status: explicit
       assumption_note: The source explicitly gives a 16px body example, matching the current shared `300`
         size.
       reason: No new raw size step is needed for the body lane.
     - source_size_reference: cta default
-      existing_token: universal/size/500
+      existing_token: universal/size/core/500
       assumption_status: explicit
       assumption_note: The CTA example explicitly shows 20px.
       reason: Matches the current shared `500` size.
@@ -129,9 +129,9 @@ primitive_recommendations:
   hold_for_review: []
 semantic_recommendations:
   family_aliases:
-  - semantic_token: family/heading
+  - semantic_token: typography/family/heading
     global_token: keystone/family/01
-    safe_semantic_token: family/heading_safe
+    safe_semantic_token: typography/family/heading_safe
     safe_global_token: keystone/family_safe/01
     intended_channels:
     - web
@@ -139,9 +139,9 @@ semantic_recommendations:
     - ads
     notes: Futura is the approved display family in the Keystone system. Safe mapping is staged from Vail
       Resorts Guidelines.pdf.
-  - semantic_token: family/body
+  - semantic_token: typography/family/body
     global_token: keystone/family/02
-    safe_semantic_token: family/body_safe
+    safe_semantic_token: typography/family/body_safe
     safe_global_token: keystone/family_safe/01
     intended_channels:
     - web
@@ -149,9 +149,9 @@ semantic_recommendations:
     - ads
     notes: Avenir remains the approved body and subheadline family. Safe mapping is staged from Vail Resorts
       Guidelines.pdf.
-  - semantic_token: family/action
+  - semantic_token: typography/family/action
     global_token: keystone/family/01
-    safe_semantic_token: family/action_safe
+    safe_semantic_token: typography/family/action_safe
     safe_global_token: keystone/family_safe/01
     intended_channels:
     - web
@@ -160,21 +160,21 @@ semantic_recommendations:
     notes: CTA is approved to use the Futura family rather than Avenir. Safe mapping is staged from Vail
       Resorts Guidelines.pdf.
   weight_aliases:
-  - semantic_token: weight/heading/base
+  - semantic_token: typography/weight/heading/base
     global_token: universal/weight/bold
     intended_channels:
     - web
     - email
     - ads
     notes: The headline lane is explicitly bold.
-  - semantic_token: weight/body/base
+  - semantic_token: typography/weight/body/base
     global_token: universal/weight/medium
     intended_channels:
     - web
     - email
     - ads
     notes: Keystone body copy explicitly uses Avenir Medium rather than a normal reading weight.
-  - semantic_token: weight/action/base
+  - semantic_token: typography/weight/action/base
     global_token: universal/weight/bold
     intended_channels:
     - web
@@ -183,7 +183,7 @@ semantic_recommendations:
     notes: CTA is approved to use Futura Bold.
   size_aliases:
   - semantic_token: size/action/base
-    global_token: universal/size/500
+    global_token: universal/size/core/500
     intended_channels:
     - web
     - email
@@ -223,7 +223,7 @@ role_recipes:
   source_role: Body Copy | Avenir Medium
   proposed_family_token: keystone/family/02
   proposed_weight_token: universal/weight/medium
-  proposed_size_token: universal/size/300
+  proposed_size_token: universal/size/core/300
   size_assumption_status: explicit
   text_case: sentence_case
   tracking: 0%
@@ -237,7 +237,7 @@ role_recipes:
   source_role: Emphasized body copy | Futura Bold
   proposed_family_token: keystone/family/01
   proposed_weight_token: universal/weight/bold
-  proposed_size_token: universal/size/300
+  proposed_size_token: universal/size/core/300
   size_assumption_status: explicit
   text_case: sentence_case
   tracking: 0%
@@ -251,7 +251,7 @@ role_recipes:
   source_role: CTA | Futura Bold
   proposed_family_token: keystone/family/01
   proposed_weight_token: universal/weight/bold
-  proposed_size_token: universal/size/500
+  proposed_size_token: universal/size/core/500
   size_assumption_status: explicit
   text_case: title_case
   tracking: not specified in source

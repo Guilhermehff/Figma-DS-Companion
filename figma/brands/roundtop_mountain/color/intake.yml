@@ -286,7 +286,7 @@ semantic_recommendations:
   - roundtop_mountain/red
   - roundtop_mountain/cyan
   role_exceptions:
-  - target: assets/logo
+  - target: variables/assets/logo
     source_token: Roundtop Mountain
 review_readiness:
   review_rules:

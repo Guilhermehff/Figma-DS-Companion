@@ -65,19 +65,19 @@ primitive_recommendations:
       reason: The source explicitly names Regular, which maps to the existing normal raw weight.
     sizes:
     - source_size_reference: headline default
-      existing_token: universal/size/800
+      existing_token: universal/size/core/800
       assumption_status: assumed
       assumption_note: The source provides hierarchy and behavior but no numeric headline size, so the
         first pass uses the largest governed display step.
       reason: Preserves a strong headline role while keeping the sizing ladder shared.
     - source_size_reference: sub-headline default
-      existing_token: universal/size/500
+      existing_token: universal/size/core/500
       assumption_status: assumed
       assumption_note: The source shows a clearly subordinate but still prominent role, so the first pass
         uses the mid-large heading step.
       reason: Keeps the sub-headline within the current shared size ladder.
     - source_size_reference: body default
-      existing_token: universal/size/300
+      existing_token: universal/size/core/300
       assumption_status: assumed
       assumption_note: The source does not provide a numeric body size, so the initial review uses the
         shared reading size.
@@ -112,9 +112,9 @@ primitive_recommendations:
     reason: The source does not define CTA, button, or action-specific typography behavior.
 semantic_recommendations:
   family_aliases:
-  - semantic_token: family/heading
+  - semantic_token: typography/family/heading
     global_token: northstar/family/01
-    safe_semantic_token: family/heading_safe
+    safe_semantic_token: typography/family/heading_safe
     safe_global_token: northstar/family_safe/01
     intended_channels:
     - web
@@ -122,9 +122,9 @@ semantic_recommendations:
     - ads
     notes: Northstar uses the same family for all staged roles, with safe-family safe familys reserved
       for constrained channels. Safe mapping is staged from Vail Resorts Guidelines.pdf.
-  - semantic_token: family/body
+  - semantic_token: typography/family/body
     global_token: northstar/family/01
-    safe_semantic_token: family/body_safe
+    safe_semantic_token: typography/family/body_safe
     safe_global_token: northstar/family_safe/02
     intended_channels:
     - web
@@ -133,14 +133,14 @@ semantic_recommendations:
     notes: Body copy stays on the same family because the source uses New Order across the reviewed system.
       Safe mapping is staged from Vail Resorts Guidelines.pdf.
   weight_aliases:
-  - semantic_token: weight/heading/base
+  - semantic_token: typography/weight/heading/base
     global_token: universal/weight/medium
     intended_channels:
     - web
     - email
     - ads
     notes: Headlines explicitly use New Order Medium.
-  - semantic_token: weight/body/base
+  - semantic_token: typography/weight/body/base
     global_token: universal/weight/normal
     intended_channels:
     - web
@@ -150,21 +150,21 @@ semantic_recommendations:
       normal weight.
   size_aliases:
   - semantic_token: size/heading/xl
-    global_token: universal/size/800
+    global_token: universal/size/core/800
     intended_channels:
     - web
     - email
     - ads
     notes: Assumed headline size pending numeric source guidance.
   - semantic_token: size/heading/base
-    global_token: universal/size/500
+    global_token: universal/size/core/500
     intended_channels:
     - web
     - email
     - ads
     notes: Assumed sub-headline size pending numeric source guidance.
   - semantic_token: size/body/base
-    global_token: universal/size/300
+    global_token: universal/size/core/300
     intended_channels:
     - web
     - email
@@ -175,7 +175,7 @@ role_recipes:
   source_role: Headline | New Order Medium
   proposed_family_token: northstar/family/01
   proposed_weight_token: universal/weight/medium
-  proposed_size_token: universal/size/800
+  proposed_size_token: universal/size/core/800
   size_assumption_status: assumed
   text_case: sentence_case
   tracking: 0px
@@ -189,7 +189,7 @@ role_recipes:
   source_role: Sub-Headline | New Order Regular
   proposed_family_token: northstar/family/01
   proposed_weight_token: universal/weight/normal
-  proposed_size_token: universal/size/500
+  proposed_size_token: universal/size/core/500
   size_assumption_status: assumed
   text_case: sentence_case
   tracking: 0px
@@ -203,7 +203,7 @@ role_recipes:
   source_role: Body Copy | New Order Regular
   proposed_family_token: northstar/family/01
   proposed_weight_token: universal/weight/normal
-  proposed_size_token: universal/size/300
+  proposed_size_token: universal/size/core/300
   size_assumption_status: assumed
   text_case: sentence_case
   tracking: 0px
@@ -221,7 +221,7 @@ validation:
     behavior.
   governance_notes:
   - Northstar can stage on a single brand family primitive without introducing extra family tokens.
-  - The lack of CTA or action guidance means `family/action` and `weight/action/*` should remain inherited
+  - The lack of CTA or action guidance means `typography/family/action` and `typography/weight/action/*` should remain inherited
     until the brand publishes a stronger rule.
   - Brand-safe typography aliases now stage on `northstar/family_safe/*` from Vail Resorts Guidelines.pdf.
 review_readiness:

@@ -86,9 +86,9 @@ primitive_recommendations:
   hold_for_review: []
 semantic_recommendations:
   family_aliases:
-  - semantic_token: family/heading
+  - semantic_token: typography/family/heading
     global_token: alpine_valley/family/01
-    safe_semantic_token: family/heading_safe
+    safe_semantic_token: typography/family/heading_safe
     safe_global_token: alpine_valley/family_safe/01
     intended_channels:
     - web
@@ -96,9 +96,9 @@ semantic_recommendations:
     - ads
     notes: Prompt is the reviewed heading family for Alpine Valley digital campaign work. Safe mapping
       is staged from Vail Resorts Guidelines.pdf.
-  - semantic_token: family/body
+  - semantic_token: typography/family/body
     global_token: alpine_valley/family/01
-    safe_semantic_token: family/body_safe
+    safe_semantic_token: typography/family/body_safe
     safe_global_token: alpine_valley/family_safe/02
     intended_channels:
     - web
@@ -106,9 +106,9 @@ semantic_recommendations:
     - ads
     notes: Body copy uses the same family at Regular weight. Safe mapping is staged from Vail Resorts
       Guidelines.pdf.
-  - semantic_token: family/action
+  - semantic_token: typography/family/action
     global_token: alpine_valley/family/01
-    safe_semantic_token: family/action_safe
+    safe_semantic_token: typography/family/action_safe
     safe_global_token: alpine_valley/family_safe/01
     intended_channels:
     - web
@@ -117,21 +117,21 @@ semantic_recommendations:
     notes: User-approved follow-up. CTA should also use Prompt. Safe mapping is staged from Vail Resorts
       Guidelines.pdf.
   weight_aliases:
-  - semantic_token: weight/heading/base
+  - semantic_token: typography/weight/heading/base
     global_token: universal/weight/bold
     intended_channels:
     - web
     - email
     - ads
     notes: Both H1 and H2 examples use Prompt Bold.
-  - semantic_token: weight/body/base
+  - semantic_token: typography/weight/body/base
     global_token: universal/weight/normal
     intended_channels:
     - web
     - email
     - ads
     notes: The body example uses Prompt Regular.
-  - semantic_token: weight/body/strong
+  - semantic_token: typography/weight/body/strong
     global_token: universal/weight/bold
     intended_channels:
     - web
@@ -139,7 +139,7 @@ semantic_recommendations:
     - ads
     notes: Secondary header and strong body emphasis can stage on the same bold raw weight without introducing
       a separate extra-bold primitive.
-  - semantic_token: weight/action/base
+  - semantic_token: typography/weight/action/base
     global_token: universal/weight/bold
     intended_channels:
     - web

@@ -63,19 +63,19 @@ primitive_recommendations:
         weight token.
     sizes:
     - source_size_reference: headline default
-      existing_token: universal/size/800
+      existing_token: universal/size/core/800
       assumption_status: assumed
       assumption_note: The source provides behavior but no numeric size, so the initial review maps the
         display headline to the largest current shared heading size.
       reason: Preserves the headline scale without inventing a new raw size before channel review.
     - source_size_reference: sub-headline default
-      existing_token: universal/size/500
+      existing_token: universal/size/core/500
       assumption_status: assumed
       assumption_note: The source shows a single-line secondary headline clearly smaller than the headline
         lockup, so the first review uses a mid-large heading size.
       reason: Keeps the supporting headline on the governed size ladder while preserving hierarchy.
     - source_size_reference: body default
-      existing_token: universal/size/300
+      existing_token: universal/size/core/300
       assumption_status: assumed
       assumption_note: The source provides no numeric body size, so body defaults to the existing universal
         reading size.
@@ -108,9 +108,9 @@ primitive_recommendations:
   hold_for_review: []
 semantic_recommendations:
   family_aliases:
-  - semantic_token: family/heading
+  - semantic_token: typography/family/heading
     global_token: crested_butte/family/01
-    safe_semantic_token: family/heading_safe
+    safe_semantic_token: typography/family/heading_safe
     safe_global_token: crested_butte/family_safe/01
     intended_channels:
     - web
@@ -119,9 +119,9 @@ semantic_recommendations:
     notes: Crested Butte keeps Gibson as the brand family for expressive headline work and falls back
       to the safe alias when delivery constraints require it. Safe mapping is staged from Vail Resorts
       Guidelines.pdf.
-  - semantic_token: family/body
+  - semantic_token: typography/family/body
     global_token: crested_butte/family/01
-    safe_semantic_token: family/body_safe
+    safe_semantic_token: typography/family/body_safe
     safe_global_token: crested_butte/family_safe/02
     intended_channels:
     - web
@@ -129,9 +129,9 @@ semantic_recommendations:
     - ads
     notes: Body copy stays on the same family because the source explicitly defines Gibson Regular as
       the default body face. Safe mapping is staged from Vail Resorts Guidelines.pdf.
-  - semantic_token: family/action
+  - semantic_token: typography/family/action
     global_token: crested_butte/family/01
-    safe_semantic_token: family/action_safe
+    safe_semantic_token: typography/family/action_safe
     safe_global_token: crested_butte/family_safe/01
     intended_channels:
     - web
@@ -140,21 +140,21 @@ semantic_recommendations:
     notes: Action-oriented copy should stay on the same brand family in channels that can deliver it.
       Safe mapping is staged from Vail Resorts Guidelines.pdf.
   weight_aliases:
-  - semantic_token: weight/heading/base
+  - semantic_token: typography/weight/heading/base
     global_token: universal/weight/semibold
     intended_channels:
     - web
     - email
     - ads
     notes: Heading emphasis is explicitly Semibold in the source.
-  - semantic_token: weight/body/base
+  - semantic_token: typography/weight/body/base
     global_token: universal/weight/normal
     intended_channels:
     - web
     - email
     - ads
     notes: Body copy maps to Gibson Regular and therefore reuses the shared normal raw weight.
-  - semantic_token: weight/action/base
+  - semantic_token: typography/weight/action/base
     global_token: universal/weight/semibold
     intended_channels:
     - web
@@ -164,21 +164,21 @@ semantic_recommendations:
       action emphasis on the same raw weight.
   size_aliases:
   - semantic_token: size/heading/xl
-    global_token: universal/size/800
+    global_token: universal/size/core/800
     intended_channels:
     - web
     - email
     - ads
     notes: Assumed display size for the multi-line headline lockup.
   - semantic_token: size/heading/base
-    global_token: universal/size/500
+    global_token: universal/size/core/500
     intended_channels:
     - web
     - email
     - ads
     notes: Assumed supporting headline size for the single-line sub-head.
   - semantic_token: size/body/base
-    global_token: universal/size/300
+    global_token: universal/size/core/300
     intended_channels:
     - web
     - email
@@ -189,7 +189,7 @@ role_recipes:
   source_role: Headline | Gibson Semibold
   proposed_family_token: crested_butte/family/01
   proposed_weight_token: universal/weight/semibold
-  proposed_size_token: universal/size/800
+  proposed_size_token: universal/size/core/800
   size_assumption_status: assumed
   text_case: lowercase
   tracking: regular
@@ -203,7 +203,7 @@ role_recipes:
   source_role: Sub-headline | Gibson Semibold
   proposed_family_token: crested_butte/family/01
   proposed_weight_token: universal/weight/semibold
-  proposed_size_token: universal/size/500
+  proposed_size_token: universal/size/core/500
   size_assumption_status: assumed
   text_case: all_caps
   tracking: regular
@@ -217,7 +217,7 @@ role_recipes:
   source_role: Body | Gibson Regular
   proposed_family_token: crested_butte/family/01
   proposed_weight_token: universal/weight/normal
-  proposed_size_token: universal/size/300
+  proposed_size_token: universal/size/core/300
   size_assumption_status: assumed
   text_case: sentence_case
   tracking: regular

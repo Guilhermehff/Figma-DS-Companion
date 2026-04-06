@@ -111,16 +111,16 @@ Source anchor: `300_source`
 - Snow Gun, Verde Slate, and Lake Sunapee align well as a single low-chroma structural family from light canvas-adjacent surfaces through muted mid-tone borders to the dark readable default foreground.
 - Cold Wax remains the cleanest cool expressive family once the structural neutral system is separated from the accent lanes.
 - Golden Hour lands naturally as a bright warm accent and still yields dark enough deeper steps for semantic default and emphasis roles.
-- User-approved live write. The semantic color extension keeps `surface/neutral/canvas` on the branded `sunapee_neutral/200` step rather than leaving canvas on shared white.
+- User-approved live write. The semantic color extension keeps `color/surface/neutral/canvas` on the branded `sunapee_neutral/200` step rather than leaving canvas on shared white.
 - User-approved live write. The brand lane stages on `cold_wax/700`, `800`, and `900`, and the supporting expressive lane stages on `golden_hour/600`, `700`, and `800` so white on-surface text remains readable.
 
 ## Live Semantic Mapping
 
-- `surface/neutral/*`, `on_surface/neutral/*`, `foreground/default`, `foreground/subtle`, `border/default`, `border/subtle` -> `mount_sunapee/sunapee_neutral`
+- `color/surface/neutral/*`, `color/on_surface/neutral/*`, `color/foreground/default`, `color/foreground/subtle`, `color/border/default`, `color/border/subtle` -> `mount_sunapee/sunapee_neutral`
   Approved live write. The usage guidance gives structural weight to white space, the dark Lake tone, and subdued supporting colors more than to a classic gray system, so one branded neutral family is the cleanest governed fit.
-- `surface/brand/*`, `on_surface/brand/*`, `foreground/brand`, `border/brand` -> `mount_sunapee/cold_wax`
+- `color/surface/brand/*`, `color/on_surface/brand/*`, `color/foreground/brand`, `color/border/brand` -> `mount_sunapee/cold_wax`
   Approved live write. Cold Wax is the strongest remaining cool accent once the neutral family is established, with semantic `default/strong/emphasis` staging on `700/800/900`.
-- `surface/brand_secondary/*`, `on_surface/brand_secondary/*`, `foreground/brand_secondary`, `border/brand_secondary` -> `mount_sunapee/golden_hour`
+- `color/surface/brand_secondary/*`, `color/on_surface/brand_secondary/*`, `color/foreground/brand_secondary`, `color/border/brand_secondary` -> `mount_sunapee/golden_hour`
   Approved live write. Golden Hour remains the warm supporting accent lane, with semantic `default/strong/emphasis` staging on `600/700/800`.
 
 ## Review Readiness

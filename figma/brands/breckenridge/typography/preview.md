@@ -70,7 +70,7 @@ Safe family token: `breckenridge/family_safe/01`
 
 Proposed weight token: `universal/weight/bold`
 
-Proposed size token: `universal/size/800`
+Proposed size token: `universal/size/core/800`
 
 Recipe notes:
 
@@ -89,7 +89,7 @@ Safe family token: `breckenridge/family_safe/01`
 
 Proposed weight token: `universal/weight/bold`
 
-Proposed size token: `universal/size/600`
+Proposed size token: `universal/size/core/600`
 
 Recipe notes:
 
@@ -108,7 +108,7 @@ Safe family token: `breckenridge/family_safe/01`
 
 Proposed weight token: `universal/weight/normal`
 
-Proposed size token: `universal/size/300`
+Proposed size token: `universal/size/core/300`
 
 Recipe notes:
 
@@ -127,7 +127,7 @@ Safe family token: `breckenridge/family_safe/01`
 
 Proposed weight token: `universal/weight/bold`
 
-Proposed size token: `universal/size/300`
+Proposed size token: `universal/size/core/300`
 
 Recipe notes:
 

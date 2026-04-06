@@ -56,7 +56,7 @@ Safe family token: `jfbb/family_safe/01`
 
 Proposed weight token: `universal/weight/black`
 
-Proposed size token: `universal/size/700`
+Proposed size token: `universal/size/core/700`
 
 Recipe notes:
 
@@ -75,7 +75,7 @@ Safe family token: `jfbb/family_safe/01`
 
 Proposed weight token: `universal/weight/bold`
 
-Proposed size token: `universal/size/500`
+Proposed size token: `universal/size/core/500`
 
 Recipe notes:
 
@@ -94,7 +94,7 @@ Safe family token: `jfbb/family_safe/02`
 
 Proposed weight token: `universal/weight/normal`
 
-Proposed size token: `universal/size/200`
+Proposed size token: `universal/size/core/200`
 
 Recipe notes:
 

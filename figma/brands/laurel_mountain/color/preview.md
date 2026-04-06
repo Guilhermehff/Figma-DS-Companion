@@ -85,10 +85,10 @@ Source anchor: `light_blue_500_source + dark_blue_900_source`
 
 ## Live Semantic Mapping
 
-- `surface/neutral/*`, `on_surface/neutral/*`, `foreground/default`, `foreground/subtle`, `border/default`, `border/subtle` -> `laurel_mountain/blue`
-- `surface/brand/*`, `on_surface/brand/*`, `foreground/brand`, `border/brand` -> `laurel_mountain/red`
-- `surface/brand_secondary/*`, `on_surface/brand_secondary/*`, `foreground/brand_secondary`, `border/brand_secondary` -> `laurel_mountain/blue`
-- `assets/logo` -> `Laurel Mountain`
+- `color/surface/neutral/*`, `color/on_surface/neutral/*`, `color/foreground/default`, `color/foreground/subtle`, `color/border/default`, `color/border/subtle` -> `laurel_mountain/blue`
+- `color/surface/brand/*`, `color/on_surface/brand/*`, `color/foreground/brand`, `color/border/brand` -> `laurel_mountain/red`
+- `color/surface/brand_secondary/*`, `color/on_surface/brand_secondary/*`, `color/foreground/brand_secondary`, `color/border/brand_secondary` -> `laurel_mountain/blue`
+- `variables/assets/logo` -> `Laurel Mountain`
   The semantic color extension stores the governed display label.
 
 ## Review Readiness

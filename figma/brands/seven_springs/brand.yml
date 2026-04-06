@@ -43,97 +43,97 @@ semantic_overrides:
       - scope: brand
         source_family: seven_springs/springs_green
         targets:
-        - surface/brand/*
-        - surface/brand/*_inverse
-        - foreground/brand
-        - foreground/brand_inverse
-        - border/brand
-        - border/brand_inverse
+        - color/surface/brand/*
+        - color/surface/brand/*_inverse
+        - color/foreground/brand
+        - color/foreground/brand_inverse
+        - color/border/brand
+        - color/border/brand_inverse
       - scope: brand_secondary
         source_family: seven_springs/tupelo
         targets:
-        - surface/brand_secondary/*
-        - surface/brand_secondary/*_inverse
-        - foreground/brand_secondary
-        - foreground/brand_secondary_inverse
-        - border/brand_secondary
-        - border/brand_secondary_inverse
+        - color/surface/brand_secondary/*
+        - color/surface/brand_secondary/*_inverse
+        - color/foreground/brand_secondary
+        - color/foreground/brand_secondary_inverse
+        - color/border/brand_secondary
+        - color/border/brand_secondary_inverse
       - scope: asset_logo
         source_value: Seven Springs
         targets:
-        - assets/logo
+        - variables/assets/logo
       inherited_from_base:
-      - surface/neutral/*
-      - surface/neutral/*_inverse
-      - foreground/default
-      - foreground/default_inverse
-      - foreground/subtle
-      - foreground/subtle_inverse
-      - border/default
-      - border/default_inverse
-      - border/subtle
-      - border/subtle_inverse
-      - on_surface/brand/*
-      - on_surface/brand/*_inverse
-      - on_surface/brand_secondary/*
-      - on_surface/brand_secondary/*_inverse
-      - surface/positive/*
-      - surface/positive/*_inverse
-      - on_surface/positive/*
-      - on_surface/positive/*_inverse
-      - surface/warning/*
-      - surface/warning/*_inverse
-      - on_surface/warning/*
-      - on_surface/warning/*_inverse
-      - surface/critical/*
-      - surface/critical/*_inverse
-      - on_surface/critical/*
-      - on_surface/critical/*_inverse
-      - foreground/positive
-      - foreground/positive_inverse
-      - foreground/warning
-      - foreground/warning_inverse
-      - foreground/critical
-      - foreground/critical_inverse
-      - border/positive
-      - border/positive_inverse
-      - border/warning
-      - border/warning_inverse
-      - border/critical
-      - border/critical_inverse
+      - color/surface/neutral/*
+      - color/surface/neutral/*_inverse
+      - color/foreground/default
+      - color/foreground/default_inverse
+      - color/foreground/subtle
+      - color/foreground/subtle_inverse
+      - color/border/default
+      - color/border/default_inverse
+      - color/border/subtle
+      - color/border/subtle_inverse
+      - color/on_surface/brand/*
+      - color/on_surface/brand/*_inverse
+      - color/on_surface/brand_secondary/*
+      - color/on_surface/brand_secondary/*_inverse
+      - color/surface/positive/*
+      - color/surface/positive/*_inverse
+      - color/on_surface/positive/*
+      - color/on_surface/positive/*_inverse
+      - color/surface/warning/*
+      - color/surface/warning/*_inverse
+      - color/on_surface/warning/*
+      - color/on_surface/warning/*_inverse
+      - color/surface/critical/*
+      - color/surface/critical/*_inverse
+      - color/on_surface/critical/*
+      - color/on_surface/critical/*_inverse
+      - color/foreground/positive
+      - color/foreground/positive_inverse
+      - color/foreground/warning
+      - color/foreground/warning_inverse
+      - color/foreground/critical
+      - color/foreground/critical_inverse
+      - color/border/positive
+      - color/border/positive_inverse
+      - color/border/warning
+      - color/border/warning_inverse
+      - color/border/critical
+      - color/border/critical_inverse
       notes:
-      - '`on_surface/*` tokens in the live semantic theme extension are contrast-derived from `universal/black` or `universal/white` and are not hue-tinted.'
+      - '`color/on_surface/*` tokens in the live semantic theme extension are contrast-derived from `universal/black` or `universal/white` and are not hue-tinted.'
       - '`springs_green` drives the primary expressive semantic lane, while `tupelo` drives the secondary expressive semantic lane.'
       - '`springs_neutral` absorbs Mashed Potatoes and Grandma''s Axe into one branded neutral lane for surfaces and readable foregrounds.'
       - 'User-approved exception. `wildin_yellow` is now a Seven Springs raw `_Global: Color` family, but it remains outside the resort-brand semantic write path.'
       - '`Black Rails` remains deferred with the Terrain Park palette because the source explicitly separates it from the resort brand colors.'
       - User-approved exception. The live write uses the explicit `Mini Golf Green` HEX field `#89EBAD` despite the conflicting RGB line in the source image.
-      - '`assets/logo` should resolve to the string `Seven Springs` when the live semantic theme extension is written.'
+      - '`variables/assets/logo` should resolve to the string `Seven Springs` when the live semantic theme extension is written.'
     typography:
       override_scopes:
-      - semantic_token: family/heading
+      - semantic_token: typography/family/heading
         alias_of: seven_springs/family/01
-      - semantic_token: family/body
+      - semantic_token: typography/family/body
         alias_of: seven_springs/family/01
-      - semantic_token: family/action
+      - semantic_token: typography/family/action
         alias_of: seven_springs/family/01
-      - semantic_token: weight/heading/base
+      - semantic_token: typography/weight/heading/base
         alias_of: universal/weight/black
-      - semantic_token: weight/heading/strong
+      - semantic_token: typography/weight/heading/strong
         alias_of: universal/weight/bold
-      - semantic_token: family/heading_safe
+      - semantic_token: typography/family/heading_safe
         alias_of: seven_springs/family_safe/01
-      - semantic_token: family/body_safe
+      - semantic_token: typography/family/body_safe
         alias_of: seven_springs/family_safe/01
-      - semantic_token: family/action_safe
+      - semantic_token: typography/family/action_safe
         alias_of: seven_springs/family_safe/01
       inherited_from_base:
-      - weight/body/base
-      - weight/body/strong
-      - weight/action/base
+      - typography/weight/body/base
+      - typography/weight/body/strong
+      - typography/weight/action/base
       notes:
       - Seven Springs uses one family, `Hoss Sharp`, across headline, subhead, body, and CTA roles, with weight and layout behavior carrying the hierarchy.
-      - '`weight/heading/strong = bold` stages the Hoss Sharp Bold subhead treatment through the existing semantic ladder.'
+      - '`typography/weight/heading/strong = bold` stages the Hoss Sharp Bold subhead treatment through the existing semantic ladder.'
       - '`Heavy` stages on `universal/weight/black` because the shared raw typography ladder has no dedicated heavy primitive.'
       - Brand-safe typography aliases now stage on `seven_springs/family_safe/*` from Vail Resorts Guidelines.pdf.
 notes:

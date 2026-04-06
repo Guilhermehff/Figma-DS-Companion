@@ -47,90 +47,90 @@ semantic_overrides:
       - scope: brand
         source_family: vail/digital_blue
         targets:
-        - surface/brand/*
-        - surface/brand/*_inverse
-        - foreground/brand
-        - foreground/brand_inverse
-        - border/brand
-        - border/brand_inverse
+        - color/surface/brand/*
+        - color/surface/brand/*_inverse
+        - color/foreground/brand
+        - color/foreground/brand_inverse
+        - color/border/brand
+        - color/border/brand_inverse
       - scope: brand_secondary
         source_family: vail/navy
         targets:
-        - surface/brand_secondary/*
-        - surface/brand_secondary/*_inverse
-        - foreground/brand_secondary
-        - foreground/brand_secondary_inverse
-        - border/brand_secondary
-        - border/brand_secondary_inverse
+        - color/surface/brand_secondary/*
+        - color/surface/brand_secondary/*_inverse
+        - color/foreground/brand_secondary
+        - color/foreground/brand_secondary_inverse
+        - color/border/brand_secondary
+        - color/border/brand_secondary_inverse
       - scope: asset_logo
         source_value: Vail
         targets:
-        - assets/logo
+        - variables/assets/logo
       inherited_from_base:
-      - surface/neutral/*
-      - surface/neutral/*_inverse
-      - foreground/default
-      - foreground/default_inverse
-      - foreground/subtle
-      - foreground/subtle_inverse
-      - border/default
-      - border/default_inverse
-      - border/subtle
-      - border/subtle_inverse
-      - on_surface/brand/*
-      - on_surface/brand/*_inverse
-      - on_surface/brand_secondary/*
-      - on_surface/brand_secondary/*_inverse
-      - surface/positive/*
-      - surface/positive/*_inverse
-      - on_surface/positive/*
-      - on_surface/positive/*_inverse
-      - surface/warning/*
-      - surface/warning/*_inverse
-      - on_surface/warning/*
-      - on_surface/warning/*_inverse
-      - surface/critical/*
-      - surface/critical/*_inverse
-      - on_surface/critical/*
-      - on_surface/critical/*_inverse
-      - foreground/positive
-      - foreground/positive_inverse
-      - foreground/warning
-      - foreground/warning_inverse
-      - foreground/critical
-      - foreground/critical_inverse
-      - border/positive
-      - border/positive_inverse
-      - border/warning
-      - border/warning_inverse
-      - border/critical
-      - border/critical_inverse
+      - color/surface/neutral/*
+      - color/surface/neutral/*_inverse
+      - color/foreground/default
+      - color/foreground/default_inverse
+      - color/foreground/subtle
+      - color/foreground/subtle_inverse
+      - color/border/default
+      - color/border/default_inverse
+      - color/border/subtle
+      - color/border/subtle_inverse
+      - color/on_surface/brand/*
+      - color/on_surface/brand/*_inverse
+      - color/on_surface/brand_secondary/*
+      - color/on_surface/brand_secondary/*_inverse
+      - color/surface/positive/*
+      - color/surface/positive/*_inverse
+      - color/on_surface/positive/*
+      - color/on_surface/positive/*_inverse
+      - color/surface/warning/*
+      - color/surface/warning/*_inverse
+      - color/on_surface/warning/*
+      - color/on_surface/warning/*_inverse
+      - color/surface/critical/*
+      - color/surface/critical/*_inverse
+      - color/on_surface/critical/*
+      - color/on_surface/critical/*_inverse
+      - color/foreground/positive
+      - color/foreground/positive_inverse
+      - color/foreground/warning
+      - color/foreground/warning_inverse
+      - color/foreground/critical
+      - color/foreground/critical_inverse
+      - color/border/positive
+      - color/border/positive_inverse
+      - color/border/warning
+      - color/border/warning_inverse
+      - color/border/critical
+      - color/border/critical_inverse
       notes:
-      - '`on_surface/*` tokens in the live semantic theme extension are contrast-derived from `universal/black` or `universal/white` and are not hue-tinted.'
+      - '`color/on_surface/*` tokens in the live semantic theme extension are contrast-derived from `universal/black` or `universal/white` and are not hue-tinted.'
       - The role-based migration rebuilds Vail around `digital_blue` and `navy` while inheriting the shared neutral and status role sets from the base collection.
       - '`vintage_blue` and `dark_blue` are preserved as additional raw `_Global: Color` families from the primary Vail brand palette, but they remain outside the current semantic override model.'
-      - '`assets/logo` is overridden to the string `Vail` in the semantic theme extension.'
+      - '`variables/assets/logo` is overridden to the string `Vail` in the semantic theme extension.'
       - '`yellow` remains a governed global family but is no longer promoted into semantic.'
     typography:
       override_scopes:
-      - semantic_token: family/heading
+      - semantic_token: typography/family/heading
         alias_of: vail/family/01
-      - semantic_token: family/body
+      - semantic_token: typography/family/body
         alias_of: vail/family/02
-      - semantic_token: family/action
+      - semantic_token: typography/family/action
         alias_of: vail/family/02
-      - semantic_token: family/heading_safe
+      - semantic_token: typography/family/heading_safe
         alias_of: vail/family_safe/01
-      - semantic_token: family/body_safe
+      - semantic_token: typography/family/body_safe
         alias_of: vail/family_safe/01
-      - semantic_token: family/action_safe
+      - semantic_token: typography/family/action_safe
         alias_of: vail/family_safe/01
       inherited_from_base:
-      - weight/heading/base
-      - weight/heading/strong
-      - weight/body/base
-      - weight/body/strong
-      - weight/action/base
+      - typography/weight/heading/base
+      - typography/weight/heading/strong
+      - typography/weight/body/base
+      - typography/weight/body/strong
+      - typography/weight/action/base
       notes:
       - 'Typography weight semantics remain on the shared semantic theme base collection because the approved Vail recipes reuse the universal baseline. Typography size now binds directly from published `Global: Typography`.'
       - Brand-safe typography aliases now stage on `vail/family_safe/*` from Vail Resorts Guidelines.pdf.

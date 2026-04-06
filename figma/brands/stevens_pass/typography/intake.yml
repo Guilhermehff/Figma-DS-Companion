@@ -113,18 +113,18 @@ primitive_recommendations:
       for `body/base`.
 semantic_recommendations:
   family_aliases:
-  - semantic_token: family/heading
+  - semantic_token: typography/family/heading
     global_token: stevens_pass/family/01
-    safe_semantic_token: family/heading_safe
+    safe_semantic_token: typography/family/heading_safe
     safe_global_token: stevens_pass/family_safe/01
     intended_channels:
     - web
     - email
     - ads
     notes: Headline work stays on Gibson. Safe mapping is staged from Vail Resorts Guidelines.pdf.
-  - semantic_token: family/body
+  - semantic_token: typography/family/body
     global_token: stevens_pass/family/01
-    safe_semantic_token: family/body_safe
+    safe_semantic_token: typography/family/body_safe
     safe_global_token: stevens_pass/family_safe/02
     intended_channels:
     - web
@@ -132,9 +132,9 @@ semantic_recommendations:
     - ads
     notes: Body and subhead copy stay on the same Gibson family, with weight carrying the hierarchy. Safe
       mapping is staged from Vail Resorts Guidelines.pdf.
-  - semantic_token: family/action
+  - semantic_token: typography/family/action
     global_token: stevens_pass/family/01
-    safe_semantic_token: family/action_safe
+    safe_semantic_token: typography/family/action_safe
     safe_global_token: stevens_pass/family_safe/01
     intended_channels:
     - web
@@ -142,21 +142,21 @@ semantic_recommendations:
     - ads
     notes: CTA is explicitly Gibson Regular. Safe mapping is staged from Vail Resorts Guidelines.pdf.
   weight_aliases:
-  - semantic_token: weight/heading/base
+  - semantic_token: typography/weight/heading/base
     global_token: universal/weight/bold
     intended_channels:
     - web
     - email
     - ads
     notes: Headline weight is an explicit direct match to bold.
-  - semantic_token: weight/body/base
+  - semantic_token: typography/weight/body/base
     global_token: universal/weight/light
     intended_channels:
     - web
     - email
     - ads
     notes: User-approved exception. Stevens Pass body base stages on Light rather than Medium or Regular.
-  - semantic_token: weight/body/strong
+  - semantic_token: typography/weight/body/strong
     global_token: universal/weight/medium
     intended_channels:
     - web
@@ -164,7 +164,7 @@ semantic_recommendations:
     - ads
     notes: User-approved exception. Stevens Pass stronger body and subhead emphasis stages on Medium rather
       than Semi Bold.
-  - semantic_token: weight/action/base
+  - semantic_token: typography/weight/action/base
     global_token: universal/weight/medium
     intended_channels:
     - web
@@ -199,7 +199,7 @@ role_recipes:
   size_rule: source shows family and weight only
   punctuation_rule: not specified in source
   sample_copy: GIBSON SEMI BOLD
-  notes: User-approved exception. Subheads stage through `weight/body/strong = medium` rather than a separate
+  notes: User-approved exception. Subheads stage through `typography/weight/body/strong = medium` rather than a separate
     semantic family or the source-labeled semibold.
   safe_family_token: stevens_pass/family_safe/01
 - role_name: cta
@@ -241,8 +241,8 @@ validation:
   governance_notes:
   - The proposed live mapping stays inside the current semantic theme typography schema by using one family
     with weight-driven hierarchy.
-  - 'User-approved exception: `weight/body/base` stages on Light, `weight/body/strong` stages on Medium,
-    and `weight/action/base` stages on Medium even though the source labels subheads as Semi Bold and
+  - 'User-approved exception: `typography/weight/body/base` stages on Light, `typography/weight/body/strong` stages on Medium,
+    and `typography/weight/action/base` stages on Medium even though the source labels subheads as Semi Bold and
     CTA as Regular.'
   - Brand-safe typography aliases now stage on `stevens_pass/family_safe/*` from Vail Resorts Guidelines.pdf.
 review_readiness:

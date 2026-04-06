@@ -56,7 +56,7 @@ Safe family token: `northstar/family_safe/01`
 
 Proposed weight token: `universal/weight/medium`
 
-Proposed size token: `universal/size/800`
+Proposed size token: `universal/size/core/800`
 
 Recipe notes:
 
@@ -75,7 +75,7 @@ Safe family token: `northstar/family_safe/01`
 
 Proposed weight token: `universal/weight/normal`
 
-Proposed size token: `universal/size/500`
+Proposed size token: `universal/size/core/500`
 
 Recipe notes:
 
@@ -94,7 +94,7 @@ Safe family token: `northstar/family_safe/02`
 
 Proposed weight token: `universal/weight/normal`
 
-Proposed size token: `universal/size/300`
+Proposed size token: `universal/size/core/300`
 
 Recipe notes:
 

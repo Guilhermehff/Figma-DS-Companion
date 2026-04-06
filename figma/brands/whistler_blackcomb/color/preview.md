@@ -73,14 +73,14 @@ Source anchor: `600_source`
 
 ## Live Semantic Mapping
 
-- `surface/neutral/*`, `on_surface/neutral/*`, `foreground/default`, `foreground/subtle`, `border/default`, `border/subtle` -> `inherited_base`
+- `color/surface/neutral/*`, `color/on_surface/neutral/*`, `color/foreground/default`, `color/foreground/subtle`, `color/border/default`, `color/border/subtle` -> `inherited_base`
   The supplied black and white are exact universal matches, so the shared neutral role set remains inherited from the semantic base collection.
-- `surface/brand/*`, `on_surface/brand/*`, `foreground/brand`, `border/brand` -> `whistler_blackcomb/red`
+- `color/surface/brand/*`, `color/on_surface/brand/*`, `color/foreground/brand`, `color/border/brand` -> `whistler_blackcomb/red`
   Red is the primary Whistler Blackcomb expressive lane.
-- `surface/brand_secondary/*`, `on_surface/brand_secondary/*`, `foreground/brand_secondary`, `border/brand_secondary` -> `whistler_blackcomb/red`
+- `color/surface/brand_secondary/*`, `color/on_surface/brand_secondary/*`, `color/foreground/brand_secondary`, `color/border/brand_secondary` -> `whistler_blackcomb/red`
   The live schema still requires a secondary expressive lane, and the accepted semantic color family model allows brands with one expressive hue to map `brand_secondary/*` back to the same raw family used by `brand/*`.
-- `assets/logo` -> `Whistler Blackcomb`
-  The live `Semantic: Theme` schema includes `assets/logo`, and each brand extension overrides it to the brand display name string.
+- `variables/assets/logo` -> `Whistler Blackcomb`
+  The live `Semantic: Theme` schema includes `variables/assets/logo`, and each brand extension overrides it to the brand display name string.
 
 ## Review Readiness
 

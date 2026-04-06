@@ -82,25 +82,25 @@ primitive_recommendations:
       reason: The source explicitly names Brandon Grotesque Regular for body copy.
     sizes:
     - source_size_reference: title default
-      existing_token: universal/size/400
+      existing_token: universal/size/core/400
       assumption_status: assumed
       assumption_note: The source image shows a compact uppercase title line that sits below the main
         display headline in hierarchy.
       reason: Keeps the title role inside the shared size ladder without inventing a new raw size.
     - source_size_reference: headline default
-      existing_token: universal/size/800
+      existing_token: universal/size/core/800
       assumption_status: assumed
       assumption_note: The source image shows a dominant display headline but does not provide a numeric
         size.
       reason: Uses the largest current shared heading size for the first staged pass.
     - source_size_reference: subhead default
-      existing_token: universal/size/500
+      existing_token: universal/size/core/500
       assumption_status: assumed
       assumption_note: The source image shows a prominent supporting line clearly smaller than the main
         headline.
       reason: Keeps the subhead on the governed size ladder while preserving the hierarchy.
     - source_size_reference: body default
-      existing_token: universal/size/300
+      existing_token: universal/size/core/300
       assumption_status: assumed
       assumption_note: The source provides no numeric body size, so body defaults to the current shared
         reading size.
@@ -143,9 +143,9 @@ primitive_recommendations:
       mapping.
 semantic_recommendations:
   family_aliases:
-  - semantic_token: family/heading
+  - semantic_token: typography/family/heading
     global_token: heavenly/family/01
-    safe_semantic_token: family/heading_safe
+    safe_semantic_token: typography/family/heading_safe
     safe_global_token: heavenly/family_safe/01
     intended_channels:
     - web
@@ -153,9 +153,9 @@ semantic_recommendations:
     - ads
     notes: Heavenly titles and headlines share the Din Condensed family in brand-capable channels, with
       the safe alias reserved for constrained delivery. Safe mapping is staged from Vail Resorts Guidelines.pdf.
-  - semantic_token: family/body
+  - semantic_token: typography/family/body
     global_token: heavenly/family/02
-    safe_semantic_token: family/body_safe
+    safe_semantic_token: typography/family/body_safe
     safe_global_token: heavenly/family_safe/01
     intended_channels:
     - web
@@ -164,28 +164,28 @@ semantic_recommendations:
     notes: Brandon Grotesque supports both the supportive uppercase subhead role and the reading-copy
       body role. Safe mapping is staged from Vail Resorts Guidelines.pdf.
   weight_aliases:
-  - semantic_token: weight/heading/base
+  - semantic_token: typography/weight/heading/base
     global_token: universal/weight/light
     intended_channels:
     - web
     - email
     - ads
     notes: The default Heavenly headline treatment uses Din Condensed Light.
-  - semantic_token: weight/heading/strong
+  - semantic_token: typography/weight/heading/strong
     global_token: universal/weight/bold
     intended_channels:
     - web
     - email
     - ads
     notes: Title lines and emphasized copy use Din Condensed Bold.
-  - semantic_token: weight/body/base
+  - semantic_token: typography/weight/body/base
     global_token: universal/weight/normal
     intended_channels:
     - web
     - email
     - ads
     notes: Body copy uses Brandon Grotesque Regular.
-  - semantic_token: weight/body/strong
+  - semantic_token: typography/weight/body/strong
     global_token: universal/weight/medium
     intended_channels:
     - web
@@ -194,28 +194,28 @@ semantic_recommendations:
     notes: Subheads use Brandon Grotesque Medium and can stage as the strong body-family emphasis.
   size_aliases:
   - semantic_token: size/heading/base
-    global_token: universal/size/400
+    global_token: universal/size/core/400
     intended_channels:
     - web
     - email
     - ads
     notes: Assumed compact title size for the uppercase identifier line.
   - semantic_token: size/heading/xl
-    global_token: universal/size/800
+    global_token: universal/size/core/800
     intended_channels:
     - web
     - email
     - ads
     notes: Assumed display size for the primary Heavenly headline treatment.
   - semantic_token: size/body/lg
-    global_token: universal/size/500
+    global_token: universal/size/core/500
     intended_channels:
     - web
     - email
     - ads
     notes: Assumed supporting size for the all-caps Brandon Grotesque subhead.
   - semantic_token: size/body/base
-    global_token: universal/size/300
+    global_token: universal/size/core/300
     intended_channels:
     - web
     - email
@@ -226,7 +226,7 @@ role_recipes:
   source_role: Title | Din Condensed Bold
   proposed_family_token: heavenly/family/01
   proposed_weight_token: universal/weight/bold
-  proposed_size_token: universal/size/400
+  proposed_size_token: universal/size/core/400
   size_assumption_status: assumed
   text_case: all_caps
   tracking: 0
@@ -240,7 +240,7 @@ role_recipes:
   source_role: Headline | Din Condensed Light
   proposed_family_token: heavenly/family/01
   proposed_weight_token: universal/weight/light
-  proposed_size_token: universal/size/800
+  proposed_size_token: universal/size/core/800
   size_assumption_status: assumed
   text_case: all_caps
   tracking: 0
@@ -255,7 +255,7 @@ role_recipes:
   source_role: Subhead | Brandon Grotesque Medium
   proposed_family_token: heavenly/family/02
   proposed_weight_token: universal/weight/medium
-  proposed_size_token: universal/size/500
+  proposed_size_token: universal/size/core/500
   size_assumption_status: assumed
   text_case: all_caps
   tracking: 0
@@ -269,7 +269,7 @@ role_recipes:
   source_role: Body | Brandon Grotesque Regular
   proposed_family_token: heavenly/family/02
   proposed_weight_token: universal/weight/normal
-  proposed_size_token: universal/size/300
+  proposed_size_token: universal/size/core/300
   size_assumption_status: assumed
   text_case: sentence_case
   tracking: 0

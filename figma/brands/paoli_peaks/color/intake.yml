@@ -171,7 +171,7 @@ semantic_recommendations:
   global_only_families:
   - paoli_peaks/peaks_peak
   role_exceptions:
-  - target: assets/logo
+  - target: variables/assets/logo
     source_token: Paoli Peaks
 review_readiness:
   review_rules:

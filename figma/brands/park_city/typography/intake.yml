@@ -131,18 +131,18 @@ primitive_recommendations:
       than forced into the live semantic extension.
 semantic_recommendations:
   family_aliases:
-  - semantic_token: family/heading
+  - semantic_token: typography/family/heading
     global_token: park_city/family/01
-    safe_semantic_token: family/heading_safe
+    safe_semantic_token: typography/family/heading_safe
     safe_global_token: park_city/family_safe/02
     intended_channels:
     - web
     - email
     - ads
     notes: Futura Std drives the Park City display system. Safe mapping is staged from Vail Resorts Guidelines.pdf.
-  - semantic_token: family/body
+  - semantic_token: typography/family/body
     global_token: park_city/family/01
-    safe_semantic_token: family/body_safe
+    safe_semantic_token: typography/family/body_safe
     safe_global_token: park_city/family_safe/03
     intended_channels:
     - web
@@ -150,9 +150,9 @@ semantic_recommendations:
     - ads
     notes: Park City body copy stays on the same Futura Std family, with Light carrying the reading tone.
       Safe mapping is staged from Vail Resorts Guidelines.pdf.
-  - semantic_token: family/action
+  - semantic_token: typography/family/action
     global_token: park_city/family/01
-    safe_semantic_token: family/action_safe
+    safe_semantic_token: typography/family/action_safe
     safe_global_token: park_city/family_safe/03
     intended_channels:
     - web
@@ -161,21 +161,21 @@ semantic_recommendations:
     notes: CTA is explicitly Futura Std Bold, so the action lane remains on the primary Park City family.
       Safe mapping is staged from Vail Resorts Guidelines.pdf.
   weight_aliases:
-  - semantic_token: weight/heading/base
+  - semantic_token: typography/weight/heading/base
     global_token: universal/weight/bold
     intended_channels:
     - web
     - email
     - ads
     notes: Headlines explicitly use Bold.
-  - semantic_token: weight/body/base
+  - semantic_token: typography/weight/body/base
     global_token: universal/weight/light
     intended_channels:
     - web
     - email
     - ads
     notes: Body copy explicitly uses Light.
-  - semantic_token: weight/action/base
+  - semantic_token: typography/weight/action/base
     global_token: universal/weight/bold
     intended_channels:
     - web

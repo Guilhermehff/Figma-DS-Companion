@@ -93,13 +93,13 @@ Source anchors: `500_source / 800_source`
 
 ## Live Semantic Mapping
 
-- `surface/neutral/*`, `on_surface/neutral/*`, `foreground/default`, `foreground/subtle`, `border/default`, `border/subtle` -> `stowe/stowe_blue`
+- `color/surface/neutral/*`, `color/on_surface/neutral/*`, `color/foreground/default`, `color/foreground/subtle`, `color/border/default`, `color/border/subtle` -> `stowe/stowe_blue`
   Stowe's supplied blues are already doing structural work in the brand specimen pages, so the first governed recommendation is to let the blue-gray family drive neutral surfaces, borders, and readable default foregrounds.
-- `surface/brand/*`, `on_surface/brand/*`, `foreground/brand`, `border/brand` -> `stowe/stowe_red`
+- `color/surface/brand/*`, `color/on_surface/brand/*`, `color/foreground/brand`, `color/border/brand` -> `stowe/stowe_red`
   Stowe Red is the dominant expressive brand identifier and should drive the primary expressive semantic lane.
-- `surface/brand_secondary/*`, `on_surface/brand_secondary/*`, `foreground/brand_secondary`, `border/brand_secondary` -> `stowe/stowe_blue`
+- `color/surface/brand_secondary/*`, `color/on_surface/brand_secondary/*`, `color/foreground/brand_secondary`, `color/border/brand_secondary` -> `stowe/stowe_blue`
   Approved live write. `stowe_blue` is the only supporting non-red hue in the supplied palette, so it stages as the supporting expressive lane, with the semantic default/strong/emphasis steps landing at `600/700/800` for readable white foreground use.
-- `surface/neutral/canvas` -> `universal/white`
+- `color/surface/neutral/canvas` -> `universal/white`
   Powder White is an exact shared white and the specimen pages use it as the dominant page canvas.
 
 ## Review Readiness

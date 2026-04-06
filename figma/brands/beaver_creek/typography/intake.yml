@@ -81,24 +81,24 @@ primitive_recommendations:
       reason: Beaver Creek body and URL guidance explicitly calls for Light.
     sizes:
     - source_size_reference: headline default
-      existing_token: universal/size/700
+      existing_token: universal/size/core/700
       assumption_status: assumed
       assumption_note: The source defines a display headline lane but does not provide a numeric size,
         so the first pass uses the current largest shared heading size.
       reason: Keeps the display lane on the governed ladder without creating a new raw size.
     - source_size_reference: subhead_or_cta default
-      existing_token: universal/size/400
+      existing_token: universal/size/core/400
       assumption_status: assumed
       assumption_note: The source shows a supportive emphasis lane smaller than the display headline and
         larger than body copy.
       reason: Preserves hierarchy without creating a new raw size.
     - source_size_reference: body default
-      existing_token: universal/size/200
+      existing_token: universal/size/core/200
       assumption_status: assumed
       assumption_note: The shared body base currently maps to 16 px and is the safest first-pass assumption.
       reason: Keeps body aligned to the current semantic body baseline.
     - source_size_reference: url default
-      existing_token: universal/size/100
+      existing_token: universal/size/core/100
       assumption_status: assumed
       assumption_note: The source treats the URL as ancillary utility copy rather than a primary headline
         lane.
@@ -146,9 +146,9 @@ primitive_recommendations:
       slot.
 semantic_recommendations:
   family_aliases:
-  - semantic_token: family/heading
+  - semantic_token: typography/family/heading
     global_token: beaver_creek/family/01
-    safe_semantic_token: family/heading_safe
+    safe_semantic_token: typography/family/heading_safe
     safe_global_token: beaver_creek/family_safe/02
     intended_channels:
     - web
@@ -156,18 +156,18 @@ semantic_recommendations:
     - ads
     notes: IvyPresto Display drives Beaver Creek headline work in brand-capable channels. Safe mapping
       is staged from Vail Resorts Guidelines.pdf.
-  - semantic_token: family/body
+  - semantic_token: typography/family/body
     global_token: beaver_creek/family/02
-    safe_semantic_token: family/body_safe
+    safe_semantic_token: typography/family/body_safe
     safe_global_token: beaver_creek/family_safe/01
     intended_channels:
     - web
     - email
     - ads
     notes: Vinila remains the default reading family. Safe mapping is staged from Vail Resorts Guidelines.pdf.
-  - semantic_token: family/action
+  - semantic_token: typography/family/action
     global_token: beaver_creek/family/03
-    safe_semantic_token: family/action_safe
+    safe_semantic_token: typography/family/action_safe
     safe_global_token: beaver_creek/family_safe/02
     intended_channels:
     - web
@@ -176,21 +176,21 @@ semantic_recommendations:
     notes: Vinila Condensed stages as the semantic action family for CTA and subheadline work. Safe mapping
       is staged from Vail Resorts Guidelines.pdf.
   weight_aliases:
-  - semantic_token: weight/heading/base
+  - semantic_token: typography/weight/heading/base
     global_token: universal/weight/thin
     intended_channels:
     - web
     - email
     - ads
     notes: Beaver Creek headlines explicitly use Thin.
-  - semantic_token: weight/body/base
+  - semantic_token: typography/weight/body/base
     global_token: universal/weight/light
     intended_channels:
     - web
     - email
     - ads
     notes: Body copy explicitly uses Light.
-  - semantic_token: weight/action/base
+  - semantic_token: typography/weight/action/base
     global_token: universal/weight/bold
     intended_channels:
     - web
@@ -203,7 +203,7 @@ role_recipes:
   source_role: Headlines | IvyPresto Display Thin
   proposed_family_token: beaver_creek/family/01
   proposed_weight_token: universal/weight/thin
-  proposed_size_token: universal/size/700
+  proposed_size_token: universal/size/core/700
   size_assumption_status: assumed
   text_case: not specified in source
   tracking: 90
@@ -217,7 +217,7 @@ role_recipes:
   source_role: CTA / Subheadlines | Vinila Condensed Bold
   proposed_family_token: beaver_creek/family/03
   proposed_weight_token: universal/weight/bold
-  proposed_size_token: universal/size/400
+  proposed_size_token: universal/size/core/400
   size_assumption_status: assumed
   text_case: not specified in source
   tracking: 80
@@ -231,7 +231,7 @@ role_recipes:
   source_role: Body Copy | Vinila Light
   proposed_family_token: beaver_creek/family/02
   proposed_weight_token: universal/weight/light
-  proposed_size_token: universal/size/200
+  proposed_size_token: universal/size/core/200
   size_assumption_status: assumed
   text_case: not specified in source
   tracking: 10
@@ -245,7 +245,7 @@ role_recipes:
   source_role: URL | Vinila Condensed Light
   proposed_family_token: beaver_creek/family/03
   proposed_weight_token: universal/weight/light
-  proposed_size_token: universal/size/100
+  proposed_size_token: universal/size/core/100
   size_assumption_status: assumed
   text_case: mixed_case
   tracking: 120

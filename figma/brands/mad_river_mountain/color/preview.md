@@ -62,7 +62,7 @@ Source anchor: `500_source`
   River Blue drives the primary expressive lane.
 - Scope: `brand_secondary` -> `mad_river_mountain/mountain_green`
   Mountain Green drives the supporting expressive lane.
-- `assets/logo` -> `Mad River Mountain`
+- `variables/assets/logo` -> `Mad River Mountain`
 
 ## Review Readiness
 

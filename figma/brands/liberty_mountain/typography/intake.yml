@@ -123,9 +123,9 @@ primitive_recommendations:
   hold_for_review: []
 semantic_recommendations:
   family_aliases:
-  - semantic_token: family/heading
+  - semantic_token: typography/family/heading
     global_token: liberty_mountain/family/01
-    safe_semantic_token: family/heading_safe
+    safe_semantic_token: typography/family/heading_safe
     safe_global_token: liberty_mountain/family_safe/01
     intended_channels:
     - web
@@ -133,9 +133,9 @@ semantic_recommendations:
     - ads
     notes: Headings stage on Brown because the source defines Brown as the primary family. Safe mapping
       is staged from Vail Resorts Guidelines.pdf.
-  - semantic_token: family/body
+  - semantic_token: typography/family/body
     global_token: liberty_mountain/family/01
-    safe_semantic_token: family/body_safe
+    safe_semantic_token: typography/family/body_safe
     safe_global_token: liberty_mountain/family_safe/02
     intended_channels:
     - web
@@ -143,9 +143,9 @@ semantic_recommendations:
     - ads
     notes: Body copy also stages on Brown in the first pass. Safe mapping is staged from Vail Resorts
       Guidelines.pdf.
-  - semantic_token: family/action
+  - semantic_token: typography/family/action
     global_token: liberty_mountain/family/01
-    safe_semantic_token: family/action_safe
+    safe_semantic_token: typography/family/action_safe
     safe_global_token: liberty_mountain/family_safe/01
     intended_channels:
     - web
@@ -154,14 +154,14 @@ semantic_recommendations:
     notes: The source says Brown is the primary font for print and web materials, so the action family
       also follows Brown in the first pass. Safe mapping is staged from Vail Resorts Guidelines.pdf.
   weight_aliases:
-  - semantic_token: weight/heading/base
+  - semantic_token: typography/weight/heading/base
     global_token: universal/weight/normal
     intended_channels:
     - web
     - email
     - ads
     notes: Brown Regular is the clearest shared heading baseline in the source.
-  - semantic_token: weight/heading/strong
+  - semantic_token: typography/weight/heading/strong
     global_token: universal/weight/normal
     intended_channels:
     - web
@@ -169,21 +169,21 @@ semantic_recommendations:
     - ads
     notes: The source does not define a heavier-than-regular heading treatment, so the live pass avoids
       inheriting the shared black default.
-  - semantic_token: weight/body/base
+  - semantic_token: typography/weight/body/base
     global_token: universal/weight/light
     intended_channels:
     - web
     - email
     - ads
     notes: Brown Light drives the reading hierarchy in the source.
-  - semantic_token: weight/body/strong
+  - semantic_token: typography/weight/body/strong
     global_token: universal/weight/normal
     intended_channels:
     - web
     - email
     - ads
     notes: Brown Regular provides the nearest stronger reading weight inside the existing shared ladder.
-  - semantic_token: weight/action/base
+  - semantic_token: typography/weight/action/base
     global_token: universal/weight/normal
     intended_channels:
     - web
@@ -244,7 +244,7 @@ validation:
   governance_notes:
   - The live write preserves `liberty_mountain/family/02` as a raw-only family because there is no dedicated
     alternate serif semantic slot.
-  - The live write overrides `weight/heading/strong` and `weight/action/base` away from the shared black
+  - The live write overrides `typography/weight/heading/strong` and `typography/weight/action/base` away from the shared black
     default because the source never specifies a heavy or black Liberty Mountain treatment.
   - Brand-safe typography aliases now stage on `liberty_mountain/family_safe/*` from Vail Resorts Guidelines.pdf.
 review_readiness:

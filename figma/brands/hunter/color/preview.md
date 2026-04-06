@@ -138,11 +138,11 @@ Source anchor: `700_source`
 
 ## Live Semantic Mapping
 
-- `surface/neutral/*`, `on_surface/neutral/*`, `foreground/default`, `foreground/subtle`, `border/default`, `border/subtle` -> `hunter/hunter_neutral`
+- `color/surface/neutral/*`, `color/on_surface/neutral/*`, `color/foreground/default`, `color/foreground/subtle`, `color/border/default`, `color/border/subtle` -> `hunter/hunter_neutral`
   Approved live write. Flurry White and City Grey now form the structural neutral family, keeping the neutral lane separate from the expressive Hunter blue ramp.
-- `surface/brand/*`, `on_surface/brand/*`, `foreground/brand`, `border/brand` -> `hunter/mountain_blue`
+- `color/surface/brand/*`, `color/on_surface/brand/*`, `color/foreground/brand`, `color/border/brand` -> `hunter/mountain_blue`
   Approved live write. Snow Blue and Mountain Blue now form the primary expressive semantic brand lane, with semantic `default/strong/emphasis` staging on `600/700/800`.
-- `surface/brand_secondary/*`, `on_surface/brand_secondary/*`, `foreground/brand_secondary`, `border/brand_secondary` -> `hunter/sunrise_orange`
+- `color/surface/brand_secondary/*`, `color/on_surface/brand_secondary/*`, `color/foreground/brand_secondary`, `color/border/brand_secondary` -> `hunter/sunrise_orange`
   Approved live write. Sunrise Orange now drives the supporting expressive semantic lane, with semantic `default/strong/emphasis` staging on `600/700/800`.
 - Global-only families: `forest_green`
 

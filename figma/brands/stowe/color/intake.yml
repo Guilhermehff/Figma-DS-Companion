@@ -186,31 +186,31 @@ semantic_recommendations:
     source_family: stowe/stowe_blue
     rationale: Stowe's supplied blues are already doing structural work in the brand specimen pages, so the first governed recommendation is to let the blue-gray family drive neutral surfaces, borders, and readable default foregrounds.
     targets:
-    - surface/neutral/*
-    - on_surface/neutral/*
-    - foreground/default
-    - foreground/subtle
-    - border/default
-    - border/subtle
+    - color/surface/neutral/*
+    - color/on_surface/neutral/*
+    - color/foreground/default
+    - color/foreground/subtle
+    - color/border/default
+    - color/border/subtle
   - scope: brand
     source_family: stowe/stowe_red
     rationale: Stowe Red is the dominant expressive brand identifier and should drive the primary expressive semantic lane.
     targets:
-    - surface/brand/*
-    - on_surface/brand/*
-    - foreground/brand
-    - border/brand
+    - color/surface/brand/*
+    - color/on_surface/brand/*
+    - color/foreground/brand
+    - color/border/brand
   - scope: brand_secondary
     source_family: stowe/stowe_blue
     rationale: Approved live write. `stowe_blue` is the only supporting non-red hue in the supplied palette, so it stages as the supporting expressive lane, with the semantic default/strong/emphasis steps landing at `600/700/800` for readable white foreground use.
     targets:
-    - surface/brand_secondary/*
-    - on_surface/brand_secondary/*
-    - foreground/brand_secondary
-    - border/brand_secondary
+    - color/surface/brand_secondary/*
+    - color/on_surface/brand_secondary/*
+    - color/foreground/brand_secondary
+    - color/border/brand_secondary
   global_only_families: []
   role_exceptions:
-  - target: surface/neutral/canvas
+  - target: color/surface/neutral/canvas
     source_token: universal/white
     rationale: Powder White is an exact shared white and the specimen pages use it as the dominant page canvas.
 review_readiness:

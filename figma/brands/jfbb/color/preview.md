@@ -169,20 +169,20 @@ Source anchor: `900_source`
 
 ## Live Semantic Mapping
 
-- `surface/neutral/*`, `border/default`, `border/subtle` -> `jfbb/snow_day`
+- `color/surface/neutral/*`, `color/border/default`, `color/border/subtle` -> `jfbb/snow_day`
   Snow Day is the explicit light background color across the supplied brand guidance and should drive the neutral surface stack.
-- `surface/brand/*`, `on_surface/brand/*`, `foreground/brand`, `border/brand` -> `jfbb/early_sunrise`
+- `color/surface/brand/*`, `color/on_surface/brand/*`, `color/foreground/brand`, `color/border/brand` -> `jfbb/early_sunrise`
   Early Sunrise is the loudest primary expressive accent and the clearest first brand lane for the current semantic model.
-- `surface/brand_secondary/*`, `on_surface/brand_secondary/*`, `foreground/brand_secondary`, `border/brand_secondary` -> `jfbb/bluebird`
+- `color/surface/brand_secondary/*`, `color/on_surface/brand_secondary/*`, `color/foreground/brand_secondary`, `color/border/brand_secondary` -> `jfbb/bluebird`
   Bluebird is the cleanest supporting expressive lane and preserves a balanced warm/cool pairing with Early Sunrise.
 - Global-only families: `jfbb/frost`, `jfbb/night_ski`
-- `on_surface/neutral/*` -> `jfbb/last_chair/900`
+- `color/on_surface/neutral/*` -> `jfbb/last_chair/900`
   Readable neutral copy follows the supplied dark navy rather than the very light Snow Day surface ladder.
-- `foreground/default` -> `jfbb/last_chair/900`
+- `color/foreground/default` -> `jfbb/last_chair/900`
   Default foreground needs the same brand navy used across the supplied hierarchy sheet.
-- `foreground/subtle` -> `jfbb/last_chair/800`
+- `color/foreground/subtle` -> `jfbb/last_chair/800`
   Subtle neutral foreground keeps a softer navy tone without leaving the brand palette.
-- `assets/logo` -> `JFBB`
+- `variables/assets/logo` -> `JFBB`
   The semantic color extension overrides the shared logo string to the JFBB brand name.
 
 ## Review Readiness

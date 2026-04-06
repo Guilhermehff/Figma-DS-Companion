@@ -143,29 +143,29 @@ semantic_recommendations:
   - scope: neutral
     source_family: laurel_mountain/blue
     targets:
-    - surface/neutral/*
-    - on_surface/neutral/*
-    - foreground/default
-    - foreground/subtle
-    - border/default
-    - border/subtle
+    - color/surface/neutral/*
+    - color/on_surface/neutral/*
+    - color/foreground/default
+    - color/foreground/subtle
+    - color/border/default
+    - color/border/subtle
   - scope: brand
     source_family: laurel_mountain/red
     targets:
-    - surface/brand/*
-    - on_surface/brand/*
-    - foreground/brand
-    - border/brand
+    - color/surface/brand/*
+    - color/on_surface/brand/*
+    - color/foreground/brand
+    - color/border/brand
   - scope: brand_secondary
     source_family: laurel_mountain/blue
     targets:
-    - surface/brand_secondary/*
-    - on_surface/brand_secondary/*
-    - foreground/brand_secondary
-    - border/brand_secondary
+    - color/surface/brand_secondary/*
+    - color/on_surface/brand_secondary/*
+    - color/foreground/brand_secondary
+    - color/border/brand_secondary
   global_only_families: []
   role_exceptions:
-  - target: assets/logo
+  - target: variables/assets/logo
     source_token: Laurel Mountain
     rationale: The semantic color extension stores the governed display label.
 live_figma_write:

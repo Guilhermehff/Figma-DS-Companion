@@ -128,15 +128,15 @@ Source anchor: `400_source`
 
 ## Live Semantic Mapping
 
-- `surface/neutral/*`, `on_surface/neutral/*`, `foreground/default`, `foreground/subtle`, `border/default`, `border/subtle` -> `seven_springs/springs_neutral`
+- `color/surface/neutral/*`, `color/on_surface/neutral/*`, `color/foreground/default`, `color/foreground/subtle`, `color/border/default`, `color/border/subtle` -> `seven_springs/springs_neutral`
   Recommended first pass. Mashed Potatoes and Grandma's Axe are the strongest candidates for branded surfaces, borders, and readable neutral foregrounds.
-- `surface/brand/*`, `on_surface/brand/*`, `foreground/brand`, `border/brand` -> `seven_springs/springs_green`
+- `color/surface/brand/*`, `color/on_surface/brand/*`, `color/foreground/brand`, `color/border/brand` -> `seven_springs/springs_green`
   Approved live write. The governed Seven Springs green ladder is the primary brand-capable expressive lane across web, email, and ads.
-- `surface/brand_secondary/*`, `on_surface/brand_secondary/*`, `foreground/brand_secondary`, `border/brand_secondary` -> `seven_springs/tupelo`
+- `color/surface/brand_secondary/*`, `color/on_surface/brand_secondary/*`, `color/foreground/brand_secondary`, `color/border/brand_secondary` -> `seven_springs/tupelo`
   Approved live write. Tupelo is the separate dark green family for the `brand_secondary/*` lane.
 - Global-only families: `seven_springs/wildin_yellow/*`
-- `assets/logo` -> `Seven Springs`
-  The live `Semantic: Theme` schema includes `assets/logo`, and each brand extension should override it to the brand display name string.
+- `variables/assets/logo` -> `Seven Springs`
+  The live `Semantic: Theme` schema includes `variables/assets/logo`, and each brand extension should override it to the brand display name string.
 
 ## Review Readiness
 

@@ -139,7 +139,7 @@ Source anchor: `300_source`
 - Scope: `brand_secondary` -> `roundtop_mountain/blue`
   Blue is the second primary color and drives the secondary expressive lane.
 - Global-only families: `roundtop_mountain/yellow`, `roundtop_mountain/orange`, `roundtop_mountain/red`, `roundtop_mountain/cyan`
-- `assets/logo` -> `Roundtop Mountain`
+- `variables/assets/logo` -> `Roundtop Mountain`
 
 ## Review Readiness
 

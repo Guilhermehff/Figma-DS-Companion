@@ -79,10 +79,10 @@ Source anchor: `500_source`
 
 ## Live Semantic Mapping
 
-- `surface/neutral/*`, `on_surface/neutral/*`, `foreground/default`, `foreground/subtle`, `border/default`, `border/subtle` -> `wilmot/wilmot_grey`
-- `surface/brand/*`, `on_surface/brand/*`, `foreground/brand`, `border/brand` -> `wilmot/wilmot_red`
-- `surface/brand_secondary/*`, `on_surface/brand_secondary/*`, `foreground/brand_secondary`, `border/brand_secondary` -> `wilmot/wilmot_rose`
-- `assets/logo` -> `Wilmot`
+- `color/surface/neutral/*`, `color/on_surface/neutral/*`, `color/foreground/default`, `color/foreground/subtle`, `color/border/default`, `color/border/subtle` -> `wilmot/wilmot_grey`
+- `color/surface/brand/*`, `color/on_surface/brand/*`, `color/foreground/brand`, `color/border/brand` -> `wilmot/wilmot_red`
+- `color/surface/brand_secondary/*`, `color/on_surface/brand_secondary/*`, `color/foreground/brand_secondary`, `color/border/brand_secondary` -> `wilmot/wilmot_rose`
+- `variables/assets/logo` -> `Wilmot`
   The semantic color extension stores the governed display label.
 
 ## Review Readiness

@@ -42,96 +42,96 @@ semantic_overrides:
       - scope: brand
         source_family: hunter/mountain_blue
         targets:
-        - surface/brand/*
-        - surface/brand/*_inverse
-        - foreground/brand
-        - foreground/brand_inverse
-        - border/brand
-        - border/brand_inverse
+        - color/surface/brand/*
+        - color/surface/brand/*_inverse
+        - color/foreground/brand
+        - color/foreground/brand_inverse
+        - color/border/brand
+        - color/border/brand_inverse
       - scope: brand_secondary
         source_family: hunter/sunrise_orange
         targets:
-        - surface/brand_secondary/*
-        - surface/brand_secondary/*_inverse
-        - foreground/brand_secondary
-        - foreground/brand_secondary_inverse
-        - border/brand_secondary
-        - border/brand_secondary_inverse
+        - color/surface/brand_secondary/*
+        - color/surface/brand_secondary/*_inverse
+        - color/foreground/brand_secondary
+        - color/foreground/brand_secondary_inverse
+        - color/border/brand_secondary
+        - color/border/brand_secondary_inverse
       - scope: asset_logo
         source_value: Hunter
         targets:
-        - assets/logo
+        - variables/assets/logo
       inherited_from_base:
-      - surface/neutral/*
-      - surface/neutral/*_inverse
-      - foreground/default
-      - foreground/default_inverse
-      - foreground/subtle
-      - foreground/subtle_inverse
-      - border/default
-      - border/default_inverse
-      - border/subtle
-      - border/subtle_inverse
-      - on_surface/brand/*
-      - on_surface/brand/*_inverse
-      - on_surface/brand_secondary/*
-      - on_surface/brand_secondary/*_inverse
-      - surface/positive/*
-      - surface/positive/*_inverse
-      - on_surface/positive/*
-      - on_surface/positive/*_inverse
-      - surface/warning/*
-      - surface/warning/*_inverse
-      - on_surface/warning/*
-      - on_surface/warning/*_inverse
-      - surface/critical/*
-      - surface/critical/*_inverse
-      - on_surface/critical/*
-      - on_surface/critical/*_inverse
-      - foreground/positive
-      - foreground/positive_inverse
-      - foreground/warning
-      - foreground/warning_inverse
-      - foreground/critical
-      - foreground/critical_inverse
-      - border/positive
-      - border/positive_inverse
-      - border/warning
-      - border/warning_inverse
-      - border/critical
-      - border/critical_inverse
+      - color/surface/neutral/*
+      - color/surface/neutral/*_inverse
+      - color/foreground/default
+      - color/foreground/default_inverse
+      - color/foreground/subtle
+      - color/foreground/subtle_inverse
+      - color/border/default
+      - color/border/default_inverse
+      - color/border/subtle
+      - color/border/subtle_inverse
+      - color/on_surface/brand/*
+      - color/on_surface/brand/*_inverse
+      - color/on_surface/brand_secondary/*
+      - color/on_surface/brand_secondary/*_inverse
+      - color/surface/positive/*
+      - color/surface/positive/*_inverse
+      - color/on_surface/positive/*
+      - color/on_surface/positive/*_inverse
+      - color/surface/warning/*
+      - color/surface/warning/*_inverse
+      - color/on_surface/warning/*
+      - color/on_surface/warning/*_inverse
+      - color/surface/critical/*
+      - color/surface/critical/*_inverse
+      - color/on_surface/critical/*
+      - color/on_surface/critical/*_inverse
+      - color/foreground/positive
+      - color/foreground/positive_inverse
+      - color/foreground/warning
+      - color/foreground/warning_inverse
+      - color/foreground/critical
+      - color/foreground/critical_inverse
+      - color/border/positive
+      - color/border/positive_inverse
+      - color/border/warning
+      - color/border/warning_inverse
+      - color/border/critical
+      - color/border/critical_inverse
       notes:
-      - '`on_surface/*` tokens in the live semantic theme extension are contrast-derived from `universal/black` or `universal/white` and are not hue-tinted.'
+      - '`color/on_surface/*` tokens in the live semantic theme extension are contrast-derived from `universal/black` or `universal/white` and are not hue-tinted.'
       - Hunter is live in the Foundations file with `hunter_neutral` as the structural neutral lane, `mountain_blue` as the primary expressive lane, and `sunrise_orange` as the supporting expressive lane.
       - User-approved live write. `hunter_neutral` maps only Flurry White and City Grey into the structural neutral family, while Snow Blue and Mountain Blue move together into the expressive `mountain_blue` ramp.
-      - User-approved live write. `surface/brand/default`, `surface/brand/strong`, and `surface/brand/emphasis` stage on `hunter/mountain_blue/600`, `700`, and `800` so the primary expressive lane holds the shared white on-surface contract.
-      - User-approved live write. `surface/brand_secondary/default`, `surface/brand_secondary/strong`, and `surface/brand_secondary/emphasis` stage on `hunter/sunrise_orange/600`, `700`, and `800` so the supporting expressive lane also holds the shared white on-surface contract.
+      - User-approved live write. `color/surface/brand/default`, `color/surface/brand/strong`, and `color/surface/brand/emphasis` stage on `hunter/mountain_blue/600`, `700`, and `800` so the primary expressive lane holds the shared white on-surface contract.
+      - User-approved live write. `color/surface/brand_secondary/default`, `color/surface/brand_secondary/strong`, and `color/surface/brand_secondary/emphasis` stage on `hunter/sunrise_orange/600`, `700`, and `800` so the supporting expressive lane also holds the shared white on-surface contract.
       - User-approved live write. `forest_green` is preserved as a governed global-only family in the first pass and is intentionally not mapped into the semantic extension.
-      - '`assets/logo` resolves to the string `Hunter` in the semantic theme extension.'
+      - '`variables/assets/logo` resolves to the string `Hunter` in the semantic theme extension.'
     typography:
       override_scopes:
-      - semantic_token: family/heading
+      - semantic_token: typography/family/heading
         alias_of: hunter/family/01
-      - semantic_token: family/body
+      - semantic_token: typography/family/body
         alias_of: hunter/family/01
-      - semantic_token: weight/body/base
+      - semantic_token: typography/weight/body/base
         alias_of: universal/weight/normal
-      - semantic_token: weight/body/strong
+      - semantic_token: typography/weight/body/strong
         alias_of: universal/weight/semibold
-      - semantic_token: family/heading_safe
+      - semantic_token: typography/family/heading_safe
         alias_of: hunter/family_safe/01
-      - semantic_token: family/body_safe
+      - semantic_token: typography/family/body_safe
         alias_of: hunter/family_safe/01
-      - semantic_token: family/action_safe
+      - semantic_token: typography/family/action_safe
         alias_of: hunter/family_safe/01
       inherited_from_base:
-      - family/action
-      - weight/heading/base
-      - weight/heading/strong
-      - weight/action/base
+      - typography/family/action
+      - typography/weight/heading/base
+      - typography/weight/heading/strong
+      - typography/weight/action/base
       notes:
-      - Hunter is live as a one-family typography system with `family/heading` and `family/body` both mapped to `hunter/family/01`.
-      - '`weight/heading/base = universal/weight/bold`, `weight/body/base = universal/weight/normal`, and `weight/body/strong = universal/weight/semibold` stage the explicit headline, subheadline, and body hierarchy through the current semantic theme typography ladder.'
+      - Hunter is live as a one-family typography system with `typography/family/heading` and `typography/family/body` both mapped to `hunter/family/01`.
+      - '`typography/weight/heading/base = universal/weight/bold`, `typography/weight/body/base = universal/weight/normal`, and `typography/weight/body/strong = universal/weight/semibold` stage the explicit headline, subheadline, and body hierarchy through the current semantic theme typography ladder.'
       - Galano Grotesque Light remains documented as a raw contrasting-body option rather than a separate semantic lane.
       - The source does not define a CTA or action recipe, so the action lane remains inherited in the live semantic extension.
       - Brand-safe typography aliases now stage on `hunter/family_safe/*` from Vail Resorts Guidelines.pdf.

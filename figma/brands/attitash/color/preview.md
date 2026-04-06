@@ -98,10 +98,10 @@ Source anchors: `100_source / 100_source / 300_source / 800_source`
 
 ## Live Semantic Mapping
 
-- `surface/neutral/*`, `on_surface/neutral/*`, `foreground/default`, `foreground/subtle`, `border/default`, `border/subtle` -> `attitash/attitash_neutral`
-- `surface/brand/*`, `on_surface/brand/*`, `foreground/brand`, `border/brand` -> `attitash/attitash_blue`
-- `surface/brand_secondary/*`, `on_surface/brand_secondary/*`, `foreground/brand_secondary`, `border/brand_secondary` -> `attitash/daybreak`
-- `assets/logo` -> `Attitash`
+- `color/surface/neutral/*`, `color/on_surface/neutral/*`, `color/foreground/default`, `color/foreground/subtle`, `color/border/default`, `color/border/subtle` -> `attitash/attitash_neutral`
+- `color/surface/brand/*`, `color/on_surface/brand/*`, `color/foreground/brand`, `color/border/brand` -> `attitash/attitash_blue`
+- `color/surface/brand_secondary/*`, `color/on_surface/brand_secondary/*`, `color/foreground/brand_secondary`, `color/border/brand_secondary` -> `attitash/daybreak`
+- `variables/assets/logo` -> `Attitash`
   The semantic color extension stores the governed display label.
 
 ## Review Readiness

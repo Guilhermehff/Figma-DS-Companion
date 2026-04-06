@@ -70,7 +70,7 @@ Safe family token: `heavenly/family_safe/01`
 
 Proposed weight token: `universal/weight/bold`
 
-Proposed size token: `universal/size/400`
+Proposed size token: `universal/size/core/400`
 
 Recipe notes:
 
@@ -88,7 +88,7 @@ Safe family token: `heavenly/family_safe/01`
 
 Proposed weight token: `universal/weight/light`
 
-Proposed size token: `universal/size/800`
+Proposed size token: `universal/size/core/800`
 
 Recipe notes:
 
@@ -106,7 +106,7 @@ Safe family token: `heavenly/family_safe/01`
 
 Proposed weight token: `universal/weight/medium`
 
-Proposed size token: `universal/size/500`
+Proposed size token: `universal/size/core/500`
 
 Recipe notes:
 
@@ -124,7 +124,7 @@ Safe family token: `heavenly/family_safe/01`
 
 Proposed weight token: `universal/weight/normal`
 
-Proposed size token: `universal/size/300`
+Proposed size token: `universal/size/core/300`
 
 Recipe notes:
 

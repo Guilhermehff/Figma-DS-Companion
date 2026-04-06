@@ -21,7 +21,7 @@ Review state: written in figma. Verify live write state in `figma/brands/boston_
   The supplied brand palette is monochrome, so the expressive lane aliases the shared universal black primitive.
 - Scope: `brand_secondary` -> `universal/black`
   The supplied brand palette is monochrome, so the second expressive lane aliases the shared universal black primitive as well.
-- `assets/logo` -> `Boston Mills / Brandywine`
+- `variables/assets/logo` -> `Boston Mills / Brandywine`
 
 ## Review Readiness
 

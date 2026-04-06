@@ -247,14 +247,14 @@ Source anchor: `500_source`
 
 ## Live Semantic Mapping
 
-- `surface/neutral/*`, `on_surface/neutral/*`, `foreground/default`, `foreground/subtle`, `border/default`, `border/subtle` -> `liberty_mountain/warm_neutral`
+- `color/surface/neutral/*`, `color/on_surface/neutral/*`, `color/foreground/default`, `color/foreground/subtle`, `color/border/default`, `color/border/subtle` -> `liberty_mountain/warm_neutral`
   User-approved live write. The neutral lane should behave as one warm structural ramp rather than three disconnected raw swatches.
-- `surface/brand/*`, `on_surface/brand/*`, `foreground/brand`, `border/brand` -> `liberty_mountain/sunrise`
+- `color/surface/brand/*`, `color/on_surface/brand/*`, `color/foreground/brand`, `color/border/brand` -> `liberty_mountain/sunrise`
   User-approved live write. Sunrise is the primary expressive lane.
-- `surface/brand_secondary/*`, `on_surface/brand_secondary/*`, `foreground/brand_secondary`, `border/brand_secondary` -> `liberty_mountain/spring`
+- `color/surface/brand_secondary/*`, `color/on_surface/brand_secondary/*`, `color/foreground/brand_secondary`, `color/border/brand_secondary` -> `liberty_mountain/spring`
   User-approved live write. Spring is the supporting expressive lane.
 - Global-only families: `liberty_mountain/cool_neutral`, `liberty_mountain/shale`, `liberty_mountain/stone`, `liberty_mountain/sunset`, `liberty_mountain/flora`, `liberty_mountain/copper`
-- `assets/logo` -> `Liberty Mountain`
+- `variables/assets/logo` -> `Liberty Mountain`
   The live semantic color extension should resolve the logo-name string to the brand display name.
 
 ## Review Readiness

@@ -98,7 +98,7 @@ Recipe notes:
 - Leading: `not specified in source`
 - Size rule: `source shows family and weight only`
 - Punctuation: `not specified in source`
-- Notes: User-approved exception. Subheads stage through `weight/body/strong = medium` rather than a separate semantic family or the source-labeled semibold.
+- Notes: User-approved exception. Subheads stage through `typography/weight/body/strong = medium` rather than a separate semantic family or the source-labeled semibold.
 
 ### Role: cta
 

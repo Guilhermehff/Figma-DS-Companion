@@ -102,33 +102,33 @@ semantic_recommendations:
     source_family: inherited_base
     rationale: Exact black is reused as the universal primitive and no Alpine Valley light neutral or white swatch was supplied, so the shared neutral role set remains inherited in the first pass.
     targets:
-    - surface/neutral/*
-    - on_surface/neutral/*
-    - foreground/default
-    - foreground/subtle
-    - border/default
-    - border/subtle
+    - color/surface/neutral/*
+    - color/on_surface/neutral/*
+    - color/foreground/default
+    - color/foreground/subtle
+    - color/border/default
+    - color/border/subtle
   - scope: brand
     source_family: alpine_valley/alpine
     rationale: Recommended first pass. `alpine/*` is the only non-neutral supplied family, so it is the most stable expressive lane under the current semantic model.
     targets:
-    - surface/brand/*
-    - on_surface/brand/*
-    - foreground/brand
-    - border/brand
+    - color/surface/brand/*
+    - color/on_surface/brand/*
+    - color/foreground/brand
+    - color/border/brand
   - scope: brand_secondary
     source_family: alpine_valley/alpine
     rationale: Recommended first pass. The source does not provide a second expressive hue, so the accepted semantic color model allows `brand_secondary/*` to reuse the same raw family as `brand/*`.
     targets:
-    - surface/brand_secondary/*
-    - on_surface/brand_secondary/*
-    - foreground/brand_secondary
-    - border/brand_secondary
+    - color/surface/brand_secondary/*
+    - color/on_surface/brand_secondary/*
+    - color/foreground/brand_secondary
+    - color/border/brand_secondary
   global_only_families: []
   role_exceptions:
-  - target: assets/logo
+  - target: variables/assets/logo
     source_token: Alpine Valley
-    rationale: 'The live `Semantic: Theme` schema includes `assets/logo`, and each brand extension overrides it to the brand display name string.'
+    rationale: 'The live `Semantic: Theme` schema includes `variables/assets/logo`, and each brand extension overrides it to the brand display name string.'
 review_readiness:
   intended_review_channels:
   - web

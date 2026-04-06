@@ -131,7 +131,7 @@ semantic_recommendations:
   global_only_families:
   - whitetail_resort/neutral
   role_exceptions:
-  - target: assets/logo
+  - target: variables/assets/logo
     source_token: Whitetail Resort
 review_readiness:
   review_rules:

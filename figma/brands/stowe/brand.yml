@@ -42,100 +42,100 @@ semantic_overrides:
       - scope: brand
         source_family: stowe/stowe_red
         targets:
-        - surface/brand/*
-        - surface/brand/*_inverse
-        - foreground/brand
-        - foreground/brand_inverse
-        - border/brand
-        - border/brand_inverse
+        - color/surface/brand/*
+        - color/surface/brand/*_inverse
+        - color/foreground/brand
+        - color/foreground/brand_inverse
+        - color/border/brand
+        - color/border/brand_inverse
       - scope: brand_secondary
         source_family: stowe/stowe_blue
         targets:
-        - surface/brand_secondary/*
-        - surface/brand_secondary/*_inverse
-        - foreground/brand_secondary
-        - foreground/brand_secondary_inverse
-        - border/brand_secondary
-        - border/brand_secondary_inverse
+        - color/surface/brand_secondary/*
+        - color/surface/brand_secondary/*_inverse
+        - color/foreground/brand_secondary
+        - color/foreground/brand_secondary_inverse
+        - color/border/brand_secondary
+        - color/border/brand_secondary_inverse
       - scope: asset_logo
         source_value: Stowe
         targets:
-        - assets/logo
+        - variables/assets/logo
       inherited_from_base:
-      - surface/neutral/*
-      - surface/neutral/*_inverse
-      - foreground/default
-      - foreground/default_inverse
-      - foreground/subtle
-      - foreground/subtle_inverse
-      - border/default
-      - border/default_inverse
-      - border/subtle
-      - border/subtle_inverse
-      - on_surface/brand/*
-      - on_surface/brand/*_inverse
-      - on_surface/brand_secondary/*
-      - on_surface/brand_secondary/*_inverse
-      - surface/positive/*
-      - surface/positive/*_inverse
-      - on_surface/positive/*
-      - on_surface/positive/*_inverse
-      - surface/warning/*
-      - surface/warning/*_inverse
-      - on_surface/warning/*
-      - on_surface/warning/*_inverse
-      - surface/critical/*
-      - surface/critical/*_inverse
-      - on_surface/critical/*
-      - on_surface/critical/*_inverse
-      - foreground/positive
-      - foreground/positive_inverse
-      - foreground/warning
-      - foreground/warning_inverse
-      - foreground/critical
-      - foreground/critical_inverse
-      - border/positive
-      - border/positive_inverse
-      - border/warning
-      - border/warning_inverse
-      - border/critical
-      - border/critical_inverse
+      - color/surface/neutral/*
+      - color/surface/neutral/*_inverse
+      - color/foreground/default
+      - color/foreground/default_inverse
+      - color/foreground/subtle
+      - color/foreground/subtle_inverse
+      - color/border/default
+      - color/border/default_inverse
+      - color/border/subtle
+      - color/border/subtle_inverse
+      - color/on_surface/brand/*
+      - color/on_surface/brand/*_inverse
+      - color/on_surface/brand_secondary/*
+      - color/on_surface/brand_secondary/*_inverse
+      - color/surface/positive/*
+      - color/surface/positive/*_inverse
+      - color/on_surface/positive/*
+      - color/on_surface/positive/*_inverse
+      - color/surface/warning/*
+      - color/surface/warning/*_inverse
+      - color/on_surface/warning/*
+      - color/on_surface/warning/*_inverse
+      - color/surface/critical/*
+      - color/surface/critical/*_inverse
+      - color/on_surface/critical/*
+      - color/on_surface/critical/*_inverse
+      - color/foreground/positive
+      - color/foreground/positive_inverse
+      - color/foreground/warning
+      - color/foreground/warning_inverse
+      - color/foreground/critical
+      - color/foreground/critical_inverse
+      - color/border/positive
+      - color/border/positive_inverse
+      - color/border/warning
+      - color/border/warning_inverse
+      - color/border/critical
+      - color/border/critical_inverse
       notes:
-      - '`on_surface/*` tokens in the live semantic theme extension are contrast-derived from `universal/black` or `universal/white` and are not hue-tinted.'
+      - '`color/on_surface/*` tokens in the live semantic theme extension are contrast-derived from `universal/black` or `universal/white` and are not hue-tinted.'
       - Stowe is live in the Foundations file with `stowe_red` as the primary expressive lane and `stowe_blue` as both the structural neutral lane and the approved supporting expressive lane.
-      - User-approved live write. `surface/neutral/canvas` remains on shared `universal/white`, while the rest of the neutral structural roles override to `stowe_blue`.
+      - User-approved live write. `color/surface/neutral/canvas` remains on shared `universal/white`, while the rest of the neutral structural roles override to `stowe_blue`.
       - User-approved live write. `brand_secondary` aliases `stowe_blue`, with the semantic default/strong/emphasis steps landing at `600/700/800` because the raw `500` source anchor does not support the shared white on-surface contract.
-      - '`assets/logo` resolves to the string `Stowe` in the semantic theme extension.'
+      - '`variables/assets/logo` resolves to the string `Stowe` in the semantic theme extension.'
     typography:
       override_scopes:
-      - semantic_token: family/heading
+      - semantic_token: typography/family/heading
         alias_of: stowe/family/01
-      - semantic_token: family/body
+      - semantic_token: typography/family/body
         alias_of: stowe/family/02
-      - semantic_token: family/action
+      - semantic_token: typography/family/action
         alias_of: stowe/family/01
-      - semantic_token: weight/heading/base
+      - semantic_token: typography/weight/heading/base
         alias_of: universal/weight/normal
-      - semantic_token: weight/body/base
+      - semantic_token: typography/weight/body/base
         alias_of: universal/weight/normal
-      - semantic_token: weight/body/strong
+      - semantic_token: typography/weight/body/strong
         alias_of: universal/weight/bold
-      - semantic_token: weight/action/base
+      - semantic_token: typography/weight/action/base
         alias_of: universal/weight/normal
-      - semantic_token: family/heading_safe
+      - semantic_token: typography/family/heading_safe
         alias_of: stowe/family_safe/02
-      - semantic_token: family/body_safe
+      - semantic_token: typography/family/body_safe
         alias_of: stowe/family_safe/01
-      - semantic_token: family/action_safe
+      - semantic_token: typography/family/action_safe
         alias_of: stowe/family_safe/01
       inherited_from_base:
-      - weight/heading/strong
+      - typography/weight/heading/strong
       notes:
       - Stowe is live as a two-family system with `Athena` in the display lane and `Raleway` across the reading hierarchy.
       - ? User-approved exception. The live write treats the headline prose word `bold` as a source copy mistake and follows the explicit `Headline
         : Athena Regular` label.
-      - User-approved mapping. `family/action` and `weight/action/base` now follow the same family and weight as heading.
-      - '`weight/body/strong = universal/weight/bold` stages the explicit Raleway Bold subhead treatment through the existing semantic theme typography ladder.'
+      - User-approved mapping. `typography/family/action` and `typography/weight/action/base` now follow the same family and weight as heading.
+      - '`typography/weight/body/strong = universal/weight/bold` stages the explicit Raleway Bold subhead treatment through the existing semantic theme typography ladder.'
       - Brand-safe typography aliases now stage on `stowe/family_safe/*` from Vail Resorts Guidelines.pdf.
 notes:
 - Stowe is live in the Foundations file with two raw color families, two raw typography family primitives, a semantic theme logo-name override, and Stowe semantic theme extension.

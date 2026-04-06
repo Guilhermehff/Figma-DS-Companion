@@ -162,33 +162,33 @@ semantic_recommendations:
     source_family: inherited_base
     rationale: Exact black and white are already governed by the shared universal primitives, so the first pass keeps the neutral role set inherited.
     targets:
-    - surface/neutral/*
-    - on_surface/neutral/*
-    - foreground/default
-    - foreground/subtle
-    - border/default
-    - border/subtle
+    - color/surface/neutral/*
+    - color/on_surface/neutral/*
+    - color/foreground/default
+    - color/foreground/subtle
+    - color/border/default
+    - color/border/subtle
   - scope: brand
     source_family: hidden_valley_mo/hv_blue
     rationale: HV Blue is the signature Hidden Valley MO color and should drive the primary expressive semantic lane.
     targets:
-    - surface/brand/*
-    - on_surface/brand/*
-    - foreground/brand
-    - border/brand
+    - color/surface/brand/*
+    - color/on_surface/brand/*
+    - color/foreground/brand
+    - color/border/brand
   - scope: brand_secondary
     source_family: hidden_valley_mo/tagline_grey
     rationale: Tagline Grey is the dark supporting brand color and should drive the secondary expressive lane.
     targets:
-    - surface/brand_secondary/*
-    - on_surface/brand_secondary/*
-    - foreground/brand_secondary
-    - border/brand_secondary
+    - color/surface/brand_secondary/*
+    - color/on_surface/brand_secondary/*
+    - color/foreground/brand_secondary
+    - color/border/brand_secondary
   global_only_families: []
   role_exceptions:
-  - target: assets/logo
+  - target: variables/assets/logo
     source_token: Hidden Valley MO
-    rationale: The live semantic color schema stores the governed brand display label in `assets/logo`.
+    rationale: The live semantic color schema stores the governed brand display label in `variables/assets/logo`.
 review_readiness:
   intended_review_channels:
   - web

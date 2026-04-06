@@ -208,7 +208,7 @@ semantic_recommendations:
   - wildcat_mountain/wildcat_tan
   - wildcat_mountain/wedding_blue
   role_exceptions:
-  - target: assets/logo
+  - target: variables/assets/logo
     source_token: Wildcat Mountain
 review_readiness:
   review_rules:

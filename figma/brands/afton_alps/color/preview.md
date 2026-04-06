@@ -63,14 +63,14 @@ Source anchor: `300_source`
 
 ## Live Semantic Mapping
 
-- `surface/neutral/*`, `on_surface/neutral/*`, `foreground/default`, `foreground/subtle`, `border/default`, `border/subtle` -> `inherited_base`
+- `color/surface/neutral/*`, `color/on_surface/neutral/*`, `color/foreground/default`, `color/foreground/subtle`, `color/border/default`, `color/border/subtle` -> `inherited_base`
   No Afton Alps neutral swatches were supplied, so the shared neutral role set remains inherited from the semantic base collection.
-- `surface/brand/*`, `on_surface/brand/*`, `foreground/brand`, `border/brand` -> `afton_alps/blue`
+- `color/surface/brand/*`, `color/on_surface/brand/*`, `color/foreground/brand`, `color/border/brand` -> `afton_alps/blue`
   Blue is the user-approved primary expressive lane and behaves as a dark brand family.
-- `surface/brand_secondary/*`, `on_surface/brand_secondary/*`, `foreground/brand_secondary`, `border/brand_secondary` -> `afton_alps/yellow`
+- `color/surface/brand_secondary/*`, `color/on_surface/brand_secondary/*`, `color/foreground/brand_secondary`, `color/border/brand_secondary` -> `afton_alps/yellow`
   Yellow is the user-approved secondary expressive lane and behaves as a bright accent family.
-- `assets/logo` -> `Afton Alps`
-  The live `Semantic: Theme` schema includes `assets/logo`, and each brand extension overrides it to the brand display name string.
+- `variables/assets/logo` -> `Afton Alps`
+  The live `Semantic: Theme` schema includes `variables/assets/logo`, and each brand extension overrides it to the brand display name string.
 
 ## Review Readiness
 

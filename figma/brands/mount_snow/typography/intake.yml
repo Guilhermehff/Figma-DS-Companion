@@ -68,19 +68,19 @@ primitive_recommendations:
       reason: Body copy explicitly uses Medium and the shared raw ladder already supports it.
     sizes:
     - source_size_reference: headline default
-      existing_token: universal/size/700
+      existing_token: universal/size/core/700
       assumption_status: assumed
       assumption_note: The source shows a display example larger than the current shared ladder, so the
         first pass uses the largest governed heading step.
       reason: Keeps headline sizing inside the current shared raw ladder.
     - source_size_reference: subheadline default
-      existing_token: universal/size/500
+      existing_token: universal/size/core/500
       assumption_status: assumed
       assumption_note: The source gives an example size but not a governed semantic size token, so the
         first pass uses the shared base heading step.
       reason: Preserves hierarchy without introducing a new raw size.
     - source_size_reference: body default
-      existing_token: universal/size/200
+      existing_token: universal/size/core/200
       assumption_status: assumed
       assumption_note: The source provides an example size pair rather than a governed token size, so
         the live semantic size baseline remains inherited.
@@ -118,9 +118,9 @@ primitive_recommendations:
     reason: The source does not define CTA, button, or action-specific typography behavior.
 semantic_recommendations:
   family_aliases:
-  - semantic_token: family/heading
+  - semantic_token: typography/family/heading
     global_token: mount_snow/family/01
-    safe_semantic_token: family/heading_safe
+    safe_semantic_token: typography/family/heading_safe
     safe_global_token: mount_snow/family_safe/01
     intended_channels:
     - web
@@ -128,9 +128,9 @@ semantic_recommendations:
     - ads
     notes: Vastago Grotesk drives the Mount Snow headline system. Safe mapping is staged from Vail Resorts
       Guidelines.pdf.
-  - semantic_token: family/body
+  - semantic_token: typography/family/body
     global_token: mount_snow/family/02
-    safe_semantic_token: family/body_safe
+    safe_semantic_token: typography/family/body_safe
     safe_global_token: mount_snow/family_safe/02
     intended_channels:
     - web
@@ -139,21 +139,21 @@ semantic_recommendations:
     notes: Area Extended covers both subheadline and body roles in the supplied hierarchy. Safe mapping
       is staged from Vail Resorts Guidelines.pdf.
   weight_aliases:
-  - semantic_token: weight/heading/base
+  - semantic_token: typography/weight/heading/base
     global_token: universal/weight/black
     intended_channels:
     - web
     - email
     - ads
     notes: '`Heavy` is staged on the current strongest shared raw weight.'
-  - semantic_token: weight/body/base
+  - semantic_token: typography/weight/body/base
     global_token: universal/weight/medium
     intended_channels:
     - web
     - email
     - ads
     notes: Body copy explicitly uses Medium.
-  - semantic_token: weight/body/strong
+  - semantic_token: typography/weight/body/strong
     global_token: universal/weight/black
     intended_channels:
     - web
@@ -167,7 +167,7 @@ role_recipes:
   source_role: Headline | Vastago Grotesk Heavy
   proposed_family_token: mount_snow/family/01
   proposed_weight_token: universal/weight/black
-  proposed_size_token: universal/size/700
+  proposed_size_token: universal/size/core/700
   size_assumption_status: assumed
   text_case: lowercase
   tracking: 0%
@@ -181,7 +181,7 @@ role_recipes:
   source_role: Subheadline | Area Extended Extra Bold
   proposed_family_token: mount_snow/family/02
   proposed_weight_token: universal/weight/black
-  proposed_size_token: universal/size/500
+  proposed_size_token: universal/size/core/500
   size_assumption_status: assumed
   text_case: sentence_case
   tracking: 0%
@@ -195,7 +195,7 @@ role_recipes:
   source_role: Body | Area Extended Medium
   proposed_family_token: mount_snow/family/02
   proposed_weight_token: universal/weight/medium
-  proposed_size_token: universal/size/200
+  proposed_size_token: universal/size/core/200
   size_assumption_status: assumed
   text_case: sentence_case
   tracking: 0%

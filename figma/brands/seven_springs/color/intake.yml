@@ -275,34 +275,34 @@ semantic_recommendations:
     source_family: seven_springs/springs_neutral
     rationale: Recommended first pass. Mashed Potatoes and Grandma's Axe are the strongest candidates for branded surfaces, borders, and readable neutral foregrounds.
     targets:
-    - surface/neutral/*
-    - on_surface/neutral/*
-    - foreground/default
-    - foreground/subtle
-    - border/default
-    - border/subtle
+    - color/surface/neutral/*
+    - color/on_surface/neutral/*
+    - color/foreground/default
+    - color/foreground/subtle
+    - color/border/default
+    - color/border/subtle
   - scope: brand
     source_family: seven_springs/springs_green
     rationale: Approved live write. The governed Seven Springs green ladder is the primary brand-capable expressive lane across web, email, and ads.
     targets:
-    - surface/brand/*
-    - on_surface/brand/*
-    - foreground/brand
-    - border/brand
+    - color/surface/brand/*
+    - color/on_surface/brand/*
+    - color/foreground/brand
+    - color/border/brand
   - scope: brand_secondary
     source_family: seven_springs/tupelo
     rationale: Approved live write. Tupelo is the separate dark green family for the `brand_secondary/*` lane.
     targets:
-    - surface/brand_secondary/*
-    - on_surface/brand_secondary/*
-    - foreground/brand_secondary
-    - border/brand_secondary
+    - color/surface/brand_secondary/*
+    - color/on_surface/brand_secondary/*
+    - color/foreground/brand_secondary
+    - color/border/brand_secondary
   global_only_families:
   - seven_springs/wildin_yellow/*
   role_exceptions:
-  - target: assets/logo
+  - target: variables/assets/logo
     source_token: Seven Springs
-    rationale: 'The live `Semantic: Theme` schema includes `assets/logo`, and each brand extension should override it to the brand display name string.'
+    rationale: 'The live `Semantic: Theme` schema includes `variables/assets/logo`, and each brand extension should override it to the brand display name string.'
 review_readiness:
   intended_review_channels:
   - web
